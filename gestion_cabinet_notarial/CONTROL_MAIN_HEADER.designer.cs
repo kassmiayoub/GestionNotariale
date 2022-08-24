@@ -47,6 +47,7 @@ namespace Avocat_Maroc.PL
             // 
             // LabelDate
             // 
+            this.LabelDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelDate.ForeColor = System.Drawing.Color.Black;
             this.LabelDate.Location = new System.Drawing.Point(480, 27);
@@ -90,6 +91,7 @@ namespace Avocat_Maroc.PL
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::gestion_cabinet_notarial.Properties.Resources.UserImage;
             this.pictureBox2.Location = new System.Drawing.Point(409, 3);
@@ -101,6 +103,7 @@ namespace Avocat_Maroc.PL
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.Balance;
             this.pictureBox1.Location = new System.Drawing.Point(805, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -111,6 +114,7 @@ namespace Avocat_Maroc.PL
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ithra-Light", 14F);
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -135,6 +139,7 @@ namespace Avocat_Maroc.PL
             // 
             // PanelLogOut
             // 
+            this.PanelLogOut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PanelLogOut.Controls.Add(this.pictureBox3);
             this.PanelLogOut.Controls.Add(this.LabelOfficeName);
             this.PanelLogOut.Controls.Add(this.LabelLogOut);

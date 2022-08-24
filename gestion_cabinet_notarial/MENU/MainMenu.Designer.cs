@@ -40,6 +40,7 @@
             this.PanelItems.Name = "PanelItems";
             this.PanelItems.Size = new System.Drawing.Size(250, 400);
             this.PanelItems.TabIndex = 0;
+            this.PanelItems.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelItems_Paint);
             // 
             // MainMenu
             // 

@@ -18,7 +18,7 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-        public MainMenuItem(Image Icon, string ItemName, bool ShowDownArrow /*EventHandler EH ,*/, params MainMenuItemSubItem[] MainMenuItemSubItems) : this()
+        public MainMenuItem(Image Icon, string ItemName, bool ShowDownArrow, EventHandler EH, params MainMenuItemSubItem[] MainMenuItemSubItems) : this()
         {
             this.Icon = Icon;
             this.ItemName = ItemName;
@@ -35,6 +35,7 @@ namespace gestion_cabinet_notarial
                     FlowLayoutPanelSubItems.Height += 21;
                 }
             MaxHeight = 50 + FlowLayoutPanelSubItems.Height;
+            PictureBoxArrow.Image = Expanded ? Resources.TopArrow : Resources.DownArrow;
         }
 
         private void MainMenuItem_MouseHover(object sender, System.EventArgs e)

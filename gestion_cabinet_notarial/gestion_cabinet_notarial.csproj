@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -150,6 +151,12 @@
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="GumroadLicensing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GumroadLicensing.1.0.1\lib\net45\GumroadLicensing.dll</HintPath>
     </Reference>
@@ -179,6 +186,7 @@
       <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -244,6 +252,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -328,6 +337,119 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\ClientNormale.cs" />
+    <Compile Include="BL\ClientProfessionnel.cs" />
+    <Compile Include="BL\cls_bl_contrat.cs" />
+    <Compile Include="BL\cls_bl_dossier.cs" />
+    <Compile Include="BL\cls_bl_partes.cs" />
+    <Compile Include="BL\cls_lb_fichier_dossier.cs" />
+    <Compile Include="BL\CSL_BL_Client.cs" />
+    <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
+    <Compile Include="context\banque.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Banque_pret.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\CDG.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\client.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\ClientNormale.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\ClientProfessionnel.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\contrat.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\credit.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\devi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\dossier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\facture.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\fichiers_client.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\fichiers_contrat.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\fichiers_dossier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\fonction.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\log.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="context\note.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\parte.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\payement.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\recu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Rendez_vous.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\Signature.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\utilisateur.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Accueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\add_client.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\add_client.Designer.cs">
+      <DependentUpon>add_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AJOUTER_FICHIERS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\AJOUTER_FICHIERS.Designer.cs">
+      <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
+    </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -340,41 +462,54 @@
     <Compile Include="CONTROL_MAIN_HEADER.designer.cs">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>
     </Compile>
-    <Compile Include="CTL_CREDIT.cs">
+    <Compile Include="controls\CTL_CREDIT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CTL_CREDIT.Designer.cs">
+    <Compile Include="controls\CTL_CREDIT.Designer.cs">
       <DependentUpon>CTL_CREDIT.cs</DependentUpon>
     </Compile>
-    <Compile Include="DETAIL_CONTRAT.cs">
+    <Compile Include="controls\DETAIL_CONTRAT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DETAIL_CONTRAT.Designer.cs">
+    <Compile Include="controls\DETAIL_CONTRAT.Designer.cs">
       <DependentUpon>DETAIL_CONTRAT.cs</DependentUpon>
     </Compile>
-    <Compile Include="detail_dossier_add_contrat.cs">
+    <Compile Include="controls\detail_dossier_add_contrat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="detail_dossier_add_contrat.Designer.cs">
+    <Compile Include="controls\detail_dossier_add_contrat.Designer.cs">
       <DependentUpon>detail_dossier_add_contrat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="controls\detail_dossier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\detail_dossier.Designer.cs">
+      <DependentUpon>detail_dossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="form_main.Designer.cs">
+      <DependentUpon>form_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="contrat_pret_banque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="contrat_pret_banque.Designer.cs">
+      <DependentUpon>contrat_pret_banque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="contrat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="contrat.Designer.cs">
+      <DependentUpon>contrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info_contrat.cs" />
+    <Compile Include="controls\LIST_CLIENT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\LIST_CLIENT.Designer.cs">
+      <DependentUpon>LIST_CLIENT.cs</DependentUpon>
     </Compile>
     <Compile Include="MENU\MainMenu.cs">
       <SubType>UserControl</SubType>
@@ -394,41 +529,64 @@
     <Compile Include="MENU\MainMenuItemSubItem.designer.cs">
       <DependentUpon>MainMenuItemSubItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="nemurecupdown_with_comma.cs">
+    <Compile Include="controls\MODIFIER_LES_FICHIER.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="nemurecupdown_with_comma.Designer.cs">
+    <Compile Include="controls\MODIFIER_LES_FICHIER.Designer.cs">
+      <DependentUpon>MODIFIER_LES_FICHIER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\nemurecupdown_with_comma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\nemurecupdown_with_comma.Designer.cs">
       <DependentUpon>nemurecupdown_with_comma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ADD_DOSSIER.cs">
+    <Compile Include="controls\ADD_DOSSIER.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ADD_DOSSIER.Designer.cs">
+    <Compile Include="controls\ADD_DOSSIER.Designer.cs">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
     </Compile>
+    <Compile Include="repository\CLS_REPOSITORY.cs" />
+    <Compile Include="repository\INTER_REPOSITORY.cs" />
     <Compile Include="THEME.cs" />
+    <EmbeddedResource Include="controls\Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\add_client.resx">
+      <DependentUpon>add_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AJOUTER_FICHIERS.resx">
+      <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CTL_CREDIT.resx">
+    <EmbeddedResource Include="controls\CTL_CREDIT.resx">
       <DependentUpon>CTL_CREDIT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DETAIL_CONTRAT.resx">
+    <EmbeddedResource Include="controls\DETAIL_CONTRAT.resx">
       <DependentUpon>DETAIL_CONTRAT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="detail_dossier_add_contrat.resx">
+    <EmbeddedResource Include="controls\detail_dossier_add_contrat.resx">
       <DependentUpon>detail_dossier_add_contrat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="controls\detail_dossier.resx">
+      <DependentUpon>detail_dossier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="form_main.resx">
+      <DependentUpon>form_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="contrat_pret_banque.resx">
+      <DependentUpon>contrat_pret_banque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contrat.resx">
+      <DependentUpon>contrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LIST_CLIENT.resx">
+      <DependentUpon>LIST_CLIENT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -439,7 +597,10 @@
     <EmbeddedResource Include="MENU\MainMenuItemSubItem.resx">
       <DependentUpon>MainMenuItemSubItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nemurecupdown_with_comma.resx">
+    <EmbeddedResource Include="controls\MODIFIER_LES_FICHIER.resx">
+      <DependentUpon>MODIFIER_LES_FICHIER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\nemurecupdown_with_comma.resx">
       <DependentUpon>nemurecupdown_with_comma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -453,9 +614,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ADD_DOSSIER.resx">
+    <EmbeddedResource Include="controls\ADD_DOSSIER.resx">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="context\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="context\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -698,6 +866,24 @@
   <ItemGroup>
     <None Include="Resources\up.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="context\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="context\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -706,5 +892,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.2\build\Fody.targets'))" />
     <Error Condition="!Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

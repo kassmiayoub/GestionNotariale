@@ -40,9 +40,9 @@
             // LabelItemName
             // 
             this.LabelItemName.Font = new System.Drawing.Font("Ithra-Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.LabelItemName.Location = new System.Drawing.Point(39, 3);
+            this.LabelItemName.Location = new System.Drawing.Point(81, 3);
             this.LabelItemName.Name = "LabelItemName";
-            this.LabelItemName.Size = new System.Drawing.Size(166, 30);
+            this.LabelItemName.Size = new System.Drawing.Size(123, 30);
             this.LabelItemName.TabIndex = 6;
             this.LabelItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelItemName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainMenuItem_MouseDown);

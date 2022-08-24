@@ -26,13 +26,13 @@ namespace gestion_cabinet_notarial
         }
         private void MainMenuItemSubItem_MouseHover(object sender, EventArgs e)
         {
-            PictureBoxArrow.Image = Resources.LeftArrowMouseHover;
+            PictureBoxArrow.Image = Resources.RightArrowMouseHover;
             LabelSubItemName.ForeColor = Color.FromArgb(35, 160, 198);
         }
 
         private void MainMenuItemSubItem_MouseLeave(object sender, EventArgs e)
         {
-            PictureBoxArrow.Image =Resources.LeftArrow;
+            PictureBoxArrow.Image =Resources.RightArrow;
             LabelSubItemName.ForeColor = default(Color);
         }
         public void SetOnClickEvent(EventHandler EH)

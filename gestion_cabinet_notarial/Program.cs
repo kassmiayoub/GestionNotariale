@@ -16,7 +16,7 @@ namespace gestion_cabinet_notarial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new form_main());
         }
     }
 }
