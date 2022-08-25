@@ -288,6 +288,11 @@ namespace gestion_cabinet_notarial
                 } 
             }
         }
+
+        private void ButtonInit_Click(object sender, EventArgs e)
+        {
+            THEME.vider(this);
+        }
     }
     public class clientserch
     {

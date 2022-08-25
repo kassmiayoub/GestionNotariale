@@ -14,6 +14,7 @@ namespace gestion_cabinet_notarial
     {
 
         public static string numdossier = "";
+        public static int id_C = 0;
         public static double prix =0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
@@ -87,6 +88,15 @@ namespace gestion_cabinet_notarial
                 dgv.Columns.Insert(index, uninstallButtonColumn);
             }
         }
+        public static void add_checkbox_to_datagrid(DataGridView dgv, string name, int index)
+        {
+            DataGridViewCheckBoxColumn uninstallButtonColumn = new DataGridViewCheckBoxColumn();
+            uninstallButtonColumn.Name = name;
+            if (dgv.Columns[name] == null)
+            {
+                dgv.Columns.Insert(index, uninstallButtonColumn);
+            }
+        }
         public static Control findControl(Control parent, string controlToFindName)
         {
             if (parent.Name == controlToFindName)
@@ -121,6 +131,34 @@ namespace gestion_cabinet_notarial
             }
             return null;
 
+        }
+        public static void vider(Control c)
+        {
+            foreach(Control c2 in c.Controls)
+            {
+                if(c2 is BunifuTextBox || c2 is TextBox)
+                {
+                    c2.Text = "";
+                }
+                else if(c2 is ComboBox || c2 is BunifuDropdown)
+                {
+                    try
+                    {
+                        ComboBox cb = (ComboBox)c2;
+                        cb.SelectedIndex = -1;
+                    }
+                    catch
+                    {
+                        BunifuDropdown cb = (BunifuDropdown)c2;
+                        cb.SelectedIndex = -1;
+                    }
+                }
+                else if(c2 is BunifuCheckBox)
+                {
+                    ((BunifuCheckBox)c2).Checked = false;
+                }
+                
+            }
         }
     }
     public class cliente

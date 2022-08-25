@@ -94,10 +94,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(7, 66);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPageFICHIER;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPageFICHIER";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage_CLIENT;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "tabPage_CLIENT";
+            this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1277, 619);
             this.bunifuPages1.TabIndex = 0;
@@ -398,6 +398,7 @@
             this.ButtonInit.Text = "VIDER";
             this.ButtonInit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonInit.UseVisualStyleBackColor = false;
+            this.ButtonInit.Click += new System.EventHandler(this.ButtonInit_Click);
             // 
             // ButtonAdd
             // 

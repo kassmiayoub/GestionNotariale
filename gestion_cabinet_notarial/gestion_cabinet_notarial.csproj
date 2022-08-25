@@ -342,9 +342,11 @@
     <Compile Include="BL\cls_bl_contrat.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
+    <Compile Include="BL\cls_bl_partes_S.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
+    <Compile Include="BL\csl_bl_fichier_contart.cs" />
     <Compile Include="context\banque.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
