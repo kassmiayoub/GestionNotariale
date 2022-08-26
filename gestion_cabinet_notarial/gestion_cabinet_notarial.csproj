@@ -339,10 +339,12 @@
   <ItemGroup>
     <Compile Include="BL\ClientNormale.cs" />
     <Compile Include="BL\ClientProfessionnel.cs" />
+    <Compile Include="BL\cls_bl_banque.cs" />
     <Compile Include="BL\cls_bl_contrat.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
     <Compile Include="BL\cls_bl_partes_S.cs" />
+    <Compile Include="BL\cls_bl_payement.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />

@@ -58,18 +58,45 @@ namespace gestion_cabinet_notarial
             {
                 CSL_BL_Client cls = new CSL_BL_Client();
                 //BunifuDropdown d = (BunifuDropdown)findControl(detail_dossier, "bunifuDropdownclient");
-                BunifuDropdown d = (BunifuDropdown)detail_dossier.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdownclient"];
-                //string a = detail_dossier.Controls["bunifuPages1"].Controls[0].Controls["bunifuDropdownclient"].Name;
-                //BunifuDropdown d= (BunifuDropdown)detail_dossier.Controls["bunifuDropdownclient"];
+                BunifuDropdown bunifuDropdownclient = (BunifuDropdown)detail_dossier.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdownclient"];
                 var ListDataSource = new List<cliente>();
                 ListDataSource = cls.GetAll().Select(ele => new cliente()
                 {
                    IDCIENT= ele.idClient,
                    nomcomplet=ele.Nom+" "+ele.Prenom,
                 }).ToList();
-                d.DataSource= ListDataSource;
-                d.DisplayMember = "nomcomplet";
-                d.ValueMember= "IDCIENT";
+                bunifuDropdownclient.DataSource= ListDataSource;
+                bunifuDropdownclient.DisplayMember = "nomcomplet";
+                bunifuDropdownclient.ValueMember= "IDCIENT";
+            }
+            if (t == typeof(DETAIL_CONTRAT))
+            {
+                CSL_BL_Client cls = new CSL_BL_Client();
+                //BunifuDropdown d = (BunifuDropdown)findControl(detail_dossier, "bunifuDropdownclient");
+                ComboBox comboBoxCLIENT_PY = (ComboBox)DETAIL_CONTRAT.Controls["bunifuPages1"].Controls["payeclient"].Controls["comboBoxCLIENT_PY"];
+                ComboBox comboBox_banque_PY = (ComboBox)DETAIL_CONTRAT.Controls["bunifuPages1"].Controls["payeclient"].Controls["comboBox_banque_PY"];
+                ComboBox comboBox_TYPE_CHARGE = (ComboBox)DETAIL_CONTRAT.Controls["bunifuPages1"].Controls["payeclient"].Controls["comboBox_TYPE_CHARGE"];
+                var ListDataSource = new List<cliente>();
+                ListDataSource = new cls_bl_partes().GetAll().Where(x => x.numdossier == numdossier).Select(x => new cliente()
+                {
+                    IDCIENT = x.client.idClient,
+                    nomcomplet = $"{x.client.Nom} {x.client.Prenom}"
+                }).ToList();
+                comboBoxCLIENT_PY.DataSource = ListDataSource;
+                comboBoxCLIENT_PY.DisplayMember = "nomcomplet";
+                comboBoxCLIENT_PY.ValueMember = "IDCIENT";
+
+                //var ListDataSource1 = new List<cliente>();
+               var ListDataSource1 = new cls_bl_banque().GetAll().Where(x => x.Idbanque != 3).ToList();
+                comboBox_banque_PY.DataSource = ListDataSource1;
+                comboBox_banque_PY.DisplayMember = "Libbele"; 
+                comboBox_banque_PY.ValueMember = "Idbanque";
+                comboBox_banque_PY.Enabled=false;
+                comboBox_TYPE_CHARGE.Items.Add("Enregistrement");
+                comboBox_TYPE_CHARGE.Items.Add("Ancfcc");
+                comboBox_TYPE_CHARGE.Items.Add("Timbres");
+                comboBox_TYPE_CHARGE.Items.Add("Honoraires");
+                comboBox_TYPE_CHARGE.Items.Add("CDG");
             }
             p.Controls.Cast<Control>().ToList().ForEach(ele => ele.Visible = false);
             Control c = p.Controls.Cast<Control>().First(ele => ele.GetType() == t);

@@ -281,7 +281,7 @@ namespace gestion_cabinet_notarial
                 {
                     DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation of Form Closure", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes) {
-                        int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
                         cSL_BL_FICHIER_CLIENT.Remove(cSL_BL_FICHIER_CLIENT.FindById(idfile));
                     } 
                     

@@ -65,7 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBoxfile = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button8SERCHE_FICHIER_DOSSIER = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.ButtonAdd_FICHIER = new System.Windows.Forms.Button();
             this.bunifuDataGridView_list_file_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -98,10 +98,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 67);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage3;
+            this.bunifuPages1.PageIndex = 2;
+            this.bunifuPages1.PageName = "tabPage3";
+            this.bunifuPages1.PageTitle = "tabPage3";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(923, 545);
             this.bunifuPages1.TabIndex = 0;
@@ -617,7 +617,7 @@
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.textBoxfile);
-            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.button8SERCHE_FICHIER_DOSSIER);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.ButtonAdd_FICHIER);
             this.tabPage3.Controls.Add(this.bunifuDataGridView_list_file_dossier);
@@ -644,27 +644,28 @@
             this.textBoxfile.Size = new System.Drawing.Size(451, 31);
             this.textBoxfile.TabIndex = 483;
             // 
-            // button2
+            // button8SERCHE_FICHIER_DOSSIER
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(527, 236);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(169, 35);
-            this.button2.TabIndex = 482;
-            this.button2.Tag = "AcceptButton";
-            this.button2.Text = "RECHARCHER";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button8SERCHE_FICHIER_DOSSIER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8SERCHE_FICHIER_DOSSIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.button8SERCHE_FICHIER_DOSSIER.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8SERCHE_FICHIER_DOSSIER.FlatAppearance.BorderSize = 0;
+            this.button8SERCHE_FICHIER_DOSSIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8SERCHE_FICHIER_DOSSIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button8SERCHE_FICHIER_DOSSIER.ForeColor = System.Drawing.Color.White;
+            this.button8SERCHE_FICHIER_DOSSIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
+            this.button8SERCHE_FICHIER_DOSSIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8SERCHE_FICHIER_DOSSIER.Location = new System.Drawing.Point(527, 236);
+            this.button8SERCHE_FICHIER_DOSSIER.Margin = new System.Windows.Forms.Padding(2);
+            this.button8SERCHE_FICHIER_DOSSIER.Name = "button8SERCHE_FICHIER_DOSSIER";
+            this.button8SERCHE_FICHIER_DOSSIER.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button8SERCHE_FICHIER_DOSSIER.Size = new System.Drawing.Size(169, 35);
+            this.button8SERCHE_FICHIER_DOSSIER.TabIndex = 482;
+            this.button8SERCHE_FICHIER_DOSSIER.Tag = "AcceptButton";
+            this.button8SERCHE_FICHIER_DOSSIER.Text = "RECHARCHER";
+            this.button8SERCHE_FICHIER_DOSSIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8SERCHE_FICHIER_DOSSIER.UseVisualStyleBackColor = false;
+            this.button8SERCHE_FICHIER_DOSSIER.Click += new System.EventHandler(this.button8SERCHE_FICHIER_DOSSIER_Click);
             // 
             // button3
             // 
@@ -811,6 +812,7 @@
             this.ButtonSavefile_fichier_joint_dossier.TabIndex = 476;
             this.ButtonSavefile_fichier_joint_dossier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSavefile_fichier_joint_dossier.UseVisualStyleBackColor = false;
+            this.ButtonSavefile_fichier_joint_dossier.Click += new System.EventHandler(this.ButtonSavefile_fichier_joint_dossier_Click);
             // 
             // textBoxtitre
             // 
@@ -926,7 +928,7 @@
             this.FICHIERJOINT_dossier.TextMarginLeft = 0;
             this.FICHIERJOINT_dossier.TextPadding = new System.Windows.Forms.Padding(0);
             this.FICHIERJOINT_dossier.UseDefaultRadiusAndThickness = true;
-            this.FICHIERJOINT_dossier.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click);
+            this.FICHIERJOINT_dossier.Click += new System.EventHandler(this.FICHIERJOINT_dossier_Click);
             // 
             // CONTRAT
             // 
@@ -1019,7 +1021,7 @@
             this.CONTRAT.TextMarginLeft = 0;
             this.CONTRAT.TextPadding = new System.Windows.Forms.Padding(0);
             this.CONTRAT.UseDefaultRadiusAndThickness = true;
-            this.CONTRAT.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click);
+            this.CONTRAT.Click += new System.EventHandler(this.CONTRAT_Click);
             // 
             // PARTES_OF_CONTRAT
             // 
@@ -1112,7 +1114,7 @@
             this.PARTES_OF_CONTRAT.TextMarginLeft = 0;
             this.PARTES_OF_CONTRAT.TextPadding = new System.Windows.Forms.Padding(0);
             this.PARTES_OF_CONTRAT.UseDefaultRadiusAndThickness = true;
-            this.PARTES_OF_CONTRAT.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click);
+            this.PARTES_OF_CONTRAT.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click_1);
             // 
             // detail_dossier
             // 
@@ -1161,7 +1163,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBoxfile;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button8SERCHE_FICHIER_DOSSIER;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button ButtonAdd_FICHIER;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_list_file_dossier;

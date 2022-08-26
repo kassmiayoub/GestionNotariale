@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,28 +24,8 @@ namespace gestion_cabinet_notarial
             InitializeComponent();
         }
         private void PARTES_OF_CONTRAT_Click(object sender, EventArgs e)
-        {          
-            string name = ((BunifuButton)sender).Name;
-            switch (name)
-            {
-                case "PARTES_OF_CONTRAT":
-                    bunifuPages1.SetPage(tabPage1);
-                    break;
-                case "FICHIERJOINT_dossier":
-                    bunifuPages1.SetPage(tabPage3);
-                    break;
-                case "CONTRAT":
-                    bunifuPages1.SetPage(tabPage2);
-                    break;
-            }
-            dataGridViewlist_contrat.DataSource = con.FindByValues(ele=> ele.numdossier==THEME.numdossier).Select(ele => new contart()
-            {
-                IDCONTART=ele.Idcontrat,
-                TYPECONTRAT=ele.typecontrat,
-                DTFIN = (DateTime)ele.Datefermeture,
-                dtov = (DateTime)ele.dateouverture
-            }).ToList();
-            THEME.add_btn_to_datagrid(dataGridViewlist_contrat, "DETAIL", "DETAIL", 4);
+        {
+     
         }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
@@ -88,7 +69,7 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
-                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["ID CONTART"].Name].Value.ToString());
+                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[0].Name].Value.ToString());
                     THEME.navigat(typeof(DETAIL_CONTRAT),(Panel)this.Parent);
                 }              
             }
@@ -96,7 +77,88 @@ namespace gestion_cabinet_notarial
 
         private void bunifuDataGridView_list_file_dossier_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                if (dgv.Columns[e.ColumnIndex].Name == "affichage")
+                {
+                    string file = dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                    Process.Start(file);
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("VOUS L VRAIMENT SUPPRIMER ?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
+                        csl_Bl_Fichier_dossier.Remove(csl_Bl_Fichier_dossier.FindById(idfile));
+                        csl_Bl_Fichier_dossier.SaveChanges();
+                    }
+                }
+            }
+        }
 
+        private void PARTES_OF_CONTRAT_Click_1(object sender, EventArgs e)
+        {
+            bunifuPages1.SetPage(tabPage1);          
+        }
+
+        private void CONTRAT_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SetPage(tabPage2);
+            dataGridViewlist_contrat.DataSource = con.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(ele => new contart()
+            {
+                IDCONTART = ele.Idcontrat,
+                TYPECONTRAT = ele.typecontrat,
+                DTFIN = (DateTime)ele.Datefermeture,
+                dtov = (DateTime)ele.dateouverture
+            }).ToList();
+            THEME.add_btn_to_datagrid(dataGridViewlist_contrat, "DETAIL", "DETAIL", 4);
+        }
+
+        private void FICHIERJOINT_dossier_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SetPage(tabPage3);
+            String a = THEME.numdossier ;
+            var files = csl_Bl_Fichier_dossier.FindByValues(ele => (ele.numdossier == a)).Select(ele => new file()
+            {
+                IDFILE = (int)ele.idfile,
+                TITRE = ele.titre,
+                DESCREPTON = ele.descreption,
+                FILE = ele.path
+            }).ToList();
+            bunifuDataGridView_list_file_dossier.DataSource = files;
+            THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "sipprision", "supprimer", 4);
+            THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "affichage", "affichier", 5);
+
+        }
+
+        private void ButtonSavefile_fichier_joint_dossier_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    textBoxfile.Text = ofd.FileName;
+                }
+            }
+        }
+
+        private void button8SERCHE_FICHIER_DOSSIER_Click(object sender, EventArgs e)
+        {
+            var files = csl_Bl_Fichier_dossier.GetAll().Select(ele => new filee()
+            {
+                IDFILE = (int)ele.idfile,
+                TITRE = ele.titre,
+                DESCREPTON = ele.descreption,
+                FILE = ele.path
+            }).ToList();
+            files = textBoxtitre.Text != "" ?
+                files.Where(ele => ele.TITRE.ToString() == textBoxtitre.Text).ToList() :
+                files;
+            bunifuDataGridView_list_file_dossier.DataSource = files;
+            THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "sipprision", "supprimer", 4);
+            THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "affichage", "affichier", 5);
         }
     }
     public class contart
@@ -109,5 +171,16 @@ namespace gestion_cabinet_notarial
         public DateTime DTFIN { get; set; }
         [DisplayName("DATE OUVERTURE")]
         public DateTime dtov { get; set; }
+    }
+    public class file
+    {
+        [DisplayName("IDFILE")]
+        public int IDFILE { get; set; }
+        [DisplayName("TITRE")]
+        public string TITRE { get; set; }
+        [DisplayName("DESCREPTON")]
+        public string DESCREPTON { get; set; }
+        [DisplayName("FILE")]
+        public string FILE { get; set; }
     }
 }
