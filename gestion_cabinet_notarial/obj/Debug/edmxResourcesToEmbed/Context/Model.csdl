@@ -269,6 +269,7 @@
     <NavigationProperty Name="contrat" Relationship="Self.FK__payement__idcont__5165187F" FromRole="payement" ToRole="contrat" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__payement__utilis__5441852A" FromRole="payement" ToRole="utilisateur" />
     <NavigationProperty Name="recus" Relationship="Self.FK__recu__idPayement__66603565" FromRole="payement" ToRole="recu" />
+    <Property Name="typecharge" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="recu">
     <Key>

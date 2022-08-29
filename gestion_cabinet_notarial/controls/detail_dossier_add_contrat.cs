@@ -48,7 +48,7 @@ namespace gestion_cabinet_notarial
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
-                THEME.navigat(typeof(DETAIL_CONTRAT), (Panel)this.Parent);
+                THEME.navigat(typeof(DETAIL_CONTRAT));
             }
         }
 

@@ -69,8 +69,15 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
-                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[0].Name].Value.ToString());
-                    THEME.navigat(typeof(DETAIL_CONTRAT),(Panel)this.Parent);
+                    try
+                    {
+                        THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[0].Name].Value.ToString());
+                    }
+                    catch
+                    {
+                        THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[1].Name].Value.ToString());
+                    }
+                    THEME.navigat(typeof(DETAIL_CONTRAT));
                 }              
             }
         }
@@ -100,7 +107,15 @@ namespace gestion_cabinet_notarial
 
         private void PARTES_OF_CONTRAT_Click_1(object sender, EventArgs e)
         {
-            bunifuPages1.SetPage(tabPage1);          
+            bunifuPages1.SetPage(tabPage1);
+            var ListDataSource = new List<c>();
+            ListDataSource = new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new c()
+            {
+                TYPECLIENT = x.Typeclient,
+                NOMCOMPLET = $"{x.client.Nom} {x.client.Prenom}",
+                CONDITION= x.Condition
+            }).ToList();
+            bunifuDataGridView_list_partes.DataSource=ListDataSource;
         }
 
         private void CONTRAT_Click(object sender, EventArgs e)
@@ -182,5 +197,14 @@ namespace gestion_cabinet_notarial
         public string DESCREPTON { get; set; }
         [DisplayName("FILE")]
         public string FILE { get; set; }
+    }
+    public class c
+    {       
+        [DisplayName("NOMCOMPLET")]
+        public string NOMCOMPLET { get; set; }
+        [DisplayName("TYPE CLIENT")]
+        public string TYPECLIENT { get; set; }
+        [DisplayName("CONDITION")]
+        public string CONDITION { get; set; }
     }
 }

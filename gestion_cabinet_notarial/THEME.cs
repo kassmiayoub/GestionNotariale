@@ -12,10 +12,13 @@ namespace gestion_cabinet_notarial
 {
     internal static class THEME
     {
-
+        public static ComboBox client = null;
+        public static Panel p = null;
+        public static Type T = null;
+        public static bool credit = false;
         public static string numdossier = "";
         public static int id_C = 0;
-        public static double prix =0;
+        public static double prix = 0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
         public static DETAIL_CONTRAT DETAIL_CONTRAT { get; set; }
@@ -28,7 +31,7 @@ namespace gestion_cabinet_notarial
         {
             ControlsList.ForEach(ele => MainControlPanel.Controls.Add(ele));
         }
-        public static void add_controls_to_panel(Panel p)
+        public static void add_controls_to_panel()
         {
             create_obj_ctl();
             AddControlsToList();
@@ -52,7 +55,7 @@ namespace gestion_cabinet_notarial
             add_Client = new add_client() { Visible = false };
             LIST_CLIENT = new LIST_CLIENT() { Visible=false };
         }
-        public static void navigat(Type t, Panel p)
+        public static void navigat(Type t)
         {
             if (t == typeof(detail_dossier))
             {

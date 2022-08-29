@@ -33,7 +33,8 @@ namespace gestion_cabinet_notarial
             //dossier.Width = MAINPANEL.Width;
             //dossier.Height = MAINPANEL.Height;
             //MAINPANEL.Controls.Add(dossier);
-            THEME.add_controls_to_panel(MAINPANEL);
+            THEME.p = MAINPANEL;
+            THEME.add_controls_to_panel();
             //Control c = MAINPANEL.Controls.Cast<Control>().First(ele => ele.GetType() == typeof(ADD_DOSSIER));
             //c.Width = MAINPANEL.Width;
             //c.Height = MAINPANEL.Height;

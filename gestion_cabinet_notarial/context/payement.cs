@@ -29,6 +29,7 @@ namespace gestion_cabinet_notarial.context
         public Nullable<int> idClient { get; set; }
         public Nullable<int> idbanque { get; set; }
         public string utilisateur { get; set; }
+        public string typecharge { get; set; }
     
         public virtual banque banque { get; set; }
         public virtual client client { get; set; }

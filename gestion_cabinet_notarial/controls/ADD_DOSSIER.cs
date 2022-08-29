@@ -23,7 +23,7 @@ namespace gestion_cabinet_notarial
         {
             THEME.numdossier = textBox_N_dossier.Text;
             THEME.prix =double.Parse(textBox_prix.Text);
-            THEME.navigat(typeof(detail_dossier), (Panel)this.Parent);           
+            THEME.navigat(typeof(detail_dossier));           
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {

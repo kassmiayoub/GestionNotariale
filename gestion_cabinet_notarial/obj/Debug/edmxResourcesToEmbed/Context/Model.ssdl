@@ -209,6 +209,7 @@
     <Property Name="idClient" Type="int" />
     <Property Name="idbanque" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="typecharge" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="recu">
     <Key>

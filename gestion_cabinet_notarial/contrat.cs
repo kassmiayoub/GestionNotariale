@@ -15,7 +15,9 @@ namespace gestion_cabinet_notarial
     public partial class contrat : Form
     {
         cls_bl_contrat con = new cls_bl_contrat();
-            string type_contrat;
+        cls_bl_payement paye = new cls_bl_payement();
+
+        string type_contrat;
         public contrat(string type_contrat)
         {
             InitializeComponent();
@@ -67,6 +69,19 @@ namespace gestion_cabinet_notarial
             con.Add(c);
             //DataGridView dgv = (DataGridView)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
             //dgv.Refresh();
+            //var p = new payement();
+            //p.idClient = null;
+            //p.idbanque = null;
+            //p.Montant = 0;
+            //p.Date = null;
+            //p.typecharge = Timb;
+            //p.type = "charge";
+            //p.idcontrat = THEME.id_C;
+            //if (!RD_ESPECES.Checked)
+            //    p.type_Payement = RDCHEQUE.Checked ? "CHEQUE" : "VERMENT";
+            //else
+            //    p.type_Payement = "ESPECES";
+            //paye.Add(p);
             MessageBox.Show("ajouter avec succes");
             this.Close();
         }

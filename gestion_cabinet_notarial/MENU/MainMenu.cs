@@ -24,12 +24,12 @@ namespace gestion_cabinet_notarial
             //    new MainMenuItemSubItem("list client"/*, (se, ev) => Theme.Navigate(typeof(CTL_CLIENTS_LIST)), "ClientsList"*/) { Tag = "ClientsList" }
 
             //));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Archive, "Client", true, null,
-               new MainMenuItemSubItem("Ajouter Client", (se, ev) => THEME.navigat(typeof(add_client), (Panel)this.Parent.Controls["MAINPANEL"])/*), "AddColleague"*/) { Tag = "Addclient" },
-               new MainMenuItemSubItem("List Client", (se, ev) => THEME.navigat(typeof(LIST_CLIENT), (Panel)this.Parent.Controls["MAINPANEL"])/*), "AddColleague"*/) { Tag = "Adddossier" }
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Client, "Client", true, null,
+               new MainMenuItemSubItem("Ajouter Client", (se, ev) => THEME.navigat(typeof(add_client))/*), "AddColleague"*/) { Tag = "Addclient" },
+               new MainMenuItemSubItem("List Client", (se, ev) => THEME.navigat(typeof(LIST_CLIENT))/*), "AddColleague"*/) { Tag = "Adddossier" }
             ));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Archive, "Dossier", true, null,
-                new MainMenuItemSubItem("Ajouter Dossier", (se, ev) => THEME.navigat(typeof(ADD_DOSSIER), (Panel)this.Parent.Controls["MAINPANEL"])/*), "AddColleague"*/) { Tag = "Adddossier" }
+                new MainMenuItemSubItem("Ajouter Dossier", (se, ev) => THEME.navigat(typeof(ADD_DOSSIER))/*), "AddColleague"*/) { Tag = "Adddossier" }
                 //new MainMenuItemSubItem("list dossier"/*, (se, ev) => Theme.Navigate(typeof(CTL_COLLEAGUES_LIST)), "ColleaguesList"*/) { Tag = "ColleaguesList" }
             ));
             //PanelItems.Controls.Add(new MainMenuItem(Resources.Calendar, "Rendez-vous", true, null,
@@ -57,7 +57,7 @@ namespace gestion_cabinet_notarial
 
 
 
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "Credit", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT), (Panel)this.Parent.Controls["MAINPANEL"])));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "Credit", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "Banque", false, null));
 

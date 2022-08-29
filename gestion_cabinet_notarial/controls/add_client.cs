@@ -16,6 +16,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class add_client : UserControl
     {
+        cls_bl_credit credit = new cls_bl_credit();
         CSL_BL_Client cls = new CSL_BL_Client();
         CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
         CSL_BL_FICHIER_CLIENT cSL_BL_FICHIER_CLIENT = new CSL_BL_FICHIER_CLIENT();
@@ -180,6 +181,11 @@ namespace gestion_cabinet_notarial
             ListDataSource = textBox_fax.Text != "" ?
                 ListDataSource.Where(ele => ele.FAX.ToString() == textBox_fax.Text).ToList() :
                 ListDataSource;
+            if (THEME.credit)
+            {
+                ListDataSource = ListDataSource.Where(r =>  credit.Any(c => c.client.idClient == r.IDCIENT)) as List<clientserch>;
+                
+            }
             bunifuDataGridViewlist_client.DataSource = ListDataSource;                 
           }
         private void ButtonEdit_Click(object sender, EventArgs e)
@@ -240,6 +246,17 @@ namespace gestion_cabinet_notarial
                 textBoxCIN.Text = A.ClientProfessionnel.ICE;
                 textBoxIF.Text = A.ClientProfessionnel.IdentifiantFiscale;
             }
+            if (THEME.client != null)
+            {
+                THEME.client.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
+                THEME.navigat(THEME.T);
+                THEME.client = null;
+                THEME.T=null;
+                ButtonInit.Enabled = true;
+                ButtonEdit.Enabled = true;
+                ButtonAdd.Enabled = true;
+                THEME.credit = false;
+            }
         }
         private void ButtonSaveSettings_Click(object sender, EventArgs e)
         {
@@ -291,7 +308,8 @@ namespace gestion_cabinet_notarial
 
         private void ButtonInit_Click(object sender, EventArgs e)
         {
-            THEME.vider(this);
+            MessageBox.Show(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Name);
+            THEME.vider(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"]);
         }
     }
     public class clientserch

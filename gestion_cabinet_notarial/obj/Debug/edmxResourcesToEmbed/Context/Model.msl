@@ -218,6 +218,7 @@
     <EntitySetMapping Name="payements">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.payement">
         <MappingFragment StoreEntitySet="payement">
+          <ScalarProperty Name="typecharge" ColumnName="typecharge" />
           <ScalarProperty Name="idPayement" ColumnName="idPayement" />
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="type_Payement" ColumnName="type_Payement" />

@@ -341,6 +341,7 @@
     <Compile Include="BL\ClientProfessionnel.cs" />
     <Compile Include="BL\cls_bl_banque.cs" />
     <Compile Include="BL\cls_bl_contrat.cs" />
+    <Compile Include="BL\cls_bl_credit.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
     <Compile Include="BL\cls_bl_partes_S.cs" />

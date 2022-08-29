@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="gestion_cabinet_cotarialModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="gestion_cabinet_cotarialModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="banque">
           <Key>
             <PropertyRef Name="Idbanque" />
@@ -214,6 +214,7 @@
           <Property Name="idClient" Type="int" />
           <Property Name="idbanque" Type="int" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+          <Property Name="typecharge" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="recu">
           <Key>
@@ -944,8 +945,7 @@
             <End Role="Signature" EntitySet="Signature" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="gestion_cabinet_cotarialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1218,6 +1218,7 @@
           <NavigationProperty Name="contrat" Relationship="Self.FK__payement__idcont__5165187F" FromRole="payement" ToRole="contrat" />
           <NavigationProperty Name="utilisateur1" Relationship="Self.FK__payement__utilis__5441852A" FromRole="payement" ToRole="utilisateur" />
           <NavigationProperty Name="recus" Relationship="Self.FK__recu__idPayement__66603565" FromRole="payement" ToRole="recu" />
+          <Property Name="typecharge" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="recu">
           <Key>
@@ -2193,6 +2194,7 @@
           <EntitySetMapping Name="payements">
             <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.payement">
               <MappingFragment StoreEntitySet="payement">
+                <ScalarProperty Name="typecharge" ColumnName="typecharge" />
                 <ScalarProperty Name="idPayement" ColumnName="idPayement" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="type_Payement" ColumnName="type_Payement" />
