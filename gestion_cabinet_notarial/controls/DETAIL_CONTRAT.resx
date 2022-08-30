@@ -133,11 +133,11 @@
   </data>
   <data name="bunifuTextBox_MONTANT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQoAAAAjCAYAAABsH0SDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVHhe7dTBDcIwAARB919VLJdBGRQAspRHQIhNATPS
+        iVBORw0KGgoAAAANSUhEUgAAAQoAAAAmCAYAAAA80tUwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVHhe7dTBDcIwAARB919VLJdBGRQAspRHQIhNATPS
         fa6AHQC3rLUex3G8zMyu2204MzHGPgC+7TacmRAK4DehAJJQAEkogCQUQBIKIAkFkIQCSEIBJKEAklAA
-        SSiAJBRAEgogCQWQhAJIQgEkoQCSUABJKIAkFEASCiAJBZCEAkhCASShAJJQAEkogCQUQBIKIH2EYs75
-        3IeZ2XW7DWcmAP4Z4w26u+vO3MODgwAAAABJRU5ErkJggg==
+        SSiAJBRAEgogCQWQhAJIQgEkoQCSUABJKIAkFEASCiAJBZCEAkhCASShAJJQAEkogCQUQBIKIAkFkIQC
+        SEIBpI9QzDmf+zAzu2634cwEwD9jvAEJVjvDqRfXQgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuDatePicker_PAYMENT.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

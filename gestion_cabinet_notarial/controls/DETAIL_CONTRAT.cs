@@ -17,10 +17,19 @@ namespace gestion_cabinet_notarial
     public partial class DETAIL_CONTRAT : UserControl
     {
         int parte;
+        double montant_reste;
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_partes_S Signature = new cls_bl_partes_S();
         csl_bl_fichier_contart cont = new csl_bl_fichier_contart();
         cls_bl_payement paye = new cls_bl_payement();
+        double Timbres;
+        double Honoraires;
+        double Enregistrement;
+        double Ancfcc;
+        double montant_paye_Timbres;
+        double montant_paye_Honoraires;
+        double montant_paye_Enregistrement;
+        double montant_paye_Ancfcc;
         public DETAIL_CONTRAT()
         {
             InitializeComponent();
@@ -81,7 +90,8 @@ namespace gestion_cabinet_notarial
         }
 
         private void PAYEMENTCLIENT_CONTRAT_Click(object sender, EventArgs e)
-        {           
+        {
+           bunifuTextBox_MONTANT.Enabled = false;        
            bunifuPages1.SetPage(payeclient);
             var ListDataSource = new cls_bl_payement().GetAll().Where(x => x.idcontrat == THEME.id_C).Select(ele => new payeme()
             {
@@ -116,10 +126,10 @@ namespace gestion_cabinet_notarial
                 PAYE = ele.Sum(el => el.Montant).ToString(),
             }).ToList();
             var cont = con.FindById(THEME.id_C);
-            double Ancfcc = (double)cont.Ancfcc;
-            double Enregistrement = (double)cont.Enregistrement;
-            double Honoraires = (double)cont.Honoraires;
-            double Timbres = (double)cont.Timbres;
+             Ancfcc = (double)cont.Ancfcc;
+             Enregistrement = (double)cont.Enregistrement;
+             Honoraires = (double)cont.Honoraires;
+             Timbres = (double)cont.Timbres;
             bunifuDataGridView_statistic.ColumnCount = 5;
             bunifuDataGridView_statistic.Columns[0].Name = "DEPANCES";
             bunifuDataGridView_statistic.Columns[1].Name = "MONTANT";
@@ -137,28 +147,28 @@ namespace gestion_cabinet_notarial
                 bunifuDataGridView_statistic.Rows[i].Cells[2].Value = item.PAYE;
                 i++;  
             }
-                double montant_paye_Ancfcc = double.Parse(bunifuDataGridView_statistic.Rows[0].Cells[2].Value.ToString());
+                montant_paye_Ancfcc = double.Parse(bunifuDataGridView_statistic.Rows[0].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[0].Cells[0].Value = "Ancfcc";
                 bunifuDataGridView_statistic.Rows[0].Cells[1].Value = Ancfcc;
                 bunifuDataGridView_statistic.Rows[0].Cells[3].Value = (Ancfcc - montant_paye_Ancfcc).ToString();
                 bunifuDataGridView_statistic.Rows[0].Cells[4].Value = ((Ancfcc * 100) / THEME.prix).ToString();
-                double montant_paye_Enregistrement = double.Parse(bunifuDataGridView_statistic.Rows[1].Cells[2].Value.ToString());
+                montant_paye_Enregistrement = double.Parse(bunifuDataGridView_statistic.Rows[1].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[1].Cells[0].Value = "Enregistrement";
                 bunifuDataGridView_statistic.Rows[1].Cells[1].Value = Enregistrement;
                 bunifuDataGridView_statistic.Rows[1].Cells[3].Value = (Enregistrement - montant_paye_Enregistrement).ToString();
                 bunifuDataGridView_statistic.Rows[1].Cells[4].Value = ((Enregistrement * 100) / THEME.prix).ToString();           
-                double montant_paye_Honoraires = double.Parse(bunifuDataGridView_statistic.Rows[2].Cells[2].Value.ToString());
+                montant_paye_Honoraires = double.Parse(bunifuDataGridView_statistic.Rows[2].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[2].Cells[0].Value = "Honoraires";
                 bunifuDataGridView_statistic.Rows[2].Cells[1].Value = Honoraires;
                 bunifuDataGridView_statistic.Rows[2].Cells[3].Value = (Honoraires - montant_paye_Honoraires).ToString();
                 bunifuDataGridView_statistic.Rows[2].Cells[4].Value = ((Honoraires * 100) / THEME.prix).ToString();            
-                double montant_paye_Timbres = double.Parse(bunifuDataGridView_statistic.Rows[3].Cells[2].Value.ToString());
+                montant_paye_Timbres = double.Parse(bunifuDataGridView_statistic.Rows[3].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[3].Cells[0].Value = "Timbres";
                 bunifuDataGridView_statistic.Rows[3].Cells[1].Value = Timbres;
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
-                bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();            
+                bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();   
+                tva.Text = ((Honoraires*20)/100).ToString();
         }
-
         private void RDCHEQUE_CheckedChanged(object sender, EventArgs e)
         {
             if(RDCHEQUE.Checked)
@@ -179,6 +189,8 @@ namespace gestion_cabinet_notarial
 
         private void ButtonAdd_PAYEMENT_Click(object sender, EventArgs e)
         {
+            if (montant_reste < double.Parse(bunifuTextBox_MONTANT.Text))
+                return;
             var p = new  payement();
             p.idClient = int.Parse(comboBoxCLIENT_PY.SelectedValue.ToString());
             p.idbanque = RD_ESPECES.Checked ? 3 : int.Parse(comboBox_banque_PY.SelectedValue.ToString());
@@ -255,6 +267,27 @@ namespace gestion_cabinet_notarial
 
                 }
             }
+        }
+        private void comboBox_TYPE_CHARGE_SelectedIndexChanged(object sender, EventArgs e)
+        {           
+            if (comboBox_TYPE_CHARGE.Text == "Enregistrement")
+            {
+                bunifuTextBox_MONTANT.Text = (Enregistrement- montant_paye_Enregistrement).ToString();
+            }
+            else if (comboBox_TYPE_CHARGE.Text == "Ancfcc")
+            {
+                bunifuTextBox_MONTANT.Text = (Ancfcc - montant_paye_Ancfcc).ToString();
+            }
+            else if (comboBox_TYPE_CHARGE.Text == "Timbres")
+            {
+                bunifuTextBox_MONTANT.Text = (Timbres - montant_paye_Timbres).ToString();
+            }
+            else if (comboBox_TYPE_CHARGE.Text == "Honoraires")
+            {
+                bunifuTextBox_MONTANT.Text = (Honoraires - montant_paye_Honoraires).ToString();
+            }
+            montant_reste = double.Parse(bunifuTextBox_MONTANT.Text);
+            bunifuTextBox_MONTANT.Enabled = true;
         }
     }
     public class partesS

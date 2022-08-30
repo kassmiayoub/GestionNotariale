@@ -19,12 +19,6 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            THEME.numdossier = textBox_N_dossier.Text;
-            THEME.prix =double.Parse(textBox_prix.Text);
-            THEME.navigat(typeof(detail_dossier));           
-        }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {
             var a = new dossier();
@@ -34,7 +28,10 @@ namespace gestion_cabinet_notarial
             a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
             a.Titrefoncier=textBox_titre_foncier.Text;
             a.Objet = textBox_obj.Text;
-            a.Status = 1;
+            if(bunifuCheckBox_status.Checked)
+                a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
+            else
+                a.Datefermeture = null;
             cls_Bl_Dossier.Add(a);
         }
 
@@ -68,6 +65,10 @@ namespace gestion_cabinet_notarial
             //ListDataSource = textBox_fax.Text != "" ?
             //    ListDataSource.Where(ele => ele.FAX.ToString() == textBox_fax.Text).ToList() :
             //    ListDataSource;
+            if(THEME.client_or_dossier != null)
+            {
+                ListDataSource = ListDataSource.Where(r => r.DATE_F == null).ToList();
+            }
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
         }
 
@@ -83,11 +84,41 @@ namespace gestion_cabinet_notarial
             textBox_titre_foncier.Text = A.Titrefoncier;
             bunifuDatePicker_dubet.Value = A.dateouverture.Value;
             bunifuDatePicker_fin.Value = A.Datefermeture.Value;
+            if (THEME.client_or_dossier != null)
+            {
+                THEME.client_or_dossier.SelectedValue = textBox_N_dossier.Text;
+                THEME.navigat(THEME.T);
+                THEME.client_or_dossier = null;
+                THEME.T = null;
+                ButtonInit.Enabled = true;
+                ButtonAdd_dossier .Enabled = true;
+                ButtonEdit_dossier .Enabled = true;
+            }
         }
 
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             THEME.vider(this);
+        }
+
+        private void button_detail_dossier_Click(object sender, EventArgs e)
+        {
+            THEME.numdossier = textBox_N_dossier.Text;
+            THEME.prix = double.Parse(textBox_prix.Text);
+            THEME.navigat(typeof(detail_dossier));
+        }
+
+        private void ADD_DOSSIER_Load(object sender, EventArgs e)
+        {
+            bunifuDatePicker_fin.Enabled = false;
+        }
+
+        private void bunifuCheckBox_status_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if(bunifuCheckBox_status.Checked)
+                bunifuDatePicker_fin.Enabled = true;
+            else
+                bunifuDatePicker_fin.Enabled = false;
         }
     }
     public class dossierSerche

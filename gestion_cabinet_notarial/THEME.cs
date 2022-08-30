@@ -12,7 +12,7 @@ namespace gestion_cabinet_notarial
 {
     internal static class THEME
     {
-        public static ComboBox client = null;
+        public static ComboBox client_or_dossier = null;
         public static Panel p = null;
         public static Type T = null;
         public static bool credit = false;
@@ -57,6 +57,17 @@ namespace gestion_cabinet_notarial
         }
         public static void navigat(Type t)
         {
+            if(client_or_dossier != null)
+                {
+                ((Button)ADD_DOSSIER.Controls["ButtonEdit_dossier"]).Enabled = true;
+                ((Button)ADD_DOSSIER.Controls["button_detail_dossier"]).Enabled = true;
+                ((Button)ADD_DOSSIER.Controls["ButtonAdd_dossier"]).Enabled = true;
+                ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = true;
+                ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonInit"]).Enabled = true;
+                ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = true;
+                client_or_dossier = null;
+                T = null;
+            }
             if (t == typeof(detail_dossier))
             {
                 CSL_BL_Client cls = new CSL_BL_Client();

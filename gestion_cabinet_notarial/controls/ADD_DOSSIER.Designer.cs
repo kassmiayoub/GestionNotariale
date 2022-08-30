@@ -46,11 +46,12 @@
             this.textBox_prix = new System.Windows.Forms.TextBox();
             this.textBox_titre_foncier = new System.Windows.Forms.TextBox();
             this.textBox_obj = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_detail_dossier = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_list_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuDatePicker_dubet = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuDatePicker_fin = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuCheckBox_status = new Bunifu.UI.WinForms.BunifuCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,25 +249,25 @@
             this.textBox_obj.Size = new System.Drawing.Size(278, 31);
             this.textBox_obj.TabIndex = 427;
             // 
-            // button2
+            // button_detail_dossier
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(785, 243);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 53);
-            this.button2.TabIndex = 431;
-            this.button2.Text = "DETALS DE DOSSIER";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_detail_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_detail_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
+            this.button_detail_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_detail_dossier.FlatAppearance.BorderSize = 0;
+            this.button_detail_dossier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_detail_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
+            this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_detail_dossier.Location = new System.Drawing.Point(785, 243);
+            this.button_detail_dossier.Margin = new System.Windows.Forms.Padding(2);
+            this.button_detail_dossier.Name = "button_detail_dossier";
+            this.button_detail_dossier.Size = new System.Drawing.Size(216, 53);
+            this.button_detail_dossier.TabIndex = 431;
+            this.button_detail_dossier.Text = "DETALS DE DOSSIER";
+            this.button_detail_dossier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_detail_dossier.UseVisualStyleBackColor = false;
+            this.button_detail_dossier.Click += new System.EventHandler(this.button_detail_dossier_Click);
             // 
             // label10
             // 
@@ -393,15 +394,71 @@
             this.bunifuDatePicker_fin.Size = new System.Drawing.Size(278, 32);
             this.bunifuDatePicker_fin.TabIndex = 435;
             // 
+            // bunifuCheckBox_status
+            // 
+            this.bunifuCheckBox_status.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox_status.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox_status.AllowBindingControlLocation = true;
+            this.bunifuCheckBox_status.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox_status.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox_status.AllowOnHoverStates = true;
+            this.bunifuCheckBox_status.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuCheckBox_status.AutoCheck = true;
+            this.bunifuCheckBox_status.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_status.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_status.BackgroundImage")));
+            this.bunifuCheckBox_status.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox_status.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox_status.BorderRadius = 12;
+            this.bunifuCheckBox_status.Checked = true;
+            this.bunifuCheckBox_status.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox_status.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox_status.CustomCheckmarkImage = null;
+            this.bunifuCheckBox_status.Location = new System.Drawing.Point(503, 155);
+            this.bunifuCheckBox_status.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox_status.Name = "bunifuCheckBox_status";
+            this.bunifuCheckBox_status.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_status.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox_status.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox_status.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_status.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_status.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox_status.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_status.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox_status.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox_status.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_status.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_status.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox_status.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_status.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox_status.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox_status.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_status.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_status.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox_status.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_status.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox_status.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox_status.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_status.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox_status.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox_status.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox_status.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_status.Size = new System.Drawing.Size(28, 28);
+            this.bunifuCheckBox_status.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox_status.TabIndex = 436;
+            this.bunifuCheckBox_status.ThreeState = false;
+            this.bunifuCheckBox_status.ToolTipText = null;
+            this.bunifuCheckBox_status.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBox_status_CheckedChanged);
+            // 
             // ADD_DOSSIER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCheckBox_status);
             this.Controls.Add(this.bunifuDatePicker_fin);
             this.Controls.Add(this.bunifuDatePicker_dubet);
             this.Controls.Add(this.bunifuDataGridView_list_dossier);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_detail_dossier);
             this.Controls.Add(this.textBox_obj);
             this.Controls.Add(this.textBox_titre_foncier);
             this.Controls.Add(this.textBox_prix);
@@ -419,6 +476,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Name = "ADD_DOSSIER";
             this.Size = new System.Drawing.Size(1010, 617);
+            this.Load += new System.EventHandler(this.ADD_DOSSIER_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -441,10 +499,11 @@
         private System.Windows.Forms.TextBox textBox_prix;
         private System.Windows.Forms.TextBox textBox_titre_foncier;
         private System.Windows.Forms.TextBox textBox_obj;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button_detail_dossier;
         private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_list_dossier;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_dubet;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_fin;
+        private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox_status;
     }
 }

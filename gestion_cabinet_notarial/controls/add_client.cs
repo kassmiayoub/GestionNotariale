@@ -183,8 +183,7 @@ namespace gestion_cabinet_notarial
                 ListDataSource;
             if (THEME.credit)
             {
-                ListDataSource = ListDataSource.Where(r =>  credit.Any(c => c.client.idClient == r.IDCIENT)) as List<clientserch>;
-                
+                ListDataSource = ListDataSource.Where(r =>  credit.Any(c => c.client.idClient == r.IDCIENT)) as List<clientserch>;                
             }
             bunifuDataGridViewlist_client.DataSource = ListDataSource;                 
           }
@@ -246,11 +245,11 @@ namespace gestion_cabinet_notarial
                 textBoxCIN.Text = A.ClientProfessionnel.ICE;
                 textBoxIF.Text = A.ClientProfessionnel.IdentifiantFiscale;
             }
-            if (THEME.client != null)
+            if (THEME.client_or_dossier != null)
             {
-                THEME.client.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
+                THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
                 THEME.navigat(THEME.T);
-                THEME.client = null;
+                THEME.client_or_dossier = null;
                 THEME.T=null;
                 ButtonInit.Enabled = true;
                 ButtonEdit.Enabled = true;
