@@ -16,8 +16,8 @@ namespace gestion_cabinet_notarial.context
     {
         public int Id { get; set; }
         public Nullable<System.DateTime> datee { get; set; }
-        public Nullable<System.TimeSpan> Timedebut { get; set; }
-        public Nullable<System.TimeSpan> Timefin { get; set; }
+        public string Timedebut { get; set; }
+        public string Timefin { get; set; }
         public Nullable<int> idClient { get; set; }
         public string utilisateur { get; set; }
     

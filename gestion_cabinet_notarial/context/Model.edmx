@@ -230,8 +230,8 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="datee" Type="date" />
-          <Property Name="Timedebut" Type="time" Precision="7" />
-          <Property Name="Timefin" Type="time" Precision="7" />
+          <Property Name="Timedebut" Type="varchar" MaxLength="50" />
+          <Property Name="Timefin" Type="varchar" MaxLength="50" />
           <Property Name="idClient" Type="int" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
         </EntityType>
@@ -1235,8 +1235,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="datee" Type="DateTime" Precision="0" />
-          <Property Name="Timedebut" Type="Time" Precision="7" />
-          <Property Name="Timefin" Type="Time" Precision="7" />
+          <Property Name="Timedebut" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Timefin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="idClient" Type="Int32" />
           <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="client" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="Rendez_vous" ToRole="client" />

@@ -3,6 +3,7 @@ using gestion_cabinet_notarial.context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace gestion_cabinet_notarial
     {
         cls_bl_rendez_vous rv = new cls_bl_rendez_vous();
         CSL_BL_Client cls = new CSL_BL_Client();
-        private string[] Months = { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" };
+        private string[] Months = { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" };       
         private int NavigationMonth = DateTime.Now.Month - 1;
         public int SelectedDay { get; set; } = DateTime.Now.Day;
         public int Selectedyear { get; set; } = DateTime.Now.Year;
@@ -25,19 +26,41 @@ namespace gestion_cabinet_notarial
         public string time_fin = null;
         public List<string> tm = new List<string>();
         public int curentmonth { get; set; } = DateTime.Now.Month;
-
-
         public CTL_AGENDA()
         {
             InitializeComponent();
             ChangeMonth();
         }
+        public void time_reserve()
+        {
+            var dt = rv.GetAll().Where(ele => ele.datee == Convert.ToDateTime(CTL_DAY_ITEM.datecomlet)).ToList();
+            foreach (DataGridViewRow r in bunifuDataGridView_list_times.Rows)
+            {
+                foreach (DataGridViewCell cell in r.Cells)
+                {
+                    DataGridViewButtonCell b = (DataGridViewButtonCell)cell;
+                        b.Style.BackColor = Color.Green;
+                }
+            }
+            dt.ForEach(rdv =>
+            {
+                foreach (DataGridViewRow r in bunifuDataGridView_list_times.Rows)
+                {
+                    foreach (DataGridViewCell cell in r.Cells)
+                    {
+                        DataGridViewButtonCell b = (DataGridViewButtonCell)cell;
+                        if (rdv.Timedebut == cell.Value.ToString())
+                            b.Style.BackColor = Color.Red;
+                    }
+                }
+            });
+        }
         public void ChangeMonth()
-        {   
-            MessageBox.Show((NavigationMonth+1).ToString());
+        {
+            MessageBox.Show((NavigationMonth + 1).ToString());
             Selectedmonth = NavigationMonth + 1;
             if (curent)
-                NavigationMonth = curentmonth-1;
+                NavigationMonth = curentmonth - 1;
             LabelMonth.Text = Months[NavigationMonth];
             LoadData();
         }
@@ -55,12 +78,15 @@ namespace gestion_cabinet_notarial
                 //}
                 //else
                 //{
-                    var CTL = new CTL_DAY_ITEM(i, DAY_ITEM_STATE.EMPTY) { Agenda = this };
-                    CTL_TMP = CTL;
-                    PanelDays.Controls.Add(CTL);
-               // }
+                var CTL = new CTL_DAY_ITEM(i, DAY_ITEM_STATE.EMPTY) { Agenda = this };
+                CTL_TMP = CTL;
+                PanelDays.Controls.Add(CTL);
+                // }
                 if (!FirstLoad && i == DateTime.Now.Day)
                 {
+                    Selectedmonth = DateTime.Now.Month;
+                    SelectedDay = DateTime.Now.Day;
+                    Selectedyear = DateTime.Now.Year;
                     CTL_TMP.CTL_DAY_ITEM_Click(null, null);
                     FirstLoad = true;
                 }
@@ -72,25 +98,26 @@ namespace gestion_cabinet_notarial
             if (NavigationMonth > 11)
                 NavigationMonth = 0;
             ChangeMonth();
+            time_reserve();
         }
-
         private void ButtonPrevMonth_Click(object sender, EventArgs e)
         {
             NavigationMonth--;
             if (NavigationMonth < 0)
                 NavigationMonth = 11;
             ChangeMonth();
+            time_reserve();
         }
-
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             curent = true;
             yers.Text = Selectedyear.ToString();
             FirstLoad = false;
+            
             ChangeMonth();
             curent = false;
+            time_reserve();
         }
-
         private void CTL_AGENDA_Load(object sender, EventArgs e)
         {
             yers.Text = Selectedyear.ToString();
@@ -101,7 +128,7 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_times.Rows.Add(row);
             bunifuDataGridView_list_times.Rows.Add(row);
             bunifuDataGridView_list_times.Rows.Add(row);
-            bunifuDataGridView_list_times.Rows.Add(row);           
+            bunifuDataGridView_list_times.Rows.Add(row);
             bunifuDataGridView_list_times.Rows.Add(row);
             bunifuDataGridView_list_times.Rows[0].Cells[0].Value = "08:00";
             bunifuDataGridView_list_times.Rows[0].Cells[1].Value = "10:00";
@@ -174,16 +201,19 @@ namespace gestion_cabinet_notarial
             bunifuDropdown_client_rendez.DataSource = ListDataSource;
             bunifuDropdown_client_rendez.DisplayMember = "NOMCOMPLET";
             bunifuDropdown_client_rendez.ValueMember = "IDCIENT";
+            time_reserve();
         }
 
         private void button_next_year_Click(object sender, EventArgs e)
         {
-           yers.Text=(int.Parse(yers.Text)+1).ToString();
+            yers.Text = (int.Parse(yers.Text) + 1).ToString();
+            time_reserve();
         }
 
         private void button_prev_year_Click(object sender, EventArgs e)
         {
             yers.Text = (int.Parse(yers.Text) - 1).ToString();
+            time_reserve();
 
         }
         public class clien
@@ -198,26 +228,42 @@ namespace gestion_cabinet_notarial
         {
             if (tm.Count == 0)
                 return;
-            TimeSpan dateTime = TimeSpan.ParseExact(tm[0].ToString(), "HH:mm", CultureInfo.InvariantCulture);
-            var redv = new Rendez_vous();
-            redv.idClient = (int)bunifuDropdown_client_rendez.SelectedValue;
-            redv.datee =Convert.ToDateTime(CTL_DAY_ITEM.datecomlet);
-            if (tm.Count > 1)
+            var redvs = new List<Rendez_vous>();
+            for (int i = 0; i < tm.Count; i++)
             {
-                redv.Timedebut =dateTime;
+
+                var redv = new Rendez_vous();
+                redv.idClient = (int)bunifuDropdown_client_rendez.SelectedValue;
+                redv.datee = Convert.ToDateTime(CTL_DAY_ITEM.datecomlet);
+                if (tm.Count > 1)
+                {
+                    //redv.Timedebut =dateTime;
+                    redv.Timedebut = tm[i].ToString();
+                }
+                else
+                {
+                    //redv.Timedebut = dateTime;
+                    redv.Timedebut = tm[i].ToString();
+                }
+                redvs.Add(redv);
             }
-            else
-            {
-                redv.Timedebut = dateTime;
-            }
-            rv.Add(redv);
+            rv.AddRange(redvs);
         }
 
         private void bunifuDataGridView_list_times_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string time = bunifuDataGridView_list_times.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            DataGridViewButtonCell time1 = (DataGridViewButtonCell)bunifuDataGridView_list_times.Rows[e.RowIndex].Cells[e.ColumnIndex];            
+            string time = time1.Value.ToString();
+            if (time1.Style.BackColor == Color.Red)
+                return;
+            if(time1.Style.BackColor == Color.Orange)
+            {
+                tm.Remove(time);
+                time1.Style.BackColor = Color.Green;
+                return;
+            }
             tm.Add(time);
-           // MessageBox.Show(time);
+            time1.Style.BackColor = Color.Orange;
         }
     }
 }

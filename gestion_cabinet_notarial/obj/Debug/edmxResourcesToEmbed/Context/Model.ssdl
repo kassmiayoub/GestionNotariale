@@ -225,8 +225,8 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datee" Type="date" />
-    <Property Name="Timedebut" Type="time" Precision="7" />
-    <Property Name="Timefin" Type="time" Precision="7" />
+    <Property Name="Timedebut" Type="varchar" MaxLength="50" />
+    <Property Name="Timefin" Type="varchar" MaxLength="50" />
     <Property Name="idClient" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
   </EntityType>

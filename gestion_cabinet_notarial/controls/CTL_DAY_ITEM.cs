@@ -109,7 +109,8 @@ namespace gestion_cabinet_notarial
             }
             BackgroundImageLayout = ImageLayout.Center;
             var date = new DateTime(Agenda.Selectedyear, Agenda.Selectedmonth, ItemName);
-            datecomlet = date.ToString();            
+            datecomlet = date.ToString();
+            Agenda.time_reserve();
         }
     }
     public enum DAY_ITEM_STATE
