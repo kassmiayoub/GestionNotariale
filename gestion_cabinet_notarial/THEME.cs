@@ -26,6 +26,7 @@ namespace gestion_cabinet_notarial
         public static Panel MainControlPanel { get; set; }
         public static add_client add_Client { get; set; }
         public static LIST_CLIENT LIST_CLIENT { get; set; }
+        public static CTL_AGENDA CTL_AGENDA { get; set; }
         public static List<Control> ControlsList { get; set; } = new List<Control>();
         private static void AddControlToPanel()
         {
@@ -39,6 +40,7 @@ namespace gestion_cabinet_notarial
         }
         public static void AddControlsToList()
         {
+            ControlsList.Add(CTL_AGENDA);
             ControlsList.Add(ADD_DOSSIER);
             ControlsList.Add(CTL_CREDIT);
             ControlsList.Add(DETAIL_CONTRAT);
@@ -54,6 +56,8 @@ namespace gestion_cabinet_notarial
             detail_dossier = new detail_dossier() { Visible = false };
             add_Client = new add_client() { Visible = false };
             LIST_CLIENT = new LIST_CLIENT() { Visible=false };
+            CTL_AGENDA = new CTL_AGENDA() { Visible = false };
+
         }
         public static void navigat(Type t)
         {

@@ -346,6 +346,7 @@
     <Compile Include="BL\cls_bl_partes.cs" />
     <Compile Include="BL\cls_bl_partes_S.cs" />
     <Compile Include="BL\cls_bl_payement.cs" />
+    <Compile Include="BL\cls_bl_rendez-vous.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
@@ -454,6 +455,18 @@
     </Compile>
     <Compile Include="controls\AJOUTER_FICHIERS.Designer.cs">
       <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_AGENDA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_AGENDA.Designer.cs">
+      <DependentUpon>CTL_AGENDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_DAY_ITEM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_DAY_ITEM.Designer.cs">
+      <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
     </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
@@ -565,6 +578,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\AJOUTER_FICHIERS.resx">
       <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_AGENDA.resx">
+      <DependentUpon>CTL_AGENDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_DAY_ITEM.resx">
+      <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>

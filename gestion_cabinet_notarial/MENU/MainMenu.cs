@@ -58,6 +58,8 @@ namespace gestion_cabinet_notarial
 
 
             PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "Credit", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "renez-vous", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
+
             PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "Banque", false, null));
 
