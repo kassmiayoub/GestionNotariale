@@ -67,7 +67,6 @@ namespace gestion_cabinet_notarial
                 ((Button)ADD_DOSSIER.Controls["button_detail_dossier"]).Enabled = true;
                 ((Button)ADD_DOSSIER.Controls["ButtonAdd_dossier"]).Enabled = true;
                 ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = true;
-                ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonInit"]).Enabled = true;
                 ((Button)add_Client.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = true;
                 client_or_dossier = null;
                 T = null;

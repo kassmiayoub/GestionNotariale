@@ -30,11 +30,10 @@ namespace gestion_cabinet_notarial
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonInit"]).Enabled = false;
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
             THEME.T = this.GetType();
-            THEME.client_or_dossier = (ComboBox)this.Controls["comboBox_client_credit"];
             THEME.navigat(typeof(add_client));
-
+            THEME.client_or_dossier = (ComboBox)this.Controls["comboBox_client_credit"];
+            
         }
-
         private void CTL_CREDIT_Load(object sender, EventArgs e)
         {
             var ListDataSource1 = new cls_bl_banque().GetAll().Where(x => x.Idbanque != 3).ToList();

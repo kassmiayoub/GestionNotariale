@@ -104,6 +104,8 @@ namespace gestion_cabinet_notarial
         private void button_detail_dossier_Click(object sender, EventArgs e)
         {
             THEME.numdossier = textBox_N_dossier.Text;
+            if (textBox_prix.Text == "")
+                return;
             THEME.prix = double.Parse(textBox_prix.Text);
             THEME.navigat(typeof(detail_dossier));
         }

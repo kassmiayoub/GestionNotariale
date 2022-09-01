@@ -42,25 +42,26 @@ namespace gestion_cabinet_notarial
             c.typecontrat = label12.Text;
             c.Timbres = double.Parse(bunifuTextBoxtmbr.Text);
             c.numdossier = THEME.numdossier;
+            MessageBox.Show(THEME.prix.ToString());
             if (bunifuCheckBoxhonoraire.Checked)
             {
-                c.Honoraires = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox1"].Text)*THEME.prix)/100;
+                c.Honoraires = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox_porsontage"].Text)*THEME.prix)/100;
             }
             else
             {
                 c.Honoraires =double.Parse(bunifuTextBoxhonoraire.Text);
             }
-            if (bunifuCheckBoxhonoraire.Checked)
+            if (bunifuCheckBoxenregistrement.Checked)
             {
-                c.Enregistrement = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma2"].Controls["textBox1"].Text) * THEME.prix) / 100;
+                c.Enregistrement = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma2"].Controls["textBox_porsontage"].Text) * THEME.prix) / 100;
             }
             else
             {
                 c.Enregistrement = double.Parse(bunifuTextBoxenregistrement.Text);
             }
-            if (bunifuCheckBoxhonoraire.Checked)
+            if (bunifuCheckBoxancfcc.Checked)
             {
-                c.Ancfcc = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma3"].Controls["textBox1"].Text) * THEME.prix) / 100;
+                c.Ancfcc = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma3"].Controls["textBox_porsontage"].Text) * THEME.prix) / 100;
             }
             else
             {

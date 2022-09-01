@@ -50,7 +50,10 @@ namespace gestion_cabinet_notarial
                     {
                         DataGridViewButtonCell b = (DataGridViewButtonCell)cell;
                         if (rdv.Timedebut == cell.Value.ToString())
+                        {
                             b.Style.BackColor = Color.Red;
+                            b.Tag=b.Value+"|"+rdv.idClient.ToString();  
+                        }                            
                     }
                 }
             });
@@ -111,9 +114,8 @@ namespace gestion_cabinet_notarial
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             curent = true;
-            yers.Text = Selectedyear.ToString();
-            FirstLoad = false;
-            
+            yers.Text = DateTime.Now.Year.ToString(); 
+            FirstLoad = false;       
             ChangeMonth();
             curent = false;
             time_reserve();
@@ -201,18 +203,21 @@ namespace gestion_cabinet_notarial
             bunifuDropdown_client_rendez.DataSource = ListDataSource;
             bunifuDropdown_client_rendez.DisplayMember = "NOMCOMPLET";
             bunifuDropdown_client_rendez.ValueMember = "IDCIENT";
+            bunifuDataGridView_list_times.Rows[0].Cells[0].Selected= false;
             time_reserve();
         }
 
         private void button_next_year_Click(object sender, EventArgs e)
         {
             yers.Text = (int.Parse(yers.Text) + 1).ToString();
+            Selectedyear = int.Parse(yers.Text);
             time_reserve();
         }
 
         private void button_prev_year_Click(object sender, EventArgs e)
         {
             yers.Text = (int.Parse(yers.Text) - 1).ToString();
+            Selectedyear =int.Parse(yers.Text);
             time_reserve();
 
         }
@@ -230,11 +235,11 @@ namespace gestion_cabinet_notarial
                 return;
             var redvs = new List<Rendez_vous>();
             for (int i = 0; i < tm.Count; i++)
-            {
-
+            { 
                 var redv = new Rendez_vous();
                 redv.idClient = (int)bunifuDropdown_client_rendez.SelectedValue;
                 redv.datee = Convert.ToDateTime(CTL_DAY_ITEM.datecomlet);
+                redv.description = richTextBox_description.Text;
                 if (tm.Count > 1)
                 {
                     //redv.Timedebut =dateTime;
@@ -247,23 +252,49 @@ namespace gestion_cabinet_notarial
                 }
                 redvs.Add(redv);
             }
+            tm.Clear();
             rv.AddRange(redvs);
         }
 
         private void bunifuDataGridView_list_times_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewButtonCell time1 = (DataGridViewButtonCell)bunifuDataGridView_list_times.Rows[e.RowIndex].Cells[e.ColumnIndex];            
+            DataGridViewButtonCell time1;
+            try
+            {
+                time1 = (DataGridViewButtonCell)bunifuDataGridView_list_times.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
+            catch
+            {
+                return;
+            }
             string time = time1.Value.ToString();
             if (time1.Style.BackColor == Color.Red)
+            {
+                int endIndex = ((string)time1.Tag).Length;
+                int title =int.Parse(((string)time1.Tag).Substring(6, endIndex-6));
+                bunifuDropdown_client_rendez.SelectedValue = title;            
+               // richTextBox_description.Text = rv.FindById(title);                                
+                time1.Selected = false;
                 return;
+            }             
             if(time1.Style.BackColor == Color.Orange)
             {
                 tm.Remove(time);
                 time1.Style.BackColor = Color.Green;
+                time1.Selected = false;
                 return;
             }
             tm.Add(time);
             time1.Style.BackColor = Color.Orange;
+            time1.Selected = false;
+        }
+        private void ButtonSerch_client_Click(object sender, EventArgs e)
+        {
+            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
+            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
+            THEME.T = this.GetType();
+            THEME.navigat(typeof(add_client));
+            THEME.client_or_dossier = (ComboBox)this.Controls["bunifuDropdown_client_rendez"];
         }
     }
 }

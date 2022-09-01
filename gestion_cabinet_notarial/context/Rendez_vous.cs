@@ -20,6 +20,7 @@ namespace gestion_cabinet_notarial.context
         public string Timefin { get; set; }
         public Nullable<int> idClient { get; set; }
         public string utilisateur { get; set; }
+        public string description { get; set; }
     
         public virtual client client { get; set; }
         public virtual utilisateur utilisateur1 { get; set; }

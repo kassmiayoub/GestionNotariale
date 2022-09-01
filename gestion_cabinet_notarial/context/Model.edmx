@@ -234,6 +234,7 @@
           <Property Name="Timefin" Type="varchar" MaxLength="50" />
           <Property Name="idClient" Type="int" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+          <Property Name="description" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Signature">
           <Key>
@@ -1241,6 +1242,7 @@
           <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="client" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="Rendez_vous" ToRole="client" />
           <NavigationProperty Name="utilisateur1" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="Rendez_vous" ToRole="utilisateur" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Signature">
           <Key>
@@ -2219,6 +2221,7 @@
           <EntitySetMapping Name="Rendez_vous">
             <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.Rendez_vous">
               <MappingFragment StoreEntitySet="Rendez_vous">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="datee" ColumnName="datee" />
                 <ScalarProperty Name="Timedebut" ColumnName="Timedebut" />

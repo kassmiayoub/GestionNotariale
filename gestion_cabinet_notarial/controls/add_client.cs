@@ -20,6 +20,9 @@ namespace gestion_cabinet_notarial
         CSL_BL_Client cls = new CSL_BL_Client();
         CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
         CSL_BL_FICHIER_CLIENT cSL_BL_FICHIER_CLIENT = new CSL_BL_FICHIER_CLIENT();
+        cls_bl_dossier cls_Bl_Dossier_client = new cls_bl_dossier();
+        cls_bl_partes parte_client = new cls_bl_partes();
+
         public add_client()
         {
             InitializeComponent();
@@ -304,11 +307,39 @@ namespace gestion_cabinet_notarial
                 } 
             }
         }
-
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Name);
             THEME.vider(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"]);
+        }
+
+        private void bunifuButton_dossier_Click(object sender, EventArgs e)
+        {
+            var ListDataSource = new List<dossier_client>();
+            ListDataSource = parte_client.GetAll().Where(id => id.idClient==int.Parse(textBoxIDCLIENT.Text)).Select(ele =>   new dossier_client()
+            {
+                N_DOSSIER = ele.dossier.Numdossier,
+                DATE_F = ele.dossier.Datefermeture.ToString(),
+                DATE_O = ele.dossier.dateouverture.ToString(),
+                OBJET = ele.dossier.Objet,
+                TITRE_F = ele.dossier.Titrefoncier,
+                PRIX = ele.dossier.PRIX_ACQUISITION.ToString()
+            }).ToList();
+            bunifuDataGridView_list_dossier.DataSource = ListDataSource;
+            THEME.add_btn_to_datagrid(bunifuDataGridView_list_dossier, "detail", "detail", 6);
+            bunifuPages1.SetPage(tabPage_dossier);
+        }
+
+        private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            THEME.numdossier = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["N_DOSSIER"].Value.ToString();
+            THEME.prix = double.Parse(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["PRIX"].Value.ToString());
+            MessageBox.Show(THEME.numdossier);
+            MessageBox.Show(THEME.prix.ToString());
+            THEME.navigat(typeof(detail_dossier));
+            //THEME.numdossier = "";
+            //THEME.prix = 0;
+
         }
     }
     public class clientserch
@@ -336,6 +367,21 @@ namespace gestion_cabinet_notarial
         public string DESCREPTON { get; set; }
         [DisplayName("FILE")]
         public string FILE { get; set; }
+    }
+    public class dossier_client
+    {
+        [DisplayName("N DOSSIER")]
+        public string N_DOSSIER { get; set; }
+        [DisplayName("DATE FERMETURE ")]
+        public string DATE_F { get; set; }
+        [DisplayName("DATE OUVERTURE")]
+        public string DATE_O { get; set; }
+        [DisplayName("PRIX")]
+        public string PRIX { get; set; }
+        [DisplayName("OBJET")]
+        public string OBJET { get; set; }
+        [DisplayName("TITRE FONCIER")]
+        public string TITRE_F { get; set; }
     }
 }
 

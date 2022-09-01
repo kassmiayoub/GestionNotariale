@@ -229,6 +229,7 @@
     <Property Name="Timefin" Type="varchar" MaxLength="50" />
     <Property Name="idClient" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="description" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Signature">
     <Key>

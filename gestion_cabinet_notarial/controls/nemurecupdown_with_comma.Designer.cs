@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_porsontage = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PictureBoxArrow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,14 +46,14 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "%";
             // 
-            // textBox1
+            // textBox_porsontage
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 26);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "0.00";
+            this.textBox_porsontage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_porsontage.Location = new System.Drawing.Point(3, 3);
+            this.textBox_porsontage.Name = "textBox_porsontage";
+            this.textBox_porsontage.Size = new System.Drawing.Size(53, 26);
+            this.textBox_porsontage.TabIndex = 9;
+            this.textBox_porsontage.Text = "0.00";
             // 
             // pictureBox1
             // 
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_porsontage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PictureBoxArrow);
@@ -99,6 +99,6 @@
         private System.Windows.Forms.PictureBox PictureBoxArrow;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_porsontage;
     }
 }

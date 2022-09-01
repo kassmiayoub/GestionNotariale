@@ -23,10 +23,6 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-        private void PARTES_OF_CONTRAT_Click(object sender, EventArgs e)
-        {
-     
-        }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
             if (bunifuDropdowntype_contrat.Text == "PRET BANQUE")
@@ -77,7 +73,8 @@ namespace gestion_cabinet_notarial
                     {
                         THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[1].Name].Value.ToString());
                     }
-                    THEME.navigat(typeof(DETAIL_CONTRAT));
+                    THEME.navigat(typeof(DETAIL_CONTRAT));   
+                    
                 }              
             }
         }
@@ -174,6 +171,16 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_file_dossier.DataSource = files;
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "sipprision", "supprimer", 4);
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "affichage", "affichier", 5);
+        }
+
+        private void detail_dossier_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible == true)
+            {
+                FICHIERJOINT_dossier.PerformClick();
+                CONTRAT.PerformClick();
+                PARTES_OF_CONTRAT.PerformClick();
+            }
         }
     }
     public class contart

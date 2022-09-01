@@ -292,6 +292,7 @@
     <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="client" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="Rendez_vous" ToRole="client" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="Rendez_vous" ToRole="utilisateur" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Signature">
     <Key>

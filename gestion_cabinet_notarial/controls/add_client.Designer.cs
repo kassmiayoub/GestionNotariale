@@ -38,6 +38,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage_CLIENT = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -75,13 +79,18 @@
             this.ButtonSaveSettings = new System.Windows.Forms.Button();
             this.textBoxtitre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tabPage_dossier = new System.Windows.Forms.TabPage();
             this.AJOUTER_FICHIERS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AJOUTER_CLIENT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton_dossier = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuDataGridView_list_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuPages1.SuspendLayout();
             this.tabPage_CLIENT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_client)).BeginInit();
             this.tabPageFICHIER.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_file)).BeginInit();
+            this.tabPage_dossier.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPages1
@@ -91,12 +100,13 @@
             this.bunifuPages1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPages1.Controls.Add(this.tabPage_CLIENT);
             this.bunifuPages1.Controls.Add(this.tabPageFICHIER);
+            this.bunifuPages1.Controls.Add(this.tabPage_dossier);
             this.bunifuPages1.Location = new System.Drawing.Point(7, 66);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage_CLIENT;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage_CLIENT";
+            this.bunifuPages1.Page = this.tabPage_dossier;
+            this.bunifuPages1.PageIndex = 2;
+            this.bunifuPages1.PageName = "tabPage_dossier";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1277, 619);
@@ -780,6 +790,17 @@
             this.label12.TabIndex = 464;
             this.label12.Text = "TITRE : ";
             // 
+            // tabPage_dossier
+            // 
+            this.tabPage_dossier.Controls.Add(this.bunifuDataGridView_list_dossier);
+            this.tabPage_dossier.Location = new System.Drawing.Point(4, 4);
+            this.tabPage_dossier.Name = "tabPage_dossier";
+            this.tabPage_dossier.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_dossier.Size = new System.Drawing.Size(1269, 593);
+            this.tabPage_dossier.TabIndex = 2;
+            this.tabPage_dossier.Text = "tabPage1";
+            this.tabPage_dossier.UseVisualStyleBackColor = true;
+            // 
             // AJOUTER_FICHIERS
             // 
             this.AJOUTER_FICHIERS.AllowAnimations = true;
@@ -830,7 +851,7 @@
             this.AJOUTER_FICHIERS.IdleIconLeftImage = null;
             this.AJOUTER_FICHIERS.IdleIconRightImage = null;
             this.AJOUTER_FICHIERS.IndicateFocus = false;
-            this.AJOUTER_FICHIERS.Location = new System.Drawing.Point(650, 21);
+            this.AJOUTER_FICHIERS.Location = new System.Drawing.Point(552, 21);
             this.AJOUTER_FICHIERS.Name = "AJOUTER_FICHIERS";
             this.AJOUTER_FICHIERS.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AJOUTER_FICHIERS.OnDisabledState.BorderRadius = 1;
@@ -923,7 +944,7 @@
             this.AJOUTER_CLIENT.IdleIconLeftImage = null;
             this.AJOUTER_CLIENT.IdleIconRightImage = null;
             this.AJOUTER_CLIENT.IndicateFocus = false;
-            this.AJOUTER_CLIENT.Location = new System.Drawing.Point(499, 21);
+            this.AJOUTER_CLIENT.Location = new System.Drawing.Point(401, 21);
             this.AJOUTER_CLIENT.Name = "AJOUTER_CLIENT";
             this.AJOUTER_CLIENT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AJOUTER_CLIENT.OnDisabledState.BorderRadius = 1;
@@ -966,10 +987,165 @@
             this.AJOUTER_CLIENT.UseDefaultRadiusAndThickness = true;
             this.AJOUTER_CLIENT.Click += new System.EventHandler(this.AJOUTER_CLIENT_Click);
             // 
+            // bunifuButton_dossier
+            // 
+            this.bunifuButton_dossier.AllowAnimations = true;
+            this.bunifuButton_dossier.AllowMouseEffects = true;
+            this.bunifuButton_dossier.AllowToggling = false;
+            this.bunifuButton_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuButton_dossier.AnimationSpeed = 200;
+            this.bunifuButton_dossier.AutoGenerateColors = false;
+            this.bunifuButton_dossier.AutoRoundBorders = false;
+            this.bunifuButton_dossier.AutoSizeLeftIcon = true;
+            this.bunifuButton_dossier.AutoSizeRightIcon = true;
+            this.bunifuButton_dossier.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton_dossier.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.bunifuButton_dossier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton_dossier.BackgroundImage")));
+            this.bunifuButton_dossier.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton_dossier.ButtonText = "DOSSIER";
+            this.bunifuButton_dossier.ButtonTextMarginLeft = 0;
+            this.bunifuButton_dossier.ColorContrastOnClick = 45;
+            this.bunifuButton_dossier.ColorContrastOnHover = 45;
+            this.bunifuButton_dossier.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton_dossier.CustomizableEdges = borderEdges3;
+            this.bunifuButton_dossier.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton_dossier.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton_dossier.DisabledFillColor = System.Drawing.Color.Empty;
+            this.bunifuButton_dossier.DisabledForecolor = System.Drawing.Color.Empty;
+            this.bunifuButton_dossier.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton_dossier.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuButton_dossier.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton_dossier.IconLeft = null;
+            this.bunifuButton_dossier.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuButton_dossier.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton_dossier.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bunifuButton_dossier.IconMarginLeft = 11;
+            this.bunifuButton_dossier.IconPadding = 10;
+            this.bunifuButton_dossier.IconRight = null;
+            this.bunifuButton_dossier.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bunifuButton_dossier.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton_dossier.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bunifuButton_dossier.IconSize = 25;
+            this.bunifuButton_dossier.IdleBorderColor = System.Drawing.Color.Empty;
+            this.bunifuButton_dossier.IdleBorderRadius = 0;
+            this.bunifuButton_dossier.IdleBorderThickness = 0;
+            this.bunifuButton_dossier.IdleFillColor = System.Drawing.Color.Empty;
+            this.bunifuButton_dossier.IdleIconLeftImage = null;
+            this.bunifuButton_dossier.IdleIconRightImage = null;
+            this.bunifuButton_dossier.IndicateFocus = false;
+            this.bunifuButton_dossier.Location = new System.Drawing.Point(703, 21);
+            this.bunifuButton_dossier.Name = "bunifuButton_dossier";
+            this.bunifuButton_dossier.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton_dossier.OnDisabledState.BorderRadius = 1;
+            this.bunifuButton_dossier.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton_dossier.OnDisabledState.BorderThickness = 1;
+            this.bunifuButton_dossier.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton_dossier.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton_dossier.OnDisabledState.IconLeftImage = null;
+            this.bunifuButton_dossier.OnDisabledState.IconRightImage = null;
+            this.bunifuButton_dossier.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.bunifuButton_dossier.onHoverState.BorderRadius = 1;
+            this.bunifuButton_dossier.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton_dossier.onHoverState.BorderThickness = 1;
+            this.bunifuButton_dossier.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.bunifuButton_dossier.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton_dossier.onHoverState.IconLeftImage = null;
+            this.bunifuButton_dossier.onHoverState.IconRightImage = null;
+            this.bunifuButton_dossier.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton_dossier.OnIdleState.BorderRadius = 1;
+            this.bunifuButton_dossier.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton_dossier.OnIdleState.BorderThickness = 1;
+            this.bunifuButton_dossier.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton_dossier.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton_dossier.OnIdleState.IconLeftImage = null;
+            this.bunifuButton_dossier.OnIdleState.IconRightImage = null;
+            this.bunifuButton_dossier.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton_dossier.OnPressedState.BorderRadius = 1;
+            this.bunifuButton_dossier.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton_dossier.OnPressedState.BorderThickness = 1;
+            this.bunifuButton_dossier.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuButton_dossier.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton_dossier.OnPressedState.IconLeftImage = null;
+            this.bunifuButton_dossier.OnPressedState.IconRightImage = null;
+            this.bunifuButton_dossier.Size = new System.Drawing.Size(150, 39);
+            this.bunifuButton_dossier.TabIndex = 5;
+            this.bunifuButton_dossier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton_dossier.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bunifuButton_dossier.TextMarginLeft = 0;
+            this.bunifuButton_dossier.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton_dossier.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton_dossier.Click += new System.EventHandler(this.bunifuButton_dossier_Click);
+            // 
+            // bunifuDataGridView_list_dossier
+            // 
+            this.bunifuDataGridView_list_dossier.AllowCustomTheming = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.bunifuDataGridView_list_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_dossier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView_list_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView_list_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.Name = null;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_list_dossier.DefaultCellStyle = dataGridViewCellStyle9;
+            this.bunifuDataGridView_list_dossier.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView_list_dossier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_list_dossier.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView_list_dossier.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.Location = new System.Drawing.Point(6, 195);
+            this.bunifuDataGridView_list_dossier.Name = "bunifuDataGridView_list_dossier";
+            this.bunifuDataGridView_list_dossier.RowHeadersVisible = false;
+            this.bunifuDataGridView_list_dossier.RowTemplate.Height = 40;
+            this.bunifuDataGridView_list_dossier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView_list_dossier.Size = new System.Drawing.Size(1257, 335);
+            this.bunifuDataGridView_list_dossier.TabIndex = 0;
+            this.bunifuDataGridView_list_dossier.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView_list_dossier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_dossier_CellClick);
+            // 
             // add_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuButton_dossier);
             this.Controls.Add(this.AJOUTER_FICHIERS);
             this.Controls.Add(this.AJOUTER_CLIENT);
             this.Controls.Add(this.bunifuPages1);
@@ -983,6 +1159,8 @@
             this.tabPageFICHIER.ResumeLayout(false);
             this.tabPageFICHIER.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_file)).EndInit();
+            this.tabPage_dossier.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1028,5 +1206,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxIDCLIENT;
         private System.Windows.Forms.TextBox textBoxfile;
+        private System.Windows.Forms.TabPage tabPage_dossier;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton_dossier;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_list_dossier;
     }
 }

@@ -19,14 +19,14 @@ namespace gestion_cabinet_notarial
 
         private void PictureBoxArrow_Click(object sender, EventArgs e)
         {
-            double x = double.Parse(textBox1.Text);
-            textBox1.Text = (x - 0.01).ToString();
+            double x = double.Parse(textBox_porsontage.Text);
+            textBox_porsontage.Text = (x - 0.01).ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            double x = double.Parse(textBox1.Text);
-            textBox1.Text = (x + 0.01).ToString();
+            double x = double.Parse(textBox_porsontage.Text);
+            textBox_porsontage.Text = (x + 0.01).ToString();
         }
     }
 }

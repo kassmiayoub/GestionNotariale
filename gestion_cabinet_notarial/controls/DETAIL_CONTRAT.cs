@@ -137,10 +137,13 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_statistic.Columns[3].Name = "RESTE";
             bunifuDataGridView_statistic.Columns[4].Name = "PORCENTAGE";
             string[] row = new string[] { "", "", "0", "", "" };
-            bunifuDataGridView_statistic.Rows.Add(row);
-            bunifuDataGridView_statistic.Rows.Add(row);
-            bunifuDataGridView_statistic.Rows.Add(row);
-            bunifuDataGridView_statistic.Rows.Add(row);
+            if (bunifuDataGridView_statistic.Rows.Count == 0)
+            {
+                bunifuDataGridView_statistic.Rows.Add(row);
+                bunifuDataGridView_statistic.Rows.Add(row);
+                bunifuDataGridView_statistic.Rows.Add(row);
+                bunifuDataGridView_statistic.Rows.Add(row);
+            }            
             int i = 0;
             foreach (var item in list)
             {
@@ -178,7 +181,7 @@ namespace gestion_cabinet_notarial
         private void RDVERMENT_CheckedChanged(object sender, EventArgs e)
         {
             if (RDVERMENT.Checked)
-                comboBox_banque_PY.Enabled = true;
+                comboBox_banque_PY.Enabled = true;           
         }
 
         private void RD_ESPECES_CheckedChanged(object sender, EventArgs e)
@@ -288,6 +291,17 @@ namespace gestion_cabinet_notarial
             }
             montant_reste = double.Parse(bunifuTextBox_MONTANT.Text);
             bunifuTextBox_MONTANT.Enabled = true;
+        }
+
+        private void DETAIL_CONTRAT_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible == true)
+            {
+                STATISTIC_CONTRAT.PerformClick();
+                PARTES_OF_CONTRAT.PerformClick();
+                PAYEMENTCLIENT_CONTRAT.PerformClick();
+                FICHIERJOINT_CONTRAT.PerformClick();
+            }
         }
     }
     public class partesS

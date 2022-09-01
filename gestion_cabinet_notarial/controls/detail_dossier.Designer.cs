@@ -98,10 +98,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 67);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage3;
-            this.bunifuPages1.PageIndex = 2;
-            this.bunifuPages1.PageName = "tabPage3";
-            this.bunifuPages1.PageTitle = "tabPage3";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "tabPage2";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(923, 545);
             this.bunifuPages1.TabIndex = 0;
@@ -1126,6 +1126,7 @@
             this.Controls.Add(this.bunifuPages1);
             this.Name = "detail_dossier";
             this.Size = new System.Drawing.Size(929, 615);
+            this.VisibleChanged += new System.EventHandler(this.detail_dossier_VisibleChanged);
             this.bunifuPages1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -30,6 +30,8 @@ namespace gestion_cabinet_notarial
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LabelMonth = new System.Windows.Forms.Label();
             this.PanelDays = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonRefresh = new System.Windows.Forms.Button();
@@ -38,7 +40,6 @@ namespace gestion_cabinet_notarial
             this.button_next_year = new System.Windows.Forms.Button();
             this.yers = new System.Windows.Forms.Label();
             this.button_prev_year = new System.Windows.Forms.Button();
-            this.bunifuDropdown_client_rendez = new Bunifu.UI.WinForms.BunifuDropdown();
             this.ButtonSerch_client = new System.Windows.Forms.Button();
             this.ButtonAdd_rendez_vous = new System.Windows.Forms.Button();
             this.bunifuDataGridView_list_times = new System.Windows.Forms.DataGridView();
@@ -47,6 +48,9 @@ namespace gestion_cabinet_notarial
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.richTextBox_description = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuDropdown_client_rendez = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_times)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +59,7 @@ namespace gestion_cabinet_notarial
             this.LabelMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelMonth.Font = new System.Drawing.Font("Ithra-Light", 17F);
             this.LabelMonth.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.LabelMonth.Location = new System.Drawing.Point(90, 170);
+            this.LabelMonth.Location = new System.Drawing.Point(90, 194);
             this.LabelMonth.Name = "LabelMonth";
             this.LabelMonth.Size = new System.Drawing.Size(305, 31);
             this.LabelMonth.TabIndex = 407;
@@ -64,9 +68,9 @@ namespace gestion_cabinet_notarial
             // PanelDays
             // 
             this.PanelDays.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PanelDays.Location = new System.Drawing.Point(17, 208);
+            this.PanelDays.Location = new System.Drawing.Point(17, 228);
             this.PanelDays.Name = "PanelDays";
-            this.PanelDays.Size = new System.Drawing.Size(503, 262);
+            this.PanelDays.Size = new System.Drawing.Size(503, 238);
             this.PanelDays.TabIndex = 410;
             // 
             // ButtonRefresh
@@ -79,7 +83,7 @@ namespace gestion_cabinet_notarial
             this.ButtonRefresh.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonRefresh.ForeColor = System.Drawing.Color.White;
             this.ButtonRefresh.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh2;
-            this.ButtonRefresh.Location = new System.Drawing.Point(468, 153);
+            this.ButtonRefresh.Location = new System.Drawing.Point(468, 177);
             this.ButtonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonRefresh.Name = "ButtonRefresh";
             this.ButtonRefresh.Size = new System.Drawing.Size(30, 30);
@@ -98,7 +102,7 @@ namespace gestion_cabinet_notarial
             this.ButtonNextMonth.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonNextMonth.ForeColor = System.Drawing.Color.White;
             this.ButtonNextMonth.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaNext;
-            this.ButtonNextMonth.Location = new System.Drawing.Point(386, 171);
+            this.ButtonNextMonth.Location = new System.Drawing.Point(386, 195);
             this.ButtonNextMonth.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonNextMonth.Name = "ButtonNextMonth";
             this.ButtonNextMonth.Size = new System.Drawing.Size(30, 30);
@@ -117,7 +121,7 @@ namespace gestion_cabinet_notarial
             this.ButtonPrevMonth.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonPrevMonth.ForeColor = System.Drawing.Color.White;
             this.ButtonPrevMonth.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaPrev;
-            this.ButtonPrevMonth.Location = new System.Drawing.Point(59, 171);
+            this.ButtonPrevMonth.Location = new System.Drawing.Point(59, 195);
             this.ButtonPrevMonth.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonPrevMonth.Name = "ButtonPrevMonth";
             this.ButtonPrevMonth.Size = new System.Drawing.Size(30, 30);
@@ -136,7 +140,7 @@ namespace gestion_cabinet_notarial
             this.button_next_year.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_next_year.ForeColor = System.Drawing.Color.White;
             this.button_next_year.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaNext;
-            this.button_next_year.Location = new System.Drawing.Point(386, 133);
+            this.button_next_year.Location = new System.Drawing.Point(386, 157);
             this.button_next_year.Margin = new System.Windows.Forms.Padding(2);
             this.button_next_year.Name = "button_next_year";
             this.button_next_year.Size = new System.Drawing.Size(30, 30);
@@ -150,7 +154,7 @@ namespace gestion_cabinet_notarial
             this.yers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.yers.Font = new System.Drawing.Font("Ithra-Light", 17F);
             this.yers.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.yers.Location = new System.Drawing.Point(90, 132);
+            this.yers.Location = new System.Drawing.Point(90, 156);
             this.yers.Name = "yers";
             this.yers.Size = new System.Drawing.Size(305, 31);
             this.yers.TabIndex = 415;
@@ -166,7 +170,7 @@ namespace gestion_cabinet_notarial
             this.button_prev_year.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_prev_year.ForeColor = System.Drawing.Color.White;
             this.button_prev_year.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaPrev;
-            this.button_prev_year.Location = new System.Drawing.Point(59, 133);
+            this.button_prev_year.Location = new System.Drawing.Point(59, 157);
             this.button_prev_year.Margin = new System.Windows.Forms.Padding(2);
             this.button_prev_year.Name = "button_prev_year";
             this.button_prev_year.Size = new System.Drawing.Size(30, 30);
@@ -174,51 +178,6 @@ namespace gestion_cabinet_notarial
             this.button_prev_year.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_prev_year.UseVisualStyleBackColor = false;
             this.button_prev_year.Click += new System.EventHandler(this.button_prev_year_Click);
-            // 
-            // bunifuDropdown_client_rendez
-            // 
-            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDropdown_client_rendez.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown_client_rendez.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDropdown_client_rendez.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown_client_rendez.BorderRadius = 1;
-            this.bunifuDropdown_client_rendez.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdown_client_rendez.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown_client_rendez.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown_client_rendez.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuDropdown_client_rendez.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown_client_rendez.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuDropdown_client_rendez.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdown_client_rendez.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown_client_rendez.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.bunifuDropdown_client_rendez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown_client_rendez.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown_client_rendez.FillDropDown = true;
-            this.bunifuDropdown_client_rendez.FillIndicator = false;
-            this.bunifuDropdown_client_rendez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDropdown_client_rendez.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown_client_rendez.FormattingEnabled = true;
-            this.bunifuDropdown_client_rendez.Icon = null;
-            this.bunifuDropdown_client_rendez.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown_client_rendez.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdown_client_rendez.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown_client_rendez.IndicatorThickness = 2;
-            this.bunifuDropdown_client_rendez.IsDropdownOpened = false;
-            this.bunifuDropdown_client_rendez.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown_client_rendez.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown_client_rendez.ItemForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown_client_rendez.ItemHeight = 26;
-            this.bunifuDropdown_client_rendez.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDropdown_client_rendez.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown_client_rendez.ItemTopMargin = 3;
-            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(326, 29);
-            this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
-            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(260, 32);
-            this.bunifuDropdown_client_rendez.TabIndex = 417;
-            this.bunifuDropdown_client_rendez.Text = null;
-            this.bunifuDropdown_client_rendez.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown_client_rendez.TextLeftMargin = 5;
             // 
             // ButtonSerch_client
             // 
@@ -230,13 +189,14 @@ namespace gestion_cabinet_notarial
             this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.ButtonSerch_client.Location = new System.Drawing.Point(591, 28);
+            this.ButtonSerch_client.Location = new System.Drawing.Point(906, 19);
             this.ButtonSerch_client.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSerch_client.Name = "ButtonSerch_client";
-            this.ButtonSerch_client.Size = new System.Drawing.Size(28, 32);
+            this.ButtonSerch_client.Size = new System.Drawing.Size(28, 31);
             this.ButtonSerch_client.TabIndex = 434;
             this.ButtonSerch_client.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSerch_client.UseVisualStyleBackColor = false;
+            this.ButtonSerch_client.Click += new System.EventHandler(this.ButtonSerch_client_Click);
             // 
             // ButtonAdd_rendez_vous
             // 
@@ -249,10 +209,10 @@ namespace gestion_cabinet_notarial
             this.ButtonAdd_rendez_vous.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_rendez_vous.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_rendez_vous.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_rendez_vous.Location = new System.Drawing.Point(487, 489);
+            this.ButtonAdd_rendez_vous.Location = new System.Drawing.Point(339, 489);
             this.ButtonAdd_rendez_vous.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_rendez_vous.Name = "ButtonAdd_rendez_vous";
-            this.ButtonAdd_rendez_vous.Size = new System.Drawing.Size(132, 35);
+            this.ButtonAdd_rendez_vous.Size = new System.Drawing.Size(145, 35);
             this.ButtonAdd_rendez_vous.TabIndex = 467;
             this.ButtonAdd_rendez_vous.Tag = "AcceptButton";
             this.ButtonAdd_rendez_vous.Text = "AJOUTER";
@@ -267,21 +227,41 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_times.AllowUserToResizeColumns = false;
             this.bunifuDataGridView_list_times.AllowUserToResizeRows = false;
             this.bunifuDataGridView_list_times.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDataGridView_list_times.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_times.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.bunifuDataGridView_list_times.ColumnHeadersHeight = 35;
+            this.bunifuDataGridView_list_times.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bunifuDataGridView_list_times.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.bunifuDataGridView_list_times.Location = new System.Drawing.Point(579, 67);
+            this.bunifuDataGridView_list_times.Location = new System.Drawing.Point(579, 70);
             this.bunifuDataGridView_list_times.MinimumSize = new System.Drawing.Size(0, 20);
+            this.bunifuDataGridView_list_times.MultiSelect = false;
             this.bunifuDataGridView_list_times.Name = "bunifuDataGridView_list_times";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_times.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView_list_times.RowHeadersVisible = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            this.bunifuDataGridView_list_times.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            this.bunifuDataGridView_list_times.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView_list_times.RowTemplate.Height = 45;
-            this.bunifuDataGridView_list_times.Size = new System.Drawing.Size(503, 391);
+            this.bunifuDataGridView_list_times.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuDataGridView_list_times.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.bunifuDataGridView_list_times.Size = new System.Drawing.Size(503, 399);
             this.bunifuDataGridView_list_times.TabIndex = 468;
             this.bunifuDataGridView_list_times.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_times_CellClick);
             // 
@@ -320,15 +300,49 @@ namespace gestion_cabinet_notarial
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // richTextBox_description
+            // 
+            this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_description.Location = new System.Drawing.Point(191, 2);
+            this.richTextBox_description.Name = "richTextBox_description";
+            this.richTextBox_description.Size = new System.Drawing.Size(307, 96);
+            this.richTextBox_description.TabIndex = 469;
+            this.richTextBox_description.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label11.Location = new System.Drawing.Point(13, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 24);
+            this.label11.TabIndex = 479;
+            this.label11.Text = "DESCREPTION : ";
+            // 
+            // bunifuDropdown_client_rendez
+            // 
+            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown_client_rendez.FormattingEnabled = true;
+            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(622, 19);
+            this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
+            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 31);
+            this.bunifuDropdown_client_rendez.TabIndex = 480;
+            // 
             // CTL_AGENDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.bunifuDropdown_client_rendez);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.richTextBox_description);
             this.Controls.Add(this.bunifuDataGridView_list_times);
             this.Controls.Add(this.ButtonAdd_rendez_vous);
             this.Controls.Add(this.ButtonSerch_client);
-            this.Controls.Add(this.bunifuDropdown_client_rendez);
             this.Controls.Add(this.button_next_year);
             this.Controls.Add(this.yers);
             this.Controls.Add(this.button_prev_year);
@@ -345,6 +359,7 @@ namespace gestion_cabinet_notarial
             this.Load += new System.EventHandler(this.CTL_AGENDA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_times)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -358,7 +373,6 @@ namespace gestion_cabinet_notarial
         public System.Windows.Forms.Button button_next_year;
         private System.Windows.Forms.Label yers;
         public System.Windows.Forms.Button button_prev_year;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown_client_rendez;
         public System.Windows.Forms.Button ButtonSerch_client;
         public System.Windows.Forms.Button ButtonAdd_rendez_vous;
         private System.Windows.Forms.DataGridView bunifuDataGridView_list_times;
@@ -367,5 +381,8 @@ namespace gestion_cabinet_notarial
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.RichTextBox richTextBox_description;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox bunifuDropdown_client_rendez;
     }
 }

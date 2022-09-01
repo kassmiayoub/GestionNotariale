@@ -117,10 +117,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.payeclient;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "payeclient";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.statistic;
+            this.bunifuPages1.PageIndex = 3;
+            this.bunifuPages1.PageName = "statistic";
+            this.bunifuPages1.PageTitle = "tabPage5";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
             this.bunifuPages1.TabIndex = 0;
@@ -895,6 +895,9 @@
             // bunifuDataGridView_statistic
             // 
             this.bunifuDataGridView_statistic.AllowCustomTheming = false;
+            this.bunifuDataGridView_statistic.AllowUserToAddRows = false;
+            this.bunifuDataGridView_statistic.AllowUserToDeleteRows = false;
+            this.bunifuDataGridView_statistic.AllowUserToResizeColumns = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
@@ -1336,6 +1339,7 @@
             this.Name = "DETAIL_CONTRAT";
             this.Size = new System.Drawing.Size(906, 638);
             this.Load += new System.EventHandler(this.STATISTIC_CONTRAT_Click);
+            this.VisibleChanged += new System.EventHandler(this.DETAIL_CONTRAT_VisibleChanged);
             this.bunifuPages1.ResumeLayout(false);
             this.partes.ResumeLayout(false);
             this.partes.PerformLayout();

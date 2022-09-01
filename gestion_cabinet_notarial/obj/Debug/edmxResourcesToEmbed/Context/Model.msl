@@ -243,6 +243,7 @@
     <EntitySetMapping Name="Rendez_vous">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.Rendez_vous">
         <MappingFragment StoreEntitySet="Rendez_vous">
+          <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="datee" ColumnName="datee" />
           <ScalarProperty Name="Timedebut" ColumnName="Timedebut" />
