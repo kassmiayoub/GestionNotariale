@@ -98,3 +98,5 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestio
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.detail_dossier.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.CTL_AGENDA.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.CTL_DAY_ITEM.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_BANQUE.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_NOTE.resources

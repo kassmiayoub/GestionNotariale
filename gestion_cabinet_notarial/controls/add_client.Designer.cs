@@ -36,12 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage_CLIENT = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -80,10 +80,10 @@
             this.textBoxtitre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage_dossier = new System.Windows.Forms.TabPage();
+            this.bunifuDataGridView_list_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.AJOUTER_FICHIERS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AJOUTER_CLIENT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton_dossier = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuDataGridView_list_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuPages1.SuspendLayout();
             this.tabPage_CLIENT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_client)).BeginInit();
@@ -104,9 +104,9 @@
             this.bunifuPages1.Location = new System.Drawing.Point(7, 66);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage_dossier;
-            this.bunifuPages1.PageIndex = 2;
-            this.bunifuPages1.PageName = "tabPage_dossier";
+            this.bunifuPages1.Page = this.tabPage_CLIENT;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "tabPage_CLIENT";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1277, 619);
@@ -801,6 +801,67 @@
             this.tabPage_dossier.Text = "tabPage1";
             this.tabPage_dossier.UseVisualStyleBackColor = true;
             // 
+            // bunifuDataGridView_list_dossier
+            // 
+            this.bunifuDataGridView_list_dossier.AllowCustomTheming = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.bunifuDataGridView_list_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_dossier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView_list_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView_list_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersHeight = 40;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.Name = null;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_list_dossier.DefaultCellStyle = dataGridViewCellStyle9;
+            this.bunifuDataGridView_list_dossier.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView_list_dossier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_list_dossier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_list_dossier.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView_list_dossier.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_list_dossier.Location = new System.Drawing.Point(6, 195);
+            this.bunifuDataGridView_list_dossier.Name = "bunifuDataGridView_list_dossier";
+            this.bunifuDataGridView_list_dossier.RowHeadersVisible = false;
+            this.bunifuDataGridView_list_dossier.RowTemplate.Height = 40;
+            this.bunifuDataGridView_list_dossier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView_list_dossier.Size = new System.Drawing.Size(1257, 335);
+            this.bunifuDataGridView_list_dossier.TabIndex = 0;
+            this.bunifuDataGridView_list_dossier.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView_list_dossier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_dossier_CellClick);
+            // 
             // AJOUTER_FICHIERS
             // 
             this.AJOUTER_FICHIERS.AllowAnimations = true;
@@ -1080,67 +1141,6 @@
             this.bunifuButton_dossier.UseDefaultRadiusAndThickness = true;
             this.bunifuButton_dossier.Click += new System.EventHandler(this.bunifuButton_dossier_Click);
             // 
-            // bunifuDataGridView_list_dossier
-            // 
-            this.bunifuDataGridView_list_dossier.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.bunifuDataGridView_list_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDataGridView_list_dossier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView_list_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView_list_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView_list_dossier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_list_dossier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.bunifuDataGridView_list_dossier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView_list_dossier.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.Name = null;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_list_dossier.DefaultCellStyle = dataGridViewCellStyle9;
-            this.bunifuDataGridView_list_dossier.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView_list_dossier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView_list_dossier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView_list_dossier.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView_list_dossier.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_dossier.Location = new System.Drawing.Point(6, 195);
-            this.bunifuDataGridView_list_dossier.Name = "bunifuDataGridView_list_dossier";
-            this.bunifuDataGridView_list_dossier.RowHeadersVisible = false;
-            this.bunifuDataGridView_list_dossier.RowTemplate.Height = 40;
-            this.bunifuDataGridView_list_dossier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_dossier.Size = new System.Drawing.Size(1257, 335);
-            this.bunifuDataGridView_list_dossier.TabIndex = 0;
-            this.bunifuDataGridView_list_dossier.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.bunifuDataGridView_list_dossier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_dossier_CellClick);
-            // 
             // add_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1152,6 +1152,7 @@
             this.Name = "add_client";
             this.Size = new System.Drawing.Size(1299, 685);
             this.Load += new System.EventHandler(this.add_client_Load);
+            this.VisibleChanged += new System.EventHandler(this.add_client_VisibleChanged);
             this.bunifuPages1.ResumeLayout(false);
             this.tabPage_CLIENT.ResumeLayout(false);
             this.tabPage_CLIENT.PerformLayout();

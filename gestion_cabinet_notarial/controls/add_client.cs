@@ -27,6 +27,28 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
+        public void sete_client(int idc)
+        {
+            client A = new client();
+            A = cls.FindById(idc);
+            textBoxIDCLIENT.Text = A.idClient.ToString();
+            textBoxemail.Text = A.Email;
+            textBoxtel.Text = A.Tele;
+            textBox_nom.Text = A.Nom;
+            textBox_prenom.Text = A.Prenom;
+            textBox_fax.Text = A.Fax;
+            if (A.ClientNormale != null)
+            {
+                comboBoxtype_client.SelectedIndex = 1;
+                textBoxCIN.Text = A.ClientNormale.CIN;
+            }
+            else
+            {
+                comboBoxtype_client.SelectedIndex = 0;
+                textBoxCIN.Text = A.ClientProfessionnel.ICE;
+                textBoxIF.Text = A.ClientProfessionnel.IdentifiantFiscale;
+            }
+        }
         private void add_client_Load(object sender, EventArgs e)
         {
             labelCIN.Visible = false;
@@ -229,25 +251,7 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuDataGridViewlist_client_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            client A = new client();
-            A = cls.FindById(int.Parse(bunifuDataGridViewlist_client.Rows[e.RowIndex].Cells[0].Value.ToString()));
-            textBoxIDCLIENT.Text = A.idClient.ToString();
-            textBoxemail.Text = A.Email;
-            textBoxtel.Text = A.Tele;
-            textBox_nom.Text = A.Nom;
-            textBox_prenom.Text = A.Prenom; 
-            textBox_fax.Text = A.Fax;       
-            if(A.ClientNormale != null)
-            {
-                comboBoxtype_client.SelectedIndex = 1;
-                textBoxCIN.Text = A.ClientNormale.CIN;
-            }
-            else
-            {
-                comboBoxtype_client.SelectedIndex = 0;
-                textBoxCIN.Text = A.ClientProfessionnel.ICE;
-                textBoxIF.Text = A.ClientProfessionnel.IdentifiantFiscale;
-            }
+            sete_client(int.Parse(bunifuDataGridViewlist_client.Rows[e.RowIndex].Cells[0].Value.ToString()));
             if (THEME.client_or_dossier != null)
             {
                 THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
@@ -302,8 +306,7 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes) {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
                         cSL_BL_FICHIER_CLIENT.Remove(cSL_BL_FICHIER_CLIENT.FindById(idfile));
-                    } 
-                    
+                    }                    
                 } 
             }
         }
@@ -315,6 +318,8 @@ namespace gestion_cabinet_notarial
 
         private void bunifuButton_dossier_Click(object sender, EventArgs e)
         {
+            if (textBoxIDCLIENT.Text.Trim() == "")
+                return;
             var ListDataSource = new List<dossier_client>();
             ListDataSource = parte_client.GetAll().Where(id => id.idClient==int.Parse(textBoxIDCLIENT.Text)).Select(ele =>   new dossier_client()
             {
@@ -340,6 +345,13 @@ namespace gestion_cabinet_notarial
             //THEME.numdossier = "";
             //THEME.prix = 0;
 
+        }
+
+        private void add_client_VisibleChanged(object sender, EventArgs e)
+        {
+            if (THEME.id_C == 0)
+                return;
+            sete_client(THEME.id_C);
         }
     }
     public class clientserch

@@ -298,9 +298,9 @@ namespace gestion_cabinet_notarial
             if (this.Visible == true)
             {
                 STATISTIC_CONTRAT.PerformClick();
-                PARTES_OF_CONTRAT.PerformClick();
-                PAYEMENTCLIENT_CONTRAT.PerformClick();
-                FICHIERJOINT_CONTRAT.PerformClick();
+                //PARTES_OF_CONTRAT.PerformClick();
+                //PAYEMENTCLIENT_CONTRAT.PerformClick();
+                //FICHIERJOINT_CONTRAT.PerformClick();
             }
         }
     }

@@ -177,9 +177,9 @@ namespace gestion_cabinet_notarial
         {
             if (this.Visible == true)
             {
-                FICHIERJOINT_dossier.PerformClick();
+               // FICHIERJOINT_dossier.PerformClick();
                 CONTRAT.PerformClick();
-                PARTES_OF_CONTRAT.PerformClick();
+                //PARTES_OF_CONTRAT.PerformClick();
             }
         }
     }

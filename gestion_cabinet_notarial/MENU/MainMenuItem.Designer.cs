@@ -40,9 +40,9 @@
             // LabelItemName
             // 
             this.LabelItemName.Font = new System.Drawing.Font("Ithra-Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.LabelItemName.Location = new System.Drawing.Point(81, 3);
+            this.LabelItemName.Location = new System.Drawing.Point(77, 3);
             this.LabelItemName.Name = "LabelItemName";
-            this.LabelItemName.Size = new System.Drawing.Size(123, 30);
+            this.LabelItemName.Size = new System.Drawing.Size(136, 30);
             this.LabelItemName.TabIndex = 6;
             this.LabelItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelItemName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainMenuItem_MouseDown);
@@ -74,7 +74,7 @@
             // 
             // PictureBoxArrow
             // 
-            this.PictureBoxArrow.Location = new System.Drawing.Point(210, 12);
+            this.PictureBoxArrow.Location = new System.Drawing.Point(217, 12);
             this.PictureBoxArrow.Name = "PictureBoxArrow";
             this.PictureBoxArrow.Size = new System.Drawing.Size(15, 15);
             this.PictureBoxArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MainMenuItem";
-            this.Size = new System.Drawing.Size(230, 40);
+            this.Size = new System.Drawing.Size(235, 40);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainMenuItem_MouseDown);
             this.MouseLeave += new System.EventHandler(this.MainMenuItem_MouseLeave);
             this.MouseHover += new System.EventHandler(this.MainMenuItem_MouseHover);

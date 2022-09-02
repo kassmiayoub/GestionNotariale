@@ -348,6 +348,7 @@
     <Compile Include="BL\cls_bl_payement.cs" />
     <Compile Include="BL\cls_bl_rendez-vous.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
+    <Compile Include="BL\CLS_NOTE.cs" />
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
     <Compile Include="BL\csl_bl_fichier_contart.cs" />
@@ -462,11 +463,23 @@
     <Compile Include="controls\CTL_AGENDA.Designer.cs">
       <DependentUpon>CTL_AGENDA.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\CTL_BANQUE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_BANQUE.Designer.cs">
+      <DependentUpon>CTL_BANQUE.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\CTL_DAY_ITEM.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="controls\CTL_DAY_ITEM.Designer.cs">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_NOTE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_NOTE.Designer.cs">
+      <DependentUpon>CTL_NOTE.cs</DependentUpon>
     </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
@@ -582,8 +595,14 @@
     <EmbeddedResource Include="controls\CTL_AGENDA.resx">
       <DependentUpon>CTL_AGENDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_BANQUE.resx">
+      <DependentUpon>CTL_BANQUE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_DAY_ITEM.resx">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_NOTE.resx">
+      <DependentUpon>CTL_NOTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>
@@ -907,6 +926,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\rendez-vous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

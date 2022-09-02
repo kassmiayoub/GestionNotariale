@@ -1,4 +1,5 @@
 ﻿
+using gestion_cabinet_notarial.controls;
 using gestion_cabinet_notarial.Properties;
 using System.Windows.Forms;
 
@@ -54,14 +55,12 @@ namespace gestion_cabinet_notarial
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Archive, "الأرشيـف", true, null,
             //    new MainMenuItemSubItem("إضافـة أرشيـف", (se, ev) => Theme.Navigate(typeof(CTL_ADD_ARCHIVE)), "AddArchive") { Tag = "AddArchive" },
             //    new MainMenuItemSubItem("قائمـة الأرشيفـات", (se, ev) => Theme.Navigate(typeof(CTL_ARCHIVES_LIST)), "ArchivesList") { Tag = "ArchivesList" }
-
-
-
             PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "Credit", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "renez-vous", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
-
+            PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "renez-vous", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "Banque", false, null));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "Banque", false, (se, ev) => THEME.navigat(typeof(CTL_BANQUE))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Note, "NOTE", false, (se, ev) => THEME.navigat(typeof(CTL_NOTE))));
+
 
 
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Attachment, "مرفـق", true, null,

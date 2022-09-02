@@ -24,6 +24,10 @@ namespace gestion_cabinet_notarial
         private bool curent = false;
         public string time_d = null;
         public string time_fin = null;
+        public int id_r ;
+        public int idc;
+        public int position_row;
+        public int position_cell;
         public List<string> tm = new List<string>();
         public int curentmonth { get; set; } = DateTime.Now.Month;
         public CTL_AGENDA()
@@ -49,14 +53,23 @@ namespace gestion_cabinet_notarial
                     foreach (DataGridViewCell cell in r.Cells)
                     {
                         DataGridViewButtonCell b = (DataGridViewButtonCell)cell;
-                        if (rdv.Timedebut == cell.Value.ToString())
+                        if (rdv.Timedebut == cell.Value.ToString() && rdv.Timefin=="non_passer")
                         {
                             b.Style.BackColor = Color.Red;
-                            b.Tag=b.Value+"|"+rdv.idClient.ToString();  
-                        }                            
+                            b.Tag=b.Value+"|"+rdv.idClient.ToString()+"|"+rdv.Id;  
+                        }
+                        else if(rdv.Timedebut == cell.Value.ToString() && rdv.Timefin == "passer")
+                        {
+                            b.Style.BackColor = Color.Gray;
+                            b.Tag = b.Value + "|" + rdv.idClient.ToString() + "|" + rdv.Id;
+                        }
                     }
                 }
-            });
+            });    
+        }
+        public void change_clor_use_menu(Color color)
+        {
+            ((DataGridViewButtonCell)bunifuDataGridView_list_times.Rows[position_row].Cells[position_cell]).Style.BackColor = color;
         }
         public void ChangeMonth()
         {
@@ -240,6 +253,7 @@ namespace gestion_cabinet_notarial
                 redv.idClient = (int)bunifuDropdown_client_rendez.SelectedValue;
                 redv.datee = Convert.ToDateTime(CTL_DAY_ITEM.datecomlet);
                 redv.description = richTextBox_description.Text;
+                redv.Timefin = "non_passer";
                 if (tm.Count > 1)
                 {
                     //redv.Timedebut =dateTime;
@@ -268,12 +282,13 @@ namespace gestion_cabinet_notarial
                 return;
             }
             string time = time1.Value.ToString();
-            if (time1.Style.BackColor == Color.Red)
+            if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray)
             {
-                int endIndex = ((string)time1.Tag).Length;
-                int title =int.Parse(((string)time1.Tag).Substring(6, endIndex-6));
-                bunifuDropdown_client_rendez.SelectedValue = title;            
-               // richTextBox_description.Text = rv.FindById(title);                                
+                string[] get_idr_idc = time1.Tag.ToString().Split('|');
+                int idc = int.Parse(get_idr_idc[1]);
+                int idr = int.Parse(get_idr_idc[2]);
+                bunifuDropdown_client_rendez.SelectedValue = idc;            
+                richTextBox_description.Text = rv.FindByValues(ele => ele.idClient == idc && ele.Id == idr).First().description;                                
                 time1.Selected = false;
                 return;
             }             
@@ -286,15 +301,81 @@ namespace gestion_cabinet_notarial
             }
             tm.Add(time);
             time1.Style.BackColor = Color.Orange;
+            richTextBox_description.Text = "";
             time1.Selected = false;
         }
         private void ButtonSerch_client_Click(object sender, EventArgs e)
         {
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
+           // ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
             THEME.T = this.GetType();
             THEME.navigat(typeof(add_client));
             THEME.client_or_dossier = (ComboBox)this.Controls["bunifuDropdown_client_rendez"];
+        }
+
+        private void bunifuDataGridView_list_times_MouseClick(object sender, MouseEventArgs e)
+        {
+          
+
+            if (e.Button == MouseButtons.Right)
+            {
+                 position_row = bunifuDataGridView_list_times.HitTest(e.X,e.Y).RowIndex;
+                 position_cell = bunifuDataGridView_list_times.HitTest(e.X,e.Y).ColumnIndex;
+                DataGridViewButtonCell time1;
+                try
+                {
+                    time1 = (DataGridViewButtonCell)bunifuDataGridView_list_times.Rows[position_row].Cells[position_cell];
+                }
+                catch
+                {
+                    return;
+                }
+                if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray)
+                {
+                    string[] get_idr_idc = time1.Tag.ToString().Split('|');
+                    idc = int.Parse(get_idr_idc[1]);
+                    bunifuDropdown_client_rendez.SelectedValue = idc;
+                    id_r = int.Parse(get_idr_idc[2]);
+                    richTextBox_description.Text = rv.FindByValues(ele => ele.idClient == idc && ele.Id == id_r).First().description;
+                    time1.Selected = false;                  
+                    Point p = new Point(Cursor.Position.X, Cursor.Position.Y);                    
+                    contextMenuStrip_passer_supprimer.Show(p);
+                    if(time1.Style.BackColor == Color.Gray)
+                    {
+                        contextMenuStrip_passer_supprimer.Items[0].Enabled = false;
+                        contextMenuStrip_passer_supprimer.Items[1].Enabled = false;
+                    }
+                    else
+                    {
+                        contextMenuStrip_passer_supprimer.Items[0].Enabled = true;
+                        contextMenuStrip_passer_supprimer.Items[1].Enabled = true;
+                    }
+                    return;
+                }               
+            }
+        }
+
+        private void pASSERCETTERENDEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var a = rv.FindById(id_r);
+            a.Timefin = "passer";
+            rv.SaveChanges();
+            change_clor_use_menu(Color.Gray);
+        }
+
+        private void sUPPRIMERCETTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var a = rv.FindById(id_r);
+            rv.Remove(a);
+            rv.SaveChanges();
+            change_clor_use_menu(Color.Green);
+        }
+
+        private void aNNULERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            THEME.id_C = idc;
+            THEME.navigat(typeof(add_client));
+            THEME.id_C = 0;
         }
     }
 }

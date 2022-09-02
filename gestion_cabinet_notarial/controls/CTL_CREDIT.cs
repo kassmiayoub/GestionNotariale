@@ -27,7 +27,6 @@ namespace gestion_cabinet_notarial
         private void ButtonSerch_client_Click(object sender, EventArgs e)
         {
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonInit"]).Enabled = false;
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
             THEME.T = this.GetType();
             THEME.navigat(typeof(add_client));
@@ -71,7 +70,6 @@ namespace gestion_cabinet_notarial
         {
             THEME.credit = true;
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonInit"]).Enabled = false;
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
             THEME.T = this.GetType();           
             THEME.client_or_dossier = (ComboBox)this.Controls["comboBoxCLIENT_PY"];
