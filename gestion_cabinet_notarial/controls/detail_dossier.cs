@@ -73,12 +73,10 @@ namespace gestion_cabinet_notarial
                     {
                         THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[1].Name].Value.ToString());
                     }
-                    THEME.navigat(typeof(DETAIL_CONTRAT));   
-                    
+                    THEME.navigat(typeof(DETAIL_CONTRAT));                       
                 }              
             }
         }
-
         private void bunifuDataGridView_list_file_dossier_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;

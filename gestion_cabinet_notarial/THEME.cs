@@ -21,6 +21,7 @@ namespace gestion_cabinet_notarial
         public static int id_C = 0;
         public static double prix = 0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
+        public static Accueil Accueil { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
         public static DETAIL_CONTRAT DETAIL_CONTRAT { get; set; }
         public static detail_dossier detail_dossier { get; set; }
@@ -43,7 +44,8 @@ namespace gestion_cabinet_notarial
         }
         public static void AddControlsToList()
         {
-            ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_AGENDA);            
+            ControlsList.Add(Accueil);
             ControlsList.Add(CTL_BANQUE);
             ControlsList.Add(CTL_NOTE);
             ControlsList.Add(ADD_DOSSIER);
@@ -56,6 +58,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            Accueil = new Accueil() { Visible = false };
             CTL_BANQUE = new CTL_BANQUE() { Visible = false };
             CTL_CREDIT = new CTL_CREDIT() { Visible = false };
             DETAIL_CONTRAT = new DETAIL_CONTRAT() { Visible = false };
@@ -137,6 +140,10 @@ namespace gestion_cabinet_notarial
             if (dgv.Columns[name] == null)
             {
                 dgv.Columns.Insert(index, uninstallButtonColumn);
+            }
+            else
+            {
+                dgv.Columns[name].DisplayIndex = dgv.Columns.Count - 1;
             }
         }
         public static void add_checkbox_to_datagrid(DataGridView dgv, string name, int index)

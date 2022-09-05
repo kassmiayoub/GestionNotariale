@@ -18,6 +18,7 @@ namespace gestion_cabinet_notarial.context
         public string Text { get; set; }
         public Nullable<System.DateTime> date { get; set; }
         public string utilisateur { get; set; }
+        public Nullable<System.DateTime> date_alere { get; set; }
     
         public virtual utilisateur utilisateur1 { get; set; }
     }

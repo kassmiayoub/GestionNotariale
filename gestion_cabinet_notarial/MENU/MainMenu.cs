@@ -17,7 +17,7 @@ namespace gestion_cabinet_notarial
            // MessageBox.Show(this.Parent.Controls["MAINPANEL"].Name);
             PanelItems.Controls.Clear();
 
-            PanelItems.Controls.Add(new MainMenuItem(Resources.home, "Accueil", false, null
+            PanelItems.Controls.Add(new MainMenuItem(Resources.home, "Accueil", false, (se, ev) => THEME.navigat(typeof(Accueil))
 
             ));
             //PanelItems.Controls.Add(new MainMenuItem(Resources.Client, "client", true, null,

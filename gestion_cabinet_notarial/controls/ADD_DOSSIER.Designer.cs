@@ -1,4 +1,5 @@
-﻿namespace gestion_cabinet_notarial
+﻿
+namespace gestion_cabinet_notarial
 {
     partial class ADD_DOSSIER
     {
@@ -218,6 +219,7 @@
             this.ButtonEdit_dossier.Text = "MODIFIER";
             this.ButtonEdit_dossier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonEdit_dossier.UseVisualStyleBackColor = false;
+            this.ButtonEdit_dossier.Click += new System.EventHandler(this.ButtonEdit_dossier_Click);
             // 
             // textBox_prix
             // 

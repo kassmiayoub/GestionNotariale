@@ -197,6 +197,7 @@
     <EntitySetMapping Name="notes">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.note">
         <MappingFragment StoreEntitySet="note">
+          <ScalarProperty Name="date_alere" ColumnName="date_alere" />
           <ScalarProperty Name="Idnote" ColumnName="Idnote" />
           <ScalarProperty Name="Text" ColumnName="Text" />
           <ScalarProperty Name="date" ColumnName="date" />

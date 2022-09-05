@@ -185,6 +185,7 @@
     <Property Name="Text" Type="varchar(max)" />
     <Property Name="date" Type="date" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="date_alere" Type="date" />
   </EntityType>
   <EntityType Name="partes">
     <Key>

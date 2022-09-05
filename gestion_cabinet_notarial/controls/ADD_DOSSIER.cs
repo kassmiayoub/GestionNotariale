@@ -83,7 +83,9 @@ namespace gestion_cabinet_notarial
             textBox_prix.Text = A.PRIX_ACQUISITION.ToString();
             textBox_titre_foncier.Text = A.Titrefoncier;
             bunifuDatePicker_dubet.Value = A.dateouverture.Value;
-            bunifuDatePicker_fin.Value = A.Datefermeture.Value;
+            if(A.Datefermeture!=null)
+                bunifuDatePicker_fin.Value = A.Datefermeture.Value;
+            bunifuDatePicker_fin.Value = DateTime.Now;
             if (THEME.client_or_dossier != null)
             {
                 THEME.client_or_dossier.SelectedValue = textBox_N_dossier.Text;
@@ -121,6 +123,16 @@ namespace gestion_cabinet_notarial
                 bunifuDatePicker_fin.Enabled = true;
             else
                 bunifuDatePicker_fin.Enabled = false;
+        }
+
+        private void ButtonEdit_dossier_Click(object sender, EventArgs e)
+        {
+           dossier d= (dossier)cls_Bl_Dossier.FindByValues(v => v.Numdossier == textBox_N_dossier.Text);
+            if(bunifuCheckBox_status.Checked)
+                d.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Value);
+            else
+                return;
+            cls_Bl_Dossier.SaveChanges();
         }
     }
     public class dossierSerche

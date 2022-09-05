@@ -481,6 +481,18 @@
     <Compile Include="controls\CTL_NOTE.Designer.cs">
       <DependentUpon>CTL_NOTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\CTL_PARAMETER.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_PARAMETER.Designer.cs">
+      <DependentUpon>CTL_PARAMETER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -580,6 +592,11 @@
     <Compile Include="controls\ADD_DOSSIER.Designer.cs">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="repository\CLS_REPOSITORY.cs" />
     <Compile Include="repository\INTER_REPOSITORY.cs" />
     <Compile Include="THEME.cs" />
@@ -603,6 +620,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_NOTE.resx">
       <DependentUpon>CTL_NOTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_PARAMETER.resx">
+      <DependentUpon>CTL_PARAMETER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>
@@ -649,14 +672,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="controls\ADD_DOSSIER.resx">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
     </EmbeddedResource>
@@ -926,6 +944,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\alert.png" />
     <None Include="Resources\rendez-vous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

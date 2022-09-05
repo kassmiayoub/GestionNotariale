@@ -237,6 +237,7 @@
     <Property Name="date" Type="DateTime" Precision="0" />
     <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__note__utilisateu__693CA210" FromRole="note" ToRole="utilisateur" />
+    <Property Name="date_alere" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="parte">
     <Key>

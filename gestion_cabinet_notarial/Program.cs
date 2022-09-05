@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gestion_cabinet_notarial.controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

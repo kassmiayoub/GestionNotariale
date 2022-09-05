@@ -29,117 +29,285 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuPanel_dossiers_passer = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label_dossier_passer = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label_alert = new System.Windows.Forms.Label();
+            this.bunifuDataGridView_accueil = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuPanel_dossiers_encour = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label_dossiere_encours = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuPanel_contarts_j = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label_contart = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bunifuPanel1.SuspendLayout();
-            this.bunifuPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuPanel_dossiers_passer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_accueil)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.bunifuPanel_dossiers_encour.SuspendLayout();
+            this.bunifuPanel_contarts_j.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuPanel1
+            // pictureBox1
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuPanel1.BorderRadius = 5;
-            this.bunifuPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuPanel1.BorderThickness = 3;
-            this.bunifuPanel1.Controls.Add(this.label2);
-            this.bunifuPanel1.Controls.Add(this.label1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(126, 46);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(284, 126);
-            this.bunifuPanel1.TabIndex = 0;
+            this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.alert;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // bunifuPanel_dossiers_passer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(32, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rendez-vous aujourd\'hui";
+            this.bunifuPanel_dossiers_passer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuPanel_dossiers_passer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel_dossiers_passer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel_dossiers_passer.BackgroundImage")));
+            this.bunifuPanel_dossiers_passer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel_dossiers_passer.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuPanel_dossiers_passer.BorderRadius = 5;
+            this.bunifuPanel_dossiers_passer.BorderThickness = 3;
+            this.bunifuPanel_dossiers_passer.Controls.Add(this.label_dossier_passer);
+            this.bunifuPanel_dossiers_passer.Controls.Add(this.label10);
+            this.bunifuPanel_dossiers_passer.Location = new System.Drawing.Point(607, 103);
+            this.bunifuPanel_dossiers_passer.Name = "bunifuPanel_dossiers_passer";
+            this.bunifuPanel_dossiers_passer.ShowBorders = true;
+            this.bunifuPanel_dossiers_passer.Size = new System.Drawing.Size(302, 126);
+            this.bunifuPanel_dossiers_passer.TabIndex = 3;
+            this.bunifuPanel_dossiers_passer.Click += new System.EventHandler(this.bunifuPanel_dossiers_passer_Click);
+            // 
+            // label_dossier_passer
+            // 
+            this.label_dossier_passer.AutoSize = true;
+            this.label_dossier_passer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_dossier_passer.ForeColor = System.Drawing.Color.Teal;
+            this.label_dossier_passer.Location = new System.Drawing.Point(116, 69);
+            this.label_dossier_passer.Name = "label_dossier_passer";
+            this.label_dossier_passer.Size = new System.Drawing.Size(29, 31);
+            this.label_dossier_passer.TabIndex = 1;
+            this.label_dossier_passer.Text = "7";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Teal;
+            this.label10.Location = new System.Drawing.Point(6, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(285, 24);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Les dossiers  passer  aujourd\'hui";
+            // 
+            // label_alert
+            // 
+            this.label_alert.AutoSize = true;
+            this.label_alert.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_alert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label_alert.Location = new System.Drawing.Point(46, -3);
+            this.label_alert.Name = "label_alert";
+            this.label_alert.Size = new System.Drawing.Size(29, 31);
+            this.label_alert.TabIndex = 5;
+            this.label_alert.Text = "1";
+            // 
+            // bunifuDataGridView_accueil
+            // 
+            this.bunifuDataGridView_accueil.AllowCustomTheming = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_accueil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.bunifuDataGridView_accueil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDataGridView_accueil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView_accueil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView_accueil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView_accueil.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_accueil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.bunifuDataGridView_accueil.ColumnHeadersHeight = 40;
+            this.bunifuDataGridView_accueil.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_accueil.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_accueil.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_accueil.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_accueil.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_accueil.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_accueil.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_accueil.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_accueil.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_accueil.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_accueil.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bunifuDataGridView_accueil.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_accueil.CurrentTheme.Name = null;
+            this.bunifuDataGridView_accueil.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_accueil.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView_accueil.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_accueil.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_accueil.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_accueil.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bunifuDataGridView_accueil.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView_accueil.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView_accueil.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView_accueil.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView_accueil.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView_accueil.Location = new System.Drawing.Point(3, 310);
+            this.bunifuDataGridView_accueil.Name = "bunifuDataGridView_accueil";
+            this.bunifuDataGridView_accueil.RowHeadersVisible = false;
+            this.bunifuDataGridView_accueil.RowTemplate.Height = 40;
+            this.bunifuDataGridView_accueil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView_accueil.Size = new System.Drawing.Size(922, 276);
+            this.bunifuDataGridView_accueil.TabIndex = 6;
+            this.bunifuDataGridView_accueil.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView_accueil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_accueil_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label_alert);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(834, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(84, 71);
+            this.panel1.TabIndex = 7;
+            // 
+            // bunifuPanel_dossiers_encour
+            // 
+            this.bunifuPanel_dossiers_encour.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuPanel_dossiers_encour.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel_dossiers_encour.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel_dossiers_encour.BackgroundImage")));
+            this.bunifuPanel_dossiers_encour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel_dossiers_encour.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuPanel_dossiers_encour.BorderRadius = 5;
+            this.bunifuPanel_dossiers_encour.BorderThickness = 3;
+            this.bunifuPanel_dossiers_encour.Controls.Add(this.label_dossiere_encours);
+            this.bunifuPanel_dossiers_encour.Controls.Add(this.label8);
+            this.bunifuPanel_dossiers_encour.Location = new System.Drawing.Point(11, 103);
+            this.bunifuPanel_dossiers_encour.Name = "bunifuPanel_dossiers_encour";
+            this.bunifuPanel_dossiers_encour.ShowBorders = true;
+            this.bunifuPanel_dossiers_encour.Size = new System.Drawing.Size(284, 126);
+            this.bunifuPanel_dossiers_encour.TabIndex = 2;
+            this.bunifuPanel_dossiers_encour.Click += new System.EventHandler(this.bunifuPanel_dossiers_encour_Click);
+            // 
+            // label_dossiere_encours
+            // 
+            this.label_dossiere_encours.AutoSize = true;
+            this.label_dossiere_encours.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_dossiere_encours.ForeColor = System.Drawing.Color.Teal;
+            this.label_dossiere_encours.Location = new System.Drawing.Point(116, 69);
+            this.label_dossiere_encours.Name = "label_dossiere_encours";
+            this.label_dossiere_encours.Size = new System.Drawing.Size(29, 31);
+            this.label_dossiere_encours.TabIndex = 1;
+            this.label_dossiere_encours.Text = "7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Teal;
+            this.label8.Location = new System.Drawing.Point(32, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Les dossiers en cours ";
+            // 
+            // bunifuPanel_contarts_j
+            // 
+            this.bunifuPanel_contarts_j.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuPanel_contarts_j.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel_contarts_j.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel_contarts_j.BackgroundImage")));
+            this.bunifuPanel_contarts_j.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel_contarts_j.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuPanel_contarts_j.BorderRadius = 5;
+            this.bunifuPanel_contarts_j.BorderThickness = 3;
+            this.bunifuPanel_contarts_j.Controls.Add(this.label_contart);
+            this.bunifuPanel_contarts_j.Controls.Add(this.label2);
+            this.bunifuPanel_contarts_j.Location = new System.Drawing.Point(304, 103);
+            this.bunifuPanel_contarts_j.Name = "bunifuPanel_contarts_j";
+            this.bunifuPanel_contarts_j.ShowBorders = true;
+            this.bunifuPanel_contarts_j.Size = new System.Drawing.Size(292, 126);
+            this.bunifuPanel_contarts_j.TabIndex = 8;
+            this.bunifuPanel_contarts_j.Click += new System.EventHandler(this.bunifuPanel_contarts_j_Click);
+            // 
+            // label_contart
+            // 
+            this.label_contart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_contart.AutoSize = true;
+            this.label_contart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_contart.ForeColor = System.Drawing.Color.Teal;
+            this.label_contart.Location = new System.Drawing.Point(117, 69);
+            this.label_contart.Name = "label_contart";
+            this.label_contart.Size = new System.Drawing.Size(29, 31);
+            this.label_contart.TabIndex = 1;
+            this.label_contart.Text = "7";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(116, 69);
+            this.label2.Location = new System.Drawing.Point(9, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "7";
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuPanel2.BorderRadius = 5;
-            this.bunifuPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuPanel2.BorderThickness = 3;
-            this.bunifuPanel2.Controls.Add(this.label3);
-            this.bunifuPanel2.Controls.Add(this.label4);
-            this.bunifuPanel2.Location = new System.Drawing.Point(497, 46);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(302, 126);
-            this.bunifuPanel2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(116, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "7";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(6, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Rendez-vous passer  aujourd\'hui";
+            this.label2.Size = new System.Drawing.Size(274, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Les contrats rediger aujourd\'hui";
             // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuPanel2);
-            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.bunifuPanel_contarts_j);
+            this.Controls.Add(this.bunifuPanel_dossiers_encour);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bunifuDataGridView_accueil);
+            this.Controls.Add(this.bunifuPanel_dossiers_passer);
             this.Name = "Accueil";
             this.Size = new System.Drawing.Size(928, 589);
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
-            this.bunifuPanel2.ResumeLayout(false);
-            this.bunifuPanel2.PerformLayout();
+            this.VisibleChanged += new System.EventHandler(this.Accueil_VisibleChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.bunifuPanel_dossiers_passer.ResumeLayout(false);
+            this.bunifuPanel_dossiers_passer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_accueil)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.bunifuPanel_dossiers_encour.ResumeLayout(false);
+            this.bunifuPanel_dossiers_encour.PerformLayout();
+            this.bunifuPanel_contarts_j.ResumeLayout(false);
+            this.bunifuPanel_contarts_j.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel_dossiers_passer;
+        private System.Windows.Forms.Label label_dossier_passer;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_alert;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_accueil;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel_dossiers_encour;
+        private System.Windows.Forms.Label label_dossiere_encours;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel_contarts_j;
+        private System.Windows.Forms.Label label_contart;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
