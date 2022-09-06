@@ -80,13 +80,13 @@ namespace gestion_cabinet_notarial
             //    new MainMenuItemSubItem("ajouter note"/*, (se, ev) => Theme.Navigate(typeof(CTL_ADD_NOTE)), "AddNote"*/) { Tag = "AddNote" },
             //    new MainMenuItemSubItem("list note"/*, (se, ev) => Theme.Navigate(typeof(CTL_NOTES_LIST)), "NotesList"*/) { Tag = "NotesList" }
             //));
-            //PanelItems.Controls.Add(new MainMenuItem(Resources.Settings, "PARAMETRE", true, null,
-            //    new MainMenuItemSubItem("LIST UTILISATUER"/*, (se, ev) => Theme.Navigate(typeof(CTL_DATABASE_SETTINGS)), "Database"*/) { Tag = "Database" },
-            //    new MainMenuItemSubItem("AJOUTER UTILISATUER"/*, (se, ev) => Theme.Navigate(typeof(CTL_CAT_SETTINGS)), "Categories"*/) { Tag = "Categories" },
-            //    new MainMenuItemSubItem("BASE DE DONNEE"/*, (se, ev) => Theme.Navigate(typeof(CTL_OFFICE_SETTINGS)), "OfficeInfo"*/) { Tag = "OfficeInfo" },
-            //    new MainMenuItemSubItem("LIST OPERATIONS"/*, (se, ev) => Theme.Navigate(typeof(CTL_ADD_USER)), "AddUser"*/) { Tag = "AddUser" }
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Settings, "PARAMETRE", true, null,
+               // new MainMenuItemSubItem("LIST UTILISATUER"/*, (se, ev) => Theme.Navigate(typeof(CTL_DATABASE_SETTINGS)), "Database"*/) { Tag = "Database" },
+                new MainMenuItemSubItem("AJOUTER UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER))) { Tag = "Categories" }
+               // new MainMenuItemSubItem("BASE DE DONNEE"/*, (se, ev) => Theme.Navigate(typeof(CTL_OFFICE_SETTINGS)), "OfficeInfo"*/) { Tag = "OfficeInfo" },
+              //  new MainMenuItemSubItem("LIST OPERATIONS"/*, (se, ev) => Theme.Navigate(typeof(CTL_ADD_USER)), "AddUser"*/) { Tag = "AddUser" }
 
-            //));
+            ));
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Info, "عـن البرنامـج", false, (se, ev) => Theme.Navigate(typeof(CTL_ABOUT))));
         }
 

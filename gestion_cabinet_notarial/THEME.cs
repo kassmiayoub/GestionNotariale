@@ -4,7 +4,10 @@ using gestion_cabinet_notarial.controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,16 +16,24 @@ namespace gestion_cabinet_notarial
 {
     internal static class THEME
     {
+        // directory files
+        public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
+        public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");
+        public static string contratDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "contrat");
+
         public static ComboBox client_or_dossier = null;
         public static Panel p = null;
         public static Type T = null;
         public static bool credit = false;
         public static string numdossier = "";
+        public static string utilisateur = "";
         public static int id_C = 0;
+        public static string id_user = "";
         public static double prix = 0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
         public static Accueil Accueil { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
+        public static CTL_PARAMETER_AJOUTER_UTILISATUER AJOUTER_UTILISATUER { get; set; }
         public static DETAIL_CONTRAT DETAIL_CONTRAT { get; set; }
         public static detail_dossier detail_dossier { get; set; }
         public static Panel MainControlPanel { get; set; }
@@ -32,6 +43,7 @@ namespace gestion_cabinet_notarial
         public static CTL_NOTE CTL_NOTE { get; set; }
         public static CTL_AGENDA CTL_AGENDA { get; set; }
         public static List<Control> ControlsList { get; set; } = new List<Control>();
+        public static List<string> fonctionnalete { get; set; } = new List<string>();
         private static void AddControlToPanel()
         {
             ControlsList.ForEach(ele => MainControlPanel.Controls.Add(ele));
@@ -45,6 +57,7 @@ namespace gestion_cabinet_notarial
         public static void AddControlsToList()
         {
             ControlsList.Add(CTL_AGENDA);            
+            ControlsList.Add(AJOUTER_UTILISATUER);
             ControlsList.Add(Accueil);
             ControlsList.Add(CTL_BANQUE);
             ControlsList.Add(CTL_NOTE);
@@ -58,6 +71,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            AJOUTER_UTILISATUER = new CTL_PARAMETER_AJOUTER_UTILISATUER() { Visible = false };
             Accueil = new Accueil() { Visible = false };
             CTL_BANQUE = new CTL_BANQUE() { Visible = false };
             CTL_CREDIT = new CTL_CREDIT() { Visible = false };
@@ -217,6 +231,85 @@ namespace gestion_cabinet_notarial
                 }
                 
             }
+        }
+        public static bool acceder(string condition)
+        {
+          foreach(string x in fonctionnalete)
+            {
+                if (x == condition)
+                    return true;
+            }
+          return false;
+        }
+        // Executable File :
+        public static string getExecutableFile()
+        {
+            return Assembly.GetExecutingAssembly().Location;
+        }
+        // Executable Directory :
+        public static string getExecutableDirectory()
+        {
+            return Path.GetDirectoryName(getExecutableFile());
+        }
+        public static string CopyFile(string FilePath, string type)
+        {
+            string exeFilesPath = $@"{getExecutableDirectory()}\files";
+            string exe_client = $@"{exeFilesPath}\client";
+            string exe_dossier = $@"{exeFilesPath}\dossier";
+            string exe_contart = $@"{exeFilesPath}\contrat";
+            if (!Directory.Exists(exeFilesPath))
+            {
+                // create images directory
+                Directory.CreateDirectory(exeFilesPath);
+
+                // create Patient directory in images directory
+                Directory.CreateDirectory(exe_client);
+                Directory.CreateDirectory(exe_dossier);
+                Directory.CreateDirectory(exe_contart);
+
+
+            }
+            DirectoryInfo DirectoryTYPEInfos;
+            if (type == "client")
+            {
+                DirectoryTYPEInfos = new DirectoryInfo(exe_client);
+            }
+            else if(type == "dossier")
+            {
+                DirectoryTYPEInfos = new DirectoryInfo(exe_dossier);
+            }
+            else
+            {
+                DirectoryTYPEInfos = new DirectoryInfo(exe_contart);
+            }
+            // info of the patient directory :
+            // DirectoryInfo DirectoryClientInfos = new DirectoryInfo(exe_client);
+            //// Secutity informations ////
+            // info of the images file :
+            FileInfo fi = new FileInfo(FilePath);
+            FileSecurity fs = fi.GetAccessControl();
+            DirectorySecurity ds = DirectoryTYPEInfos.GetAccessControl();
+            fs.SetAccessRuleProtection(true, true);
+            ds.SetAccessRuleProtection(true, true);
+            fi.SetAccessControl(fs);
+            DirectoryTYPEInfos.SetAccessControl(ds);
+            // Copy the image to the executable directory :
+            // Directory for the specified Patient :
+            var Name = Path.GetFileName(FilePath);
+            MessageBox.Show(FilePath);
+            MessageBox.Show(Name);
+            //var imageExtension = fi.Extension;
+            if (!Directory.Exists($@"{exeFilesPath}\{DirectoryTYPEInfos}\{Name}"))
+            {
+                fi.CopyTo($@"{DirectoryTYPEInfos}\{Name}", true);
+                return Name;
+            }
+            else
+            {
+                return "";
+            }
+                
+            
         }
     }
     public class cliente

@@ -19,10 +19,7 @@ namespace gestion_cabinet_notarial
             InitializeComponent();
         }
 
-        private void mainMenu1_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {

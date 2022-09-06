@@ -352,6 +352,8 @@
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
     <Compile Include="BL\csl_bl_fichier_contart.cs" />
+    <Compile Include="BL\CSL_BL_FUNCTION.cs" />
+    <Compile Include="BL\CSL_BL_UTILISATUER.cs" />
     <Compile Include="context\banque.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -944,6 +946,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\CADNA.png" />
+    <None Include="Resources\loginForm.png" />
     <None Include="Resources\alert.png" />
     <None Include="Resources\rendez-vous.png" />
   </ItemGroup>

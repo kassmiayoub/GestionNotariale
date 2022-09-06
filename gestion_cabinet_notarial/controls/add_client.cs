@@ -11,6 +11,7 @@ using gestion_cabinet_notarial.BL;
 using Bunifu.UI.WinForms.BunifuButton;
 using gestion_cabinet_notarial.context;
 using System.Diagnostics;
+using System.IO;
 
 namespace gestion_cabinet_notarial
 {
@@ -118,11 +119,23 @@ namespace gestion_cabinet_notarial
             A.idClient = int.Parse(textBoxIDCLIENT.Text);
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
-            A.path = textBoxfile.Text;
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "client");
+            if (name_of_file == "")
+            {
+                MessageBox.Show("Cette fichier existe deja");
+                return;
+            }
+            A.path = name_of_file;
             cSL_BL_FICHIER_CLIENT.Add(A);
         }
         private void AJOUTER_FICHIERS_Click(object sender, EventArgs e)
         {
+            //if("AJOUTER FICHIERS CLIENT")
+            if (!THEME.acceder("AJOUTER FICHIERS CLIENT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBoxIDCLIENT.Text == "") { return; }
             int id = int.Parse(textBoxIDCLIENT.Text);
             if (cls.FindById(id) == null)
@@ -297,15 +310,19 @@ namespace gestion_cabinet_notarial
             {
                 if(dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {
-                    string file = dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                    string file =THEME.clientDirectoryPath+"/"+dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                     Process.Start(file);
                 }
                 else
                 {
-                    DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation of Form Closure", MessageBoxButtons.YesNo);
+                    DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes) {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        cSL_BL_FICHIER_CLIENT.Remove(cSL_BL_FICHIER_CLIENT.FindById(idfile));
+                        string path = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                        fichiers_client a = cSL_BL_FICHIER_CLIENT.FindById(idfile);
+                        cSL_BL_FICHIER_CLIENT.Remove(a);
+                        cSL_BL_FICHIER_CLIENT.SaveChanges();
+                        File.Delete(path);                        
                     }                    
                 } 
             }
@@ -344,9 +361,7 @@ namespace gestion_cabinet_notarial
             THEME.navigat(typeof(detail_dossier));
             //THEME.numdossier = "";
             //THEME.prix = 0;
-
         }
-
         private void add_client_VisibleChanged(object sender, EventArgs e)
         {
             if (THEME.id_C == 0)

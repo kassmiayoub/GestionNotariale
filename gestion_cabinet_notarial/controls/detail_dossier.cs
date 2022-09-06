@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,10 +50,16 @@ namespace gestion_cabinet_notarial
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
         {
             if (THEME.numdossier == "")
-                return;
+                return;          
             var file = new fichiers_dossier();
             file.titre = textBoxtitre.Text;
-            file.path = textBoxfile.Text;
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "dossier");
+            if (name_of_file == "")
+            {
+                MessageBox.Show("Cette fichier existe deja");
+                return;
+            }
+            file.path = name_of_file;
             file.descreption = textBoxdesc.Text;
             file.numdossier = THEME.numdossier;
             csl_Bl_Fichier_dossier.Add(file);
@@ -84,7 +91,7 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {
-                    string file = dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                    string file = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                     Process.Start(file);
                 }
                 else
@@ -93,6 +100,7 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
+                        File.Delete(THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString());
                         csl_Bl_Fichier_dossier.Remove(csl_Bl_Fichier_dossier.FindById(idfile));
                         csl_Bl_Fichier_dossier.SaveChanges();
                     }

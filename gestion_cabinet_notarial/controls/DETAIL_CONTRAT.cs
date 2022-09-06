@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -217,7 +218,13 @@ namespace gestion_cabinet_notarial
             A.idcontrat = THEME.id_C;
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
-            A.path = textBoxfile.Text;
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "contrat");
+            if (name_of_file == "")
+            {
+                MessageBox.Show("Cette fichier existe deja");
+                return;
+            }
+            A.path = name_of_file;
             cont.Add(A);
         }
 
@@ -256,7 +263,7 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {
-                    string file = dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                    string file = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                     Process.Start(file);
                 }
                 else
@@ -265,6 +272,7 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
+                        File.Delete(THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString());
                         cont.Remove(cont.FindById(idfile));
                     }
 
