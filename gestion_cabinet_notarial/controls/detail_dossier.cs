@@ -53,7 +53,7 @@ namespace gestion_cabinet_notarial
                 return;          
             var file = new fichiers_dossier();
             file.titre = textBoxtitre.Text;
-            string name_of_file = THEME.CopyFile(textBoxfile.Text, "dossier");
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "dossier", THEME.numdossier);
             if (name_of_file == "")
             {
                 MessageBox.Show("Cette fichier existe deja");
@@ -89,10 +89,10 @@ namespace gestion_cabinet_notarial
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
+                string path = THEME.dossierDirectoryPath + "/"+THEME.numdossier+"/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
-                {
-                    string file = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
-                    Process.Start(file);
+                {                    
+                    Process.Start(path);
                 }
                 else
                 {
@@ -100,14 +100,14 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        File.Delete(THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString());
+                        if(Directory.Exists(path))                            
+                            File.Delete(path);                            
                         csl_Bl_Fichier_dossier.Remove(csl_Bl_Fichier_dossier.FindById(idfile));
                         csl_Bl_Fichier_dossier.SaveChanges();
                     }
                 }
             }
         }
-
         private void PARTES_OF_CONTRAT_Click_1(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(tabPage1);

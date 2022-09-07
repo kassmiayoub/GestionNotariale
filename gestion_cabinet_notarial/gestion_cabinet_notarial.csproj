@@ -477,6 +477,18 @@
     <Compile Include="controls\CTL_DAY_ITEM.Designer.cs">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\CTL_LIST_UTILATUER.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_LIST_UTILATUER.Designer.cs">
+      <DependentUpon>CTL_LIST_UTILATUER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_modifier_compte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_modifier_compte.Designer.cs">
+      <DependentUpon>CTL_modifier_compte.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\CTL_NOTE.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -619,6 +631,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_DAY_ITEM.resx">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_LIST_UTILATUER.resx">
+      <DependentUpon>CTL_LIST_UTILATUER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_modifier_compte.resx">
+      <DependentUpon>CTL_modifier_compte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_NOTE.resx">
       <DependentUpon>CTL_NOTE.cs</DependentUpon>

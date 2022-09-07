@@ -282,6 +282,14 @@ namespace gestion_cabinet_notarial
                 return;
             }
             string time = time1.Value.ToString();
+            if(time1.Style.BackColor == Color.Green)
+            {
+                if (!(Convert.ToDateTime(CTL_DAY_ITEM.datecomlet) >= DateTime.Now))
+                {
+                     MessageBox.Show("la date doit etre supérieur ou égale au date d'aujourd'hui");
+                    return;
+                }                    
+            }
             if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray)
             {
                 string[] get_idr_idc = time1.Tag.ToString().Split('|');
@@ -351,7 +359,8 @@ namespace gestion_cabinet_notarial
                         contextMenuStrip_passer_supprimer.Items[1].Enabled = true;
                     }
                     return;
-                }               
+                }
+               
             }
         }
 

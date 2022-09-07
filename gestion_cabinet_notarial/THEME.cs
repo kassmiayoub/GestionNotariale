@@ -29,6 +29,7 @@ namespace gestion_cabinet_notarial
         public static string utilisateur = "";
         public static int id_C = 0;
         public static string id_user = "";
+        public static string id_user_modifier = "";
         public static double prix = 0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
         public static Accueil Accueil { get; set; }
@@ -42,6 +43,8 @@ namespace gestion_cabinet_notarial
         public static CTL_BANQUE CTL_BANQUE { get; set; }
         public static CTL_NOTE CTL_NOTE { get; set; }
         public static CTL_AGENDA CTL_AGENDA { get; set; }
+        public static CTL_LIST_UTILATUER CTL_LIST_UTILATUER { get; set; }
+        public static CTL_modifier_compte CTL_modifier_compte { get; set; }        
         public static List<Control> ControlsList { get; set; } = new List<Control>();
         public static List<string> fonctionnalete { get; set; } = new List<string>();
         private static void AddControlToPanel()
@@ -57,6 +60,8 @@ namespace gestion_cabinet_notarial
         public static void AddControlsToList()
         {
             ControlsList.Add(CTL_AGENDA);            
+            ControlsList.Add(CTL_modifier_compte);
+            ControlsList.Add(CTL_LIST_UTILATUER);
             ControlsList.Add(AJOUTER_UTILISATUER);
             ControlsList.Add(Accueil);
             ControlsList.Add(CTL_BANQUE);
@@ -71,6 +76,8 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_modifier_compte = new CTL_modifier_compte() { Visible = false };
+            CTL_LIST_UTILATUER = new CTL_LIST_UTILATUER() { Visible = false };
             AJOUTER_UTILISATUER = new CTL_PARAMETER_AJOUTER_UTILISATUER() { Visible = false };
             Accueil = new Accueil() { Visible = false };
             CTL_BANQUE = new CTL_BANQUE() { Visible = false };
@@ -251,12 +258,12 @@ namespace gestion_cabinet_notarial
         {
             return Path.GetDirectoryName(getExecutableFile());
         }
-        public static string CopyFile(string FilePath, string type)
+        public static string CopyFile(string FilePath, string type ,string id )
         {
             string exeFilesPath = $@"{getExecutableDirectory()}\files";
             string exe_client = $@"{exeFilesPath}\client";
             string exe_dossier = $@"{exeFilesPath}\dossier";
-            string exe_contart = $@"{exeFilesPath}\contrat";
+            string exe_contrat = $@"{exeFilesPath}\contrat";
             if (!Directory.Exists(exeFilesPath))
             {
                 // create images directory
@@ -265,22 +272,43 @@ namespace gestion_cabinet_notarial
                 // create Patient directory in images directory
                 Directory.CreateDirectory(exe_client);
                 Directory.CreateDirectory(exe_dossier);
-                Directory.CreateDirectory(exe_contart);
+                Directory.CreateDirectory(exe_contrat);
 
 
             }
             DirectoryInfo DirectoryTYPEInfos;
             if (type == "client")
             {
-                DirectoryTYPEInfos = new DirectoryInfo(exe_client);
+                string client = $@"{exe_client}\{id}";
+                if (Directory.Exists(client))
+                    DirectoryTYPEInfos = new DirectoryInfo(client);                   
+                else 
+                {
+                    Directory.CreateDirectory(client);
+                    DirectoryTYPEInfos = new DirectoryInfo(client);
+                }
             }
             else if(type == "dossier")
             {
-                DirectoryTYPEInfos = new DirectoryInfo(exe_dossier);
+                string dossier = $@"{exe_dossier}\{id}";
+                if (Directory.Exists(dossier))
+                    DirectoryTYPEInfos = new DirectoryInfo(dossier);
+                else
+                {
+                    Directory.CreateDirectory(dossier);
+                    DirectoryTYPEInfos = new DirectoryInfo(dossier);
+                }
             }
             else
             {
-                DirectoryTYPEInfos = new DirectoryInfo(exe_contart);
+                string contrat = $@"{exe_contrat}\{id}";
+                if (Directory.Exists(contrat))
+                    DirectoryTYPEInfos = new DirectoryInfo(contrat);
+                else
+                {
+                    Directory.CreateDirectory(contrat);
+                    DirectoryTYPEInfos = new DirectoryInfo(contrat);
+                }
             }
             // info of the patient directory :
             // DirectoryInfo DirectoryClientInfos = new DirectoryInfo(exe_client);

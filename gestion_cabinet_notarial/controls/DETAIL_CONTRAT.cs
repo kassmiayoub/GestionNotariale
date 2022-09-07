@@ -218,7 +218,7 @@ namespace gestion_cabinet_notarial
             A.idcontrat = THEME.id_C;
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
-            string name_of_file = THEME.CopyFile(textBoxfile.Text, "contrat");
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "contrat", THEME.id_C.ToString());
             if (name_of_file == "")
             {
                 MessageBox.Show("Cette fichier existe deja");
@@ -261,10 +261,10 @@ namespace gestion_cabinet_notarial
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
+                string path = THEME.contratDirectoryPath + "/"+THEME.id_C.ToString()+"/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
-                {
-                    string file = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
-                    Process.Start(file);
+                {                   
+                    Process.Start(path);
                 }
                 else
                 {
@@ -272,10 +272,11 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        File.Delete(THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString());
+                        if(Directory.Exists(path))
+                            File.Delete(path);
                         cont.Remove(cont.FindById(idfile));
+                        cont.SaveChanges();
                     }
-
                 }
             }
         }

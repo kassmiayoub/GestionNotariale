@@ -119,7 +119,7 @@ namespace gestion_cabinet_notarial
             A.idClient = int.Parse(textBoxIDCLIENT.Text);
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
-            string name_of_file = THEME.CopyFile(textBoxfile.Text, "client");
+            string name_of_file = THEME.CopyFile(textBoxfile.Text, "client", textBoxIDCLIENT.Text);
             if (name_of_file == "")
             {
                 MessageBox.Show("Cette fichier existe deja");
@@ -308,17 +308,16 @@ namespace gestion_cabinet_notarial
             DataGridView dgv =(DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn )
             {
-                if(dgv.Columns[e.ColumnIndex].Name == "affichage")
+                string path = THEME.clientDirectoryPath + "/" + textBoxIDCLIENT.Text + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                if (dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {
-                    string file =THEME.clientDirectoryPath+"/"+dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
-                    Process.Start(file);
+                    Process.Start(path);
                 }
                 else
                 {
                     DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes) {
-                        int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        string path = THEME.clientDirectoryPath + "/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
+                        int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());                      
                         fichiers_client a = cSL_BL_FICHIER_CLIENT.FindById(idfile);
                         cSL_BL_FICHIER_CLIENT.Remove(a);
                         cSL_BL_FICHIER_CLIENT.SaveChanges();
@@ -351,7 +350,6 @@ namespace gestion_cabinet_notarial
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_dossier, "detail", "detail", 6);
             bunifuPages1.SetPage(tabPage_dossier);
         }
-
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             THEME.numdossier = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["N_DOSSIER"].Value.ToString();
