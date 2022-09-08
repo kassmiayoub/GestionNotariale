@@ -42,9 +42,9 @@ namespace gestion_cabinet_notarial
             // LabelSubItemName
             // 
             this.LabelSubItemName.Font = new System.Drawing.Font("Ithra-Light", 10F);
-            this.LabelSubItemName.Location = new System.Drawing.Point(69, 1);
+            this.LabelSubItemName.Location = new System.Drawing.Point(32, 1);
             this.LabelSubItemName.Name = "LabelSubItemName";
-            this.LabelSubItemName.Size = new System.Drawing.Size(104, 20);
+            this.LabelSubItemName.Size = new System.Drawing.Size(279, 20);
             this.LabelSubItemName.TabIndex = 4;
             this.LabelSubItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelSubItemName.MouseLeave += new System.EventHandler(this.MainMenuItemSubItem_MouseLeave);
@@ -85,7 +85,7 @@ namespace gestion_cabinet_notarial
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MainMenuItemSubItem";
-            this.Size = new System.Drawing.Size(175, 21);
+            this.Size = new System.Drawing.Size(314, 21);
             this.MouseLeave += new System.EventHandler(this.MainMenuItemSubItem_MouseLeave);
             this.MouseHover += new System.EventHandler(this.MainMenuItemSubItem_MouseHover);
             this.ContextMenuStripFav.ResumeLayout(false);

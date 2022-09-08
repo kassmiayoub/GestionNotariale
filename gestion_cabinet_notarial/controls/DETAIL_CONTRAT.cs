@@ -51,7 +51,7 @@ namespace gestion_cabinet_notarial
             THEME.add_checkbox_to_datagrid(bunifuDataGridViewpartes_S, "Signatur", 5);
             foreach (DataGridViewRow r in bunifuDataGridViewpartes_S.Rows)
             {
-                if (r.Cells[4].Value.ToString() == "NON SINIGTURE")
+                if (r.Cells["DATE_S"].Value.ToString() == "NON SINIGTURE")
                 {
                     r.Cells["Signatur"].Value = false;
                 }
@@ -226,6 +226,7 @@ namespace gestion_cabinet_notarial
             }
             A.path = name_of_file;
             cont.Add(A);
+            THEME.operation($"AJOUTER FICHIER DE CONTRAT ID = {THEME.id_C}");
         }
 
         private void ButtonSaveSettings_Click(object sender, EventArgs e)

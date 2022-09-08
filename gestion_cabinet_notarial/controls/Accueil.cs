@@ -14,19 +14,18 @@ namespace gestion_cabinet_notarial
 {
     public partial class Accueil : UserControl
     {
-
         CLS_NOTE cLS_NOTE = new CLS_NOTE();
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        cls_bl_partes_S Signature = new cls_bl_partes_S();
         List<dossierSerche> Listdossier = new List<dossierSerche>();
-        string contar_or_dossier = "dossier";
+        string contrat_or_dossier = "dossier";
         public Accueil()
         {
             InitializeComponent();
         }
         private void Accueil_VisibleChanged(object sender, EventArgs e)
-        {
-            
+        {            
             if (this.Visible)
             {
                 //bunifuDataGridView_accueil.Columns.Clear();
@@ -45,7 +44,7 @@ namespace gestion_cabinet_notarial
                 }).ToList();
                 bunifuDataGridView_accueil.DataSource = Listdossier;
                 THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 6);
-                contar_or_dossier = "dossier";
+                contrat_or_dossier = "dossier";
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -63,9 +62,8 @@ namespace gestion_cabinet_notarial
             //bunifuDataGridView_accueil.Columns.Clear();
             bunifuDataGridView_accueil.DataSource = Listdossier;
             THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 6);
-            contar_or_dossier = "dossier";
+            contrat_or_dossier = "dossier";
         }
-
         private void bunifuPanel_dossiers_passer_Click(object sender, EventArgs e)
         {
             //bunifuDataGridView_accueil.Columns.Clear();
@@ -81,9 +79,8 @@ namespace gestion_cabinet_notarial
             }).ToList();
             bunifuDataGridView_accueil.DataSource = ListDataSource;
             THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 6);
-            contar_or_dossier = "dossier";
+            contrat_or_dossier = "dossier";
         }
-
         private void bunifuPanel_contarts_j_Click(object sender, EventArgs e)
         {
             //bunifuDataGridView_accueil.Columns.Clear();
@@ -94,10 +91,9 @@ namespace gestion_cabinet_notarial
                 DTFIN = (DateTime)ele.Datefermeture,
                 dtov = (DateTime)ele.dateouverture
             }).ToList();
-            contar_or_dossier = "contart";
+            contrat_or_dossier = "contart";
             THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 4);
         }
-
         private void bunifuDataGridView_accueil_CellClick(object sender, DataGridViewCellEventArgs e)
         {
              DataGridView dgv = (DataGridView)sender;
@@ -105,7 +101,7 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
-                    if (contar_or_dossier == "contart")
+                    if (contrat_or_dossier == "contart")
                     {
                         THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
                         THEME.navigat(typeof(DETAIL_CONTRAT));
@@ -118,6 +114,18 @@ namespace gestion_cabinet_notarial
                     }
                 }               
             }
+        }
+        private void bunifuPanelcontrat_non_signature_Click(object sender, EventArgs e)
+        {
+            bunifuDataGridView_accueil.DataSource = Signature.GetAll().Where(condition => condition.DateSignatur == null).Select(ele => new contart()
+            {
+                IDCONTART = ele.contrat.Idcontrat,
+                TYPECONTRAT = ele.contrat.typecontrat,
+                DTFIN = (DateTime)ele.contrat.Datefermeture,
+                dtov = (DateTime)ele.contrat.dateouverture
+            }).ToList();
+            contrat_or_dossier = "contart";
+            THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 4);           
         }
     }
 }

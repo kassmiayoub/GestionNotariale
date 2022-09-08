@@ -362,9 +362,19 @@ namespace gestion_cabinet_notarial
         }
         private void add_client_VisibleChanged(object sender, EventArgs e)
         {
-            if (THEME.id_C == 0)
+           var ListDataSource = cls.GetAll().Select(ele => new clientserch()
+            {
+                IDCIENT = ele.idClient,
+                nom = ele.Nom,
+                PRENOM = ele.Prenom,
+                EMAIL = ele.Email,
+                TEL = ele.Tele,
+                FAX = ele.Fax
+            }).ToList();
+            bunifuDataGridViewlist_client.DataSource = ListDataSource;
+            if (THEME.id_Client == 0)
                 return;
-            sete_client(THEME.id_C);
+            sete_client(THEME.id_Client);
         }
     }
     public class clientserch

@@ -71,7 +71,6 @@ namespace gestion_cabinet_notarial
             }
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
         }
-
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            // MessageBox.Show(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -133,6 +132,21 @@ namespace gestion_cabinet_notarial
             else
                 return;
             cls_Bl_Dossier.SaveChanges();
+        }
+
+        private void ADD_DOSSIER_VisibleChanged(object sender, EventArgs e)
+        {
+            var ListDataSource = new List<dossierSerche>();
+            ListDataSource = cls_Bl_Dossier.GetAll().Select(ele => new dossierSerche()
+            {
+                N_DOSSIER = ele.Numdossier,
+                DATE_F = ele.Datefermeture.ToString(),
+                DATE_O = ele.dateouverture.ToString(),
+                OBJET = ele.Objet,
+                TITRE_F = ele.Titrefoncier,
+                PRIX = ele.PRIX_ACQUISITION.ToString()
+            }).ToList();
+            bunifuDataGridView_list_dossier.DataSource = ListDataSource;
         }
     }
     public class dossierSerche

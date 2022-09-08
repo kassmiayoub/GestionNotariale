@@ -1,5 +1,6 @@
 ﻿using Bunifu.UI.WinForms;
 using gestion_cabinet_notarial.BL;
+using gestion_cabinet_notarial.context;
 using gestion_cabinet_notarial.controls;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace gestion_cabinet_notarial
 {
     internal static class THEME
     {
+        static CLS_BL_LOG LOG = new CLS_BL_LOG();
         // directory files
         public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
         public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");
@@ -28,6 +30,7 @@ namespace gestion_cabinet_notarial
         public static string numdossier = "";
         public static string utilisateur = "";
         public static int id_C = 0;
+        public static int id_Client = 0;
         public static string id_user = "";
         public static string id_user_modifier = "";
         public static double prix = 0;
@@ -45,6 +48,8 @@ namespace gestion_cabinet_notarial
         public static CTL_AGENDA CTL_AGENDA { get; set; }
         public static CTL_LIST_UTILATUER CTL_LIST_UTILATUER { get; set; }
         public static CTL_modifier_compte CTL_modifier_compte { get; set; }        
+        public static CTL_DATABASE CTL_DATABASE { get; set; }
+        public static CTL_LIST__operation CTL_LIST__operation { get; set; }
         public static List<Control> ControlsList { get; set; } = new List<Control>();
         public static List<string> fonctionnalete { get; set; } = new List<string>();
         private static void AddControlToPanel()
@@ -59,7 +64,9 @@ namespace gestion_cabinet_notarial
         }
         public static void AddControlsToList()
         {
-            ControlsList.Add(CTL_AGENDA);            
+            ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_LIST__operation);
+            ControlsList.Add(CTL_DATABASE);
             ControlsList.Add(CTL_modifier_compte);
             ControlsList.Add(CTL_LIST_UTILATUER);
             ControlsList.Add(AJOUTER_UTILISATUER);
@@ -76,6 +83,8 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_LIST__operation = new CTL_LIST__operation() { Visible = false };
+            CTL_DATABASE = new CTL_DATABASE() { Visible = false };
             CTL_modifier_compte = new CTL_modifier_compte() { Visible = false };
             CTL_LIST_UTILATUER = new CTL_LIST_UTILATUER() { Visible = false };
             AJOUTER_UTILISATUER = new CTL_PARAMETER_AJOUTER_UTILISATUER() { Visible = false };
@@ -89,6 +98,14 @@ namespace gestion_cabinet_notarial
             CTL_AGENDA = new CTL_AGENDA() { Visible = false };
             CTL_NOTE = new CTL_NOTE() { Visible = false };
 
+        }
+        public static void operation(string text)
+        {
+            var a = new log();
+            a.utilisateur = id_user;
+            a.Text = text;
+            a.Date = DateTime.Now;
+            LOG.Add(a);
         }
         public static void navigat(Type t)
         {

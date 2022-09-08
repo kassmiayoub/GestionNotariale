@@ -63,6 +63,11 @@ namespace gestion_cabinet_notarial
                             b.Style.BackColor = Color.Gray;
                             b.Tag = b.Value + "|" + rdv.idClient.ToString() + "|" + rdv.Id;
                         }
+                        else if (rdv.Timedebut == cell.Value.ToString() && rdv.Timefin == "absence")
+                        {
+                            b.Style.BackColor = Color.BurlyWood;
+                            b.Tag = b.Value + "|" + rdv.idClient.ToString() + "|" + rdv.Id;
+                        }
                     }
                 }
             });    
@@ -290,7 +295,7 @@ namespace gestion_cabinet_notarial
                     return;
                 }                    
             }
-            if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray)
+            if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray || time1.Style.BackColor == Color.BurlyWood)
             {
                 string[] get_idr_idc = time1.Tag.ToString().Split('|');
                 int idc = int.Parse(get_idr_idc[1]);
@@ -338,7 +343,7 @@ namespace gestion_cabinet_notarial
                 {
                     return;
                 }
-                if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray)
+                if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray || time1.Style.BackColor == Color.BurlyWood)
                 {
                     string[] get_idr_idc = time1.Tag.ToString().Split('|');
                     idc = int.Parse(get_idr_idc[1]);
@@ -348,15 +353,18 @@ namespace gestion_cabinet_notarial
                     time1.Selected = false;                  
                     Point p = new Point(Cursor.Position.X, Cursor.Position.Y);                    
                     contextMenuStrip_passer_supprimer.Show(p);
-                    if(time1.Style.BackColor == Color.Gray)
+                    if(time1.Style.BackColor == Color.Gray || time1.Style.BackColor == Color.BurlyWood)
                     {
                         contextMenuStrip_passer_supprimer.Items[0].Enabled = false;
                         contextMenuStrip_passer_supprimer.Items[1].Enabled = false;
+                        contextMenuStrip_passer_supprimer.Items[3].Enabled = false;
                     }
                     else
                     {
                         contextMenuStrip_passer_supprimer.Items[0].Enabled = true;
                         contextMenuStrip_passer_supprimer.Items[1].Enabled = true;
+                        contextMenuStrip_passer_supprimer.Items[3].Enabled = true;
+
                     }
                     return;
                 }
@@ -382,9 +390,17 @@ namespace gestion_cabinet_notarial
 
         private void aNNULERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            THEME.id_C = idc;
+            THEME.id_Client = idc;
             THEME.navigat(typeof(add_client));
-            THEME.id_C = 0;
+            THEME.id_Client = 0;
+        }
+
+        private void aNNULERToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var a = rv.FindById(id_r);
+            a.Timefin = "absence";
+            rv.SaveChanges();
+            change_clor_use_menu(Color.BurlyWood);
         }
     }
 }

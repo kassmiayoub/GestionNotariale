@@ -17,7 +17,7 @@ namespace gestion_cabinet_notarial
            // MessageBox.Show(this.Parent.Controls["MAINPANEL"].Name);
             PanelItems.Controls.Clear();
 
-            PanelItems.Controls.Add(new MainMenuItem(Resources.home, "Accueil", false, (se, ev) => THEME.navigat(typeof(Accueil))
+            PanelItems.Controls.Add(new MainMenuItem(Resources.home, "ACCUEIL", false, (se, ev) => THEME.navigat(typeof(Accueil))
 
             ));
             //PanelItems.Controls.Add(new MainMenuItem(Resources.Client, "client", true, null,
@@ -25,12 +25,12 @@ namespace gestion_cabinet_notarial
             //    new MainMenuItemSubItem("list client"/*, (se, ev) => Theme.Navigate(typeof(CTL_CLIENTS_LIST)), "ClientsList"*/) { Tag = "ClientsList" }
 
             //));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Client, "Client", true, null,
-               new MainMenuItemSubItem("Ajouter Client", (se, ev) => THEME.navigat(typeof(add_client))/*), "AddColleague"*/) { Tag = "Addclient" },
-               new MainMenuItemSubItem("List Client", (se, ev) => THEME.navigat(typeof(LIST_CLIENT))/*), "AddColleague"*/) { Tag = "Adddossier" }
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Client, "CLIENT", false, (se, ev) => THEME.navigat(typeof(add_client))
+            //new MainMenuItemSubItem("AJOUTER CLIENT", (se, ev) => THEME.navigat(typeof(add_client))/*), "AddColleague"*/) { Tag = "Addclient" },
+            // new MainMenuItemSubItem("List Client", (se, ev) => THEME.navigat(typeof(LIST_CLIENT))/*), "AddColleague"*/) { Tag = "Adddossier" }
             ));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Archive, "Dossier", true, null,
-                new MainMenuItemSubItem("Ajouter Dossier", (se, ev) => THEME.navigat(typeof(ADD_DOSSIER))/*), "AddColleague"*/) { Tag = "Adddossier" }
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Archive, "DOSSIER", false, (se, ev) => THEME.navigat(typeof(ADD_DOSSIER))
+                //new MainMenuItemSubItem("Ajouter Dossier", (se, ev) => THEME.navigat(typeof(ADD_DOSSIER))/*), "AddColleague"*/) { Tag = "Adddossier" }
                 //new MainMenuItemSubItem("list dossier"/*, (se, ev) => Theme.Navigate(typeof(CTL_COLLEAGUES_LIST)), "ColleaguesList"*/) { Tag = "ColleaguesList" }
             ));
             //PanelItems.Controls.Add(new MainMenuItem(Resources.Calendar, "Rendez-vous", true, null,
@@ -55,10 +55,10 @@ namespace gestion_cabinet_notarial
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Archive, "الأرشيـف", true, null,
             //    new MainMenuItemSubItem("إضافـة أرشيـف", (se, ev) => Theme.Navigate(typeof(CTL_ADD_ARCHIVE)), "AddArchive") { Tag = "AddArchive" },
             //    new MainMenuItemSubItem("قائمـة الأرشيفـات", (se, ev) => Theme.Navigate(typeof(CTL_ARCHIVES_LIST)), "ArchivesList") { Tag = "ArchivesList" }
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "Credit", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "renez-vous", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "CREDIT", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "RENDEZ-VOUS", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "Banque", false, (se, ev) => THEME.navigat(typeof(CTL_BANQUE))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "BANQUE", false, (se, ev) => THEME.navigat(typeof(CTL_BANQUE))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Note, "NOTE", false, (se, ev) => THEME.navigat(typeof(CTL_NOTE))));
 
 
@@ -83,9 +83,9 @@ namespace gestion_cabinet_notarial
             PanelItems.Controls.Add(new MainMenuItem(Resources.Settings, "PARAMETRE", true, null,
                 new MainMenuItemSubItem("LIST UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_LIST_UTILATUER))) { Tag = "Database" },
                 new MainMenuItemSubItem("AJOUTER UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER))) { Tag = "Categories" },
-                new MainMenuItemSubItem("MODIFIER MODE DE PASSE", (se, ev) => THEME.navigat(typeof(CTL_modifier_compte))) 
-            // new MainMenuItemSubItem("BASE DE DONNEE"/*, (se, ev) => Theme.Navigate(typeof(CTL_OFFICE_SETTINGS)), "OfficeInfo"*/) { Tag = "OfficeInfo" },
-            //  new MainMenuItemSubItem("LIST OPERATIONS"/*, (se, ev) => Theme.Navigate(typeof(CTL_ADD_USER)), "AddUser"*/) { Tag = "AddUser" }
+                new MainMenuItemSubItem("MODIFIER MODE DE PASSE", (se, ev) => THEME.navigat(typeof(CTL_modifier_compte))),
+                new MainMenuItemSubItem("BASE DE DONNEE", (se, ev) => THEME.navigat(typeof(CTL_DATABASE))) { Tag = "OfficeInfo" },
+                new MainMenuItemSubItem("LIST OPERATIONS", (se, ev) => THEME.navigat(typeof(CTL_LIST__operation))) { Tag = "AddUser" }
 
             ));
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Info, "عـن البرنامـج", false, (se, ev) => Theme.Navigate(typeof(CTL_ABOUT))));

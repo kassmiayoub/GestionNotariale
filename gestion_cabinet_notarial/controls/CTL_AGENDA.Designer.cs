@@ -37,18 +37,19 @@ namespace gestion_cabinet_notarial
             this.PanelDays = new System.Windows.Forms.FlowLayoutPanel();
             this.yers = new System.Windows.Forms.Label();
             this.bunifuDataGridView_list_times = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip_passer_supprimer = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pASSERCETTERENDEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sUPPRIMERCETTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aNNULERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox_description = new System.Windows.Forms.RichTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.bunifuDropdown_client_rendez = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.contextMenuStrip_passer_supprimer = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pASSERCETTERENDEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sUPPRIMERCETTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aNNULERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aNNULERToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox_description = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuDropdown_client_rendez = new System.Windows.Forms.ComboBox();
             this.ButtonAdd_rendez_vous = new System.Windows.Forms.Button();
             this.ButtonSerch_client = new System.Windows.Forms.Button();
             this.button_next_year = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@ namespace gestion_cabinet_notarial
             this.ButtonRefresh = new System.Windows.Forms.Button();
             this.ButtonNextMonth = new System.Windows.Forms.Button();
             this.ButtonPrevMonth = new System.Windows.Forms.Button();
-            this.aNNULERToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aNNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_times)).BeginInit();
             this.contextMenuStrip_passer_supprimer.SuspendLayout();
             this.SuspendLayout();
@@ -138,69 +139,6 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_times.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_times_CellClick);
             this.bunifuDataGridView_list_times.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bunifuDataGridView_list_times_MouseClick);
             // 
-            // contextMenuStrip_passer_supprimer
-            // 
-            this.contextMenuStrip_passer_supprimer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pASSERCETTERENDEToolStripMenuItem,
-            this.sUPPRIMERCETTEToolStripMenuItem,
-            this.aNNULERToolStripMenuItem,
-            this.aNNULERToolStripMenuItem1});
-            this.contextMenuStrip_passer_supprimer.Name = "contextMenuStrip_passer_supprimer";
-            this.contextMenuStrip_passer_supprimer.Size = new System.Drawing.Size(263, 114);
-            // 
-            // pASSERCETTERENDEToolStripMenuItem
-            // 
-            this.pASSERCETTERENDEToolStripMenuItem.Name = "pASSERCETTERENDEToolStripMenuItem";
-            this.pASSERCETTERENDEToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.pASSERCETTERENDEToolStripMenuItem.Text = "PASSER CETTE RENDIVEZ-VOUS";
-            this.pASSERCETTERENDEToolStripMenuItem.Click += new System.EventHandler(this.pASSERCETTERENDEToolStripMenuItem_Click);
-            // 
-            // sUPPRIMERCETTEToolStripMenuItem
-            // 
-            this.sUPPRIMERCETTEToolStripMenuItem.Name = "sUPPRIMERCETTEToolStripMenuItem";
-            this.sUPPRIMERCETTEToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.sUPPRIMERCETTEToolStripMenuItem.Text = "SUPPRIMER CETTE RENDIVEZ-VOUS";
-            this.sUPPRIMERCETTEToolStripMenuItem.Click += new System.EventHandler(this.sUPPRIMERCETTEToolStripMenuItem_Click);
-            // 
-            // aNNULERToolStripMenuItem
-            // 
-            this.aNNULERToolStripMenuItem.Name = "aNNULERToolStripMenuItem";
-            this.aNNULERToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.aNNULERToolStripMenuItem.Text = "DETAIL CETTE CLIENT";
-            this.aNNULERToolStripMenuItem.Click += new System.EventHandler(this.aNNULERToolStripMenuItem_Click);
-            // 
-            // richTextBox_description
-            // 
-            this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_description.Location = new System.Drawing.Point(191, 2);
-            this.richTextBox_description.Name = "richTextBox_description";
-            this.richTextBox_description.Size = new System.Drawing.Size(307, 96);
-            this.richTextBox_description.TabIndex = 469;
-            this.richTextBox_description.Text = "";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(13, 2);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 24);
-            this.label11.TabIndex = 479;
-            this.label11.Text = "DESCREPTION : ";
-            // 
-            // bunifuDropdown_client_rendez
-            // 
-            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown_client_rendez.FormattingEnabled = true;
-            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(593, 19);
-            this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
-            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 31);
-            this.bunifuDropdown_client_rendez.TabIndex = 480;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "08-10";
@@ -235,6 +173,77 @@ namespace gestion_cabinet_notarial
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // contextMenuStrip_passer_supprimer
+            // 
+            this.contextMenuStrip_passer_supprimer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pASSERCETTERENDEToolStripMenuItem,
+            this.sUPPRIMERCETTEToolStripMenuItem,
+            this.aNNULERToolStripMenuItem,
+            this.aNNULERToolStripMenuItem1,
+            this.aNNToolStripMenuItem});
+            this.contextMenuStrip_passer_supprimer.Name = "contextMenuStrip_passer_supprimer";
+            this.contextMenuStrip_passer_supprimer.Size = new System.Drawing.Size(263, 136);
+            // 
+            // pASSERCETTERENDEToolStripMenuItem
+            // 
+            this.pASSERCETTERENDEToolStripMenuItem.Name = "pASSERCETTERENDEToolStripMenuItem";
+            this.pASSERCETTERENDEToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.pASSERCETTERENDEToolStripMenuItem.Text = "PASSER CETTE RENDIVEZ-VOUS";
+            this.pASSERCETTERENDEToolStripMenuItem.Click += new System.EventHandler(this.pASSERCETTERENDEToolStripMenuItem_Click);
+            // 
+            // sUPPRIMERCETTEToolStripMenuItem
+            // 
+            this.sUPPRIMERCETTEToolStripMenuItem.Name = "sUPPRIMERCETTEToolStripMenuItem";
+            this.sUPPRIMERCETTEToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.sUPPRIMERCETTEToolStripMenuItem.Text = "SUPPRIMER CETTE RENDIVEZ-VOUS";
+            this.sUPPRIMERCETTEToolStripMenuItem.Click += new System.EventHandler(this.sUPPRIMERCETTEToolStripMenuItem_Click);
+            // 
+            // aNNULERToolStripMenuItem
+            // 
+            this.aNNULERToolStripMenuItem.Name = "aNNULERToolStripMenuItem";
+            this.aNNULERToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.aNNULERToolStripMenuItem.Text = "DETAIL CETTE CLIENT";
+            this.aNNULERToolStripMenuItem.Click += new System.EventHandler(this.aNNULERToolStripMenuItem_Click);
+            // 
+            // aNNULERToolStripMenuItem1
+            // 
+            this.aNNULERToolStripMenuItem1.Name = "aNNULERToolStripMenuItem1";
+            this.aNNULERToolStripMenuItem1.Size = new System.Drawing.Size(262, 22);
+            this.aNNULERToolStripMenuItem1.Text = "ABSENCE";
+            this.aNNULERToolStripMenuItem1.Click += new System.EventHandler(this.aNNULERToolStripMenuItem1_Click);
+            // 
+            // richTextBox_description
+            // 
+            this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_description.Location = new System.Drawing.Point(191, 2);
+            this.richTextBox_description.Name = "richTextBox_description";
+            this.richTextBox_description.Size = new System.Drawing.Size(307, 96);
+            this.richTextBox_description.TabIndex = 469;
+            this.richTextBox_description.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label11.Location = new System.Drawing.Point(13, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 24);
+            this.label11.TabIndex = 479;
+            this.label11.Text = "DESCREPTION : ";
+            // 
+            // bunifuDropdown_client_rendez
+            // 
+            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown_client_rendez.FormattingEnabled = true;
+            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(593, 19);
+            this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
+            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 31);
+            this.bunifuDropdown_client_rendez.TabIndex = 480;
             // 
             // ButtonAdd_rendez_vous
             // 
@@ -372,11 +381,11 @@ namespace gestion_cabinet_notarial
             this.ButtonPrevMonth.UseVisualStyleBackColor = false;
             this.ButtonPrevMonth.Click += new System.EventHandler(this.ButtonPrevMonth_Click);
             // 
-            // aNNULERToolStripMenuItem1
+            // aNNToolStripMenuItem
             // 
-            this.aNNULERToolStripMenuItem1.Name = "aNNULERToolStripMenuItem1";
-            this.aNNULERToolStripMenuItem1.Size = new System.Drawing.Size(262, 22);
-            this.aNNULERToolStripMenuItem1.Text = "ANNULER";
+            this.aNNToolStripMenuItem.Name = "aNNToolStripMenuItem";
+            this.aNNToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.aNNToolStripMenuItem.Text = "ANNULER";
             // 
             // CTL_AGENDA
             // 
@@ -436,5 +445,6 @@ namespace gestion_cabinet_notarial
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.ToolStripMenuItem aNNULERToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aNNToolStripMenuItem;
     }
 }

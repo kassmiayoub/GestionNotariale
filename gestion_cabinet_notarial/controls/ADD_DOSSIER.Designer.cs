@@ -479,6 +479,7 @@ namespace gestion_cabinet_notarial
             this.Name = "ADD_DOSSIER";
             this.Size = new System.Drawing.Size(1010, 617);
             this.Load += new System.EventHandler(this.ADD_DOSSIER_Load);
+            this.VisibleChanged += new System.EventHandler(this.ADD_DOSSIER_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

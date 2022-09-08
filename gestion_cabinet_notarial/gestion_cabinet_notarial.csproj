@@ -343,6 +343,7 @@
     <Compile Include="BL\cls_bl_contrat.cs" />
     <Compile Include="BL\cls_bl_credit.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
+    <Compile Include="BL\CLS_BL_LOG.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
     <Compile Include="BL\cls_bl_partes_S.cs" />
     <Compile Include="BL\cls_bl_payement.cs" />
@@ -471,6 +472,12 @@
     <Compile Include="controls\CTL_BANQUE.Designer.cs">
       <DependentUpon>CTL_BANQUE.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\CTL_DATABASE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_DATABASE.Designer.cs">
+      <DependentUpon>CTL_DATABASE.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\CTL_DAY_ITEM.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -482,6 +489,12 @@
     </Compile>
     <Compile Include="controls\CTL_LIST_UTILATUER.Designer.cs">
       <DependentUpon>CTL_LIST_UTILATUER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_LIST__operation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_LIST__operation.Designer.cs">
+      <DependentUpon>CTL_LIST__operation.cs</DependentUpon>
     </Compile>
     <Compile Include="controls\CTL_modifier_compte.cs">
       <SubType>UserControl</SubType>
@@ -543,6 +556,7 @@
     <Compile Include="controls\detail_dossier.Designer.cs">
       <DependentUpon>detail_dossier.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATABASE.cs" />
     <Compile Include="form_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -629,11 +643,17 @@
     <EmbeddedResource Include="controls\CTL_BANQUE.resx">
       <DependentUpon>CTL_BANQUE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_DATABASE.resx">
+      <DependentUpon>CTL_DATABASE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_DAY_ITEM.resx">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_LIST_UTILATUER.resx">
       <DependentUpon>CTL_LIST_UTILATUER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_LIST__operation.resx">
+      <DependentUpon>CTL_LIST__operation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_modifier_compte.resx">
       <DependentUpon>CTL_modifier_compte.cs</DependentUpon>

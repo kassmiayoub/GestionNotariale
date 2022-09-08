@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_main));
             this.MAINPANEL = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
             this.mainMenu1 = new gestion_cabinet_notarial.MainMenu();
             this.controL_MAIN_HEADER1 = new Avocat_Maroc.PL.CONTROL_MAIN_HEADER();
-            this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,9 +43,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MAINPANEL.BackColor = System.Drawing.Color.White;
-            this.MAINPANEL.Location = new System.Drawing.Point(242, 204);
+            this.MAINPANEL.Location = new System.Drawing.Point(258, 204);
             this.MAINPANEL.Name = "MAINPANEL";
-            this.MAINPANEL.Size = new System.Drawing.Size(1006, 587);
+            this.MAINPANEL.Size = new System.Drawing.Size(990, 587);
             this.MAINPANEL.TabIndex = 5;
             // 
             // bunifuPanel1
@@ -65,6 +65,15 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1239, 50);
             this.bunifuPanel1.TabIndex = 7;
             // 
+            // controL_CONTROL_BOX1
+            // 
+            this.controL_CONTROL_BOX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
+            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(1157, 5);
+            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
+            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(75, 32);
+            this.controL_CONTROL_BOX1.TabIndex = 1;
+            // 
             // mainMenu1
             // 
             this.mainMenu1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -73,7 +82,7 @@
             this.mainMenu1.Location = new System.Drawing.Point(9, 163);
             this.mainMenu1.Margin = new System.Windows.Forms.Padding(0);
             this.mainMenu1.Name = "mainMenu1";
-            this.mainMenu1.Size = new System.Drawing.Size(237, 627);
+            this.mainMenu1.Size = new System.Drawing.Size(254, 627);
             this.mainMenu1.TabIndex = 6;
             // 
             // controL_MAIN_HEADER1
@@ -85,15 +94,6 @@
             this.controL_MAIN_HEADER1.Name = "controL_MAIN_HEADER1";
             this.controL_MAIN_HEADER1.Size = new System.Drawing.Size(1239, 163);
             this.controL_MAIN_HEADER1.TabIndex = 4;
-            // 
-            // controL_CONTROL_BOX1
-            // 
-            this.controL_CONTROL_BOX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(1157, 5);
-            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
-            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(75, 32);
-            this.controL_CONTROL_BOX1.TabIndex = 1;
             // 
             // form_main
             // 
