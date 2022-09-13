@@ -50,6 +50,7 @@ namespace gestion_cabinet_notarial
         public static CTL_modifier_compte CTL_modifier_compte { get; set; }        
         public static CTL_DATABASE CTL_DATABASE { get; set; }
         public static CTL_LIST__operation CTL_LIST__operation { get; set; }
+        public static nouveau_credit nouveau_credit { get; set; }
         public static List<Control> ControlsList { get; set; } = new List<Control>();
         public static List<string> fonctionnalete { get; set; } = new List<string>();
         private static void AddControlToPanel()
@@ -65,6 +66,7 @@ namespace gestion_cabinet_notarial
         public static void AddControlsToList()
         {
             ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(nouveau_credit);
             ControlsList.Add(CTL_LIST__operation);
             ControlsList.Add(CTL_DATABASE);
             ControlsList.Add(CTL_modifier_compte);
@@ -83,6 +85,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            nouveau_credit = new nouveau_credit() { Visible = false };
             CTL_LIST__operation = new CTL_LIST__operation() { Visible = false };
             CTL_DATABASE = new CTL_DATABASE() { Visible = false };
             CTL_modifier_compte = new CTL_modifier_compte() { Visible = false };

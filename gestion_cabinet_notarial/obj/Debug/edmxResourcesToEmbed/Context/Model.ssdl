@@ -20,6 +20,8 @@
     <Property Name="idbanque" Type="int" />
     <Property Name="idClient" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="INTIERET" Type="float" />
+    <Property Name="PAYE_PAR_MOIS" Type="float" />
   </EntityType>
   <EntityType Name="CDG">
     <Key>

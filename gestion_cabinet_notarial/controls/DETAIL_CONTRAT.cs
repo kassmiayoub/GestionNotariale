@@ -86,6 +86,7 @@ namespace gestion_cabinet_notarial
             p = Signature.FindByValues(ele => ele.idpatres == parte && ele.idcontrat == THEME.id_C).First();
             p.DateSignatur = Convert.ToDateTime(bunifuDatePicker_date_s.Text);
             Signature.SaveChanges();
+            THEME.operation($"AJOUTER UN SIGNATURE DE CONTRAT ID = {THEME.id_C}");
             bunifuDatePicker_date_s.Enabled = false;
             buttonadd_date_s.Enabled=false;
         }
@@ -94,7 +95,7 @@ namespace gestion_cabinet_notarial
         {
            bunifuTextBox_MONTANT.Enabled = false;        
            bunifuPages1.SetPage(payeclient);
-            var ListDataSource = new cls_bl_payement().GetAll().Where(x => x.idcontrat == THEME.id_C).Select(ele => new payeme()
+            var ListDataSource = new cls_bl_payement().GetAll().Where(x => x.idcontrat == THEME.id_C && x.type =="charge").Select(ele => new payeme()
             {
                 CLIENT = $"{ele.client.Nom} {ele.client.Prenom}",
                 TYPECHARGE = ele.typecharge,
@@ -119,7 +120,8 @@ namespace gestion_cabinet_notarial
             bunifuPages1.SetPage(fichierjoint);
         }
         private void STATISTIC_CONTRAT_Click(object sender, EventArgs e)
-        {           
+        {
+            MessageBox.Show(THEME.prix.ToString());
             bunifuPages1.SetPage(statistic);
             var list = new List<statis>();
             list = paye.FindByValues(ele => ele.idcontrat == THEME.id_C).GroupBy(ele => ele.typecharge).OrderBy(ele => ele.Key).Select(ele => new statis()
@@ -208,6 +210,7 @@ namespace gestion_cabinet_notarial
             else
                 p.type_Payement = "ESPECES";
             paye.Add(p);
+            THEME.operation($"AJOUTER UN PAYEMENT DE CONTRAT ID = {THEME.id_C}");
         }
 
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
@@ -239,7 +242,6 @@ namespace gestion_cabinet_notarial
                 }
             }
         }
-
         private void buttonserche_file_Click(object sender, EventArgs e)
         {
             var files = cont.GetAll().Select(ele => new filee()
@@ -255,8 +257,8 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_fichier_contart.DataSource = files;
             THEME.add_btn_to_datagrid(bunifuDataGridView_fichier_contart, "sipprision", "supprimer", 4);
             THEME.add_btn_to_datagrid(bunifuDataGridView_fichier_contart, "affichage", "affichier", 5);
+            THEME.operation($"CHERCHER SUR LE FICHIER DE CONTRAT ID = {THEME.id_C}");
         }
-
         private void bunifuDataGridView_fichier_contart_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
@@ -266,6 +268,8 @@ namespace gestion_cabinet_notarial
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {                   
                     Process.Start(path);
+                    THEME.operation($"AFFICHAGE FICHIER DE CONTRAT ID = {THEME.id_C} ET LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
+
                 }
                 else
                 {
@@ -277,6 +281,7 @@ namespace gestion_cabinet_notarial
                             File.Delete(path);
                         cont.Remove(cont.FindById(idfile));
                         cont.SaveChanges();
+                        THEME.operation($"SUPRIMMER FICHIER DE CONTRAT ID = {THEME.id_C} ET LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
                     }
                 }
             }
@@ -308,6 +313,7 @@ namespace gestion_cabinet_notarial
             if (this.Visible == true)
             {
                 STATISTIC_CONTRAT.PerformClick();
+                THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
                 //PARTES_OF_CONTRAT.PerformClick();
                 //PAYEMENTCLIENT_CONTRAT.PerformClick();
                 //FICHIERJOINT_CONTRAT.PerformClick();

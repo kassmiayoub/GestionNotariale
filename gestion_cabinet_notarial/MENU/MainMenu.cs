@@ -55,7 +55,11 @@ namespace gestion_cabinet_notarial
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Archive, "الأرشيـف", true, null,
             //    new MainMenuItemSubItem("إضافـة أرشيـف", (se, ev) => Theme.Navigate(typeof(CTL_ADD_ARCHIVE)), "AddArchive") { Tag = "AddArchive" },
             //    new MainMenuItemSubItem("قائمـة الأرشيفـات", (se, ev) => Theme.Navigate(typeof(CTL_ARCHIVES_LIST)), "ArchivesList") { Tag = "ArchivesList" }
-            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "CREDIT", false, (se, ev) => THEME.navigat(typeof(CTL_CREDIT))));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "CREDIT", true, null,
+                new MainMenuItemSubItem("NOUVAEU CREDIT", (se, ev) => THEME.navigat(typeof(nouveau_credit))),
+                new MainMenuItemSubItem("PAYEMENT CREDIT", (se, ev) => THEME.navigat(typeof(CTL_CREDIT)))             
+
+            ));
             PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "RENDEZ-VOUS", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "BANQUE", false, (se, ev) => THEME.navigat(typeof(CTL_BANQUE))));

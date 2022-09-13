@@ -16,6 +16,7 @@ namespace gestion_cabinet_notarial
     {
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_payement paye = new cls_bl_payement();
+        cls_bl_partes_S parte_S = new cls_bl_partes_S();
 
         string type_contrat;
         public contrat(string type_contrat)
@@ -42,7 +43,7 @@ namespace gestion_cabinet_notarial
             c.typecontrat = label12.Text;
             c.Timbres = double.Parse(bunifuTextBoxtmbr.Text);
             c.numdossier = THEME.numdossier;
-            MessageBox.Show(THEME.prix.ToString());
+          //  MessageBox.Show(THEME.prix.ToString());
             if (bunifuCheckBoxhonoraire.Checked)
             {
                 c.Honoraires = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox_porsontage"].Text)*THEME.prix)/100;
@@ -67,7 +68,18 @@ namespace gestion_cabinet_notarial
             {
                 c.Ancfcc = double.Parse(bunifuTextBoxAncfcc.Text);
             }
-            con.Add(c);
+           // con.Add(c);
+            int idcontrat = con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;           
+            List<Signature> list = new List<Signature>();
+            var partes =  new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new {x.Idpartes}).ToList();
+            partes.ForEach(x => {
+                var s = new gestion_cabinet_notarial.context.Signature();
+                s.idpatres = x.Idpartes;
+                s.DateSignatur = null;
+                s.idcontrat = idcontrat;
+                list.Add(s);
+                });
+            parte_S.AddRange(list);
             //DataGridView dgv = (DataGridView)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
             //dgv.Refresh();
             //var p = new payement();
@@ -84,6 +96,8 @@ namespace gestion_cabinet_notarial
             //    p.type_Payement = "ESPECES";
             //paye.Add(p);
             MessageBox.Show("ajouter avec succes");
+          //  THEME.operation($"AJOUER UN CONTRAT POUR DOSSIER NUMERENT {THEME.numdossier} ET LE TYPE EST {label12.Text}");
+
             this.Close();
         }
 

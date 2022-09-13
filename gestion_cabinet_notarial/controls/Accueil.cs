@@ -33,6 +33,8 @@ namespace gestion_cabinet_notarial
                 label_dossiere_encours.Text = (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == null).Count()).ToString();
                 label_dossier_passer.Text= (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == DateTime.Now).Count()).ToString();
                 label_contart.Text = con.FindByValues(ele => ele.dateouverture == DateTime.Now).Count().ToString();
+                var documents = Signature.GetAll().Where(condition => condition.DateSignatur == null).ToList();
+                label_contrat_pas_signature.Text = documents.GroupBy(x => x.idcontrat).Select(g => g.First()).Count().ToString();
                 Listdossier = cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == null).Select(ele => new dossierSerche()
                 {
                     N_DOSSIER = ele.Numdossier,
@@ -104,6 +106,7 @@ namespace gestion_cabinet_notarial
                     if (contrat_or_dossier == "contart")
                     {
                         THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
+                        THEME.prix = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).Select(s => s.dossier.PRIX_ACQUISITION).First().Value;
                         THEME.navigat(typeof(DETAIL_CONTRAT));
                     }
                     else
@@ -117,7 +120,7 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuPanelcontrat_non_signature_Click(object sender, EventArgs e)
         {
-            bunifuDataGridView_accueil.DataSource = Signature.GetAll().Where(condition => condition.DateSignatur == null).Select(ele => new contart()
+            bunifuDataGridView_accueil.DataSource = Signature.GetAll().Where(condition => condition.DateSignatur == null).GroupBy(x => x.idcontrat).Select(g => g.First()).Select(ele => new contart()
             {
                 IDCONTART = ele.contrat.Idcontrat,
                 TYPECONTRAT = ele.contrat.typecontrat,

@@ -106,3 +106,6 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestio
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_modifier_compte.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_DATABASE.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_LIST__operation.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.nouveau_credit.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\bin\Debug\FluentValidation.xml
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\bin\Debug\System.Threading.Tasks.Extensions.xml

@@ -13,6 +13,8 @@
     <EntitySetMapping Name="Banque_pret">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.Banque_pret">
         <MappingFragment StoreEntitySet="Banque_pret">
+          <ScalarProperty Name="PAYE_PAR_MOIS" ColumnName="PAYE_PAR_MOIS" />
+          <ScalarProperty Name="INTIERET" ColumnName="INTIERET" />
           <ScalarProperty Name="Idpret" ColumnName="Idpret" />
           <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
           <ScalarProperty Name="Montant" ColumnName="Montant" />

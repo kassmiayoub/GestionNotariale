@@ -27,6 +27,8 @@
     <NavigationProperty Name="client" Relationship="Self.FK__Banque_pr__idCli__5BE2A6F2" FromRole="Banque_pret" ToRole="client" />
     <NavigationProperty Name="contrat" Relationship="Self.FK__Banque_pr__idcon__59FA5E80" FromRole="Banque_pret" ToRole="contrat" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__Banque_pr__utili__5CD6CB2B" FromRole="Banque_pret" ToRole="utilisateur" />
+    <Property Name="INTIERET" Type="Double" />
+    <Property Name="PAYE_PAR_MOIS" Type="Double" />
   </EntityType>
   <EntityType Name="CDG">
     <Key>

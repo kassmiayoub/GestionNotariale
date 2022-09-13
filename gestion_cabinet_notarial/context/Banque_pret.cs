@@ -22,6 +22,8 @@ namespace gestion_cabinet_notarial.context
         public Nullable<int> idbanque { get; set; }
         public Nullable<int> idClient { get; set; }
         public string utilisateur { get; set; }
+        public Nullable<double> INTIERET { get; set; }
+        public Nullable<double> PAYE_PAR_MOIS { get; set; }
     
         public virtual banque banque { get; set; }
         public virtual client client { get; set; }

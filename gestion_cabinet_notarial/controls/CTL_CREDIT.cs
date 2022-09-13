@@ -24,15 +24,6 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-        private void ButtonSerch_client_Click(object sender, EventArgs e)
-        {
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
-            THEME.T = this.GetType();
-            THEME.navigat(typeof(add_client));
-            THEME.client_or_dossier = (ComboBox)this.Controls["comboBox_client_credit"];
-            
-        }
         private void CTL_CREDIT_Load(object sender, EventArgs e)
         {
             var ListDataSource1 = new cls_bl_banque().GetAll().Where(x => x.Idbanque != 3).ToList();
@@ -45,35 +36,26 @@ namespace gestion_cabinet_notarial
                 IDCIENT = ele.idClient,
                 nomcomplet = ele.Nom + " " + ele.Prenom
             }).ToList();
-            comboBox_client_credit.DataSource=ListDataSource;
-            comboBox_client_credit.DisplayMember = "NOMCOMPLET";
-            comboBox_client_credit.ValueMember = "IDCIENT";
             ListDataSource = ListDataSource.Where(r => BL_credit.Any(c => c.idClient == r.IDCIENT)).ToList() as List<clien>;
-            comboBoxCLIENT_PY.DataSource=ListDataSource;
+            
             comboBoxCLIENT_PY.DisplayMember = "NOMCOMPLET";
             comboBoxCLIENT_PY.ValueMember = "IDCIENT";
+            comboBoxCLIENT_PY.DataSource = ListDataSource;
             var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new {t = r.contrat.typecontrat, id =r.idcontrat }).ToList();
-            comboBox_contart_paye.DataSource = contrat_credit;
+            
             comboBox_contart_paye.DisplayMember = "t";
             comboBox_contart_paye.ValueMember = "id";
-            var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
-            comboBox_dossier_credit.DataSource = dossier;
-            comboBox_dossier_credit.DisplayMember = "Num";
-            comboBox_dossier_credit.ValueMember = "Num";
-            var dossier_filtrage = con.GetAll().Where(ele => ele.dossier.Numdossier == comboBox_dossier_credit.SelectedValue.ToString()).Select(el => new { t = el.typecontrat, id = el.Idcontrat }).ToList();
-            comboBox_contrat_credit.DataSource = dossier_filtrage;
-            comboBox_contrat_credit.DisplayMember = "t";
-            comboBox_contrat_credit.ValueMember = "id";
+            comboBox_contart_paye.DataSource = contrat_credit;
 
         }
         private void button2_Click(object sender, EventArgs e)
         {
             THEME.credit = true;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
+            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;   
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
-            THEME.T = this.GetType();           
+            THEME.T = this.GetType();             
+            THEME.navigat(typeof(add_client));
             THEME.client_or_dossier = (ComboBox)this.Controls["comboBoxCLIENT_PY"];
-            THEME.navigat(typeof(add_client));         
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
@@ -83,69 +65,35 @@ namespace gestion_cabinet_notarial
             p.Montant = double.Parse(bunifuTextBox_MONTANT.Text);
             p.Date = bunifuDatePicker_PAYMENT.Value;            
             p.type = "credit";
-            p.idcontrat = comboBox_contrat_credit.SelectedIndex;
+            p.idcontrat = int.Parse(comboBox_contart_paye.SelectedValue.ToString());
             if (!RD_ESPECES.Checked)
                 p.type_Payement = RDCHEQUE.Checked ? "CHEQUE" : "VERMENT";
             else
                 p.type_Payement = "ESPECES";
             paye.Add(p);
         }
-
         private void comboBoxCLIENT_PY_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new { t = r.contrat.typecontrat, id = r.idcontrat }).ToList();
-            comboBox_contart_paye.DataSource = contrat_credit;
+            var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new { t = r.contrat.typecontrat, id = r.idcontrat }).ToList();            
             comboBox_contart_paye.DisplayMember = "t";
             comboBox_contart_paye.ValueMember = "id";
-        }
+            comboBox_contart_paye.DataSource = contrat_credit;
+            bunifuDataGridViewlist_paye_credit.DataSource = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idClient,NomCoplete = s.client.Nom +" "+ s.client.Prenom, s.contrat.numdossier,s.contrat.typecontrat,s.Montant,s.Date}).ToList();
 
+        }
         private void comboBox_contart_paye_SelectedIndexChanged(object sender, EventArgs e)
         {
-            idcontrat.Text = comboBox_contart_paye.SelectedValue.ToString();
-            var montant_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.idcontrat == int.Parse(idcontrat.Text)).First();
-            bunifuTextBox_MONTANT.Text = montant_credit.montant.ToString();
+            int a = int.Parse(comboBox_contart_paye.SelectedValue.ToString());
+            var montant_credit = BL_credit.FindByValues(v => v.idcontrat == a).First();
+            double montant_credit_paye = paye.GetAll().Where(ele => ele.contrat.Idcontrat == a && ele.type== "credit").Sum(ele => ele.Montant).Value;
+            bunifuTextBox_MONTANT.Text = (montant_credit.montant-montant_credit_paye).ToString();
         }
-
-        private void buttonserche_dossier_Click(object sender, EventArgs e)
+        private void RD_ESPECES_CheckedChanged(object sender, EventArgs e)
         {
-            ((Button)this.Parent.Controls["ADD_DOSSIER"].Controls["ButtonEdit_dossier"]).Enabled = false;
-            ((Button)this.Parent.Controls["ADD_DOSSIER"].Controls["button_detail_dossier"]).Enabled = false;
-            ((Button)this.Parent.Controls["ADD_DOSSIER"].Controls["ButtonAdd_dossier"]).Enabled = false;
-            THEME.T = this.GetType();
-            THEME.navigat(typeof(ADD_DOSSIER));
-            THEME.client_or_dossier = (ComboBox)this.Controls["comboBox_dossier_credit"];           
-        }
-        private void comboBox_dossier_credit_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dossier_filtrage = con.GetAll().Where(ele => ele.dossier.Numdossier == comboBox_dossier_credit.SelectedValue.ToString()).Select(el => new {t= el.typecontrat,id=el.Idcontrat}).ToList();
-            comboBox_contrat_credit.DataSource = dossier_filtrage;
-            comboBox_contrat_credit.DisplayMember = "t";
-            comboBox_contrat_credit.ValueMember = "id";
-            if(dossier_filtrage.Count == 0)
-            {
-                comboBox_contrat_credit.Text = "";
-                bunifuTextBox_montant_credit.Text = "";
-                idc.Text = "";
-            }            
-        }
-        private void button_add_credit_Click(object sender, EventArgs e)
-        {
-            var credit = new credit();
-            credit.idClient = (int)comboBox_client_credit.SelectedValue;
-            credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;
-            credit.montant = double.Parse(bunifuTextBox_montant_credit.Text);
-            BL_credit.Add(credit);
-        }
-        private void comboBox_contrat_credit_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-            idc.Text = comboBox_contrat_credit.SelectedValue.ToString();
-            double ListDataSource = new cls_bl_payement().GetAll().Where(x => x.idcontrat == int.Parse(idc.Text)).Sum(ele => ele.Montant).Value;
-            var cont = con.FindById(int.Parse(idc.Text));
-            double Ancfcc = (double)cont.Ancfcc;
-            double Enregistrement = (double)cont.Enregistrement;
-            double Honoraires = (double)cont.Honoraires;
-            double Timbres = (double)cont.Timbres;
-            bunifuTextBox_montant_credit.Text = ((Ancfcc+ Enregistrement+ Honoraires+ Timbres)- ListDataSource).ToString();
+            if (RD_ESPECES.Checked)
+                comboBox_banque_PY.Enabled = false;
+            else
+                comboBox_banque_PY.Enabled = true; 
         }
     }
     public class clien

@@ -34,6 +34,7 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packag
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.xml
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\FluentValidation.11.2.2\lib\netstandard2.0\FluentValidation.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\Microsoft.Win32.Registry.AccessControl.6.0.0\lib\net461\Microsoft.Win32.Registry.AccessControl.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\Microsoft.Win32.SystemEvents.6.0.0\lib\net461\Microsoft.Win32.SystemEvents.xml
@@ -65,3 +66,4 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packag
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\System.ServiceProcess.ServiceController.6.0.0\lib\net461\System.ServiceProcess.ServiceController.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.xml
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.xml

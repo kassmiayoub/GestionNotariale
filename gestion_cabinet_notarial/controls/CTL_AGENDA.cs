@@ -273,6 +273,7 @@ namespace gestion_cabinet_notarial
             }
             tm.Clear();
             rv.AddRange(redvs);
+            THEME.operation($"AJOUTER UN RENDEZ-VOUS POUR CLIENT ID {bunifuDropdown_client_rendez.SelectedValue}");
         }
 
         private void bunifuDataGridView_list_times_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -367,8 +368,7 @@ namespace gestion_cabinet_notarial
 
                     }
                     return;
-                }
-               
+                }               
             }
         }
 
@@ -378,16 +378,17 @@ namespace gestion_cabinet_notarial
             a.Timefin = "passer";
             rv.SaveChanges();
             change_clor_use_menu(Color.Gray);
+            THEME.operation($"PASSER UN RENDEZ-VOUS ID {id_r}");
         }
-
         private void sUPPRIMERCETTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var a = rv.FindById(id_r);
             rv.Remove(a);
             rv.SaveChanges();
             change_clor_use_menu(Color.Green);
-        }
+            THEME.operation($"SUPRIMER UN RENDEZ-VOUS ID {id_r}");
 
+        }
         private void aNNULERToolStripMenuItem_Click(object sender, EventArgs e)
         {
             THEME.id_Client = idc;
@@ -401,6 +402,7 @@ namespace gestion_cabinet_notarial
             a.Timefin = "absence";
             rv.SaveChanges();
             change_clor_use_menu(Color.BurlyWood);
+            THEME.operation($"AJOUTR UN RENDEZ-VOUS COMME ABSENCE ID {id_r}");
         }
     }
 }

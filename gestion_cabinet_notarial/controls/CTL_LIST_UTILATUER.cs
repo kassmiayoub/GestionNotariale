@@ -37,6 +37,8 @@ namespace gestion_cabinet_notarial.controls
                ListDataSource.Where(ele => ele.PRENOM.ToString() == bunifuTextBox_PRENOM.Text).ToList() :
                ListDataSource;
             bunifuDataGridView_list_utilisatuer.DataSource = ListDataSource;
+            THEME.operation($"CHERCHE UN UTILISATEUR");
+
         }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {

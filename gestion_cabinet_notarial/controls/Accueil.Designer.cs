@@ -46,7 +46,7 @@
             this.label_contart = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuPanelcontrat_non_signature = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_contrat_pas_signature = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel_dossiers_passer.SuspendLayout();
@@ -282,7 +282,7 @@
             this.bunifuPanelcontrat_non_signature.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.bunifuPanelcontrat_non_signature.BorderRadius = 5;
             this.bunifuPanelcontrat_non_signature.BorderThickness = 3;
-            this.bunifuPanelcontrat_non_signature.Controls.Add(this.label1);
+            this.bunifuPanelcontrat_non_signature.Controls.Add(this.label_contrat_pas_signature);
             this.bunifuPanelcontrat_non_signature.Controls.Add(this.label3);
             this.bunifuPanelcontrat_non_signature.Location = new System.Drawing.Point(334, 21);
             this.bunifuPanelcontrat_non_signature.Name = "bunifuPanelcontrat_non_signature";
@@ -291,17 +291,17 @@
             this.bunifuPanelcontrat_non_signature.TabIndex = 9;
             this.bunifuPanelcontrat_non_signature.Click += new System.EventHandler(this.bunifuPanelcontrat_non_signature_Click);
             // 
-            // label1
+            // label_contrat_pas_signature
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(125, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "7";
+            this.label_contrat_pas_signature.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_contrat_pas_signature.AutoSize = true;
+            this.label_contrat_pas_signature.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_contrat_pas_signature.ForeColor = System.Drawing.Color.Teal;
+            this.label_contrat_pas_signature.Location = new System.Drawing.Point(125, 69);
+            this.label_contrat_pas_signature.Name = "label_contrat_pas_signature";
+            this.label_contrat_pas_signature.Size = new System.Drawing.Size(29, 31);
+            this.label_contrat_pas_signature.TabIndex = 1;
+            this.label_contrat_pas_signature.Text = "7";
             // 
             // label3
             // 
@@ -359,7 +359,7 @@
         private System.Windows.Forms.Label label_contart;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanelcontrat_non_signature;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_contrat_pas_signature;
         private System.Windows.Forms.Label label3;
     }
 }

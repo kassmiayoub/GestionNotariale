@@ -30,5 +30,10 @@ namespace Avocat_Maroc.PL
             //    //THEME.Theme.Navigate(typeof(CTL_LOGIN));
             //}
         }
+
+        private void CONTROL_MAIN_HEADER_Load(object sender, EventArgs e)
+        {
+          //  LabelOfficeName.Text = 
+        }
     }
 }

@@ -42,6 +42,8 @@ namespace gestion_cabinet_notarial.controls
             A.Prenom = bunifuTextBox_PRENOM.Text;
             A.utilisateur1 = bunifuTextBox_USER.Text;
             user.SaveChanges();
+            THEME.operation($"MODIFIER COMPTE CETTE UTILISATEUR");
+
         }
         private void ButtonInit_Click(object sender, EventArgs e)
         {

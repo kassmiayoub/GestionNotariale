@@ -41,6 +41,7 @@ namespace gestion_cabinet_notarial.controls
                 note.date_alere = Convert.ToDateTime(bunifuDatePicker_date_alert.Value);
             cLS_NOTE.Add(note);
             richTextBox_text.Text = "";
+            THEME.operation($"AJOUTER UN NOTE");
         }
         private void Button_vider_note_Click(object sender, EventArgs e)
         {

@@ -44,10 +44,11 @@ namespace gestion_cabinet_notarial.controls
 
         private void ButtonSearch_operation_Click(object sender, EventArgs e)
         {
-            var A = LOG.GetAll().Where(ele => ele.utilisateur == bunifuDropdown_users.SelectedValue.ToString()); 
+            string user_log = bunifuDropdown_users.SelectedValue.ToString();
+            var A = LOG.GetAll().Where(ele => ele.utilisateur == user_log).ToList(); 
             if (checkBox_filter.Checked)
             {
-              A = A.Where(ele => ele.Date >= Convert.ToDateTime(bunifuDatePicker_D.Value) && ele.Date <= Convert.ToDateTime(bunifuDatePicker_F.Value));
+              A = A.Where(ele => ele.Date >= Convert.ToDateTime(bunifuDatePicker_D.Value) && ele.Date <= Convert.ToDateTime(bunifuDatePicker_F.Value)).ToList();
             }
             bunifuDataGridView_list_operation.DataSource = A;
         }

@@ -21,6 +21,8 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {
+            if (textBox_N_dossier.Text == "")
+                return;
             var a = new dossier();
             a.Numdossier = textBox_N_dossier.Text;
             a.dateouverture = Convert.ToDateTime(bunifuDatePicker_dubet.Text);
@@ -33,8 +35,8 @@ namespace gestion_cabinet_notarial
             else
                 a.Datefermeture = null;
             cls_Bl_Dossier.Add(a);
+            THEME.operation($"AJOUTER DOSSIER NUMERANT = {textBox_N_dossier.Text}");
         }
-
         private void ButtonSearch_dossier_Click(object sender, EventArgs e)
         {
             var ListDataSource = new List<dossierSerche>();
@@ -70,6 +72,7 @@ namespace gestion_cabinet_notarial
                 ListDataSource = ListDataSource.Where(r => r.DATE_F == null).ToList();
             }
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
+            THEME.operation($"CHERCHER DOSSIERS");
         }
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -96,26 +99,23 @@ namespace gestion_cabinet_notarial
                 ButtonEdit_dossier .Enabled = true;
             }
         }
-
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             THEME.vider(this);
         }
-
         private void button_detail_dossier_Click(object sender, EventArgs e)
-        {
-            THEME.numdossier = textBox_N_dossier.Text;
-            if (textBox_prix.Text == "")
+        {           
+            if (textBox_prix.Text == "" || textBox_N_dossier.Text == "")
                 return;
+            THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");
+            THEME.numdossier = textBox_N_dossier.Text;
             THEME.prix = double.Parse(textBox_prix.Text);
             THEME.navigat(typeof(detail_dossier));
         }
-
         private void ADD_DOSSIER_Load(object sender, EventArgs e)
         {
             bunifuDatePicker_fin.Enabled = false;
         }
-
         private void bunifuCheckBox_status_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if(bunifuCheckBox_status.Checked)
@@ -123,17 +123,21 @@ namespace gestion_cabinet_notarial
             else
                 bunifuDatePicker_fin.Enabled = false;
         }
-
         private void ButtonEdit_dossier_Click(object sender, EventArgs e)
         {
-           dossier d= (dossier)cls_Bl_Dossier.FindByValues(v => v.Numdossier == textBox_N_dossier.Text);
+            if (textBox_N_dossier.Text == "")
+            {
+                MessageBox.Show("ENTRE NUMERENT DE DOSSIER");
+                return;
+            }                
+            dossier d= (dossier)cls_Bl_Dossier.FindByValues(v => v.Numdossier == textBox_N_dossier.Text);
             if(bunifuCheckBox_status.Checked)
                 d.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Value);
             else
                 return;
             cls_Bl_Dossier.SaveChanges();
+            THEME.operation($"MODIFIER DATE DE DOSSIER NUMERENT = {textBox_N_dossier.Text} POUR FIRMER");
         }
-
         private void ADD_DOSSIER_VisibleChanged(object sender, EventArgs e)
         {
             var ListDataSource = new List<dossierSerche>();
@@ -147,6 +151,8 @@ namespace gestion_cabinet_notarial
                 PRIX = ele.PRIX_ACQUISITION.ToString()
             }).ToList();
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
+            if(this.Visible)
+                THEME.operation($"COSULTER DES DOSSIERS");
         }
     }
     public class dossierSerche

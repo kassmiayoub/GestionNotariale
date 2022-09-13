@@ -12,6 +12,8 @@ using Bunifu.UI.WinForms.BunifuButton;
 using gestion_cabinet_notarial.context;
 using System.Diagnostics;
 using System.IO;
+using gestion_cabinet_notarial.Validators;
+using FluentValidation.Results;
 
 namespace gestion_cabinet_notarial
 {
@@ -67,16 +69,28 @@ namespace gestion_cabinet_notarial
             a.Email = textBoxemail.Text;
             a.Fax = textBox_fax.Text;
             a.Tele = textBoxtel.Text;
+            string op = "";
             if (comboBoxtype_client.Text == "normal")
             {
+                op = "NORMAL CIN EST " + textBoxCIN.Text;
                 a.ClientNormale = new ClientNormale() { CIN = textBoxCIN.Text };
             }
             else if (comboBoxtype_client.Text == "profisionnel")
             {
+                op = "PROFISIONNEL ICE EST " + textBoxCIN.Text;
                 a.ClientProfessionnel = new ClientProfessionnel() { ICE = textBoxCIN.Text };
                 a.ClientProfessionnel = new ClientProfessionnel() { IdentifiantFiscale = textBoxIF.Text };
             }
+            clientValidator validationRules = new clientValidator();
+            ValidationResult validationResult = validationRules.Validate(a);
+            IList<ValidationFailure> errors = validationResult.Errors;
+            if (!validationResult.IsValid)
+            {
+                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             cls.Add(a);
+            THEME.operation($"AJOUTER UN CLIENT {op}");
             MessageBox.Show("client ajouter avec succes");
         }
         private void comboBoxtype_client_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -127,6 +141,8 @@ namespace gestion_cabinet_notarial
             }
             A.path = name_of_file;
             cSL_BL_FICHIER_CLIENT.Add(A);
+            THEME.operation($"AJOUTER UN FICHIER DE CLIENT ID {int.Parse(textBoxIDCLIENT.Text)}");
+
         }
         private void AJOUTER_FICHIERS_Click(object sender, EventArgs e)
         {
@@ -227,6 +243,8 @@ namespace gestion_cabinet_notarial
           }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
+            if (textBoxIDCLIENT.Text=="")
+                return;
             client A = new client();
             A = cls.FindById(int.Parse(textBoxIDCLIENT.Text));
             if (A == null) return;
@@ -261,6 +279,7 @@ namespace gestion_cabinet_notarial
                 }
             }
             cls.SaveChanges();
+            THEME.operation($"MODIFIER UN CLIENT ID {int.Parse(textBoxIDCLIENT.Text)}");
         }
         private void bunifuDataGridViewlist_client_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -302,6 +321,8 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_file.DataSource = files;
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file, "sipprision", "supprimer", 4);
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file, "affichage", "affichier", 5);
+            THEME.operation($"CHERCHER FICHIER CLIENT");
+
         }
         private void bunifuDataGridView_list_file_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -312,6 +333,7 @@ namespace gestion_cabinet_notarial
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
                 {
                     Process.Start(path);
+                    THEME.operation($"AFFICHER FICHIER DE CLIENT LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
                 }
                 else
                 {
@@ -321,8 +343,9 @@ namespace gestion_cabinet_notarial
                         fichiers_client a = cSL_BL_FICHIER_CLIENT.FindById(idfile);
                         cSL_BL_FICHIER_CLIENT.Remove(a);
                         cSL_BL_FICHIER_CLIENT.SaveChanges();
-                        File.Delete(path);                        
-                    }                    
+                        File.Delete(path); 
+                    THEME.operation($"SUPRIMER FICHIER DE CLIENT LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
+                    }
                 } 
             }
         }
@@ -349,6 +372,7 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_dossier, "detail", "detail", 6);
             bunifuPages1.SetPage(tabPage_dossier);
+            THEME.operation($"CONSULTER DES DOSSIERS DE CLIENT ID {textBoxIDCLIENT.Text}");
         }
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -371,6 +395,8 @@ namespace gestion_cabinet_notarial
                 TEL = ele.Tele,
                 FAX = ele.Fax
             }).ToList();
+            if(this.Visible)
+                THEME.operation($"CONSULTER DES CLIENT");
             bunifuDataGridViewlist_client.DataSource = ListDataSource;
             if (THEME.id_Client == 0)
                 return;

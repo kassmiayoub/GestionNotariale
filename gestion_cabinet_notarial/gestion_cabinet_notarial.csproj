@@ -157,6 +157,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.2.2\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="GumroadLicensing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GumroadLicensing.1.0.1\lib\net45\GumroadLicensing.dll</HintPath>
     </Reference>
@@ -320,6 +323,9 @@
     <Reference Include="System.Threading.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -354,6 +360,7 @@
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
     <Compile Include="BL\csl_bl_fichier_contart.cs" />
     <Compile Include="BL\CSL_BL_FUNCTION.cs" />
+    <Compile Include="BL\CSL_BL_pret_banque.cs" />
     <Compile Include="BL\CSL_BL_UTILISATUER.cs" />
     <Compile Include="context\banque.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -520,6 +527,12 @@
     <Compile Include="controls\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\nouveau_credit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\nouveau_credit.Designer.cs">
+      <DependentUpon>nouveau_credit.cs</DependentUpon>
+    </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -628,6 +641,7 @@
     <Compile Include="repository\CLS_REPOSITORY.cs" />
     <Compile Include="repository\INTER_REPOSITORY.cs" />
     <Compile Include="THEME.cs" />
+    <Compile Include="Validators\clientValidator.cs" />
     <EmbeddedResource Include="controls\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -666,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\nouveau_credit.resx">
+      <DependentUpon>nouveau_credit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>
@@ -970,9 +987,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Validators\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="context\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

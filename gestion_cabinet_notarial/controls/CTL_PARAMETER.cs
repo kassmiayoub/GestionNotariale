@@ -53,6 +53,7 @@ namespace gestion_cabinet_notarial.controls
                 user.Add(A);
                 seting();
                 MessageBox.Show("AJOUTER AVEC SUCCESS");
+                THEME.operation($"AJOUER UN UTILISATEUR");
             }
             else
             {
@@ -63,7 +64,8 @@ namespace gestion_cabinet_notarial.controls
                 bunifuTextBox_USER.Enabled = true;
                 bunifuTextBox_PASS.Enabled = true;
                 MessageBox.Show("MODIFIER AVEC SUCCESS");
-            }            
+                THEME.operation($"MODIFIER UN UTILISATEUR");
+            }
         }
         private void bunifuCheckBox_parameter_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {

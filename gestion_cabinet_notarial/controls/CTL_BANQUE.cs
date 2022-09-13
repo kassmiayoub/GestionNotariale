@@ -35,9 +35,9 @@ namespace gestion_cabinet_notarial.controls
                 var banque = new banque();
                 banque.Libbele = bunifuTextBox_banque.Text;
                 cls_Bl_Banque.Add(banque);
+                THEME.operation($"AJOUTR UN BANQUE");
             }
         }
-
         private void Button_vider_banque_Click(object sender, EventArgs e)
         {
             bunifuTextBox_banque.Text = "";
@@ -49,6 +49,7 @@ namespace gestion_cabinet_notarial.controls
             ban.Libbele = bunifuTextBox_banque.Text;
             cls_Bl_Banque.SaveChanges();
             bunifuTextBox_banque.Text = "";
+            THEME.operation($"MODIFIER UN BANQUE");
         }
         private void bunifuDataGridView_list_banque_CellClick(object sender, DataGridViewCellEventArgs e)
         {
