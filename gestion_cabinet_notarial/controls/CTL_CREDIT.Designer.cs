@@ -293,6 +293,7 @@
             this.bunifuTextBox_MONTANT.TextPlaceholder = "Enter text";
             this.bunifuTextBox_MONTANT.UseSystemPasswordChar = false;
             this.bunifuTextBox_MONTANT.WordWrap = true;
+            this.bunifuTextBox_MONTANT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBox_MONTANT_KeyPress);
             // 
             // bunifuDatePicker_PAYMENT
             // 

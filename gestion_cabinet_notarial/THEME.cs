@@ -65,6 +65,7 @@ namespace gestion_cabinet_notarial
         }
         public static void AddControlsToList()
         {
+            ControlsList.Clear();
             ControlsList.Add(CTL_AGENDA);
             ControlsList.Add(nouveau_credit);
             ControlsList.Add(CTL_LIST__operation);

@@ -37,6 +37,11 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_Click_1(object sender, EventArgs e)
         {
+            if (bunifuTextBoxtmbr.Text == "")
+            {
+                MessageBox.Show("le champs Timbres ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             var c = new gestion_cabinet_notarial.context.contrat();
             c.dateouverture = Convert.ToDateTime(dateTimePickerdubet.Text);
             c.Datefermeture = Convert.ToDateTime(dateTimePickerfin.Text);
@@ -46,29 +51,62 @@ namespace gestion_cabinet_notarial
           //  MessageBox.Show(THEME.prix.ToString());
             if (bunifuCheckBoxhonoraire.Checked)
             {
-                c.Honoraires = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox_porsontage"].Text)*THEME.prix)/100;
+                string h = this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox_porsontage"].Text;
+                if (h == "")
+                {
+                    MessageBox.Show("le champs Honoraires ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                c.Honoraires = (double.Parse(h)*THEME.prix)/100;
             }
             else
             {
+                if (bunifuTextBoxhonoraire.Text == "")
+                {
+                    MessageBox.Show("le champs Honoraires ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
                 c.Honoraires =double.Parse(bunifuTextBoxhonoraire.Text);
             }
             if (bunifuCheckBoxenregistrement.Checked)
             {
-                c.Enregistrement = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma2"].Controls["textBox_porsontage"].Text) * THEME.prix) / 100;
+                string h = this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma2"].Controls["textBox_porsontage"].Text;
+                if (h == "")
+                {
+                    MessageBox.Show("le champs Enregistrement ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                c.Enregistrement = (double.Parse(h) * THEME.prix) / 100;
             }
             else
             {
+                if (bunifuTextBoxenregistrement.Text == "")
+                {
+                    MessageBox.Show("le champs Enregistrement ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
                 c.Enregistrement = double.Parse(bunifuTextBoxenregistrement.Text);
             }
             if (bunifuCheckBoxancfcc.Checked)
             {
-                c.Ancfcc = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma3"].Controls["textBox_porsontage"].Text) * THEME.prix) / 100;
+                string h = this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma3"].Controls["textBox_porsontage"].Text;
+                if (h == "")
+                {
+                    MessageBox.Show("le champs Ancfcc ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                c.Ancfcc = (double.Parse(h) * THEME.prix) / 100;
             }
             else
             {
+                if (bunifuTextBoxAncfcc.Text == "")
+                {
+                    MessageBox.Show("le champs Ancfcc ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
                 c.Ancfcc = double.Parse(bunifuTextBoxAncfcc.Text);
             }
-           // con.Add(c);
+            con.Add(c);
             int idcontrat = con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;           
             List<Signature> list = new List<Signature>();
             var partes =  new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new {x.Idpartes}).ToList();
@@ -95,7 +133,7 @@ namespace gestion_cabinet_notarial
             //else
             //    p.type_Payement = "ESPECES";
             //paye.Add(p);
-            MessageBox.Show("ajouter avec succes");
+            MessageBox.Show("la contrat ajouter avec succes");
           //  THEME.operation($"AJOUER UN CONTRAT POUR DOSSIER NUMERENT {THEME.numdossier} ET LE TYPE EST {label12.Text}");
 
             this.Close();
@@ -139,6 +177,63 @@ namespace gestion_cabinet_notarial
             {
                 nemurecupdown_with_comma3.Enabled = false;
                 bunifuTextBoxAncfcc.Enabled = true;
+            }
+        }
+
+        private void bunifuTextBoxhonoraire_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void bunifuTextBoxenregistrement_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void bunifuTextBoxAncfcc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void bunifuTextBoxtmbr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
             }
         }
     }

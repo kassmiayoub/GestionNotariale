@@ -292,9 +292,9 @@ namespace gestion_cabinet_notarial
             {
                 if (!(Convert.ToDateTime(CTL_DAY_ITEM.datecomlet) >= DateTime.Now))
                 {
-                     MessageBox.Show("la date doit etre supérieur ou égale au date d'aujourd'hui");
+                    MessageBox.Show("la date doit etre supérieur ou égale au date d'aujourd'hui");
                     return;
-                }                    
+                }
             }
             if (time1.Style.BackColor == Color.Red || time1.Style.BackColor == Color.Gray || time1.Style.BackColor == Color.BurlyWood)
             {
@@ -326,11 +326,8 @@ namespace gestion_cabinet_notarial
             THEME.navigat(typeof(add_client));
             THEME.client_or_dossier = (ComboBox)this.Controls["bunifuDropdown_client_rendez"];
         }
-
         private void bunifuDataGridView_list_times_MouseClick(object sender, MouseEventArgs e)
-        {
-          
-
+        {          
             if (e.Button == MouseButtons.Right)
             {
                  position_row = bunifuDataGridView_list_times.HitTest(e.X,e.Y).RowIndex;
@@ -355,6 +352,12 @@ namespace gestion_cabinet_notarial
                     Point p = new Point(Cursor.Position.X, Cursor.Position.Y);                    
                     contextMenuStrip_passer_supprimer.Show(p);
                     if(time1.Style.BackColor == Color.Gray || time1.Style.BackColor == Color.BurlyWood)
+                    {
+                        contextMenuStrip_passer_supprimer.Items[0].Enabled = false;
+                        contextMenuStrip_passer_supprimer.Items[1].Enabled = false;
+                        contextMenuStrip_passer_supprimer.Items[3].Enabled = false;
+                    }
+                    else if(time1.Style.BackColor == Color.Red && Convert.ToDateTime(CTL_DAY_ITEM.datecomlet) > DateTime.Now)
                     {
                         contextMenuStrip_passer_supprimer.Items[0].Enabled = false;
                         contextMenuStrip_passer_supprimer.Items[1].Enabled = false;

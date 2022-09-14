@@ -59,6 +59,8 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
+            if (bunifuTextBox_MONTANT.Text == "")
+                return;
             var p = new payement();
             p.idClient = int.Parse(comboBoxCLIENT_PY.SelectedValue.ToString());
             p.idbanque = RD_ESPECES.Checked ? 3 : int.Parse(comboBox_banque_PY.SelectedValue.ToString());
@@ -71,6 +73,8 @@ namespace gestion_cabinet_notarial
             else
                 p.type_Payement = "ESPECES";
             paye.Add(p);
+            MessageBox.Show("payement avec succes");
+            THEME.operation($" payement credit pour contrat id {comboBox_contart_paye.SelectedValue.ToString()}");
         }
         private void comboBoxCLIENT_PY_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -94,6 +98,20 @@ namespace gestion_cabinet_notarial
                 comboBox_banque_PY.Enabled = false;
             else
                 comboBox_banque_PY.Enabled = true; 
+        }
+
+        private void bunifuTextBox_MONTANT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
         }
     }
     public class clien

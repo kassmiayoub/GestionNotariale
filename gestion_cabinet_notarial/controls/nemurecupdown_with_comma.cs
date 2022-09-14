@@ -19,6 +19,8 @@ namespace gestion_cabinet_notarial
 
         private void PictureBoxArrow_Click(object sender, EventArgs e)
         {
+            if (double.Parse(textBox_porsontage.Text) == 0)
+                return;
             double x = double.Parse(textBox_porsontage.Text);
             textBox_porsontage.Text = (x - 0.01).ToString();
         }
@@ -27,6 +29,20 @@ namespace gestion_cabinet_notarial
         {
             double x = double.Parse(textBox_porsontage.Text);
             textBox_porsontage.Text = (x + 0.01).ToString();
+        }
+
+        private void textBox_porsontage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

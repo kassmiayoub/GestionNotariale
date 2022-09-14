@@ -50,6 +50,8 @@ namespace gestion_cabinet_notarial.controls
             credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;
             credit.montant = double.Parse(bunifuTextBox_montant_credit.Text);
             BL_credit.Add(credit);
+            MessageBox.Show("ajouter credit avec succes");
+            THEME.operation($" ajouter nouvaeu credit pour contrat id {comboBox_contrat_credit.SelectedValue.ToString()}");
         }
         private void nouveau_credit_Load(object sender, EventArgs e)
         {

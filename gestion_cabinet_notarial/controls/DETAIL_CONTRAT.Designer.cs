@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DETAIL_CONTRAT));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,14 +50,11 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DETAIL_CONTRAT));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.partes = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
+            this.buttonadd_date_s = new System.Windows.Forms.Button();
+            this.bunifuDatePicker_date_s = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuDataGridViewpartes_S = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.payeclient = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,6 +70,9 @@
             this.RD_ESPECES = new System.Windows.Forms.RadioButton();
             this.comboBox_banque_PY = new System.Windows.Forms.ComboBox();
             this.comboBoxCLIENT_PY = new System.Windows.Forms.ComboBox();
+            this.ButtonAdd_PAYEMENT = new System.Windows.Forms.Button();
+            this.bunifuTextBox_MONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuDatePicker_PAYMENT = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.fichierjoint = new System.Windows.Forms.TabPage();
             this.textBoxfile = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -75,6 +80,10 @@
             this.textBoxtitre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_fichier_contart = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.buttonserche_file = new System.Windows.Forms.Button();
+            this.buttonvider = new System.Windows.Forms.Button();
+            this.ButtonAdd_FICHIER = new System.Windows.Forms.Button();
+            this.ButtonSaveSettings = new System.Windows.Forms.Button();
             this.statistic = new System.Windows.Forms.TabPage();
             this.tva = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,15 +92,6 @@
             this.FICHIERJOINT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PAYEMENTCLIENT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PARTES_OF_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.buttonadd_date_s = new System.Windows.Forms.Button();
-            this.bunifuDatePicker_date_s = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.ButtonAdd_PAYEMENT = new System.Windows.Forms.Button();
-            this.bunifuTextBox_MONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuDatePicker_PAYMENT = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.buttonserche_file = new System.Windows.Forms.Button();
-            this.buttonvider = new System.Windows.Forms.Button();
-            this.ButtonAdd_FICHIER = new System.Windows.Forms.Button();
-            this.ButtonSaveSettings = new System.Windows.Forms.Button();
             this.bunifuPages1.SuspendLayout();
             this.partes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewpartes_S)).BeginInit();
@@ -117,10 +117,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.payeclient;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "payeclient";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.partes;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "partes";
+            this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
             this.bunifuPages1.TabIndex = 0;
@@ -155,6 +155,7 @@
             this.partes.TabIndex = 0;
             this.partes.Text = "tabPage1";
             this.partes.UseVisualStyleBackColor = true;
+            this.partes.Click += new System.EventHandler(this.partes_Click);
             // 
             // label13
             // 
@@ -167,6 +168,56 @@
             this.label13.Size = new System.Drawing.Size(180, 24);
             this.label13.TabIndex = 481;
             this.label13.Text = "DATE SINIGATUR : ";
+            // 
+            // buttonadd_date_s
+            // 
+            this.buttonadd_date_s.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonadd_date_s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.buttonadd_date_s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonadd_date_s.Enabled = false;
+            this.buttonadd_date_s.FlatAppearance.BorderSize = 0;
+            this.buttonadd_date_s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonadd_date_s.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonadd_date_s.ForeColor = System.Drawing.Color.White;
+            this.buttonadd_date_s.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
+            this.buttonadd_date_s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonadd_date_s.Location = new System.Drawing.Point(366, 118);
+            this.buttonadd_date_s.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonadd_date_s.Name = "buttonadd_date_s";
+            this.buttonadd_date_s.Size = new System.Drawing.Size(132, 35);
+            this.buttonadd_date_s.TabIndex = 467;
+            this.buttonadd_date_s.Tag = "AcceptButton";
+            this.buttonadd_date_s.Text = "AJOUTER";
+            this.buttonadd_date_s.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonadd_date_s.UseVisualStyleBackColor = false;
+            this.buttonadd_date_s.Click += new System.EventHandler(this.buttonadd_date_s_Click);
+            // 
+            // bunifuDatePicker_date_s
+            // 
+            this.bunifuDatePicker_date_s.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDatePicker_date_s.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker_date_s.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDatePicker_date_s.BorderRadius = 1;
+            this.bunifuDatePicker_date_s.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker_date_s.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker_date_s.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker_date_s.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker_date_s.DisplayWeekNumbers = false;
+            this.bunifuDatePicker_date_s.DPHeight = 0;
+            this.bunifuDatePicker_date_s.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bunifuDatePicker_date_s.Enabled = false;
+            this.bunifuDatePicker_date_s.FillDatePicker = false;
+            this.bunifuDatePicker_date_s.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_date_s.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_date_s.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_s.Icon")));
+            this.bunifuDatePicker_date_s.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker_date_s.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker_date_s.LeftTextMargin = 5;
+            this.bunifuDatePicker_date_s.Location = new System.Drawing.Point(320, 62);
+            this.bunifuDatePicker_date_s.MinimumSize = new System.Drawing.Size(4, 32);
+            this.bunifuDatePicker_date_s.Name = "bunifuDatePicker_date_s";
+            this.bunifuDatePicker_date_s.Size = new System.Drawing.Size(243, 32);
+            this.bunifuDatePicker_date_s.TabIndex = 1;
             // 
             // bunifuDataGridViewpartes_S
             // 
@@ -375,7 +426,7 @@
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -458,6 +509,132 @@
             this.comboBoxCLIENT_PY.Name = "comboBoxCLIENT_PY";
             this.comboBoxCLIENT_PY.Size = new System.Drawing.Size(266, 31);
             this.comboBoxCLIENT_PY.TabIndex = 0;
+            // 
+            // ButtonAdd_PAYEMENT
+            // 
+            this.ButtonAdd_PAYEMENT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAdd_PAYEMENT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.ButtonAdd_PAYEMENT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAdd_PAYEMENT.FlatAppearance.BorderSize = 0;
+            this.ButtonAdd_PAYEMENT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAdd_PAYEMENT.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_PAYEMENT.ForeColor = System.Drawing.Color.White;
+            this.ButtonAdd_PAYEMENT.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
+            this.ButtonAdd_PAYEMENT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAdd_PAYEMENT.Location = new System.Drawing.Point(388, 275);
+            this.ButtonAdd_PAYEMENT.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonAdd_PAYEMENT.Name = "ButtonAdd_PAYEMENT";
+            this.ButtonAdd_PAYEMENT.Size = new System.Drawing.Size(174, 35);
+            this.ButtonAdd_PAYEMENT.TabIndex = 437;
+            this.ButtonAdd_PAYEMENT.Tag = "AcceptButton";
+            this.ButtonAdd_PAYEMENT.Text = "AJOUTER";
+            this.ButtonAdd_PAYEMENT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAdd_PAYEMENT.UseVisualStyleBackColor = false;
+            this.ButtonAdd_PAYEMENT.Click += new System.EventHandler(this.ButtonAdd_PAYEMENT_Click);
+            // 
+            // bunifuTextBox_MONTANT
+            // 
+            this.bunifuTextBox_MONTANT.AcceptsReturn = false;
+            this.bunifuTextBox_MONTANT.AcceptsTab = false;
+            this.bunifuTextBox_MONTANT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTextBox_MONTANT.AnimationSpeed = 200;
+            this.bunifuTextBox_MONTANT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox_MONTANT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox_MONTANT.AutoSizeHeight = true;
+            this.bunifuTextBox_MONTANT.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox_MONTANT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox_MONTANT.BackgroundImage")));
+            this.bunifuTextBox_MONTANT.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBox_MONTANT.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBox_MONTANT.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBox_MONTANT.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBox_MONTANT.BorderRadius = 1;
+            this.bunifuTextBox_MONTANT.BorderThickness = 1;
+            this.bunifuTextBox_MONTANT.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox_MONTANT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox_MONTANT.DefaultFont = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox_MONTANT.DefaultText = "";
+            this.bunifuTextBox_MONTANT.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBox_MONTANT.ForeColor = System.Drawing.Color.Black;
+            this.bunifuTextBox_MONTANT.HideSelection = true;
+            this.bunifuTextBox_MONTANT.IconLeft = null;
+            this.bunifuTextBox_MONTANT.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox_MONTANT.IconPadding = 10;
+            this.bunifuTextBox_MONTANT.IconRight = null;
+            this.bunifuTextBox_MONTANT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox_MONTANT.Lines = new string[0];
+            this.bunifuTextBox_MONTANT.Location = new System.Drawing.Point(361, 222);
+            this.bunifuTextBox_MONTANT.MaxLength = 32767;
+            this.bunifuTextBox_MONTANT.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox_MONTANT.Modified = false;
+            this.bunifuTextBox_MONTANT.Multiline = false;
+            this.bunifuTextBox_MONTANT.Name = "bunifuTextBox_MONTANT";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_MONTANT.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Black;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnIdleState = stateProperties4;
+            this.bunifuTextBox_MONTANT.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox_MONTANT.PasswordChar = '\0';
+            this.bunifuTextBox_MONTANT.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBox_MONTANT.PlaceholderText = "Enter text";
+            this.bunifuTextBox_MONTANT.ReadOnly = false;
+            this.bunifuTextBox_MONTANT.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBox_MONTANT.SelectedText = "";
+            this.bunifuTextBox_MONTANT.SelectionLength = 0;
+            this.bunifuTextBox_MONTANT.SelectionStart = 0;
+            this.bunifuTextBox_MONTANT.ShortcutsEnabled = true;
+            this.bunifuTextBox_MONTANT.Size = new System.Drawing.Size(266, 38);
+            this.bunifuTextBox_MONTANT.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox_MONTANT.TabIndex = 7;
+            this.bunifuTextBox_MONTANT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox_MONTANT.TextMarginBottom = 0;
+            this.bunifuTextBox_MONTANT.TextMarginLeft = 3;
+            this.bunifuTextBox_MONTANT.TextMarginTop = 1;
+            this.bunifuTextBox_MONTANT.TextPlaceholder = "Enter text";
+            this.bunifuTextBox_MONTANT.UseSystemPasswordChar = false;
+            this.bunifuTextBox_MONTANT.WordWrap = true;
+            // 
+            // bunifuDatePicker_PAYMENT
+            // 
+            this.bunifuDatePicker_PAYMENT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDatePicker_PAYMENT.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker_PAYMENT.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDatePicker_PAYMENT.BorderRadius = 1;
+            this.bunifuDatePicker_PAYMENT.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker_PAYMENT.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker_PAYMENT.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker_PAYMENT.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker_PAYMENT.DisplayWeekNumbers = false;
+            this.bunifuDatePicker_PAYMENT.DPHeight = 0;
+            this.bunifuDatePicker_PAYMENT.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bunifuDatePicker_PAYMENT.FillDatePicker = false;
+            this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_PAYMENT.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_PAYMENT.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_PAYMENT.Icon")));
+            this.bunifuDatePicker_PAYMENT.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker_PAYMENT.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker_PAYMENT.LeftTextMargin = 5;
+            this.bunifuDatePicker_PAYMENT.Location = new System.Drawing.Point(557, 22);
+            this.bunifuDatePicker_PAYMENT.MinimumSize = new System.Drawing.Size(4, 32);
+            this.bunifuDatePicker_PAYMENT.Name = "bunifuDatePicker_PAYMENT";
+            this.bunifuDatePicker_PAYMENT.Size = new System.Drawing.Size(266, 32);
+            this.bunifuDatePicker_PAYMENT.TabIndex = 6;
+            this.bunifuDatePicker_PAYMENT.Value = new System.DateTime(2022, 8, 17, 11, 6, 0, 0);
             // 
             // fichierjoint
             // 
@@ -595,6 +772,91 @@
             this.bunifuDataGridView_fichier_contart.TabIndex = 425;
             this.bunifuDataGridView_fichier_contart.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView_fichier_contart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_fichier_contart_CellContentClick);
+            // 
+            // buttonserche_file
+            // 
+            this.buttonserche_file.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonserche_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.buttonserche_file.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonserche_file.FlatAppearance.BorderSize = 0;
+            this.buttonserche_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonserche_file.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonserche_file.ForeColor = System.Drawing.Color.White;
+            this.buttonserche_file.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
+            this.buttonserche_file.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonserche_file.Location = new System.Drawing.Point(519, 240);
+            this.buttonserche_file.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonserche_file.Name = "buttonserche_file";
+            this.buttonserche_file.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonserche_file.Size = new System.Drawing.Size(169, 35);
+            this.buttonserche_file.TabIndex = 481;
+            this.buttonserche_file.Tag = "AcceptButton";
+            this.buttonserche_file.Text = "RECHARCHER";
+            this.buttonserche_file.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonserche_file.UseVisualStyleBackColor = false;
+            this.buttonserche_file.Click += new System.EventHandler(this.buttonserche_file_Click);
+            // 
+            // buttonvider
+            // 
+            this.buttonvider.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonvider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
+            this.buttonvider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonvider.FlatAppearance.BorderSize = 0;
+            this.buttonvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonvider.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonvider.ForeColor = System.Drawing.Color.White;
+            this.buttonvider.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
+            this.buttonvider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonvider.Location = new System.Drawing.Point(177, 240);
+            this.buttonvider.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonvider.Name = "buttonvider";
+            this.buttonvider.Size = new System.Drawing.Size(132, 35);
+            this.buttonvider.TabIndex = 480;
+            this.buttonvider.Text = "VIDER";
+            this.buttonvider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonvider.UseVisualStyleBackColor = false;
+            // 
+            // ButtonAdd_FICHIER
+            // 
+            this.ButtonAdd_FICHIER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAdd_FICHIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
+            this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
+            this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
+            this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAdd_FICHIER.Location = new System.Drawing.Point(352, 240);
+            this.ButtonAdd_FICHIER.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonAdd_FICHIER.Name = "ButtonAdd_FICHIER";
+            this.ButtonAdd_FICHIER.Size = new System.Drawing.Size(132, 35);
+            this.ButtonAdd_FICHIER.TabIndex = 479;
+            this.ButtonAdd_FICHIER.Tag = "AcceptButton";
+            this.ButtonAdd_FICHIER.Text = "AJOUTER";
+            this.ButtonAdd_FICHIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAdd_FICHIER.UseVisualStyleBackColor = false;
+            this.ButtonAdd_FICHIER.Click += new System.EventHandler(this.ButtonAdd_FICHIER_Click);
+            // 
+            // ButtonSaveSettings
+            // 
+            this.ButtonSaveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSaveSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.ButtonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonSaveSettings.FlatAppearance.BorderSize = 0;
+            this.ButtonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
+            this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
+            this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonSaveSettings.Location = new System.Drawing.Point(715, 62);
+            this.ButtonSaveSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonSaveSettings.Name = "ButtonSaveSettings";
+            this.ButtonSaveSettings.Size = new System.Drawing.Size(28, 31);
+            this.ButtonSaveSettings.TabIndex = 476;
+            this.ButtonSaveSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonSaveSettings.UseVisualStyleBackColor = false;
+            this.ButtonSaveSettings.Click += new System.EventHandler(this.ButtonSaveSettings_Click);
             // 
             // statistic
             // 
@@ -1065,267 +1327,6 @@
             this.PARTES_OF_CONTRAT.TextPadding = new System.Windows.Forms.Padding(0);
             this.PARTES_OF_CONTRAT.UseDefaultRadiusAndThickness = true;
             this.PARTES_OF_CONTRAT.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click);
-            // 
-            // buttonadd_date_s
-            // 
-            this.buttonadd_date_s.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonadd_date_s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
-            this.buttonadd_date_s.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonadd_date_s.Enabled = false;
-            this.buttonadd_date_s.FlatAppearance.BorderSize = 0;
-            this.buttonadd_date_s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonadd_date_s.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.buttonadd_date_s.ForeColor = System.Drawing.Color.White;
-            this.buttonadd_date_s.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
-            this.buttonadd_date_s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonadd_date_s.Location = new System.Drawing.Point(366, 118);
-            this.buttonadd_date_s.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonadd_date_s.Name = "buttonadd_date_s";
-            this.buttonadd_date_s.Size = new System.Drawing.Size(132, 35);
-            this.buttonadd_date_s.TabIndex = 467;
-            this.buttonadd_date_s.Tag = "AcceptButton";
-            this.buttonadd_date_s.Text = "AJOUTER";
-            this.buttonadd_date_s.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonadd_date_s.UseVisualStyleBackColor = false;
-            this.buttonadd_date_s.Click += new System.EventHandler(this.buttonadd_date_s_Click);
-            // 
-            // bunifuDatePicker_date_s
-            // 
-            this.bunifuDatePicker_date_s.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDatePicker_date_s.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatePicker_date_s.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDatePicker_date_s.BorderRadius = 1;
-            this.bunifuDatePicker_date_s.Color = System.Drawing.Color.Silver;
-            this.bunifuDatePicker_date_s.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.bunifuDatePicker_date_s.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuDatePicker_date_s.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker_date_s.DisplayWeekNumbers = false;
-            this.bunifuDatePicker_date_s.DPHeight = 0;
-            this.bunifuDatePicker_date_s.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.bunifuDatePicker_date_s.Enabled = false;
-            this.bunifuDatePicker_date_s.FillDatePicker = false;
-            this.bunifuDatePicker_date_s.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDatePicker_date_s.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatePicker_date_s.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_s.Icon")));
-            this.bunifuDatePicker_date_s.IconColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker_date_s.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.bunifuDatePicker_date_s.LeftTextMargin = 5;
-            this.bunifuDatePicker_date_s.Location = new System.Drawing.Point(320, 62);
-            this.bunifuDatePicker_date_s.MinimumSize = new System.Drawing.Size(4, 32);
-            this.bunifuDatePicker_date_s.Name = "bunifuDatePicker_date_s";
-            this.bunifuDatePicker_date_s.Size = new System.Drawing.Size(243, 32);
-            this.bunifuDatePicker_date_s.TabIndex = 1;
-            // 
-            // ButtonAdd_PAYEMENT
-            // 
-            this.ButtonAdd_PAYEMENT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonAdd_PAYEMENT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
-            this.ButtonAdd_PAYEMENT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAdd_PAYEMENT.FlatAppearance.BorderSize = 0;
-            this.ButtonAdd_PAYEMENT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_PAYEMENT.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.ButtonAdd_PAYEMENT.ForeColor = System.Drawing.Color.White;
-            this.ButtonAdd_PAYEMENT.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
-            this.ButtonAdd_PAYEMENT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_PAYEMENT.Location = new System.Drawing.Point(388, 275);
-            this.ButtonAdd_PAYEMENT.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonAdd_PAYEMENT.Name = "ButtonAdd_PAYEMENT";
-            this.ButtonAdd_PAYEMENT.Size = new System.Drawing.Size(174, 35);
-            this.ButtonAdd_PAYEMENT.TabIndex = 437;
-            this.ButtonAdd_PAYEMENT.Tag = "AcceptButton";
-            this.ButtonAdd_PAYEMENT.Text = "AJOUTER";
-            this.ButtonAdd_PAYEMENT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonAdd_PAYEMENT.UseVisualStyleBackColor = false;
-            this.ButtonAdd_PAYEMENT.Click += new System.EventHandler(this.ButtonAdd_PAYEMENT_Click);
-            // 
-            // bunifuTextBox_MONTANT
-            // 
-            this.bunifuTextBox_MONTANT.AcceptsReturn = false;
-            this.bunifuTextBox_MONTANT.AcceptsTab = false;
-            this.bunifuTextBox_MONTANT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTextBox_MONTANT.AnimationSpeed = 200;
-            this.bunifuTextBox_MONTANT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox_MONTANT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox_MONTANT.AutoSizeHeight = true;
-            this.bunifuTextBox_MONTANT.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox_MONTANT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox_MONTANT.BackgroundImage")));
-            this.bunifuTextBox_MONTANT.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox_MONTANT.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox_MONTANT.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox_MONTANT.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox_MONTANT.BorderRadius = 1;
-            this.bunifuTextBox_MONTANT.BorderThickness = 1;
-            this.bunifuTextBox_MONTANT.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox_MONTANT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox_MONTANT.DefaultFont = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox_MONTANT.DefaultText = "";
-            this.bunifuTextBox_MONTANT.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox_MONTANT.ForeColor = System.Drawing.Color.Black;
-            this.bunifuTextBox_MONTANT.HideSelection = true;
-            this.bunifuTextBox_MONTANT.IconLeft = null;
-            this.bunifuTextBox_MONTANT.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox_MONTANT.IconPadding = 10;
-            this.bunifuTextBox_MONTANT.IconRight = null;
-            this.bunifuTextBox_MONTANT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox_MONTANT.Lines = new string[0];
-            this.bunifuTextBox_MONTANT.Location = new System.Drawing.Point(361, 222);
-            this.bunifuTextBox_MONTANT.MaxLength = 32767;
-            this.bunifuTextBox_MONTANT.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox_MONTANT.Modified = false;
-            this.bunifuTextBox_MONTANT.Multiline = false;
-            this.bunifuTextBox_MONTANT.Name = "bunifuTextBox_MONTANT";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_MONTANT.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Black;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnIdleState = stateProperties4;
-            this.bunifuTextBox_MONTANT.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox_MONTANT.PasswordChar = '\0';
-            this.bunifuTextBox_MONTANT.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox_MONTANT.PlaceholderText = "Enter text";
-            this.bunifuTextBox_MONTANT.ReadOnly = false;
-            this.bunifuTextBox_MONTANT.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox_MONTANT.SelectedText = "";
-            this.bunifuTextBox_MONTANT.SelectionLength = 0;
-            this.bunifuTextBox_MONTANT.SelectionStart = 0;
-            this.bunifuTextBox_MONTANT.ShortcutsEnabled = true;
-            this.bunifuTextBox_MONTANT.Size = new System.Drawing.Size(266, 38);
-            this.bunifuTextBox_MONTANT.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox_MONTANT.TabIndex = 7;
-            this.bunifuTextBox_MONTANT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox_MONTANT.TextMarginBottom = 0;
-            this.bunifuTextBox_MONTANT.TextMarginLeft = 3;
-            this.bunifuTextBox_MONTANT.TextMarginTop = 1;
-            this.bunifuTextBox_MONTANT.TextPlaceholder = "Enter text";
-            this.bunifuTextBox_MONTANT.UseSystemPasswordChar = false;
-            this.bunifuTextBox_MONTANT.WordWrap = true;
-            // 
-            // bunifuDatePicker_PAYMENT
-            // 
-            this.bunifuDatePicker_PAYMENT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuDatePicker_PAYMENT.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatePicker_PAYMENT.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDatePicker_PAYMENT.BorderRadius = 1;
-            this.bunifuDatePicker_PAYMENT.Color = System.Drawing.Color.Silver;
-            this.bunifuDatePicker_PAYMENT.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.bunifuDatePicker_PAYMENT.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuDatePicker_PAYMENT.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker_PAYMENT.DisplayWeekNumbers = false;
-            this.bunifuDatePicker_PAYMENT.DPHeight = 0;
-            this.bunifuDatePicker_PAYMENT.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.bunifuDatePicker_PAYMENT.FillDatePicker = false;
-            this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDatePicker_PAYMENT.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatePicker_PAYMENT.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_PAYMENT.Icon")));
-            this.bunifuDatePicker_PAYMENT.IconColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker_PAYMENT.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.bunifuDatePicker_PAYMENT.LeftTextMargin = 5;
-            this.bunifuDatePicker_PAYMENT.Location = new System.Drawing.Point(557, 22);
-            this.bunifuDatePicker_PAYMENT.MinimumSize = new System.Drawing.Size(4, 32);
-            this.bunifuDatePicker_PAYMENT.Name = "bunifuDatePicker_PAYMENT";
-            this.bunifuDatePicker_PAYMENT.Size = new System.Drawing.Size(266, 32);
-            this.bunifuDatePicker_PAYMENT.TabIndex = 6;
-            this.bunifuDatePicker_PAYMENT.Value = new System.DateTime(2022, 8, 17, 11, 6, 0, 0);
-            // 
-            // buttonserche_file
-            // 
-            this.buttonserche_file.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonserche_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.buttonserche_file.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonserche_file.FlatAppearance.BorderSize = 0;
-            this.buttonserche_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonserche_file.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.buttonserche_file.ForeColor = System.Drawing.Color.White;
-            this.buttonserche_file.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.buttonserche_file.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonserche_file.Location = new System.Drawing.Point(519, 240);
-            this.buttonserche_file.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonserche_file.Name = "buttonserche_file";
-            this.buttonserche_file.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonserche_file.Size = new System.Drawing.Size(169, 35);
-            this.buttonserche_file.TabIndex = 481;
-            this.buttonserche_file.Tag = "AcceptButton";
-            this.buttonserche_file.Text = "RECHARCHER";
-            this.buttonserche_file.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonserche_file.UseVisualStyleBackColor = false;
-            this.buttonserche_file.Click += new System.EventHandler(this.buttonserche_file_Click);
-            // 
-            // buttonvider
-            // 
-            this.buttonvider.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonvider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
-            this.buttonvider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonvider.FlatAppearance.BorderSize = 0;
-            this.buttonvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonvider.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.buttonvider.ForeColor = System.Drawing.Color.White;
-            this.buttonvider.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
-            this.buttonvider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonvider.Location = new System.Drawing.Point(177, 240);
-            this.buttonvider.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonvider.Name = "buttonvider";
-            this.buttonvider.Size = new System.Drawing.Size(132, 35);
-            this.buttonvider.TabIndex = 480;
-            this.buttonvider.Text = "VIDER";
-            this.buttonvider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonvider.UseVisualStyleBackColor = false;
-            // 
-            // ButtonAdd_FICHIER
-            // 
-            this.ButtonAdd_FICHIER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonAdd_FICHIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
-            this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
-            this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
-            this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
-            this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_FICHIER.Location = new System.Drawing.Point(352, 240);
-            this.ButtonAdd_FICHIER.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonAdd_FICHIER.Name = "ButtonAdd_FICHIER";
-            this.ButtonAdd_FICHIER.Size = new System.Drawing.Size(132, 35);
-            this.ButtonAdd_FICHIER.TabIndex = 479;
-            this.ButtonAdd_FICHIER.Tag = "AcceptButton";
-            this.ButtonAdd_FICHIER.Text = "AJOUTER";
-            this.ButtonAdd_FICHIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonAdd_FICHIER.UseVisualStyleBackColor = false;
-            this.ButtonAdd_FICHIER.Click += new System.EventHandler(this.ButtonAdd_FICHIER_Click);
-            // 
-            // ButtonSaveSettings
-            // 
-            this.ButtonSaveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonSaveSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
-            this.ButtonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonSaveSettings.FlatAppearance.BorderSize = 0;
-            this.ButtonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
-            this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
-            this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSaveSettings.Location = new System.Drawing.Point(715, 62);
-            this.ButtonSaveSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonSaveSettings.Name = "ButtonSaveSettings";
-            this.ButtonSaveSettings.Size = new System.Drawing.Size(28, 31);
-            this.ButtonSaveSettings.TabIndex = 476;
-            this.ButtonSaveSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonSaveSettings.UseVisualStyleBackColor = false;
-            this.ButtonSaveSettings.Click += new System.EventHandler(this.ButtonSaveSettings_Click);
             // 
             // DETAIL_CONTRAT
             // 

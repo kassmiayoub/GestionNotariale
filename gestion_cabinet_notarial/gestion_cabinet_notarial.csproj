@@ -642,6 +642,8 @@
     <Compile Include="repository\INTER_REPOSITORY.cs" />
     <Compile Include="THEME.cs" />
     <Compile Include="Validators\clientValidator.cs" />
+    <Compile Include="Validators\dossierValidator.cs" />
+    <Compile Include="Validators\fichier_client_validator.cs" />
     <EmbeddedResource Include="controls\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>

@@ -124,9 +124,11 @@ namespace gestion_cabinet_notarial
             MessageBox.Show(THEME.prix.ToString());
             bunifuPages1.SetPage(statistic);
             var list = new List<statis>();
-            list = paye.FindByValues(ele => ele.idcontrat == THEME.id_C).GroupBy(ele => ele.typecharge).OrderBy(ele => ele.Key).Select(ele => new statis()
+            MessageBox.Show(THEME.id_C.ToString());
+            list = paye.FindByValues(ele => ele.idcontrat == THEME.id_C && ele.type =="charge").GroupBy(ele => ele.typecharge).OrderBy(ele => ele.Key).Select(ele => new statis()
             {   //DEPANCES= ele.Key,
                 PAYE = ele.Sum(el => el.Montant).ToString(),
+                DEPANCES = ele.Key
             }).ToList();
             var cont = con.FindById(THEME.id_C);
              Ancfcc = (double)cont.Ancfcc;
@@ -139,37 +141,42 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_statistic.Columns[2].Name = "PAYE";
             bunifuDataGridView_statistic.Columns[3].Name = "RESTE";
             bunifuDataGridView_statistic.Columns[4].Name = "PORCENTAGE";
+            bunifuDataGridView_statistic.Rows.Clear();
             string[] row = new string[] { "", "", "0", "", "" };
-            if (bunifuDataGridView_statistic.Rows.Count == 0)
-            {
                 bunifuDataGridView_statistic.Rows.Add(row);
                 bunifuDataGridView_statistic.Rows.Add(row);
                 bunifuDataGridView_statistic.Rows.Add(row);
-                bunifuDataGridView_statistic.Rows.Add(row);
-            }            
+                bunifuDataGridView_statistic.Rows.Add(row);    
+                bunifuDataGridView_statistic.Rows[0].Cells[0].Value = "Ancfcc";
+                bunifuDataGridView_statistic.Rows[1].Cells[0].Value = "Enregistrement";
+                bunifuDataGridView_statistic.Rows[2].Cells[0].Value = "Honoraires";
+                bunifuDataGridView_statistic.Rows[3].Cells[0].Value = "Timbres";
             int i = 0;
             foreach (var item in list)
             {
-                bunifuDataGridView_statistic.Rows[i].Cells[2].Value = item.PAYE;
+                if (item.DEPANCES == "Ancfcc")
+                    bunifuDataGridView_statistic.Rows[0].Cells[2].Value = item.PAYE;
+                if (item.DEPANCES == "Enregistrement")
+                    bunifuDataGridView_statistic.Rows[1].Cells[2].Value = item.PAYE; 
+                if (item.DEPANCES == "Honoraires")
+                    bunifuDataGridView_statistic.Rows[2].Cells[2].Value = item.PAYE; 
+                if (item.DEPANCES == "Timbres")
+                    bunifuDataGridView_statistic.Rows[3].Cells[2].Value = item.PAYE;
                 i++;  
             }
                 montant_paye_Ancfcc = double.Parse(bunifuDataGridView_statistic.Rows[0].Cells[2].Value.ToString());
-                bunifuDataGridView_statistic.Rows[0].Cells[0].Value = "Ancfcc";
                 bunifuDataGridView_statistic.Rows[0].Cells[1].Value = Ancfcc;
                 bunifuDataGridView_statistic.Rows[0].Cells[3].Value = (Ancfcc - montant_paye_Ancfcc).ToString();
                 bunifuDataGridView_statistic.Rows[0].Cells[4].Value = ((Ancfcc * 100) / THEME.prix).ToString();
                 montant_paye_Enregistrement = double.Parse(bunifuDataGridView_statistic.Rows[1].Cells[2].Value.ToString());
-                bunifuDataGridView_statistic.Rows[1].Cells[0].Value = "Enregistrement";
                 bunifuDataGridView_statistic.Rows[1].Cells[1].Value = Enregistrement;
                 bunifuDataGridView_statistic.Rows[1].Cells[3].Value = (Enregistrement - montant_paye_Enregistrement).ToString();
                 bunifuDataGridView_statistic.Rows[1].Cells[4].Value = ((Enregistrement * 100) / THEME.prix).ToString();           
                 montant_paye_Honoraires = double.Parse(bunifuDataGridView_statistic.Rows[2].Cells[2].Value.ToString());
-                bunifuDataGridView_statistic.Rows[2].Cells[0].Value = "Honoraires";
                 bunifuDataGridView_statistic.Rows[2].Cells[1].Value = Honoraires;
                 bunifuDataGridView_statistic.Rows[2].Cells[3].Value = (Honoraires - montant_paye_Honoraires).ToString();
                 bunifuDataGridView_statistic.Rows[2].Cells[4].Value = ((Honoraires * 100) / THEME.prix).ToString();            
                 montant_paye_Timbres = double.Parse(bunifuDataGridView_statistic.Rows[3].Cells[2].Value.ToString());
-                bunifuDataGridView_statistic.Rows[3].Cells[0].Value = "Timbres";
                 bunifuDataGridView_statistic.Rows[3].Cells[1].Value = Timbres;
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
                 bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();   
@@ -202,6 +209,7 @@ namespace gestion_cabinet_notarial
             p.idbanque = RD_ESPECES.Checked ? 3 : int.Parse(comboBox_banque_PY.SelectedValue.ToString());
             p.Montant =double.Parse(bunifuTextBox_MONTANT.Text);
             p.Date = bunifuDatePicker_PAYMENT.Value;
+            MessageBox.Show(comboBox_TYPE_CHARGE.Text);
             p.typecharge = comboBox_TYPE_CHARGE.Text;
             p.type = "charge";
             p.idcontrat = THEME.id_C;
@@ -290,7 +298,7 @@ namespace gestion_cabinet_notarial
         {           
             if (comboBox_TYPE_CHARGE.Text == "Enregistrement")
             {
-                bunifuTextBox_MONTANT.Text = (Enregistrement- montant_paye_Enregistrement).ToString();
+                bunifuTextBox_MONTANT.Text = (Enregistrement - montant_paye_Enregistrement).ToString();
             }
             else if (comboBox_TYPE_CHARGE.Text == "Ancfcc")
             {
@@ -318,6 +326,11 @@ namespace gestion_cabinet_notarial
                 //PAYEMENTCLIENT_CONTRAT.PerformClick();
                 //FICHIERJOINT_CONTRAT.PerformClick();
             }
+        }
+
+        private void partes_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class partesS

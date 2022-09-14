@@ -522,6 +522,7 @@
             this.bunifuTextBoxhonoraire.TextPlaceholder = "Enter text";
             this.bunifuTextBoxhonoraire.UseSystemPasswordChar = false;
             this.bunifuTextBoxhonoraire.WordWrap = true;
+            this.bunifuTextBoxhonoraire.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBoxhonoraire_KeyPress);
             // 
             // bunifuTextBoxenregistrement
             // 
@@ -597,6 +598,7 @@
             this.bunifuTextBoxenregistrement.TextPlaceholder = "Enter text";
             this.bunifuTextBoxenregistrement.UseSystemPasswordChar = false;
             this.bunifuTextBoxenregistrement.WordWrap = true;
+            this.bunifuTextBoxenregistrement.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBoxenregistrement_KeyPress);
             // 
             // bunifuTextBoxAncfcc
             // 
@@ -672,6 +674,7 @@
             this.bunifuTextBoxAncfcc.TextPlaceholder = "Enter text";
             this.bunifuTextBoxAncfcc.UseSystemPasswordChar = false;
             this.bunifuTextBoxAncfcc.WordWrap = true;
+            this.bunifuTextBoxAncfcc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBoxAncfcc_KeyPress);
             // 
             // bunifuTextBoxtmbr
             // 
@@ -747,6 +750,7 @@
             this.bunifuTextBoxtmbr.TextPlaceholder = "Enter text";
             this.bunifuTextBoxtmbr.UseSystemPasswordChar = false;
             this.bunifuTextBoxtmbr.WordWrap = true;
+            this.bunifuTextBoxtmbr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBoxtmbr_KeyPress);
             // 
             // contrat
             // 

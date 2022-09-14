@@ -33,7 +33,7 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
             this.mainMenu1 = new gestion_cabinet_notarial.MainMenu();
-            this.controL_MAIN_HEADER1 = new Avocat_Maroc.PL.CONTROL_MAIN_HEADER();
+            this.controL_MAIN_HEADER1 = new gestion_cabinet_notarial.CONTROL_MAIN_HEADER();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +119,7 @@
 
        // private Avocat_Maroc.PL.THEME.MENU.MainMenu mainMenu1;
         private Avocat_Maroc.PL.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
-        private Avocat_Maroc.PL.CONTROL_MAIN_HEADER controL_MAIN_HEADER1;
+        private gestion_cabinet_notarial.CONTROL_MAIN_HEADER controL_MAIN_HEADER1;
         private System.Windows.Forms.Panel MAINPANEL;
         private MainMenu mainMenu1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;

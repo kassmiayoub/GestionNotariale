@@ -84,6 +84,8 @@
             this.AJOUTER_FICHIERS = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AJOUTER_CLIENT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton_dossier = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.textBox_adress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPages1.SuspendLayout();
             this.tabPage_CLIENT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_client)).BeginInit();
@@ -132,6 +134,8 @@
             // tabPage_CLIENT
             // 
             this.tabPage_CLIENT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_CLIENT.Controls.Add(this.textBox_adress);
+            this.tabPage_CLIENT.Controls.Add(this.label1);
             this.tabPage_CLIENT.Controls.Add(this.label8);
             this.tabPage_CLIENT.Controls.Add(this.textBoxIDCLIENT);
             this.tabPage_CLIENT.Controls.Add(this.bunifuDataGridViewlist_client);
@@ -180,7 +184,7 @@
             // 
             this.textBoxIDCLIENT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxIDCLIENT.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIDCLIENT.Location = new System.Drawing.Point(324, 45);
+            this.textBoxIDCLIENT.Location = new System.Drawing.Point(284, 43);
             this.textBoxIDCLIENT.Multiline = true;
             this.textBoxIDCLIENT.Name = "textBoxIDCLIENT";
             this.textBoxIDCLIENT.Size = new System.Drawing.Size(278, 31);
@@ -287,7 +291,7 @@
             this.comboBoxtype_client.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.comboBoxtype_client.ItemHighLightForeColor = System.Drawing.Color.White;
             this.comboBoxtype_client.ItemTopMargin = 3;
-            this.comboBoxtype_client.Location = new System.Drawing.Point(860, 93);
+            this.comboBoxtype_client.Location = new System.Drawing.Point(860, 134);
             this.comboBoxtype_client.Name = "comboBoxtype_client";
             this.comboBoxtype_client.Size = new System.Drawing.Size(278, 32);
             this.comboBoxtype_client.TabIndex = 476;
@@ -302,7 +306,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(645, 93);
+            this.label9.Location = new System.Drawing.Point(645, 134);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 24);
             this.label9.TabIndex = 475;
@@ -315,7 +319,7 @@
             this.labelIF.BackColor = System.Drawing.Color.Transparent;
             this.labelIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.labelIF.Location = new System.Drawing.Point(742, 180);
+            this.labelIF.Location = new System.Drawing.Point(742, 221);
             this.labelIF.Name = "labelIF";
             this.labelIF.Size = new System.Drawing.Size(41, 24);
             this.labelIF.TabIndex = 474;
@@ -325,7 +329,7 @@
             // 
             this.textBoxIF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxIF.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.textBoxIF.Location = new System.Drawing.Point(860, 181);
+            this.textBoxIF.Location = new System.Drawing.Point(860, 222);
             this.textBoxIF.Multiline = true;
             this.textBoxIF.Name = "textBoxIF";
             this.textBoxIF.Size = new System.Drawing.Size(278, 31);
@@ -446,17 +450,17 @@
             // 
             this.textBoxemail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxemail.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxemail.Location = new System.Drawing.Point(324, 225);
+            this.textBoxemail.Location = new System.Drawing.Point(284, 222);
             this.textBoxemail.Multiline = true;
             this.textBoxemail.Name = "textBoxemail";
-            this.textBoxemail.Size = new System.Drawing.Size(278, 31);
+            this.textBoxemail.Size = new System.Drawing.Size(345, 31);
             this.textBoxemail.TabIndex = 464;
             // 
             // textBox_prenom
             // 
             this.textBox_prenom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_prenom.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_prenom.Location = new System.Drawing.Point(324, 134);
+            this.textBox_prenom.Location = new System.Drawing.Point(284, 132);
             this.textBox_prenom.Multiline = true;
             this.textBox_prenom.Name = "textBox_prenom";
             this.textBox_prenom.Size = new System.Drawing.Size(278, 31);
@@ -466,7 +470,7 @@
             // 
             this.textBox_fax.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_fax.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_fax.Location = new System.Drawing.Point(324, 179);
+            this.textBox_fax.Location = new System.Drawing.Point(284, 177);
             this.textBox_fax.Multiline = true;
             this.textBox_fax.Name = "textBox_fax";
             this.textBox_fax.Size = new System.Drawing.Size(278, 31);
@@ -476,7 +480,7 @@
             // 
             this.textBox_nom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_nom.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_nom.Location = new System.Drawing.Point(324, 89);
+            this.textBox_nom.Location = new System.Drawing.Point(284, 87);
             this.textBox_nom.Multiline = true;
             this.textBox_nom.Name = "textBox_nom";
             this.textBox_nom.Size = new System.Drawing.Size(278, 31);
@@ -549,7 +553,7 @@
             this.labelCIN.BackColor = System.Drawing.Color.Transparent;
             this.labelCIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.labelCIN.Location = new System.Drawing.Point(731, 138);
+            this.labelCIN.Location = new System.Drawing.Point(731, 179);
             this.labelCIN.Name = "labelCIN";
             this.labelCIN.Size = new System.Drawing.Size(55, 24);
             this.labelCIN.TabIndex = 455;
@@ -559,7 +563,7 @@
             // 
             this.textBoxCIN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCIN.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.textBoxCIN.Location = new System.Drawing.Point(859, 139);
+            this.textBoxCIN.Location = new System.Drawing.Point(859, 180);
             this.textBoxCIN.Multiline = true;
             this.textBoxCIN.Name = "textBoxCIN";
             this.textBoxCIN.Size = new System.Drawing.Size(278, 31);
@@ -1141,6 +1145,28 @@
             this.bunifuButton_dossier.UseDefaultRadiusAndThickness = true;
             this.bunifuButton_dossier.Click += new System.EventHandler(this.bunifuButton_dossier_Click);
             // 
+            // textBox_adress
+            // 
+            this.textBox_adress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_adress.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBox_adress.Location = new System.Drawing.Point(860, 90);
+            this.textBox_adress.Multiline = true;
+            this.textBox_adress.Name = "textBox_adress";
+            this.textBox_adress.Size = new System.Drawing.Size(278, 31);
+            this.textBox_adress.TabIndex = 482;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(689, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 24);
+            this.label1.TabIndex = 481;
+            this.label1.Text = "ADRESS : ";
+            // 
             // add_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1210,5 +1236,7 @@
         private System.Windows.Forms.TabPage tabPage_dossier;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton_dossier;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_list_dossier;
+        private System.Windows.Forms.TextBox textBox_adress;
+        private System.Windows.Forms.Label label1;
     }
 }

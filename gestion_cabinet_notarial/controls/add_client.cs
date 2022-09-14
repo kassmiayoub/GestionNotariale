@@ -14,6 +14,7 @@ using System.Diagnostics;
 using System.IO;
 using gestion_cabinet_notarial.Validators;
 using FluentValidation.Results;
+using System.Text.RegularExpressions;
 
 namespace gestion_cabinet_notarial
 {
@@ -22,6 +23,7 @@ namespace gestion_cabinet_notarial
         cls_bl_credit credit = new cls_bl_credit();
         CSL_BL_Client cls = new CSL_BL_Client();
         CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
+        CSL_BL_Client_Professionnel clp = new CSL_BL_Client_Professionnel();
         CSL_BL_FICHIER_CLIENT cSL_BL_FICHIER_CLIENT = new CSL_BL_FICHIER_CLIENT();
         cls_bl_dossier cls_Bl_Dossier_client = new cls_bl_dossier();
         cls_bl_partes parte_client = new cls_bl_partes();
@@ -40,6 +42,7 @@ namespace gestion_cabinet_notarial
             textBox_nom.Text = A.Nom;
             textBox_prenom.Text = A.Prenom;
             textBox_fax.Text = A.Fax;
+            textBox_adress.Text = A.adress;
             if (A.ClientNormale != null)
             {
                 comboBoxtype_client.SelectedIndex = 1;
@@ -54,33 +57,25 @@ namespace gestion_cabinet_notarial
         }
         private void add_client_Load(object sender, EventArgs e)
         {
+            textBoxfile.Enabled = false;
             labelCIN.Visible = false;
             labelIF.Visible = false;
             textBoxCIN.Visible=false;
             textBoxIF.Visible=false;
+            textBoxIDCLIENT.Enabled = false;
             comboBoxtype_client.Items.Add("profisionnel");
             comboBoxtype_client.Items.Add("normal");          
         }
         private void ButtonAdd_Click_1(object sender, EventArgs e)
         {
+            //MessageBox.Show(this.Name);
             var a = new client();
             a.Nom = textBox_nom.Text;
             a.Prenom = textBox_prenom.Text;
             a.Email = textBoxemail.Text;
             a.Fax = textBox_fax.Text;
             a.Tele = textBoxtel.Text;
-            string op = "";
-            if (comboBoxtype_client.Text == "normal")
-            {
-                op = "NORMAL CIN EST " + textBoxCIN.Text;
-                a.ClientNormale = new ClientNormale() { CIN = textBoxCIN.Text };
-            }
-            else if (comboBoxtype_client.Text == "profisionnel")
-            {
-                op = "PROFISIONNEL ICE EST " + textBoxCIN.Text;
-                a.ClientProfessionnel = new ClientProfessionnel() { ICE = textBoxCIN.Text };
-                a.ClientProfessionnel = new ClientProfessionnel() { IdentifiantFiscale = textBoxIF.Text };
-            }
+            a.adress = textBox_adress.Text;
             clientValidator validationRules = new clientValidator();
             ValidationResult validationResult = validationRules.Validate(a);
             IList<ValidationFailure> errors = validationResult.Errors;
@@ -89,8 +84,43 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 return;
             }
-            cls.Add(a);
-            THEME.operation($"AJOUTER UN CLIENT {op}");
+            if(textBoxemail.Text != "")
+            {
+                if (!new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(textBoxemail.Text))
+                {
+                    MessageBox.Show("le champs EMAIL doit etre correct", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+            }
+            string op = "";
+            if (comboBoxtype_client.Text == "normal")
+            {
+                op = "NORMAL CIN EST " + textBoxCIN.Text;
+                a.ClientNormale = new ClientNormale() { CIN = textBoxCIN.Text };
+                if (! new Regex(@"^[A-Z]{1,2}\d{4,5}$").IsMatch(textBoxCIN.Text))
+                {
+                    MessageBox.Show("le champs CIN doit etre correct", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }               
+            }
+            else if (comboBoxtype_client.Text == "profisionnel")
+            {
+                op = "PROFISIONNEL ICE EST " + textBoxCIN.Text;
+                a.ClientProfessionnel = new ClientProfessionnel() { ICE = textBoxCIN.Text };
+                if (textBoxCIN.Text == "")
+                {
+                    MessageBox.Show("le champs ICE ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                a.ClientProfessionnel = new ClientProfessionnel() { IdentifiantFiscale = textBoxIF.Text };
+                if (textBoxIF.Text == "")
+                {
+                    MessageBox.Show("le champs IF ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+            }            
+             cls.Add(a);
+             THEME.operation($"AJOUTER UN CLIENT {op}");
             MessageBox.Show("client ajouter avec succes");
         }
         private void comboBoxtype_client_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -126,10 +156,16 @@ namespace gestion_cabinet_notarial
             }
         }
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
-        {
-            if (textBoxfile.Text == "")
-                return;
+        {           
             var A = new fichiers_client();
+            fichier_client_validator validationRules = new fichier_client_validator();
+            ValidationResult validationResult = validationRules.Validate(A);
+            IList<ValidationFailure> errors = validationResult.Errors;
+            if (!validationResult.IsValid)
+            {
+                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             A.idClient = int.Parse(textBoxIDCLIENT.Text);
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
@@ -142,7 +178,6 @@ namespace gestion_cabinet_notarial
             A.path = name_of_file;
             cSL_BL_FICHIER_CLIENT.Add(A);
             THEME.operation($"AJOUTER UN FICHIER DE CLIENT ID {int.Parse(textBoxIDCLIENT.Text)}");
-
         }
         private void AJOUTER_FICHIERS_Click(object sender, EventArgs e)
         {
@@ -183,27 +218,41 @@ namespace gestion_cabinet_notarial
             var ListDataSource = new List<clientserch>();
             if (comboBoxtype_client.Text == "profisionnel")
                     {
-                     ListDataSource = cls.FindByValues(ele => (ele.ClientProfessionnel.ICE == textBoxCIN.Text && ele.ClientProfessionnel.IdentifiantFiscale==textBoxIF.Text) || (ele.ClientProfessionnel.ICE  == textBoxCIN.Text && textBoxIF.Text == "") || (ele.ClientProfessionnel.IdentifiantFiscale == textBoxIF.Text && textBoxCIN.Text == "")).Select(ele => new clientserch()
+                     ListDataSource = clp.GetAll().Select(ele => new clientserch()
                         {
                                 IDCIENT = ele.idClient,
-                                nom = ele.Nom,
-                                PRENOM = ele.Prenom,
-                                EMAIL = ele.Email,
-                                TEL = ele.Tele,
-                                FAX = ele.Fax
-                        }).ToList();
+                                nom = ele.client.Nom,
+                                PRENOM = ele.client.Prenom,
+                                EMAIL = ele.client.Email,
+                                TEL = ele.client.Tele,
+                                FAX = ele.client.Fax,
+                               TYPECLIENT = "profisionnel",
+                               CIN = ele.ICE,
+                               IF = ele.IdentifiantFiscale
+                     }).ToList();
+                ListDataSource = textBoxCIN.Text != "" ?
+                ListDataSource.Where(ele => ele.CIN.ToString() == textBoxCIN.Text).ToList() :
+                ListDataSource;
+                ListDataSource = textBoxIF.Text != "" ?
+                    ListDataSource.Where(ele => ele.IF.ToString() == textBoxIF.Text).ToList() :
+                    ListDataSource;
             }
             else if (comboBoxtype_client.Text == "normal")
                     {
-                 ListDataSource = cls.FindByValues(ele => ele.ClientNormale.CIN == textBoxCIN.Text).Select(ele => new clientserch()
+                 ListDataSource = cln.GetAll().Select(ele => new clientserch()
                 {
                     IDCIENT = ele.idClient,
-                    nom = ele.Nom,
-                    PRENOM = ele.Prenom,
-                    EMAIL = ele.Email,
-                    TEL = ele.Tele,
-                    FAX = ele.Fax
-                }).ToList();
+                    nom = ele.client.Nom,
+                    PRENOM = ele.client.Prenom,
+                    EMAIL = ele.client.Email,
+                    TEL = ele.client.Tele,
+                    FAX = ele.client.Fax,
+                    TYPECLIENT = "normal",
+                    CIN = ele.CIN
+                 }).ToList();
+                ListDataSource = textBoxCIN.Text != "" ?
+                ListDataSource.Where(ele => ele.CIN.ToString() == textBoxCIN.Text).ToList() :
+                ListDataSource;
             }
             else
             {
@@ -214,8 +263,9 @@ namespace gestion_cabinet_notarial
                     PRENOM = ele.Prenom,
                     EMAIL = ele.Email,
                     TEL = ele.Tele,
-                    FAX = ele.Fax
-                }).ToList();
+                    FAX = ele.Fax,
+                    TYPECLIENT = clp.Any(el => el.idClient == ele.idClient)  ? "profisionnel" : "normal",
+                 }).ToList();
             }
             ListDataSource = textBoxIDCLIENT.Text != "" ?
                 ListDataSource.Where(ele => ele.IDCIENT.ToString() == textBoxIDCLIENT.Text).ToList() :
@@ -235,12 +285,15 @@ namespace gestion_cabinet_notarial
             ListDataSource = textBox_fax.Text != "" ?
                 ListDataSource.Where(ele => ele.FAX.ToString() == textBox_fax.Text).ToList() :
                 ListDataSource;
+
             if (THEME.credit)
             {
-                ListDataSource = ListDataSource.Where(r =>  credit.Any(c => c.client.idClient == r.IDCIENT)) as List<clientserch>;                
+                ListDataSource = ListDataSource.Where(r => credit.Any(c => c.client.idClient == r.IDCIENT)) as List<clientserch>;
             }
-            bunifuDataGridViewlist_client.DataSource = ListDataSource;                 
-          }
+            bunifuDataGridViewlist_client.DataSource = ListDataSource;
+            bunifuDataGridViewlist_client.Columns["IF"].Visible = false;
+            bunifuDataGridViewlist_client.Columns["CIN"].Visible = false;
+        }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
             if (textBoxIDCLIENT.Text=="")
@@ -252,10 +305,37 @@ namespace gestion_cabinet_notarial
             A.Prenom = textBox_prenom.Text;
             A.Email = textBoxemail.Text;
             A.Fax = textBox_fax.Text;
+            A.adress = textBox_adress.Text;
             A.Tele = textBoxtel.Text;
+            clientValidator validationRules = new clientValidator();
+            ValidationResult validationResult = validationRules.Validate(A);
+            IList<ValidationFailure> errors = validationResult.Errors;
+            if (!validationResult.IsValid)
+            {
+                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            if (textBoxemail.Text != "")
+            {
+                if (!new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(textBoxemail.Text))
+                {
+                    MessageBox.Show("le champs EMAIL doit etre correct", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+            }
             if (comboBoxtype_client.Text == "profisionnel")
             {
-                if(A.ClientNormale != null)
+                if (textBoxCIN.Text == "")
+                {
+                    MessageBox.Show("le champs ICE ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                if (textBoxIF.Text == "")
+                {
+                    MessageBox.Show("le champs IF ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                if (A.ClientNormale != null)
                 {
                     A.ClientProfessionnel = new ClientProfessionnel() { idClient = int.Parse(textBoxIDCLIENT.Text), ICE = textBoxCIN.Text, IdentifiantFiscale = textBoxIF.Text };
                     A.ClientNormale = null;
@@ -268,7 +348,12 @@ namespace gestion_cabinet_notarial
             }
             else if (comboBoxtype_client.Text == "normal")
             {
-                if(A.ClientProfessionnel != null)
+                if (!new Regex(@"^[A-Z]{1,2}\d{4,5}$").IsMatch(textBoxCIN.Text))
+                {
+                    MessageBox.Show("le champs CIN doit etre correct", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                if (A.ClientProfessionnel != null)
                 {
                     A.ClientNormale = new ClientNormale() { idClient = int.Parse(textBoxIDCLIENT.Text), CIN = textBoxCIN.Text };
                     A.ClientProfessionnel = null;
@@ -393,11 +478,14 @@ namespace gestion_cabinet_notarial
                 PRENOM = ele.Prenom,
                 EMAIL = ele.Email,
                 TEL = ele.Tele,
-                FAX = ele.Fax
-            }).ToList();
+                FAX = ele.Fax,
+                TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
+           }).ToList();
             if(this.Visible)
                 THEME.operation($"CONSULTER DES CLIENT");
             bunifuDataGridViewlist_client.DataSource = ListDataSource;
+            bunifuDataGridViewlist_client.Columns["IF"].Visible = false;
+            bunifuDataGridViewlist_client.Columns["CIN"].Visible = false;
             if (THEME.id_Client == 0)
                 return;
             sete_client(THEME.id_Client);
@@ -416,7 +504,13 @@ namespace gestion_cabinet_notarial
         [DisplayName("EMAIL")]
         public string EMAIL { get; set; }
         [DisplayName("FAX")]
-        public string FAX { get; set; }
+        public string FAX  { get; set; }
+        [DisplayName("TYPE CLIENT")]
+        public string TYPECLIENT { get; set; }
+        [DisplayName("CIN")]
+        public string CIN { get; set; }
+        [DisplayName("IF")]
+        public string IF { get; set; }
     }
     public class filee
     {

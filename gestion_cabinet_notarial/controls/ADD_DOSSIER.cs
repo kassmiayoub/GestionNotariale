@@ -1,5 +1,7 @@
-﻿using gestion_cabinet_notarial.BL;
+﻿using FluentValidation.Results;
+using gestion_cabinet_notarial.BL;
 using gestion_cabinet_notarial.context;
+using gestion_cabinet_notarial.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +23,6 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {
-            if (textBox_N_dossier.Text == "")
-                return;
             var a = new dossier();
             a.Numdossier = textBox_N_dossier.Text;
             a.dateouverture = Convert.ToDateTime(bunifuDatePicker_dubet.Text);
@@ -34,6 +34,14 @@ namespace gestion_cabinet_notarial
                 a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
             else
                 a.Datefermeture = null;
+            dossierValidator validationRules = new dossierValidator();
+            ValidationResult validationResult = validationRules.Validate(a);
+            IList<ValidationFailure> errors = validationResult.Errors;
+            if (!validationResult.IsValid)
+            {
+                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             cls_Bl_Dossier.Add(a);
             THEME.operation($"AJOUTER DOSSIER NUMERANT = {textBox_N_dossier.Text}");
         }

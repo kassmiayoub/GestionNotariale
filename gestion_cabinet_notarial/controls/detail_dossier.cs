@@ -26,6 +26,11 @@ namespace gestion_cabinet_notarial
         }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
+            if (bunifuDropdowntype_contrat.SelectedIndex == -1)
+            {
+                MessageBox.Show("la selection de type contrat est vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             if (bunifuDropdowntype_contrat.Text == "PRET BANQUE")
             {
                 using (contrat_pret_banque f1 = new contrat_pret_banque(bunifuDropdowntype_contrat.Text)) { f1.ShowDialog(); }

@@ -11,5 +11,6 @@ namespace gestion_cabinet_notarial.BL
 {
     public class CSL_BL_Client_normal : CLS_REPOSITORY<ClientNormale>
     {
+        int x;
     }
 }

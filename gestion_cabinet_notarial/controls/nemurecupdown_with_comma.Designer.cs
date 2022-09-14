@@ -54,6 +54,7 @@
             this.textBox_porsontage.Size = new System.Drawing.Size(53, 26);
             this.textBox_porsontage.TabIndex = 9;
             this.textBox_porsontage.Text = "0.00";
+            this.textBox_porsontage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_porsontage_KeyPress);
             // 
             // pictureBox1
             // 

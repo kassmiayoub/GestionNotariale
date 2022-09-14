@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-//using Avocat_Maroc.PL.CONTROLS;
+using gestion_cabinet_notarial.controls;
 //using MAZ_Lawyer.PL.PL_THEMES.CUSROM_MESSAGE_BOX;
 
-namespace Avocat_Maroc.PL
+namespace gestion_cabinet_notarial
 {
     public partial class CONTROL_MAIN_HEADER : UserControl
     {
@@ -12,28 +12,26 @@ namespace Avocat_Maroc.PL
             InitializeComponent();
             TimerDate.Start();
         }
-
         private void TimerDate_Tick(object sender, System.EventArgs e)
         {
             LabelDate.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
             if (TimerDate.Interval == 1)
                 TimerDate.Interval = 1000;
         }
-
         private void LabelLogOut_Click(object sender, EventArgs e)
         {
-            //if (MessageBox.Show("خـروج ؟", "هـل تريـد الخـروج مـن حسابـك ؟", MessageBoxIcon.Question, MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //{
-            //    PanelLogOut.Visible = false;
-            //    //THEME.Theme.LOGNED_USER = null;
-            //    //THEME.Theme.FRM_MAIN.MainMenu.Visible = false;
-            //    //THEME.Theme.Navigate(typeof(CTL_LOGIN));
-            //}
+            DialogResult result1 = MessageBox.Show("Voulez-vous vous déconnecter de votre compte?",
+                                       "Important Question",
+                                       MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+                Application.OpenForms["form_main"].Close();
+                new login().Show();
+            }
         }
-
         private void CONTROL_MAIN_HEADER_Load(object sender, EventArgs e)
         {
-          //  LabelOfficeName.Text = 
+            LabelOfficeName.Text = THEME.utilisateur;
         }
     }
 }
