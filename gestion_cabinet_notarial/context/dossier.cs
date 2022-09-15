@@ -17,6 +17,7 @@ namespace gestion_cabinet_notarial.context
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public dossier()
         {
+            this.CDGs = new HashSet<CDG>();
             this.contrats = new HashSet<contrat>();
             this.fichiers_dossier = new HashSet<fichiers_dossier>();
             this.partes = new HashSet<parte>();
@@ -30,7 +31,11 @@ namespace gestion_cabinet_notarial.context
         public Nullable<System.DateTime> Datefermeture { get; set; }
         public Nullable<int> Status { get; set; }
         public string utilisateur { get; set; }
+        public Nullable<int> anne_achat { get; set; }
+        public Nullable<int> anne_vente { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CDG> CDGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<contrat> contrats { get; set; }
         public virtual utilisateur utilisateur1 { get; set; }

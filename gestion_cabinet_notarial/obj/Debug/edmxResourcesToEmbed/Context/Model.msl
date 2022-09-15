@@ -29,12 +29,12 @@
     <EntitySetMapping Name="CDGs">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.CDG">
         <MappingFragment StoreEntitySet="CDG">
+          <ScalarProperty Name="numdossier" ColumnName="numdossier" />
           <ScalarProperty Name="idversement" ColumnName="idversement" />
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="Montant" ColumnName="Montant" />
           <ScalarProperty Name="TPI" ColumnName="TPI" />
           <ScalarProperty Name="Date" ColumnName="Date" />
-          <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />
           <ScalarProperty Name="utilisateur" ColumnName="utilisateur" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -119,6 +119,8 @@
     <EntitySetMapping Name="dossiers">
       <EntityTypeMapping TypeName="gestion_cabinet_cotarialModel.dossier">
         <MappingFragment StoreEntitySet="dossier">
+          <ScalarProperty Name="anne_vente" ColumnName="anne_vente" />
+          <ScalarProperty Name="anne_achat" ColumnName="anne_achat" />
           <ScalarProperty Name="Numdossier" ColumnName="Numdossier" />
           <ScalarProperty Name="Titrefoncier" ColumnName="Titrefoncier" />
           <ScalarProperty Name="PRIX_ACQUISITION" ColumnName="PRIX_ACQUISITION" />

@@ -22,6 +22,7 @@ namespace gestion_cabinet_notarial
         public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
         public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");
         public static string contratDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "contrat");
+        public static string logoDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "logo");
 
         public static ComboBox client_or_dossier = null;
         public static Panel p = null;
@@ -46,6 +47,7 @@ namespace gestion_cabinet_notarial
         public static CTL_BANQUE CTL_BANQUE { get; set; }
         public static CTL_NOTE CTL_NOTE { get; set; }
         public static CTL_AGENDA CTL_AGENDA { get; set; }
+        public static CTL_information_cabinet CTL_information_cabinet { get; set; }
         public static CTL_LIST_UTILATUER CTL_LIST_UTILATUER { get; set; }
         public static CTL_modifier_compte CTL_modifier_compte { get; set; }        
         public static CTL_DATABASE CTL_DATABASE { get; set; }
@@ -67,6 +69,7 @@ namespace gestion_cabinet_notarial
         {
             ControlsList.Clear();
             ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_information_cabinet);
             ControlsList.Add(nouveau_credit);
             ControlsList.Add(CTL_LIST__operation);
             ControlsList.Add(CTL_DATABASE);
@@ -86,6 +89,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_information_cabinet = new CTL_information_cabinet() { Visible = false };
             nouveau_credit = new nouveau_credit() { Visible = false };
             CTL_LIST__operation = new CTL_LIST__operation() { Visible = false };
             CTL_DATABASE = new CTL_DATABASE() { Visible = false };
@@ -285,6 +289,7 @@ namespace gestion_cabinet_notarial
             string exe_client = $@"{exeFilesPath}\client";
             string exe_dossier = $@"{exeFilesPath}\dossier";
             string exe_contrat = $@"{exeFilesPath}\contrat";
+            string exe_logo= $@"{exeFilesPath}\logo";
             if (!Directory.Exists(exeFilesPath))
             {
                 // create images directory
@@ -294,8 +299,7 @@ namespace gestion_cabinet_notarial
                 Directory.CreateDirectory(exe_client);
                 Directory.CreateDirectory(exe_dossier);
                 Directory.CreateDirectory(exe_contrat);
-
-
+                Directory.CreateDirectory(exe_logo);
             }
             DirectoryInfo DirectoryTYPEInfos;
             if (type == "client")
@@ -318,6 +322,17 @@ namespace gestion_cabinet_notarial
                 {
                     Directory.CreateDirectory(dossier);
                     DirectoryTYPEInfos = new DirectoryInfo(dossier);
+                }
+            }
+            else if(type == "logo")
+            {
+                string logo = $@"{exe_logo}";
+                if (Directory.Exists(logo))
+                    DirectoryTYPEInfos = new DirectoryInfo(logo);
+                else
+                {
+                    Directory.CreateDirectory(logo);
+                    DirectoryTYPEInfos = new DirectoryInfo(logo);
                 }
             }
             else
@@ -345,20 +360,26 @@ namespace gestion_cabinet_notarial
             // Copy the image to the executable directory :
             // Directory for the specified Patient :
             var Name = Path.GetFileName(FilePath);
-            MessageBox.Show(FilePath);
-            MessageBox.Show(Name);
             //var imageExtension = fi.Extension;
-            if (!Directory.Exists($@"{exeFilesPath}\{DirectoryTYPEInfos}\{Name}"))
+           // MessageBox.Show($@"{DirectoryTYPEInfos}\{Name}");
+            if (!Directory.Exists($@"{exe_logo}\{Name}"))
             {
-                fi.CopyTo($@"{DirectoryTYPEInfos}\{Name}", true);
-                return Name;
+                try
+                {
+                    fi.CopyTo($@"{DirectoryTYPEInfos}\{Name}", true);
+                    return Name;
+                }
+                catch {
+
+                    return "";
+                }
+                
+               
             }
             else
             {
                 return "";
-            }
-                
-            
+            }                           
         }
     }
     public class cliente

@@ -19,10 +19,10 @@ namespace gestion_cabinet_notarial.context
         public Nullable<double> Montant { get; set; }
         public Nullable<double> TPI { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
-        public Nullable<int> idcontrat { get; set; }
         public string utilisateur { get; set; }
+        public string numdossier { get; set; }
     
-        public virtual contrat contrat { get; set; }
         public virtual utilisateur utilisateur1 { get; set; }
+        public virtual dossier dossier { get; set; }
     }
 }

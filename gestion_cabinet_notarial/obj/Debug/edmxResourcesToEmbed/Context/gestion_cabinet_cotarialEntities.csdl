@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gestion_cabinet_notarialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="banque">
+    <Key>
+      <PropertyRef Name="Idbanque" />
+    </Key>
+    <Property Name="Idbanque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libbele" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__banque__utilisat__4D94879B" FromRole="banque" ToRole="utilisateur" />
+    <NavigationProperty Name="Banque_pret" Relationship="Self.FK__Banque_pr__idban__5AEE82B9" FromRole="banque" ToRole="Banque_pret" />
+    <NavigationProperty Name="payements" Relationship="Self.FK__payement__idbanq__534D60F1" FromRole="banque" ToRole="payement" />
+  </EntityType>
+  <EntityType Name="Banque_pret">
+    <Key>
+      <PropertyRef Name="Idpret" />
+    </Key>
+    <Property Name="Idpret" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Montant" Type="Double" />
+    <Property Name="DERU" Type="Int32" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="idbanque" Type="Int32" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="INTIERET" Type="Double" />
+    <Property Name="PAYE_PAR_MOIS" Type="Double" />
+    <NavigationProperty Name="banque" Relationship="Self.FK__Banque_pr__idban__5AEE82B9" FromRole="Banque_pret" ToRole="banque" />
+    <NavigationProperty Name="client" Relationship="Self.FK__Banque_pr__idCli__5BE2A6F2" FromRole="Banque_pret" ToRole="client" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__Banque_pr__idcon__59FA5E80" FromRole="Banque_pret" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__Banque_pr__utili__5CD6CB2B" FromRole="Banque_pret" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="CDG">
+    <Key>
+      <PropertyRef Name="idversement" />
+    </Key>
+    <Property Name="idversement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Montant" Type="Double" />
+    <Property Name="TPI" Type="Double" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__CDG__utilisateur__60A75C0F" FromRole="CDG" ToRole="utilisateur" />
+    <NavigationProperty Name="dossier" Relationship="Self.FK_dossier_cdg" FromRole="CDG" ToRole="dossier" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tele" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Banque_pret" Relationship="Self.FK__Banque_pr__idCli__5BE2A6F2" FromRole="client" ToRole="Banque_pret" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__client__utilisat__267ABA7A" FromRole="client" ToRole="utilisateur" />
+    <NavigationProperty Name="ClientNormale" Relationship="Self.FK__ClientNor__idCli__29572725" FromRole="client" ToRole="ClientNormale" />
+    <NavigationProperty Name="ClientProfessionnel" Relationship="Self.FK__ClientPro__idCli__2C3393D0" FromRole="client" ToRole="ClientProfessionnel" />
+    <NavigationProperty Name="credits" Relationship="Self.FK__credit__idClient__70DDC3D8" FromRole="client" ToRole="credit" />
+    <NavigationProperty Name="devis" Relationship="Self.FK__devis__idClient__6C190EBB" FromRole="client" ToRole="devis" />
+    <NavigationProperty Name="factures" Relationship="Self.FK__facture__idClien__75A278F5" FromRole="client" ToRole="facture" />
+    <NavigationProperty Name="fichiers_client" Relationship="Self.FK__fichiers___idCli__4222D4EF" FromRole="client" ToRole="fichiers_client" />
+    <NavigationProperty Name="partes" Relationship="Self.FK__partes__idClient__45F365D3" FromRole="client" ToRole="partes" />
+    <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
+    <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="client" ToRole="Rendez_vous" />
+  </EntityType>
+  <EntityType Name="ClientNormale">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="Int32" Nullable="false" />
+    <Property Name="CIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__ClientNor__idCli__29572725" FromRole="ClientNormale" ToRole="client" />
+  </EntityType>
+  <EntityType Name="ClientProfessionnel">
+    <Key>
+      <PropertyRef Name="idClient" />
+    </Key>
+    <Property Name="idClient" Type="Int32" Nullable="false" />
+    <Property Name="ICE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdentifiantFiscale" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__ClientPro__idCli__2C3393D0" FromRole="ClientProfessionnel" ToRole="client" />
+  </EntityType>
+  <EntityType Name="contrat">
+    <Key>
+      <PropertyRef Name="Idcontrat" />
+    </Key>
+    <Property Name="Idcontrat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typecontrat" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Enregistrement" Type="Double" />
+    <Property Name="Ancfcc" Type="Double" />
+    <Property Name="Timbres" Type="Double" />
+    <Property Name="Honoraires" Type="Double" />
+    <Property Name="TVA_Honoraires" Type="Double" />
+    <Property Name="dateouverture" Type="DateTime" Precision="0" />
+    <Property Name="Datefermeture" Type="DateTime" Precision="0" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Banque_pret" Relationship="Self.FK__Banque_pr__idcon__59FA5E80" FromRole="contrat" ToRole="Banque_pret" />
+    <NavigationProperty Name="dossier" Relationship="Self.FK__contrat__numdoss__37A5467C" FromRole="contrat" ToRole="dossier" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__contrat__utilisa__36B12243" FromRole="contrat" ToRole="utilisateur" />
+    <NavigationProperty Name="credits" Relationship="Self.FK__credit__idcontra__6FE99F9F" FromRole="contrat" ToRole="credit" />
+    <NavigationProperty Name="factures" Relationship="Self.FK__facture__idcontr__74AE54BC" FromRole="contrat" ToRole="facture" />
+    <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___idcon__3E52440B" FromRole="contrat" ToRole="fichiers_contrat" />
+    <NavigationProperty Name="payements" Relationship="Self.FK__payement__idcont__5165187F" FromRole="contrat" ToRole="payement" />
+    <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="contrat" ToRole="Signature" />
+  </EntityType>
+  <EntityType Name="credit">
+    <Key>
+      <PropertyRef Name="Idcredit" />
+    </Key>
+    <Property Name="Idcredit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="montant" Type="Double" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__credit__idClient__70DDC3D8" FromRole="credit" ToRole="client" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__credit__idcontra__6FE99F9F" FromRole="credit" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__credit__utilisat__71D1E811" FromRole="credit" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="devi">
+    <Key>
+      <PropertyRef Name="Iddevis" />
+    </Key>
+    <Property Name="Iddevis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Enregistrement" Type="Double" />
+    <Property Name="Ancfcc" Type="Double" />
+    <Property Name="Timbres" Type="Double" />
+    <Property Name="Honoraires" Type="Double" />
+    <Property Name="TVA_Honoraires" Type="Double" />
+    <Property Name="Objet" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="typecontrat" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__devis__idClient__6C190EBB" FromRole="devis" ToRole="client" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__devis__utilisate__6D0D32F4" FromRole="devis" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="dossier">
+    <Key>
+      <PropertyRef Name="Numdossier" />
+    </Key>
+    <Property Name="Numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titrefoncier" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PRIX_ACQUISITION" Type="Double" />
+    <Property Name="Objet" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateouverture" Type="DateTime" Precision="0" />
+    <Property Name="Datefermeture" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="anne_achat" Type="Int32" />
+    <Property Name="anne_vente" Type="Int32" />
+    <NavigationProperty Name="CDGs" Relationship="Self.FK_dossier_cdg" FromRole="dossier" ToRole="CDG" />
+    <NavigationProperty Name="contrats" Relationship="Self.FK__contrat__numdoss__37A5467C" FromRole="dossier" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="dossier" ToRole="utilisateur" />
+    <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
+    <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
+  </EntityType>
+  <EntityType Name="facture">
+    <Key>
+      <PropertyRef Name="idfacture" />
+    </Key>
+    <Property Name="idfacture" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__facture__idClien__75A278F5" FromRole="facture" ToRole="client" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__facture__idcontr__74AE54BC" FromRole="facture" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__facture__utilisa__76969D2E" FromRole="facture" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="fichiers_client">
+    <Key>
+      <PropertyRef Name="idfile" />
+    </Key>
+    <Property Name="idfile" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="descreption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__fichiers___idCli__4222D4EF" FromRole="fichiers_client" ToRole="client" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__fichiers___utili__4316F928" FromRole="fichiers_client" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="fichiers_contrat">
+    <Key>
+      <PropertyRef Name="idfile" />
+    </Key>
+    <Property Name="idfile" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="descreption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__fichiers___idcon__3E52440B" FromRole="fichiers_contrat" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__fichiers___utili__3F466844" FromRole="fichiers_contrat" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="fichiers_dossier">
+    <Key>
+      <PropertyRef Name="idfile" />
+    </Key>
+    <Property Name="idfile" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="descreption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="fichiers_dossier" ToRole="dossier" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__fichiers___utili__3B75D760" FromRole="fichiers_dossier" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="fonction">
+    <Key>
+      <PropertyRef Name="Userfunction" />
+    </Key>
+    <Property Name="Userfunction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fonction1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__fonction__utilis__571DF1D5" FromRole="fonction" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="Idlog" />
+    </Key>
+    <Property Name="Idlog" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__log__utilisateur__6383C8BA" FromRole="log" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="note">
+    <Key>
+      <PropertyRef Name="Idnote" />
+    </Key>
+    <Property Name="Idnote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="date_alere" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__note__utilisateu__693CA210" FromRole="note" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="parte">
+    <Key>
+      <PropertyRef Name="Idpartes" />
+    </Key>
+    <Property Name="Idpartes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Typeclient" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Condition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__partes__idClient__45F365D3" FromRole="partes" ToRole="client" />
+    <NavigationProperty Name="dossier" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="partes" ToRole="dossier" />
+    <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idpat__49C3F6B7" FromRole="partes" ToRole="Signature" />
+  </EntityType>
+  <EntityType Name="payement">
+    <Key>
+      <PropertyRef Name="idPayement" />
+    </Key>
+    <Property Name="idPayement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="type_Payement" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Montant" Type="Double" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="idbanque" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="typecharge" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="banque" Relationship="Self.FK__payement__idbanq__534D60F1" FromRole="payement" ToRole="banque" />
+    <NavigationProperty Name="client" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="payement" ToRole="client" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__payement__idcont__5165187F" FromRole="payement" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__payement__utilis__5441852A" FromRole="payement" ToRole="utilisateur" />
+    <NavigationProperty Name="recus" Relationship="Self.FK__recu__idPayement__66603565" FromRole="payement" ToRole="recu" />
+  </EntityType>
+  <EntityType Name="recu">
+    <Key>
+      <PropertyRef Name="idrecu" />
+    </Key>
+    <Property Name="idrecu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DATE" Type="DateTime" Precision="0" />
+    <Property Name="idPayement" Type="Int32" />
+    <NavigationProperty Name="payement" Relationship="Self.FK__recu__idPayement__66603565" FromRole="recu" ToRole="payement" />
+  </EntityType>
+  <EntityType Name="Rendez_vous">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datee" Type="DateTime" Precision="0" />
+    <Property Name="Timedebut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Timefin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idClient" Type="Int32" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="Rendez_vous" ToRole="client" />
+    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="Rendez_vous" ToRole="utilisateur" />
+  </EntityType>
+  <EntityType Name="Signature">
+    <Key>
+      <PropertyRef Name="IdSignature" />
+    </Key>
+    <Property Name="IdSignature" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateSignatur" Type="DateTime" Precision="0" />
+    <Property Name="idpatres" Type="Int32" />
+    <Property Name="idcontrat" Type="Int32" />
+    <NavigationProperty Name="contrat" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="Signature" ToRole="contrat" />
+    <NavigationProperty Name="parte" Relationship="Self.FK__Signature__idpat__49C3F6B7" FromRole="Signature" ToRole="partes" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="utilisateur">
+    <Key>
+      <PropertyRef Name="utilisateur1" />
+    </Key>
+    <Property Name="utilisateur1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="banques" Relationship="Self.FK__banque__utilisat__4D94879B" FromRole="utilisateur" ToRole="banque" />
+    <NavigationProperty Name="Banque_pret" Relationship="Self.FK__Banque_pr__utili__5CD6CB2B" FromRole="utilisateur" ToRole="Banque_pret" />
+    <NavigationProperty Name="CDGs" Relationship="Self.FK__CDG__utilisateur__60A75C0F" FromRole="utilisateur" ToRole="CDG" />
+    <NavigationProperty Name="clients" Relationship="Self.FK__client__utilisat__267ABA7A" FromRole="utilisateur" ToRole="client" />
+    <NavigationProperty Name="contrats" Relationship="Self.FK__contrat__utilisa__36B12243" FromRole="utilisateur" ToRole="contrat" />
+    <NavigationProperty Name="credits" Relationship="Self.FK__credit__utilisat__71D1E811" FromRole="utilisateur" ToRole="credit" />
+    <NavigationProperty Name="devis" Relationship="Self.FK__devis__utilisate__6D0D32F4" FromRole="utilisateur" ToRole="devis" />
+    <NavigationProperty Name="dossiers" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="utilisateur" ToRole="dossier" />
+    <NavigationProperty Name="factures" Relationship="Self.FK__facture__utilisa__76969D2E" FromRole="utilisateur" ToRole="facture" />
+    <NavigationProperty Name="fichiers_client" Relationship="Self.FK__fichiers___utili__4316F928" FromRole="utilisateur" ToRole="fichiers_client" />
+    <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___utili__3F466844" FromRole="utilisateur" ToRole="fichiers_contrat" />
+    <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___utili__3B75D760" FromRole="utilisateur" ToRole="fichiers_dossier" />
+    <NavigationProperty Name="fonctions" Relationship="Self.FK__fonction__utilis__571DF1D5" FromRole="utilisateur" ToRole="fonction" />
+    <NavigationProperty Name="logs" Relationship="Self.FK__log__utilisateur__6383C8BA" FromRole="utilisateur" ToRole="log" />
+    <NavigationProperty Name="notes" Relationship="Self.FK__note__utilisateu__693CA210" FromRole="utilisateur" ToRole="note" />
+    <NavigationProperty Name="payements" Relationship="Self.FK__payement__utilis__5441852A" FromRole="utilisateur" ToRole="payement" />
+    <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="utilisateur" ToRole="Rendez_vous" />
+  </EntityType>
+  <Association Name="FK__banque__utilisat__4D94879B">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="banque" Type="Self.banque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="banque">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banque_pr__idban__5AEE82B9">
+    <End Role="banque" Type="Self.banque" Multiplicity="0..1" />
+    <End Role="Banque_pret" Type="Self.Banque_pret" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="banque">
+        <PropertyRef Name="Idbanque" />
+      </Principal>
+      <Dependent Role="Banque_pret">
+        <PropertyRef Name="idbanque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__payement__idbanq__534D60F1">
+    <End Role="banque" Type="Self.banque" Multiplicity="0..1" />
+    <End Role="payement" Type="Self.payement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="banque">
+        <PropertyRef Name="Idbanque" />
+      </Principal>
+      <Dependent Role="payement">
+        <PropertyRef Name="idbanque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banque_pr__idCli__5BE2A6F2">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="Banque_pret" Type="Self.Banque_pret" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="Banque_pret">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banque_pr__idcon__59FA5E80">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="Banque_pret" Type="Self.Banque_pret" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="Banque_pret">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banque_pr__utili__5CD6CB2B">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="Banque_pret" Type="Self.Banque_pret" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="Banque_pret">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CDG__utilisateur__60A75C0F">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="CDG" Type="Self.CDG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="CDG">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dossier_cdg">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="CDG" Type="Self.CDG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="CDG">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__client__utilisat__267ABA7A">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClientNor__idCli__29572725">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="ClientNormale" Type="Self.ClientNormale" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="ClientNormale">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClientPro__idCli__2C3393D0">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="ClientProfessionnel" Type="Self.ClientProfessionnel" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="ClientProfessionnel">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__credit__idClient__70DDC3D8">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="credit" Type="Self.credit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="credit">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__devis__idClient__6C190EBB">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="devis" Type="Self.devi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="devis">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facture__idClien__75A278F5">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="facture" Type="Self.facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___idCli__4222D4EF">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="fichiers_client" Type="Self.fichiers_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="fichiers_client">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__partes__idClient__45F365D3">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="partes" Type="Self.parte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="partes">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__payement__idClie__52593CB8">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="payement" Type="Self.payement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="payement">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rendez_vo__idCli__2F10007B">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="Rendez_vous" Type="Self.Rendez_vous" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="Rendez_vous">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__contrat__numdoss__37A5467C">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="contrat" Type="Self.contrat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="contrat">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__contrat__utilisa__36B12243">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="contrat" Type="Self.contrat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="contrat">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__credit__idcontra__6FE99F9F">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="credit" Type="Self.credit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="credit">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facture__idcontr__74AE54BC">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="facture" Type="Self.facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___idcon__3E52440B">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="fichiers_contrat" Type="Self.fichiers_contrat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="fichiers_contrat">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__payement__idcont__5165187F">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="payement" Type="Self.payement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="payement">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Signature__idcon__4AB81AF0">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="Signature" Type="Self.Signature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="Signature">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__credit__utilisat__71D1E811">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="credit" Type="Self.credit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="credit">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__devis__utilisate__6D0D32F4">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="devis" Type="Self.devi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="devis">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__dossier__utilisa__33D4B598">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="dossier" Type="Self.dossier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="dossier">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___numdo__3A81B327">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="fichiers_dossier" Type="Self.fichiers_dossier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="fichiers_dossier">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__partes__numdossi__46E78A0C">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="partes" Type="Self.parte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="partes">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facture__utilisa__76969D2E">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="facture" Type="Self.facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___utili__4316F928">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="fichiers_client" Type="Self.fichiers_client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="fichiers_client">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___utili__3F466844">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="fichiers_contrat" Type="Self.fichiers_contrat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="fichiers_contrat">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fichiers___utili__3B75D760">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="fichiers_dossier" Type="Self.fichiers_dossier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="fichiers_dossier">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fonction__utilis__571DF1D5">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="fonction" Type="Self.fonction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="fonction">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__log__utilisateur__6383C8BA">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="log" Type="Self.log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="log">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__note__utilisateu__693CA210">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="note" Type="Self.note" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="note">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Signature__idpat__49C3F6B7">
+    <End Role="partes" Type="Self.parte" Multiplicity="0..1" />
+    <End Role="Signature" Type="Self.Signature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="partes">
+        <PropertyRef Name="Idpartes" />
+      </Principal>
+      <Dependent Role="Signature">
+        <PropertyRef Name="idpatres" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__payement__utilis__5441852A">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="payement" Type="Self.payement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="payement">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recu__idPayement__66603565">
+    <End Role="payement" Type="Self.payement" Multiplicity="0..1" />
+    <End Role="recu" Type="Self.recu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="payement">
+        <PropertyRef Name="idPayement" />
+      </Principal>
+      <Dependent Role="recu">
+        <PropertyRef Name="idPayement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rendez_vo__utili__300424B4">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="Rendez_vous" Type="Self.Rendez_vous" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="Rendez_vous">
+        <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="gestion_cabinet_notarialEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="banques" EntityType="Self.banque" />
+    <EntitySet Name="Banque_pret" EntityType="Self.Banque_pret" />
+    <EntitySet Name="CDGs" EntityType="Self.CDG" />
+    <EntitySet Name="clients" EntityType="Self.client" />
+    <EntitySet Name="ClientNormales" EntityType="Self.ClientNormale" />
+    <EntitySet Name="ClientProfessionnels" EntityType="Self.ClientProfessionnel" />
+    <EntitySet Name="contrats" EntityType="Self.contrat" />
+    <EntitySet Name="credits" EntityType="Self.credit" />
+    <EntitySet Name="devis" EntityType="Self.devi" />
+    <EntitySet Name="dossiers" EntityType="Self.dossier" />
+    <EntitySet Name="factures" EntityType="Self.facture" />
+    <EntitySet Name="fichiers_client" EntityType="Self.fichiers_client" />
+    <EntitySet Name="fichiers_contrat" EntityType="Self.fichiers_contrat" />
+    <EntitySet Name="fichiers_dossier" EntityType="Self.fichiers_dossier" />
+    <EntitySet Name="fonctions" EntityType="Self.fonction" />
+    <EntitySet Name="logs" EntityType="Self.log" />
+    <EntitySet Name="notes" EntityType="Self.note" />
+    <EntitySet Name="partes" EntityType="Self.parte" />
+    <EntitySet Name="payements" EntityType="Self.payement" />
+    <EntitySet Name="recus" EntityType="Self.recu" />
+    <EntitySet Name="Rendez_vous" EntityType="Self.Rendez_vous" />
+    <EntitySet Name="Signatures" EntityType="Self.Signature" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="utilisateurs" EntityType="Self.utilisateur" />
+    <AssociationSet Name="FK__banque__utilisat__4D94879B" Association="Self.FK__banque__utilisat__4D94879B">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="banque" EntitySet="banques" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banque_pr__idban__5AEE82B9" Association="Self.FK__Banque_pr__idban__5AEE82B9">
+      <End Role="banque" EntitySet="banques" />
+      <End Role="Banque_pret" EntitySet="Banque_pret" />
+    </AssociationSet>
+    <AssociationSet Name="FK__payement__idbanq__534D60F1" Association="Self.FK__payement__idbanq__534D60F1">
+      <End Role="banque" EntitySet="banques" />
+      <End Role="payement" EntitySet="payements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banque_pr__idCli__5BE2A6F2" Association="Self.FK__Banque_pr__idCli__5BE2A6F2">
+      <End Role="client" EntitySet="clients" />
+      <End Role="Banque_pret" EntitySet="Banque_pret" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banque_pr__idcon__59FA5E80" Association="Self.FK__Banque_pr__idcon__59FA5E80">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="Banque_pret" EntitySet="Banque_pret" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banque_pr__utili__5CD6CB2B" Association="Self.FK__Banque_pr__utili__5CD6CB2B">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="Banque_pret" EntitySet="Banque_pret" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CDG__utilisateur__60A75C0F" Association="Self.FK__CDG__utilisateur__60A75C0F">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="CDG" EntitySet="CDGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dossier_cdg" Association="Self.FK_dossier_cdg">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="CDG" EntitySet="CDGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__client__utilisat__267ABA7A" Association="Self.FK__client__utilisat__267ABA7A">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="client" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClientNor__idCli__29572725" Association="Self.FK__ClientNor__idCli__29572725">
+      <End Role="client" EntitySet="clients" />
+      <End Role="ClientNormale" EntitySet="ClientNormales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClientPro__idCli__2C3393D0" Association="Self.FK__ClientPro__idCli__2C3393D0">
+      <End Role="client" EntitySet="clients" />
+      <End Role="ClientProfessionnel" EntitySet="ClientProfessionnels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__credit__idClient__70DDC3D8" Association="Self.FK__credit__idClient__70DDC3D8">
+      <End Role="client" EntitySet="clients" />
+      <End Role="credit" EntitySet="credits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__devis__idClient__6C190EBB" Association="Self.FK__devis__idClient__6C190EBB">
+      <End Role="client" EntitySet="clients" />
+      <End Role="devis" EntitySet="devis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__idClien__75A278F5" Association="Self.FK__facture__idClien__75A278F5">
+      <End Role="client" EntitySet="clients" />
+      <End Role="facture" EntitySet="factures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___idCli__4222D4EF" Association="Self.FK__fichiers___idCli__4222D4EF">
+      <End Role="client" EntitySet="clients" />
+      <End Role="fichiers_client" EntitySet="fichiers_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__partes__idClient__45F365D3" Association="Self.FK__partes__idClient__45F365D3">
+      <End Role="client" EntitySet="clients" />
+      <End Role="partes" EntitySet="partes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__payement__idClie__52593CB8" Association="Self.FK__payement__idClie__52593CB8">
+      <End Role="client" EntitySet="clients" />
+      <End Role="payement" EntitySet="payements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rendez_vo__idCli__2F10007B" Association="Self.FK__Rendez_vo__idCli__2F10007B">
+      <End Role="client" EntitySet="clients" />
+      <End Role="Rendez_vous" EntitySet="Rendez_vous" />
+    </AssociationSet>
+    <AssociationSet Name="FK__contrat__numdoss__37A5467C" Association="Self.FK__contrat__numdoss__37A5467C">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="contrat" EntitySet="contrats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__contrat__utilisa__36B12243" Association="Self.FK__contrat__utilisa__36B12243">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="contrat" EntitySet="contrats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__credit__idcontra__6FE99F9F" Association="Self.FK__credit__idcontra__6FE99F9F">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="credit" EntitySet="credits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__idcontr__74AE54BC" Association="Self.FK__facture__idcontr__74AE54BC">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="facture" EntitySet="factures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___idcon__3E52440B" Association="Self.FK__fichiers___idcon__3E52440B">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="fichiers_contrat" EntitySet="fichiers_contrat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__payement__idcont__5165187F" Association="Self.FK__payement__idcont__5165187F">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="payement" EntitySet="payements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Signature__idcon__4AB81AF0" Association="Self.FK__Signature__idcon__4AB81AF0">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="Signature" EntitySet="Signatures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__credit__utilisat__71D1E811" Association="Self.FK__credit__utilisat__71D1E811">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="credit" EntitySet="credits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__devis__utilisate__6D0D32F4" Association="Self.FK__devis__utilisate__6D0D32F4">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="devis" EntitySet="devis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__dossier__utilisa__33D4B598" Association="Self.FK__dossier__utilisa__33D4B598">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="dossier" EntitySet="dossiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___numdo__3A81B327" Association="Self.FK__fichiers___numdo__3A81B327">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="fichiers_dossier" EntitySet="fichiers_dossier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__partes__numdossi__46E78A0C" Association="Self.FK__partes__numdossi__46E78A0C">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="partes" EntitySet="partes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__utilisa__76969D2E" Association="Self.FK__facture__utilisa__76969D2E">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="facture" EntitySet="factures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___utili__4316F928" Association="Self.FK__fichiers___utili__4316F928">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="fichiers_client" EntitySet="fichiers_client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___utili__3F466844" Association="Self.FK__fichiers___utili__3F466844">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="fichiers_contrat" EntitySet="fichiers_contrat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fichiers___utili__3B75D760" Association="Self.FK__fichiers___utili__3B75D760">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="fichiers_dossier" EntitySet="fichiers_dossier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fonction__utilis__571DF1D5" Association="Self.FK__fonction__utilis__571DF1D5">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="fonction" EntitySet="fonctions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__log__utilisateur__6383C8BA" Association="Self.FK__log__utilisateur__6383C8BA">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="log" EntitySet="logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__note__utilisateu__693CA210" Association="Self.FK__note__utilisateu__693CA210">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="note" EntitySet="notes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Signature__idpat__49C3F6B7" Association="Self.FK__Signature__idpat__49C3F6B7">
+      <End Role="partes" EntitySet="partes" />
+      <End Role="Signature" EntitySet="Signatures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__payement__utilis__5441852A" Association="Self.FK__payement__utilis__5441852A">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="payement" EntitySet="payements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recu__idPayement__66603565" Association="Self.FK__recu__idPayement__66603565">
+      <End Role="payement" EntitySet="payements" />
+      <End Role="recu" EntitySet="recus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rendez_vo__utili__300424B4" Association="Self.FK__Rendez_vo__utili__300424B4">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="Rendez_vous" EntitySet="Rendez_vous" />
+    </AssociationSet>
+    <EntitySet Name="information_cabinet" EntityType="gestion_cabinet_notarialModel.information_cabinet" />
+  </EntityContainer>
+  <EntityType Name="information_cabinet">
+    <Key>
+      <PropertyRef Name="idcabinet" />
+    </Key>
+    <Property Name="idcabinet" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nomcabinet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tele" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="localisation" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="setweb" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

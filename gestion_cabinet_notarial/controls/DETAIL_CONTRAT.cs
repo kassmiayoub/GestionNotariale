@@ -181,6 +181,12 @@ namespace gestion_cabinet_notarial
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
                 bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();   
                 tva.Text = ((Honoraires*20)/100).ToString();
+            double montant = (Ancfcc) + (Enregistrement) + (Honoraires) + (Timbres);
+            double payement = (montant_paye_Ancfcc + montant_paye_Enregistrement + montant_paye_Honoraires + montant_paye_Timbres);
+            string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant- payement).ToString(), ((montant * 100) / THEME.prix).ToString()
+        };
+            bunifuDataGridView_statistic.Rows.Add(r);
+            bunifuDataGridView_statistic.Rows[4].Cells[0].Style.Font = new Font("Arial", 15, FontStyle.Bold);
         }
         private void RDCHEQUE_CheckedChanged(object sender, EventArgs e)
         {

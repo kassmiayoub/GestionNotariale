@@ -30,6 +30,8 @@ namespace gestion_cabinet_notarial
             a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
             a.Titrefoncier=textBox_titre_foncier.Text;
             a.Objet = textBox_obj.Text;
+            a.anne_achat =int.Parse(textBox_anne_achat.Text);
+            a.anne_vente = int.Parse(textBox_anne_vente.Text);
             if(bunifuCheckBox_status.Checked)
                 a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
             else
@@ -159,8 +161,52 @@ namespace gestion_cabinet_notarial
                 PRIX = ele.PRIX_ACQUISITION.ToString()
             }).ToList();
             bunifuDataGridView_list_dossier.DataSource = ListDataSource;
+            textBox_anne_vente.Text = DateTime.Now.Year.ToString();
             if(this.Visible)
                 THEME.operation($"COSULTER DES DOSSIERS");
+
+        }
+
+        private void textBox_prix_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_titre_foncier_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_anne_vente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_anne_achat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        //    if ((textBox_anne_achat.Text.Length+1 == 4) && e.KeyChar == (char)Keys.Delete)
+        //        e.Handled = false;
+        //    if ((textBox_anne_achat.Text.Length+1 == 4))
+        //        e.Handled = true;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                    e.Handled = true;
+            }
         }
     }
     public class dossierSerche

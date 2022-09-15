@@ -39,10 +39,10 @@
     <Property Name="Montant" Type="Double" />
     <Property Name="TPI" Type="Double" />
     <Property Name="Date" Type="DateTime" Precision="0" />
-    <Property Name="idcontrat" Type="Int32" />
     <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="contrat" Relationship="Self.FK__CDG__idcontrat__5FB337D6" FromRole="CDG" ToRole="contrat" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__CDG__utilisateur__60A75C0F" FromRole="CDG" ToRole="utilisateur" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dossier" Relationship="gestion_cabinet_cotarialModel.FK_dossier_cdg" FromRole="CDG" ToRole="dossier" />
   </EntityType>
   <EntityType Name="client">
     <Key>
@@ -158,6 +158,9 @@
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="dossier" ToRole="utilisateur" />
     <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
+    <Property Name="anne_achat" Type="Int32" />
+    <Property Name="anne_vente" Type="Int32" />
+    <NavigationProperty Name="CDGs" Relationship="gestion_cabinet_cotarialModel.FK_dossier_cdg" FromRole="dossier" ToRole="CDG" />
   </EntityType>
   <EntityType Name="facture">
     <Key>
@@ -1025,5 +1028,21 @@
       <End Role="utilisateur" EntitySet="utilisateurs" />
       <End Role="Rendez_vous" EntitySet="Rendez_vous" />
     </AssociationSet>
+    <AssociationSet Name="FK_dossier_cdg" Association="gestion_cabinet_cotarialModel.FK_dossier_cdg">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="CDG" EntitySet="CDGs" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_dossier_cdg">
+    <End Type="gestion_cabinet_cotarialModel.dossier" Role="dossier" Multiplicity="0..1" />
+    <End Type="gestion_cabinet_cotarialModel.CDG" Role="CDG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="CDG">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

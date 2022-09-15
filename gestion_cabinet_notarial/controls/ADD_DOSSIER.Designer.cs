@@ -53,6 +53,10 @@ namespace gestion_cabinet_notarial
             this.bunifuDatePicker_dubet = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuDatePicker_fin = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuCheckBox_status = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_anne_achat = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_anne_vente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +71,7 @@ namespace gestion_cabinet_notarial
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonInit.Location = new System.Drawing.Point(127, 243);
+            this.ButtonInit.Location = new System.Drawing.Point(127, 253);
             this.ButtonInit.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonInit.Name = "ButtonInit";
             this.ButtonInit.Size = new System.Drawing.Size(132, 35);
@@ -88,7 +92,7 @@ namespace gestion_cabinet_notarial
             this.ButtonAdd_dossier.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_dossier.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_dossier.Location = new System.Drawing.Point(261, 243);
+            this.ButtonAdd_dossier.Location = new System.Drawing.Point(261, 253);
             this.ButtonAdd_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_dossier.Name = "ButtonAdd_dossier";
             this.ButtonAdd_dossier.Size = new System.Drawing.Size(132, 35);
@@ -103,7 +107,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_N_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_N_dossier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_N_dossier.Location = new System.Drawing.Point(220, 56);
+            this.textBox_N_dossier.Location = new System.Drawing.Point(220, 43);
             this.textBox_N_dossier.Multiline = true;
             this.textBox_N_dossier.Name = "textBox_N_dossier";
             this.textBox_N_dossier.Size = new System.Drawing.Size(278, 31);
@@ -115,7 +119,7 @@ namespace gestion_cabinet_notarial
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 64);
+            this.label1.Location = new System.Drawing.Point(88, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 412;
@@ -126,7 +130,7 @@ namespace gestion_cabinet_notarial
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 113);
+            this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 19);
             this.label2.TabIndex = 413;
@@ -137,7 +141,7 @@ namespace gestion_cabinet_notarial
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 162);
+            this.label3.Location = new System.Drawing.Point(44, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 19);
             this.label3.TabIndex = 414;
@@ -148,7 +152,7 @@ namespace gestion_cabinet_notarial
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 63);
+            this.label4.Location = new System.Drawing.Point(540, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 19);
             this.label4.TabIndex = 415;
@@ -159,7 +163,7 @@ namespace gestion_cabinet_notarial
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 113);
+            this.label6.Location = new System.Drawing.Point(574, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 417;
@@ -170,7 +174,7 @@ namespace gestion_cabinet_notarial
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(625, 168);
+            this.label7.Location = new System.Drawing.Point(625, 142);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 19);
             this.label7.TabIndex = 418;
@@ -187,7 +191,7 @@ namespace gestion_cabinet_notarial
             this.ButtonSearch_dossier.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch_dossier.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch_dossier.Location = new System.Drawing.Point(529, 243);
+            this.ButtonSearch_dossier.Location = new System.Drawing.Point(529, 253);
             this.ButtonSearch_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch_dossier.Name = "ButtonSearch_dossier";
             this.ButtonSearch_dossier.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -210,7 +214,7 @@ namespace gestion_cabinet_notarial
             this.ButtonEdit_dossier.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit_dossier.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonEdit_dossier.Location = new System.Drawing.Point(395, 243);
+            this.ButtonEdit_dossier.Location = new System.Drawing.Point(395, 253);
             this.ButtonEdit_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonEdit_dossier.Name = "ButtonEdit_dossier";
             this.ButtonEdit_dossier.Size = new System.Drawing.Size(132, 35);
@@ -225,27 +229,29 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_prix.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_prix.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_prix.Location = new System.Drawing.Point(723, 56);
+            this.textBox_prix.Location = new System.Drawing.Point(723, 41);
             this.textBox_prix.Multiline = true;
             this.textBox_prix.Name = "textBox_prix";
             this.textBox_prix.Size = new System.Drawing.Size(278, 31);
             this.textBox_prix.TabIndex = 422;
+            this.textBox_prix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_prix_KeyPress);
             // 
             // textBox_titre_foncier
             // 
             this.textBox_titre_foncier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_titre_foncier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_titre_foncier.Location = new System.Drawing.Point(723, 106);
+            this.textBox_titre_foncier.Location = new System.Drawing.Point(723, 87);
             this.textBox_titre_foncier.Multiline = true;
             this.textBox_titre_foncier.Name = "textBox_titre_foncier";
             this.textBox_titre_foncier.Size = new System.Drawing.Size(278, 31);
             this.textBox_titre_foncier.TabIndex = 426;
+            this.textBox_titre_foncier.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_titre_foncier_KeyPress);
             // 
             // textBox_obj
             // 
             this.textBox_obj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_obj.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_obj.Location = new System.Drawing.Point(723, 161);
+            this.textBox_obj.Location = new System.Drawing.Point(723, 135);
             this.textBox_obj.Multiline = true;
             this.textBox_obj.Name = "textBox_obj";
             this.textBox_obj.Size = new System.Drawing.Size(278, 31);
@@ -261,7 +267,7 @@ namespace gestion_cabinet_notarial
             this.button_detail_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
             this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_detail_dossier.Location = new System.Drawing.Point(785, 243);
+            this.button_detail_dossier.Location = new System.Drawing.Point(785, 248);
             this.button_detail_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.button_detail_dossier.Name = "button_detail_dossier";
             this.button_detail_dossier.Size = new System.Drawing.Size(216, 53);
@@ -364,7 +370,7 @@ namespace gestion_cabinet_notarial
             this.bunifuDatePicker_dubet.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_dubet.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker_dubet.LeftTextMargin = 5;
-            this.bunifuDatePicker_dubet.Location = new System.Drawing.Point(220, 105);
+            this.bunifuDatePicker_dubet.Location = new System.Drawing.Point(220, 88);
             this.bunifuDatePicker_dubet.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker_dubet.Name = "bunifuDatePicker_dubet";
             this.bunifuDatePicker_dubet.Size = new System.Drawing.Size(277, 32);
@@ -390,7 +396,7 @@ namespace gestion_cabinet_notarial
             this.bunifuDatePicker_fin.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_fin.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker_fin.LeftTextMargin = 5;
-            this.bunifuDatePicker_fin.Location = new System.Drawing.Point(219, 153);
+            this.bunifuDatePicker_fin.Location = new System.Drawing.Point(219, 137);
             this.bunifuDatePicker_fin.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker_fin.Name = "bunifuDatePicker_fin";
             this.bunifuDatePicker_fin.Size = new System.Drawing.Size(278, 32);
@@ -415,7 +421,7 @@ namespace gestion_cabinet_notarial
             this.bunifuCheckBox_status.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBox_status.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox_status.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_status.Location = new System.Drawing.Point(503, 155);
+            this.bunifuCheckBox_status.Location = new System.Drawing.Point(503, 139);
             this.bunifuCheckBox_status.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox_status.Name = "bunifuCheckBox_status";
             this.bunifuCheckBox_status.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -451,10 +457,60 @@ namespace gestion_cabinet_notarial
             this.bunifuCheckBox_status.ToolTipText = null;
             this.bunifuCheckBox_status.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBox_status_CheckedChanged);
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 19);
+            this.label5.TabIndex = 438;
+            this.label5.Text = "ANNE D\'ACHAT  : ";
+            // 
+            // textBox_anne_achat
+            // 
+            this.textBox_anne_achat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_anne_achat.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_anne_achat.Location = new System.Drawing.Point(261, 180);
+            this.textBox_anne_achat.Multiline = true;
+            this.textBox_anne_achat.Name = "textBox_anne_achat";
+            this.textBox_anne_achat.Size = new System.Drawing.Size(164, 31);
+            this.textBox_anne_achat.TabIndex = 437;
+            this.textBox_anne_achat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_anne_achat_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(572, 192);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 19);
+            this.label8.TabIndex = 440;
+            this.label8.Text = "ANNE DE VENTE : ";
+            // 
+            // textBox_anne_vente
+            // 
+            this.textBox_anne_vente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_anne_vente.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_anne_vente.Location = new System.Drawing.Point(785, 180);
+            this.textBox_anne_vente.Multiline = true;
+            this.textBox_anne_vente.Name = "textBox_anne_vente";
+            this.textBox_anne_vente.Size = new System.Drawing.Size(164, 31);
+            this.textBox_anne_vente.TabIndex = 439;
+            this.textBox_anne_vente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_anne_vente_KeyPress);
+            // 
             // ADD_DOSSIER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox_anne_vente);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_anne_achat);
             this.Controls.Add(this.bunifuCheckBox_status);
             this.Controls.Add(this.bunifuDatePicker_fin);
             this.Controls.Add(this.bunifuDatePicker_dubet);
@@ -508,5 +564,9 @@ namespace gestion_cabinet_notarial
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_dubet;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_fin;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox_status;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_anne_achat;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox_anne_vente;
     }
 }

@@ -32,8 +32,8 @@
     <Property Name="Montant" Type="float" />
     <Property Name="TPI" Type="float" />
     <Property Name="Date" Type="date" />
-    <Property Name="idcontrat" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="numdossier" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="client">
     <Key>
@@ -118,6 +118,8 @@
     <Property Name="Datefermeture" Type="date" />
     <Property Name="Status" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
+    <Property Name="anne_achat" Type="int" />
+    <Property Name="anne_vente" Type="int" />
   </EntityType>
   <EntityType Name="facture">
     <Key>
@@ -319,18 +321,6 @@
       </Principal>
       <Dependent Role="Banque_pret">
         <PropertyRef Name="utilisateur" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CDG__idcontrat__5FB337D6">
-    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
-    <End Role="CDG" Type="Self.CDG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="contrat">
-        <PropertyRef Name="Idcontrat" />
-      </Principal>
-      <Dependent Role="CDG">
-        <PropertyRef Name="idcontrat" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -754,6 +744,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_dossier_cdg">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="CDG" Type="Self.CDG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="CDG">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="gestion_cabinet_cotarialModelStoreContainer">
     <EntitySet Name="banque" EntityType="Self.banque" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Banque_pret" EntityType="Self.Banque_pret" Schema="dbo" store:Type="Tables" />
@@ -798,10 +800,6 @@
     <AssociationSet Name="FK__Banque_pr__utili__5CD6CB2B" Association="Self.FK__Banque_pr__utili__5CD6CB2B">
       <End Role="utilisateur" EntitySet="utilisateur" />
       <End Role="Banque_pret" EntitySet="Banque_pret" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CDG__idcontrat__5FB337D6" Association="Self.FK__CDG__idcontrat__5FB337D6">
-      <End Role="contrat" EntitySet="contrat" />
-      <End Role="CDG" EntitySet="CDG" />
     </AssociationSet>
     <AssociationSet Name="FK__CDG__utilisateur__60A75C0F" Association="Self.FK__CDG__utilisateur__60A75C0F">
       <End Role="utilisateur" EntitySet="utilisateur" />
@@ -942,6 +940,10 @@
     <AssociationSet Name="FK__Signature__idpat__49C3F6B7" Association="Self.FK__Signature__idpat__49C3F6B7">
       <End Role="partes" EntitySet="partes" />
       <End Role="Signature" EntitySet="Signature" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dossier_cdg" Association="Self.FK_dossier_cdg">
+      <End Role="dossier" EntitySet="dossier" />
+      <End Role="CDG" EntitySet="CDG" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

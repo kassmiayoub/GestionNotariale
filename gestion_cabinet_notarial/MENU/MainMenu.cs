@@ -89,9 +89,10 @@ namespace gestion_cabinet_notarial
                 new MainMenuItemSubItem("AJOUTER UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER))) { Tag = "Categories" },
                 new MainMenuItemSubItem("MODIFIER MODE DE PASSE", (se, ev) => THEME.navigat(typeof(CTL_modifier_compte))),
                 new MainMenuItemSubItem("BASE DE DONNEE", (se, ev) => THEME.navigat(typeof(CTL_DATABASE))) { Tag = "OfficeInfo" },
-                new MainMenuItemSubItem("LIST OPERATIONS", (se, ev) => THEME.navigat(typeof(CTL_LIST__operation))) { Tag = "AddUser" }
+                new MainMenuItemSubItem("LIST OPERATIONS", (se, ev) => THEME.navigat(typeof(CTL_LIST__operation))) { Tag = "AddUser" },
+                new MainMenuItemSubItem("CABINET", (se, ev) => THEME.navigat(typeof(CTL_information_cabinet))) { Tag = "AddUser" }
 
-            ));
+            )) ;
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Info, "عـن البرنامـج", false, (se, ev) => Theme.Navigate(typeof(CTL_ABOUT))));
         }
 

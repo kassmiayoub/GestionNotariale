@@ -11,7 +11,7 @@ namespace gestion_cabinet_notarial.repository
 {
     public class CLS_REPOSITORY<TEntity> : INTER_REPOSITORY<TEntity> where TEntity : class
     {
-        protected readonly gestion_cabinet_cotarialEntities Context = new gestion_cabinet_cotarialEntities();
+        protected readonly gestion_cabinet_notarialEntities Context = new gestion_cabinet_notarialEntities();
         protected DbSet DbSetEntity;
         public CLS_REPOSITORY()
         {

@@ -18,7 +18,6 @@ namespace gestion_cabinet_notarial.context
         public contrat()
         {
             this.Banque_pret = new HashSet<Banque_pret>();
-            this.CDGs = new HashSet<CDG>();
             this.credits = new HashSet<credit>();
             this.factures = new HashSet<facture>();
             this.fichiers_contrat = new HashSet<fichiers_contrat>();
@@ -40,8 +39,6 @@ namespace gestion_cabinet_notarial.context
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Banque_pret> Banque_pret { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CDG> CDGs { get; set; }
         public virtual dossier dossier { get; set; }
         public virtual utilisateur utilisateur1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
