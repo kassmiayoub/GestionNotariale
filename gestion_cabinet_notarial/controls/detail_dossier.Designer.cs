@@ -65,15 +65,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBoxfile = new System.Windows.Forms.TextBox();
-            this.button8SERCHE_FICHIER_DOSSIER = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.ButtonAdd_FICHIER = new System.Windows.Forms.Button();
             this.bunifuDataGridView_list_file_dossier = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxdesc = new System.Windows.Forms.TextBox();
-            this.ButtonSavefile_fichier_joint_dossier = new System.Windows.Forms.Button();
             this.textBoxtitre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button8SERCHE_FICHIER_DOSSIER = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ButtonAdd_FICHIER = new System.Windows.Forms.Button();
+            this.ButtonSavefile_fichier_joint_dossier = new System.Windows.Forms.Button();
             this.FICHIERJOINT_dossier = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PARTES_OF_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -91,17 +91,19 @@
             // 
             this.bunifuPages1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.bunifuPages1.AllowTransitions = false;
-            this.bunifuPages1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPages1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPages1.Controls.Add(this.tabPage1);
             this.bunifuPages1.Controls.Add(this.tabPage2);
             this.bunifuPages1.Controls.Add(this.tabPage3);
             this.bunifuPages1.Location = new System.Drawing.Point(3, 67);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage1;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "tabPage1";
+            this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(923, 545);
             this.bunifuPages1.TabIndex = 0;
@@ -136,7 +138,9 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.bunifuTextBoxcondition);
             this.panel2.Controls.Add(this.label2);
@@ -156,7 +160,7 @@
             // 
             this.bunifuTextBoxcondition.AcceptsReturn = false;
             this.bunifuTextBoxcondition.AcceptsTab = false;
-            this.bunifuTextBoxcondition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTextBoxcondition.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBoxcondition.AnimationSpeed = 200;
             this.bunifuTextBoxcondition.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBoxcondition.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -181,7 +185,7 @@
             this.bunifuTextBoxcondition.IconRight = null;
             this.bunifuTextBoxcondition.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxcondition.Lines = new string[0];
-            this.bunifuTextBoxcondition.Location = new System.Drawing.Point(325, 120);
+            this.bunifuTextBoxcondition.Location = new System.Drawing.Point(270, 77);
             this.bunifuTextBoxcondition.MaxLength = 32767;
             this.bunifuTextBoxcondition.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxcondition.Modified = false;
@@ -217,7 +221,7 @@
             this.bunifuTextBoxcondition.SelectionLength = 0;
             this.bunifuTextBoxcondition.SelectionStart = 0;
             this.bunifuTextBoxcondition.ShortcutsEnabled = true;
-            this.bunifuTextBoxcondition.Size = new System.Drawing.Size(260, 85);
+            this.bunifuTextBoxcondition.Size = new System.Drawing.Size(432, 85);
             this.bunifuTextBoxcondition.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBoxcondition.TabIndex = 420;
             this.bunifuTextBoxcondition.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -230,12 +234,12 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(217, 120);
+            this.label2.Location = new System.Drawing.Point(162, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 419;
@@ -247,7 +251,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_partes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView_list_partes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_partes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView_list_partes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_list_partes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_list_partes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -292,18 +298,18 @@
             this.bunifuDataGridView_list_partes.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_partes.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_partes.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_partes.Location = new System.Drawing.Point(3, 251);
+            this.bunifuDataGridView_list_partes.Location = new System.Drawing.Point(3, 219);
             this.bunifuDataGridView_list_partes.Name = "bunifuDataGridView_list_partes";
             this.bunifuDataGridView_list_partes.RowHeadersVisible = false;
             this.bunifuDataGridView_list_partes.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_partes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_partes.Size = new System.Drawing.Size(895, 252);
+            this.bunifuDataGridView_list_partes.Size = new System.Drawing.Size(895, 284);
             this.bunifuDataGridView_list_partes.TabIndex = 418;
             this.bunifuDataGridView_list_partes.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // bunifuDropdowntypeclient
             // 
-            this.bunifuDropdowntypeclient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdowntypeclient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDropdowntypeclient.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdowntypeclient.BackgroundColor = System.Drawing.Color.White;
             this.bunifuDropdowntypeclient.BorderColor = System.Drawing.Color.Silver;
@@ -338,7 +344,7 @@
             this.bunifuDropdowntypeclient.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdowntypeclient.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdowntypeclient.ItemTopMargin = 3;
-            this.bunifuDropdowntypeclient.Location = new System.Drawing.Point(325, 67);
+            this.bunifuDropdowntypeclient.Location = new System.Drawing.Point(615, 15);
             this.bunifuDropdowntypeclient.Name = "bunifuDropdowntypeclient";
             this.bunifuDropdowntypeclient.Size = new System.Drawing.Size(260, 32);
             this.bunifuDropdowntypeclient.TabIndex = 417;
@@ -348,7 +354,7 @@
             // 
             // bunifuDropdownclient
             // 
-            this.bunifuDropdownclient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdownclient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDropdownclient.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdownclient.BackgroundColor = System.Drawing.Color.White;
             this.bunifuDropdownclient.BorderColor = System.Drawing.Color.Silver;
@@ -383,7 +389,7 @@
             this.bunifuDropdownclient.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdownclient.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdownclient.ItemTopMargin = 3;
-            this.bunifuDropdownclient.Location = new System.Drawing.Point(325, 14);
+            this.bunifuDropdownclient.Location = new System.Drawing.Point(97, 29);
             this.bunifuDropdownclient.Name = "bunifuDropdownclient";
             this.bunifuDropdownclient.Size = new System.Drawing.Size(260, 32);
             this.bunifuDropdownclient.TabIndex = 416;
@@ -393,7 +399,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(198)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -401,7 +407,7 @@
             this.button1.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.button1.Location = new System.Drawing.Point(593, 18);
+            this.button1.Location = new System.Drawing.Point(365, 33);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
@@ -411,12 +417,12 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(184, 75);
+            this.label3.Location = new System.Drawing.Point(474, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 24);
             this.label3.TabIndex = 414;
@@ -424,12 +430,12 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(238, 22);
+            this.label4.Location = new System.Drawing.Point(10, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 24);
             this.label4.TabIndex = 413;
@@ -437,7 +443,7 @@
             // 
             // button_add__partes
             // 
-            this.button_add__partes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_add__partes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_add__partes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.button_add__partes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add__partes.FlatAppearance.BorderSize = 0;
@@ -446,7 +452,7 @@
             this.button_add__partes.ForeColor = System.Drawing.Color.White;
             this.button_add__partes.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add__partes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_add__partes.Location = new System.Drawing.Point(381, 210);
+            this.button_add__partes.Location = new System.Drawing.Point(379, 167);
             this.button_add__partes.Margin = new System.Windows.Forms.Padding(2);
             this.button_add__partes.Name = "button_add__partes";
             this.button_add__partes.Size = new System.Drawing.Size(130, 35);
@@ -474,7 +480,7 @@
             // 
             // button_add_contrat
             // 
-            this.button_add_contrat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_add_contrat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_add_contrat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.button_add_contrat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add_contrat.FlatAppearance.BorderSize = 0;
@@ -483,7 +489,7 @@
             this.button_add_contrat.ForeColor = System.Drawing.Color.White;
             this.button_add_contrat.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add_contrat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_add_contrat.Location = new System.Drawing.Point(432, 160);
+            this.button_add_contrat.Location = new System.Drawing.Point(440, 86);
             this.button_add_contrat.Margin = new System.Windows.Forms.Padding(2);
             this.button_add_contrat.Name = "button_add_contrat";
             this.button_add_contrat.Size = new System.Drawing.Size(130, 35);
@@ -500,7 +506,9 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewlist_contrat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewlist_contrat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewlist_contrat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewlist_contrat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewlist_contrat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewlist_contrat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -545,19 +553,19 @@
             this.dataGridViewlist_contrat.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dataGridViewlist_contrat.HeaderBgColor = System.Drawing.Color.Empty;
             this.dataGridViewlist_contrat.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGridViewlist_contrat.Location = new System.Drawing.Point(5, 230);
+            this.dataGridViewlist_contrat.Location = new System.Drawing.Point(5, 182);
             this.dataGridViewlist_contrat.Name = "dataGridViewlist_contrat";
             this.dataGridViewlist_contrat.RowHeadersVisible = false;
             this.dataGridViewlist_contrat.RowTemplate.Height = 40;
             this.dataGridViewlist_contrat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewlist_contrat.Size = new System.Drawing.Size(903, 265);
+            this.dataGridViewlist_contrat.Size = new System.Drawing.Size(903, 313);
             this.dataGridViewlist_contrat.TabIndex = 418;
             this.dataGridViewlist_contrat.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dataGridViewlist_contrat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewlist_contrat_CellContentClick);
             // 
             // bunifuDropdowntype_contrat
             // 
-            this.bunifuDropdowntype_contrat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdowntype_contrat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDropdowntype_contrat.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdowntype_contrat.BackgroundColor = System.Drawing.Color.White;
             this.bunifuDropdowntype_contrat.BorderColor = System.Drawing.Color.Silver;
@@ -592,7 +600,7 @@
             this.bunifuDropdowntype_contrat.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdowntype_contrat.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdowntype_contrat.ItemTopMargin = 3;
-            this.bunifuDropdowntype_contrat.Location = new System.Drawing.Point(352, 86);
+            this.bunifuDropdowntype_contrat.Location = new System.Drawing.Point(371, 22);
             this.bunifuDropdowntype_contrat.Name = "bunifuDropdowntype_contrat";
             this.bunifuDropdowntype_contrat.Size = new System.Drawing.Size(260, 32);
             this.bunifuDropdowntype_contrat.TabIndex = 417;
@@ -602,12 +610,12 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(142, 95);
+            this.label1.Location = new System.Drawing.Point(161, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 24);
             this.label1.TabIndex = 416;
@@ -617,15 +625,15 @@
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.textBoxfile);
-            this.tabPage3.Controls.Add(this.button8SERCHE_FICHIER_DOSSIER);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.ButtonAdd_FICHIER);
             this.tabPage3.Controls.Add(this.bunifuDataGridView_list_file_dossier);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.textBoxdesc);
-            this.tabPage3.Controls.Add(this.ButtonSavefile_fichier_joint_dossier);
             this.tabPage3.Controls.Add(this.textBoxtitre);
             this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.button8SERCHE_FICHIER_DOSSIER);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.ButtonAdd_FICHIER);
+            this.tabPage3.Controls.Add(this.ButtonSavefile_fichier_joint_dossier);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -636,78 +644,13 @@
             // 
             // textBoxfile
             // 
-            this.textBoxfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxfile.Font = new System.Drawing.Font("Rockwell", 15.75F);
             this.textBoxfile.Location = new System.Drawing.Point(267, 58);
             this.textBoxfile.Multiline = true;
             this.textBoxfile.Name = "textBoxfile";
             this.textBoxfile.Size = new System.Drawing.Size(451, 31);
             this.textBoxfile.TabIndex = 483;
-            // 
-            // button8SERCHE_FICHIER_DOSSIER
-            // 
-            this.button8SERCHE_FICHIER_DOSSIER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8SERCHE_FICHIER_DOSSIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.button8SERCHE_FICHIER_DOSSIER.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8SERCHE_FICHIER_DOSSIER.FlatAppearance.BorderSize = 0;
-            this.button8SERCHE_FICHIER_DOSSIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8SERCHE_FICHIER_DOSSIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.button8SERCHE_FICHIER_DOSSIER.ForeColor = System.Drawing.Color.White;
-            this.button8SERCHE_FICHIER_DOSSIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.button8SERCHE_FICHIER_DOSSIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8SERCHE_FICHIER_DOSSIER.Location = new System.Drawing.Point(527, 236);
-            this.button8SERCHE_FICHIER_DOSSIER.Margin = new System.Windows.Forms.Padding(2);
-            this.button8SERCHE_FICHIER_DOSSIER.Name = "button8SERCHE_FICHIER_DOSSIER";
-            this.button8SERCHE_FICHIER_DOSSIER.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button8SERCHE_FICHIER_DOSSIER.Size = new System.Drawing.Size(169, 35);
-            this.button8SERCHE_FICHIER_DOSSIER.TabIndex = 482;
-            this.button8SERCHE_FICHIER_DOSSIER.Tag = "AcceptButton";
-            this.button8SERCHE_FICHIER_DOSSIER.Text = "RECHARCHER";
-            this.button8SERCHE_FICHIER_DOSSIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8SERCHE_FICHIER_DOSSIER.UseVisualStyleBackColor = false;
-            this.button8SERCHE_FICHIER_DOSSIER.Click += new System.EventHandler(this.button8SERCHE_FICHIER_DOSSIER_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(185, 236);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 35);
-            this.button3.TabIndex = 481;
-            this.button3.Text = "VIDER";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // ButtonAdd_FICHIER
-            // 
-            this.ButtonAdd_FICHIER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonAdd_FICHIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
-            this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
-            this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
-            this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
-            this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_FICHIER.Location = new System.Drawing.Point(360, 236);
-            this.ButtonAdd_FICHIER.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonAdd_FICHIER.Name = "ButtonAdd_FICHIER";
-            this.ButtonAdd_FICHIER.Size = new System.Drawing.Size(132, 35);
-            this.ButtonAdd_FICHIER.TabIndex = 480;
-            this.ButtonAdd_FICHIER.Tag = "AcceptButton";
-            this.ButtonAdd_FICHIER.Text = "AJOUTER";
-            this.ButtonAdd_FICHIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonAdd_FICHIER.UseVisualStyleBackColor = false;
-            this.ButtonAdd_FICHIER.Click += new System.EventHandler(this.ButtonAdd_FICHIER_Click);
             // 
             // bunifuDataGridView_list_file_dossier
             // 
@@ -716,7 +659,9 @@
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_file_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.bunifuDataGridView_list_file_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_file_dossier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView_list_file_dossier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_list_file_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_list_file_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -761,19 +706,19 @@
             this.bunifuDataGridView_list_file_dossier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_file_dossier.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_file_dossier.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_file_dossier.Location = new System.Drawing.Point(17, 288);
+            this.bunifuDataGridView_list_file_dossier.Location = new System.Drawing.Point(17, 246);
             this.bunifuDataGridView_list_file_dossier.Name = "bunifuDataGridView_list_file_dossier";
             this.bunifuDataGridView_list_file_dossier.RowHeadersVisible = false;
             this.bunifuDataGridView_list_file_dossier.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_file_dossier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_file_dossier.Size = new System.Drawing.Size(879, 224);
+            this.bunifuDataGridView_list_file_dossier.Size = new System.Drawing.Size(879, 266);
             this.bunifuDataGridView_list_file_dossier.TabIndex = 479;
             this.bunifuDataGridView_list_file_dossier.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView_list_file_dossier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_file_dossier_CellContentClick);
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -786,17 +731,105 @@
             // 
             // textBoxdesc
             // 
-            this.textBoxdesc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxdesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxdesc.Font = new System.Drawing.Font("Rockwell", 15.75F);
             this.textBoxdesc.Location = new System.Drawing.Point(267, 107);
             this.textBoxdesc.Multiline = true;
             this.textBoxdesc.Name = "textBoxdesc";
-            this.textBoxdesc.Size = new System.Drawing.Size(338, 116);
+            this.textBoxdesc.Size = new System.Drawing.Size(396, 94);
             this.textBoxdesc.TabIndex = 477;
+            // 
+            // textBoxtitre
+            // 
+            this.textBoxtitre.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxtitre.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxtitre.Location = new System.Drawing.Point(267, 9);
+            this.textBoxtitre.Multiline = true;
+            this.textBoxtitre.Name = "textBoxtitre";
+            this.textBoxtitre.Size = new System.Drawing.Size(451, 31);
+            this.textBoxtitre.TabIndex = 475;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label12.Location = new System.Drawing.Point(137, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 24);
+            this.label12.TabIndex = 474;
+            this.label12.Text = "TITRE : ";
+            // 
+            // button8SERCHE_FICHIER_DOSSIER
+            // 
+            this.button8SERCHE_FICHIER_DOSSIER.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button8SERCHE_FICHIER_DOSSIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.button8SERCHE_FICHIER_DOSSIER.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8SERCHE_FICHIER_DOSSIER.FlatAppearance.BorderSize = 0;
+            this.button8SERCHE_FICHIER_DOSSIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8SERCHE_FICHIER_DOSSIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button8SERCHE_FICHIER_DOSSIER.ForeColor = System.Drawing.Color.White;
+            this.button8SERCHE_FICHIER_DOSSIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
+            this.button8SERCHE_FICHIER_DOSSIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8SERCHE_FICHIER_DOSSIER.Location = new System.Drawing.Point(537, 206);
+            this.button8SERCHE_FICHIER_DOSSIER.Margin = new System.Windows.Forms.Padding(2);
+            this.button8SERCHE_FICHIER_DOSSIER.Name = "button8SERCHE_FICHIER_DOSSIER";
+            this.button8SERCHE_FICHIER_DOSSIER.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button8SERCHE_FICHIER_DOSSIER.Size = new System.Drawing.Size(169, 35);
+            this.button8SERCHE_FICHIER_DOSSIER.TabIndex = 482;
+            this.button8SERCHE_FICHIER_DOSSIER.Tag = "AcceptButton";
+            this.button8SERCHE_FICHIER_DOSSIER.Text = "RECHARCHER";
+            this.button8SERCHE_FICHIER_DOSSIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8SERCHE_FICHIER_DOSSIER.UseVisualStyleBackColor = false;
+            this.button8SERCHE_FICHIER_DOSSIER.Click += new System.EventHandler(this.button8SERCHE_FICHIER_DOSSIER_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(195, 206);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 35);
+            this.button3.TabIndex = 481;
+            this.button3.Text = "VIDER";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // ButtonAdd_FICHIER
+            // 
+            this.ButtonAdd_FICHIER.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonAdd_FICHIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
+            this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
+            this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
+            this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAdd_FICHIER.Location = new System.Drawing.Point(370, 206);
+            this.ButtonAdd_FICHIER.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonAdd_FICHIER.Name = "ButtonAdd_FICHIER";
+            this.ButtonAdd_FICHIER.Size = new System.Drawing.Size(132, 35);
+            this.ButtonAdd_FICHIER.TabIndex = 480;
+            this.ButtonAdd_FICHIER.Tag = "AcceptButton";
+            this.ButtonAdd_FICHIER.Text = "AJOUTER";
+            this.ButtonAdd_FICHIER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAdd_FICHIER.UseVisualStyleBackColor = false;
+            this.ButtonAdd_FICHIER.Click += new System.EventHandler(this.ButtonAdd_FICHIER_Click);
             // 
             // ButtonSavefile_fichier_joint_dossier
             // 
-            this.ButtonSavefile_fichier_joint_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSavefile_fichier_joint_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonSavefile_fichier_joint_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.ButtonSavefile_fichier_joint_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSavefile_fichier_joint_dossier.FlatAppearance.BorderSize = 0;
@@ -814,35 +847,12 @@
             this.ButtonSavefile_fichier_joint_dossier.UseVisualStyleBackColor = false;
             this.ButtonSavefile_fichier_joint_dossier.Click += new System.EventHandler(this.ButtonSavefile_fichier_joint_dossier_Click);
             // 
-            // textBoxtitre
-            // 
-            this.textBoxtitre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxtitre.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.textBoxtitre.Location = new System.Drawing.Point(267, 9);
-            this.textBoxtitre.Multiline = true;
-            this.textBoxtitre.Name = "textBoxtitre";
-            this.textBoxtitre.Size = new System.Drawing.Size(451, 31);
-            this.textBoxtitre.TabIndex = 475;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label12.Location = new System.Drawing.Point(137, 14);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 24);
-            this.label12.TabIndex = 474;
-            this.label12.Text = "TITRE : ";
-            // 
             // FICHIERJOINT_dossier
             // 
             this.FICHIERJOINT_dossier.AllowAnimations = true;
             this.FICHIERJOINT_dossier.AllowMouseEffects = true;
             this.FICHIERJOINT_dossier.AllowToggling = false;
-            this.FICHIERJOINT_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FICHIERJOINT_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FICHIERJOINT_dossier.AnimationSpeed = 200;
             this.FICHIERJOINT_dossier.AutoGenerateColors = false;
             this.FICHIERJOINT_dossier.AutoRoundBorders = false;
@@ -935,7 +945,7 @@
             this.CONTRAT.AllowAnimations = true;
             this.CONTRAT.AllowMouseEffects = true;
             this.CONTRAT.AllowToggling = false;
-            this.CONTRAT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CONTRAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CONTRAT.AnimationSpeed = 200;
             this.CONTRAT.AutoGenerateColors = false;
             this.CONTRAT.AutoRoundBorders = false;
@@ -1028,7 +1038,7 @@
             this.PARTES_OF_CONTRAT.AllowAnimations = true;
             this.PARTES_OF_CONTRAT.AllowMouseEffects = true;
             this.PARTES_OF_CONTRAT.AllowToggling = false;
-            this.PARTES_OF_CONTRAT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PARTES_OF_CONTRAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PARTES_OF_CONTRAT.AnimationSpeed = 200;
             this.PARTES_OF_CONTRAT.AutoGenerateColors = false;
             this.PARTES_OF_CONTRAT.AutoRoundBorders = false;
@@ -1126,6 +1136,7 @@
             this.Controls.Add(this.bunifuPages1);
             this.Name = "detail_dossier";
             this.Size = new System.Drawing.Size(929, 615);
+            this.Load += new System.EventHandler(this.detail_dossier_Load);
             this.VisibleChanged += new System.EventHandler(this.detail_dossier_VisibleChanged);
             this.bunifuPages1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

@@ -1013,12 +1013,18 @@
       <DependentUpon>gestion_cabinet_cotarialEntities.edmx</DependentUpon>
       <LastGenOutput>gestion_cabinet_cotarialEntities.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\contrat.png" />
+    <None Include="Resources\dossier.png" />
+    <None Include="Resources\print.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CADNA.png" />
     <None Include="Resources\loginForm.png" />
     <None Include="Resources\alert.png" />
     <None Include="Resources\rendez-vous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

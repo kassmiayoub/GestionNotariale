@@ -32,8 +32,9 @@ namespace gestion_cabinet_notarial
         double montant_paye_Enregistrement;
         double montant_paye_Ancfcc;
         public DETAIL_CONTRAT()
-        {
-            InitializeComponent();
+        {            
+            InitializeComponent(); 
+            this.Dock = DockStyle.Fill;
         }
 
         private void PARTES_OF_CONTRAT_Click(object sender, EventArgs e)
@@ -335,6 +336,11 @@ namespace gestion_cabinet_notarial
         }
 
         private void partes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton_print_Load(object sender, EventArgs e)
         {
 
         }

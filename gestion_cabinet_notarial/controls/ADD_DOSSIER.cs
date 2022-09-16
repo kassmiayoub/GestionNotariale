@@ -20,6 +20,7 @@ namespace gestion_cabinet_notarial
         public ADD_DOSSIER()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {

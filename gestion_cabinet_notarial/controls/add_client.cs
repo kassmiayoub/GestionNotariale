@@ -31,6 +31,7 @@ namespace gestion_cabinet_notarial
         public add_client()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         public void sete_client(int idc)
         {
@@ -489,6 +490,11 @@ namespace gestion_cabinet_notarial
             if (THEME.id_Client == 0)
                 return;
             sete_client(THEME.id_Client);
+        }
+
+        private void tabPage_CLIENT_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class clientserch

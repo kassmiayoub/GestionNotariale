@@ -64,7 +64,7 @@ namespace gestion_cabinet_notarial.controls
             {
                 MessageBox.Show("Cette fichier existe deja");               
             }
-              inforamation.logo = textBox_LOGO.Text;
+              inforamation.logo =textBox_LOGO.Text;
               inforamation.nomcabinet= textBox_NOMCABINET.Text;
               inforamation.email= textBox_EMAIL.Text;
               inforamation.setweb= textBox_SETEWEB.Text;

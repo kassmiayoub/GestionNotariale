@@ -16,7 +16,7 @@ namespace gestion_cabinet_notarial
     {
         cls_bl_payement paye = new cls_bl_payement();
         cls_bl_credit BL_credit = new cls_bl_credit();
-        cls_bl_contrat con = new cls_bl_contrat();
+        cls_bl_contrat contrat = new cls_bl_contrat();
         cls_bl_partes partee = new cls_bl_partes();
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
@@ -36,17 +36,19 @@ namespace gestion_cabinet_notarial
                 IDCIENT = ele.idClient,
                 nomcomplet = ele.Nom + " " + ele.Prenom
             }).ToList();
-            ListDataSource = ListDataSource.Where(r => BL_credit.Any(c => c.idClient == r.IDCIENT)).ToList() as List<clien>;
-            
+            ListDataSource = ListDataSource.Where(r => BL_credit.Any(c => c.idClient == r.IDCIENT)).ToList() as List<clien>;            
             comboBoxCLIENT_PY.DisplayMember = "NOMCOMPLET";
             comboBoxCLIENT_PY.ValueMember = "IDCIENT";
             comboBoxCLIENT_PY.DataSource = ListDataSource;
-            var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new {t = r.contrat.typecontrat, id =r.idcontrat }).ToList();
-            
+            AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
+            ListDataSource.ForEach(x => autoCompleteCollection.Add(x.nomcomplet));
+            comboBox_banque_PY.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            comboBox_banque_PY.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox_banque_PY.AutoCompleteCustomSource = autoCompleteCollection;
+            var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new {t = r.contrat.typecontrat, id =r.idcontrat }).ToList();            
             comboBox_contart_paye.DisplayMember = "t";
             comboBox_contart_paye.ValueMember = "id";
             comboBox_contart_paye.DataSource = contrat_credit;
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -83,7 +85,6 @@ namespace gestion_cabinet_notarial
             comboBox_contart_paye.ValueMember = "id";
             comboBox_contart_paye.DataSource = contrat_credit;
             bunifuDataGridViewlist_paye_credit.DataSource = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idClient,NomCoplete = s.client.Nom +" "+ s.client.Prenom, s.contrat.numdossier,s.contrat.typecontrat,s.Montant,s.Date}).ToList();
-
         }
         private void comboBox_contart_paye_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -99,14 +100,12 @@ namespace gestion_cabinet_notarial
             else
                 comboBox_banque_PY.Enabled = true; 
         }
-
         private void bunifuTextBox_MONTANT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
-
             // only allow one decimal point
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {

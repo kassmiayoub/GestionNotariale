@@ -372,9 +372,7 @@ namespace gestion_cabinet_notarial
                 catch {
 
                     return "";
-                }
-                
-               
+                }                             
             }
             else
             {

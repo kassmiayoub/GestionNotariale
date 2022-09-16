@@ -23,6 +23,7 @@ namespace gestion_cabinet_notarial
         public detail_dossier()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
@@ -202,6 +203,11 @@ namespace gestion_cabinet_notarial
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
             }
+        }
+
+        private void detail_dossier_Load(object sender, EventArgs e)
+        {
+
         }
     }
     public class contart

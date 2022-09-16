@@ -23,6 +23,7 @@ namespace gestion_cabinet_notarial
         public Accueil()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void Accueil_VisibleChanged(object sender, EventArgs e)
         {            

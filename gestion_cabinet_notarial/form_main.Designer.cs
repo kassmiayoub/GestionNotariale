@@ -43,9 +43,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MAINPANEL.BackColor = System.Drawing.Color.White;
-            this.MAINPANEL.Location = new System.Drawing.Point(258, 204);
+            this.MAINPANEL.Location = new System.Drawing.Point(250, 136);
             this.MAINPANEL.Name = "MAINPANEL";
-            this.MAINPANEL.Size = new System.Drawing.Size(990, 587);
+            this.MAINPANEL.Size = new System.Drawing.Size(998, 655);
             this.MAINPANEL.TabIndex = 5;
             // 
             // bunifuPanel1
@@ -79,10 +79,10 @@
             this.mainMenu1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.mainMenu1.BackColor = System.Drawing.Color.White;
-            this.mainMenu1.Location = new System.Drawing.Point(9, 163);
+            this.mainMenu1.Location = new System.Drawing.Point(9, 136);
             this.mainMenu1.Margin = new System.Windows.Forms.Padding(0);
             this.mainMenu1.Name = "mainMenu1";
-            this.mainMenu1.Size = new System.Drawing.Size(254, 627);
+            this.mainMenu1.Size = new System.Drawing.Size(246, 654);
             this.mainMenu1.TabIndex = 6;
             // 
             // controL_MAIN_HEADER1
@@ -92,7 +92,7 @@
             this.controL_MAIN_HEADER1.BackColor = System.Drawing.Color.White;
             this.controL_MAIN_HEADER1.Location = new System.Drawing.Point(9, 43);
             this.controL_MAIN_HEADER1.Name = "controL_MAIN_HEADER1";
-            this.controL_MAIN_HEADER1.Size = new System.Drawing.Size(1239, 163);
+            this.controL_MAIN_HEADER1.Size = new System.Drawing.Size(1239, 96);
             this.controL_MAIN_HEADER1.TabIndex = 4;
             // 
             // form_main
@@ -101,11 +101,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1257, 799);
-            this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.MAINPANEL);
+            this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.controL_MAIN_HEADER1);
             this.Controls.Add(this.bunifuPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

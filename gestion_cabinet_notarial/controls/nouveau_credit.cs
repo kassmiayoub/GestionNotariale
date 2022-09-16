@@ -62,6 +62,11 @@ namespace gestion_cabinet_notarial.controls
                 IDCIENT = ele.idClient,
                 nomcomplet = ele.Nom + " " + ele.Prenom
             }).ToList();
+            AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
+            ListDataSource.ForEach(x => autoCompleteCollection.Add(x.nomcomplet));            
+            comboBox_client_credit.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            comboBox_client_credit.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox_client_credit.AutoCompleteCustomSource = autoCompleteCollection;
             comboBox_client_credit.DisplayMember = "NOMCOMPLET";
             comboBox_client_credit.ValueMember = "IDCIENT";
             comboBox_client_credit.DataSource = ListDataSource;

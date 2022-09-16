@@ -273,6 +273,16 @@ namespace gestion_cabinet_notarial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contrat {
+            get {
+                object obj = ResourceManager.GetObject("contrat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DayItemCurrentHasNotification {
             get {
                 object obj = ResourceManager.GetObject("DayItemCurrentHasNotification", resourceCulture);
@@ -336,6 +346,16 @@ namespace gestion_cabinet_notarial.Properties {
         internal static System.Drawing.Bitmap Dollar {
             get {
                 object obj = ResourceManager.GetObject("Dollar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dossier {
+            get {
+                object obj = ResourceManager.GetObject("dossier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +706,16 @@ namespace gestion_cabinet_notarial.Properties {
         internal static System.Drawing.Bitmap Page2 {
             get {
                 object obj = ResourceManager.GetObject("Page2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print {
+            get {
+                object obj = ResourceManager.GetObject("print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

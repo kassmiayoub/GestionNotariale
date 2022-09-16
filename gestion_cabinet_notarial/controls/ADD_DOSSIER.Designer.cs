@@ -62,7 +62,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonInit
             // 
-            this.ButtonInit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonInit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonInit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
             this.ButtonInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonInit.FlatAppearance.BorderSize = 0;
@@ -83,7 +83,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonAdd_dossier
             // 
-            this.ButtonAdd_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAdd_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonAdd_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.ButtonAdd_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_dossier.FlatAppearance.BorderSize = 0;
@@ -105,7 +105,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_N_dossier
             // 
-            this.textBox_N_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_N_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_N_dossier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_N_dossier.Location = new System.Drawing.Point(220, 43);
             this.textBox_N_dossier.Multiline = true;
@@ -115,7 +115,7 @@ namespace gestion_cabinet_notarial
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,7 +127,7 @@ namespace gestion_cabinet_notarial
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 96);
@@ -138,7 +138,7 @@ namespace gestion_cabinet_notarial
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 146);
@@ -149,7 +149,7 @@ namespace gestion_cabinet_notarial
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(540, 48);
@@ -160,7 +160,7 @@ namespace gestion_cabinet_notarial
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(574, 94);
@@ -171,7 +171,7 @@ namespace gestion_cabinet_notarial
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(625, 142);
@@ -182,7 +182,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonSearch_dossier
             // 
-            this.ButtonSearch_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSearch_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonSearch_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.ButtonSearch_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSearch_dossier.FlatAppearance.BorderSize = 0;
@@ -205,7 +205,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonEdit_dossier
             // 
-            this.ButtonEdit_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonEdit_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonEdit_dossier.BackColor = System.Drawing.Color.Silver;
             this.ButtonEdit_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonEdit_dossier.FlatAppearance.BorderSize = 0;
@@ -227,7 +227,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_prix
             // 
-            this.textBox_prix.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_prix.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_prix.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_prix.Location = new System.Drawing.Point(723, 41);
             this.textBox_prix.Multiline = true;
@@ -238,7 +238,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_titre_foncier
             // 
-            this.textBox_titre_foncier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_titre_foncier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_titre_foncier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_titre_foncier.Location = new System.Drawing.Point(723, 87);
             this.textBox_titre_foncier.Multiline = true;
@@ -249,7 +249,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_obj
             // 
-            this.textBox_obj.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_obj.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_obj.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_obj.Location = new System.Drawing.Point(723, 135);
             this.textBox_obj.Multiline = true;
@@ -259,7 +259,7 @@ namespace gestion_cabinet_notarial
             // 
             // button_detail_dossier
             // 
-            this.button_detail_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_detail_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_detail_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
             this.button_detail_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_detail_dossier.FlatAppearance.BorderSize = 0;
@@ -267,7 +267,7 @@ namespace gestion_cabinet_notarial
             this.button_detail_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
             this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_detail_dossier.Location = new System.Drawing.Point(785, 248);
+            this.button_detail_dossier.Location = new System.Drawing.Point(785, 246);
             this.button_detail_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.button_detail_dossier.Name = "button_detail_dossier";
             this.button_detail_dossier.Size = new System.Drawing.Size(216, 53);
@@ -279,7 +279,7 @@ namespace gestion_cabinet_notarial
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,7 +295,9 @@ namespace gestion_cabinet_notarial
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView_list_dossier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_dossier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView_list_dossier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_list_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_list_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -352,7 +354,7 @@ namespace gestion_cabinet_notarial
             // 
             // bunifuDatePicker_dubet
             // 
-            this.bunifuDatePicker_dubet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDatePicker_dubet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDatePicker_dubet.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker_dubet.BorderColor = System.Drawing.Color.Silver;
             this.bunifuDatePicker_dubet.BorderRadius = 1;
@@ -378,7 +380,7 @@ namespace gestion_cabinet_notarial
             // 
             // bunifuDatePicker_fin
             // 
-            this.bunifuDatePicker_fin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDatePicker_fin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDatePicker_fin.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker_fin.BorderColor = System.Drawing.Color.Silver;
             this.bunifuDatePicker_fin.BorderRadius = 1;
@@ -410,7 +412,7 @@ namespace gestion_cabinet_notarial
             this.bunifuCheckBox_status.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_status.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_status.AllowOnHoverStates = true;
-            this.bunifuCheckBox_status.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuCheckBox_status.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_status.AutoCheck = true;
             this.bunifuCheckBox_status.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_status.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_status.BackgroundImage")));
@@ -459,7 +461,7 @@ namespace gestion_cabinet_notarial
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -471,7 +473,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_anne_achat
             // 
-            this.textBox_anne_achat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_anne_achat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_anne_achat.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_anne_achat.Location = new System.Drawing.Point(261, 180);
             this.textBox_anne_achat.Multiline = true;
@@ -482,7 +484,7 @@ namespace gestion_cabinet_notarial
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,7 +496,7 @@ namespace gestion_cabinet_notarial
             // 
             // textBox_anne_vente
             // 
-            this.textBox_anne_vente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_anne_vente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_anne_vente.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_anne_vente.Location = new System.Drawing.Point(785, 180);
             this.textBox_anne_vente.Multiline = true;
