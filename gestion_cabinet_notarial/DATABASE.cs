@@ -71,5 +71,13 @@ namespace gestion_cabinet_notarial
                     GetConnetion);
             SC.ExecuteNonQuery();
         }
+        static public DataTable getinfocabinet()
+        {
+            DataTable dt = new DataTable();
+            SqlCommand sc = new  SqlCommand("select * from [dbo].[information_cabinet]", GetConnetion);
+            SqlDataReader sdr = sc.ExecuteReader();
+            dt.Load(sdr);
+            return dt;
+        }
     }
 }

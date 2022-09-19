@@ -110,3 +110,4 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestio
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.CONTROL_MAIN_HEADER.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_information_cabinet.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.print.resources

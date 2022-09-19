@@ -19,7 +19,6 @@ namespace gestion_cabinet_notarial.controls
         cls_bl_partes partee = new cls_bl_partes();
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
-
         public nouveau_credit()
         {
             InitializeComponent();

@@ -16,7 +16,6 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-
         private void PictureBoxArrow_Click(object sender, EventArgs e)
         {
             if (double.Parse(textBox_porsontage.Text) == 0)

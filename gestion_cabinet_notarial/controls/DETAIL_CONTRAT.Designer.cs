@@ -117,10 +117,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.partes;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "partes";
-            this.bunifuPages1.PageTitle = "tabPage1";
+            this.bunifuPages1.Page = this.payeclient;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "payeclient";
+            this.bunifuPages1.PageTitle = "tabPage2";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
             this.bunifuPages1.TabIndex = 0;
@@ -448,6 +448,7 @@
             this.bunifuDataGridView_payement.Size = new System.Drawing.Size(880, 204);
             this.bunifuDataGridView_payement.TabIndex = 5;
             this.bunifuDataGridView_payement.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView_payement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_payement_CellClick);
             // 
             // RDVERMENT
             // 

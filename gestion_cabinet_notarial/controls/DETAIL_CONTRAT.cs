@@ -22,7 +22,9 @@ namespace gestion_cabinet_notarial
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_partes_S Signature = new cls_bl_partes_S();
         csl_bl_fichier_contart cont = new csl_bl_fichier_contart();
+        cls_bl_dossier dossier = new cls_bl_dossier();
         cls_bl_payement paye = new cls_bl_payement();
+        CSL_BL_Client c = new CSL_BL_Client();
         double Timbres;
         double Honoraires;
         double Enregistrement;
@@ -343,6 +345,28 @@ namespace gestion_cabinet_notarial
         private void bunifuButton_print_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuDataGridView_payement_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                print.client = dgv.Rows[e.RowIndex].Cells["CLIENT"].Value.ToString();
+                print.typepaye = dgv.Rows[e.RowIndex].Cells["TYPEPAYEMENT"].Value.ToString();
+                int IDCLIENT = int.Parse(comboBoxCLIENT_PY.SelectedValue.ToString());
+                print.idclient = c.FindByValues(ele => ele.idClient == IDCLIENT).First().ClientNormale == null ? c.FindByValues(ele => ele.idClient == IDCLIENT).First().ClientProfessionnel.ICE : c.FindByValues(ele => ele.idClient == IDCLIENT).First().ClientNormale.CIN;
+                print.ice_cin = c.FindByValues(ele => ele.idClient == IDCLIENT).First().ClientNormale == null ? "ICE " : " CIN";
+                print.montant = dgv.Rows[e.RowIndex].Cells["MONTANT"].Value.ToString()+" DH";
+                print.banque = dgv.Rows[e.RowIndex].Cells["BANQUE"].Value.ToString();
+                print.typecharge = dgv.Rows[e.RowIndex].Cells["TYPECHARGE"].Value.ToString();
+                print.date = Convert.ToDateTime( dgv.Rows[e.RowIndex].Cells["DATE"].Value).ToString("yyyy-MM-dd");
+                print.client = dgv.Rows[e.RowIndex].Cells["CLIENT"].Value.ToString();
+                print.typecontart = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).First().typecontrat;
+                print.foncier = dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).First().Titrefoncier;
+                print p = new print();
+                p.Show();
+            }
         }
     }
     public class partesS
