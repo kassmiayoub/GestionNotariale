@@ -31,9 +31,9 @@ namespace gestion_cabinet_notarial
         private void print_Load(object sender, EventArgs e)
         {
             recu_report recu = new recu_report();
-            DataSet ds = new DataSet();
-            ds.Tables.Add(DATABASE.getinfocabinet());
-            recu.SetDataSource(ds);
+           // DataSet ds = new DataSet();
+           // ds.Tables.Add(DATABASE.getinfocabinet());
+           // recu.SetDataSource(ds);
             recu.SetParameterValue("montant", montant);
             recu.SetParameterValue("foncier", foncier);
             recu.SetParameterValue("client", client);
@@ -45,7 +45,6 @@ namespace gestion_cabinet_notarial
             recu.SetParameterValue("banque", banque);
             recu.SetParameterValue("typecontart", typecontart);
             recu.SetParameterValue("ndossier", ndossier);
-
             crystalReportViewer1.ReportSource = recu;            
         }
     }

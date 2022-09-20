@@ -71,13 +71,14 @@ namespace gestion_cabinet_notarial
                     GetConnetion);
             SC.ExecuteNonQuery();
         }
-        static public DataTable getinfocabinet()
+        static public SqlDataAdapter getinfocabinet()
         {
             DataTable dt = new DataTable();
-            SqlCommand sc = new  SqlCommand("select * from [dbo].[information_cabinet]", GetConnetion);
-            SqlDataReader sdr = sc.ExecuteReader();
-            dt.Load(sdr);
-            return dt;
+           // SqlCommand sc = new  SqlCommand("select [Typeclient],[Nom],[Prenom] from [dbo].[partes] p inner join [dbo].[client] c on c.idClient = p.idClient  where p.numdossier = 122", GetConnetion);
+            //SqlDataReader sdr = sc.ExecuteReader();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select [Typeclient],[Nom],[Prenom] from [dbo].[partes] p inner join [dbo].[client] c on c.idClient = p.idClient  where p.numdossier = 999", GetConnetion);
+           // dt.Load(sdr);
+            return sqlDataAdapter;
         }
     }
 }

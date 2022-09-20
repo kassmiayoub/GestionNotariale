@@ -87,7 +87,7 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           // MessageBox.Show(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString());
+            //MessageBox.Show(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString());
             dossier A = new dossier();
             var x = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString();
             A = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier ==x ).First();

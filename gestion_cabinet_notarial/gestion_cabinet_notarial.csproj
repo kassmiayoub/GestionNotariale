@@ -585,6 +585,11 @@
       <DependentUpon>detail_dossier.cs</DependentUpon>
     </Compile>
     <Compile Include="DATABASE.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="form_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +651,12 @@
     <Compile Include="print.Designer.cs">
       <DependentUpon>print.cs</DependentUpon>
     </Compile>
+    <Compile Include="print_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_facture.Designer.cs">
+      <DependentUpon>print_facture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="controls\ADD_DOSSIER.cs">
@@ -658,6 +669,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="reports\facture.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>facture.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="reports\recu_report.cs">
       <AutoGen>True</AutoGen>
@@ -761,6 +778,9 @@
     <EmbeddedResource Include="print.resx">
       <DependentUpon>print.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="print_facture.resx">
+      <DependentUpon>print_facture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -769,6 +789,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\ADD_DOSSIER.resx">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\facture.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>facture.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\recu_report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -780,6 +804,17 @@
     </EntityDeploy>
     <None Include="context\gestion_cabinet_cotarialEntities.edmx.diagram">
       <DependentUpon>gestion_cabinet_cotarialEntities.edmx</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

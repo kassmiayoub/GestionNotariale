@@ -368,6 +368,22 @@ namespace gestion_cabinet_notarial
                 p.Show();
             }
         }
+
+        private void bunifuButton_print_Click(object sender, EventArgs e)
+        {
+            print_facture.montant_Ancfcc = Ancfcc;
+            print_facture.montant_enregitrement = Enregistrement;
+            print_facture.montant_honorair = Honoraires;
+            print_facture.montant_tamber = Timbres;
+            print_facture.typecontart = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).First().typecontrat;
+            print_facture.foncier = dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).First().Titrefoncier;
+            print_facture.paye_enregitrement = montant_paye_Enregistrement;
+            print_facture.paye_Ancfcc = montant_paye_Ancfcc;
+            print_facture.paye_honorair = montant_paye_Honoraires;
+            print_facture.paye_tamber = montant_paye_Timbres;
+            print_facture f = new print_facture();
+            f.Show();
+        }
     }
     public class partesS
     {
