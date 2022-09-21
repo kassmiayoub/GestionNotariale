@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.credit" Width="1.5" PointX="8.25" PointY="30.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.devi" Width="1.5" PointX="8.25" PointY="34.375" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.dossier" Width="1.5" PointX="3" PointY="38.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.facture" Width="1.5" PointX="11.25" PointY="29.875" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.fichiers_client" Width="1.5" PointX="11.25" PointY="25.875" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.fichiers_contrat" Width="1.5" PointX="13.5" PointY="35" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.fichiers_dossier" Width="1.5" PointX="11.25" PointY="37.625" IsExpanded="true" />
@@ -42,7 +41,6 @@
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__ClientPro__idCli__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__credit__idClient__70DDC3D8" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__devis__idClient__6C190EBB" ManuallyRouted="false" />
-        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__idClien__75A278F5" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___idCli__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__partes__idClient__45F365D3" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__payement__idClie__52593CB8" ManuallyRouted="false" />
@@ -50,7 +48,6 @@
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__contrat__numdoss__37A5467C" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__contrat__utilisa__36B12243" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__credit__idcontra__6FE99F9F" ManuallyRouted="false" />
-        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__idcontr__74AE54BC" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___idcon__3E52440B" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__payement__idcont__5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__Signature__idcon__4AB81AF0" ManuallyRouted="false" />
@@ -59,7 +56,6 @@
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__dossier__utilisa__33D4B598" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___numdo__3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__partes__numdossi__46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__utilisa__76969D2E" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___utili__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___utili__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__fichiers___utili__3B75D760" ManuallyRouted="false" />
@@ -70,7 +66,7 @@
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__payement__utilis__5441852A" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__recu__idPayement__66603565" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__Rendez_vo__utili__300424B4" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.information_cabinet" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.information_cabinet" Width="1.5" PointX="4" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

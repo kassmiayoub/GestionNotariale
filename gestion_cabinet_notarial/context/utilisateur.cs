@@ -25,7 +25,6 @@ namespace gestion_cabinet_notarial.context
             this.credits = new HashSet<credit>();
             this.devis = new HashSet<devi>();
             this.dossiers = new HashSet<dossier>();
-            this.factures = new HashSet<facture>();
             this.fichiers_client = new HashSet<fichiers_client>();
             this.fichiers_contrat = new HashSet<fichiers_contrat>();
             this.fichiers_dossier = new HashSet<fichiers_dossier>();
@@ -57,8 +56,6 @@ namespace gestion_cabinet_notarial.context
         public virtual ICollection<devi> devis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<dossier> dossiers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<facture> factures { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<fichiers_client> fichiers_client { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

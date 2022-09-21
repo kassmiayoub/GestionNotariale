@@ -398,9 +398,6 @@
     <Compile Include="context\dossier.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="context\facture.cs">
-      <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="context\fichiers_client.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
@@ -450,6 +447,12 @@
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="context\Signature.cs">
+      <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\sp_helpdiagrams_Result.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="context\sysdiagram.cs">

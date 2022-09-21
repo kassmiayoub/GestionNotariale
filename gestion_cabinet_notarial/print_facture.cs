@@ -15,6 +15,8 @@ namespace gestion_cabinet_notarial
     {
         static public string foncier;
         static public string typecontart;
+        static public string paye;
+        static public string reste;
         static public double montant_enregitrement;
         static public double paye_enregitrement;
         static public double montant_honorair;
@@ -23,12 +25,12 @@ namespace gestion_cabinet_notarial
         static public double paye_tamber;
         static public double montant_Ancfcc;
         static public double paye_Ancfcc;
+        static public string etatpayement;
         static public string ndossier = THEME.numdossier;
         public print_facture()
         {
             InitializeComponent();
         }
-
         private void print_facture_Load(object sender, EventArgs e)
         {
             facture f = new facture();
@@ -54,6 +56,10 @@ namespace gestion_cabinet_notarial
             f.SetParameterValue("foncier", foncier);
             f.SetParameterValue("typecontart", typecontart);
             f.SetParameterValue("ndossier", ndossier);
+            f.SetParameterValue("paye", paye);
+            f.SetParameterValue("reste", reste);
+            f.SetParameterValue("etatpayement", etatpayement);
+            f.SetParameterValue("PRIXVENTE",THEME.prix) ;
             crystalReportViewer1.ReportSource = f;
             //crystalReportViewer1.Refresh();
         }

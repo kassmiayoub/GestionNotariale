@@ -51,7 +51,7 @@ namespace gestion_cabinet_notarial
             comboBox_contart_paye.DataSource = contrat_credit;
         }
         private void button2_Click(object sender, EventArgs e)
-        {
+        {         
             THEME.credit = true;
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;   
             ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;

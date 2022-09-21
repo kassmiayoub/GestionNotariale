@@ -69,7 +69,7 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuPanel_dossiers_passer_Click(object sender, EventArgs e)
         {
-            //bunifuDataGridView_accueil.Columns.Clear();
+            //bunifuDataGridView_accueil.Columns.Clear();            
             var ListDataSource = new List<dossierSerche>();
             ListDataSource = cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == DateTime.Now).Select(ele => new dossierSerche()
             {

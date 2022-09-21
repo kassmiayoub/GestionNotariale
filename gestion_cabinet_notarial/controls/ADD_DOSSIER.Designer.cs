@@ -228,6 +228,7 @@ namespace gestion_cabinet_notarial
             // textBox_prix
             // 
             this.textBox_prix.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox_prix.Enabled = false;
             this.textBox_prix.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_prix.Location = new System.Drawing.Point(723, 41);
             this.textBox_prix.Multiline = true;

@@ -381,6 +381,35 @@ namespace gestion_cabinet_notarial
             print_facture.paye_Ancfcc = montant_paye_Ancfcc;
             print_facture.paye_honorair = montant_paye_Honoraires;
             print_facture.paye_tamber = montant_paye_Timbres;
+            if(double.Parse(bunifuDataGridView_statistic.Rows[4].Cells[3].Value.ToString()) > 0)
+            {               
+                print_facture.etatpayement = "La facture n’a pas encore été payée,";
+            }
+            else
+            {
+                print_facture.paye = "La facture a été payée, ";
+            }
+            string paye = bunifuDataGridView_statistic.Rows[4].Cells[2].Value.ToString();
+            string[] n = paye.Split('.');
+            if(n.Length == 1)
+            {
+                print_facture.paye = "elle a payé  " + DATABASE.NumberToWords(int.Parse(n[0]));
+            }
+            else
+            {
+                print_facture.paye = "elle a payé  " + DATABASE.NumberToWords(int.Parse(n[0])) + " virgule " + DATABASE.NumberToWords(int.Parse(n[1]));
+            }
+            
+            string reste = bunifuDataGridView_statistic.Rows[4].Cells[3].Value.ToString();
+            string[] n1 = reste.Split('.');
+            if(n1.Length == 1)
+            {
+                print_facture.reste = "et le reste est " + DATABASE.NumberToWords(int.Parse(n1[0]));
+            }
+            else
+            {
+                print_facture.reste = "et le reste est " + DATABASE.NumberToWords(int.Parse(n1[0])) + " virgule " + DATABASE.NumberToWords(int.Parse(n1[1]));
+            }           
             print_facture f = new print_facture();
             f.Show();
         }

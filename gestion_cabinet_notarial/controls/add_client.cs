@@ -65,7 +65,8 @@ namespace gestion_cabinet_notarial
             textBoxIF.Visible=false;
             textBoxIDCLIENT.Enabled = false;
             comboBoxtype_client.Items.Add("profisionnel");
-            comboBoxtype_client.Items.Add("normal");          
+            comboBoxtype_client.Items.Add("normal");
+            comboBoxtype_client.SelectedIndex = 0;
         }
         private void ButtonAdd_Click_1(object sender, EventArgs e)
         {
@@ -472,6 +473,7 @@ namespace gestion_cabinet_notarial
         }
         private void add_client_VisibleChanged(object sender, EventArgs e)
         {
+            
            var ListDataSource = cls.GetAll().Select(ele => new clientserch()
             {
                 IDCIENT = ele.idClient,

@@ -62,7 +62,6 @@
     <NavigationProperty Name="ClientProfessionnel" Relationship="Self.FK__ClientPro__idCli__2C3393D0" FromRole="client" ToRole="ClientProfessionnel" />
     <NavigationProperty Name="credits" Relationship="Self.FK__credit__idClient__70DDC3D8" FromRole="client" ToRole="credit" />
     <NavigationProperty Name="devis" Relationship="Self.FK__devis__idClient__6C190EBB" FromRole="client" ToRole="devis" />
-    <NavigationProperty Name="factures" Relationship="Self.FK__facture__idClien__75A278F5" FromRole="client" ToRole="facture" />
     <NavigationProperty Name="fichiers_client" Relationship="Self.FK__fichiers___idCli__4222D4EF" FromRole="client" ToRole="fichiers_client" />
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__idClient__45F365D3" FromRole="client" ToRole="partes" />
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
@@ -104,7 +103,6 @@
     <NavigationProperty Name="dossier" Relationship="Self.FK__contrat__numdoss__37A5467C" FromRole="contrat" ToRole="dossier" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__contrat__utilisa__36B12243" FromRole="contrat" ToRole="utilisateur" />
     <NavigationProperty Name="credits" Relationship="Self.FK__credit__idcontra__6FE99F9F" FromRole="contrat" ToRole="credit" />
-    <NavigationProperty Name="factures" Relationship="Self.FK__facture__idcontr__74AE54BC" FromRole="contrat" ToRole="facture" />
     <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___idcon__3E52440B" FromRole="contrat" ToRole="fichiers_contrat" />
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idcont__5165187F" FromRole="contrat" ToRole="payement" />
     <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="contrat" ToRole="Signature" />
@@ -160,19 +158,6 @@
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="dossier" ToRole="utilisateur" />
     <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
-  </EntityType>
-  <EntityType Name="facture">
-    <Key>
-      <PropertyRef Name="idfacture" />
-    </Key>
-    <Property Name="idfacture" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="date" Type="DateTime" Precision="0" />
-    <Property Name="idcontrat" Type="Int32" />
-    <Property Name="idClient" Type="Int32" />
-    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="client" Relationship="Self.FK__facture__idClien__75A278F5" FromRole="facture" ToRole="client" />
-    <NavigationProperty Name="contrat" Relationship="Self.FK__facture__idcontr__74AE54BC" FromRole="facture" ToRole="contrat" />
-    <NavigationProperty Name="utilisateur1" Relationship="Self.FK__facture__utilisa__76969D2E" FromRole="facture" ToRole="utilisateur" />
   </EntityType>
   <EntityType Name="fichiers_client">
     <Key>
@@ -336,7 +321,6 @@
     <NavigationProperty Name="credits" Relationship="Self.FK__credit__utilisat__71D1E811" FromRole="utilisateur" ToRole="credit" />
     <NavigationProperty Name="devis" Relationship="Self.FK__devis__utilisate__6D0D32F4" FromRole="utilisateur" ToRole="devis" />
     <NavigationProperty Name="dossiers" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="utilisateur" ToRole="dossier" />
-    <NavigationProperty Name="factures" Relationship="Self.FK__facture__utilisa__76969D2E" FromRole="utilisateur" ToRole="facture" />
     <NavigationProperty Name="fichiers_client" Relationship="Self.FK__fichiers___utili__4316F928" FromRole="utilisateur" ToRole="fichiers_client" />
     <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___utili__3F466844" FromRole="utilisateur" ToRole="fichiers_contrat" />
     <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___utili__3B75D760" FromRole="utilisateur" ToRole="fichiers_dossier" />
@@ -502,18 +486,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__facture__idClien__75A278F5">
-    <End Role="client" Type="Self.client" Multiplicity="0..1" />
-    <End Role="facture" Type="Self.facture" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="client">
-        <PropertyRef Name="idClient" />
-      </Principal>
-      <Dependent Role="facture">
-        <PropertyRef Name="idClient" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__fichiers___idCli__4222D4EF">
     <End Role="client" Type="Self.client" Multiplicity="0..1" />
     <End Role="fichiers_client" Type="Self.fichiers_client" Multiplicity="*" />
@@ -594,18 +566,6 @@
         <PropertyRef Name="Idcontrat" />
       </Principal>
       <Dependent Role="credit">
-        <PropertyRef Name="idcontrat" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__facture__idcontr__74AE54BC">
-    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
-    <End Role="facture" Type="Self.facture" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="contrat">
-        <PropertyRef Name="Idcontrat" />
-      </Principal>
-      <Dependent Role="facture">
         <PropertyRef Name="idcontrat" />
       </Dependent>
     </ReferentialConstraint>
@@ -703,18 +663,6 @@
       </Principal>
       <Dependent Role="partes">
         <PropertyRef Name="numdossier" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__facture__utilisa__76969D2E">
-    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
-    <End Role="facture" Type="Self.facture" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="utilisateur">
-        <PropertyRef Name="utilisateur1" />
-      </Principal>
-      <Dependent Role="facture">
-        <PropertyRef Name="utilisateur" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -849,7 +797,6 @@
     <EntitySet Name="credits" EntityType="Self.credit" />
     <EntitySet Name="devis" EntityType="Self.devi" />
     <EntitySet Name="dossiers" EntityType="Self.dossier" />
-    <EntitySet Name="factures" EntityType="Self.facture" />
     <EntitySet Name="fichiers_client" EntityType="Self.fichiers_client" />
     <EntitySet Name="fichiers_contrat" EntityType="Self.fichiers_contrat" />
     <EntitySet Name="fichiers_dossier" EntityType="Self.fichiers_dossier" />
@@ -915,10 +862,6 @@
       <End Role="client" EntitySet="clients" />
       <End Role="devis" EntitySet="devis" />
     </AssociationSet>
-    <AssociationSet Name="FK__facture__idClien__75A278F5" Association="Self.FK__facture__idClien__75A278F5">
-      <End Role="client" EntitySet="clients" />
-      <End Role="facture" EntitySet="factures" />
-    </AssociationSet>
     <AssociationSet Name="FK__fichiers___idCli__4222D4EF" Association="Self.FK__fichiers___idCli__4222D4EF">
       <End Role="client" EntitySet="clients" />
       <End Role="fichiers_client" EntitySet="fichiers_client" />
@@ -946,10 +889,6 @@
     <AssociationSet Name="FK__credit__idcontra__6FE99F9F" Association="Self.FK__credit__idcontra__6FE99F9F">
       <End Role="contrat" EntitySet="contrats" />
       <End Role="credit" EntitySet="credits" />
-    </AssociationSet>
-    <AssociationSet Name="FK__facture__idcontr__74AE54BC" Association="Self.FK__facture__idcontr__74AE54BC">
-      <End Role="contrat" EntitySet="contrats" />
-      <End Role="facture" EntitySet="factures" />
     </AssociationSet>
     <AssociationSet Name="FK__fichiers___idcon__3E52440B" Association="Self.FK__fichiers___idcon__3E52440B">
       <End Role="contrat" EntitySet="contrats" />
@@ -982,10 +921,6 @@
     <AssociationSet Name="FK__partes__numdossi__46E78A0C" Association="Self.FK__partes__numdossi__46E78A0C">
       <End Role="dossier" EntitySet="dossiers" />
       <End Role="partes" EntitySet="partes" />
-    </AssociationSet>
-    <AssociationSet Name="FK__facture__utilisa__76969D2E" Association="Self.FK__facture__utilisa__76969D2E">
-      <End Role="utilisateur" EntitySet="utilisateurs" />
-      <End Role="facture" EntitySet="factures" />
     </AssociationSet>
     <AssociationSet Name="FK__fichiers___utili__4316F928" Association="Self.FK__fichiers___utili__4316F928">
       <End Role="utilisateur" EntitySet="utilisateurs" />
@@ -1028,6 +963,36 @@
       <End Role="Rendez_vous" EntitySet="Rendez_vous" />
     </AssociationSet>
     <EntitySet Name="information_cabinet" EntityType="gestion_cabinet_notarialModel.information_cabinet" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(gestion_cabinet_notarialModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(gestion_cabinet_notarialModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
   <EntityType Name="information_cabinet">
     <Key>
@@ -1042,4 +1007,15 @@
     <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="setweb" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
