@@ -47,7 +47,6 @@ namespace gestion_cabinet_notarial.controls
         {
             richTextBox_text.Text = "";
         }
-
         private void CTL_NOTE_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)

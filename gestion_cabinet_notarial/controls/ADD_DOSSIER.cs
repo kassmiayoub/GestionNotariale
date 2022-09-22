@@ -23,7 +23,9 @@ namespace gestion_cabinet_notarial
             this.Dock = DockStyle.Fill;
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
-        {
+        {            
+            if (textBox_prix.Text == "" || textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "")
+                return;
             var a = new dossier();
             a.Numdossier = textBox_N_dossier.Text;
             a.dateouverture = Convert.ToDateTime(bunifuDatePicker_dubet.Text);

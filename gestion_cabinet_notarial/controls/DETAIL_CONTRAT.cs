@@ -25,6 +25,7 @@ namespace gestion_cabinet_notarial
         cls_bl_dossier dossier = new cls_bl_dossier();
         cls_bl_payement paye = new cls_bl_payement();
         CSL_BL_Client c = new CSL_BL_Client();
+        CSL_BL_pret_banque pb = new CSL_BL_pret_banque();
         double Timbres;
         double Honoraires;
         double Enregistrement;
@@ -40,9 +41,28 @@ namespace gestion_cabinet_notarial
         }
 
         private void PARTES_OF_CONTRAT_Click(object sender, EventArgs e)
-        {           
-            bunifuPages1.SetPage(partes);
+        {
             int idc = THEME.id_C;
+            var pret = pb.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
+            if (pret != null)
+            {
+                var date_d_f = con.FindByValues(ele => ele.Idcontrat == idc).First();
+                bunifuTextBoxMONTANT.Text = pret.Montant.ToString();
+                bunifuTextBoxCLINET.Text = pret.client.Nom + " " + pret.client.Prenom;
+                bunifuTextBoxBANQUE.Text = pret.banque.Libbele;
+                DERU.Text= pret.DERU.ToString() + "jours";
+                PAYEPARMOINS.Text = pret.PAYE_PAR_MOIS.ToString() + "%";
+                richTextBox_description.Text = pret.DESCRIPTION;
+                INTIERET.Text = pret.INTIERET.ToString()+ "%";
+                dateTimePickerdubet.Value = Convert.ToDateTime(date_d_f.dateouverture);
+                dateTimePickerfin.Value = Convert.ToDateTime(date_d_f.Datefermeture);
+                bunifuPages1.SetPage(pretbanquedetails);
+                PARTES_OF_CONTRAT.Text = "DETAIL";
+
+                return;
+            }
+            bunifuPages1.SetPage(partes);
+               PARTES_OF_CONTRAT.Text = "PARTES";
             bunifuDataGridViewpartes_S.DataSource = Signature.FindByValues(ele => ele.idcontrat == idc).Select(ele => new partesS()
             {
                 ID_PARTE = (int)ele.idpatres,
@@ -331,6 +351,16 @@ namespace gestion_cabinet_notarial
             {
                 STATISTIC_CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
+                int idc = THEME.id_C;
+                var pret = pb.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
+                if (pret != null)
+                {
+                    PARTES_OF_CONTRAT.Text = "DETAIL";
+                }
+                else
+                {
+                    PARTES_OF_CONTRAT.Text = "PARTES";
+                }
                 //PARTES_OF_CONTRAT.PerformClick();
                 //PAYEMENTCLIENT_CONTRAT.PerformClick();
                 //FICHIERJOINT_CONTRAT.PerformClick();
@@ -412,6 +442,11 @@ namespace gestion_cabinet_notarial
             }           
             print_facture f = new print_facture();
             f.Show();
+        }
+
+        private void pretbanquedetails_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class partesS

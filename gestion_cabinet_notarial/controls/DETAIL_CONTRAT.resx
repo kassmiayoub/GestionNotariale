@@ -162,6 +162,33 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="bunifuTextBoxBANQUE.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
+        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxCLINET.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
+        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxMONTANT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
+        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0

@@ -81,17 +81,9 @@ namespace gestion_cabinet_notarial
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
-                    try
-                    {
-                        THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[0].Name].Value.ToString());
-                    }
-                    catch
-                    {
-                        THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns[1].Name].Value.ToString());
-                    }
+                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
                     THEME.navigat(typeof(DETAIL_CONTRAT));
-            THEME.operation($"CONSULTER DETAILS DE CONTRAT ID {THEME.id_C} DE DOSSIER DE NUMERENT {THEME.numdossier}");
-
+                    THEME.operation($"CONSULTER DETAILS DE CONTRAT ID {THEME.id_C} DE DOSSIER DE NUMERENT {THEME.numdossier}");
                 }
             }
         }

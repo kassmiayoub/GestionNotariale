@@ -106,7 +106,9 @@ namespace gestion_cabinet_notarial
                 {
                     if (contrat_or_dossier == "contart")
                     {
-                        THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
+                        int a = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
+                        THEME.id_C = a;
+                        THEME.numdossier = con.FindByValues(ele => ele.Idcontrat == a).First().numdossier;
                         THEME.prix = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).Select(s => s.dossier.PRIX_ACQUISITION).First().Value;
                         THEME.navigat(typeof(DETAIL_CONTRAT));
                     }
