@@ -39,6 +39,7 @@
           <Property Name="Date" Type="date" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
           <Property Name="numdossier" Type="varchar" MaxLength="50" />
+          <Property Name="COEFFICIENT" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="client">
           <Key>
@@ -125,6 +126,7 @@
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
           <Property Name="anne_achat" Type="int" />
           <Property Name="anne_vente" Type="int" />
+          <Property Name="prixachat" Type="float" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
@@ -998,6 +1000,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="utilisateur1" Relationship="Self.FK__CDG__utilisateur__60A75C0F" FromRole="CDG" ToRole="utilisateur" />
           <NavigationProperty Name="dossier" Relationship="Self.FK_dossier_cdg" FromRole="CDG" ToRole="dossier" />
+          <Property Name="COEFFICIENT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="client">
           <Key>
@@ -1113,6 +1116,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="utilisateur1" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="dossier" ToRole="utilisateur" />
           <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
           <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
+          <Property Name="prixachat" Type="Double" />
         </EntityType>
         <EntityType Name="fichiers_client">
           <Key>
@@ -2007,6 +2011,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <EntitySetMapping Name="CDGs">
             <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.CDG">
               <MappingFragment StoreEntitySet="CDG">
+                <ScalarProperty Name="COEFFICIENT" ColumnName="COEFFICIENT" />
                 <ScalarProperty Name="idversement" ColumnName="idversement" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="Montant" ColumnName="Montant" />
@@ -2097,6 +2102,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <EntitySetMapping Name="dossiers">
             <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.dossier">
               <MappingFragment StoreEntitySet="dossier">
+                <ScalarProperty Name="prixachat" ColumnName="prixachat" />
                 <ScalarProperty Name="Numdossier" ColumnName="Numdossier" />
                 <ScalarProperty Name="Titrefoncier" ColumnName="Titrefoncier" />
                 <ScalarProperty Name="PRIX_ACQUISITION" ColumnName="PRIX_ACQUISITION" />

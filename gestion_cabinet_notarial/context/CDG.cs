@@ -21,6 +21,7 @@ namespace gestion_cabinet_notarial.context
         public Nullable<System.DateTime> Date { get; set; }
         public string utilisateur { get; set; }
         public string numdossier { get; set; }
+        public string COEFFICIENT { get; set; }
     
         public virtual utilisateur utilisateur1 { get; set; }
         public virtual dossier dossier { get; set; }

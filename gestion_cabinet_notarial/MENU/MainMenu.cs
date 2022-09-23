@@ -61,7 +61,7 @@ namespace gestion_cabinet_notarial
 
             ));
             PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "RENDEZ-VOUS", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
-            PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, null));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.box, "CDG", false, (se, ev) => THEME.navigat(typeof(CTL_CDG))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Juridiction, "BANQUE", false, (se, ev) => THEME.navigat(typeof(CTL_BANQUE))));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Note, "NOTE", false, (se, ev) => THEME.navigat(typeof(CTL_NOTE))));
 

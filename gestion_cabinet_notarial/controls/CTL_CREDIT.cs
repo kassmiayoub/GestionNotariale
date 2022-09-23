@@ -85,7 +85,7 @@ namespace gestion_cabinet_notarial
             comboBox_contart_paye.ValueMember = "id";
             comboBox_contart_paye.DataSource = contrat_credit;
             var payements = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idClient, NomCoplete = s.client.Nom + " " + s.client.Prenom, s.contrat.numdossier, s.contrat.typecontrat, s.Montant, s.Date }).ToList();
-            bunifuDataGridViewlist_paye_credit.DataSource = payements;
+            bunifuDataGridViewlist_payemant_credit.DataSource = payements;
         }
         private void comboBox_contart_paye_SelectedIndexChanged(object sender, EventArgs e)
         {

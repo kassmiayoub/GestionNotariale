@@ -359,6 +359,7 @@
     <Compile Include="BL\cls_bl_partes_S.cs" />
     <Compile Include="BL\cls_bl_payement.cs" />
     <Compile Include="BL\cls_bl_rendez-vous.cs" />
+    <Compile Include="BL\cls_CDG.cs" />
     <Compile Include="BL\CLS_inormationcabinet.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
     <Compile Include="BL\CLS_NOTE.cs" />
@@ -490,6 +491,12 @@
     </Compile>
     <Compile Include="controls\CTL_BANQUE.Designer.cs">
       <DependentUpon>CTL_BANQUE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_CDG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_CDG.Designer.cs">
+      <DependentUpon>CTL_CDG.cs</DependentUpon>
     </Compile>
     <Compile Include="controls\CTL_DATABASE.cs">
       <SubType>UserControl</SubType>
@@ -705,6 +712,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_BANQUE.resx">
       <DependentUpon>CTL_BANQUE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_CDG.resx">
+      <DependentUpon>CTL_CDG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_DATABASE.resx">
       <DependentUpon>CTL_DATABASE.cs</DependentUpon>

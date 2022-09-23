@@ -43,6 +43,7 @@
     <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__CDG__utilisateur__60A75C0F" FromRole="CDG" ToRole="utilisateur" />
     <NavigationProperty Name="dossier" Relationship="Self.FK_dossier_cdg" FromRole="CDG" ToRole="dossier" />
+    <Property Name="COEFFICIENT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="client">
     <Key>
@@ -158,6 +159,7 @@
     <NavigationProperty Name="utilisateur1" Relationship="Self.FK__dossier__utilisa__33D4B598" FromRole="dossier" ToRole="utilisateur" />
     <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
+    <Property Name="prixachat" Type="Double" />
   </EntityType>
   <EntityType Name="fichiers_client">
     <Key>

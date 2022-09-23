@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_CREDIT));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,12 +49,12 @@
             this.comboBoxCLIENT_PY = new System.Windows.Forms.ComboBox();
             this.comboBox_contart_paye = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.bunifuDataGridViewlist_payemant_credit = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuTextBox_MONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDatePicker_PAYMENT = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bunifuDataGridViewlist_paye_credit = new Bunifu.UI.WinForms.BunifuDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_paye_credit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_payemant_credit)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -218,6 +218,66 @@
             this.label12.TabIndex = 457;
             this.label12.Text = "TYPE CONTRAT : ";
             // 
+            // bunifuDataGridViewlist_payemant_credit
+            // 
+            this.bunifuDataGridViewlist_payemant_credit.AllowCustomTheming = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridViewlist_payemant_credit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bunifuDataGridViewlist_payemant_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuDataGridViewlist_payemant_credit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridViewlist_payemant_credit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridViewlist_payemant_credit.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridViewlist_payemant_credit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridViewlist_payemant_credit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bunifuDataGridViewlist_payemant_credit.ColumnHeadersHeight = 40;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.Name = null;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridViewlist_payemant_credit.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridViewlist_payemant_credit.DefaultCellStyle = dataGridViewCellStyle3;
+            this.bunifuDataGridViewlist_payemant_credit.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridViewlist_payemant_credit.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridViewlist_payemant_credit.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridViewlist_payemant_credit.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridViewlist_payemant_credit.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridViewlist_payemant_credit.Location = new System.Drawing.Point(-13, 247);
+            this.bunifuDataGridViewlist_payemant_credit.Name = "bunifuDataGridViewlist_payemant_credit";
+            this.bunifuDataGridViewlist_payemant_credit.RowHeadersVisible = false;
+            this.bunifuDataGridViewlist_payemant_credit.RowTemplate.Height = 40;
+            this.bunifuDataGridViewlist_payemant_credit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridViewlist_payemant_credit.Size = new System.Drawing.Size(1147, 309);
+            this.bunifuDataGridViewlist_payemant_credit.TabIndex = 460;
+            this.bunifuDataGridViewlist_payemant_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
             // bunifuTextBox_MONTANT
             // 
             this.bunifuTextBox_MONTANT.AcceptsReturn = false;
@@ -363,71 +423,11 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // bunifuDataGridViewlist_paye_credit
-            // 
-            this.bunifuDataGridViewlist_paye_credit.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridViewlist_paye_credit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridViewlist_paye_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuDataGridViewlist_paye_credit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridViewlist_paye_credit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridViewlist_paye_credit.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridViewlist_paye_credit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridViewlist_paye_credit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridViewlist_paye_credit.ColumnHeadersHeight = 40;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.Name = null;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridViewlist_paye_credit.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridViewlist_paye_credit.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuDataGridViewlist_paye_credit.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridViewlist_paye_credit.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridViewlist_paye_credit.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridViewlist_paye_credit.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridViewlist_paye_credit.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_paye_credit.Location = new System.Drawing.Point(-13, 247);
-            this.bunifuDataGridViewlist_paye_credit.Name = "bunifuDataGridViewlist_paye_credit";
-            this.bunifuDataGridViewlist_paye_credit.RowHeadersVisible = false;
-            this.bunifuDataGridViewlist_paye_credit.RowTemplate.Height = 40;
-            this.bunifuDataGridViewlist_paye_credit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridViewlist_paye_credit.Size = new System.Drawing.Size(1147, 309);
-            this.bunifuDataGridViewlist_paye_credit.TabIndex = 460;
-            this.bunifuDataGridViewlist_paye_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
             // CTL_CREDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuDataGridViewlist_paye_credit);
+            this.Controls.Add(this.bunifuDataGridViewlist_payemant_credit);
             this.Controls.Add(this.comboBox_contart_paye);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
@@ -448,7 +448,7 @@
             this.Name = "CTL_CREDIT";
             this.Size = new System.Drawing.Size(1120, 559);
             this.Load += new System.EventHandler(this.CTL_CREDIT_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_paye_credit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_payemant_credit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,6 +472,6 @@
         private System.Windows.Forms.ComboBox comboBoxCLIENT_PY;
         private System.Windows.Forms.ComboBox comboBox_contart_paye;
         private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridViewlist_paye_credit;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridViewlist_payemant_credit;
     }
 }

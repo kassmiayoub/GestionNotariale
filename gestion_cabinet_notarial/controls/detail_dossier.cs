@@ -1,6 +1,7 @@
 ﻿using Bunifu.UI.WinForms.BunifuButton;
 using gestion_cabinet_notarial.BL;
 using gestion_cabinet_notarial.context;
+using gestion_cabinet_notarial.controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -200,6 +201,12 @@ namespace gestion_cabinet_notarial
         private void detail_dossier_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton_CDG_Click(object sender, EventArgs e)
+        {
+            THEME.TPI = "TPI";
+            THEME.navigat(typeof(CTL_CDG));
         }
     }
     public class contart

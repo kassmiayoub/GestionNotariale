@@ -24,6 +24,7 @@ namespace gestion_cabinet_notarial
         public static string contratDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "contrat");
         public static string logoDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "logo");
 
+        public static string TPI = "";
         public static ComboBox client_or_dossier = null;
         public static Panel p = null;
         public static Type T = null;
@@ -45,6 +46,7 @@ namespace gestion_cabinet_notarial
         public static add_client add_Client { get; set; }
         public static LIST_CLIENT LIST_CLIENT { get; set; }
         public static CTL_BANQUE CTL_BANQUE { get; set; }
+        public static CTL_CDG CTL_CDG { get; set; }
         public static CTL_NOTE CTL_NOTE { get; set; }
         public static CTL_AGENDA CTL_AGENDA { get; set; }
         public static CTL_information_cabinet CTL_information_cabinet { get; set; }
@@ -69,6 +71,7 @@ namespace gestion_cabinet_notarial
         {
             ControlsList.Clear();
             ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_CDG);
             ControlsList.Add(CTL_information_cabinet);
             ControlsList.Add(nouveau_credit);
             ControlsList.Add(CTL_LIST__operation);
@@ -89,6 +92,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_CDG = new CTL_CDG() { Visible = false };
             CTL_information_cabinet = new CTL_information_cabinet() { Visible = false };
             nouveau_credit = new nouveau_credit() { Visible = false };
             CTL_LIST__operation = new CTL_LIST__operation() { Visible = false };
@@ -117,6 +121,10 @@ namespace gestion_cabinet_notarial
         }
         public static void navigat(Type t)
         {
+            if(t != typeof(CTL_CDG))
+            {
+                TPI = "";
+            }
             if(client_or_dossier != null)
                 {
                 ((Button)ADD_DOSSIER.Controls["ButtonEdit_dossier"]).Enabled = true;

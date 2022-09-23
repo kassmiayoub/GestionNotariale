@@ -29,6 +29,7 @@
     <EntitySetMapping Name="CDGs">
       <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.CDG">
         <MappingFragment StoreEntitySet="CDG">
+          <ScalarProperty Name="COEFFICIENT" ColumnName="COEFFICIENT" />
           <ScalarProperty Name="idversement" ColumnName="idversement" />
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="Montant" ColumnName="Montant" />
@@ -119,6 +120,7 @@
     <EntitySetMapping Name="dossiers">
       <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.dossier">
         <MappingFragment StoreEntitySet="dossier">
+          <ScalarProperty Name="prixachat" ColumnName="prixachat" />
           <ScalarProperty Name="Numdossier" ColumnName="Numdossier" />
           <ScalarProperty Name="Titrefoncier" ColumnName="Titrefoncier" />
           <ScalarProperty Name="PRIX_ACQUISITION" ColumnName="PRIX_ACQUISITION" />

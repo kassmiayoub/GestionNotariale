@@ -34,6 +34,7 @@
     <Property Name="Date" Type="date" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
     <Property Name="numdossier" Type="varchar" MaxLength="50" />
+    <Property Name="COEFFICIENT" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="client">
     <Key>
@@ -120,6 +121,7 @@
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
     <Property Name="anne_achat" Type="int" />
     <Property Name="anne_vente" Type="int" />
+    <Property Name="prixachat" Type="float" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
