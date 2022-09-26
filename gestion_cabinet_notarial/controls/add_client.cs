@@ -373,7 +373,7 @@ namespace gestion_cabinet_notarial
             sete_client(int.Parse(bunifuDataGridViewlist_client.Rows[e.RowIndex].Cells[0].Value.ToString()));
             if (THEME.client_or_dossier != null)
             {
-                THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
+                THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);                    
                 THEME.navigat(THEME.T);
                 THEME.client_or_dossier = null;
                 THEME.T=null;

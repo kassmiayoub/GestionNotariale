@@ -53,7 +53,6 @@
             this.bunifuTextBox_MONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDatePicker_PAYMENT = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ButtonAdd = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_payemant_credit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,14 +268,15 @@
             this.bunifuDataGridViewlist_payemant_credit.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridViewlist_payemant_credit.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridViewlist_payemant_credit.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_payemant_credit.Location = new System.Drawing.Point(-13, 247);
+            this.bunifuDataGridViewlist_payemant_credit.Location = new System.Drawing.Point(3, 247);
             this.bunifuDataGridViewlist_payemant_credit.Name = "bunifuDataGridViewlist_payemant_credit";
             this.bunifuDataGridViewlist_payemant_credit.RowHeadersVisible = false;
             this.bunifuDataGridViewlist_payemant_credit.RowTemplate.Height = 40;
             this.bunifuDataGridViewlist_payemant_credit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridViewlist_payemant_credit.Size = new System.Drawing.Size(1147, 309);
+            this.bunifuDataGridViewlist_payemant_credit.Size = new System.Drawing.Size(1114, 309);
             this.bunifuDataGridViewlist_payemant_credit.TabIndex = 460;
             this.bunifuDataGridViewlist_payemant_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridViewlist_payemant_credit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridViewlist_payemant_credit_CellClick);
             // 
             // bunifuTextBox_MONTANT
             // 
@@ -404,25 +404,6 @@
             this.ButtonAdd.UseVisualStyleBackColor = false;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(198)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.button2.Location = new System.Drawing.Point(488, 60);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(29, 26);
-            this.button2.TabIndex = 435;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // CTL_CREDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,7 +425,6 @@
             this.Controls.Add(this.comboBoxCLIENT_PY);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ButtonAdd);
-            this.Controls.Add(this.button2);
             this.Name = "CTL_CREDIT";
             this.Size = new System.Drawing.Size(1120, 559);
             this.Load += new System.EventHandler(this.CTL_CREDIT_Load);
@@ -455,7 +435,6 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button ButtonAdd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;

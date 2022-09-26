@@ -23,7 +23,8 @@ namespace gestion_cabinet_notarial
         static public string typecontart;
         static public string idclient;
         static public string ice_cin;
-        static public string ndossier = THEME.numdossier;
+        static public string ndossier ;
+        static public string montantp;
         public print()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace gestion_cabinet_notarial
            // ds.Tables.Add(DATABASE.getinfocabinet());
            // recu.SetDataSource(ds);
             recu.SetParameterValue("montant", montant);
+            recu.SetParameterValue("montantp", montantp);
             recu.SetParameterValue("foncier", foncier);
             recu.SetParameterValue("client", client);
             recu.SetParameterValue("date", date);

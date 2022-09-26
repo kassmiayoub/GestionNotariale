@@ -62,5 +62,18 @@ namespace gestion_cabinet_notarial.controls
         {
             THEME.vider(this);
         }
+
+        private void CTL_LIST_UTILATUER_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.bunifuTextBox_USER.Visible)
+                return;
+            var ListDataSource = user.GetAll().Select(ele => new
+            {
+                UTILISATUER = ele.utilisateur1,
+                NOM = ele.Nom,
+                PRENOM = ele.Prenom
+            }).ToList();
+            bunifuDataGridView_list_utilisatuer.DataSource = ListDataSource;
+        }
     }
 }

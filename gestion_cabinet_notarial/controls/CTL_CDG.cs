@@ -27,25 +27,25 @@ namespace gestion_cabinet_notarial.controls
 
         private void CTL_CDG_Load(object sender, EventArgs e)
         {
-            bunifuTextBox_PRIXACHAT.Enabled = true;
-            bunifuTextBox_PRIXVENTE.Enabled = true;
+            bunifuTextBox_PRIXACHAT.Enabled = false;
+            bunifuTextBox_PRIXVENTE.Enabled = false;
            // var ListDataSource = new List<clien>();
-            var ListDataSource = cls.GetAll().Select(ele => new { nomcomplet = ele.Nom + " " + ele.Prenom, IDCIENT = ele.idClient }).ToList();
+           // var ListDataSource = cls.GetAll().Select(ele => new { nomcomplet = ele.Nom + " " + ele.Prenom, IDCIENT = ele.idClient }).ToList();
             //{
             //    IDCIENT = ele.idClient,
             //    nomcomplet = ele.Nom + " " + ele.Prenom
             //}).ToList();
-            AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
-            ListDataSource.ForEach(x => autoCompleteCollection.Add(x.nomcomplet));
-            bunifuDropdown_CLIENT.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            bunifuDropdown_CLIENT.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            bunifuDropdown_CLIENT.DisplayMember = "NOMCOMPLET";
-            bunifuDropdown_CLIENT.ValueMember = "IDCIENT";
-            bunifuDropdown_CLIENT.DataSource = ListDataSource;           
-            bunifuDropdown_CLIENT.AutoCompleteCustomSource = autoCompleteCollection;
+            //AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
+            //ListDataSource.ForEach(x => autoCompleteCollection.Add(x.nomcomplet));
+            //bunifuDropdown_CLIENT.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //bunifuDropdown_CLIENT.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //bunifuDropdown_CLIENT.DisplayMember = "NOMCOMPLET";
+            //bunifuDropdown_CLIENT.ValueMember = "IDCIENT";
+            //bunifuDropdown_CLIENT.DataSource = ListDataSource;           
+            //bunifuDropdown_CLIENT.AutoCompleteCustomSource = autoCompleteCollection;
             if (THEME.TPI == "")
             {
-                var dossier = partee.GetAll().Where(r => r.idClient == int.Parse(bunifuDropdown_CLIENT.SelectedValue.ToString())).Select(ele => new { Num = ele.dossier.Numdossier }).ToList();
+                var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
                 bunifuDropdown_DOSSIER.DisplayMember = "Num";
                 bunifuDropdown_DOSSIER.ValueMember = "Num";
                 bunifuDropdown_DOSSIER.DataSource = dossier;
@@ -67,7 +67,7 @@ namespace gestion_cabinet_notarial.controls
             {        
                 return;
             }               
-            var dossier = partee.GetAll().Where(r => r.idClient == int.Parse(bunifuDropdown_CLIENT.SelectedValue.ToString())).Select(ele => new { Num = ele.dossier.Numdossier }).ToList();
+            var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
             bunifuDropdown_DOSSIER.DisplayMember = "Num";
             bunifuDropdown_DOSSIER.ValueMember = "Num";
             bunifuDropdown_DOSSIER.DataSource = dossier;
@@ -100,12 +100,11 @@ namespace gestion_cabinet_notarial.controls
         }
         private void button_CALC_Click(object sender, EventArgs e)
         {
-            if (COEFFICIENT.Controls["textBox_porsontage"].Text == "")
+            if (COEFFICIENT.Controls["textBox_porsontage"].Text == "" || COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00")
                 return;
             double TPI1;
             double TPI2;
-            
-            int anne_vente = int.Parse(cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).FirstOrDefault().anne_vente.ToString());
+            int anne_vente = int.Parse(cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault().anne_vente.ToString());
             if ((anne_vente - int.Parse(ANNE.Text)) <=6)
             {
                 double COEFFICIENTfoiPRIXACHAT = double.Parse(bunifuTextBox_PRIXACHAT.Text) * (double.Parse(COEFFICIENT.Controls["textBox_porsontage"].Text));
@@ -121,7 +120,7 @@ namespace gestion_cabinet_notarial.controls
                 {
                     TPI = TPI2;
                     lblTPI.Text = TPI2.ToString();
-                }                    
+                }
             }
             else if( (double.Parse(bunifuTextBox_PRIXVENTE.Text) >= 4000000) )
             {
@@ -169,6 +168,19 @@ namespace gestion_cabinet_notarial.controls
         {
             string type = "";
             string dossier = "";
+                cdgs = cls_CDG.GetAll().Select(ele => new CDGS()
+                {
+                    N_DOSSIER = ele.numdossier,
+                    TYPE = ele.type,
+                    TPI = ele.TPI.ToString(),
+                    MONTANT = ele.Montant.ToString(),
+                    DATE = ele.Date.ToString(),
+                    COEFFICIENT = ele.COEFFICIENT.ToString(),
+                    user = ele.utilisateur1.Nom + " " + ele.utilisateur1.Prenom
+                }).ToList();
+              // bunifuDataGridView_cdg.DataSource = cdgs;
+            
+           
             if (radioButton_CREDIT.Checked)
                 type = "credit";
             else if (radioButton_Immobilier.Checked)
@@ -182,6 +194,15 @@ namespace gestion_cabinet_notarial.controls
                 cdgs.Where(ele => ele.TYPE == type).ToList() :
                 cdgs;
             bunifuDataGridView_cdg.DataSource = cdgs;
+        }
+
+        private void ButtonSerch_client_Click(object sender, EventArgs e)
+        {
+            //((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
+            //((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
+            //THEME.T = this.GetType();
+            //THEME.navigat(typeof(add_client));
+            //THEME.client_or_dossier = (ComboBox)this.Controls["bunifuDropdown_CLIENT"];
         }
     }
     public class CDGS

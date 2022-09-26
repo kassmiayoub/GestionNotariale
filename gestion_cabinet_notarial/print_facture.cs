@@ -46,13 +46,6 @@ namespace gestion_cabinet_notarial
             f.SetParameterValue("paye_tamber", paye_tamber);
             f.SetParameterValue("montant_Ancfcc", montant_Ancfcc);
             f.SetParameterValue("paye_Ancfcc", paye_Ancfcc);
-            //recu.SetParameterValue("client", client);
-            //recu.SetParameterValue("date", date);
-            //recu.SetParameterValue("typecharge", typecharge);
-            //recu.SetParameterValue("typepaye", typepaye);
-            //recu.SetParameterValue("ice_cin", ice_cin);
-            //recu.SetParameterValue("idclient", idclient);
-            //recu.SetParameterValue("banque", banque);
             f.SetParameterValue("foncier", foncier);
             f.SetParameterValue("typecontart", typecontart);
             f.SetParameterValue("ndossier", ndossier);
@@ -61,7 +54,6 @@ namespace gestion_cabinet_notarial
             f.SetParameterValue("etatpayement", etatpayement);
             f.SetParameterValue("PRIXVENTE",THEME.prix) ;
             crystalReportViewer1.ReportSource = f;
-            //crystalReportViewer1.Refresh();
         }
     }
    

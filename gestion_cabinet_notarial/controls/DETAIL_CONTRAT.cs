@@ -394,6 +394,16 @@ namespace gestion_cabinet_notarial
                 print.client = dgv.Rows[e.RowIndex].Cells["CLIENT"].Value.ToString();
                 print.typecontart = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).First().typecontrat;
                 print.foncier = dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).First().Titrefoncier;
+                print.ndossier = THEME.numdossier;
+                string[] n = dgv.Rows[e.RowIndex].Cells["MONTANT"].Value.ToString().Split('.');
+                if (n.Length == 1)
+                {
+                    print.montantp = "elle a payé  " + DATABASE.NumberToWords(Convert.ToInt32(n[0]));
+                }
+                else
+                {
+                    print.montantp = "elle a payé  " + DATABASE.NumberToWords(Convert.ToInt32(n[0])) + " virgule " + DATABASE.NumberToWords(Convert.ToInt32(n[1]));
+                }
                 print p = new print();
                 p.Show();
             }

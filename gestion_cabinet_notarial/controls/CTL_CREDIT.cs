@@ -20,6 +20,7 @@ namespace gestion_cabinet_notarial
         cls_bl_partes partee = new cls_bl_partes();
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        cls_bl_banque banque = new cls_bl_banque();
         public CTL_CREDIT()
         {
             InitializeComponent();
@@ -45,19 +46,14 @@ namespace gestion_cabinet_notarial
             comboBox_banque_PY.AutoCompleteSource = AutoCompleteSource.CustomSource;
             comboBox_banque_PY.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox_banque_PY.AutoCompleteCustomSource = autoCompleteCollection;
+            if (comboBoxCLIENT_PY.SelectedValue == null)
+            {
+                return;
+            }
             var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new {t = r.contrat.typecontrat, id =r.idcontrat }).ToList();            
             comboBox_contart_paye.DisplayMember = "t";
             comboBox_contart_paye.ValueMember = "id";
             comboBox_contart_paye.DataSource = contrat_credit;
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {         
-            THEME.credit = true;
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;   
-            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonAdd"]).Enabled = false;
-            THEME.T = this.GetType();             
-            THEME.navigat(typeof(add_client));
-            THEME.client_or_dossier = (ComboBox)this.Controls["comboBoxCLIENT_PY"];
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
@@ -75,17 +71,24 @@ namespace gestion_cabinet_notarial
             else
                 p.type_Payement = "ESPECES";
             paye.Add(p);
+            int a = p.idPayement;
+           // MessageBox.Show("id payement : "+a.ToString());
             MessageBox.Show("payement avec succes");
             THEME.operation($" payement credit pour contrat id {comboBox_contart_paye.SelectedValue.ToString()}");
         }
         private void comboBoxCLIENT_PY_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxCLIENT_PY.SelectedValue == null)
+            {
+                return;
+            }
             var contrat_credit = BL_credit.GetAll().Where(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue).Select(r => new { t = r.contrat.typecontrat, id = r.idcontrat }).ToList();            
             comboBox_contart_paye.DisplayMember = "t";
             comboBox_contart_paye.ValueMember = "id";
             comboBox_contart_paye.DataSource = contrat_credit;
-            var payements = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idClient, NomCoplete = s.client.Nom + " " + s.client.Prenom, s.contrat.numdossier, s.contrat.typecontrat, s.Montant, s.Date }).ToList();
+            var payements = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idPayement, NomCoplete = s.client.Nom + " " + s.client.Prenom, s.contrat.numdossier, s.contrat.typecontrat, s.Montant, s.Date }).ToList();
             bunifuDataGridViewlist_payemant_credit.DataSource = payements;
+            THEME.add_btn_to_datagrid(bunifuDataGridViewlist_payemant_credit, "RECU", "RECU", bunifuDataGridViewlist_payemant_credit.ColumnCount);
         }
         private void comboBox_contart_paye_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,6 +114,44 @@ namespace gestion_cabinet_notarial
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
+            }
+        }
+        private void bunifuDataGridViewlist_payemant_credit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                int idp = int.Parse(dgv.Rows[e.RowIndex].Cells["idPayement"].Value.ToString());
+                var p = paye.FindByValues(ele => ele.idPayement == idp).FirstOrDefault();
+                //print.client = dgv.Rows[e.RowIndex].Cells["CLIENT"].Value.ToString();
+                print.typepaye = p.type_Payement;
+                int IDCLIENT = int.Parse(p.idClient.ToString());
+                print.idclient = cls.FindByValues(ele => ele.idClient == p.idClient).First().ClientNormale == null ? cls.FindByValues(ele => ele.idClient == p.idClient).First().ClientProfessionnel.ICE : cls.FindByValues(ele => ele.idClient == p.idClient).First().ClientNormale.CIN;
+                print.ice_cin = cls.FindByValues(ele => ele.idClient == p.idClient).First().ClientNormale == null ? "ICE " : " CIN";
+                print.montant = p.Montant + " DH";
+                //print.banque = .;
+                print.typecharge = "CREDIT";
+                print.date = Convert.ToDateTime(dgv.Rows[e.RowIndex].Cells["Date"].Value).ToString("yyyy-MM-dd");
+                print.client = dgv.Rows[e.RowIndex].Cells["NomCoplete"].Value.ToString();
+                print.typecontart = print.client = dgv.Rows[e.RowIndex].Cells["typecontrat"].Value.ToString();
+                string d = dgv.Rows[e.RowIndex].Cells["numdossier"].Value.ToString();
+                print.ndossier = d;
+                print.banque = banque.FindByValues(ele => ele.Idbanque == p.idbanque).FirstOrDefault().Libbele;
+                print.foncier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == d).First().Titrefoncier;
+                string[] n = (p.Montant).ToString().Split('.');
+                if (n.Length == 1)
+                {
+                    int a = Convert.ToInt32(n[0]);
+                    print.montantp = "elle a payé  " + DATABASE.NumberToWords(a);
+                }
+                else
+                {
+                    int a = Convert.ToInt32(n[0]);
+                    int b = Convert.ToInt32(n[1]);
+                    print.montantp = "elle a payé  " + DATABASE.NumberToWords(a) + " virgule " + DATABASE.NumberToWords(b);
+                }
+                print p1 = new print();
+                p1.Show();
             }
         }
     }

@@ -466,6 +466,7 @@
             this.Controls.Add(this.bunifuTextBox_NOM);
             this.Name = "CTL_LIST_UTILATUER";
             this.Size = new System.Drawing.Size(1078, 506);
+            this.VisibleChanged += new System.EventHandler(this.CTL_LIST_UTILATUER_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_utilisatuer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
