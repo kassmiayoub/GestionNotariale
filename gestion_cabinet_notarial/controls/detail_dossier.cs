@@ -28,6 +28,11 @@ namespace gestion_cabinet_notarial
         }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER CONTART"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (bunifuDropdowntype_contrat.SelectedIndex == -1)
             {
                 MessageBox.Show("la selection de type contrat est vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
@@ -57,6 +62,11 @@ namespace gestion_cabinet_notarial
 
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER FICHIER DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (THEME.numdossier == "")
                 return;          
             var file = new fichiers_dossier();
@@ -72,14 +82,18 @@ namespace gestion_cabinet_notarial
             file.numdossier = THEME.numdossier;
             csl_Bl_Fichier_dossier.Add(file);
             THEME.operation($"AJOTER UN FICHIER POUR DOSSIER DE NUMERENT {THEME.numdossier}");
-
         }
-
         private void dataGridViewlist_contrat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
+                if (!THEME.acceder("CONTARTS DOSSIER"))
+                {
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                    return;
+                }
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
                     THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
@@ -116,6 +130,11 @@ namespace gestion_cabinet_notarial
         }
         private void PARTES_OF_CONTRAT_Click_1(object sender, EventArgs e)
         {
+            if (!THEME.acceder("PARTES DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             bunifuPages1.SetPage(tabPage1);
             var ListDataSource = new List<c>();
             ListDataSource = new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new c()
@@ -127,7 +146,6 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_partes.DataSource=ListDataSource;
             THEME.operation($"CONSULTER DES PARTES DE DOSSIER DE NUMERENT {THEME.numdossier}");
         }
-
         private void CONTRAT_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(tabPage2);
@@ -143,6 +161,11 @@ namespace gestion_cabinet_notarial
         }
         private void FICHIERJOINT_dossier_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("FICHIERS DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             bunifuPages1.SetPage(tabPage3);
             String a = THEME.numdossier ;
             var files = csl_Bl_Fichier_dossier.FindByValues(ele => (ele.numdossier == a)).Select(ele => new file()

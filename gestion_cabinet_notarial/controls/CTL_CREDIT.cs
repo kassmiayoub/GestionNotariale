@@ -24,6 +24,7 @@ namespace gestion_cabinet_notarial
         public CTL_CREDIT()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void CTL_CREDIT_Load(object sender, EventArgs e)
         {
@@ -57,6 +58,11 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("PAYEMENT CREDIT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (bunifuTextBox_MONTANT.Text == "")
                 return;
             var p = new payement();

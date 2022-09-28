@@ -51,12 +51,12 @@
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(8, 8);
+            this.label11.Location = new System.Drawing.Point(5, 90);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 24);
             this.label11.TabIndex = 481;
@@ -64,9 +64,9 @@
             // 
             // richTextBox_text
             // 
-            this.richTextBox_text.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_text.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.richTextBox_text.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_text.Location = new System.Drawing.Point(84, 13);
+            this.richTextBox_text.Location = new System.Drawing.Point(81, 95);
             this.richTextBox_text.Name = "richTextBox_text";
             this.richTextBox_text.Size = new System.Drawing.Size(307, 96);
             this.richTextBox_text.TabIndex = 480;
@@ -78,7 +78,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_note.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView_list_note.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDataGridView_list_note.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView_list_note.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_list_note.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_list_note.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -123,21 +125,21 @@
             this.bunifuDataGridView_list_note.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_note.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_note.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_note.Location = new System.Drawing.Point(3, 279);
+            this.bunifuDataGridView_list_note.Location = new System.Drawing.Point(3, 361);
             this.bunifuDataGridView_list_note.Name = "bunifuDataGridView_list_note";
             this.bunifuDataGridView_list_note.RowHeadersVisible = false;
             this.bunifuDataGridView_list_note.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_note.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_note.Size = new System.Drawing.Size(776, 232);
+            this.bunifuDataGridView_list_note.Size = new System.Drawing.Size(776, 347);
             this.bunifuDataGridView_list_note.TabIndex = 482;
             this.bunifuDataGridView_list_note.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // checkBox_filter
             // 
-            this.checkBox_filter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_filter.AutoSize = true;
             this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_filter.Location = new System.Drawing.Point(605, 25);
+            this.checkBox_filter.Location = new System.Drawing.Point(602, 107);
             this.checkBox_filter.Name = "checkBox_filter";
             this.checkBox_filter.Size = new System.Drawing.Size(160, 26);
             this.checkBox_filter.TabIndex = 487;
@@ -147,11 +149,11 @@
             // 
             // panel_filter
             // 
-            this.panel_filter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel_filter.Controls.Add(this.ButtonSearch);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_F);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_D);
-            this.panel_filter.Location = new System.Drawing.Point(551, 56);
+            this.panel_filter.Location = new System.Drawing.Point(548, 138);
             this.panel_filter.Name = "panel_filter";
             this.panel_filter.Size = new System.Drawing.Size(228, 217);
             this.panel_filter.TabIndex = 488;
@@ -233,7 +235,7 @@
             // 
             // Button_vider_note
             // 
-            this.Button_vider_note.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Button_vider_note.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Button_vider_note.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
             this.Button_vider_note.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_vider_note.FlatAppearance.BorderSize = 0;
@@ -242,7 +244,7 @@
             this.Button_vider_note.ForeColor = System.Drawing.Color.White;
             this.Button_vider_note.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.Button_vider_note.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_vider_note.Location = new System.Drawing.Point(159, 237);
+            this.Button_vider_note.Location = new System.Drawing.Point(156, 319);
             this.Button_vider_note.Margin = new System.Windows.Forms.Padding(2);
             this.Button_vider_note.Name = "Button_vider_note";
             this.Button_vider_note.Size = new System.Drawing.Size(132, 35);
@@ -254,7 +256,7 @@
             // 
             // ButtonAdd_note
             // 
-            this.ButtonAdd_note.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAdd_note.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonAdd_note.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.ButtonAdd_note.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_note.FlatAppearance.BorderSize = 0;
@@ -263,7 +265,7 @@
             this.ButtonAdd_note.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_note.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_note.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_note.Location = new System.Drawing.Point(293, 237);
+            this.ButtonAdd_note.Location = new System.Drawing.Point(290, 319);
             this.ButtonAdd_note.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_note.Name = "ButtonAdd_note";
             this.ButtonAdd_note.Size = new System.Drawing.Size(132, 35);
@@ -276,7 +278,7 @@
             // 
             // bunifuDatePicker_date_alert
             // 
-            this.bunifuDatePicker_date_alert.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDatePicker_date_alert.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDatePicker_date_alert.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker_date_alert.BorderColor = System.Drawing.Color.Silver;
             this.bunifuDatePicker_date_alert.BorderRadius = 1;
@@ -294,7 +296,7 @@
             this.bunifuDatePicker_date_alert.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_date_alert.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker_date_alert.LeftTextMargin = 5;
-            this.bunifuDatePicker_date_alert.Location = new System.Drawing.Point(159, 131);
+            this.bunifuDatePicker_date_alert.Location = new System.Drawing.Point(156, 213);
             this.bunifuDatePicker_date_alert.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker_date_alert.Name = "bunifuDatePicker_date_alert";
             this.bunifuDatePicker_date_alert.Size = new System.Drawing.Size(232, 32);
@@ -302,12 +304,12 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(8, 138);
+            this.label1.Location = new System.Drawing.Point(5, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 24);
             this.label1.TabIndex = 490;
@@ -315,10 +317,10 @@
             // 
             // checkBox_tout_j
             // 
-            this.checkBox_tout_j.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox_tout_j.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_tout_j.AutoSize = true;
             this.checkBox_tout_j.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_tout_j.Location = new System.Drawing.Point(181, 188);
+            this.checkBox_tout_j.Location = new System.Drawing.Point(178, 270);
             this.checkBox_tout_j.Name = "checkBox_tout_j";
             this.checkBox_tout_j.Size = new System.Drawing.Size(166, 26);
             this.checkBox_tout_j.TabIndex = 491;
@@ -340,7 +342,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.richTextBox_text);
             this.Name = "CTL_NOTE";
-            this.Size = new System.Drawing.Size(782, 514);
+            this.Size = new System.Drawing.Size(782, 711);
             this.Load += new System.EventHandler(this.CTL_NOTE_Load);
             this.VisibleChanged += new System.EventHandler(this.CTL_NOTE_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_note)).EndInit();

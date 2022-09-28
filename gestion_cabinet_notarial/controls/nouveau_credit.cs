@@ -22,6 +22,7 @@ namespace gestion_cabinet_notarial.controls
         public nouveau_credit()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void ButtonSerch_client_Click(object sender, EventArgs e)
         {
@@ -44,6 +45,11 @@ namespace gestion_cabinet_notarial.controls
         }
         private void button_add_credit_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER NOUVEAU CREDIT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             var credit = new credit();
             credit.idClient = (int)comboBox_client_credit.SelectedValue;
             credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;

@@ -45,6 +45,7 @@
             this.LabelItemName.Size = new System.Drawing.Size(163, 30);
             this.LabelItemName.TabIndex = 6;
             this.LabelItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelItemName.Click += new System.EventHandler(this.LabelItemName_Click);
             this.LabelItemName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainMenuItem_MouseDown);
             this.LabelItemName.MouseLeave += new System.EventHandler(this.MainMenuItem_MouseLeave);
             this.LabelItemName.MouseHover += new System.EventHandler(this.MainMenuItem_MouseHover);

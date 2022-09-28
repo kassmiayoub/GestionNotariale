@@ -19,6 +19,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_BANQUE()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void CTL_BANQUE_VisibleChanged(object sender, EventArgs e)

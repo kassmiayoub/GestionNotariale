@@ -59,7 +59,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.up;
-            this.pictureBox1.Location = new System.Drawing.Point(82, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(85, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(15, 15);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +70,7 @@
             // PictureBoxArrow
             // 
             this.PictureBoxArrow.Image = global::gestion_cabinet_notarial.Properties.Resources.down;
-            this.PictureBoxArrow.Location = new System.Drawing.Point(82, 0);
+            this.PictureBoxArrow.Location = new System.Drawing.Point(85, 15);
             this.PictureBoxArrow.Name = "PictureBoxArrow";
             this.PictureBoxArrow.Size = new System.Drawing.Size(15, 15);
             this.PictureBoxArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

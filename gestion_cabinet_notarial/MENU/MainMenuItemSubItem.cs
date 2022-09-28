@@ -16,7 +16,7 @@ namespace gestion_cabinet_notarial
         {
             InitializeComponent();
         }
-        public MainMenuItemSubItem(string SubItemName, EventHandler EH/*, string Function = ""*/) : this()
+        public MainMenuItemSubItem(string SubItemName, EventHandler EH, string Function = "") : this()
         {
            
          
@@ -39,11 +39,15 @@ namespace gestion_cabinet_notarial
         }
         public void SetOnClickEvent(EventHandler EH)
         {
+
             //if (Theme.LOGNED_USER != null && (Function == "" || Theme.LOGNED_USER.DevlopperUser != null && Theme.LOGNED_USER.DevlopperUser.Value == 1))
             //{
+            if (THEME.acceder(Function))
+            {
                 Click += EH;
                 LabelSubItemName.Click += EH;
                 PictureBoxArrow.Click += EH;
+            }
            // }
             //else
             //{
@@ -60,7 +64,16 @@ namespace gestion_cabinet_notarial
                 //    PictureBoxArrow.Click += (se, ev) => ShowNotAutMessage();
                 //}
             }
+
+        private void LabelSubItemName_Click(object sender, EventArgs e)
+        {
+            if (!THEME.acceder(Function))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
         }
+    }
 
       // private void ShowNotAutMessage() => MessageBox.Show("غيـر مصـرح", "غيـر مصـرح لك الدخـول إلـى هده الخاصيـة"/*, MessageBoxIcon.Information, MessageBoxButtons.OK*/);
     }

@@ -30,9 +30,9 @@ namespace gestion_cabinet_notarial
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LabelMonth = new System.Windows.Forms.Label();
             this.PanelDays = new System.Windows.Forms.FlowLayoutPanel();
             this.yers = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace gestion_cabinet_notarial
             this.sUPPRIMERCETTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aNNULERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aNNULERToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aNNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox_description = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuDropdown_client_rendez = new System.Windows.Forms.ComboBox();
@@ -57,17 +58,16 @@ namespace gestion_cabinet_notarial
             this.ButtonRefresh = new System.Windows.Forms.Button();
             this.ButtonNextMonth = new System.Windows.Forms.Button();
             this.ButtonPrevMonth = new System.Windows.Forms.Button();
-            this.aNNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_times)).BeginInit();
             this.contextMenuStrip_passer_supprimer.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelMonth
             // 
-            this.LabelMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelMonth.Font = new System.Drawing.Font("Ithra-Light", 17F);
             this.LabelMonth.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.LabelMonth.Location = new System.Drawing.Point(90, 194);
+            this.LabelMonth.Location = new System.Drawing.Point(88, 280);
             this.LabelMonth.Name = "LabelMonth";
             this.LabelMonth.Size = new System.Drawing.Size(305, 31);
             this.LabelMonth.TabIndex = 407;
@@ -75,18 +75,18 @@ namespace gestion_cabinet_notarial
             // 
             // PanelDays
             // 
-            this.PanelDays.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PanelDays.Location = new System.Drawing.Point(17, 228);
+            this.PanelDays.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PanelDays.Location = new System.Drawing.Point(15, 314);
             this.PanelDays.Name = "PanelDays";
             this.PanelDays.Size = new System.Drawing.Size(503, 238);
             this.PanelDays.TabIndex = 410;
             // 
             // yers
             // 
-            this.yers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.yers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.yers.Font = new System.Drawing.Font("Ithra-Light", 17F);
             this.yers.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.yers.Location = new System.Drawing.Point(90, 156);
+            this.yers.Location = new System.Drawing.Point(88, 242);
             this.yers.Name = "yers";
             this.yers.Size = new System.Drawing.Size(305, 31);
             this.yers.TabIndex = 415;
@@ -98,15 +98,15 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_times.AllowUserToDeleteRows = false;
             this.bunifuDataGridView_list_times.AllowUserToResizeColumns = false;
             this.bunifuDataGridView_list_times.AllowUserToResizeRows = false;
-            this.bunifuDataGridView_list_times.Anchor = System.Windows.Forms.AnchorStyles.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_list_times.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.bunifuDataGridView_list_times.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_times.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView_list_times.ColumnHeadersHeight = 35;
             this.bunifuDataGridView_list_times.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bunifuDataGridView_list_times.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -115,22 +115,22 @@ namespace gestion_cabinet_notarial
             this.Column3,
             this.Column4,
             this.Column5});
-            this.bunifuDataGridView_list_times.Location = new System.Drawing.Point(579, 70);
+            this.bunifuDataGridView_list_times.Location = new System.Drawing.Point(577, 156);
             this.bunifuDataGridView_list_times.MinimumSize = new System.Drawing.Size(0, 20);
             this.bunifuDataGridView_list_times.MultiSelect = false;
             this.bunifuDataGridView_list_times.Name = "bunifuDataGridView_list_times";
             this.bunifuDataGridView_list_times.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_list_times.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_times.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView_list_times.RowHeadersVisible = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            this.bunifuDataGridView_list_times.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            this.bunifuDataGridView_list_times.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView_list_times.RowTemplate.Height = 45;
             this.bunifuDataGridView_list_times.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuDataGridView_list_times.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -183,7 +183,7 @@ namespace gestion_cabinet_notarial
             this.aNNULERToolStripMenuItem1,
             this.aNNToolStripMenuItem});
             this.contextMenuStrip_passer_supprimer.Name = "contextMenuStrip_passer_supprimer";
-            this.contextMenuStrip_passer_supprimer.Size = new System.Drawing.Size(263, 136);
+            this.contextMenuStrip_passer_supprimer.Size = new System.Drawing.Size(263, 114);
             // 
             // pASSERCETTERENDEToolStripMenuItem
             // 
@@ -213,10 +213,16 @@ namespace gestion_cabinet_notarial
             this.aNNULERToolStripMenuItem1.Text = "ABSENCE";
             this.aNNULERToolStripMenuItem1.Click += new System.EventHandler(this.aNNULERToolStripMenuItem1_Click);
             // 
+            // aNNToolStripMenuItem
+            // 
+            this.aNNToolStripMenuItem.Name = "aNNToolStripMenuItem";
+            this.aNNToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.aNNToolStripMenuItem.Text = "ANNULER";
+            // 
             // richTextBox_description
             // 
-            this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_description.Location = new System.Drawing.Point(191, 2);
+            this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.richTextBox_description.Location = new System.Drawing.Point(189, 105);
             this.richTextBox_description.Name = "richTextBox_description";
             this.richTextBox_description.Size = new System.Drawing.Size(307, 96);
             this.richTextBox_description.TabIndex = 469;
@@ -224,12 +230,12 @@ namespace gestion_cabinet_notarial
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(13, 2);
+            this.label11.Location = new System.Drawing.Point(11, 105);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(159, 24);
             this.label11.TabIndex = 479;
@@ -237,17 +243,17 @@ namespace gestion_cabinet_notarial
             // 
             // bunifuDropdown_client_rendez
             // 
-            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDropdown_client_rendez.FormattingEnabled = true;
-            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(593, 19);
+            this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(591, 105);
             this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
             this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 31);
             this.bunifuDropdown_client_rendez.TabIndex = 480;
             // 
             // ButtonAdd_rendez_vous
             // 
-            this.ButtonAdd_rendez_vous.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAdd_rendez_vous.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonAdd_rendez_vous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.ButtonAdd_rendez_vous.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_rendez_vous.FlatAppearance.BorderSize = 0;
@@ -256,7 +262,7 @@ namespace gestion_cabinet_notarial
             this.ButtonAdd_rendez_vous.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_rendez_vous.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_rendez_vous.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_rendez_vous.Location = new System.Drawing.Point(362, 481);
+            this.ButtonAdd_rendez_vous.Location = new System.Drawing.Point(360, 567);
             this.ButtonAdd_rendez_vous.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_rendez_vous.Name = "ButtonAdd_rendez_vous";
             this.ButtonAdd_rendez_vous.Size = new System.Drawing.Size(145, 35);
@@ -269,7 +275,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonSerch_client
             // 
-            this.ButtonSerch_client.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSerch_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonSerch_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(198)))));
             this.ButtonSerch_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSerch_client.FlatAppearance.BorderSize = 0;
@@ -277,7 +283,7 @@ namespace gestion_cabinet_notarial
             this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.ButtonSerch_client.Location = new System.Drawing.Point(881, 19);
+            this.ButtonSerch_client.Location = new System.Drawing.Point(879, 105);
             this.ButtonSerch_client.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSerch_client.Name = "ButtonSerch_client";
             this.ButtonSerch_client.Size = new System.Drawing.Size(28, 31);
@@ -288,7 +294,7 @@ namespace gestion_cabinet_notarial
             // 
             // button_next_year
             // 
-            this.button_next_year.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_next_year.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_next_year.BackColor = System.Drawing.Color.Transparent;
             this.button_next_year.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_next_year.FlatAppearance.BorderSize = 0;
@@ -296,7 +302,7 @@ namespace gestion_cabinet_notarial
             this.button_next_year.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_next_year.ForeColor = System.Drawing.Color.White;
             this.button_next_year.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaNext;
-            this.button_next_year.Location = new System.Drawing.Point(386, 157);
+            this.button_next_year.Location = new System.Drawing.Point(384, 243);
             this.button_next_year.Margin = new System.Windows.Forms.Padding(2);
             this.button_next_year.Name = "button_next_year";
             this.button_next_year.Size = new System.Drawing.Size(30, 30);
@@ -307,7 +313,7 @@ namespace gestion_cabinet_notarial
             // 
             // button_prev_year
             // 
-            this.button_prev_year.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_prev_year.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_prev_year.BackColor = System.Drawing.Color.Transparent;
             this.button_prev_year.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_prev_year.FlatAppearance.BorderSize = 0;
@@ -315,7 +321,7 @@ namespace gestion_cabinet_notarial
             this.button_prev_year.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_prev_year.ForeColor = System.Drawing.Color.White;
             this.button_prev_year.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaPrev;
-            this.button_prev_year.Location = new System.Drawing.Point(59, 157);
+            this.button_prev_year.Location = new System.Drawing.Point(57, 243);
             this.button_prev_year.Margin = new System.Windows.Forms.Padding(2);
             this.button_prev_year.Name = "button_prev_year";
             this.button_prev_year.Size = new System.Drawing.Size(30, 30);
@@ -326,7 +332,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonRefresh
             // 
-            this.ButtonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonRefresh.BackColor = System.Drawing.Color.Transparent;
             this.ButtonRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonRefresh.FlatAppearance.BorderSize = 0;
@@ -334,7 +340,7 @@ namespace gestion_cabinet_notarial
             this.ButtonRefresh.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonRefresh.ForeColor = System.Drawing.Color.White;
             this.ButtonRefresh.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh2;
-            this.ButtonRefresh.Location = new System.Drawing.Point(468, 177);
+            this.ButtonRefresh.Location = new System.Drawing.Point(466, 263);
             this.ButtonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonRefresh.Name = "ButtonRefresh";
             this.ButtonRefresh.Size = new System.Drawing.Size(30, 30);
@@ -345,7 +351,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonNextMonth
             // 
-            this.ButtonNextMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonNextMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonNextMonth.BackColor = System.Drawing.Color.Transparent;
             this.ButtonNextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonNextMonth.FlatAppearance.BorderSize = 0;
@@ -353,7 +359,7 @@ namespace gestion_cabinet_notarial
             this.ButtonNextMonth.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonNextMonth.ForeColor = System.Drawing.Color.White;
             this.ButtonNextMonth.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaNext;
-            this.ButtonNextMonth.Location = new System.Drawing.Point(386, 195);
+            this.ButtonNextMonth.Location = new System.Drawing.Point(384, 281);
             this.ButtonNextMonth.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonNextMonth.Name = "ButtonNextMonth";
             this.ButtonNextMonth.Size = new System.Drawing.Size(30, 30);
@@ -364,7 +370,7 @@ namespace gestion_cabinet_notarial
             // 
             // ButtonPrevMonth
             // 
-            this.ButtonPrevMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonPrevMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonPrevMonth.BackColor = System.Drawing.Color.Transparent;
             this.ButtonPrevMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonPrevMonth.FlatAppearance.BorderSize = 0;
@@ -372,7 +378,7 @@ namespace gestion_cabinet_notarial
             this.ButtonPrevMonth.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonPrevMonth.ForeColor = System.Drawing.Color.White;
             this.ButtonPrevMonth.Image = global::gestion_cabinet_notarial.Properties.Resources.AgendaPrev;
-            this.ButtonPrevMonth.Location = new System.Drawing.Point(59, 195);
+            this.ButtonPrevMonth.Location = new System.Drawing.Point(57, 281);
             this.ButtonPrevMonth.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonPrevMonth.Name = "ButtonPrevMonth";
             this.ButtonPrevMonth.Size = new System.Drawing.Size(30, 30);
@@ -380,12 +386,6 @@ namespace gestion_cabinet_notarial
             this.ButtonPrevMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonPrevMonth.UseVisualStyleBackColor = false;
             this.ButtonPrevMonth.Click += new System.EventHandler(this.ButtonPrevMonth_Click);
-            // 
-            // aNNToolStripMenuItem
-            // 
-            this.aNNToolStripMenuItem.Name = "aNNToolStripMenuItem";
-            this.aNNToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.aNNToolStripMenuItem.Text = "ANNULER";
             // 
             // CTL_AGENDA
             // 
@@ -409,7 +409,7 @@ namespace gestion_cabinet_notarial
             this.Font = new System.Drawing.Font("Ubuntu", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CTL_AGENDA";
-            this.Size = new System.Drawing.Size(1095, 526);
+            this.Size = new System.Drawing.Size(1095, 607);
             this.Tag = "الأجنـدة";
             this.Load += new System.EventHandler(this.CTL_AGENDA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_times)).EndInit();

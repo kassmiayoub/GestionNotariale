@@ -47,6 +47,7 @@ namespace gestion_cabinet_notarial
             this.LabelSubItemName.Size = new System.Drawing.Size(279, 20);
             this.LabelSubItemName.TabIndex = 4;
             this.LabelSubItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelSubItemName.Click += new System.EventHandler(this.LabelSubItemName_Click);
             this.LabelSubItemName.MouseLeave += new System.EventHandler(this.MainMenuItemSubItem_MouseLeave);
             this.LabelSubItemName.MouseHover += new System.EventHandler(this.MainMenuItemSubItem_MouseHover);
             // 

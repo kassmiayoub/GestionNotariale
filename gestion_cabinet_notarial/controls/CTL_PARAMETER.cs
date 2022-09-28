@@ -18,19 +18,20 @@ namespace gestion_cabinet_notarial.controls
         CSL_BL_UTILISATUER user = new CSL_BL_UTILISATUER();
         CSL_BL_FUNCTION FUNC = new CSL_BL_FUNCTION();
         List<fonction> func_modifier = new List<fonction>();
-        string id_user_mod="";
+        string id_user_mod = "";
         public CTL_PARAMETER_AJOUTER_UTILISATUER()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         public void seting()
         {
             List<fonction> list_func = new List<fonction>();
-            
-            foreach(Control c in panel_check_box.Controls)
-            {          
-                var a = new fonction();     
-                if(c is BunifuCheckBox && ((BunifuCheckBox)c).Checked)
+
+            foreach (Control c in panel_check_box.Controls)
+            {
+                var a = new fonction();
+                if (c is BunifuCheckBox && ((BunifuCheckBox)c).Checked)
                 {
                     a.utilisateur = bunifuTextBox_USER.Text;
                     MessageBox.Show(c.Tag.ToString());
@@ -39,10 +40,10 @@ namespace gestion_cabinet_notarial.controls
                 }
             }
             FUNC.AddRange(list_func);
-        } 
+        }
         private void ButtonAdd_utilisatuer_Click(object sender, EventArgs e)
         {
-           
+
             if (ButtonAdd_utilisatuer.Text == "AJOUTER")
             {
                 var A = new utilisateur();
@@ -78,6 +79,9 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_suprimer_utilisatuer.Checked = true;
                     bunifuCheckBox_list_operation.Checked = true;
                     bunifuCheckBox_basedonnee.Checked = true;
+                    bunifuCheckBox_modifier_info_cabinet.Checked = true;
+                    bunifuCheckBox_info_cabinet.Checked = true;
+                    bunifuCheckBox_COMPTE.Checked = true;
                 }
                 else
                 {
@@ -86,6 +90,9 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_suprimer_utilisatuer.Checked = false;
                     bunifuCheckBox_list_operation.Checked = false;
                     bunifuCheckBox_basedonnee.Checked = false;
+                    bunifuCheckBox_modifier_info_cabinet.Checked = false;
+                    bunifuCheckBox_info_cabinet.Checked = false;
+                    bunifuCheckBox_COMPTE.Checked = false;
                 }
             }
         }
@@ -119,6 +126,8 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_client_modifier.Checked = true;
                     bunifuCheckBox_client_fichier.Checked = true;
                     bunifuCheckBox_client_dossier.Checked = true;
+                    bunifuCheckBox_ditails_dossier_client.Checked = true;
+                    bunifuCheckBox_affichier_fichier_client.Checked = true;
                 }
                 else
                 {
@@ -126,6 +135,8 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_client_modifier.Checked = false;
                     bunifuCheckBox_client_fichier.Checked = false;
                     bunifuCheckBox_client_dossier.Checked = false;
+                    bunifuCheckBox_ditails_dossier_client.Checked = false;
+                    bunifuCheckBox_affichier_fichier_client.Checked = false;
                 }
             }
         }
@@ -142,6 +153,8 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_contart_fichier.Checked = true;
                     bunifuCheckBox_contart_signature.Checked = true;
                     bunifuCheckBox_contart_statistic.Checked = true;
+                    bunifuCheckBox_ajouter_fichier_contrat.Checked = true;
+
                 }
                 else
                 {
@@ -151,6 +164,7 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox_contart_fichier.Checked = false;
                     bunifuCheckBox_contart_signature.Checked = false;
                     bunifuCheckBox_contart_statistic.Checked = false;
+                    bunifuCheckBox_ajouter_fichier_contrat.Checked = false;
                 }
             }
         }
@@ -167,6 +181,7 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox__dossier_fichier.Checked = true;
                     bunifuCheckBox_dossier_contart.Checked = true;
                     bunifuCheckBox_dossier_parte.Checked = true;
+                    bunifuCheckBox_ajouter_fichier_dossier.Checked = true;
                 }
                 else
                 {
@@ -175,25 +190,26 @@ namespace gestion_cabinet_notarial.controls
                     bunifuCheckBox__dossier_detail.Checked = false;
                     bunifuCheckBox__dossier_fichier.Checked = false;
                     bunifuCheckBox_dossier_contart.Checked = false;
+                    bunifuCheckBox_ajouter_fichier_dossier.Checked = false;
                     bunifuCheckBox_dossier_parte.Checked = false;
                 }
             }
         }
         private void CTL_PARAMETER_AJOUTER_UTILISATUER_VisibleChanged(object sender, EventArgs e)
         {
-            if(this.Visible && THEME.id_user_modifier != "")
+            if (this.Visible && THEME.id_user_modifier != "")
             {
-                id_user_mod = THEME.id_user_modifier;                
+                id_user_mod = THEME.id_user_modifier;
                 ButtonAdd_utilisatuer.Text = "VALIDER";
                 ButtonAdd_utilisatuer.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
-                var user_modifier = new utilisateur();                
+                var user_modifier = new utilisateur();
                 func_modifier = FUNC.FindByValues(ele => ele.utilisateur == id_user_mod).ToList();
                 user_modifier = user.FindByValues(ele => ele.utilisateur1 == id_user_mod).SingleOrDefault();
                 bunifuTextBox_USER.Text = user_modifier.utilisateur1;
                 bunifuTextBox_USER.Enabled = false;
                 bunifuTextBox_PASS.Enabled = false;
                 bunifuTextBox_NOM.Text = user_modifier.Nom;
-                bunifuTextBox_PRENOM.Text=user_modifier.Prenom;
+                bunifuTextBox_PRENOM.Text = user_modifier.Prenom;
                 foreach (Control c in panel_check_box.Controls)
                 {
                     if (c is BunifuCheckBox)
@@ -204,7 +220,7 @@ namespace gestion_cabinet_notarial.controls
                             if (ele.fonction1 == c.Tag.ToString())
                             {
                                 ((BunifuCheckBox)c).Checked = true;
-                            }                                
+                            }
                         });
                     }
                 }
@@ -218,12 +234,44 @@ namespace gestion_cabinet_notarial.controls
                 THEME.id_user_modifier = "";
                 bunifuTextBox_USER.Enabled = true;
                 bunifuTextBox_PASS.Enabled = true;
-            }           
+            }
         }
 
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             THEME.vider(this);
         }
-    }
+
+        private void panel_check_box_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuCheckBox_credit_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (THEME.id_user_modifier == "")
+            {
+                if (bunifuCheckBox_credit.Checked)
+                {
+                    bunifuCheckBox_affichier_paye.Checked = true;
+                    bunifuCheckBox_paye_credit.Checked = true;
+                    bunifuCheckBox_ajouter_credit.Checked = true;
+                    bunifuCheckBox_affichier_credits.Checked = true;
+                }
+                else
+                {
+                    bunifuCheckBox_affichier_paye.Checked = false;
+                    bunifuCheckBox_paye_credit.Checked = false;
+                    bunifuCheckBox_ajouter_credit.Checked = false;
+                    bunifuCheckBox_affichier_credits.Checked = false;
+
+                }
+            }
+        }
+
+        private void bunifuSeparator9_Click(object sender, EventArgs e)
+        {
+
+        }
+    } 
 }

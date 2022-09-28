@@ -35,6 +35,7 @@
             this.label_alert = new System.Windows.Forms.Label();
             this.bunifuDataGridView_accueil = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanelcontrat_non_signature = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label_contrat_pas_signature = new System.Windows.Forms.Label();
@@ -47,20 +48,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label_dossiere_encours = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel_dossiers_passer = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_dossier_passer = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_accueil)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanelcontrat_non_signature.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuPanel_contarts_j.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.bunifuPanel_dossiers_encour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel_dossiers_passer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +148,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(84, 71);
             this.panel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.alert;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // bunifuPanelcontrat_non_signature
             // 
@@ -306,16 +316,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Les dossiers en cours ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.alert;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // bunifuPanel_dossiers_passer
             // 
             this.bunifuPanel_dossiers_passer.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -379,10 +379,12 @@
             this.Controls.Add(this.bunifuPanel_dossiers_passer);
             this.Name = "Accueil";
             this.Size = new System.Drawing.Size(1432, 650);
+            this.Load += new System.EventHandler(this.Accueil_Load);
             this.VisibleChanged += new System.EventHandler(this.Accueil_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_accueil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanelcontrat_non_signature.ResumeLayout(false);
             this.bunifuPanelcontrat_non_signature.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -392,7 +394,6 @@
             this.bunifuPanel_dossiers_encour.ResumeLayout(false);
             this.bunifuPanel_dossiers_encour.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel_dossiers_passer.ResumeLayout(false);
             this.bunifuPanel_dossiers_passer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -18,6 +18,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_NOTE()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void checkBox_filter_CheckedChanged(object sender, EventArgs e)
         {

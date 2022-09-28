@@ -56,8 +56,8 @@ namespace gestion_cabinet_notarial
             //    new MainMenuItemSubItem("إضافـة أرشيـف", (se, ev) => Theme.Navigate(typeof(CTL_ADD_ARCHIVE)), "AddArchive") { Tag = "AddArchive" },
             //    new MainMenuItemSubItem("قائمـة الأرشيفـات", (se, ev) => Theme.Navigate(typeof(CTL_ARCHIVES_LIST)), "ArchivesList") { Tag = "ArchivesList" }
             PanelItems.Controls.Add(new MainMenuItem(Resources.Dollar, "CREDIT", true, null,
-                new MainMenuItemSubItem("NOUVAEU CREDIT", (se, ev) => THEME.navigat(typeof(nouveau_credit))),
-                new MainMenuItemSubItem("PAYEMENT CREDIT", (se, ev) => THEME.navigat(typeof(CTL_CREDIT)))             
+                new MainMenuItemSubItem("NOUVAEU CREDIT", (se, ev) => THEME.navigat(typeof(nouveau_credit)), "NOUVAEU CREDIT"),
+                new MainMenuItemSubItem("PAYEMENT CREDIT", (se, ev) => THEME.navigat(typeof(CTL_CREDIT)), "PAYEMENT CREDIT")             
 
             ));
             PanelItems.Controls.Add(new MainMenuItem(Resources.rendez_vous, "RENDEZ-VOUS", false, (se, ev) => THEME.navigat(typeof(CTL_AGENDA))));
@@ -85,12 +85,12 @@ namespace gestion_cabinet_notarial
             //    new MainMenuItemSubItem("list note"/*, (se, ev) => Theme.Navigate(typeof(CTL_NOTES_LIST)), "NotesList"*/) { Tag = "NotesList" }
             //));
             PanelItems.Controls.Add(new MainMenuItem(Resources.Settings, "PARAMETRE", true, null,
-                new MainMenuItemSubItem("LIST UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_LIST_UTILATUER))) { Tag = "Database" },
-                new MainMenuItemSubItem("AJOUTER UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER))) { Tag = "Categories" },
-                new MainMenuItemSubItem("MODIFIER MODE DE PASSE", (se, ev) => THEME.navigat(typeof(CTL_modifier_compte))),
-                new MainMenuItemSubItem("BASE DE DONNEE", (se, ev) => THEME.navigat(typeof(CTL_DATABASE))) { Tag = "OfficeInfo" },
-                new MainMenuItemSubItem("LIST OPERATIONS", (se, ev) => THEME.navigat(typeof(CTL_LIST__operation))) { Tag = "AddUser" },
-                new MainMenuItemSubItem("CABINET", (se, ev) => THEME.navigat(typeof(CTL_information_cabinet))) { Tag = "AddUser" }
+                new MainMenuItemSubItem("LIST UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_LIST_UTILATUER)), "LIST UTILISATUER") { Tag = "Database" },
+                new MainMenuItemSubItem("AJOUTER UTILISATUER", (se, ev) => THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER)),"AJOUTER UTILISATUER") { Tag = "Categories" },
+                new MainMenuItemSubItem("MODIFIER MODE DE PASSE", (se, ev) => THEME.navigat(typeof(CTL_modifier_compte)), "MODIFIER COMPTE"),
+                new MainMenuItemSubItem("BASE DE DONNEE", (se, ev) => THEME.navigat(typeof(CTL_DATABASE)), "BASE DE DONNEE") { Tag = "OfficeInfo" },
+                new MainMenuItemSubItem("LIST OPERATIONS", (se, ev) => THEME.navigat(typeof(CTL_LIST__operation)), "LIST OPERATIONS") { Tag = "AddUser" },
+                new MainMenuItemSubItem("CABINET", (se, ev) => THEME.navigat(typeof(CTL_information_cabinet)), "CABINET") { Tag = "AddUser" }
 
             )) ;
             //PanelItems.Controls.Add(new MainMenuItem(Properties.Resources.Info, "عـن البرنامـج", false, (se, ev) => Theme.Navigate(typeof(CTL_ABOUT))));

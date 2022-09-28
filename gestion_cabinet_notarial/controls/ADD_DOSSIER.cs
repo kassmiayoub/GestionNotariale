@@ -23,7 +23,12 @@ namespace gestion_cabinet_notarial
             this.Dock = DockStyle.Fill;
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
-        {            
+        {
+            if (!THEME.acceder("FICHIERS DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBox_prix.Text == "" || textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "")
                 return;
             var a = new dossier();
@@ -117,7 +122,12 @@ namespace gestion_cabinet_notarial
             THEME.vider(this);
         }
         private void button_detail_dossier_Click(object sender, EventArgs e)
-        {           
+        {
+            if (!THEME.acceder("DETAIL DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBox_prix.Text == "" || textBox_N_dossier.Text == "")
                 return;
             THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");
@@ -138,6 +148,11 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonEdit_dossier_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("MODIFIER DOSSIER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBox_N_dossier.Text == "")
             {
                 MessageBox.Show("ENTRE NUMERENT DE DOSSIER");

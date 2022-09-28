@@ -23,6 +23,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_CDG()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void CTL_CDG_Load(object sender, EventArgs e)

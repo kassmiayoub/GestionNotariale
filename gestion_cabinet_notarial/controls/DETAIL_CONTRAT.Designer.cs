@@ -103,6 +103,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_statistic = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.pretbanquedetails = new System.Windows.Forms.TabPage();
+            this.dateTimePickerfin = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.INTIERET = new System.Windows.Forms.Label();
             this.PAYEPARMOINS = new System.Windows.Forms.Label();
             this.DERU = new System.Windows.Forms.Label();
@@ -126,8 +128,6 @@
             this.FICHIERJOINT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PAYEMENTCLIENT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PARTES_OF_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.dateTimePickerfin = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.bunifuPages1.SuspendLayout();
             this.partes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewpartes_S)).BeginInit();
@@ -153,9 +153,9 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.pretbanquedetails;
-            this.bunifuPages1.PageIndex = 4;
-            this.bunifuPages1.PageName = "pretbanquedetails";
+            this.bunifuPages1.Page = this.partes;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "partes";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
@@ -931,7 +931,7 @@
             this.bunifuButton_print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton_print.BackgroundImage")));
             this.bunifuButton_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.bunifuButton_print.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton_print.ButtonText = "PARTES";
+            this.bunifuButton_print.ButtonText = "IMPRIMER FACTUER";
             this.bunifuButton_print.ButtonTextMarginLeft = 0;
             this.bunifuButton_print.ColorContrastOnClick = 45;
             this.bunifuButton_print.ColorContrastOnHover = 45;
@@ -1128,6 +1128,26 @@
             this.pretbanquedetails.Text = "tabPage1";
             this.pretbanquedetails.UseVisualStyleBackColor = true;
             this.pretbanquedetails.Click += new System.EventHandler(this.pretbanquedetails_Click);
+            // 
+            // dateTimePickerfin
+            // 
+            this.dateTimePickerfin.Location = new System.Drawing.Point(206, 315);
+            this.dateTimePickerfin.Name = "dateTimePickerfin";
+            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 20);
+            this.dateTimePickerfin.TabIndex = 543;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label8.Location = new System.Drawing.Point(6, 315);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 24);
+            this.label8.TabIndex = 542;
+            this.label8.Text = "DATE FERMETURE :";
             // 
             // INTIERET
             // 
@@ -1915,26 +1935,6 @@
             this.PARTES_OF_CONTRAT.TextPadding = new System.Windows.Forms.Padding(0);
             this.PARTES_OF_CONTRAT.UseDefaultRadiusAndThickness = true;
             this.PARTES_OF_CONTRAT.Click += new System.EventHandler(this.PARTES_OF_CONTRAT_Click);
-            // 
-            // dateTimePickerfin
-            // 
-            this.dateTimePickerfin.Location = new System.Drawing.Point(206, 315);
-            this.dateTimePickerfin.Name = "dateTimePickerfin";
-            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 20);
-            this.dateTimePickerfin.TabIndex = 543;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(6, 315);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 24);
-            this.label8.TabIndex = 542;
-            this.label8.Text = "DATE FERMETURE :";
             // 
             // DETAIL_CONTRAT
             // 

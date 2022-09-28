@@ -106,6 +106,11 @@ namespace gestion_cabinet_notarial
                 {
                     if (contrat_or_dossier == "contart")
                     {
+                        if (!THEME.acceder("CONTARTS DOSSIER"))
+                        {
+                            MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                            return;
+                        }
                         int a = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
                         THEME.id_C = a;
                         THEME.numdossier = con.FindByValues(ele => ele.Idcontrat == a).First().numdossier;
@@ -113,7 +118,12 @@ namespace gestion_cabinet_notarial
                         THEME.navigat(typeof(DETAIL_CONTRAT));
                     }
                     else
-                    {                      
+                    {
+                        if (!THEME.acceder("DETAIL DOSSIER"))
+                        {
+                            MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                            return;
+                        }
                         THEME.numdossier = dgv.Rows[e.RowIndex].Cells[dgv.Columns["N_DOSSIER"].Name].Value.ToString();
                         THEME.prix =Convert.ToDouble(dgv.Rows[e.RowIndex].Cells[dgv.Columns["PRIX"].Name].Value.ToString());
                         THEME.navigat(typeof(detail_dossier));
@@ -132,6 +142,11 @@ namespace gestion_cabinet_notarial
             }).ToList();
             contrat_or_dossier = "contart";
             THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 4);           
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

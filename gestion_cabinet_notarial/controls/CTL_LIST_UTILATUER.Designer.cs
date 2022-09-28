@@ -63,7 +63,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(99, 101);
+            this.label3.Location = new System.Drawing.Point(96, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 14;
@@ -75,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(596, 29);
+            this.label2.Location = new System.Drawing.Point(593, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 13;
@@ -87,7 +87,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(164, 29);
+            this.label1.Location = new System.Drawing.Point(161, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 12;
@@ -122,7 +122,7 @@
             this.bunifuTextBox_PRENOM.IconRight = null;
             this.bunifuTextBox_PRENOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PRENOM.Lines = new string[0];
-            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(688, 10);
+            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(685, 70);
             this.bunifuTextBox_PRENOM.MaxLength = 32767;
             this.bunifuTextBox_PRENOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PRENOM.Modified = false;
@@ -198,7 +198,7 @@
             this.bunifuTextBox_USER.IconRight = null;
             this.bunifuTextBox_USER.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_USER.Lines = new string[0];
-            this.bunifuTextBox_USER.Location = new System.Drawing.Point(227, 82);
+            this.bunifuTextBox_USER.Location = new System.Drawing.Point(224, 142);
             this.bunifuTextBox_USER.MaxLength = 32767;
             this.bunifuTextBox_USER.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_USER.Modified = false;
@@ -274,7 +274,7 @@
             this.bunifuTextBox_NOM.IconRight = null;
             this.bunifuTextBox_NOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_NOM.Lines = new string[0];
-            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(227, 10);
+            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(224, 70);
             this.bunifuTextBox_NOM.MaxLength = 32767;
             this.bunifuTextBox_NOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_NOM.Modified = false;
@@ -374,12 +374,12 @@
             this.bunifuDataGridView_list_utilisatuer.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_utilisatuer.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_utilisatuer.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_utilisatuer.Location = new System.Drawing.Point(2, 204);
+            this.bunifuDataGridView_list_utilisatuer.Location = new System.Drawing.Point(3, 270);
             this.bunifuDataGridView_list_utilisatuer.Name = "bunifuDataGridView_list_utilisatuer";
             this.bunifuDataGridView_list_utilisatuer.RowHeadersVisible = false;
             this.bunifuDataGridView_list_utilisatuer.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_utilisatuer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_utilisatuer.Size = new System.Drawing.Size(1073, 289);
+            this.bunifuDataGridView_list_utilisatuer.Size = new System.Drawing.Size(1073, 447);
             this.bunifuDataGridView_list_utilisatuer.TabIndex = 15;
             this.bunifuDataGridView_list_utilisatuer.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView_list_utilisatuer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_utilisatuer_CellClick);
@@ -395,7 +395,7 @@
             this.ButtonEdit.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonEdit.Location = new System.Drawing.Point(445, 158);
+            this.ButtonEdit.Location = new System.Drawing.Point(442, 218);
             this.ButtonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonEdit.Name = "ButtonEdit";
             this.ButtonEdit.Size = new System.Drawing.Size(144, 35);
@@ -417,7 +417,7 @@
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch.Location = new System.Drawing.Point(613, 158);
+            this.ButtonSearch.Location = new System.Drawing.Point(610, 218);
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -440,7 +440,7 @@
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonInit.Location = new System.Drawing.Point(273, 158);
+            this.ButtonInit.Location = new System.Drawing.Point(270, 218);
             this.ButtonInit.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonInit.Name = "ButtonInit";
             this.ButtonInit.Size = new System.Drawing.Size(144, 35);
@@ -465,7 +465,7 @@
             this.Controls.Add(this.bunifuTextBox_USER);
             this.Controls.Add(this.bunifuTextBox_NOM);
             this.Name = "CTL_LIST_UTILATUER";
-            this.Size = new System.Drawing.Size(1078, 506);
+            this.Size = new System.Drawing.Size(1078, 720);
             this.VisibleChanged += new System.EventHandler(this.CTL_LIST_UTILATUER_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_utilisatuer)).EndInit();
             this.ResumeLayout(false);

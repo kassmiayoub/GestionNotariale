@@ -33,6 +33,7 @@ namespace gestion_cabinet_notarial
         public CTL_AGENDA()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
             ChangeMonth();
         }
         public void time_reserve()
@@ -249,6 +250,11 @@ namespace gestion_cabinet_notarial
 
         private void ButtonAdd_rendez_vous_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER RENDEZ-VOUS"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (tm.Count == 0)
                 return;
             var redvs = new List<Rendez_vous>();
@@ -377,6 +383,11 @@ namespace gestion_cabinet_notarial
 
         private void pASSERCETTERENDEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("PASSER RENDEZ-VOUS"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             var a = rv.FindById(id_r);
             a.Timefin = "passer";
             rv.SaveChanges();
@@ -385,6 +396,11 @@ namespace gestion_cabinet_notarial
         }
         private void sUPPRIMERCETTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("SUPRIMER RENDEZ-VOUS"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             var a = rv.FindById(id_r);
             rv.Remove(a);
             rv.SaveChanges();
@@ -401,6 +417,11 @@ namespace gestion_cabinet_notarial
 
         private void aNNULERToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("ABCENSE"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             var a = rv.FindById(id_r);
             a.Timefin = "absence";
             rv.SaveChanges();

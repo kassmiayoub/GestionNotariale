@@ -23,20 +23,26 @@ namespace gestion_cabinet_notarial
             double x = double.Parse(textBox_porsontage.Text);
             textBox_porsontage.Text = (x - 0.01).ToString();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             double x = double.Parse(textBox_porsontage.Text);
             textBox_porsontage.Text = (x + 0.01).ToString();
         }
-
         private void textBox_porsontage_KeyPress(object sender, KeyPressEventArgs e)
         {
+            string[] n = textBox_porsontage.Text.Split('.');
+            if (n.Length == 2)
+            {
+                if (n[1].Length == 3)
+                {                   
+                   e.Handled = true;
+                   return;
+                }
+            }
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
-
             // only allow one decimal point
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {

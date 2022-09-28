@@ -15,6 +15,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_DATABASE()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void ButtonSaveSettings_Click(object sender, EventArgs e)

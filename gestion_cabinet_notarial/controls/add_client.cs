@@ -158,16 +158,13 @@ namespace gestion_cabinet_notarial
             }
         }
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
-        {           
-            var A = new fichiers_client();
-            fichier_client_validator validationRules = new fichier_client_validator();
-            ValidationResult validationResult = validationRules.Validate(A);
-            IList<ValidationFailure> errors = validationResult.Errors;
-            if (!validationResult.IsValid)
+        {
+            if (!THEME.acceder("AJOUTER FICHIERS CLIENT"))
             {
-                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
+            var A = new fichiers_client();            
             A.idClient = int.Parse(textBoxIDCLIENT.Text);
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
@@ -178,13 +175,21 @@ namespace gestion_cabinet_notarial
                 return;
             }
             A.path = name_of_file;
+            fichier_client_validator validationRules = new fichier_client_validator();
+            ValidationResult validationResult = validationRules.Validate(A);
+            IList<ValidationFailure> errors = validationResult.Errors;
+            if (!validationResult.IsValid)
+            {
+                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
             cSL_BL_FICHIER_CLIENT.Add(A);
             THEME.operation($"AJOUTER UN FICHIER DE CLIENT ID {int.Parse(textBoxIDCLIENT.Text)}");
         }
         private void AJOUTER_FICHIERS_Click(object sender, EventArgs e)
         {
             //if("AJOUTER FICHIERS CLIENT")
-            if (!THEME.acceder("AJOUTER FICHIERS CLIENT"))
+            if (!THEME.acceder("AFFICHIER LES FICHIERS DE CLIENT"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
@@ -298,6 +303,11 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("MODIFIER CLIENT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBoxIDCLIENT.Text=="")
                 return;
             client A = new client();
@@ -444,6 +454,11 @@ namespace gestion_cabinet_notarial
 
         private void bunifuButton_dossier_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AFFICHIER LES DOSSIER DE CLIENT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBoxIDCLIENT.Text.Trim() == "")
                 return;
             var ListDataSource = new List<dossier_client>();
@@ -463,13 +478,20 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuDataGridView_list_dossier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            THEME.numdossier = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["N_DOSSIER"].Value.ToString();
-            THEME.prix = double.Parse(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["PRIX"].Value.ToString());
-            MessageBox.Show(THEME.numdossier);
-            MessageBox.Show(THEME.prix.ToString());
-            THEME.navigat(typeof(detail_dossier));
-            //THEME.numdossier = "";
-            //THEME.prix = 0;
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                if (!THEME.acceder("DETAILS DOSSIER DE CLIENT"))
+                {
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                    return;
+                }
+                THEME.numdossier = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["N_DOSSIER"].Value.ToString();
+                THEME.prix = double.Parse(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["PRIX"].Value.ToString());
+                THEME.navigat(typeof(detail_dossier));
+                //THEME.numdossier = "";
+                //THEME.prix = 0;
+            }
         }
         private void add_client_VisibleChanged(object sender, EventArgs e)
         {

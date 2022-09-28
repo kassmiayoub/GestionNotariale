@@ -94,7 +94,7 @@
             this.bunifuTextBox_PRIXVENTE.IconRight = null;
             this.bunifuTextBox_PRIXVENTE.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PRIXVENTE.Lines = new string[0];
-            this.bunifuTextBox_PRIXVENTE.Location = new System.Drawing.Point(183, 198);
+            this.bunifuTextBox_PRIXVENTE.Location = new System.Drawing.Point(183, 129);
             this.bunifuTextBox_PRIXVENTE.MaxLength = 32767;
             this.bunifuTextBox_PRIXVENTE.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PRIXVENTE.Modified = false;
@@ -178,7 +178,7 @@
             this.bunifuDropdown_DOSSIER.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdown_DOSSIER.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdown_DOSSIER.ItemTopMargin = 3;
-            this.bunifuDropdown_DOSSIER.Location = new System.Drawing.Point(558, 138);
+            this.bunifuDropdown_DOSSIER.Location = new System.Drawing.Point(558, 69);
             this.bunifuDropdown_DOSSIER.Name = "bunifuDropdown_DOSSIER";
             this.bunifuDropdown_DOSSIER.Size = new System.Drawing.Size(260, 32);
             this.bunifuDropdown_DOSSIER.TabIndex = 1;
@@ -240,12 +240,12 @@
             this.bunifuDataGridView_cdg.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_cdg.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_cdg.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_cdg.Location = new System.Drawing.Point(3, 394);
+            this.bunifuDataGridView_cdg.Location = new System.Drawing.Point(3, 325);
             this.bunifuDataGridView_cdg.Name = "bunifuDataGridView_cdg";
             this.bunifuDataGridView_cdg.RowHeadersVisible = false;
             this.bunifuDataGridView_cdg.RowTemplate.Height = 40;
             this.bunifuDataGridView_cdg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_cdg.Size = new System.Drawing.Size(852, 301);
+            this.bunifuDataGridView_cdg.Size = new System.Drawing.Size(852, 370);
             this.bunifuDataGridView_cdg.TabIndex = 3;
             this.bunifuDataGridView_cdg.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -255,7 +255,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label13.Location = new System.Drawing.Point(426, 146);
+            this.label13.Location = new System.Drawing.Point(426, 77);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(126, 24);
             this.label13.TabIndex = 482;
@@ -267,7 +267,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(22, 261);
+            this.label2.Location = new System.Drawing.Point(22, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 484;
@@ -284,7 +284,7 @@
             this.buttonserche_CDG.ForeColor = System.Drawing.Color.White;
             this.buttonserche_CDG.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.buttonserche_CDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonserche_CDG.Location = new System.Drawing.Point(456, 354);
+            this.buttonserche_CDG.Location = new System.Drawing.Point(456, 285);
             this.buttonserche_CDG.Margin = new System.Windows.Forms.Padding(2);
             this.buttonserche_CDG.Name = "buttonserche_CDG";
             this.buttonserche_CDG.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -307,7 +307,7 @@
             this.ButtonAdd_CDG.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_CDG.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_CDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_CDG.Location = new System.Drawing.Point(289, 354);
+            this.ButtonAdd_CDG.Location = new System.Drawing.Point(289, 285);
             this.ButtonAdd_CDG.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_CDG.Name = "ButtonAdd_CDG";
             this.ButtonAdd_CDG.Size = new System.Drawing.Size(132, 35);
@@ -324,7 +324,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(500, 207);
+            this.label4.Location = new System.Drawing.Point(500, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 24);
             this.label4.TabIndex = 488;
@@ -350,7 +350,7 @@
             this.bunifuDatePicker_CDG.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_CDG.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker_CDG.LeftTextMargin = 5;
-            this.bunifuDatePicker_CDG.Location = new System.Drawing.Point(577, 197);
+            this.bunifuDatePicker_CDG.Location = new System.Drawing.Point(577, 128);
             this.bunifuDatePicker_CDG.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker_CDG.Name = "bunifuDatePicker_CDG";
             this.bunifuDatePicker_CDG.Size = new System.Drawing.Size(266, 32);
@@ -363,7 +363,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(14, 306);
+            this.label3.Location = new System.Drawing.Point(14, 237);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(305, 24);
             this.label3.TabIndex = 489;
@@ -375,7 +375,7 @@
             this.lblTPI.AutoSize = true;
             this.lblTPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTPI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblTPI.Location = new System.Drawing.Point(325, 306);
+            this.lblTPI.Location = new System.Drawing.Point(325, 237);
             this.lblTPI.Name = "lblTPI";
             this.lblTPI.Size = new System.Drawing.Size(38, 24);
             this.lblTPI.TabIndex = 490;
@@ -387,7 +387,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(528, 306);
+            this.label5.Location = new System.Drawing.Point(528, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 24);
             this.label5.TabIndex = 491;
@@ -399,7 +399,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(507, 258);
+            this.label6.Location = new System.Drawing.Point(507, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 24);
             this.label6.TabIndex = 497;
@@ -411,7 +411,7 @@
             this.ANNE.AutoSize = true;
             this.ANNE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ANNE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ANNE.Location = new System.Drawing.Point(679, 258);
+            this.ANNE.Location = new System.Drawing.Point(679, 189);
             this.ANNE.Name = "ANNE";
             this.ANNE.Size = new System.Drawing.Size(64, 24);
             this.ANNE.TabIndex = 498;
@@ -427,7 +427,7 @@
             this.button_CALC.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.button_CALC.ForeColor = System.Drawing.Color.White;
             this.button_CALC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_CALC.Location = new System.Drawing.Point(115, 354);
+            this.button_CALC.Location = new System.Drawing.Point(115, 285);
             this.button_CALC.Margin = new System.Windows.Forms.Padding(2);
             this.button_CALC.Name = "button_CALC";
             this.button_CALC.Size = new System.Drawing.Size(118, 35);
@@ -444,7 +444,7 @@
             this.radioButton_CREDIT.AutoSize = true;
             this.radioButton_CREDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_CREDIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.radioButton_CREDIT.Location = new System.Drawing.Point(63, 147);
+            this.radioButton_CREDIT.Location = new System.Drawing.Point(63, 78);
             this.radioButton_CREDIT.Name = "radioButton_CREDIT";
             this.radioButton_CREDIT.Size = new System.Drawing.Size(87, 24);
             this.radioButton_CREDIT.TabIndex = 500;
@@ -458,7 +458,7 @@
             this.radioButton_Immobilier.AutoSize = true;
             this.radioButton_Immobilier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Immobilier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.radioButton_Immobilier.Location = new System.Drawing.Point(160, 147);
+            this.radioButton_Immobilier.Location = new System.Drawing.Point(160, 78);
             this.radioButton_Immobilier.Name = "radioButton_Immobilier";
             this.radioButton_Immobilier.Size = new System.Drawing.Size(123, 24);
             this.radioButton_Immobilier.TabIndex = 501;
@@ -472,7 +472,7 @@
             this.radioButton_tout.AutoSize = true;
             this.radioButton_tout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_tout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.radioButton_tout.Location = new System.Drawing.Point(296, 147);
+            this.radioButton_tout.Location = new System.Drawing.Point(296, 78);
             this.radioButton_tout.Name = "radioButton_tout";
             this.radioButton_tout.Size = new System.Drawing.Size(69, 24);
             this.radioButton_tout.TabIndex = 502;
@@ -486,7 +486,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(8, 210);
+            this.label7.Location = new System.Drawing.Point(8, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(169, 24);
             this.label7.TabIndex = 504;
@@ -521,7 +521,7 @@
             this.bunifuTextBox_PRIXACHAT.IconRight = null;
             this.bunifuTextBox_PRIXACHAT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PRIXACHAT.Lines = new string[0];
-            this.bunifuTextBox_PRIXACHAT.Location = new System.Drawing.Point(183, 247);
+            this.bunifuTextBox_PRIXACHAT.Location = new System.Drawing.Point(183, 178);
             this.bunifuTextBox_PRIXACHAT.MaxLength = 32767;
             this.bunifuTextBox_PRIXACHAT.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PRIXACHAT.Modified = false;
@@ -587,7 +587,7 @@
             this.bunifuCheckBox_dossier.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBox_dossier.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox_dossier.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_dossier.Location = new System.Drawing.Point(821, 142);
+            this.bunifuCheckBox_dossier.Location = new System.Drawing.Point(821, 73);
             this.bunifuCheckBox_dossier.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox_dossier.Name = "bunifuCheckBox_dossier";
             this.bunifuCheckBox_dossier.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -625,7 +625,7 @@
             // COEFFICIENT
             // 
             this.COEFFICIENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.COEFFICIENT.Location = new System.Drawing.Point(679, 297);
+            this.COEFFICIENT.Location = new System.Drawing.Point(679, 228);
             this.COEFFICIENT.Name = "COEFFICIENT";
             this.COEFFICIENT.Size = new System.Drawing.Size(100, 33);
             this.COEFFICIENT.TabIndex = 496;

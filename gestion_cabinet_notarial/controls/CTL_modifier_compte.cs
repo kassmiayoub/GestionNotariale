@@ -18,6 +18,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_modifier_compte()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         public utilisateur compte_user()
         {

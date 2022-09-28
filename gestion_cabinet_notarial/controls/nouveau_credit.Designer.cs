@@ -53,12 +53,12 @@
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label14.Location = new System.Drawing.Point(522, 55);
+            this.label14.Location = new System.Drawing.Point(508, 101);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(171, 24);
             this.label14.TabIndex = 474;
@@ -66,10 +66,10 @@
             // 
             // comboBox_contrat_credit
             // 
-            this.comboBox_contrat_credit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_contrat_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox_contrat_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_contrat_credit.FormattingEnabled = true;
-            this.comboBox_contrat_credit.Location = new System.Drawing.Point(701, 48);
+            this.comboBox_contrat_credit.Location = new System.Drawing.Point(687, 94);
             this.comboBox_contrat_credit.Name = "comboBox_contrat_credit";
             this.comboBox_contrat_credit.Size = new System.Drawing.Size(279, 31);
             this.comboBox_contrat_credit.TabIndex = 472;
@@ -77,10 +77,10 @@
             // 
             // comboBox_dossier_credit
             // 
-            this.comboBox_dossier_credit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_dossier_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox_dossier_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_dossier_credit.FormattingEnabled = true;
-            this.comboBox_dossier_credit.Location = new System.Drawing.Point(179, 104);
+            this.comboBox_dossier_credit.Location = new System.Drawing.Point(165, 150);
             this.comboBox_dossier_credit.Name = "comboBox_dossier_credit";
             this.comboBox_dossier_credit.Size = new System.Drawing.Size(279, 31);
             this.comboBox_dossier_credit.TabIndex = 471;
@@ -88,10 +88,10 @@
             // 
             // comboBox_client_credit
             // 
-            this.comboBox_client_credit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_client_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox_client_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_client_credit.FormattingEnabled = true;
-            this.comboBox_client_credit.Location = new System.Drawing.Point(183, 48);
+            this.comboBox_client_credit.Location = new System.Drawing.Point(169, 94);
             this.comboBox_client_credit.Name = "comboBox_client_credit";
             this.comboBox_client_credit.Size = new System.Drawing.Size(279, 31);
             this.comboBox_client_credit.TabIndex = 469;
@@ -99,12 +99,12 @@
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(428, 3);
+            this.label11.Location = new System.Drawing.Point(414, 49);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 24);
             this.label11.TabIndex = 468;
@@ -112,12 +112,12 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(49, 111);
+            this.label8.Location = new System.Drawing.Point(35, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 24);
             this.label8.TabIndex = 464;
@@ -125,12 +125,12 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(572, 111);
+            this.label7.Location = new System.Drawing.Point(558, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 24);
             this.label7.TabIndex = 463;
@@ -138,12 +138,12 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(84, 48);
+            this.label6.Location = new System.Drawing.Point(70, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 24);
             this.label6.TabIndex = 462;
@@ -153,7 +153,7 @@
             // 
             this.bunifuTextBox_montant_credit.AcceptsReturn = false;
             this.bunifuTextBox_montant_credit.AcceptsTab = false;
-            this.bunifuTextBox_montant_credit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTextBox_montant_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBox_montant_credit.AnimationSpeed = 200;
             this.bunifuTextBox_montant_credit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBox_montant_credit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -178,7 +178,7 @@
             this.bunifuTextBox_montant_credit.IconRight = null;
             this.bunifuTextBox_montant_credit.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_montant_credit.Lines = new string[0];
-            this.bunifuTextBox_montant_credit.Location = new System.Drawing.Point(697, 100);
+            this.bunifuTextBox_montant_credit.Location = new System.Drawing.Point(683, 146);
             this.bunifuTextBox_montant_credit.MaxLength = 32767;
             this.bunifuTextBox_montant_credit.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_montant_credit.Modified = false;
@@ -227,7 +227,7 @@
             // 
             // button_add_credit
             // 
-            this.button_add_credit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_add_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_add_credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
             this.button_add_credit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add_credit.FlatAppearance.BorderSize = 0;
@@ -236,7 +236,7 @@
             this.button_add_credit.ForeColor = System.Drawing.Color.White;
             this.button_add_credit.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add_credit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_add_credit.Location = new System.Drawing.Point(466, 169);
+            this.button_add_credit.Location = new System.Drawing.Point(452, 215);
             this.button_add_credit.Margin = new System.Windows.Forms.Padding(2);
             this.button_add_credit.Name = "button_add_credit";
             this.button_add_credit.Size = new System.Drawing.Size(127, 35);
@@ -249,7 +249,7 @@
             // 
             // ButtonSerch_client
             // 
-            this.ButtonSerch_client.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSerch_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonSerch_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(198)))));
             this.ButtonSerch_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSerch_client.FlatAppearance.BorderSize = 0;
@@ -257,7 +257,7 @@
             this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.ButtonSerch_client.Location = new System.Drawing.Point(466, 50);
+            this.ButtonSerch_client.Location = new System.Drawing.Point(452, 96);
             this.ButtonSerch_client.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSerch_client.Name = "ButtonSerch_client";
             this.ButtonSerch_client.Size = new System.Drawing.Size(28, 26);
@@ -272,7 +272,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridViewlist_credit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridViewlist_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuDataGridViewlist_credit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridViewlist_credit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridViewlist_credit.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridViewlist_credit.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -317,12 +319,12 @@
             this.bunifuDataGridViewlist_credit.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridViewlist_credit.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridViewlist_credit.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridViewlist_credit.Location = new System.Drawing.Point(6, 228);
+            this.bunifuDataGridViewlist_credit.Location = new System.Drawing.Point(3, 263);
             this.bunifuDataGridViewlist_credit.Name = "bunifuDataGridViewlist_credit";
             this.bunifuDataGridViewlist_credit.RowHeadersVisible = false;
             this.bunifuDataGridViewlist_credit.RowTemplate.Height = 40;
             this.bunifuDataGridViewlist_credit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridViewlist_credit.Size = new System.Drawing.Size(1016, 317);
+            this.bunifuDataGridViewlist_credit.Size = new System.Drawing.Size(1016, 411);
             this.bunifuDataGridViewlist_credit.TabIndex = 475;
             this.bunifuDataGridViewlist_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -343,7 +345,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Name = "nouveau_credit";
-            this.Size = new System.Drawing.Size(1025, 548);
+            this.Size = new System.Drawing.Size(1025, 677);
             this.Load += new System.EventHandler(this.nouveau_credit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_credit)).EndInit();
             this.ResumeLayout(false);

@@ -105,6 +105,11 @@ namespace gestion_cabinet_notarial
 
         private void buttonadd_date_s_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("SIGNATURE CONTART"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             var p = new Signature();
             p = Signature.FindByValues(ele => ele.idpatres == parte && ele.idcontrat == THEME.id_C).First();
             p.DateSignatur = Convert.ToDateTime(bunifuDatePicker_date_s.Text);
@@ -132,7 +137,12 @@ namespace gestion_cabinet_notarial
         }
         private void FICHIERJOINT_CONTRAT_Click(object sender, EventArgs e)
         {
-            var files = cont.GetAll().Select(ele => new filee()
+            if (!THEME.acceder("FICHIERS CONTART"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
+            var files = cont.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
             {
                 IDFILE = (int)ele.idfile,
                 TITRE = ele.titre,
@@ -140,14 +150,19 @@ namespace gestion_cabinet_notarial
                 FILE = ele.path
             }).ToList();
             bunifuDataGridView_fichier_contart.DataSource = files;
+            THEME.add_btn_to_datagrid(bunifuDataGridView_fichier_contart, "sipprision", "supprimer", 4);
+            THEME.add_btn_to_datagrid(bunifuDataGridView_fichier_contart, "affichage", "affichier", 5);
             bunifuPages1.SetPage(fichierjoint);
         }
         private void STATISTIC_CONTRAT_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(THEME.prix.ToString());
+            if (!THEME.acceder("STATISTIC CONTART"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             bunifuPages1.SetPage(statistic);
             var list = new List<statis>();
-            MessageBox.Show(THEME.id_C.ToString());
             list = paye.FindByValues(ele => ele.idcontrat == THEME.id_C && ele.type =="charge").GroupBy(ele => ele.typecharge).OrderBy(ele => ele.Key).Select(ele => new statis()
             {   //DEPANCES= ele.Key,
                 PAYE = ele.Sum(el => el.Montant).ToString(),
@@ -231,6 +246,11 @@ namespace gestion_cabinet_notarial
 
         private void ButtonAdd_PAYEMENT_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("PAIEMENT CONTART"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (montant_reste < double.Parse(bunifuTextBox_MONTANT.Text))
                 return;
             var p = new  payement();
@@ -252,6 +272,11 @@ namespace gestion_cabinet_notarial
 
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER FICHIER CONTRAT"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (textBoxfile.Text == "")
                 return;
             var A = new fichiers_contrat();
@@ -281,7 +306,7 @@ namespace gestion_cabinet_notarial
         }
         private void buttonserche_file_Click(object sender, EventArgs e)
         {
-            var files = cont.GetAll().Select(ele => new filee()
+            var files = cont.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
             {
                 IDFILE = (int)ele.idfile,
                 TITRE = ele.titre,
@@ -310,7 +335,7 @@ namespace gestion_cabinet_notarial
                 }
                 else
                 {
-                    DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation of Form Closure", MessageBoxButtons.YesNo);
+                    DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Vous voullez vreiment supprimer", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
@@ -349,7 +374,7 @@ namespace gestion_cabinet_notarial
         {
             if (this.Visible == true)
             {
-                STATISTIC_CONTRAT.PerformClick();
+                PARTES_OF_CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
                 int idc = THEME.id_C;
                 var pret = pb.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
@@ -486,19 +511,6 @@ namespace gestion_cabinet_notarial
         public string TYPECHARGE { get; set; }
         [DisplayName("DATE")]
         public string DATE { get; set; }
-    }
-    public class statistic
-    {
-        [DisplayName("DEPANCES")]
-        public string DEPANCES { get; set; }
-        [DisplayName("MONTANT")]
-        public string MONTANT { get; set; }
-        [DisplayName("PAYE")]
-        public string PAYE { get; set; }
-        [DisplayName("RESTE")]
-        public string RESTE { get; set; }
-        [DisplayName("PORCENTAGE")]
-        public string PORCENTAGE { get; set; }
     }
     public class statis
     {

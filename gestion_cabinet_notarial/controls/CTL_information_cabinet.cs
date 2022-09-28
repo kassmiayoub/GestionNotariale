@@ -21,6 +21,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_information_cabinet()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void ButtonSaveSettings_Click(object sender, EventArgs e)
@@ -59,7 +60,17 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonAdd_INFORMATIONCABINET_Click(object sender, EventArgs e)
         {
-            string name_of_file = THEME.CopyFile(textBox_LOGO.Text, "logo", "1");
+            if (!THEME.acceder("MODIFIER INFORMMATION DE CABINET"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
+            DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Vous voullez vreiment modifier", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.No)
+            {
+                return;
+            }
+                string name_of_file = THEME.CopyFile(textBox_LOGO.Text, "logo", "1");
             if (name_of_file == "")
             {
                 MessageBox.Show("Cette fichier existe deja");               

@@ -89,5 +89,10 @@ namespace gestion_cabinet_notarial
                 PictureBoxIcon.Click += EH;
             }
         }
+
+        private void LabelItemName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

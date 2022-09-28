@@ -18,6 +18,7 @@ namespace gestion_cabinet_notarial.controls
         public CTL_LIST_UTILATUER()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
@@ -42,6 +43,11 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("MODIFIER UTILISATUER"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             THEME.id_user_modifier = bunifuTextBox_USER.Text;
             THEME.navigat(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER));
         }

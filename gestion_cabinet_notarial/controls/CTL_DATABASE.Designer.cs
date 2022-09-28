@@ -56,7 +56,7 @@
             this.bunifuPanel1.Controls.Add(this.label7);
             this.bunifuPanel1.Controls.Add(this.TextBoxSavePath);
             this.bunifuPanel1.Controls.Add(this.ButtonSaveSettings);
-            this.bunifuPanel1.Location = new System.Drawing.Point(38, 79);
+            this.bunifuPanel1.Location = new System.Drawing.Point(42, 62);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(587, 210);
@@ -137,7 +137,7 @@
             this.bunifuPanel2.Controls.Add(this.label1);
             this.bunifuPanel2.Controls.Add(this.TextBoxSavePathRestore);
             this.bunifuPanel2.Controls.Add(this.button_Restore);
-            this.bunifuPanel2.Location = new System.Drawing.Point(38, 314);
+            this.bunifuPanel2.Location = new System.Drawing.Point(42, 297);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(587, 210);

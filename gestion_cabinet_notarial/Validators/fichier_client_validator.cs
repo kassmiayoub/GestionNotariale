@@ -12,8 +12,8 @@ namespace gestion_cabinet_notarial.Validators
     {
         public fichier_client_validator()
         {
-            RuleFor(c => c.titre).NotEmpty().WithMessage("le champs adresse ne doit pas etre vide");
-            RuleFor(c => c.path).NotEmpty().WithMessage("le champs Nom ne doit pas etre vide");
+            RuleFor(c => c.titre).NotEmpty().WithMessage("le champs titre ne doit pas etre vide");
+            RuleFor(c => c.path).NotEmpty().WithMessage("le champs chema de fichier ne doit pas etre vide");
         }
     }
 }
