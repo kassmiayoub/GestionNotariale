@@ -115,11 +115,12 @@
             this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSaveSettings.Location = new System.Drawing.Point(148, 154);
+            this.ButtonSaveSettings.Location = new System.Drawing.Point(191, 154);
             this.ButtonSaveSettings.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSaveSettings.Name = "ButtonSaveSettings";
-            this.ButtonSaveSettings.Size = new System.Drawing.Size(235, 31);
+            this.ButtonSaveSettings.Size = new System.Drawing.Size(167, 31);
             this.ButtonSaveSettings.TabIndex = 483;
+            this.ButtonSaveSettings.Text = "ENREGISTRER";
             this.ButtonSaveSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonSaveSettings.UseVisualStyleBackColor = false;
             this.ButtonSaveSettings.Click += new System.EventHandler(this.ButtonSaveSettings_Click);
@@ -169,11 +170,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(204, 27);
+            this.label1.Location = new System.Drawing.Point(220, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 24);
+            this.label1.Size = new System.Drawing.Size(88, 24);
             this.label1.TabIndex = 487;
-            this.label1.Text = "AJOUTER CLIENT";
+            this.label1.Text = "RESTOR";
             // 
             // TextBoxSavePathRestore
             // 
@@ -196,11 +197,12 @@
             this.button_Restore.ForeColor = System.Drawing.Color.White;
             this.button_Restore.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.button_Restore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Restore.Location = new System.Drawing.Point(143, 151);
+            this.button_Restore.Location = new System.Drawing.Point(191, 148);
             this.button_Restore.Margin = new System.Windows.Forms.Padding(2);
             this.button_Restore.Name = "button_Restore";
-            this.button_Restore.Size = new System.Drawing.Size(235, 31);
+            this.button_Restore.Size = new System.Drawing.Size(167, 31);
             this.button_Restore.TabIndex = 485;
+            this.button_Restore.Text = "ENREGISTRER";
             this.button_Restore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_Restore.UseVisualStyleBackColor = false;
             this.button_Restore.Click += new System.EventHandler(this.button_Restore_Click);

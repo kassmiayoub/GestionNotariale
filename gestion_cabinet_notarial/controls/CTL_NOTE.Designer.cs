@@ -197,6 +197,7 @@
             this.bunifuDatePicker_F.FillDatePicker = false;
             this.bunifuDatePicker_F.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_F.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_F.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_F.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_F.Icon")));
             this.bunifuDatePicker_F.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_F.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -223,6 +224,7 @@
             this.bunifuDatePicker_D.FillDatePicker = false;
             this.bunifuDatePicker_D.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_D.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_D.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_D.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_D.Icon")));
             this.bunifuDatePicker_D.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_D.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -232,6 +234,7 @@
             this.bunifuDatePicker_D.Name = "bunifuDatePicker_D";
             this.bunifuDatePicker_D.Size = new System.Drawing.Size(220, 32);
             this.bunifuDatePicker_D.TabIndex = 486;
+            this.bunifuDatePicker_D.Value = new System.DateTime(2022, 9, 28, 0, 0, 0, 0);
             // 
             // Button_vider_note
             // 
@@ -292,6 +295,7 @@
             this.bunifuDatePicker_date_alert.FillDatePicker = false;
             this.bunifuDatePicker_date_alert.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_date_alert.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_date_alert.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_date_alert.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_alert.Icon")));
             this.bunifuDatePicker_date_alert.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_date_alert.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;

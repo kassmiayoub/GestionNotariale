@@ -42,9 +42,9 @@ namespace gestion_cabinet_notarial
             // LabelSubItemName
             // 
             this.LabelSubItemName.Font = new System.Drawing.Font("Ithra-Light", 10F);
-            this.LabelSubItemName.Location = new System.Drawing.Point(32, 1);
+            this.LabelSubItemName.Location = new System.Drawing.Point(22, 1);
             this.LabelSubItemName.Name = "LabelSubItemName";
-            this.LabelSubItemName.Size = new System.Drawing.Size(279, 20);
+            this.LabelSubItemName.Size = new System.Drawing.Size(313, 20);
             this.LabelSubItemName.TabIndex = 4;
             this.LabelSubItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelSubItemName.Click += new System.EventHandler(this.LabelSubItemName_Click);

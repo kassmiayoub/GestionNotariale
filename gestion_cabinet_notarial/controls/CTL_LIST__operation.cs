@@ -53,6 +53,19 @@ namespace gestion_cabinet_notarial.controls
             }
             bunifuDataGridView_list_operation.DataSource = A;
         }
+
+        private void button_detail_dossier_Click(object sender, EventArgs e)
+        {
+            string user_log = bunifuDropdown_users.SelectedValue.ToString();
+            LOG.RemoveRange(LOG.GetAll().Where(ele => ele.utilisateur == user_log).ToList());
+            ButtonSearch_operation.PerformClick();
+        }
+
+        private void CTL_LIST__operation_Load(object sender, EventArgs e)
+        {
+            bunifuDatePicker_D.Value =DateTime.Now;
+            bunifuDatePicker_F.Value = DateTime.Now;
+        }
     }
     public class users
     {

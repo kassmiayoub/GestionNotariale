@@ -12,6 +12,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class nemurecupdown_with_comma : UserControl
     {
+        int delete = 0;
         public nemurecupdown_with_comma()
         {
             InitializeComponent();
@@ -30,14 +31,16 @@ namespace gestion_cabinet_notarial
         }
         private void textBox_porsontage_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string[] n = textBox_porsontage.Text.Split('.');
-            if (n.Length == 2)
+            if (delete == 1)
             {
-                if (n[1].Length == 3)
-                {                   
-                   e.Handled = true;
-                   return;
-                }
+                delete = 0;
+                e.Handled = false;
+                return;
+            }
+            else if(delete == 2)
+            {
+                e.Handled = true;
+                return;
             }
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
@@ -48,6 +51,21 @@ namespace gestion_cabinet_notarial
             {
                 e.Handled = true;
             }
+        }
+        private void textBox_porsontage_KeyDown(object sender, KeyEventArgs e)
+        {
+            string[] n = textBox_porsontage.Text.Split('.');
+            if (n.Length == 2)
+            {
+                if (n[1].Length == 2 && e.KeyCode == Keys.Back)
+                {
+                    delete = 1;
+                }else if(n[1].Length == 2)
+                {
+                    delete=2;
+                }
+            }
+            e.Handled = true;
         }
     }
 }

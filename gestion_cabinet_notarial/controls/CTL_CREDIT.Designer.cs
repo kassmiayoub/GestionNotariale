@@ -373,6 +373,7 @@
             this.bunifuDatePicker_PAYMENT.FillDatePicker = false;
             this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_PAYMENT.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_PAYMENT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_PAYMENT.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_PAYMENT.Icon")));
             this.bunifuDatePicker_PAYMENT.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_PAYMENT.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;

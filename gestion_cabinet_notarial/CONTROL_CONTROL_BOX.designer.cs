@@ -1,5 +1,5 @@
 ﻿using gestion_cabinet_notarial.Properties;
-namespace Avocat_Maroc.PL
+namespace gestion_cabinet_notarial
 {
     partial class CONTROL_CONTROL_BOX
     {

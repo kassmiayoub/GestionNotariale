@@ -153,9 +153,9 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.partes;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "partes";
+            this.bunifuPages1.Page = this.pretbanquedetails;
+            this.bunifuPages1.PageIndex = 4;
+            this.bunifuPages1.PageName = "pretbanquedetails";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
@@ -245,6 +245,7 @@
             this.bunifuDatePicker_date_s.FillDatePicker = false;
             this.bunifuDatePicker_date_s.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_date_s.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_date_s.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_date_s.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_s.Icon")));
             this.bunifuDatePicker_date_s.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_date_s.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -666,6 +667,7 @@
             this.bunifuDatePicker_PAYMENT.FillDatePicker = false;
             this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_PAYMENT.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_PAYMENT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_PAYMENT.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_PAYMENT.Icon")));
             this.bunifuDatePicker_PAYMENT.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_PAYMENT.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -1131,6 +1133,7 @@
             // 
             // dateTimePickerfin
             // 
+            this.dateTimePickerfin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerfin.Location = new System.Drawing.Point(206, 315);
             this.dateTimePickerfin.Name = "dateTimePickerfin";
             this.dateTimePickerfin.Size = new System.Drawing.Size(261, 20);
@@ -1365,6 +1368,7 @@
             // dateTimePickerdubet
             // 
             this.dateTimePickerdubet.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePickerdubet.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerdubet.Location = new System.Drawing.Point(206, 271);
             this.dateTimePickerdubet.Name = "dateTimePickerdubet";
             this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 20);

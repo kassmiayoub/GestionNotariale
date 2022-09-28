@@ -174,7 +174,7 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
             <PropertyRef Name="Userfunction" />
           </Key>
           <Property Name="Userfunction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fonction" Type="varchar" MaxLength="30" />
+          <Property Name="fonction" Type="varchar" MaxLength="100" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="information_cabinet">
@@ -1162,7 +1162,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             <PropertyRef Name="Userfunction" />
           </Key>
           <Property Name="Userfunction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fonction1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fonction1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="utilisateur1" Relationship="Self.FK__fonction__utilis__571DF1D5" FromRole="fonction" ToRole="utilisateur" />
         </EntityType>

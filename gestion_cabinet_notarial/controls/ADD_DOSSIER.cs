@@ -182,23 +182,19 @@ namespace gestion_cabinet_notarial
             textBox_anne_vente.Text = DateTime.Now.Year.ToString();
             if(this.Visible)
                 THEME.operation($"COSULTER DES DOSSIERS");
-
         }
-
         private void textBox_prix_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
-
             // only allow one decimal point
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
             }
         }
-
         private void textBox_titre_foncier_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -206,7 +202,6 @@ namespace gestion_cabinet_notarial
                 e.Handled = true;
             }
         }
-
         private void textBox_anne_vente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -214,7 +209,6 @@ namespace gestion_cabinet_notarial
                 e.Handled = true;
             }
         }
-
         private void textBox_anne_achat_KeyPress(object sender, KeyPressEventArgs e)
         {
         //    if ((textBox_anne_achat.Text.Length+1 == 4) && e.KeyChar == (char)Keys.Delete)

@@ -228,6 +228,11 @@ namespace gestion_cabinet_notarial
 
         private void bunifuButton_CDG_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AFFICHIER LA LIST CDG"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             THEME.TPI = "TPI";
             THEME.navigat(typeof(CTL_CDG));
         }

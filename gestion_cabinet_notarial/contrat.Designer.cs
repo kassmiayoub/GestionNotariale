@@ -56,12 +56,8 @@
             this.dateTimePickerdubet = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
             this.label12 = new System.Windows.Forms.Label();
             this.ButtonAdd = new System.Windows.Forms.Button();
-            this.nemurecupdown_with_comma3 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.nemurecupdown_with_comma2 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.nemurecupdown_with_comma1 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +66,10 @@
             this.bunifuTextBoxenregistrement = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxAncfcc = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxtmbr = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.controL_CONTROL_BOX2 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
+            this.nemurecupdown_with_comma3 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.nemurecupdown_with_comma2 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.nemurecupdown_with_comma1 = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 3;
+            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX2);
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxancfcc);
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxenregistrement);
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxhonoraire);
@@ -96,7 +97,6 @@
             this.bunifuPanel1.Controls.Add(this.dateTimePickerdubet);
             this.bunifuPanel1.Controls.Add(this.label6);
             this.bunifuPanel1.Controls.Add(this.label3);
-            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX1);
             this.bunifuPanel1.Controls.Add(this.label12);
             this.bunifuPanel1.Controls.Add(this.ButtonAdd);
             this.bunifuPanel1.Controls.Add(this.nemurecupdown_with_comma3);
@@ -332,14 +332,6 @@
             this.label3.TabIndex = 489;
             this.label3.Text = "DATE OUVERTURE : ";
             // 
-            // controL_CONTROL_BOX1
-            // 
-            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(1025, 9);
-            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
-            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(68, 32);
-            this.controL_CONTROL_BOX1.TabIndex = 488;
-            // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -374,27 +366,6 @@
             this.ButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonAdd.UseVisualStyleBackColor = false;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click_1);
-            // 
-            // nemurecupdown_with_comma3
-            // 
-            this.nemurecupdown_with_comma3.Location = new System.Drawing.Point(964, 176);
-            this.nemurecupdown_with_comma3.Name = "nemurecupdown_with_comma3";
-            this.nemurecupdown_with_comma3.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma3.TabIndex = 483;
-            // 
-            // nemurecupdown_with_comma2
-            // 
-            this.nemurecupdown_with_comma2.Location = new System.Drawing.Point(964, 129);
-            this.nemurecupdown_with_comma2.Name = "nemurecupdown_with_comma2";
-            this.nemurecupdown_with_comma2.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma2.TabIndex = 482;
-            // 
-            // nemurecupdown_with_comma1
-            // 
-            this.nemurecupdown_with_comma1.Location = new System.Drawing.Point(964, 82);
-            this.nemurecupdown_with_comma1.Name = "nemurecupdown_with_comma1";
-            this.nemurecupdown_with_comma1.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma1.TabIndex = 481;
             // 
             // label5
             // 
@@ -752,6 +723,36 @@
             this.bunifuTextBoxtmbr.WordWrap = true;
             this.bunifuTextBoxtmbr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuTextBoxtmbr_KeyPress);
             // 
+            // controL_CONTROL_BOX2
+            // 
+            this.controL_CONTROL_BOX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controL_CONTROL_BOX2.BackColor = System.Drawing.Color.Transparent;
+            this.controL_CONTROL_BOX2.Location = new System.Drawing.Point(1031, 3);
+            this.controL_CONTROL_BOX2.Name = "controL_CONTROL_BOX2";
+            this.controL_CONTROL_BOX2.Size = new System.Drawing.Size(68, 32);
+            this.controL_CONTROL_BOX2.TabIndex = 497;
+            // 
+            // nemurecupdown_with_comma3
+            // 
+            this.nemurecupdown_with_comma3.Location = new System.Drawing.Point(964, 176);
+            this.nemurecupdown_with_comma3.Name = "nemurecupdown_with_comma3";
+            this.nemurecupdown_with_comma3.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma3.TabIndex = 483;
+            // 
+            // nemurecupdown_with_comma2
+            // 
+            this.nemurecupdown_with_comma2.Location = new System.Drawing.Point(964, 129);
+            this.nemurecupdown_with_comma2.Name = "nemurecupdown_with_comma2";
+            this.nemurecupdown_with_comma2.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma2.TabIndex = 482;
+            // 
+            // nemurecupdown_with_comma1
+            // 
+            this.nemurecupdown_with_comma1.Location = new System.Drawing.Point(964, 82);
+            this.nemurecupdown_with_comma1.Name = "nemurecupdown_with_comma1";
+            this.nemurecupdown_with_comma1.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma1.TabIndex = 481;
+            // 
             // contrat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -778,7 +779,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerdubet;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private Avocat_Maroc.PL.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
+       // private Avocat_Maroc.PL.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Button ButtonAdd;
         private nemurecupdown_with_comma nemurecupdown_with_comma3;
@@ -795,5 +796,6 @@
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBoxancfcc;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBoxenregistrement;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBoxhonoraire;
+        private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
     }
 }

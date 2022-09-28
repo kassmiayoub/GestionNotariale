@@ -26,6 +26,7 @@ namespace gestion_cabinet_notarial.controls
 
         private void bunifuButton_LOGIN_Click(object sender, EventArgs e)
         {
+            THEME.fonctionnalete.Clear();
             var func = FUNC.FindByValues(ele => ele.utilisateur == bunifuTextBox_user.Text).ToList();
             func.ForEach(f =>
             {

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using gestion_cabinet_notarial.Properties;
 
-namespace Avocat_Maroc.PL
+namespace gestion_cabinet_notarial
 {
     public partial class CONTROL_CONTROL_BOX : UserControl
     {

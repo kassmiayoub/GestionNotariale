@@ -39,6 +39,7 @@
             this.bunifuDatePicker_D = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuDropdown_users = new Bunifu.UI.WinForms.BunifuDropdown();
             this.panel_filter = new System.Windows.Forms.Panel();
+            this.button_detail_dossier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_operation)).BeginInit();
             this.panel_filter.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +130,7 @@
             this.ButtonSearch_operation.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch_operation.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch_operation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch_operation.Location = new System.Drawing.Point(299, 175);
+            this.ButtonSearch_operation.Location = new System.Drawing.Point(344, 175);
             this.ButtonSearch_operation.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch_operation.Name = "ButtonSearch_operation";
             this.ButtonSearch_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -157,6 +158,7 @@
             this.bunifuDatePicker_F.FillDatePicker = false;
             this.bunifuDatePicker_F.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_F.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_F.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_F.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_F.Icon")));
             this.bunifuDatePicker_F.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_F.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -183,6 +185,7 @@
             this.bunifuDatePicker_D.FillDatePicker = false;
             this.bunifuDatePicker_D.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_D.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_D.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_D.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_D.Icon")));
             this.bunifuDatePicker_D.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_D.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -248,10 +251,31 @@
             this.panel_filter.Size = new System.Drawing.Size(228, 126);
             this.panel_filter.TabIndex = 494;
             // 
+            // button_detail_dossier
+            // 
+            this.button_detail_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button_detail_dossier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(168)))), ((int)(((byte)(204)))));
+            this.button_detail_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_detail_dossier.FlatAppearance.BorderSize = 0;
+            this.button_detail_dossier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_detail_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
+            this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_detail_dossier.Location = new System.Drawing.Point(109, 175);
+            this.button_detail_dossier.Margin = new System.Windows.Forms.Padding(2);
+            this.button_detail_dossier.Name = "button_detail_dossier";
+            this.button_detail_dossier.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button_detail_dossier.Size = new System.Drawing.Size(160, 35);
+            this.button_detail_dossier.TabIndex = 495;
+            this.button_detail_dossier.Text = "SUPPRIMER";
+            this.button_detail_dossier.UseVisualStyleBackColor = false;
+            this.button_detail_dossier.Click += new System.EventHandler(this.button_detail_dossier_Click);
+            // 
             // CTL_LIST__operation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_detail_dossier);
             this.Controls.Add(this.panel_filter);
             this.Controls.Add(this.bunifuDropdown_users);
             this.Controls.Add(this.ButtonSearch_operation);
@@ -259,6 +283,7 @@
             this.Controls.Add(this.bunifuDataGridView_list_operation);
             this.Name = "CTL_LIST__operation";
             this.Size = new System.Drawing.Size(800, 675);
+            this.Load += new System.EventHandler(this.CTL_LIST__operation_Load);
             this.VisibleChanged += new System.EventHandler(this.CTL_LIST_UTILISATUER_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_operation)).EndInit();
             this.panel_filter.ResumeLayout(false);
@@ -276,5 +301,6 @@
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_D;
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown_users;
         private System.Windows.Forms.Panel panel_filter;
+        public System.Windows.Forms.Button button_detail_dossier;
     }
 }

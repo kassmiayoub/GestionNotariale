@@ -136,6 +136,11 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonAdd_CDG_Click(object sender, EventArgs e)
         {
+            if (!THEME.acceder("AJOUTER MONTANT DANS CDG"))
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
             if (COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00" )
             {
                 MessageBox.Show("COEFFICIENT DOIT EST PAS VIDE");

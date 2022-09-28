@@ -169,7 +169,7 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
       <PropertyRef Name="Userfunction" />
     </Key>
     <Property Name="Userfunction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="fonction" Type="varchar" MaxLength="30" />
+    <Property Name="fonction" Type="varchar" MaxLength="100" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="information_cabinet">

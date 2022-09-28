@@ -34,7 +34,6 @@ namespace gestion_cabinet_notarial.controls
                 if (c is BunifuCheckBox && ((BunifuCheckBox)c).Checked)
                 {
                     a.utilisateur = bunifuTextBox_USER.Text;
-                    MessageBox.Show(c.Tag.ToString());
                     a.fonction1 = c.Tag.ToString();
                     list_func.Add(a);
                 }
@@ -43,7 +42,6 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonAdd_utilisatuer_Click(object sender, EventArgs e)
         {
-
             if (ButtonAdd_utilisatuer.Text == "AJOUTER")
             {
                 var A = new utilisateur();
@@ -272,6 +270,23 @@ namespace gestion_cabinet_notarial.controls
         private void bunifuSeparator9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuCheckBox_CDG_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (THEME.id_user_modifier == "")
+            {
+                if (bunifuCheckBox_CDG.Checked)
+                {
+                    bunifuCheckBox_AJOUTER_CDG.Checked = true;
+                    bunifuCheckBox_LIST_CDG.Checked = true;
+                }
+                else
+                {
+                    bunifuCheckBox_AJOUTER_CDG.Checked = false;
+                    bunifuCheckBox_LIST_CDG.Checked = false;
+                }
+            }
         }
     } 
 }

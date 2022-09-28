@@ -30,6 +30,8 @@ namespace gestion_cabinet_notarial.controls
         private void CTL_NOTE_Load(object sender, EventArgs e)
         {
             panel_filter.Enabled = false;
+            bunifuDatePicker_D.Value = DateTime.Now;
+            bunifuDatePicker_F.Value = DateTime.Now;
         }
         private void ButtonAdd_note_Click(object sender, EventArgs e)
         {

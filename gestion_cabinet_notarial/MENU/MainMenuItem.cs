@@ -79,6 +79,14 @@ namespace gestion_cabinet_notarial
                     PictureBoxArrow.Image = Resources.DownArrow;
                 }
             }
+            if (LabelItemName.Text=="CDG")
+            {
+                if (!THEME.acceder("AFFICHIER LA LIST CDG"))
+                {
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION 222");
+                    return;
+                }
+            }
             if (EH != null)
             {
                 Click += EH;

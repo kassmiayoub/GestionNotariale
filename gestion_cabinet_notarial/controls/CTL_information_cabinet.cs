@@ -65,7 +65,7 @@ namespace gestion_cabinet_notarial.controls
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
-            DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Vous voullez vreiment modifier", MessageBoxButtons.YesNo);
+            DialogResult dr = MessageBox.Show("VOUS VOULLEZ VRAIMENT MODIFIER ?", "Vous voullez vraiment modifier", MessageBoxButtons.YesNo);
             if (dr == DialogResult.No)
             {
                 return;

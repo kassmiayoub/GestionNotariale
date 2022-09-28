@@ -51,6 +51,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.controL_CONTROL_BOX2 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.richTextBox_description = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuDropdown_banque = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -62,7 +63,6 @@
             this.bunifuCheckBoxancfcc = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.bunifuCheckBoxenregistrement = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.bunifuCheckBoxhonoraire = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
             this.label12 = new System.Windows.Forms.Label();
             this.ButtonAdd_contrat_pret_banque = new System.Windows.Forms.Button();
             this.nemurecupdown_with_comma_paye_par_mois = new gestion_cabinet_notarial.nemurecupdown_with_comma();
@@ -97,6 +97,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuPanel1.BorderRadius = 0;
             this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX2);
             this.bunifuPanel1.Controls.Add(this.richTextBox_description);
             this.bunifuPanel1.Controls.Add(this.label14);
             this.bunifuPanel1.Controls.Add(this.bunifuDropdown_banque);
@@ -108,7 +109,6 @@
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxancfcc);
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxenregistrement);
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxhonoraire);
-            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX1);
             this.bunifuPanel1.Controls.Add(this.label12);
             this.bunifuPanel1.Controls.Add(this.ButtonAdd_contrat_pret_banque);
             this.bunifuPanel1.Controls.Add(this.nemurecupdown_with_comma_paye_par_mois);
@@ -138,6 +138,15 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1184, 504);
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            // 
+            // controL_CONTROL_BOX2
+            // 
+            this.controL_CONTROL_BOX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controL_CONTROL_BOX2.BackColor = System.Drawing.Color.Transparent;
+            this.controL_CONTROL_BOX2.Location = new System.Drawing.Point(1113, 4);
+            this.controL_CONTROL_BOX2.Name = "controL_CONTROL_BOX2";
+            this.controL_CONTROL_BOX2.Size = new System.Drawing.Size(68, 32);
+            this.controL_CONTROL_BOX2.TabIndex = 1;
             // 
             // richTextBox_description
             // 
@@ -449,15 +458,6 @@
             this.bunifuCheckBoxhonoraire.ThreeState = false;
             this.bunifuCheckBoxhonoraire.ToolTipText = null;
             this.bunifuCheckBoxhonoraire.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBoxhonoraire_CheckedChanged);
-            // 
-            // controL_CONTROL_BOX1
-            // 
-            this.controL_CONTROL_BOX1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(1116, 4);
-            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
-            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(68, 32);
-            this.controL_CONTROL_BOX1.TabIndex = 467;
             // 
             // label12
             // 
@@ -1083,7 +1083,7 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Avocat_Maroc.PL.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
+        private gestion_cabinet_notarial.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Button ButtonAdd_contrat_pret_banque;
         private nemurecupdown_with_comma nemurecupdown_with_comma_paye_par_mois;
@@ -1118,5 +1118,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown_client;
         private System.Windows.Forms.RichTextBox richTextBox_description;
         private System.Windows.Forms.Label label14;
+        private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
     }
 }

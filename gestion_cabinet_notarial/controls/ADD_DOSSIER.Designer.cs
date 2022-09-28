@@ -371,6 +371,7 @@ namespace gestion_cabinet_notarial
             this.bunifuDatePicker_dubet.FillDatePicker = false;
             this.bunifuDatePicker_dubet.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDatePicker_dubet.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_dubet.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_dubet.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_dubet.Icon")));
             this.bunifuDatePicker_dubet.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_dubet.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -397,6 +398,7 @@ namespace gestion_cabinet_notarial
             this.bunifuDatePicker_fin.FillDatePicker = false;
             this.bunifuDatePicker_fin.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDatePicker_fin.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_fin.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_fin.Icon")));
             this.bunifuDatePicker_fin.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_fin.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -426,7 +428,7 @@ namespace gestion_cabinet_notarial
             this.bunifuCheckBox_status.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBox_status.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox_status.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_status.Location = new System.Drawing.Point(503, 139);
+            this.bunifuCheckBox_status.Location = new System.Drawing.Point(442, 142);
             this.bunifuCheckBox_status.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox_status.Name = "bunifuCheckBox_status";
             this.bunifuCheckBox_status.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;

@@ -346,6 +346,7 @@
             this.bunifuDatePicker_CDG.FillDatePicker = false;
             this.bunifuDatePicker_CDG.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuDatePicker_CDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bunifuDatePicker_CDG.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_CDG.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_CDG.Icon")));
             this.bunifuDatePicker_CDG.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker_CDG.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;

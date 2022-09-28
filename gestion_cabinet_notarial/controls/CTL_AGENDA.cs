@@ -209,7 +209,6 @@ namespace gestion_cabinet_notarial
                 DataGridViewButtonCell time5 = (DataGridViewButtonCell)r.Cells[4];
                 time5.FlatStyle = FlatStyle.Popup;
                 time5.Style.BackColor = Color.Green;
-
                 //b.UseColumnTextForButtonValue = true;
                 //b.Text = "aaa";
             }

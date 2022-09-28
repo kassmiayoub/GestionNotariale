@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_main));
             this.MAINPANEL = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.controL_CONTROL_BOX1 = new Avocat_Maroc.PL.CONTROL_CONTROL_BOX();
+            this.controL_CONTROL_BOX2 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.mainMenu1 = new gestion_cabinet_notarial.MainMenu();
             this.controL_MAIN_HEADER1 = new gestion_cabinet_notarial.CONTROL_MAIN_HEADER();
             this.bunifuPanel1.SuspendLayout();
@@ -58,21 +58,21 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX1);
+            this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX2);
             this.bunifuPanel1.Location = new System.Drawing.Point(9, 7);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = false;
             this.bunifuPanel1.Size = new System.Drawing.Size(1239, 50);
             this.bunifuPanel1.TabIndex = 7;
             // 
-            // controL_CONTROL_BOX1
+            // controL_CONTROL_BOX2
             // 
-            this.controL_CONTROL_BOX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(1157, 5);
-            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
-            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(75, 32);
-            this.controL_CONTROL_BOX1.TabIndex = 1;
+            this.controL_CONTROL_BOX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controL_CONTROL_BOX2.BackColor = System.Drawing.Color.Transparent;
+            this.controL_CONTROL_BOX2.Location = new System.Drawing.Point(1168, 0);
+            this.controL_CONTROL_BOX2.Name = "controL_CONTROL_BOX2";
+            this.controL_CONTROL_BOX2.Size = new System.Drawing.Size(68, 32);
+            this.controL_CONTROL_BOX2.TabIndex = 0;
             // 
             // mainMenu1
             // 
@@ -117,11 +117,12 @@
         #endregion
 
        // private Avocat_Maroc.PL.THEME.MENU.MainMenu mainMenu1;
-        private Avocat_Maroc.PL.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
+        private gestion_cabinet_notarial.CONTROL_CONTROL_BOX controL_CONTROL_BOX1;
         private gestion_cabinet_notarial.CONTROL_MAIN_HEADER controL_MAIN_HEADER1;
         private System.Windows.Forms.Panel MAINPANEL;
         private MainMenu mainMenu1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
     }
 }
 

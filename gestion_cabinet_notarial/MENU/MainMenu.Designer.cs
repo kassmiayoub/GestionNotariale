@@ -38,7 +38,7 @@
             this.PanelItems.Location = new System.Drawing.Point(0, 0);
             this.PanelItems.Margin = new System.Windows.Forms.Padding(0);
             this.PanelItems.Name = "PanelItems";
-            this.PanelItems.Size = new System.Drawing.Size(250, 400);
+            this.PanelItems.Size = new System.Drawing.Size(309, 400);
             this.PanelItems.TabIndex = 0;
             this.PanelItems.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelItems_Paint);
             // 
@@ -50,7 +50,7 @@
             this.Controls.Add(this.PanelItems);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MainMenu";
-            this.Size = new System.Drawing.Size(250, 400);
+            this.Size = new System.Drawing.Size(309, 400);
             this.ResumeLayout(false);
 
         }
