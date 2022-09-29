@@ -218,7 +218,7 @@ namespace gestion_cabinet_notarial
                 bunifuDataGridView_statistic.Rows[3].Cells[1].Value = Timbres;
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
                 bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();   
-                tva.Text = ((Honoraires*20)/100).ToString();
+                tva.Text = ((Honoraires*10)/100).ToString();
             double montant = (Ancfcc) + (Enregistrement) + (Honoraires) + (Timbres);
             double payement = (montant_paye_Ancfcc + montant_paye_Enregistrement + montant_paye_Honoraires + montant_paye_Timbres);
             string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant- payement).ToString(), ((montant * 100) / THEME.prix).ToString()
@@ -323,6 +323,8 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuDataGridView_fichier_contart_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1)
+                return;
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
@@ -433,7 +435,6 @@ namespace gestion_cabinet_notarial
                 p.Show();
             }
         }
-
         private void bunifuButton_print_Click(object sender, EventArgs e)
         {
             print_facture.montant_Ancfcc = Ancfcc;
@@ -478,7 +479,6 @@ namespace gestion_cabinet_notarial
             print_facture f = new print_facture();
             f.Show();
         }
-
         private void pretbanquedetails_Click(object sender, EventArgs e)
         {
 

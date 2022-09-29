@@ -113,3 +113,4 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestio
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.print.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.print_facture.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_CDG.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_STATISTIC.resources

@@ -380,6 +380,8 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuDataGridViewlist_client_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1)
+                return;
             sete_client(int.Parse(bunifuDataGridViewlist_client.Rows[e.RowIndex].Cells[0].Value.ToString()));
             if (THEME.client_or_dossier != null)
             {

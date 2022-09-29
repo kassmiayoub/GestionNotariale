@@ -44,6 +44,7 @@ namespace gestion_cabinet_notarial
         public static detail_dossier detail_dossier { get; set; }
         public static Panel MainControlPanel { get; set; }
         public static add_client add_Client { get; set; }
+        public static CTL_STATISTIC CTL_STATISTIC { get; set; }
         public static LIST_CLIENT LIST_CLIENT { get; set; }
         public static CTL_BANQUE CTL_BANQUE { get; set; }
         public static CTL_CDG CTL_CDG { get; set; }
@@ -71,6 +72,7 @@ namespace gestion_cabinet_notarial
         {
             ControlsList.Clear();
             ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_STATISTIC);
             ControlsList.Add(CTL_CDG);
             ControlsList.Add(CTL_information_cabinet);
             ControlsList.Add(nouveau_credit);
@@ -92,6 +94,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_STATISTIC = new CTL_STATISTIC() { Visible = false };
             CTL_CDG = new CTL_CDG() { Visible = false };
             CTL_information_cabinet = new CTL_information_cabinet() { Visible = false };
             nouveau_credit = new nouveau_credit() { Visible = false };
@@ -173,11 +176,13 @@ namespace gestion_cabinet_notarial
                 comboBox_banque_PY.DisplayMember = "Libbele"; 
                 comboBox_banque_PY.ValueMember = "Idbanque";
                 comboBox_banque_PY.Enabled=false;
-                comboBox_TYPE_CHARGE.Items.Add("Enregistrement");
-                comboBox_TYPE_CHARGE.Items.Add("Ancfcc");
-                comboBox_TYPE_CHARGE.Items.Add("Timbres");
-                comboBox_TYPE_CHARGE.Items.Add("Honoraires");
-                comboBox_TYPE_CHARGE.Items.Add("CDG");
+                if (comboBox_TYPE_CHARGE.Items.Count == 0)
+                {
+                    comboBox_TYPE_CHARGE.Items.Add("Enregistrement");
+                    comboBox_TYPE_CHARGE.Items.Add("Ancfcc");
+                    comboBox_TYPE_CHARGE.Items.Add("Timbres");
+                    comboBox_TYPE_CHARGE.Items.Add("Honoraires");
+                }                
             }
             p.Controls.Cast<Control>().ToList().ForEach(ele => ele.Visible = false);
             Control c = p.Controls.Cast<Control>().First(ele => ele.GetType() == t);
@@ -232,7 +237,7 @@ namespace gestion_cabinet_notarial
                                 return findControl(c2, controlToFindName);
                             }
                                 //return findControl(c, controlToFindName);
-                            }
+                        }
                     }
                 }
                 catch (Exception)

@@ -546,6 +546,12 @@
     <Compile Include="controls\CTL_PARAMETER.Designer.cs">
       <DependentUpon>CTL_PARAMETER.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\CTL_STATISTIC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_STATISTIC.Designer.cs">
+      <DependentUpon>CTL_STATISTIC.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -739,6 +745,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_PARAMETER.resx">
       <DependentUpon>CTL_PARAMETER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_STATISTIC.resx">
+      <DependentUpon>CTL_STATISTIC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -1086,6 +1095,7 @@
       <DependentUpon>gestion_cabinet_cotarialEntities.edmx</DependentUpon>
       <LastGenOutput>gestion_cabinet_cotarialEntities.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\STATISTIQUE.png" />
     <None Include="Resources\contrat.png" />
     <None Include="Resources\dossier.png" />
     <None Include="Resources\print.png" />

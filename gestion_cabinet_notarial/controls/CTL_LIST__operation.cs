@@ -46,7 +46,7 @@ namespace gestion_cabinet_notarial.controls
         private void ButtonSearch_operation_Click(object sender, EventArgs e)
         {
             string user_log = bunifuDropdown_users.SelectedValue.ToString();
-            var A = LOG.GetAll().Where(ele => ele.utilisateur == user_log).ToList(); 
+            var A = LOG.GetAll().Where(ele => ele.utilisateur == user_log).Select(el => new {el.Text,el.Date,UTILISATUER = el.utilisateur1.Nom+" "+el.utilisateur1.Prenom}).ToList(); 
             if (checkBox_filter.Checked)
             {
               A = A.Where(ele => ele.Date >= Convert.ToDateTime(bunifuDatePicker_D.Value) && ele.Date <= Convert.ToDateTime(bunifuDatePicker_F.Value)).ToList();

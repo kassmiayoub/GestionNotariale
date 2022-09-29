@@ -153,10 +153,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.pretbanquedetails;
-            this.bunifuPages1.PageIndex = 4;
-            this.bunifuPages1.PageName = "pretbanquedetails";
-            this.bunifuPages1.PageTitle = "tabPage1";
+            this.bunifuPages1.Page = this.statistic;
+            this.bunifuPages1.PageIndex = 3;
+            this.bunifuPages1.PageName = "statistic";
+            this.bunifuPages1.PageTitle = "tabPage5";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
             this.bunifuPages1.TabIndex = 0;
@@ -1017,7 +1017,7 @@
             this.tva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tva.AutoSize = true;
             this.tva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tva.Location = new System.Drawing.Point(335, 345);
+            this.tva.Location = new System.Drawing.Point(375, 345);
             this.tva.Name = "tva";
             this.tva.Size = new System.Drawing.Size(33, 24);
             this.tva.TabIndex = 12;
@@ -1030,9 +1030,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(173, 345);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 24);
+            this.label6.Size = new System.Drawing.Size(196, 24);
             this.label6.TabIndex = 11;
-            this.label6.Text = "TVA Honoraires :";
+            this.label6.Text = "TVA Honoraires 10% :";
             // 
             // bunifuDataGridView_statistic
             // 
