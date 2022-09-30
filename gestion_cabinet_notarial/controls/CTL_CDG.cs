@@ -150,6 +150,7 @@ namespace gestion_cabinet_notarial.controls
             cdg.COEFFICIENT = COEFFICIENT.Controls["textBox_porsontage"].Text;
             cdg.utilisateur = THEME.id_user;
             cdg.Date = bunifuDatePicker_CDG.Value;
+            cdg.utilisateur = THEME.id_user;
             if (lblTPI.Text == "TPI")
             {
                 MessageBox.Show("doit calculer lA TPI");

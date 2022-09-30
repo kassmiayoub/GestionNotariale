@@ -137,7 +137,6 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1184, 504);
             this.bunifuPanel1.TabIndex = 0;
-            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // controL_CONTROL_BOX2
             // 
@@ -471,7 +470,6 @@
             this.label12.Size = new System.Drawing.Size(187, 24);
             this.label12.TabIndex = 466;
             this.label12.Text = "TYPE DE CONTRAT";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // ButtonAdd_contrat_pret_banque
             // 

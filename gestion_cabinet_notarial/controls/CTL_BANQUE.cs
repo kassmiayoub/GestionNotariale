@@ -35,6 +35,7 @@ namespace gestion_cabinet_notarial.controls
             if (bunifuTextBox_banque.Text.Trim() != ""){
                 var banque = new banque();
                 banque.Libbele = bunifuTextBox_banque.Text;
+                banque.utilisateur = THEME.id_user;
                 cls_Bl_Banque.Add(banque);
                 THEME.operation($"AJOUTR UN BANQUE");
             }

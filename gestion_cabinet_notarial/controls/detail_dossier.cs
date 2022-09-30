@@ -55,6 +55,7 @@ namespace gestion_cabinet_notarial
             parte.idClient = int.Parse(bunifuDropdownclient.SelectedValue.ToString());
             parte.Typeclient = bunifuDropdowntypeclient.Text;
             parte.Condition = bunifuTextBoxcondition.Text;
+            //parte.utilisateur = THEME.id_user;
             parte.numdossier = THEME.numdossier;
             partee.Add(parte);
             THEME.operation($"AJOTER UN PARTE POUR DOSSIER DE NUMERENT {THEME.numdossier}");
@@ -71,6 +72,7 @@ namespace gestion_cabinet_notarial
                 return;          
             var file = new fichiers_dossier();
             file.titre = textBoxtitre.Text;
+            file.utilisateur = THEME.id_user;
             string name_of_file = THEME.CopyFile(textBoxfile.Text, "dossier", THEME.numdossier);
             if (name_of_file == "")
             {

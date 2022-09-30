@@ -26,6 +26,7 @@ namespace gestion_cabinet_notarial
             var A = new fichiers_client();
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
+            A.utilisateur = THEME.id_user;
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
                 if (ofd.ShowDialog() == DialogResult.OK)

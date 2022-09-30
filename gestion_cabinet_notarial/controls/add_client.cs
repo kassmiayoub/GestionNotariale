@@ -78,6 +78,7 @@ namespace gestion_cabinet_notarial
             a.Fax = textBox_fax.Text;
             a.Tele = textBoxtel.Text;
             a.adress = textBox_adress.Text;
+            a.utilisateur = THEME.id_user;
             clientValidator validationRules = new clientValidator();
             ValidationResult validationResult = validationRules.Validate(a);
             IList<ValidationFailure> errors = validationResult.Errors;
@@ -319,6 +320,7 @@ namespace gestion_cabinet_notarial
             A.Fax = textBox_fax.Text;
             A.adress = textBox_adress.Text;
             A.Tele = textBoxtel.Text;
+            A.utilisateur = THEME.id_user;
             clientValidator validationRules = new clientValidator();
             ValidationResult validationResult = validationRules.Validate(A);
             IList<ValidationFailure> errors = validationResult.Errors;
@@ -450,8 +452,8 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonInit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Name);
             THEME.vider(this.Controls["bunifuPages1"].Controls["tabPage_CLIENT"]);
+            comboBoxtype_client.SelectedIndex = 0;
         }
 
         private void bunifuButton_dossier_Click(object sender, EventArgs e)

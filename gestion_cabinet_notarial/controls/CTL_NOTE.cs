@@ -40,6 +40,7 @@ namespace gestion_cabinet_notarial.controls
             var note = new note();
             note.Text = richTextBox_text.Text;
             note.date = DateTime.Now;
+            note.utilisateur = THEME.id_user;
             if (!checkBox_tout_j.Checked)
                 note.date_alere = Convert.ToDateTime(bunifuDatePicker_date_alert.Value);
             cLS_NOTE.Add(note);

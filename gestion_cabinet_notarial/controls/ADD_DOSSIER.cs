@@ -40,7 +40,8 @@ namespace gestion_cabinet_notarial
             a.Objet = textBox_obj.Text;
             a.anne_achat =int.Parse(textBox_anne_achat.Text);
             a.anne_vente = int.Parse(textBox_anne_vente.Text);
-            if(bunifuCheckBox_status.Checked)
+            a.utilisateur = THEME.id_user;
+            if (bunifuCheckBox_status.Checked)
                 a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
             else
                 a.Datefermeture = null;
@@ -130,9 +131,16 @@ namespace gestion_cabinet_notarial
             }
             if (textBox_prix.Text == "" || textBox_N_dossier.Text == "")
                 return;
-            THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");
+            THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");            
+            var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == textBox_N_dossier.Text).FirstOrDefault();
+            if (dossier == null)
+            {
+                MessageBox.Show("Cette dossier ne pas trover");
+                return;
+            }
+                
             THEME.numdossier = textBox_N_dossier.Text;
-            THEME.prix = double.Parse(textBox_prix.Text);
+            THEME.prix = double.Parse(dossier.PRIX_ACQUISITION.ToString());
             THEME.navigat(typeof(detail_dossier));
         }
         private void ADD_DOSSIER_Load(object sender, EventArgs e)

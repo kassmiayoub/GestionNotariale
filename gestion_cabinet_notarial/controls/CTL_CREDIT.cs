@@ -71,6 +71,7 @@ namespace gestion_cabinet_notarial
             p.Montant = double.Parse(bunifuTextBox_MONTANT.Text);
             p.Date = bunifuDatePicker_PAYMENT.Value;            
             p.type = "credit";
+            p.utilisateur = THEME.id_user;
             p.idcontrat = int.Parse(comboBox_contart_paye.SelectedValue.ToString());
             if (!RD_ESPECES.Checked)
                 p.type_Payement = RDCHEQUE.Checked ? "CHEQUE" : "VERMENT";

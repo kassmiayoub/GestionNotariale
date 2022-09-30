@@ -114,9 +114,7 @@ namespace gestion_cabinet_notarial.controls
             }
             bunifuDataGridView_T.Rows[0].Cells[0].Value = h;
             bunifuDataGridView_T.Rows[0].Cells[1].Value = t;
-
         }
-
         private void CTL_STATISTIC_VisibleChanged(object sender, EventArgs e)
         {
             //TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
@@ -125,11 +123,8 @@ namespace gestion_cabinet_notarial.controls
                 double Tcredit =  BL_credit.GetAll().Sum(ele => ele.montant).Value;
                 double Pcredit = paye.FindByValues(el => el.type == "credit").Sum(ell => ell.Montant).Value;
                 double Thonoraires = contrat.GetAll().Where(r => BL_credit.Any(el => el.idcontrat != r.Idcontrat)).Sum(ele => ele.Honoraires).Value;
-                MessageBox.Show(Thonoraires.ToString());
                 double Phonoraires = paye.FindByValues(ele => ele.typecharge == "Honoraires").Sum(el => el.Montant).Value;
                 bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[0].Value = Thonoraires - Phonoraires;
-                MessageBox.Show(Phonoraires.ToString());
-
                 bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[1].Value = Tcredit - Pcredit;
             }
         }

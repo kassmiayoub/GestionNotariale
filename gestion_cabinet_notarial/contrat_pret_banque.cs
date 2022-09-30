@@ -70,6 +70,7 @@ namespace gestion_cabinet_notarial
             c.typecontrat = label12.Text;
             c.Timbres = double.Parse(bunifuTextBoxtmbr.Text);
             c.numdossier = THEME.numdossier;
+            c.utilisateur = THEME.id_user;
             if (bunifuCheckBoxhonoraire.Checked)
             {
                 string h = this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma_h"].Controls["textBox_porsontage"].Text;
@@ -187,17 +188,6 @@ namespace gestion_cabinet_notarial
                 bunifuTextBoxAncfcc.Enabled = true;
             }
         }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void bunifuTextBoxhonoraire_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')

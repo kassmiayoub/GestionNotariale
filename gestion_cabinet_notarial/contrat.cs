@@ -48,7 +48,8 @@ namespace gestion_cabinet_notarial
             c.typecontrat = label12.Text;
             c.Timbres = double.Parse(bunifuTextBoxtmbr.Text);
             c.numdossier = THEME.numdossier;
-          //  MessageBox.Show(THEME.prix.ToString());
+            c.utilisateur = THEME.id_user;
+            //  MessageBox.Show(THEME.prix.ToString());
             if (bunifuCheckBoxhonoraire.Checked)
             {
                 string h = this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma1"].Controls["textBox_porsontage"].Text;

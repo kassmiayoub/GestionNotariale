@@ -15,7 +15,6 @@ namespace gestion_cabinet_notarial.controls
 {
     public partial class CTL_information_cabinet : UserControl
     {
-
         CLS_inormationcabinet info = new CLS_inormationcabinet();
         information_cabinet inforamation ;
         public CTL_information_cabinet()

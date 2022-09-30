@@ -263,6 +263,7 @@ namespace gestion_cabinet_notarial
                 redv.idClient = (int)bunifuDropdown_client_rendez.SelectedValue;
                 redv.datee = Convert.ToDateTime(CTL_DAY_ITEM.datecomlet);
                 redv.description = richTextBox_description.Text;
+                redv.utilisateur = THEME.id_user;
                 redv.Timefin = "non_passer";
                 if (tm.Count > 1)
                 {

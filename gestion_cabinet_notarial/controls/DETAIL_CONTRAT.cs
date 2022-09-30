@@ -156,6 +156,8 @@ namespace gestion_cabinet_notarial
         }
         private void STATISTIC_CONTRAT_Click(object sender, EventArgs e)
         {
+            if (THEME.id_C == 0)
+                return;
             if (!THEME.acceder("STATISTIC CONTART"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
@@ -260,6 +262,7 @@ namespace gestion_cabinet_notarial
             p.Date = bunifuDatePicker_PAYMENT.Value;
             MessageBox.Show(comboBox_TYPE_CHARGE.Text);
             p.typecharge = comboBox_TYPE_CHARGE.Text;
+            p.utilisateur = THEME.id_user;
             p.type = "charge";
             p.idcontrat = THEME.id_C;
             if(!RD_ESPECES.Checked)
@@ -283,6 +286,7 @@ namespace gestion_cabinet_notarial
             A.idcontrat = THEME.id_C;
             A.titre = textBoxtitre.Text;
             A.descreption = textBoxdesc.Text;
+            A.utilisateur = THEME.id_user;
             string name_of_file = THEME.CopyFile(textBoxfile.Text, "contrat", THEME.id_C.ToString());
             if (name_of_file == "")
             {

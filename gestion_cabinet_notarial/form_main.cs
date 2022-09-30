@@ -17,14 +17,11 @@ namespace gestion_cabinet_notarial
         public form_main()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
-
-        
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShowTaskBar();
-           
+            ShowTaskBar();           
             mainMenu1.AddTheMenu();
             //ADD_DOSSIER dossier = new ADD_DOSSIER() { Visible = true };
             //dossier.Width = MAINPANEL.Width;
@@ -36,7 +33,6 @@ namespace gestion_cabinet_notarial
             //c.Width = MAINPANEL.Width;
             //c.Height = MAINPANEL.Height;
             //c.Visible = true;
-            MessageBox.Show(THEME.detail_dossier.Controls.Count+"");
             BunifuDropdown dtypeclient = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdowntypeclient"];
             dtypeclient.Items.Add("VENDUERE");
             dtypeclient.Items.Add("ACHETEURE");        
@@ -44,7 +40,6 @@ namespace gestion_cabinet_notarial
             typecontrat.Items.Add("VENTE");
             typecontrat.Items.Add("PROMESE");
             typecontrat.Items.Add("PRET BANQUE");
-            MessageBox.Show(MAINPANEL.Controls.Count.ToString());
 
         }
         void ShowTaskBar()
