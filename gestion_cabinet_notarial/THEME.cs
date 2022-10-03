@@ -17,7 +17,10 @@ namespace gestion_cabinet_notarial
 {
     internal static class THEME
     {
+       public static List<objet> objs = new List<objet>();
         static CLS_BL_LOG LOG = new CLS_BL_LOG();
+        public static string obj = "";
+        public static string titre = "";
         // directory files
         public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
         public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");

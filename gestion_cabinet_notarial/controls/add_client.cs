@@ -35,6 +35,7 @@ namespace gestion_cabinet_notarial
         }
         public void sete_client(int idc)
         {
+            THEME.id_Client = idc;
             client A = new client();
             A = cls.FindById(idc);
             textBoxIDCLIENT.Text = A.idClient.ToString();
@@ -395,6 +396,15 @@ namespace gestion_cabinet_notarial
                 ButtonEdit.Enabled = true;
                 ButtonAdd.Enabled = true;
                 THEME.credit = false;
+            }
+            else if(THEME.obj == "vide")
+            {
+                THEME.obj = "";
+                new ADD_OBJ().Show();
+            }
+            else if(THEME.obj != "")
+            {
+                new ADD_OBJ().Show();
             }
         }
         private void ButtonSaveSettings_Click(object sender, EventArgs e)

@@ -318,5 +318,16 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="gestion_cabinet_notarialModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="gestion_cabinet_notarialModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="objets">
+      <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.objet">
+        <MappingFragment StoreEntitySet="objet">
+          <ScalarProperty Name="idclient" ColumnName="idclient" />
+          <ScalarProperty Name="numdossier" ColumnName="numdossier" />
+          <ScalarProperty Name="titrefoncier" ColumnName="titrefoncier" />
+          <ScalarProperty Name="libbele" ColumnName="libbele" />
+          <ScalarProperty Name="idobj" ColumnName="idobj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

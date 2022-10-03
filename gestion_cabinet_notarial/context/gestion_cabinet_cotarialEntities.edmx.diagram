@@ -67,6 +67,9 @@
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__recu__idPayement__66603565" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__Rendez_vo__utili__300424B4" ManuallyRouted="false" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.information_cabinet" Width="1.5" PointX="4" PointY="0.75" />
+        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.objet" Width="1.5" PointX="5.25" PointY="42.875" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.fk_obj_client" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -204,6 +204,16 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
     <Property Name="date_alere" Type="date" />
   </EntityType>
+  <EntityType Name="objet">
+    <Key>
+      <PropertyRef Name="idobj" />
+    </Key>
+    <Property Name="idobj" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="libbele" Type="varchar" MaxLength="100" />
+    <Property Name="titrefoncier" Type="varchar" MaxLength="100" />
+    <Property Name="numdossier" Type="varchar" MaxLength="50" />
+    <Property Name="idclient" Type="int" />
+  </EntityType>
   <EntityType Name="partes">
     <Key>
       <PropertyRef Name="Idpartes" />
@@ -595,6 +605,18 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__objet__numdossie__29221CFB">
+    <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+    <End Role="objet" Type="Self.objet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="objet">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__partes__idClient__45F365D3">
     <End Role="client" Type="Self.client" Multiplicity="0..1" />
     <End Role="partes" Type="Self.partes" Multiplicity="*" />
@@ -739,6 +761,18 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_obj_client">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="objet" Type="Self.objet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="objet">
+        <PropertyRef Name="idclient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -788,6 +822,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
     <EntitySet Name="information_cabinet" EntityType="Self.information_cabinet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="note" EntityType="Self.note" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="objet" EntityType="Self.objet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="partes" EntityType="Self.partes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="payement" EntityType="Self.payement" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="recu" EntityType="Self.recu" Schema="dbo" store:Type="Tables" />
@@ -899,6 +934,10 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
       <End Role="utilisateur" EntitySet="utilisateur" />
       <End Role="note" EntitySet="note" />
     </AssociationSet>
+    <AssociationSet Name="FK__objet__numdossie__29221CFB" Association="Self.FK__objet__numdossie__29221CFB">
+      <End Role="dossier" EntitySet="dossier" />
+      <End Role="objet" EntitySet="objet" />
+    </AssociationSet>
     <AssociationSet Name="FK__partes__idClient__45F365D3" Association="Self.FK__partes__idClient__45F365D3">
       <End Role="client" EntitySet="client" />
       <End Role="partes" EntitySet="partes" />
@@ -946,6 +985,10 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
     <AssociationSet Name="FK_dossier_cdg" Association="Self.FK_dossier_cdg">
       <End Role="dossier" EntitySet="dossier" />
       <End Role="CDG" EntitySet="CDG" />
+    </AssociationSet>
+    <AssociationSet Name="fk_obj_client" Association="Self.fk_obj_client">
+      <End Role="client" EntitySet="client" />
+      <End Role="objet" EntitySet="objet" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -17,6 +17,7 @@ namespace gestion_cabinet_notarial
     public partial class ADD_DOSSIER : UserControl
     {
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();   
         public ADD_DOSSIER()
         {
             InitializeComponent();
@@ -24,36 +25,55 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonAdd_dossier_Click(object sender, EventArgs e)
         {
+            if (textBox_N_dossier.Text == "")
+                return;
             if (!THEME.acceder("FICHIERS DOSSIER"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
-            if (textBox_prix.Text == "" || textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "")
-                return;
             var a = new dossier();
             a.Numdossier = textBox_N_dossier.Text;
             a.dateouverture = Convert.ToDateTime(bunifuDatePicker_dubet.Text);
             a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
-            a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
-            a.Titrefoncier=textBox_titre_foncier.Text;
-            a.Objet = textBox_obj.Text;
-            a.anne_achat =int.Parse(textBox_anne_achat.Text);
-            a.anne_vente = int.Parse(textBox_anne_vente.Text);
+            if (THEME.objs.Count == 0)
+            {
+                a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
+                a.Titrefoncier = textBox_titre_foncier.Text;
+                a.Objet = textBox_obj.Text;
+                a.anne_achat = int.Parse(textBox_anne_achat.Text);
+                a.anne_vente = int.Parse(textBox_anne_vente.Text);
+                if (textBox_prix.Text == "" || textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "")
+                    return;
+            }
+            else
+            {
+
+            }                               
             a.utilisateur = THEME.id_user;
             if (bunifuCheckBox_status.Checked)
                 a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
             else
                 a.Datefermeture = null;
-            dossierValidator validationRules = new dossierValidator();
-            ValidationResult validationResult = validationRules.Validate(a);
-            IList<ValidationFailure> errors = validationResult.Errors;
-            if (!validationResult.IsValid)
-            {
-                MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                return;
-            }
+            //dossierValidator validationRules = new dossierValidator();
+            //ValidationResult validationResult = validationRules.Validate(a);
+            //IList<ValidationFailure> errors = validationResult.Errors;
+            //if (!validationResult.IsValid)
+            //{
+            //    MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            //    return;
+            //}
             cls_Bl_Dossier.Add(a);
+            if (THEME.objs.Count != 0)
+            {
+                THEME.objs.ForEach(ele =>
+                {
+                    ele.numdossier = textBox_N_dossier.Text;
+                });
+                CLS_OBJET_BL.AddRange(THEME.objs);
+                THEME.objs.Clear();
+
+            }
             THEME.operation($"AJOUTER DOSSIER NUMERANT = {textBox_N_dossier.Text}");
         }
         private void ButtonSearch_dossier_Click(object sender, EventArgs e)
@@ -97,6 +117,7 @@ namespace gestion_cabinet_notarial
         {
             //MessageBox.Show(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString());
             dossier A = new dossier();
+            
             var x = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells[0].Value.ToString();
             A = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier ==x ).First();
             textBox_N_dossier.Text = A.Numdossier;
@@ -121,6 +142,7 @@ namespace gestion_cabinet_notarial
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             THEME.vider(this);
+            
         }
         private void button_detail_dossier_Click(object sender, EventArgs e)
         {
@@ -227,6 +249,29 @@ namespace gestion_cabinet_notarial
             {
                     e.Handled = true;
             }
+        }
+
+        private void buttonadd_add_objs_Click_1(object sender, EventArgs e)
+        {
+            if (textBox_N_dossier.Text != "")
+            { 
+                THEME.numdossier = textBox_N_dossier.Text;
+                var d = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == textBox_N_dossier.Text).FirstOrDefault();
+                var objs = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == textBox_N_dossier.Text).FirstOrDefault();
+                if (objs == null && d != null)
+                    return;
+            }
+            DialogResult dr = MessageBox.Show("VOULEZ VOUS REDACTION CONTRAT D'ECHANGE ?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    new ADD_OBJ().Show();
+                    textBox_obj.Enabled = false;
+                }
+                else
+                {
+                    textBox_obj.Enabled = true;
+                    THEME.objs.Clear();         
+                }            
         }
     }
     public class dossierSerche

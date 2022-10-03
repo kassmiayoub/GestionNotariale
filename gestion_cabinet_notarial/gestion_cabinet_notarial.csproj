@@ -348,6 +348,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADD_OBJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADD_OBJ.Designer.cs">
+      <DependentUpon>ADD_OBJ.cs</DependentUpon>
+    </Compile>
     <Compile Include="BL\ClientNormale.cs" />
     <Compile Include="BL\ClientProfessionnel.cs" />
     <Compile Include="BL\cls_bl_banque.cs" />
@@ -363,6 +369,7 @@
     <Compile Include="BL\CLS_inormationcabinet.cs" />
     <Compile Include="BL\cls_lb_fichier_dossier.cs" />
     <Compile Include="BL\CLS_NOTE.cs" />
+    <Compile Include="BL\CLS_OBJET.cs" />
     <Compile Include="BL\CSL_BL_Client.cs" />
     <Compile Include="BL\CSL_BL_FICHIER_CLIENT.cs" />
     <Compile Include="BL\csl_bl_fichier_contart.cs" />
@@ -433,6 +440,9 @@
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="context\note.cs">
+      <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="context\objet.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="context\parte.cs">
@@ -704,6 +714,9 @@
     <Compile Include="Validators\clientValidator.cs" />
     <Compile Include="Validators\dossierValidator.cs" />
     <Compile Include="Validators\fichier_client_validator.cs" />
+    <EmbeddedResource Include="ADD_OBJ.resx">
+      <DependentUpon>ADD_OBJ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>

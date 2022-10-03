@@ -209,6 +209,16 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
           <Property Name="date_alere" Type="date" />
         </EntityType>
+        <EntityType Name="objet">
+          <Key>
+            <PropertyRef Name="idobj" />
+          </Key>
+          <Property Name="idobj" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="libbele" Type="varchar" MaxLength="100" />
+          <Property Name="titrefoncier" Type="varchar" MaxLength="100" />
+          <Property Name="numdossier" Type="varchar" MaxLength="50" />
+          <Property Name="idclient" Type="int" />
+        </EntityType>
         <EntityType Name="partes">
           <Key>
             <PropertyRef Name="Idpartes" />
@@ -600,6 +610,18 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__objet__numdossie__29221CFB">
+          <End Role="dossier" Type="Self.dossier" Multiplicity="0..1" />
+          <End Role="objet" Type="Self.objet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dossier">
+              <PropertyRef Name="Numdossier" />
+            </Principal>
+            <Dependent Role="objet">
+              <PropertyRef Name="numdossier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__partes__idClient__45F365D3">
           <End Role="client" Type="Self.client" Multiplicity="0..1" />
           <End Role="partes" Type="Self.partes" Multiplicity="*" />
@@ -744,6 +766,18 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_obj_client">
+          <End Role="client" Type="Self.client" Multiplicity="0..1" />
+          <End Role="objet" Type="Self.objet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="idClient" />
+            </Principal>
+            <Dependent Role="objet">
+              <PropertyRef Name="idclient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -793,6 +827,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <EntitySet Name="information_cabinet" EntityType="Self.information_cabinet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="note" EntityType="Self.note" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="objet" EntityType="Self.objet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="partes" EntityType="Self.partes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="payement" EntityType="Self.payement" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="recu" EntityType="Self.recu" Schema="dbo" store:Type="Tables" />
@@ -904,6 +939,10 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             <End Role="utilisateur" EntitySet="utilisateur" />
             <End Role="note" EntitySet="note" />
           </AssociationSet>
+          <AssociationSet Name="FK__objet__numdossie__29221CFB" Association="Self.FK__objet__numdossie__29221CFB">
+            <End Role="dossier" EntitySet="dossier" />
+            <End Role="objet" EntitySet="objet" />
+          </AssociationSet>
           <AssociationSet Name="FK__partes__idClient__45F365D3" Association="Self.FK__partes__idClient__45F365D3">
             <End Role="client" EntitySet="client" />
             <End Role="partes" EntitySet="partes" />
@@ -951,6 +990,10 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <AssociationSet Name="FK_dossier_cdg" Association="Self.FK_dossier_cdg">
             <End Role="dossier" EntitySet="dossier" />
             <End Role="CDG" EntitySet="CDG" />
+          </AssociationSet>
+          <AssociationSet Name="fk_obj_client" Association="Self.fk_obj_client">
+            <End Role="client" EntitySet="client" />
+            <End Role="objet" EntitySet="objet" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -1024,6 +1067,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="partes" Relationship="Self.FK__partes__idClient__45F365D3" FromRole="client" ToRole="partes" />
           <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
           <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="client" ToRole="Rendez_vous" />
+          <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="client" ToRole="objet" />
         </EntityType>
         <EntityType Name="ClientNormale">
           <Key>
@@ -1117,6 +1161,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
           <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
           <Property Name="prixachat" Type="Double" />
+          <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="dossier" ToRole="objet" />
         </EntityType>
         <EntityType Name="fichiers_client">
           <Key>
@@ -1952,6 +1997,15 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="objets" EntityType="gestion_cabinet_notarialModel.objet" />
+          <AssociationSet Name="FK__objet__numdossie__29221CFB" Association="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB">
+            <End Role="dossier" EntitySet="dossiers" />
+            <End Role="objet" EntitySet="objets" />
+          </AssociationSet>
+          <AssociationSet Name="fk_obj_client" Association="gestion_cabinet_notarialModel.fk_obj_client">
+            <End Role="client" EntitySet="clients" />
+            <End Role="objet" EntitySet="objets" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="information_cabinet">
           <Key>
@@ -1977,6 +2031,42 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="objet">
+          <Key>
+            <PropertyRef Name="idobj" />
+          </Key>
+          <Property Name="idobj" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="libbele" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="titrefoncier" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="dossier" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="objet" ToRole="dossier" />
+          <Property Name="idclient" Type="Int32" />
+          <NavigationProperty Name="client" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="objet" ToRole="client" />
+        </EntityType>
+        <Association Name="FK__objet__numdossie__29221CFB">
+          <End Type="gestion_cabinet_notarialModel.dossier" Role="dossier" Multiplicity="0..1" />
+          <End Type="gestion_cabinet_notarialModel.objet" Role="objet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dossier">
+              <PropertyRef Name="Numdossier" />
+            </Principal>
+            <Dependent Role="objet">
+              <PropertyRef Name="numdossier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_obj_client">
+          <End Type="gestion_cabinet_notarialModel.client" Role="client" Multiplicity="0..1" />
+          <End Type="gestion_cabinet_notarialModel.objet" Role="objet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="idClient" />
+            </Principal>
+            <Dependent Role="objet">
+              <PropertyRef Name="idclient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2300,6 +2390,17 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="gestion_cabinet_notarialModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="gestion_cabinet_notarialModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="objets">
+            <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.objet">
+              <MappingFragment StoreEntitySet="objet">
+                <ScalarProperty Name="idclient" ColumnName="idclient" />
+                <ScalarProperty Name="numdossier" ColumnName="numdossier" />
+                <ScalarProperty Name="titrefoncier" ColumnName="titrefoncier" />
+                <ScalarProperty Name="libbele" ColumnName="libbele" />
+                <ScalarProperty Name="idobj" ColumnName="idobj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

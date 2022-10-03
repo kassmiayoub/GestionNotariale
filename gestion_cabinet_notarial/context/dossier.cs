@@ -21,6 +21,7 @@ namespace gestion_cabinet_notarial.context
             this.contrats = new HashSet<contrat>();
             this.fichiers_dossier = new HashSet<fichiers_dossier>();
             this.partes = new HashSet<parte>();
+            this.objets = new HashSet<objet>();
         }
     
         public string Numdossier { get; set; }
@@ -44,5 +45,7 @@ namespace gestion_cabinet_notarial.context
         public virtual ICollection<fichiers_dossier> fichiers_dossier { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<parte> partes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<objet> objets { get; set; }
     }
 }

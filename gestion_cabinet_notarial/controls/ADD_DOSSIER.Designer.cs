@@ -29,9 +29,9 @@ namespace gestion_cabinet_notarial
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADD_DOSSIER));
             this.ButtonInit = new System.Windows.Forms.Button();
             this.ButtonAdd_dossier = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@ namespace gestion_cabinet_notarial
             this.textBox_anne_vente = new System.Windows.Forms.TextBox();
             this.textBoxPRIX_ACHAT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonadd_add_objs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +155,7 @@ namespace gestion_cabinet_notarial
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 48);
+            this.label4.Location = new System.Drawing.Point(528, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 19);
             this.label4.TabIndex = 415;
@@ -165,7 +166,7 @@ namespace gestion_cabinet_notarial
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 94);
+            this.label6.Location = new System.Drawing.Point(562, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 417;
@@ -176,7 +177,7 @@ namespace gestion_cabinet_notarial
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(625, 142);
+            this.label7.Location = new System.Drawing.Point(613, 144);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 19);
             this.label7.TabIndex = 418;
@@ -231,7 +232,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_prix.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_prix.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_prix.Location = new System.Drawing.Point(723, 41);
+            this.textBox_prix.Location = new System.Drawing.Point(696, 39);
             this.textBox_prix.Multiline = true;
             this.textBox_prix.Name = "textBox_prix";
             this.textBox_prix.Size = new System.Drawing.Size(278, 31);
@@ -242,7 +243,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_titre_foncier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_titre_foncier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_titre_foncier.Location = new System.Drawing.Point(723, 87);
+            this.textBox_titre_foncier.Location = new System.Drawing.Point(696, 85);
             this.textBox_titre_foncier.Multiline = true;
             this.textBox_titre_foncier.Name = "textBox_titre_foncier";
             this.textBox_titre_foncier.Size = new System.Drawing.Size(278, 31);
@@ -253,7 +254,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_obj.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_obj.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_obj.Location = new System.Drawing.Point(723, 135);
+            this.textBox_obj.Location = new System.Drawing.Point(696, 133);
             this.textBox_obj.Multiline = true;
             this.textBox_obj.Name = "textBox_obj";
             this.textBox_obj.Size = new System.Drawing.Size(278, 31);
@@ -294,9 +295,9 @@ namespace gestion_cabinet_notarial
             // bunifuDataGridView_list_dossier
             // 
             this.bunifuDataGridView_list_dossier.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_list_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView_list_dossier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -304,14 +305,14 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_dossier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_list_dossier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_list_dossier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_list_dossier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_list_dossier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView_list_dossier.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_list_dossier.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -331,14 +332,14 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_list_dossier.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_list_dossier.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView_list_dossier.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_list_dossier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_list_dossier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -513,7 +514,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBoxPRIX_ACHAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPRIX_ACHAT.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPRIX_ACHAT.Location = new System.Drawing.Point(723, 180);
+            this.textBoxPRIX_ACHAT.Location = new System.Drawing.Point(696, 178);
             this.textBoxPRIX_ACHAT.Multiline = true;
             this.textBoxPRIX_ACHAT.Name = "textBoxPRIX_ACHAT";
             this.textBoxPRIX_ACHAT.Size = new System.Drawing.Size(278, 31);
@@ -524,16 +525,38 @@ namespace gestion_cabinet_notarial
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(580, 192);
+            this.label9.Location = new System.Drawing.Point(568, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 19);
             this.label9.TabIndex = 441;
             this.label9.Text = "PRIX D\'ACHAT :";
             // 
+            // buttonadd_add_objs
+            // 
+            this.buttonadd_add_objs.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonadd_add_objs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(201)))), ((int)(((byte)(175)))));
+            this.buttonadd_add_objs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonadd_add_objs.FlatAppearance.BorderSize = 0;
+            this.buttonadd_add_objs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonadd_add_objs.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonadd_add_objs.ForeColor = System.Drawing.Color.White;
+            this.buttonadd_add_objs.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
+            this.buttonadd_add_objs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonadd_add_objs.Location = new System.Drawing.Point(979, 133);
+            this.buttonadd_add_objs.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonadd_add_objs.Name = "buttonadd_add_objs";
+            this.buttonadd_add_objs.Size = new System.Drawing.Size(29, 31);
+            this.buttonadd_add_objs.TabIndex = 468;
+            this.buttonadd_add_objs.Tag = "AcceptButton";
+            this.buttonadd_add_objs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonadd_add_objs.UseVisualStyleBackColor = false;
+            this.buttonadd_add_objs.Click += new System.EventHandler(this.buttonadd_add_objs_Click_1);
+            // 
             // ADD_DOSSIER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonadd_add_objs);
             this.Controls.Add(this.textBoxPRIX_ACHAT);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -599,5 +622,6 @@ namespace gestion_cabinet_notarial
         private System.Windows.Forms.TextBox textBox_anne_vente;
         private System.Windows.Forms.TextBox textBoxPRIX_ACHAT;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button buttonadd_add_objs;
     }
 }

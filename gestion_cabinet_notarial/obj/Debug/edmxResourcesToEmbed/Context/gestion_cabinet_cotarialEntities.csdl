@@ -67,6 +67,7 @@
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__idClient__45F365D3" FromRole="client" ToRole="partes" />
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
     <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="client" ToRole="Rendez_vous" />
+    <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="client" ToRole="objet" />
   </EntityType>
   <EntityType Name="ClientNormale">
     <Key>
@@ -160,6 +161,7 @@
     <NavigationProperty Name="fichiers_dossier" Relationship="Self.FK__fichiers___numdo__3A81B327" FromRole="dossier" ToRole="fichiers_dossier" />
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
     <Property Name="prixachat" Type="Double" />
+    <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="dossier" ToRole="objet" />
   </EntityType>
   <EntityType Name="fichiers_client">
     <Key>
@@ -995,6 +997,15 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="objets" EntityType="gestion_cabinet_notarialModel.objet" />
+    <AssociationSet Name="FK__objet__numdossie__29221CFB" Association="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB">
+      <End Role="dossier" EntitySet="dossiers" />
+      <End Role="objet" EntitySet="objets" />
+    </AssociationSet>
+    <AssociationSet Name="fk_obj_client" Association="gestion_cabinet_notarialModel.fk_obj_client">
+      <End Role="client" EntitySet="clients" />
+      <End Role="objet" EntitySet="objets" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="information_cabinet">
     <Key>
@@ -1020,4 +1031,40 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="objet">
+    <Key>
+      <PropertyRef Name="idobj" />
+    </Key>
+    <Property Name="idobj" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libbele" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="titrefoncier" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numdossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dossier" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="objet" ToRole="dossier" />
+    <Property Name="idclient" Type="Int32" />
+    <NavigationProperty Name="client" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="objet" ToRole="client" />
+  </EntityType>
+  <Association Name="FK__objet__numdossie__29221CFB">
+    <End Type="gestion_cabinet_notarialModel.dossier" Role="dossier" Multiplicity="0..1" />
+    <End Type="gestion_cabinet_notarialModel.objet" Role="objet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dossier">
+        <PropertyRef Name="Numdossier" />
+      </Principal>
+      <Dependent Role="objet">
+        <PropertyRef Name="numdossier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_obj_client">
+    <End Type="gestion_cabinet_notarialModel.client" Role="client" Multiplicity="0..1" />
+    <End Type="gestion_cabinet_notarialModel.objet" Role="objet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="idClient" />
+      </Principal>
+      <Dependent Role="objet">
+        <PropertyRef Name="idclient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
