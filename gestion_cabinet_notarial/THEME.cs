@@ -21,6 +21,8 @@ namespace gestion_cabinet_notarial
         static CLS_BL_LOG LOG = new CLS_BL_LOG();
         public static string obj = "";
         public static string titre = "";
+        public static string numdossierobj = "";
+
         // directory files
         public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
         public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");

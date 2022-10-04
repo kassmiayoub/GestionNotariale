@@ -21,6 +21,8 @@ namespace gestion_cabinet_notarial
         cls_bl_partes partee = new cls_bl_partes();
         cls_bl_contrat con = new cls_bl_contrat();
         cls_lb_fichier_dossier csl_Bl_Fichier_dossier = new cls_lb_fichier_dossier();
+        CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();
+
         public detail_dossier()
         {
             InitializeComponent();
@@ -193,7 +195,6 @@ namespace gestion_cabinet_notarial
                 }
             }
         }
-
         private void button8SERCHE_FICHIER_DOSSIER_Click(object sender, EventArgs e)
         {
             var files = csl_Bl_Fichier_dossier.GetAll().Select(ele => new filee()
@@ -216,6 +217,17 @@ namespace gestion_cabinet_notarial
         {
             if (this.Visible == true)
             {
+                var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).FirstOrDefault();
+                if(obj != null)
+                {
+                    PARTES_OF_CONTRAT.Visible = false;
+                    bunifuButton_CDG.Visible = false;
+                }
+                else
+                {
+                    PARTES_OF_CONTRAT.Visible = true;
+                    bunifuButton_CDG.Visible = true;
+                }
                // FICHIERJOINT_dossier.PerformClick();
                 CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");

@@ -17,6 +17,8 @@ namespace gestion_cabinet_notarial
     public partial class ADD_DOSSIER : UserControl
     {
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        cls_bl_partes partee = new cls_bl_partes();
+
         CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();   
         public ADD_DOSSIER()
         {
@@ -48,7 +50,7 @@ namespace gestion_cabinet_notarial
             }
             else
             {
-
+                a.Titrefoncier = "change";
             }                               
             a.utilisateur = THEME.id_user;
             if (bunifuCheckBox_status.Checked)
@@ -66,9 +68,18 @@ namespace gestion_cabinet_notarial
             cls_Bl_Dossier.Add(a);
             if (THEME.objs.Count != 0)
             {
+                var parte = new parte();
+                parte.Condition = "";
+                parte.Typeclient = "echangeur";
+                parte.numdossier = textBox_N_dossier.Text;
+                //parte.utilisateur = THEME.id_user;
                 THEME.objs.ForEach(ele =>
                 {
+                    parte.idClient = ele.idclient;
                     ele.numdossier = textBox_N_dossier.Text;
+                    var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == textBox_N_dossier.Text && el.idclient == ele.idclient).FirstOrDefault();
+                    if (clinet == null)
+                        partee.Add(parte);
                 });
                 CLS_OBJET_BL.AddRange(THEME.objs);
                 THEME.objs.Clear();
@@ -151,18 +162,27 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
-            if (textBox_prix.Text == "" || textBox_N_dossier.Text == "")
-                return;
-            THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");            
             var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == textBox_N_dossier.Text).FirstOrDefault();
             if (dossier == null)
             {
                 MessageBox.Show("Cette dossier ne pas trover");
                 return;
             }
+            if (textBox_N_dossier.Text == "")
+                return;
+            var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == textBox_N_dossier.Text).FirstOrDefault();
+            if (obj == null && textBox_prix.Text == "")
+            {
+                return;
+            }
+            else if(textBox_prix.Text != "")
+            {
+                THEME.prix = double.Parse(dossier.PRIX_ACQUISITION.ToString());
+            }
+            THEME.operation($"CONSULTER DETAILS DE DOSSIER NUMERENT {textBox_N_dossier.Text}");            
+           
                 
             THEME.numdossier = textBox_N_dossier.Text;
-            THEME.prix = double.Parse(dossier.PRIX_ACQUISITION.ToString());
             THEME.navigat(typeof(detail_dossier));
         }
         private void ADD_DOSSIER_Load(object sender, EventArgs e)
@@ -255,11 +275,18 @@ namespace gestion_cabinet_notarial
         {
             if (textBox_N_dossier.Text != "")
             { 
-                THEME.numdossier = textBox_N_dossier.Text;
+                THEME.numdossierobj = textBox_N_dossier.Text;
                 var d = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == textBox_N_dossier.Text).FirstOrDefault();
                 var objs = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == textBox_N_dossier.Text).FirstOrDefault();
                 if (objs == null && d != null)
+                {
+                    THEME.numdossierobj = "";
                     return;
+                }
+                if (objs == null && d == null)
+                {
+                    THEME.numdossierobj = "";                    
+                }
             }
             DialogResult dr = MessageBox.Show("VOULEZ VOUS REDACTION CONTRAT D'ECHANGE ?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
@@ -270,6 +297,7 @@ namespace gestion_cabinet_notarial
                 else
                 {
                     textBox_obj.Enabled = true;
+                    THEME.numdossierobj = "";
                     THEME.objs.Clear();         
                 }            
         }

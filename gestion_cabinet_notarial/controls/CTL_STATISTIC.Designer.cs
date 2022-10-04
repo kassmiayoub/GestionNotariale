@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_STATISTIC));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuDataGridView_statistic = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuDataGridView_T = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel_filter = new System.Windows.Forms.Panel();
-            this.ButtonSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuDatePicker_F = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuDatePicker_D = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.radioButton_filtrage = new System.Windows.Forms.RadioButton();
-            this.radioButton_now = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ButtonSearch = new System.Windows.Forms.Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.radioButton_H = new System.Windows.Forms.RadioButton();
             this.radioButton_CREDIT = new System.Windows.Forms.RadioButton();
+            this.radioButton_H = new System.Windows.Forms.RadioButton();
             this.bunifuDataGridView_T_credit_honoraires = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.radioButton_filtrage = new System.Windows.Forms.CheckBox();
+            this.radioButton_now = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_statistic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_T)).BeginInit();
             this.panel_filter.SuspendLayout();
@@ -61,9 +61,9 @@
             // bunifuDataGridView_statistic
             // 
             this.bunifuDataGridView_statistic.AllowCustomTheming = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.bunifuDataGridView_statistic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -71,14 +71,14 @@
             this.bunifuDataGridView_statistic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_statistic.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_statistic.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_statistic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_statistic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.bunifuDataGridView_statistic.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_statistic.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -98,14 +98,14 @@
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_statistic.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_statistic.DefaultCellStyle = dataGridViewCellStyle12;
             this.bunifuDataGridView_statistic.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_statistic.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -123,22 +123,22 @@
             // bunifuDataGridView_T
             // 
             this.bunifuDataGridView_T.AllowCustomTheming = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_T.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_T.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.bunifuDataGridView_T.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuDataGridView_T.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_T.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_T.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_T.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_T.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_T.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.bunifuDataGridView_T.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_T.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -158,14 +158,14 @@
             this.bunifuDataGridView_T.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_T.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_T.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_T.DefaultCellStyle = dataGridViewCellStyle15;
             this.bunifuDataGridView_T.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_T.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -191,28 +191,15 @@
             this.panel_filter.Size = new System.Drawing.Size(228, 131);
             this.panel_filter.TabIndex = 490;
             // 
-            // ButtonSearch
+            // label1
             // 
-            this.ButtonSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ButtonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonSearch.FlatAppearance.BorderSize = 0;
-            this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearch.Font = new System.Drawing.Font("Ithra-Light", 12F);
-            this.ButtonSearch.ForeColor = System.Drawing.Color.White;
-            this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch.Location = new System.Drawing.Point(293, 151);
-            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ButtonSearch.Size = new System.Drawing.Size(169, 35);
-            this.ButtonSearch.TabIndex = 487;
-            this.ButtonSearch.Tag = "AcceptButton";
-            this.ButtonSearch.Text = "RECHARCHER";
-            this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonSearch.UseVisualStyleBackColor = false;
-            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 22);
+            this.label1.TabIndex = 487;
+            this.label1.Text = "DATE DE PAYMENT";
             // 
             // bunifuDatePicker_F
             // 
@@ -269,40 +256,28 @@
             this.bunifuDatePicker_D.TabIndex = 486;
             this.bunifuDatePicker_D.Value = new System.DateTime(2022, 9, 28, 0, 0, 0, 0);
             // 
-            // radioButton_filtrage
+            // ButtonSearch
             // 
-            this.radioButton_filtrage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton_filtrage.AutoSize = true;
-            this.radioButton_filtrage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_filtrage.Location = new System.Drawing.Point(579, 30);
-            this.radioButton_filtrage.Name = "radioButton_filtrage";
-            this.radioButton_filtrage.Size = new System.Drawing.Size(212, 26);
-            this.radioButton_filtrage.TabIndex = 491;
-            this.radioButton_filtrage.TabStop = true;
-            this.radioButton_filtrage.Text = "FILTRAGE PAR DATE";
-            this.radioButton_filtrage.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_now
-            // 
-            this.radioButton_now.AutoSize = true;
-            this.radioButton_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_now.Location = new System.Drawing.Point(22, 167);
-            this.radioButton_now.Name = "radioButton_now";
-            this.radioButton_now.Size = new System.Drawing.Size(149, 26);
-            this.radioButton_now.TabIndex = 492;
-            this.radioButton_now.TabStop = true;
-            this.radioButton_now.Text = "AUJOURD\'HUI";
-            this.radioButton_now.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 22);
-            this.label1.TabIndex = 487;
-            this.label1.Text = "DATE DE PAYMENT";
+            this.ButtonSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonSearch.FlatAppearance.BorderSize = 0;
+            this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSearch.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSearch.ForeColor = System.Drawing.Color.White;
+            this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
+            this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonSearch.Location = new System.Drawing.Point(293, 151);
+            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonSearch.Name = "ButtonSearch";
+            this.ButtonSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ButtonSearch.Size = new System.Drawing.Size(169, 35);
+            this.ButtonSearch.TabIndex = 487;
+            this.ButtonSearch.Tag = "AcceptButton";
+            this.ButtonSearch.Text = "RECHARCHER";
+            this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonSearch.UseVisualStyleBackColor = false;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // bunifuPanel1
             // 
@@ -321,18 +296,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(307, 45);
             this.bunifuPanel1.TabIndex = 493;
             // 
-            // radioButton_H
-            // 
-            this.radioButton_H.AutoSize = true;
-            this.radioButton_H.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_H.Location = new System.Drawing.Point(3, 8);
-            this.radioButton_H.Name = "radioButton_H";
-            this.radioButton_H.Size = new System.Drawing.Size(148, 26);
-            this.radioButton_H.TabIndex = 0;
-            this.radioButton_H.TabStop = true;
-            this.radioButton_H.Text = "HONORAIRES";
-            this.radioButton_H.UseVisualStyleBackColor = true;
-            // 
             // radioButton_CREDIT
             // 
             this.radioButton_CREDIT.AutoSize = true;
@@ -345,25 +308,37 @@
             this.radioButton_CREDIT.Text = "CREDIT";
             this.radioButton_CREDIT.UseVisualStyleBackColor = true;
             // 
+            // radioButton_H
+            // 
+            this.radioButton_H.AutoSize = true;
+            this.radioButton_H.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_H.Location = new System.Drawing.Point(3, 8);
+            this.radioButton_H.Name = "radioButton_H";
+            this.radioButton_H.Size = new System.Drawing.Size(148, 26);
+            this.radioButton_H.TabIndex = 0;
+            this.radioButton_H.TabStop = true;
+            this.radioButton_H.Text = "HONORAIRES";
+            this.radioButton_H.UseVisualStyleBackColor = true;
+            // 
             // bunifuDataGridView_T_credit_honoraires
             // 
             this.bunifuDataGridView_T_credit_honoraires.AllowCustomTheming = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_T_credit_honoraires.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_T_credit_honoraires.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.bunifuDataGridView_T_credit_honoraires.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView_T_credit_honoraires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView_T_credit_honoraires.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_T_credit_honoraires.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_T_credit_honoraires.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_T_credit_honoraires.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_T_credit_honoraires.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.bunifuDataGridView_T_credit_honoraires.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_T_credit_honoraires.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T_credit_honoraires.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -383,14 +358,14 @@
             this.bunifuDataGridView_T_credit_honoraires.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_T_credit_honoraires.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T_credit_honoraires.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_T_credit_honoraires.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_T_credit_honoraires.DefaultCellStyle = dataGridViewCellStyle18;
             this.bunifuDataGridView_T_credit_honoraires.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_T_credit_honoraires.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_T_credit_honoraires.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -405,14 +380,37 @@
             this.bunifuDataGridView_T_credit_honoraires.TabIndex = 494;
             this.bunifuDataGridView_T_credit_honoraires.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // radioButton_filtrage
+            // 
+            this.radioButton_filtrage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_filtrage.AutoSize = true;
+            this.radioButton_filtrage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_filtrage.Location = new System.Drawing.Point(581, 33);
+            this.radioButton_filtrage.Name = "radioButton_filtrage";
+            this.radioButton_filtrage.Size = new System.Drawing.Size(213, 26);
+            this.radioButton_filtrage.TabIndex = 495;
+            this.radioButton_filtrage.Text = "FILTRAGE PAR DATE";
+            this.radioButton_filtrage.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_now
+            // 
+            this.radioButton_now.AutoSize = true;
+            this.radioButton_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_now.Location = new System.Drawing.Point(7, 167);
+            this.radioButton_now.Name = "radioButton_now";
+            this.radioButton_now.Size = new System.Drawing.Size(150, 26);
+            this.radioButton_now.TabIndex = 496;
+            this.radioButton_now.Text = "AUJOURD\'HUI";
+            this.radioButton_now.UseVisualStyleBackColor = true;
+            // 
             // CTL_STATISTIC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuDataGridView_T_credit_honoraires);
-            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.radioButton_now);
             this.Controls.Add(this.radioButton_filtrage);
+            this.Controls.Add(this.bunifuDataGridView_T_credit_honoraires);
+            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.panel_filter);
             this.Controls.Add(this.bunifuDataGridView_T);
@@ -441,12 +439,12 @@
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_F;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_D;
         public System.Windows.Forms.Button ButtonSearch;
-        private System.Windows.Forms.RadioButton radioButton_filtrage;
-        private System.Windows.Forms.RadioButton radioButton_now;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.RadioButton radioButton_CREDIT;
         private System.Windows.Forms.RadioButton radioButton_H;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView_T_credit_honoraires;
+        private System.Windows.Forms.CheckBox radioButton_filtrage;
+        private System.Windows.Forms.CheckBox radioButton_now;
     }
 }

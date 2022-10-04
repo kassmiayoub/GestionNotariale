@@ -203,30 +203,33 @@ namespace gestion_cabinet_notarial
                 if (item.DEPANCES == "Timbres")
                     bunifuDataGridView_statistic.Rows[3].Cells[2].Value = item.PAYE;
                 i++;  
-            }
+            }            
                 montant_paye_Ancfcc = double.Parse(bunifuDataGridView_statistic.Rows[0].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[0].Cells[1].Value = Ancfcc;
                 bunifuDataGridView_statistic.Rows[0].Cells[3].Value = (Ancfcc - montant_paye_Ancfcc).ToString();
-                bunifuDataGridView_statistic.Rows[0].Cells[4].Value = ((Ancfcc * 100) / THEME.prix).ToString();
                 montant_paye_Enregistrement = double.Parse(bunifuDataGridView_statistic.Rows[1].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[1].Cells[1].Value = Enregistrement;
                 bunifuDataGridView_statistic.Rows[1].Cells[3].Value = (Enregistrement - montant_paye_Enregistrement).ToString();
-                bunifuDataGridView_statistic.Rows[1].Cells[4].Value = ((Enregistrement * 100) / THEME.prix).ToString();           
                 montant_paye_Honoraires = double.Parse(bunifuDataGridView_statistic.Rows[2].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[2].Cells[1].Value = Honoraires;
                 bunifuDataGridView_statistic.Rows[2].Cells[3].Value = (Honoraires - montant_paye_Honoraires).ToString();
-                bunifuDataGridView_statistic.Rows[2].Cells[4].Value = ((Honoraires * 100) / THEME.prix).ToString();            
                 montant_paye_Timbres = double.Parse(bunifuDataGridView_statistic.Rows[3].Cells[2].Value.ToString());
                 bunifuDataGridView_statistic.Rows[3].Cells[1].Value = Timbres;
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
-                bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();   
-                tva.Text = ((Honoraires*10)/100).ToString();
             double montant = (Ancfcc) + (Enregistrement) + (Honoraires) + (Timbres);
             double payement = (montant_paye_Ancfcc + montant_paye_Enregistrement + montant_paye_Honoraires + montant_paye_Timbres);
-            string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant- payement).ToString(), ((montant * 100) / THEME.prix).ToString()
-        };
+            string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant- payement).ToString() };
             bunifuDataGridView_statistic.Rows.Add(r);
             bunifuDataGridView_statistic.Rows[4].Cells[0].Style.Font = new Font("Arial", 15, FontStyle.Bold);
+            if (THEME.prix != 0)
+            {
+                bunifuDataGridView_statistic.Rows[3].Cells[4].Value = ((Timbres * 100) / THEME.prix).ToString();
+                bunifuDataGridView_statistic.Rows[2].Cells[4].Value = ((Honoraires * 100) / THEME.prix).ToString();
+                bunifuDataGridView_statistic.Rows[1].Cells[4].Value = ((Enregistrement * 100) / THEME.prix).ToString();
+                bunifuDataGridView_statistic.Rows[0].Cells[4].Value = ((Ancfcc * 100) / THEME.prix).ToString();
+                bunifuDataGridView_statistic.Rows[4].Cells[4].Value = ((montant * 100) / THEME.prix).ToString();
+            }
+            tva.Text = ((Honoraires*10)/100).ToString();   
         }
         private void RDCHEQUE_CheckedChanged(object sender, EventArgs e)
         {
@@ -375,7 +378,6 @@ namespace gestion_cabinet_notarial
             montant_reste = double.Parse(bunifuTextBox_MONTANT.Text);
             bunifuTextBox_MONTANT.Enabled = true;
         }
-
         private void DETAIL_CONTRAT_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible == true)
@@ -397,17 +399,14 @@ namespace gestion_cabinet_notarial
                 //FICHIERJOINT_CONTRAT.PerformClick();
             }
         }
-
         private void partes_Click(object sender, EventArgs e)
         {
-
+                
         }
-
         private void bunifuButton_print_Load(object sender, EventArgs e)
         {
-
+            
         }
-
         private void bunifuDataGridView_payement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;

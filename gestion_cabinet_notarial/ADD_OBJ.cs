@@ -15,6 +15,7 @@ namespace gestion_cabinet_notarial
     public partial class ADD_OBJ : Form
     {
         CSL_BL_Client cls = new CSL_BL_Client();
+        cls_bl_partes partee = new cls_bl_partes();
         CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();
 
         public ADD_OBJ()
@@ -22,7 +23,18 @@ namespace gestion_cabinet_notarial
             InitializeComponent();
         }
 
-
+        public void listobjs()
+        {
+            CLS_OBJET_BL = new CLS_OBJET();
+            var objs =  CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossierobj).Select(el => new
+            {
+                el.libbele,
+                el.titrefoncier,
+                nomcomplet = el.client.Nom+" "+el.client.Prenom
+            }).ToList();
+            bunifuDataGridView_objs.DataSource = objs;
+           
+        }
         private void ADD_OBJ_Load(object sender, EventArgs e)
         {
             var ListDataSource = new List<clien>();
@@ -46,15 +58,16 @@ namespace gestion_cabinet_notarial
             THEME.obj = "";
             bunifuDataGridView_objs.Rows.Clear();
 
-            if(THEME.numdossier != "")
-            {                
-                    var objs = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(el => new
-                    {
-                        el.libbele,
-                        el.titrefoncier,
-                        nomcomplet = el.client.Nom+" "+el.client.Prenom
-                    }).ToList();
-                bunifuDataGridView_objs.DataSource = objs;
+            if(THEME.numdossierobj != "")
+            {
+                //var objs = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(el => new
+                //{
+                //    el.libbele,
+                //    el.titrefoncier,
+                //    nomcomplet = el.client.Nom+" "+el.client.Prenom
+                //}).ToList();
+                //bunifuDataGridView_objs.DataSource = objs;
+                listobjs();
             }
             else if (THEME.objs.Count > 0)
             {
@@ -76,27 +89,29 @@ namespace gestion_cabinet_notarial
             obj.libbele = textBox_obj.Text;
             obj.titrefoncier = textBox_titre_foncier.Text;
             obj.idclient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
+            var parte = new parte();
+            parte.Condition = "";
+            parte.Typeclient = "echangeur";;
+            parte.idClient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
             THEME.objs.Add(obj);
-            if(THEME.numdossier != null)
+            if (THEME.numdossierobj != "")
             {
-                obj.numdossier = THEME.numdossier;
+                parte.numdossier= THEME.numdossierobj;
+                obj.numdossier = THEME.numdossierobj;
                 CLS_OBJET_BL.Add(obj);
-                var objs = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(el => new
-                {
-                    el.libbele,
-                    el.titrefoncier,
-                    nomcomplet = el.client.Nom + " " + el.client.Prenom
-                }).ToList();
-                bunifuDataGridView_objs.DataSource = objs;
+                var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == int.Parse(bunifuDropdown_client.SelectedValue.ToString())).FirstOrDefault();
+                if(clinet == null)
+                    partee.Add(parte);
+                listobjs();
             }
             else if(THEME.objs.Count > 0)
-            {
+            {                
                 bunifuDataGridView_objs.ColumnCount = 3;
                 bunifuDataGridView_objs.Columns[0].Name = "object";
                 bunifuDataGridView_objs.Columns[1].Name = "titre foncier";
-                bunifuDataGridView_objs.Columns[2].Name = "client";
-                    string[] row = new string[] { textBox_obj.Text, textBox_titre_foncier.Text, bunifuDropdown_client.Text };
-                    bunifuDataGridView_objs.Rows.Add(row);
+                bunifuDataGridView_objs.Columns[2].Name = "nomcomplet";
+                string[] row = new string[] { textBox_obj.Text, textBox_titre_foncier.Text, bunifuDropdown_client.Text };
+                bunifuDataGridView_objs.Rows.Add(row);
             }
         }
         private void ButtonSerch_client_Click(object sender, EventArgs e)

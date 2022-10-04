@@ -76,6 +76,18 @@ namespace gestion_cabinet_notarial.controls
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
                 }
+                else
+                {
+                    var list = paye.FindByValues(ele => ele.type == "credit").GroupBy(ele => ele.idcontrat).Select(ele => new
+                    {   //DEPANCES= ele.Key,              
+                        Honoraires = ele.Sum(el => el.Montant).ToString(),
+                        TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
+                        CONTRAT = ele.First(el => el.type == "credit").contrat.typecontrat,
+                        DOSSIER = ele.First(el => el.type == "credit").contrat.dossier.Numdossier,
+                        DATEOUVERTURE = ele.First(el => el.type == "credit").contrat.dateouverture
+                    }).ToList();
+                    bunifuDataGridView_statistic.DataSource = list;
+                }
             }
             else if (radioButton_H.Checked)
             {
@@ -94,6 +106,18 @@ namespace gestion_cabinet_notarial.controls
                 else if (radioButton_filtrage.Checked)
                 {
                     var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.type == "charge" && ele.Date >= bunifuDatePicker_D.Value && ele.Date <= bunifuDatePicker_F.Value).GroupBy(ele => ele.idcontrat).Select(ele => new
+                    {   //DEPANCES= ele.Key,              
+                        Honoraires = ele.Sum(el => el.Montant).ToString(),
+                        TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
+                        CONTRAT = ele.First(el => el.typecharge == "Honoraires").contrat.typecontrat,
+                        DOSSIER = ele.First(el => el.typecharge == "Honoraires").contrat.dossier.Numdossier,
+                        DATEOUVERTURE = ele.First(el => el.typecharge == "Honoraires").contrat.dateouverture
+                    }).ToList();
+                    bunifuDataGridView_statistic.DataSource = list;
+                }
+                else
+                {
+                    var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.type == "charge").GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
                         Honoraires = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
