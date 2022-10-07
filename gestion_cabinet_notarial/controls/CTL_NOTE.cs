@@ -55,12 +55,22 @@ namespace gestion_cabinet_notarial.controls
         {
             if (this.Visible)
             {
-                bunifuDataGridView_list_note.DataSource = cLS_NOTE.GetAll();
+                bunifuDataGridView_list_note.DataSource = cLS_NOTE.FindByValues(ele => ele.utilisateur1.utilisateur1==THEME.id_user).Select(el => new
+                {
+                    el.Text,
+                    el.date,
+                    NomComlet = el.utilisateur1.Nom+" "+el.utilisateur1.Prenom
+                }).ToList();
             }
         }
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            bunifuDataGridView_list_note.DataSource = cLS_NOTE.GetAll().Where(ele => ele.date >=Convert.ToDateTime(bunifuDatePicker_D.Value) && ele.date <= Convert.ToDateTime(bunifuDatePicker_F.Value));
+            bunifuDataGridView_list_note.DataSource = cLS_NOTE.FindByValues(ele => ele.utilisateur1.utilisateur1 == THEME.id_user).Where(ele => ele.date >=Convert.ToDateTime(bunifuDatePicker_D.Value) && ele.date <= Convert.ToDateTime(bunifuDatePicker_F.Value)).Select(el => new
+            {
+                el.Text,
+                el.date,
+                NomComlet = el.utilisateur1.Nom + " " + el.utilisateur1.Prenom
+            });
         }
     }
 }

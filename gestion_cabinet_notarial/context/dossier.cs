@@ -35,6 +35,7 @@ namespace gestion_cabinet_notarial.context
         public Nullable<int> anne_achat { get; set; }
         public Nullable<int> anne_vente { get; set; }
         public Nullable<double> prixachat { get; set; }
+        public string typedossier { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CDG> CDGs { get; set; }

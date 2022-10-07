@@ -56,37 +56,40 @@ namespace gestion_cabinet_notarial.controls
                 {
                     var list = paye.FindByValues(ele => ele.type == "credit" && ele.Date == DateTime.Now).GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
-                        Honoraires = ele.Sum(el => el.Montant).ToString(),
+                        CREDIT = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
                         CONTRAT = ele.First(el => el.type == "credit").contrat.typecontrat,
                         DOSSIER = ele.First(el => el.type == "credit").contrat.dossier.Numdossier,
                         DATEOUVERTURE = ele.First(el => el.type == "credit").contrat.dateouverture
                     }).ToList();
+                    bunifuDataGridView_T.Columns[0].Name = "T. CREDIT";
                     bunifuDataGridView_statistic.DataSource = list;
                 }
                 else if (radioButton_filtrage.Checked)
                 {
                     var list = paye.FindByValues(ele => ele.type == "credit" && ele.Date >= bunifuDatePicker_D.Value && ele.Date <= bunifuDatePicker_F.Value).GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
-                        Honoraires = ele.Sum(el => el.Montant).ToString(),
+                        CREDIT = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
                         CONTRAT = ele.First(el => el.type == "credit").contrat.typecontrat,
                         DOSSIER = ele.First(el => el.type == "credit").contrat.dossier.Numdossier,
                         DATEOUVERTURE = ele.First(el => el.type == "credit").contrat.dateouverture
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
+                    bunifuDataGridView_T.Columns[0].Name = "T. CREDIT";
                 }
                 else
                 {
                     var list = paye.FindByValues(ele => ele.type == "credit").GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
-                        Honoraires = ele.Sum(el => el.Montant).ToString(),
+                        CREDIT = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
                         CONTRAT = ele.First(el => el.type == "credit").contrat.typecontrat,
                         DOSSIER = ele.First(el => el.type == "credit").contrat.dossier.Numdossier,
                         DATEOUVERTURE = ele.First(el => el.type == "credit").contrat.dateouverture
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
+                    bunifuDataGridView_T.Columns[0].Name = "T. CREDIT";
                 }
             }
             else if (radioButton_H.Checked)
@@ -102,6 +105,8 @@ namespace gestion_cabinet_notarial.controls
                         DATEOUVERTURE = ele.First(el => el.typecharge == "Honoraires").contrat.dateouverture
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
+                    bunifuDataGridView_T.Columns[0].Name = "T. HONORAIRES";
+
                 }
                 else if (radioButton_filtrage.Checked)
                 {
@@ -114,6 +119,8 @@ namespace gestion_cabinet_notarial.controls
                         DATEOUVERTURE = ele.First(el => el.typecharge == "Honoraires").contrat.dateouverture
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
+                    bunifuDataGridView_T.Columns[0].Name = "T. HONORAIRES";
+
                 }
                 else
                 {
@@ -126,6 +133,8 @@ namespace gestion_cabinet_notarial.controls
                         DATEOUVERTURE = ele.First(el => el.typecharge == "Honoraires").contrat.dateouverture
                     }).ToList();
                     bunifuDataGridView_statistic.DataSource = list;
+                    bunifuDataGridView_T.Columns[0].Name = "T. HONORAIRES";
+
                 }
             }
 

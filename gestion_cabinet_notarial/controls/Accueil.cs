@@ -30,7 +30,7 @@ namespace gestion_cabinet_notarial
             if (this.Visible)
             {
                 //bunifuDataGridView_accueil.Columns.Clear();
-                label_alert.Text = (cLS_NOTE.GetAll().Where(ele => ele.date_alere == DateTime.Now || ele.date_alere == null).Count()).ToString();
+                label_alert.Text = (cLS_NOTE.GetAll().Where(ele => (ele.date_alere == DateTime.Now || ele.date_alere == null) && ele.utilisateur1.utilisateur1 == THEME.id_user).Count()).ToString();
                 label_dossiere_encours.Text = (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == null).Count()).ToString();
                 label_dossier_passer.Text= (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == DateTime.Now).Count()).ToString();
                 label_contart.Text = con.FindByValues(ele => ele.dateouverture == DateTime.Now).Count().ToString();
@@ -57,7 +57,7 @@ namespace gestion_cabinet_notarial
             {
                 bunifuDataGridView_accueil.Columns.Remove("DETAIL");
             }
-            var a = cLS_NOTE.GetAll().Where(ele => ele.date_alere == DateTime.Now || ele.date_alere == null).Select(s => new { s.Idnote,s.Text, Creation = s.date ,s.utilisateur}).ToList();
+            var a = cLS_NOTE.GetAll().Where(ele => (ele.date_alere == DateTime.Now || ele.date_alere == null) && ele.utilisateur1.utilisateur1==THEME.id_user).Select(s => new { s.Text, Creation = s.date , NomComlet = s.utilisateur1.Nom + " " + s.utilisateur1.Prenom }).ToList();
             bunifuDataGridView_accueil.DataSource = a;
         }
         private void bunifuPanel_dossiers_encour_Click(object sender, EventArgs e)
@@ -114,7 +114,11 @@ namespace gestion_cabinet_notarial
                         int a = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
                         THEME.id_C = a;
                         THEME.numdossier = con.FindByValues(ele => ele.Idcontrat == a).First().numdossier;
-                        THEME.prix = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).Select(s => s.dossier.PRIX_ACQUISITION).First().Value;
+                        var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).FirstOrDefault();
+                        if (dossier.typedossier == "vente")
+                        {
+                            THEME.prix = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).Select(s => s.dossier.PRIX_ACQUISITION).First().Value;
+                        }
                         THEME.navigat(typeof(DETAIL_CONTRAT));
                     }
                     else
@@ -125,7 +129,11 @@ namespace gestion_cabinet_notarial
                             return;
                         }
                         THEME.numdossier = dgv.Rows[e.RowIndex].Cells[dgv.Columns["N_DOSSIER"].Name].Value.ToString();
-                        THEME.prix =Convert.ToDouble(dgv.Rows[e.RowIndex].Cells[dgv.Columns["PRIX"].Name].Value.ToString());
+                        var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).FirstOrDefault();
+                       if (dossier.typedossier == "vente")
+                        {
+                            THEME.prix = Convert.ToDouble(dgv.Rows[e.RowIndex].Cells[dgv.Columns["PRIX"].Name].Value.ToString());
+                        }
                         THEME.navigat(typeof(detail_dossier));
                     }
                 }               

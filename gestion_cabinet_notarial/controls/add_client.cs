@@ -501,7 +501,11 @@ namespace gestion_cabinet_notarial
                     return;
                 }
                 THEME.numdossier = bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["N_DOSSIER"].Value.ToString();
-                THEME.prix = double.Parse(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["PRIX"].Value.ToString());
+                var dossier = cls_Bl_Dossier_client.FindByValues(ele => ele.Numdossier == THEME.numdossier).FirstOrDefault();
+                if (dossier.typedossier == "vente")
+                {
+                    THEME.prix = double.Parse(bunifuDataGridView_list_dossier.Rows[e.RowIndex].Cells["PRIX"].Value.ToString());
+                }
                 THEME.navigat(typeof(detail_dossier));
                 //THEME.numdossier = "";
                 //THEME.prix = 0;
@@ -509,25 +513,27 @@ namespace gestion_cabinet_notarial
         }
         private void add_client_VisibleChanged(object sender, EventArgs e)
         {
-            
-           var ListDataSource = cls.GetAll().Select(ele => new clientserch()
+            if (this.Visible)
             {
-                IDCIENT = ele.idClient,
-                nom = ele.Nom,
-                PRENOM = ele.Prenom,
-                EMAIL = ele.Email,
-                TEL = ele.Tele,
-                FAX = ele.Fax,
-                TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
-           }).ToList();
-            if(this.Visible)
-                THEME.operation($"CONSULTER DES CLIENT");
-            bunifuDataGridViewlist_client.DataSource = ListDataSource;
-            bunifuDataGridViewlist_client.Columns["IF"].Visible = false;
-            bunifuDataGridViewlist_client.Columns["CIN"].Visible = false;
-            if (THEME.id_Client == 0)
-                return;
-            sete_client(THEME.id_Client);
+                var ListDataSource = cls.GetAll().Select(ele => new clientserch()
+                {
+                    IDCIENT = ele.idClient,
+                    nom = ele.Nom,
+                    PRENOM = ele.Prenom,
+                    EMAIL = ele.Email,
+                    TEL = ele.Tele,
+                    FAX = ele.Fax,
+                    TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
+                }).ToList();
+                if (this.Visible)
+                    THEME.operation($"CONSULTER DES CLIENT");
+                bunifuDataGridViewlist_client.DataSource = ListDataSource;
+                bunifuDataGridViewlist_client.Columns["IF"].Visible = false;
+                bunifuDataGridViewlist_client.Columns["CIN"].Visible = false;
+                if (THEME.id_Client == 0)
+                    return;
+                sete_client(THEME.id_Client);
+            }
         }
 
         private void tabPage_CLIENT_Click(object sender, EventArgs e)

@@ -122,15 +122,17 @@
     <Property Name="anne_achat" Type="int" />
     <Property Name="anne_vente" Type="int" />
     <Property Name="prixachat" Type="float" />
+    <Property Name="typedossier" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="facture">
-          <Property Name="Nfacture" Type="varchar" MaxLength="20" />
-          <Property Name="date" Type="date" />
-          <Property Name="idcontrat" Type="int" />
-          <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
-        </EntityType>-->
+  <EntityType Name="facture">
+    <Key>
+      <PropertyRef Name="Nfacture" />
+    </Key>
+    <Property Name="Nfacture" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="idcontrat" Type="int" />
+    <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
+  </EntityType>
   <EntityType Name="fichiers_client">
     <Key>
       <PropertyRef Name="idfile" />
@@ -491,12 +493,30 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <!--Errors Found During Generation:
-error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a relationship, but cannot be found.
-        <Association Name="FK__facture__idcontr__19DFD96B" />-->
-  <!--Errors Found During Generation:
-error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a relationship, but cannot be found.
-        <Association Name="FK__facture__utilisa__1AD3FDA4" />-->
+  <Association Name="FK__facture__idcontr__19DFD96B">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="facture" Type="Self.facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facture__utilisa__1AD3FDA4">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="facture" Type="Self.facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="utilisatuer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__fichiers___idCli__4222D4EF">
     <End Role="client" Type="Self.client" Multiplicity="0..1" />
     <End Role="fichiers_client" Type="Self.fichiers_client" Multiplicity="*" />
@@ -815,6 +835,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
     <EntitySet Name="credit" EntityType="Self.credit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="devis" EntityType="Self.devis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dossier" EntityType="Self.dossier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="facture" EntityType="Self.facture" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="fichiers_client" EntityType="Self.fichiers_client" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="fichiers_contrat" EntityType="Self.fichiers_contrat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="fichiers_dossier" EntityType="Self.fichiers_dossier" Schema="dbo" store:Type="Tables" />
@@ -897,6 +918,14 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
     <AssociationSet Name="FK__dossier__utilisa__33D4B598" Association="Self.FK__dossier__utilisa__33D4B598">
       <End Role="utilisateur" EntitySet="utilisateur" />
       <End Role="dossier" EntitySet="dossier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__idcontr__19DFD96B" Association="Self.FK__facture__idcontr__19DFD96B">
+      <End Role="contrat" EntitySet="contrat" />
+      <End Role="facture" EntitySet="facture" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__utilisa__1AD3FDA4" Association="Self.FK__facture__utilisa__1AD3FDA4">
+      <End Role="utilisateur" EntitySet="utilisateur" />
+      <End Role="facture" EntitySet="facture" />
     </AssociationSet>
     <AssociationSet Name="FK__fichiers___idCli__4222D4EF" Association="Self.FK__fichiers___idCli__4222D4EF">
       <End Role="client" EntitySet="client" />

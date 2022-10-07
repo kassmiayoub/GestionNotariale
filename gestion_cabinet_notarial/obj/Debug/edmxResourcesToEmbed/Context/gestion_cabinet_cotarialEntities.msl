@@ -120,6 +120,7 @@
     <EntitySetMapping Name="dossiers">
       <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.dossier">
         <MappingFragment StoreEntitySet="dossier">
+          <ScalarProperty Name="typedossier" ColumnName="typedossier" />
           <ScalarProperty Name="prixachat" ColumnName="prixachat" />
           <ScalarProperty Name="Numdossier" ColumnName="Numdossier" />
           <ScalarProperty Name="Titrefoncier" ColumnName="Titrefoncier" />
@@ -326,6 +327,16 @@
           <ScalarProperty Name="titrefoncier" ColumnName="titrefoncier" />
           <ScalarProperty Name="libbele" ColumnName="libbele" />
           <ScalarProperty Name="idobj" ColumnName="idobj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="factures">
+      <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.facture">
+        <MappingFragment StoreEntitySet="facture">
+          <ScalarProperty Name="utilisatuer" ColumnName="utilisatuer" />
+          <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Nfacture" ColumnName="Nfacture" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

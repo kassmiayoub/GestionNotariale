@@ -34,9 +34,21 @@ namespace gestion_cabinet_notarial
             bunifuTextBoxhonoraire.Enabled = true;
             bunifuTextBoxenregistrement.Enabled = true;
             bunifuTextBoxAncfcc.Enabled = true;
+            if (THEME.prix == 0)
+            {
+                bunifuCheckBoxhonoraire.Enabled = false;
+                bunifuCheckBoxancfcc.Enabled = false;
+                bunifuCheckBoxenregistrement.Enabled = false;
+            }
+            else
+            {
+                bunifuCheckBoxhonoraire.Enabled = true;
+                bunifuCheckBoxancfcc.Enabled = true;
+                bunifuCheckBoxenregistrement.Enabled = true;
+            }
         }
         private void ButtonAdd_Click_1(object sender, EventArgs e)
-        {
+        {                        
             if (bunifuTextBoxtmbr.Text == "")
             {
                 MessageBox.Show("le champs Timbres ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);

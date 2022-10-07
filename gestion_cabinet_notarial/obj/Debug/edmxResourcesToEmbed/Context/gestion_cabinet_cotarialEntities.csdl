@@ -108,6 +108,7 @@
     <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___idcon__3E52440B" FromRole="contrat" ToRole="fichiers_contrat" />
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idcont__5165187F" FromRole="contrat" ToRole="payement" />
     <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="contrat" ToRole="Signature" />
+    <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="contrat" ToRole="facture" />
   </EntityType>
   <EntityType Name="credit">
     <Key>
@@ -162,6 +163,7 @@
     <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
     <Property Name="prixachat" Type="Double" />
     <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="dossier" ToRole="objet" />
+    <Property Name="typedossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="fichiers_client">
     <Key>
@@ -333,6 +335,7 @@
     <NavigationProperty Name="notes" Relationship="Self.FK__note__utilisateu__693CA210" FromRole="utilisateur" ToRole="note" />
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__utilis__5441852A" FromRole="utilisateur" ToRole="payement" />
     <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="utilisateur" ToRole="Rendez_vous" />
+    <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="utilisateur" ToRole="facture" />
   </EntityType>
   <Association Name="FK__banque__utilisat__4D94879B">
     <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
@@ -1006,6 +1009,15 @@
       <End Role="client" EntitySet="clients" />
       <End Role="objet" EntitySet="objets" />
     </AssociationSet>
+    <EntitySet Name="factures" EntityType="gestion_cabinet_notarialModel.facture" />
+    <AssociationSet Name="FK__facture__idcontr__19DFD96B" Association="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="facture" EntitySet="factures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facture__utilisa__1AD3FDA4" Association="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="facture" EntitySet="factures" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="information_cabinet">
     <Key>
@@ -1064,6 +1076,41 @@
       </Principal>
       <Dependent Role="objet">
         <PropertyRef Name="idclient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="facture">
+    <Key>
+      <PropertyRef Name="Nfacture" />
+    </Key>
+    <Property Name="Nfacture" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="idcontrat" Type="Int32" />
+    <Property Name="utilisatuer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="facture" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="facture" ToRole="utilisateur" />
+  </EntityType>
+  <Association Name="FK__facture__idcontr__19DFD96B">
+    <End Type="gestion_cabinet_notarialModel.contrat" Role="contrat" Multiplicity="0..1" />
+    <End Type="gestion_cabinet_notarialModel.facture" Role="facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facture__utilisa__1AD3FDA4">
+    <End Type="gestion_cabinet_notarialModel.utilisateur" Role="utilisateur" Multiplicity="0..1" />
+    <End Type="gestion_cabinet_notarialModel.facture" Role="facture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur1" />
+      </Principal>
+      <Dependent Role="facture">
+        <PropertyRef Name="utilisatuer" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -93,15 +93,28 @@ namespace gestion_cabinet_notarial
             parte.Condition = "";
             parte.Typeclient = "echangeur";;
             parte.idClient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
-            THEME.objs.Add(obj);
+            if(THEME.objs.Any(ele => ele.idclient == obj.idclient))
+            {                
+                MessageBox.Show("Cette parte existe deja");
+            }
+            else
+            {
+                THEME.objs.Add(obj);
+            }
             if (THEME.numdossierobj != "")
             {
+                
                 parte.numdossier= THEME.numdossierobj;
                 obj.numdossier = THEME.numdossierobj;
                 CLS_OBJET_BL.Add(obj);
-                var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == int.Parse(bunifuDropdown_client.SelectedValue.ToString())).FirstOrDefault();
+                int a = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
+                var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == a ).FirstOrDefault();
                 if(clinet == null)
                     partee.Add(parte);
+                if (partee.FindByValues(ele => ele.numdossier == THEME.numdossierobj).ToList().Any(el => el.idClient == obj.idclient))
+                {
+                    
+                }
                 listobjs();
             }
             else if(THEME.objs.Count > 0)

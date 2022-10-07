@@ -406,6 +406,9 @@
     <Compile Include="context\dossier.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="context\facture.cs">
+      <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="context\fichiers_client.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>

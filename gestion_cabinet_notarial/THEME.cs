@@ -278,8 +278,7 @@ namespace gestion_cabinet_notarial
                 else if(c2 is BunifuCheckBox)
                 {
                     ((BunifuCheckBox)c2).Checked = false;
-                }
-                
+                }               
             }
         }
         public static bool acceder(string condition)

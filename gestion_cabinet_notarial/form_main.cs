@@ -35,12 +35,14 @@ namespace gestion_cabinet_notarial
             //c.Visible = true;
             BunifuDropdown dtypeclient = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdowntypeclient"];
             dtypeclient.Items.Add("VENDUERE");
-            dtypeclient.Items.Add("ACHETEURE");        
+            dtypeclient.Items.Add("ACHETEURE");
             BunifuDropdown typecontrat = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
             typecontrat.Items.Add("VENTE");
-            typecontrat.Items.Add("PROMESE");
+            typecontrat.Items.Add("PROMESE DE VENTE");
+            typecontrat.Items.Add("PROMESE DE LOCATION");
             typecontrat.Items.Add("PRET BANQUE");
-
+            typecontrat.Items.Add("ECHANGE");
+            typecontrat.Items.Add("LOCATION");
         }
         void ShowTaskBar()
         {

@@ -49,6 +49,11 @@ namespace gestion_cabinet_notarial.controls
                 A.Password = bunifuTextBox_PASS.Text;
                 A.Nom = bunifuTextBox_NOM.Text;
                 A.Prenom = bunifuTextBox_PRENOM.Text;
+                if(bunifuTextBox_USER.Text == "" || bunifuTextBox_PASS.Text == "" || bunifuTextBox_NOM.Text == "" || bunifuTextBox_PRENOM.Text == "")
+                {
+                    MessageBox.Show("Remplire tout les champs");
+                    return;
+                }
                 user.Add(A);
                 seting();
                 MessageBox.Show("AJOUTER AVEC SUCCESS");

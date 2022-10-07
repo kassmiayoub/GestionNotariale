@@ -39,7 +39,6 @@ namespace gestion_cabinet_notarial
             else
             {
                 using (contrat f1 = new contrat(comboBoxtype_contrat.Text)) { f1.ShowDialog(); }
-
             }
         }
 

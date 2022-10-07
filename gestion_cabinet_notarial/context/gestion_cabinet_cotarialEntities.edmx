@@ -127,15 +127,17 @@
           <Property Name="anne_achat" Type="int" />
           <Property Name="anne_vente" Type="int" />
           <Property Name="prixachat" Type="float" />
+          <Property Name="typedossier" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="facture">
-          <Property Name="Nfacture" Type="varchar" MaxLength="20" />
+          <Key>
+            <PropertyRef Name="Nfacture" />
+          </Key>
+          <Property Name="Nfacture" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="date" Type="date" />
           <Property Name="idcontrat" Type="int" />
           <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
-        </EntityType>-->
+        </EntityType>
         <EntityType Name="fichiers_client">
           <Key>
             <PropertyRef Name="idfile" />
@@ -496,12 +498,30 @@ warning 6013: The table/view 'gestion_cabinet_cotarial.dbo.facture' does not hav
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a relationship, but cannot be found.
-        <Association Name="FK__facture__idcontr__19DFD96B" />-->
-        <!--Errors Found During Generation:
-error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a relationship, but cannot be found.
-        <Association Name="FK__facture__utilisa__1AD3FDA4" />-->
+        <Association Name="FK__facture__idcontr__19DFD96B">
+          <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+          <End Role="facture" Type="Self.facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contrat">
+              <PropertyRef Name="Idcontrat" />
+            </Principal>
+            <Dependent Role="facture">
+              <PropertyRef Name="idcontrat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__facture__utilisa__1AD3FDA4">
+          <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+          <End Role="facture" Type="Self.facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="utilisateur">
+              <PropertyRef Name="utilisateur" />
+            </Principal>
+            <Dependent Role="facture">
+              <PropertyRef Name="utilisatuer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__fichiers___idCli__4222D4EF">
           <End Role="client" Type="Self.client" Multiplicity="0..1" />
           <End Role="fichiers_client" Type="Self.fichiers_client" Multiplicity="*" />
@@ -820,6 +840,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <EntitySet Name="credit" EntityType="Self.credit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="devis" EntityType="Self.devis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dossier" EntityType="Self.dossier" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facture" EntityType="Self.facture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="fichiers_client" EntityType="Self.fichiers_client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="fichiers_contrat" EntityType="Self.fichiers_contrat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="fichiers_dossier" EntityType="Self.fichiers_dossier" Schema="dbo" store:Type="Tables" />
@@ -902,6 +923,14 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <AssociationSet Name="FK__dossier__utilisa__33D4B598" Association="Self.FK__dossier__utilisa__33D4B598">
             <End Role="utilisateur" EntitySet="utilisateur" />
             <End Role="dossier" EntitySet="dossier" />
+          </AssociationSet>
+          <AssociationSet Name="FK__facture__idcontr__19DFD96B" Association="Self.FK__facture__idcontr__19DFD96B">
+            <End Role="contrat" EntitySet="contrat" />
+            <End Role="facture" EntitySet="facture" />
+          </AssociationSet>
+          <AssociationSet Name="FK__facture__utilisa__1AD3FDA4" Association="Self.FK__facture__utilisa__1AD3FDA4">
+            <End Role="utilisateur" EntitySet="utilisateur" />
+            <End Role="facture" EntitySet="facture" />
           </AssociationSet>
           <AssociationSet Name="FK__fichiers___idCli__4222D4EF" Association="Self.FK__fichiers___idCli__4222D4EF">
             <End Role="client" EntitySet="client" />
@@ -1108,6 +1137,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="fichiers_contrat" Relationship="Self.FK__fichiers___idcon__3E52440B" FromRole="contrat" ToRole="fichiers_contrat" />
           <NavigationProperty Name="payements" Relationship="Self.FK__payement__idcont__5165187F" FromRole="contrat" ToRole="payement" />
           <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="contrat" ToRole="Signature" />
+          <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="contrat" ToRole="facture" />
         </EntityType>
         <EntityType Name="credit">
           <Key>
@@ -1162,6 +1192,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="partes" Relationship="Self.FK__partes__numdossi__46E78A0C" FromRole="dossier" ToRole="partes" />
           <Property Name="prixachat" Type="Double" />
           <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" FromRole="dossier" ToRole="objet" />
+          <Property Name="typedossier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="fichiers_client">
           <Key>
@@ -1333,6 +1364,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <NavigationProperty Name="notes" Relationship="Self.FK__note__utilisateu__693CA210" FromRole="utilisateur" ToRole="note" />
           <NavigationProperty Name="payements" Relationship="Self.FK__payement__utilis__5441852A" FromRole="utilisateur" ToRole="payement" />
           <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="utilisateur" ToRole="Rendez_vous" />
+          <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="utilisateur" ToRole="facture" />
         </EntityType>
         <Association Name="FK__banque__utilisat__4D94879B">
           <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
@@ -2006,6 +2038,15 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             <End Role="client" EntitySet="clients" />
             <End Role="objet" EntitySet="objets" />
           </AssociationSet>
+          <EntitySet Name="factures" EntityType="gestion_cabinet_notarialModel.facture" />
+          <AssociationSet Name="FK__facture__idcontr__19DFD96B" Association="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B">
+            <End Role="contrat" EntitySet="contrats" />
+            <End Role="facture" EntitySet="factures" />
+          </AssociationSet>
+          <AssociationSet Name="FK__facture__utilisa__1AD3FDA4" Association="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4">
+            <End Role="utilisateur" EntitySet="utilisateurs" />
+            <End Role="facture" EntitySet="factures" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="information_cabinet">
           <Key>
@@ -2064,6 +2105,41 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
             </Principal>
             <Dependent Role="objet">
               <PropertyRef Name="idclient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="facture">
+          <Key>
+            <PropertyRef Name="Nfacture" />
+          </Key>
+          <Property Name="Nfacture" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="idcontrat" Type="Int32" />
+          <Property Name="utilisatuer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="facture" ToRole="contrat" />
+          <NavigationProperty Name="utilisateur" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="facture" ToRole="utilisateur" />
+        </EntityType>
+        <Association Name="FK__facture__idcontr__19DFD96B">
+          <End Type="gestion_cabinet_notarialModel.contrat" Role="contrat" Multiplicity="0..1" />
+          <End Type="gestion_cabinet_notarialModel.facture" Role="facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contrat">
+              <PropertyRef Name="Idcontrat" />
+            </Principal>
+            <Dependent Role="facture">
+              <PropertyRef Name="idcontrat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__facture__utilisa__1AD3FDA4">
+          <End Type="gestion_cabinet_notarialModel.utilisateur" Role="utilisateur" Multiplicity="0..1" />
+          <End Type="gestion_cabinet_notarialModel.facture" Role="facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="utilisateur">
+              <PropertyRef Name="utilisateur1" />
+            </Principal>
+            <Dependent Role="facture">
+              <PropertyRef Name="utilisatuer" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2192,6 +2268,7 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
           <EntitySetMapping Name="dossiers">
             <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.dossier">
               <MappingFragment StoreEntitySet="dossier">
+                <ScalarProperty Name="typedossier" ColumnName="typedossier" />
                 <ScalarProperty Name="prixachat" ColumnName="prixachat" />
                 <ScalarProperty Name="Numdossier" ColumnName="Numdossier" />
                 <ScalarProperty Name="Titrefoncier" ColumnName="Titrefoncier" />
@@ -2398,6 +2475,16 @@ error 6004: The table 'gestion_cabinet_cotarial.dbo.facture' is referenced by a 
                 <ScalarProperty Name="titrefoncier" ColumnName="titrefoncier" />
                 <ScalarProperty Name="libbele" ColumnName="libbele" />
                 <ScalarProperty Name="idobj" ColumnName="idobj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="factures">
+            <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.facture">
+              <MappingFragment StoreEntitySet="facture">
+                <ScalarProperty Name="utilisatuer" ColumnName="utilisatuer" />
+                <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Nfacture" ColumnName="Nfacture" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

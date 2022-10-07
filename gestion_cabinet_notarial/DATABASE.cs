@@ -69,7 +69,15 @@ namespace gestion_cabinet_notarial
                                 with replace
                                 ALTER DATABASE gestion_cabinet_cotarial SET MULTI_USER",
                     GetConnetion);
-            SC.ExecuteNonQuery();
+            try
+            {
+                SC.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("Cette fichier uncorrect");
+            }
         }
         static public SqlDataAdapter getinfocabinet()
         {

@@ -58,6 +58,7 @@ namespace gestion_cabinet_notarial.controls
         {
             string user_log = bunifuDropdown_users.SelectedValue.ToString();
             LOG.RemoveRange(LOG.GetAll().Where(ele => ele.utilisateur == user_log).ToList());
+            LOG.SaveChanges();
             ButtonSearch_operation.PerformClick();
         }
 

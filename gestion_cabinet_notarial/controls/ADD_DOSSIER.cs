@@ -18,8 +18,8 @@ namespace gestion_cabinet_notarial
     {
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         cls_bl_partes partee = new cls_bl_partes();
-
-        CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();   
+        CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();
+        string typeprix = "";
         public ADD_DOSSIER()
         {
             InitializeComponent();
@@ -38,20 +38,42 @@ namespace gestion_cabinet_notarial
             a.Numdossier = textBox_N_dossier.Text;
             a.dateouverture = Convert.ToDateTime(bunifuDatePicker_dubet.Text);
             a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
-            if (THEME.objs.Count == 0)
+            if (THEME.objs.Count == 0 && typeprix != "change")
             {
-                a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
                 a.Titrefoncier = textBox_titre_foncier.Text;
                 a.Objet = textBox_obj.Text;
-                a.anne_achat = int.Parse(textBox_anne_achat.Text);
-                a.anne_vente = int.Parse(textBox_anne_vente.Text);
-                if (textBox_prix.Text == "" || textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "")
-                    return;
+
             }
-            else
+            else if (typeprix == "vente" || typeprix == "location")
             {
-                a.Titrefoncier = "change";
-            }                               
+                if (textBox_prix.Text == "")
+                {
+                    MessageBox.Show("le prix doit pas vider", "Error : validation", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+                if (typeprix == "vente")
+                {
+                    if (textBox_anne_achat.Text == "" || textBox_anne_vente.Text == "" || textBoxPRIX_ACHAT.Text == "")
+                    {
+                        MessageBox.Show("Anne d'achat et Anne de vent et le prix d'achat doit pas vider", "Error : validation", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+                    a.anne_achat = int.Parse(textBox_anne_achat.Text);
+                    a.anne_vente = int.Parse(textBox_anne_vente.Text);
+                    a.prixachat = double.Parse(textBoxPRIX_ACHAT.Text);
+                }
+                else
+                {
+                    if(textBox_anne_achat.Text == "")
+                        a.anne_achat = int.Parse(textBox_anne_achat.Text);
+                }
+                a.typedossier = typeprix;
+                a.PRIX_ACQUISITION = double.Parse(textBox_prix.Text);
+            }
+            else if (typeprix == "change")
+            {
+                a.typedossier = "change";
+            }
             a.utilisateur = THEME.id_user;
             if (bunifuCheckBox_status.Checked)
                 a.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Text);
@@ -65,10 +87,23 @@ namespace gestion_cabinet_notarial
             //    MessageBox.Show("" + errors[0].ErrorMessage, "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             //    return;
             //}
-            cls_Bl_Dossier.Add(a);
-            if (THEME.objs.Count != 0)
+            if (typeprix != "")
+            {           
+            DialogResult dr = MessageBox.Show($"vraiment cette dossier pour {typeprix} ?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                cls_Bl_Dossier.Add(a);
+            }
+            else
+            {
+                return;
+            }
+                cls_Bl_Dossier.Add(a);
+            }
+            if (THEME.objs.Count != 0 && typeprix == "change")
             {
                 var parte = new parte();
+                var s_parte = new Signature();
                 parte.Condition = "";
                 parte.Typeclient = "echangeur";
                 parte.numdossier = textBox_N_dossier.Text;
@@ -79,11 +114,13 @@ namespace gestion_cabinet_notarial
                     ele.numdossier = textBox_N_dossier.Text;
                     var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == textBox_N_dossier.Text && el.idclient == ele.idclient).FirstOrDefault();
                     if (clinet == null)
+                    {
                         partee.Add(parte);
+                    }
+                        
                 });
                 CLS_OBJET_BL.AddRange(THEME.objs);
                 THEME.objs.Clear();
-
             }
             THEME.operation($"AJOUTER DOSSIER NUMERANT = {textBox_N_dossier.Text}");
         }
@@ -170,12 +207,12 @@ namespace gestion_cabinet_notarial
             }
             if (textBox_N_dossier.Text == "")
                 return;
-            var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == textBox_N_dossier.Text).FirstOrDefault();
-            if (obj == null && textBox_prix.Text == "")
-            {
-                return;
-            }
-            else if(textBox_prix.Text != "")
+            //var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == textBox_N_dossier.Text).FirstOrDefault();
+            //if (obj == null && textBox_prix.Text == "")
+            //{
+            //    return;
+            //}
+            else if(dossier.typedossier == "vente")
             {
                 THEME.prix = double.Parse(dossier.PRIX_ACQUISITION.ToString());
             }
@@ -239,6 +276,12 @@ namespace gestion_cabinet_notarial
             {
                 e.Handled = true;
             }
+            if(typeprix == "")
+            {
+                e.Handled = true;
+                Point p = new Point(Cursor.Position.X, Cursor.Position.Y);
+                contextMenuStrip_vente_location.Show(p);
+            }
             // only allow one decimal point
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
@@ -270,7 +313,6 @@ namespace gestion_cabinet_notarial
                     e.Handled = true;
             }
         }
-
         private void buttonadd_add_objs_Click_1(object sender, EventArgs e)
         {
             if (textBox_N_dossier.Text != "")
@@ -293,13 +335,36 @@ namespace gestion_cabinet_notarial
                 {
                     new ADD_OBJ().Show();
                     textBox_obj.Enabled = false;
+                    typeprix = "change";
                 }
                 else
                 {
                     textBox_obj.Enabled = true;
                     THEME.numdossierobj = "";
-                    THEME.objs.Clear();         
-                }            
+                    THEME.objs.Clear();
+                    typeprix = "";
+                }
+        }
+        private void textBox_prix_Click(object sender, EventArgs e)
+        {
+            Point p = new Point(Cursor.Position.X, Cursor.Position.Y);
+            contextMenuStrip_vente_location.Show(p);
+        }
+        private void pourVenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            typeprix = "vente";
+            label_vent_location.Text = "ANNE DE VENTE :";
+        }
+        private void pourLocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            typeprix = "location";
+            label_vent_location.Text = "LA DERU (MOINS) :";
+        }
+
+        private void annulerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            typeprix = "";
+            label_vent_location.Text = "ANNE DE VENTE :";
         }
     }
     public class dossierSerche

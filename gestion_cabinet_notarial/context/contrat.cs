@@ -22,6 +22,7 @@ namespace gestion_cabinet_notarial.context
             this.fichiers_contrat = new HashSet<fichiers_contrat>();
             this.payements = new HashSet<payement>();
             this.Signatures = new HashSet<Signature>();
+            this.factures = new HashSet<facture>();
         }
     
         public int Idcontrat { get; set; }
@@ -48,5 +49,7 @@ namespace gestion_cabinet_notarial.context
         public virtual ICollection<payement> payements { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Signature> Signatures { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<facture> factures { get; set; }
     }
 }

@@ -22,7 +22,8 @@ namespace gestion_cabinet_notarial
         cls_bl_contrat con = new cls_bl_contrat();
         cls_lb_fichier_dossier csl_Bl_Fichier_dossier = new cls_lb_fichier_dossier();
         CLS_OBJET CLS_OBJET_BL = new CLS_OBJET();
-
+        CSL_BL_Client cls = new CSL_BL_Client();
+        cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         public detail_dossier()
         {
             InitializeComponent();
@@ -51,9 +52,23 @@ namespace gestion_cabinet_notarial
         }
         private void button_add__partes_Click(object sender, EventArgs e)
         {
+            int idclient = int.Parse(bunifuDropdownclient.SelectedValue.ToString());
+            if (bunifuButton_CDG.Visible == false)
+            {                
+                var pa = partee.FindByValues(el => el.idClient == idclient && el.numdossier == THEME.numdossier).FirstOrDefault();
+                pa.Condition = bunifuTextBoxcondition.Text;
+                partee.SaveChanges();
+                return;
+            }
             if (THEME.numdossier == "")
                 return;
             var parte = new parte();
+            var pa1 = partee.FindByValues(el => el.idClient == idclient && el.numdossier == THEME.numdossier).ToList();
+            if(pa1.Any(ele => ele.idClient == idclient))
+            {
+                MessageBox.Show("Cette parte il est deja existe");
+                return;
+            }
             parte.idClient = int.Parse(bunifuDropdownclient.SelectedValue.ToString());
             parte.Typeclient = bunifuDropdowntypeclient.Text;
             parte.Condition = bunifuTextBoxcondition.Text;
@@ -62,7 +77,6 @@ namespace gestion_cabinet_notarial
             partee.Add(parte);
             THEME.operation($"AJOTER UN PARTE POUR DOSSIER DE NUMERENT {THEME.numdossier}");
         }
-
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
         {
             if (!THEME.acceder("AJOUTER FICHIER DOSSIER"))
@@ -88,8 +102,7 @@ namespace gestion_cabinet_notarial
             THEME.operation($"AJOTER UN FICHIER POUR DOSSIER DE NUMERENT {THEME.numdossier}");
         }
         private void dataGridViewlist_contrat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+        {            
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
@@ -217,24 +230,34 @@ namespace gestion_cabinet_notarial
         {
             if (this.Visible == true)
             {
+                var ListDataSource = new List<clien>();
+                var partcontratechange = partee.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(s => new { idc = s.idClient }).ToList();
+                ListDataSource = cls.GetAll().Select(ele => new clien()
+                {
+                    IDCIENT = ele.idClient,
+                    nomcomplet = ele.Nom + " " + ele.Prenom
+                }).ToList();
                 var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).FirstOrDefault();
                 if(obj != null)
                 {
-                    PARTES_OF_CONTRAT.Visible = false;
                     bunifuButton_CDG.Visible = false;
+                    bunifuDropdowntypeclient.Enabled = false;
+                    ListDataSource = ListDataSource.Where(r => partcontratechange.Any(c => c.idc == r.IDCIENT)).ToList();                    
                 }
                 else
                 {
-                    PARTES_OF_CONTRAT.Visible = true;
                     bunifuButton_CDG.Visible = true;
+                    bunifuDropdowntypeclient.Enabled = true;
                 }
-               // FICHIERJOINT_dossier.PerformClick();
+                bunifuDropdownclient.DisplayMember = "NOMCOMPLET";
+                    bunifuDropdownclient.ValueMember = "IDCIENT";
+                bunifuDropdownclient.DataSource = ListDataSource;
+                // FICHIERJOINT_dossier.PerformClick();
                 CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
             }
         }
-
         private void detail_dossier_Load(object sender, EventArgs e)
         {
 

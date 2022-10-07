@@ -70,6 +70,9 @@
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.objet" Width="1.5" PointX="5.25" PointY="42.875" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__objet__numdossie__29221CFB" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.fk_obj_client" />
+        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.facture" Width="1.5" PointX="13.5" PointY="39.125" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

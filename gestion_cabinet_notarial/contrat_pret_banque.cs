@@ -18,6 +18,9 @@ namespace gestion_cabinet_notarial
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_contrat con = new cls_bl_contrat();
         CSL_BL_pret_banque pret = new CSL_BL_pret_banque();
+        cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        cls_bl_partes partee = new cls_bl_partes();
+
 
         public contrat_pret_banque(string type_contrat)
         {
@@ -40,10 +43,10 @@ namespace gestion_cabinet_notarial
             bunifuTextBoxhonoraire.Enabled = true;
             bunifuTextBoxenregistrement.Enabled = true;
             bunifuTextBoxAncfcc.Enabled = true;
-            var ListDataSource = cls.GetAll().Select(ele => new clien()
+            var ListDataSource = partee.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(ele => new clien()
             {
-                IDCIENT = ele.idClient,
-                nomcomplet = ele.Nom + " " + ele.Prenom
+                IDCIENT = ele.client.idClient,
+                nomcomplet = ele.client.Nom + " " + ele.client.Prenom
             }).ToList();
             bunifuDropdown_client.DisplayMember = "NOMCOMPLET";
             bunifuDropdown_client.ValueMember = "IDCIENT";
@@ -52,6 +55,18 @@ namespace gestion_cabinet_notarial
             bunifuDropdown_banque.DataSource = ListDataSource1;
             bunifuDropdown_banque.DisplayMember = "Libbele";
             bunifuDropdown_banque.ValueMember = "Idbanque";
+            if (THEME.prix == 0)
+            {
+                bunifuCheckBoxhonoraire.Enabled = false;
+                bunifuCheckBoxancfcc.Enabled = false;
+                bunifuCheckBoxenregistrement.Enabled = false;
+            }
+            else
+            {
+                bunifuCheckBoxhonoraire.Enabled = true;
+                bunifuCheckBoxancfcc.Enabled = true;
+                bunifuCheckBoxenregistrement.Enabled = true;
+            }
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -242,6 +257,11 @@ namespace gestion_cabinet_notarial
             {
                 e.Handled = true;
             }
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
