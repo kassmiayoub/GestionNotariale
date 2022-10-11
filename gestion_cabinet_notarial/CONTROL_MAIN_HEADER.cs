@@ -25,6 +25,7 @@ namespace gestion_cabinet_notarial
                                        MessageBoxButtons.YesNo);
             if (result1 == DialogResult.Yes)
             {
+                THEME.id_C = 0;
                 Application.OpenForms["form_main"].Close();
                 new login().Show();
             }

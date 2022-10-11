@@ -49,6 +49,7 @@ namespace gestion_cabinet_notarial
             {
                 comboBoxtype_client.SelectedIndex = 1;
                 textBoxCIN.Text = A.ClientNormale.CIN;
+                textBoxIF.Text = "";
             }
             else
             {

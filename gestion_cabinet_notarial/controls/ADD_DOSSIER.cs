@@ -98,6 +98,10 @@ namespace gestion_cabinet_notarial
             {
                 return;
             }
+                
+            }
+            else
+            {
                 cls_Bl_Dossier.Add(a);
             }
             if (THEME.objs.Count != 0 && typeprix == "change")
@@ -112,12 +116,11 @@ namespace gestion_cabinet_notarial
                 {
                     parte.idClient = ele.idclient;
                     ele.numdossier = textBox_N_dossier.Text;
-                    var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == textBox_N_dossier.Text && el.idclient == ele.idclient).FirstOrDefault();
+                    var clinet = partee.FindByValues(el => el.numdossier == textBox_N_dossier.Text && el.idClient == ele.idclient).FirstOrDefault();
                     if (clinet == null)
                     {
                         partee.Add(parte);
                     }
-                        
                 });
                 CLS_OBJET_BL.AddRange(THEME.objs);
                 THEME.objs.Clear();
@@ -315,6 +318,8 @@ namespace gestion_cabinet_notarial
         }
         private void buttonadd_add_objs_Click_1(object sender, EventArgs e)
         {
+            if (typeprix != "change")
+                return;
             if (textBox_N_dossier.Text != "")
             { 
                 THEME.numdossierobj = textBox_N_dossier.Text;
@@ -328,6 +333,11 @@ namespace gestion_cabinet_notarial
                 if (objs == null && d == null)
                 {
                     THEME.numdossierobj = "";                    
+                }
+                else if (objs != null && d != null)
+                {
+                    new ADD_OBJ().Show();
+                    return;
                 }
             }
             DialogResult dr = MessageBox.Show("VOULEZ VOUS REDACTION CONTRAT D'ECHANGE ?", "Confirmation", MessageBoxButtons.YesNo);
@@ -365,6 +375,11 @@ namespace gestion_cabinet_notarial
         {
             typeprix = "";
             label_vent_location.Text = "ANNE DE VENTE :";
+        }
+
+        private void textBox_anne_achat_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     public class dossierSerche

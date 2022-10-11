@@ -128,7 +128,7 @@ namespace gestion_cabinet_notarial
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 51);
+            this.label1.Location = new System.Drawing.Point(51, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 412;
@@ -139,7 +139,7 @@ namespace gestion_cabinet_notarial
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 96);
+            this.label2.Location = new System.Drawing.Point(7, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 19);
             this.label2.TabIndex = 413;
@@ -150,7 +150,7 @@ namespace gestion_cabinet_notarial
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 146);
+            this.label3.Location = new System.Drawing.Point(7, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 19);
             this.label3.TabIndex = 414;
@@ -477,7 +477,7 @@ namespace gestion_cabinet_notarial
             this.label_vent_location.AutoSize = true;
             this.label_vent_location.BackColor = System.Drawing.Color.Transparent;
             this.label_vent_location.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_vent_location.Location = new System.Drawing.Point(40, 192);
+            this.label_vent_location.Location = new System.Drawing.Point(19, 192);
             this.label_vent_location.Name = "label_vent_location";
             this.label_vent_location.Size = new System.Drawing.Size(109, 19);
             this.label_vent_location.TabIndex = 438;
@@ -487,11 +487,12 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_anne_achat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_anne_achat.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_anne_achat.Location = new System.Drawing.Point(159, 180);
+            this.textBox_anne_achat.Location = new System.Drawing.Point(168, 176);
             this.textBox_anne_achat.Multiline = true;
             this.textBox_anne_achat.Name = "textBox_anne_achat";
             this.textBox_anne_achat.Size = new System.Drawing.Size(118, 31);
             this.textBox_anne_achat.TabIndex = 437;
+            this.textBox_anne_achat.TextChanged += new System.EventHandler(this.textBox_anne_achat_TextChanged);
             this.textBox_anne_achat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_anne_achat_KeyPress);
             // 
             // label8
@@ -510,7 +511,7 @@ namespace gestion_cabinet_notarial
             // 
             this.textBox_anne_vente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_anne_vente.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_anne_vente.Location = new System.Drawing.Point(442, 178);
+            this.textBox_anne_vente.Location = new System.Drawing.Point(442, 179);
             this.textBox_anne_vente.Multiline = true;
             this.textBox_anne_vente.Name = "textBox_anne_vente";
             this.textBox_anne_vente.Size = new System.Drawing.Size(134, 31);

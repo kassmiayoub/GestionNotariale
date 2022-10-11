@@ -34,6 +34,7 @@
             this.controL_CONTROL_BOX2 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.mainMenu1 = new gestion_cabinet_notarial.MainMenu();
             this.controL_MAIN_HEADER1 = new gestion_cabinet_notarial.CONTROL_MAIN_HEADER();
+            this.button1 = new System.Windows.Forms.Button();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,8 +93,18 @@
             this.controL_MAIN_HEADER1.BackColor = System.Drawing.Color.White;
             this.controL_MAIN_HEADER1.Location = new System.Drawing.Point(9, 43);
             this.controL_MAIN_HEADER1.Name = "controL_MAIN_HEADER1";
-            this.controL_MAIN_HEADER1.Size = new System.Drawing.Size(1239, 96);
+            this.controL_MAIN_HEADER1.Size = new System.Drawing.Size(1239, 101);
             this.controL_MAIN_HEADER1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1145, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // form_main
             // 
@@ -101,6 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1257, 799);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.MAINPANEL);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.controL_MAIN_HEADER1);
@@ -123,6 +135,7 @@
         private MainMenu mainMenu1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

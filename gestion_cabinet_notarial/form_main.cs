@@ -51,5 +51,22 @@ namespace gestion_cabinet_notarial
             this.Size = new Size(x, y);
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //if(THEME.toback == 0)
+            //{
+            //    THEME.toback = THEME.BackControls.Count - 2;
+            //}
+            try
+            {
+                Type C = THEME.BackControls[THEME.toback-1];
+                THEME.toback -= 1;
+                THEME.navigate = 1;
+                THEME.navigat(C);
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }

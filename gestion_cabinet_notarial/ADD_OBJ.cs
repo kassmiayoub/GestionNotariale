@@ -91,31 +91,36 @@ namespace gestion_cabinet_notarial
             obj.idclient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
             var parte = new parte();
             parte.Condition = "";
-            parte.Typeclient = "echangeur";;
+            parte.Typeclient = "echangeur";
             parte.idClient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
-            if(THEME.objs.Any(ele => ele.idclient == obj.idclient))
-            {                
-                MessageBox.Show("Cette parte existe deja");
-            }
-            else
-            {
+            //if(THEME.objs.Any(ele => ele.idclient != obj.idclient))
+            //{                
+            //    //MessageBox.Show("Cette parte existe deja");
+            //}
+            //else
+            //{
                 THEME.objs.Add(obj);
-            }
+            //}
             if (THEME.numdossierobj != "")
-            {
-                
-                parte.numdossier= THEME.numdossierobj;
+            {                
+                parte.numdossier = THEME.numdossierobj;
                 obj.numdossier = THEME.numdossierobj;
                 CLS_OBJET_BL.Add(obj);
-                int a = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
-                var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == a ).FirstOrDefault();
-                if(clinet == null)
-                    partee.Add(parte);
-                if (partee.FindByValues(ele => ele.numdossier == THEME.numdossierobj).ToList().Any(el => el.idClient == obj.idclient))
+                //int a = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
+                //var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == a ).FirstOrDefault();
+                //if(clinet == null)
+                //    partee.Add(parte);
+                var parteexeste = partee.FindByValues(ele => ele.numdossier == THEME.numdossierobj).ToList();
+                bool p = false;
+                parteexeste.ForEach(el =>
                 {
-                    
-                }
+                    if (el.idClient == obj.idclient)
+                        p = true;
+                });
+                if(!p)
+                    partee.Add(parte);
                 listobjs();
+                THEME.objs.Clear();
             }
             else if(THEME.objs.Count > 0)
             {                

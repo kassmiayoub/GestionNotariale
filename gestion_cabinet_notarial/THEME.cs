@@ -30,6 +30,8 @@ namespace gestion_cabinet_notarial
         public static string logoDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "logo");
 
         public static string TPI = "";
+        public static int toback = 0;
+        public static int navigate = 0;
         public static ComboBox client_or_dossier = null;
         public static Panel p = null;
         public static Type T = null;
@@ -62,6 +64,7 @@ namespace gestion_cabinet_notarial
         public static CTL_LIST__operation CTL_LIST__operation { get; set; }
         public static nouveau_credit nouveau_credit { get; set; }
         public static List<Control> ControlsList { get; set; } = new List<Control>();
+        public static List<Type> BackControls { get; set; } = new List<Type>();
         public static List<string> fonctionnalete { get; set; } = new List<string>();
         private static void AddControlToPanel()
         {
@@ -129,7 +132,13 @@ namespace gestion_cabinet_notarial
         }
         public static void navigat(Type t)
         {
-            if(t != typeof(CTL_CDG))
+            if(navigate == 0)
+            {
+                BackControls.Add(t);
+                toback += 1;
+            }
+            navigate = 0;
+            if (t != typeof(CTL_CDG))
             {
                 TPI = "";
             }
