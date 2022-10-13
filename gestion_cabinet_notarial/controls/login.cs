@@ -40,5 +40,10 @@ namespace gestion_cabinet_notarial.controls
             new form_main().Show();
             this.Hide();
         }
+
+        private void bunifuButton_QUITTE_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

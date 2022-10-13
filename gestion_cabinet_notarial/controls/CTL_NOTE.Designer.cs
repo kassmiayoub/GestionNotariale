@@ -54,18 +54,18 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(5, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 24);
+            this.label11.Size = new System.Drawing.Size(66, 23);
             this.label11.TabIndex = 481;
             this.label11.Text = "TEXT : ";
             // 
             // richTextBox_text
             // 
             this.richTextBox_text.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.richTextBox_text.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_text.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.richTextBox_text.Location = new System.Drawing.Point(81, 95);
             this.richTextBox_text.Name = "richTextBox_text";
             this.richTextBox_text.Size = new System.Drawing.Size(307, 96);
@@ -138,10 +138,10 @@
             // 
             this.checkBox_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_filter.AutoSize = true;
-            this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_filter.Location = new System.Drawing.Point(602, 107);
+            this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.checkBox_filter.Location = new System.Drawing.Point(575, 105);
             this.checkBox_filter.Name = "checkBox_filter";
-            this.checkBox_filter.Size = new System.Drawing.Size(160, 26);
+            this.checkBox_filter.Size = new System.Drawing.Size(196, 27);
             this.checkBox_filter.TabIndex = 487;
             this.checkBox_filter.Text = "FILTRAGE PAR DATE";
             this.checkBox_filter.UseVisualStyleBackColor = true;
@@ -153,6 +153,7 @@
             this.panel_filter.Controls.Add(this.ButtonSearch);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_F);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_D);
+            this.panel_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.panel_filter.Location = new System.Drawing.Point(548, 138);
             this.panel_filter.Name = "panel_filter";
             this.panel_filter.Size = new System.Drawing.Size(228, 217);
@@ -165,7 +166,7 @@
             this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSearch.FlatAppearance.BorderSize = 0;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearch.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSearch.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,7 +196,7 @@
             this.bunifuDatePicker_F.DPHeight = 0;
             this.bunifuDatePicker_F.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_F.FillDatePicker = false;
-            this.bunifuDatePicker_F.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_F.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_F.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_F.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_F.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_F.Icon")));
@@ -222,7 +223,7 @@
             this.bunifuDatePicker_D.DPHeight = 0;
             this.bunifuDatePicker_D.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_D.FillDatePicker = false;
-            this.bunifuDatePicker_D.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_D.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_D.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_D.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_D.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_D.Icon")));
@@ -243,7 +244,7 @@
             this.Button_vider_note.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_vider_note.FlatAppearance.BorderSize = 0;
             this.Button_vider_note.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_vider_note.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.Button_vider_note.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.Button_vider_note.ForeColor = System.Drawing.Color.White;
             this.Button_vider_note.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.Button_vider_note.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +265,7 @@
             this.ButtonAdd_note.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_note.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_note.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_note.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_note.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_note.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_note.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_note.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,7 +294,7 @@
             this.bunifuDatePicker_date_alert.DPHeight = 0;
             this.bunifuDatePicker_date_alert.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_date_alert.FillDatePicker = false;
-            this.bunifuDatePicker_date_alert.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_date_alert.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_date_alert.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_date_alert.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_date_alert.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_alert.Icon")));
@@ -311,11 +312,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(5, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 24);
+            this.label1.Size = new System.Drawing.Size(127, 23);
             this.label1.TabIndex = 490;
             this.label1.Text = "DATE ALERT : ";
             // 
@@ -323,10 +324,10 @@
             // 
             this.checkBox_tout_j.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_tout_j.AutoSize = true;
-            this.checkBox_tout_j.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_tout_j.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.checkBox_tout_j.Location = new System.Drawing.Point(178, 270);
             this.checkBox_tout_j.Name = "checkBox_tout_j";
-            this.checkBox_tout_j.Size = new System.Drawing.Size(166, 26);
+            this.checkBox_tout_j.Size = new System.Drawing.Size(207, 27);
             this.checkBox_tout_j.TabIndex = 491;
             this.checkBox_tout_j.Text = "TOUTS JOURS ALERT";
             this.checkBox_tout_j.UseVisualStyleBackColor = true;

@@ -153,10 +153,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.statistic;
-            this.bunifuPages1.PageIndex = 3;
-            this.bunifuPages1.PageName = "statistic";
-            this.bunifuPages1.PageTitle = "tabPage5";
+            this.bunifuPages1.Page = this.pretbanquedetails;
+            this.bunifuPages1.PageIndex = 4;
+            this.bunifuPages1.PageName = "pretbanquedetails";
+            this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
             this.bunifuPages1.TabIndex = 0;
@@ -197,11 +197,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label13.Location = new System.Drawing.Point(119, 26);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(180, 24);
+            this.label13.Size = new System.Drawing.Size(174, 25);
             this.label13.TabIndex = 481;
             this.label13.Text = "DATE SINIGATUR : ";
             // 
@@ -213,7 +213,7 @@
             this.buttonadd_date_s.Enabled = false;
             this.buttonadd_date_s.FlatAppearance.BorderSize = 0;
             this.buttonadd_date_s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonadd_date_s.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonadd_date_s.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.buttonadd_date_s.ForeColor = System.Drawing.Color.White;
             this.buttonadd_date_s.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.buttonadd_date_s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,7 +243,7 @@
             this.bunifuDatePicker_date_s.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_date_s.Enabled = false;
             this.bunifuDatePicker_date_s.FillDatePicker = false;
-            this.bunifuDatePicker_date_s.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_date_s.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_date_s.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_date_s.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_date_s.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_date_s.Icon")));
@@ -259,6 +259,8 @@
             // bunifuDataGridViewpartes_S
             // 
             this.bunifuDataGridViewpartes_S.AllowCustomTheming = false;
+            this.bunifuDataGridViewpartes_S.AllowUserToAddRows = false;
+            this.bunifuDataGridViewpartes_S.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridViewpartes_S.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -311,13 +313,14 @@
             this.bunifuDataGridViewpartes_S.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridViewpartes_S.Location = new System.Drawing.Point(6, 133);
             this.bunifuDataGridViewpartes_S.Name = "bunifuDataGridViewpartes_S";
+            this.bunifuDataGridViewpartes_S.ReadOnly = true;
             this.bunifuDataGridViewpartes_S.RowHeadersVisible = false;
             this.bunifuDataGridViewpartes_S.RowTemplate.Height = 40;
             this.bunifuDataGridViewpartes_S.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuDataGridViewpartes_S.Size = new System.Drawing.Size(880, 371);
             this.bunifuDataGridViewpartes_S.TabIndex = 0;
             this.bunifuDataGridViewpartes_S.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.bunifuDataGridViewpartes_S.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridViewpartes_S_CellContentClick);
+            this.bunifuDataGridViewpartes_S.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridViewpartes_S_CellClick);
             // 
             // payeclient
             // 
@@ -350,18 +353,18 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label14.Location = new System.Drawing.Point(169, 174);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(159, 24);
+            this.label14.Size = new System.Drawing.Size(141, 23);
             this.label14.TabIndex = 454;
             this.label14.Text = "TYPE CHARGE : ";
             // 
             // comboBox_TYPE_CHARGE
             // 
             this.comboBox_TYPE_CHARGE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_TYPE_CHARGE.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F);
+            this.comboBox_TYPE_CHARGE.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_TYPE_CHARGE.FormattingEnabled = true;
             this.comboBox_TYPE_CHARGE.Location = new System.Drawing.Point(361, 171);
             this.comboBox_TYPE_CHARGE.Name = "comboBox_TYPE_CHARGE";
@@ -373,10 +376,10 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(205, 230);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 24);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 12;
             this.label5.Text = "MONTANT :";
             // 
@@ -384,10 +387,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(457, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 24);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "DATE :";
             // 
@@ -395,10 +398,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(224, 117);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "BANQUE :";
             // 
@@ -406,10 +409,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(144, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 24);
+            this.label2.Size = new System.Drawing.Size(174, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "MODE PAYEMENT : ";
             // 
@@ -417,10 +420,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(32, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.Size = new System.Drawing.Size(83, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "CLIENT : ";
             // 
@@ -491,11 +494,11 @@
             // 
             this.RDVERMENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RDVERMENT.AutoSize = true;
-            this.RDVERMENT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDVERMENT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.RDVERMENT.ForeColor = System.Drawing.Color.Black;
             this.RDVERMENT.Location = new System.Drawing.Point(626, 70);
             this.RDVERMENT.Name = "RDVERMENT";
-            this.RDVERMENT.Size = new System.Drawing.Size(105, 24);
+            this.RDVERMENT.Size = new System.Drawing.Size(113, 27);
             this.RDVERMENT.TabIndex = 4;
             this.RDVERMENT.TabStop = true;
             this.RDVERMENT.Text = "VERMENT";
@@ -506,11 +509,11 @@
             // 
             this.RDCHEQUE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RDCHEQUE.AutoSize = true;
-            this.RDCHEQUE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDCHEQUE.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.RDCHEQUE.ForeColor = System.Drawing.Color.Black;
             this.RDCHEQUE.Location = new System.Drawing.Point(495, 70);
             this.RDCHEQUE.Name = "RDCHEQUE";
-            this.RDCHEQUE.Size = new System.Drawing.Size(96, 24);
+            this.RDCHEQUE.Size = new System.Drawing.Size(101, 27);
             this.RDCHEQUE.TabIndex = 3;
             this.RDCHEQUE.TabStop = true;
             this.RDCHEQUE.Text = "CHEQUE";
@@ -521,11 +524,11 @@
             // 
             this.RD_ESPECES.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RD_ESPECES.AutoSize = true;
-            this.RD_ESPECES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD_ESPECES.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.RD_ESPECES.ForeColor = System.Drawing.Color.Black;
             this.RD_ESPECES.Location = new System.Drawing.Point(360, 70);
             this.RD_ESPECES.Name = "RD_ESPECES";
-            this.RD_ESPECES.Size = new System.Drawing.Size(103, 24);
+            this.RD_ESPECES.Size = new System.Drawing.Size(103, 27);
             this.RD_ESPECES.TabIndex = 2;
             this.RD_ESPECES.TabStop = true;
             this.RD_ESPECES.Text = "ESPECES";
@@ -535,7 +538,7 @@
             // comboBox_banque_PY
             // 
             this.comboBox_banque_PY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_banque_PY.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F);
+            this.comboBox_banque_PY.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_banque_PY.FormattingEnabled = true;
             this.comboBox_banque_PY.Location = new System.Drawing.Point(360, 114);
             this.comboBox_banque_PY.Name = "comboBox_banque_PY";
@@ -545,7 +548,7 @@
             // comboBoxCLIENT_PY
             // 
             this.comboBoxCLIENT_PY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxCLIENT_PY.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCLIENT_PY.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBoxCLIENT_PY.FormattingEnabled = true;
             this.comboBoxCLIENT_PY.Location = new System.Drawing.Point(148, 26);
             this.comboBoxCLIENT_PY.Name = "comboBoxCLIENT_PY";
@@ -559,7 +562,7 @@
             this.ButtonAdd_PAYEMENT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_PAYEMENT.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_PAYEMENT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_PAYEMENT.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_PAYEMENT.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_PAYEMENT.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_PAYEMENT.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_PAYEMENT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -665,7 +668,7 @@
             this.bunifuDatePicker_PAYMENT.DPHeight = 0;
             this.bunifuDatePicker_PAYMENT.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_PAYMENT.FillDatePicker = false;
-            this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_PAYMENT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_PAYMENT.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_PAYMENT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_PAYMENT.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_PAYMENT.Icon")));
@@ -702,7 +705,7 @@
             // textBoxfile
             // 
             this.textBoxfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxfile.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxfile.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxfile.Location = new System.Drawing.Point(259, 62);
             this.textBoxfile.Multiline = true;
             this.textBoxfile.Name = "textBoxfile";
@@ -714,18 +717,18 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(47, 117);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 24);
+            this.label11.Size = new System.Drawing.Size(144, 23);
             this.label11.TabIndex = 478;
             this.label11.Text = "DESCREPTION : ";
             // 
             // textBoxdesc
             // 
             this.textBoxdesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxdesc.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxdesc.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxdesc.Location = new System.Drawing.Point(259, 111);
             this.textBoxdesc.Multiline = true;
             this.textBoxdesc.Name = "textBoxdesc";
@@ -735,7 +738,7 @@
             // textBoxtitre
             // 
             this.textBoxtitre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxtitre.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxtitre.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxtitre.Location = new System.Drawing.Point(259, 4);
             this.textBoxtitre.Multiline = true;
             this.textBoxtitre.Name = "textBoxtitre";
@@ -747,11 +750,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(129, 11);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 24);
+            this.label12.Size = new System.Drawing.Size(71, 23);
             this.label12.TabIndex = 474;
             this.label12.Text = "TITRE : ";
             // 
@@ -825,7 +828,7 @@
             this.buttonserche_file.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonserche_file.FlatAppearance.BorderSize = 0;
             this.buttonserche_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonserche_file.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonserche_file.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.buttonserche_file.ForeColor = System.Drawing.Color.White;
             this.buttonserche_file.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.buttonserche_file.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -848,7 +851,7 @@
             this.buttonvider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonvider.FlatAppearance.BorderSize = 0;
             this.buttonvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonvider.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonvider.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.buttonvider.ForeColor = System.Drawing.Color.White;
             this.buttonvider.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.buttonvider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -868,7 +871,7 @@
             this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -890,7 +893,7 @@
             this.ButtonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSaveSettings.FlatAppearance.BorderSize = 0;
             this.ButtonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -947,8 +950,8 @@
             this.bunifuButton_print.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton_print.DisabledFillColor = System.Drawing.Color.Empty;
             this.bunifuButton_print.DisabledForecolor = System.Drawing.Color.Empty;
-            this.bunifuButton_print.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton_print.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuButton_print.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.bunifuButton_print.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.bunifuButton_print.ForeColor = System.Drawing.Color.White;
             this.bunifuButton_print.IconLeft = global::gestion_cabinet_notarial.Properties.Resources.print;
             this.bunifuButton_print.IconLeftAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -968,7 +971,7 @@
             this.bunifuButton_print.IdleIconLeftImage = global::gestion_cabinet_notarial.Properties.Resources.print;
             this.bunifuButton_print.IdleIconRightImage = null;
             this.bunifuButton_print.IndicateFocus = false;
-            this.bunifuButton_print.Location = new System.Drawing.Point(736, 6);
+            this.bunifuButton_print.Location = new System.Drawing.Point(696, 6);
             this.bunifuButton_print.Name = "bunifuButton_print";
             this.bunifuButton_print.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton_print.OnDisabledState.BorderRadius = 1;
@@ -1002,7 +1005,7 @@
             this.bunifuButton_print.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton_print.OnPressedState.IconLeftImage = null;
             this.bunifuButton_print.OnPressedState.IconRightImage = null;
-            this.bunifuButton_print.Size = new System.Drawing.Size(150, 39);
+            this.bunifuButton_print.Size = new System.Drawing.Size(190, 39);
             this.bunifuButton_print.TabIndex = 6;
             this.bunifuButton_print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton_print.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1016,10 +1019,10 @@
             // 
             this.tva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tva.AutoSize = true;
-            this.tva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tva.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.tva.Location = new System.Drawing.Point(375, 345);
             this.tva.Name = "tva";
-            this.tva.Size = new System.Drawing.Size(33, 24);
+            this.tva.Size = new System.Drawing.Size(37, 23);
             this.tva.TabIndex = 12;
             this.tva.Text = "tva";
             // 
@@ -1027,10 +1030,10 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(173, 345);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 24);
+            this.label6.Size = new System.Drawing.Size(189, 23);
             this.label6.TabIndex = 11;
             this.label6.Text = "TVA Honoraires 10% :";
             // 
@@ -1133,10 +1136,11 @@
             // 
             // dateTimePickerfin
             // 
+            this.dateTimePickerfin.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerfin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerfin.Location = new System.Drawing.Point(206, 315);
             this.dateTimePickerfin.Name = "dateTimePickerfin";
-            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 20);
+            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerfin.TabIndex = 543;
             // 
             // label8
@@ -1144,11 +1148,11 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(6, 315);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 24);
+            this.label8.Size = new System.Drawing.Size(174, 23);
             this.label8.TabIndex = 542;
             this.label8.Text = "DATE FERMETURE :";
             // 
@@ -1157,11 +1161,11 @@
             this.INTIERET.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.INTIERET.AutoSize = true;
             this.INTIERET.BackColor = System.Drawing.Color.Transparent;
-            this.INTIERET.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INTIERET.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.INTIERET.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.INTIERET.Location = new System.Drawing.Point(670, 169);
             this.INTIERET.Name = "INTIERET";
-            this.INTIERET.Size = new System.Drawing.Size(85, 24);
+            this.INTIERET.Size = new System.Drawing.Size(79, 23);
             this.INTIERET.TabIndex = 541;
             this.INTIERET.Text = "JOURES";
             // 
@@ -1170,11 +1174,11 @@
             this.PAYEPARMOINS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PAYEPARMOINS.AutoSize = true;
             this.PAYEPARMOINS.BackColor = System.Drawing.Color.Transparent;
-            this.PAYEPARMOINS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAYEPARMOINS.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.PAYEPARMOINS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.PAYEPARMOINS.Location = new System.Drawing.Point(670, 115);
             this.PAYEPARMOINS.Name = "PAYEPARMOINS";
-            this.PAYEPARMOINS.Size = new System.Drawing.Size(85, 24);
+            this.PAYEPARMOINS.Size = new System.Drawing.Size(79, 23);
             this.PAYEPARMOINS.TabIndex = 540;
             this.PAYEPARMOINS.Text = "JOURES";
             // 
@@ -1183,11 +1187,11 @@
             this.DERU.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DERU.AutoSize = true;
             this.DERU.BackColor = System.Drawing.Color.Transparent;
-            this.DERU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DERU.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.DERU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.DERU.Location = new System.Drawing.Point(658, 267);
             this.DERU.Name = "DERU";
-            this.DERU.Size = new System.Drawing.Size(85, 24);
+            this.DERU.Size = new System.Drawing.Size(79, 23);
             this.DERU.TabIndex = 539;
             this.DERU.Text = "JOURES";
             // 
@@ -1196,11 +1200,11 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(571, 267);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 24);
+            this.label7.Size = new System.Drawing.Size(72, 23);
             this.label7.TabIndex = 538;
             this.label7.Text = "DERU : ";
             // 
@@ -1359,6 +1363,7 @@
             // richTextBox_description
             // 
             this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.richTextBox_description.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.richTextBox_description.Location = new System.Drawing.Point(430, 373);
             this.richTextBox_description.Name = "richTextBox_description";
             this.richTextBox_description.Size = new System.Drawing.Size(302, 142);
@@ -1368,10 +1373,11 @@
             // dateTimePickerdubet
             // 
             this.dateTimePickerdubet.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePickerdubet.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerdubet.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerdubet.Location = new System.Drawing.Point(206, 271);
             this.dateTimePickerdubet.Name = "dateTimePickerdubet";
-            this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 20);
+            this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerdubet.TabIndex = 530;
             // 
             // label9
@@ -1379,11 +1385,11 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(6, 270);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 24);
+            this.label9.Size = new System.Drawing.Size(180, 23);
             this.label9.TabIndex = 528;
             this.label9.Text = "DATE OUVERTURE : ";
             // 
@@ -1392,11 +1398,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label10.Location = new System.Drawing.Point(489, 115);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(170, 24);
+            this.label10.Size = new System.Drawing.Size(153, 23);
             this.label10.TabIndex = 526;
             this.label10.Text = "PAYE PAR MOIS : ";
             // 
@@ -1405,11 +1411,11 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label15.Location = new System.Drawing.Point(549, 169);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 24);
+            this.label15.Size = new System.Drawing.Size(100, 23);
             this.label15.TabIndex = 524;
             this.label15.Text = "INTIERET : ";
             // 
@@ -1418,11 +1424,11 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label16.Location = new System.Drawing.Point(67, 224);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 24);
+            this.label16.Size = new System.Drawing.Size(102, 23);
             this.label16.TabIndex = 523;
             this.label16.Text = "BANQUE :  ";
             // 
@@ -1431,11 +1437,11 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label17.Location = new System.Drawing.Point(50, 175);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 24);
+            this.label17.Size = new System.Drawing.Size(110, 23);
             this.label17.TabIndex = 522;
             this.label17.Text = "MONTANT : ";
             // 
@@ -1520,11 +1526,11 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label18.Location = new System.Drawing.Point(254, 368);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(159, 24);
+            this.label18.Size = new System.Drawing.Size(144, 23);
             this.label18.TabIndex = 520;
             this.label18.Text = "DESCREPTION : ";
             // 
@@ -1560,11 +1566,11 @@
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label21.Location = new System.Drawing.Point(81, 121);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(91, 24);
+            this.label21.Size = new System.Drawing.Size(83, 23);
             this.label21.TabIndex = 514;
             this.label21.Text = "CLIENT : ";
             // 
@@ -1598,7 +1604,7 @@
             this.STATISTIC_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.STATISTIC_CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.STATISTIC_CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.STATISTIC_CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.STATISTIC_CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.STATISTIC_CONTRAT.ForeColor = System.Drawing.Color.White;
             this.STATISTIC_CONTRAT.IconLeft = null;
             this.STATISTIC_CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1691,7 +1697,7 @@
             this.FICHIERJOINT_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.FICHIERJOINT_CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.FICHIERJOINT_CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.FICHIERJOINT_CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FICHIERJOINT_CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.FICHIERJOINT_CONTRAT.ForeColor = System.Drawing.Color.White;
             this.FICHIERJOINT_CONTRAT.IconLeft = null;
             this.FICHIERJOINT_CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1784,7 +1790,7 @@
             this.PAYEMENTCLIENT_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.PAYEMENTCLIENT_CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.PAYEMENTCLIENT_CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.PAYEMENTCLIENT_CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PAYEMENTCLIENT_CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.PAYEMENTCLIENT_CONTRAT.ForeColor = System.Drawing.Color.White;
             this.PAYEMENTCLIENT_CONTRAT.IconLeft = null;
             this.PAYEMENTCLIENT_CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1804,7 +1810,7 @@
             this.PAYEMENTCLIENT_CONTRAT.IdleIconLeftImage = null;
             this.PAYEMENTCLIENT_CONTRAT.IdleIconRightImage = null;
             this.PAYEMENTCLIENT_CONTRAT.IndicateFocus = false;
-            this.PAYEMENTCLIENT_CONTRAT.Location = new System.Drawing.Point(309, 29);
+            this.PAYEMENTCLIENT_CONTRAT.Location = new System.Drawing.Point(290, 29);
             this.PAYEMENTCLIENT_CONTRAT.Name = "PAYEMENTCLIENT_CONTRAT";
             this.PAYEMENTCLIENT_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PAYEMENTCLIENT_CONTRAT.OnDisabledState.BorderRadius = 1;
@@ -1838,7 +1844,7 @@
             this.PAYEMENTCLIENT_CONTRAT.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.PAYEMENTCLIENT_CONTRAT.OnPressedState.IconLeftImage = null;
             this.PAYEMENTCLIENT_CONTRAT.OnPressedState.IconRightImage = null;
-            this.PAYEMENTCLIENT_CONTRAT.Size = new System.Drawing.Size(150, 39);
+            this.PAYEMENTCLIENT_CONTRAT.Size = new System.Drawing.Size(169, 39);
             this.PAYEMENTCLIENT_CONTRAT.TabIndex = 2;
             this.PAYEMENTCLIENT_CONTRAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PAYEMENTCLIENT_CONTRAT.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1877,7 +1883,7 @@
             this.PARTES_OF_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.PARTES_OF_CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.PARTES_OF_CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.PARTES_OF_CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PARTES_OF_CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.PARTES_OF_CONTRAT.ForeColor = System.Drawing.Color.White;
             this.PARTES_OF_CONTRAT.IconLeft = null;
             this.PARTES_OF_CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1897,7 +1903,7 @@
             this.PARTES_OF_CONTRAT.IdleIconLeftImage = null;
             this.PARTES_OF_CONTRAT.IdleIconRightImage = null;
             this.PARTES_OF_CONTRAT.IndicateFocus = false;
-            this.PARTES_OF_CONTRAT.Location = new System.Drawing.Point(158, 29);
+            this.PARTES_OF_CONTRAT.Location = new System.Drawing.Point(139, 29);
             this.PARTES_OF_CONTRAT.Name = "PARTES_OF_CONTRAT";
             this.PARTES_OF_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PARTES_OF_CONTRAT.OnDisabledState.BorderRadius = 1;

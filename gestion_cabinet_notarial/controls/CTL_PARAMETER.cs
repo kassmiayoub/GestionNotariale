@@ -49,7 +49,7 @@ namespace gestion_cabinet_notarial.controls
                 A.Password = bunifuTextBox_PASS.Text;
                 A.Nom = bunifuTextBox_NOM.Text;
                 A.Prenom = bunifuTextBox_PRENOM.Text;
-                if(bunifuTextBox_USER.Text == "" || bunifuTextBox_PASS.Text == "" || bunifuTextBox_NOM.Text == "" || bunifuTextBox_PRENOM.Text == "")
+                if(bunifuTextBox_USER.Text.Trim() == "" || bunifuTextBox_PASS.Text.Trim() == "" || bunifuTextBox_NOM.Text.Trim() == "" || bunifuTextBox_PRENOM.Text.Trim() == "")
                 {
                     MessageBox.Show("Remplire tout les champs");
                     return;

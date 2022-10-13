@@ -162,7 +162,7 @@
             this.bunifuDropdown_DOSSIER.FillDropDown = true;
             this.bunifuDropdown_DOSSIER.FillIndicator = false;
             this.bunifuDropdown_DOSSIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown_DOSSIER.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown_DOSSIER.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_DOSSIER.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdown_DOSSIER.FormattingEnabled = true;
             this.bunifuDropdown_DOSSIER.Icon = null;
@@ -253,11 +253,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label13.Location = new System.Drawing.Point(426, 77);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 24);
+            this.label13.Size = new System.Drawing.Size(115, 23);
             this.label13.TabIndex = 482;
             this.label13.Text = "N DOSSIER : ";
             // 
@@ -265,11 +265,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(22, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 24);
+            this.label2.Size = new System.Drawing.Size(141, 23);
             this.label2.TabIndex = 484;
             this.label2.Text = "PRIX D\'ACHAT : ";
             // 
@@ -280,7 +280,7 @@
             this.buttonserche_CDG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonserche_CDG.FlatAppearance.BorderSize = 0;
             this.buttonserche_CDG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonserche_CDG.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonserche_CDG.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.buttonserche_CDG.ForeColor = System.Drawing.Color.White;
             this.buttonserche_CDG.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.buttonserche_CDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,7 +303,7 @@
             this.ButtonAdd_CDG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_CDG.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_CDG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_CDG.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_CDG.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_CDG.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_CDG.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_CDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,11 +322,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Location = new System.Drawing.Point(500, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 24);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 488;
             this.label4.Text = "DATE :";
             // 
@@ -344,7 +344,7 @@
             this.bunifuDatePicker_CDG.DPHeight = 0;
             this.bunifuDatePicker_CDG.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_CDG.FillDatePicker = false;
-            this.bunifuDatePicker_CDG.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_CDG.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_CDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuDatePicker_CDG.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_CDG.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_CDG.Icon")));
@@ -362,11 +362,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(14, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 24);
+            this.label3.Size = new System.Drawing.Size(303, 23);
             this.label3.TabIndex = 489;
             this.label3.Text = "TPI - Taxe sur le profit immobilier  : ";
             // 
@@ -374,11 +374,11 @@
             // 
             this.lblTPI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTPI.AutoSize = true;
-            this.lblTPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTPI.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.lblTPI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lblTPI.Location = new System.Drawing.Point(325, 237);
             this.lblTPI.Name = "lblTPI";
-            this.lblTPI.Size = new System.Drawing.Size(38, 24);
+            this.lblTPI.Size = new System.Drawing.Size(36, 23);
             this.lblTPI.TabIndex = 490;
             this.lblTPI.Text = "TPI";
             // 
@@ -386,11 +386,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(528, 237);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 24);
+            this.label5.Size = new System.Drawing.Size(130, 23);
             this.label5.TabIndex = 491;
             this.label5.Text = "COEFFICIENT :";
             // 
@@ -398,11 +398,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(507, 189);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 24);
+            this.label6.Size = new System.Drawing.Size(150, 23);
             this.label6.TabIndex = 497;
             this.label6.Text = "ANNE D\'ACHAT : ";
             // 
@@ -410,11 +410,11 @@
             // 
             this.ANNE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ANNE.AutoSize = true;
-            this.ANNE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ANNE.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ANNE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ANNE.Location = new System.Drawing.Point(679, 189);
             this.ANNE.Name = "ANNE";
-            this.ANNE.Size = new System.Drawing.Size(64, 24);
+            this.ANNE.Size = new System.Drawing.Size(59, 23);
             this.ANNE.TabIndex = 498;
             this.ANNE.Text = "ANNE";
             // 
@@ -425,7 +425,7 @@
             this.button_CALC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CALC.FlatAppearance.BorderSize = 0;
             this.button_CALC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CALC.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_CALC.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.button_CALC.ForeColor = System.Drawing.Color.White;
             this.button_CALC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_CALC.Location = new System.Drawing.Point(115, 285);
@@ -443,11 +443,11 @@
             // 
             this.radioButton_CREDIT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButton_CREDIT.AutoSize = true;
-            this.radioButton_CREDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_CREDIT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.radioButton_CREDIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.radioButton_CREDIT.Location = new System.Drawing.Point(63, 78);
             this.radioButton_CREDIT.Name = "radioButton_CREDIT";
-            this.radioButton_CREDIT.Size = new System.Drawing.Size(87, 24);
+            this.radioButton_CREDIT.Size = new System.Drawing.Size(90, 27);
             this.radioButton_CREDIT.TabIndex = 500;
             this.radioButton_CREDIT.TabStop = true;
             this.radioButton_CREDIT.Text = "CREDIT";
@@ -457,11 +457,11 @@
             // 
             this.radioButton_Immobilier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButton_Immobilier.AutoSize = true;
-            this.radioButton_Immobilier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Immobilier.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.radioButton_Immobilier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.radioButton_Immobilier.Location = new System.Drawing.Point(160, 78);
             this.radioButton_Immobilier.Name = "radioButton_Immobilier";
-            this.radioButton_Immobilier.Size = new System.Drawing.Size(123, 24);
+            this.radioButton_Immobilier.Size = new System.Drawing.Size(134, 27);
             this.radioButton_Immobilier.TabIndex = 501;
             this.radioButton_Immobilier.TabStop = true;
             this.radioButton_Immobilier.Text = "IMMOBILIER";
@@ -471,11 +471,11 @@
             // 
             this.radioButton_tout.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButton_tout.AutoSize = true;
-            this.radioButton_tout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_tout.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.radioButton_tout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.radioButton_tout.Location = new System.Drawing.Point(296, 78);
             this.radioButton_tout.Name = "radioButton_tout";
-            this.radioButton_tout.Size = new System.Drawing.Size(69, 24);
+            this.radioButton_tout.Size = new System.Drawing.Size(75, 27);
             this.radioButton_tout.TabIndex = 502;
             this.radioButton_tout.TabStop = true;
             this.radioButton_tout.Text = "TOUT";
@@ -485,11 +485,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(8, 141);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 24);
+            this.label7.Size = new System.Drawing.Size(152, 23);
             this.label7.TabIndex = 504;
             this.label7.Text = "PRIX DE VENTE : ";
             // 
@@ -626,6 +626,7 @@
             // COEFFICIENT
             // 
             this.COEFFICIENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.COEFFICIENT.Font = new System.Drawing.Font("Ubuntu Light", 11F, System.Drawing.FontStyle.Bold);
             this.COEFFICIENT.Location = new System.Drawing.Point(679, 228);
             this.COEFFICIENT.Name = "COEFFICIENT";
             this.COEFFICIENT.Size = new System.Drawing.Size(100, 33);

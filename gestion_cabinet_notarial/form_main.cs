@@ -29,6 +29,7 @@ namespace gestion_cabinet_notarial
             //MAINPANEL.Controls.Add(dossier);
             THEME.p = MAINPANEL;
             THEME.add_controls_to_panel();
+            THEME.navigat(typeof(Accueil));
             //Control c = MAINPANEL.Controls.Cast<Control>().First(ele => ele.GetType() == typeof(ADD_DOSSIER));
             //c.Width = MAINPANEL.Width;
             //c.Height = MAINPANEL.Height;
@@ -51,22 +52,20 @@ namespace gestion_cabinet_notarial
             this.Size = new Size(x, y);
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //if(THEME.toback == 0)
-            //{
-            //    THEME.toback = THEME.BackControls.Count - 2;
-            //}
-            try
-            {
-                Type C = THEME.BackControls[THEME.toback-1];
-                THEME.toback -= 1;
+                if(THEME.BackControls.Count == 0 || THEME.BackControls.Count == 1)
+                {
+                    return;
+                }
+                if (THEME.BackControls.Count - 1 > 0)
+                {
+                    THEME.BackControls.RemoveAt(THEME.BackControls.Count - 1);
+                }
+                Type C = THEME.BackControls[THEME.BackControls.Count - 1];
                 THEME.navigate = 1;
                 THEME.navigat(C);
-            }
-            catch (Exception)
-            {
-            }
         }
     }
 }

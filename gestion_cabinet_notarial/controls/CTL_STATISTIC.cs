@@ -16,6 +16,7 @@ namespace gestion_cabinet_notarial.controls
         cls_bl_payement paye = new cls_bl_payement();
         cls_bl_credit BL_credit = new cls_bl_credit();
         cls_bl_contrat contrat = new cls_bl_contrat();
+        DateTime dtm = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yy"));
 
         public CTL_STATISTIC()
         {
@@ -25,7 +26,7 @@ namespace gestion_cabinet_notarial.controls
 
         private void CTL_STATISTIC_Load(object sender, EventArgs e)
         {
-            var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.Date == DateTime.Now).GroupBy(ele => ele.idcontrat).Select(ele => new
+            var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.Date == dtm).GroupBy(ele => ele.idcontrat).Select(ele => new
             {   //DEPANCES= ele.Key,              
                 Honoraires = ele.Sum(el => el.Montant).ToString(),
                 TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
@@ -54,7 +55,7 @@ namespace gestion_cabinet_notarial.controls
             {
                 if (radioButton_now.Checked)
                 {
-                    var list = paye.FindByValues(ele => ele.type == "credit" && ele.Date == DateTime.Now).GroupBy(ele => ele.idcontrat).Select(ele => new
+                    var list = paye.FindByValues(ele => ele.type == "credit" && ele.Date == dtm).GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
                         CREDIT = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,
@@ -96,7 +97,7 @@ namespace gestion_cabinet_notarial.controls
             {
                 if (radioButton_now.Checked)
                 {
-                    var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.type == "charge" && ele.Date == DateTime.Now).GroupBy(ele => ele.idcontrat).Select(ele => new
+                    var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.type == "charge" && ele.Date == dtm).GroupBy(ele => ele.idcontrat).Select(ele => new
                     {   //DEPANCES= ele.Key,              
                         Honoraires = ele.Sum(el => el.Montant).ToString(),
                         TVA = ((ele.Sum(el => el.Montant)) * 10) / 100,

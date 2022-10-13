@@ -85,23 +85,6 @@ namespace gestion_cabinet_notarial
             }
         }
 
-        private void bunifuDataGridViewpartes_S_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn)
-            {
-                try
-                {
-                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString());
-                }
-                catch
-                {
-                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString());
-                }
-                bunifuDatePicker_date_s.Enabled = true;
-                buttonadd_date_s.Enabled = true;
-            }
-        }
 
         private void buttonadd_date_s_Click(object sender, EventArgs e)
         {
@@ -485,6 +468,27 @@ namespace gestion_cabinet_notarial
         private void pretbanquedetails_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuDataGridViewpartes_S_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Rows[e.RowIndex].Cells[5].Value == null)
+                dgv.Rows[e.RowIndex].Cells[5].Value = false;
+            dgv.Rows[e.RowIndex].Cells[5].Value = !(bool)dgv.Rows[e.RowIndex].Cells[5].Value;
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn)
+            {
+                try
+                {
+                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
+                catch
+                {
+                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString());
+                }
+                bunifuDatePicker_date_s.Enabled = true;
+                buttonadd_date_s.Enabled = true;
+            }
         }
     }
     public class partesS

@@ -873,6 +873,16 @@ namespace gestion_cabinet_notarial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap toback {
+            get {
+                object obj = ResourceManager.GetObject("toback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TopArrow {
             get {
                 object obj = ResourceManager.GetObject("TopArrow", resourceCulture);

@@ -41,7 +41,7 @@ namespace gestion_cabinet_notarial
             // 
             // LabelSubItemName
             // 
-            this.LabelSubItemName.Font = new System.Drawing.Font("Ithra-Light", 10F);
+            this.LabelSubItemName.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.LabelSubItemName.Location = new System.Drawing.Point(22, 1);
             this.LabelSubItemName.Name = "LabelSubItemName";
             this.LabelSubItemName.Size = new System.Drawing.Size(313, 20);

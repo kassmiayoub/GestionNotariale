@@ -39,7 +39,7 @@
             // 
             // LabelItemName
             // 
-            this.LabelItemName.Font = new System.Drawing.Font("Ithra-Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.LabelItemName.Font = new System.Drawing.Font("Ubuntu Light", 12F, System.Drawing.FontStyle.Bold);
             this.LabelItemName.Location = new System.Drawing.Point(39, 3);
             this.LabelItemName.Name = "LabelItemName";
             this.LabelItemName.Size = new System.Drawing.Size(189, 30);

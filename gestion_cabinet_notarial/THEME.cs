@@ -22,7 +22,7 @@ namespace gestion_cabinet_notarial
         public static string obj = "";
         public static string titre = "";
         public static string numdossierobj = "";
-
+        public static Type tp ;
         // directory files
         public static string clientDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "client");
         public static string dossierDirectoryPath = Path.Combine(getExecutableDirectory(), "files", "dossier");
@@ -132,10 +132,14 @@ namespace gestion_cabinet_notarial
         }
         public static void navigat(Type t)
         {
+            if(tp == t)
+            {
+                return;
+            }
+            tp = t;
             if(navigate == 0)
             {
                 BackControls.Add(t);
-                toback += 1;
             }
             navigate = 0;
             if (t != typeof(CTL_CDG))

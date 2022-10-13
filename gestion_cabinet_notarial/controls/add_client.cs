@@ -20,6 +20,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class add_client : UserControl
     {
+        public static int idclient =0 ;
         cls_bl_credit credit = new cls_bl_credit();
         CSL_BL_Client cls = new CSL_BL_Client();
         CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
@@ -127,6 +128,18 @@ namespace gestion_cabinet_notarial
              cls.Add(a);
              THEME.operation($"AJOUTER UN CLIENT {op}");
             MessageBox.Show("client ajouter avec succes");
+
+            var ListDataSource = cls.GetAll().Select(ele => new clientserch()
+            {
+                IDCIENT = ele.idClient,
+                nom = ele.Nom,
+                PRENOM = ele.Prenom,
+                EMAIL = ele.Email,
+                TEL = ele.Tele,
+                FAX = ele.Fax,
+                TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
+            }).ToList();
+            bunifuDataGridViewlist_client.DataSource = ListDataSource;
         }
         private void comboBoxtype_client_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -389,7 +402,8 @@ namespace gestion_cabinet_notarial
             sete_client(int.Parse(bunifuDataGridViewlist_client.Rows[e.RowIndex].Cells[0].Value.ToString()));
             if (THEME.client_or_dossier != null)
             {
-                THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);                    
+                idclient = int.Parse(textBoxIDCLIENT.Text);
+                THEME.client_or_dossier.SelectedValue = int.Parse(textBoxIDCLIENT.Text);
                 THEME.navigat(THEME.T);
                 THEME.client_or_dossier = null;
                 THEME.T=null;

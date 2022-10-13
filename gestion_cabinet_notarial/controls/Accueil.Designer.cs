@@ -79,6 +79,8 @@
             // bunifuDataGridView_accueil
             // 
             this.bunifuDataGridView_accueil.AllowCustomTheming = false;
+            this.bunifuDataGridView_accueil.AllowUserToAddRows = false;
+            this.bunifuDataGridView_accueil.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_accueil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -129,12 +131,13 @@
             this.bunifuDataGridView_accueil.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_accueil.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_accueil.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_accueil.Location = new System.Drawing.Point(3, 285);
+            this.bunifuDataGridView_accueil.Location = new System.Drawing.Point(0, 285);
             this.bunifuDataGridView_accueil.Name = "bunifuDataGridView_accueil";
+            this.bunifuDataGridView_accueil.ReadOnly = true;
             this.bunifuDataGridView_accueil.RowHeadersVisible = false;
             this.bunifuDataGridView_accueil.RowTemplate.Height = 40;
             this.bunifuDataGridView_accueil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_accueil.Size = new System.Drawing.Size(1426, 346);
+            this.bunifuDataGridView_accueil.Size = new System.Drawing.Size(1411, 346);
             this.bunifuDataGridView_accueil.TabIndex = 6;
             this.bunifuDataGridView_accueil.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView_accueil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_accueil_CellClick);
@@ -174,7 +177,7 @@
             this.bunifuPanelcontrat_non_signature.Location = new System.Drawing.Point(675, 21);
             this.bunifuPanelcontrat_non_signature.Name = "bunifuPanelcontrat_non_signature";
             this.bunifuPanelcontrat_non_signature.ShowBorders = true;
-            this.bunifuPanelcontrat_non_signature.Size = new System.Drawing.Size(308, 126);
+            this.bunifuPanelcontrat_non_signature.Size = new System.Drawing.Size(318, 126);
             this.bunifuPanelcontrat_non_signature.TabIndex = 9;
             this.bunifuPanelcontrat_non_signature.Click += new System.EventHandler(this.bunifuPanelcontrat_non_signature_Click);
             // 
@@ -194,7 +197,7 @@
             this.label_contrat_pas_signature.AutoSize = true;
             this.label_contrat_pas_signature.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_contrat_pas_signature.ForeColor = System.Drawing.Color.Teal;
-            this.label_contrat_pas_signature.Location = new System.Drawing.Point(239, 69);
+            this.label_contrat_pas_signature.Location = new System.Drawing.Point(244, 69);
             this.label_contrat_pas_signature.Name = "label_contrat_pas_signature";
             this.label_contrat_pas_signature.Size = new System.Drawing.Size(29, 31);
             this.label_contrat_pas_signature.TabIndex = 1;
@@ -204,11 +207,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(41, 14);
+            this.label3.Location = new System.Drawing.Point(31, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 24);
+            this.label3.Size = new System.Drawing.Size(242, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Les contrats pas signature";
             // 
@@ -227,7 +230,7 @@
             this.bunifuPanel_contarts_j.Location = new System.Drawing.Point(675, 153);
             this.bunifuPanel_contarts_j.Name = "bunifuPanel_contarts_j";
             this.bunifuPanel_contarts_j.ShowBorders = true;
-            this.bunifuPanel_contarts_j.Size = new System.Drawing.Size(308, 126);
+            this.bunifuPanel_contarts_j.Size = new System.Drawing.Size(318, 126);
             this.bunifuPanel_contarts_j.TabIndex = 8;
             this.bunifuPanel_contarts_j.Click += new System.EventHandler(this.bunifuPanel_contarts_j_Click);
             // 
@@ -247,7 +250,7 @@
             this.label_contart.AutoSize = true;
             this.label_contart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_contart.ForeColor = System.Drawing.Color.Teal;
-            this.label_contart.Location = new System.Drawing.Point(251, 69);
+            this.label_contart.Location = new System.Drawing.Point(256, 69);
             this.label_contart.Name = "label_contart";
             this.label_contart.Size = new System.Drawing.Size(29, 31);
             this.label_contart.TabIndex = 1;
@@ -257,11 +260,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(17, 10);
+            this.label2.Location = new System.Drawing.Point(13, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(274, 24);
+            this.label2.Size = new System.Drawing.Size(292, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Les contrats rediger aujourd\'hui";
             // 
@@ -280,7 +283,7 @@
             this.bunifuPanel_dossiers_encour.Location = new System.Drawing.Point(355, 153);
             this.bunifuPanel_dossiers_encour.Name = "bunifuPanel_dossiers_encour";
             this.bunifuPanel_dossiers_encour.ShowBorders = true;
-            this.bunifuPanel_dossiers_encour.Size = new System.Drawing.Size(300, 126);
+            this.bunifuPanel_dossiers_encour.Size = new System.Drawing.Size(314, 126);
             this.bunifuPanel_dossiers_encour.TabIndex = 2;
             this.bunifuPanel_dossiers_encour.Click += new System.EventHandler(this.bunifuPanel_dossiers_encour_Click);
             // 
@@ -308,11 +311,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(32, 15);
+            this.label8.Location = new System.Drawing.Point(43, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 24);
+            this.label8.Size = new System.Drawing.Size(201, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Les dossiers en cours ";
             // 
@@ -331,7 +334,7 @@
             this.bunifuPanel_dossiers_passer.Location = new System.Drawing.Point(355, 20);
             this.bunifuPanel_dossiers_passer.Name = "bunifuPanel_dossiers_passer";
             this.bunifuPanel_dossiers_passer.ShowBorders = true;
-            this.bunifuPanel_dossiers_passer.Size = new System.Drawing.Size(300, 126);
+            this.bunifuPanel_dossiers_passer.Size = new System.Drawing.Size(314, 126);
             this.bunifuPanel_dossiers_passer.TabIndex = 3;
             this.bunifuPanel_dossiers_passer.Click += new System.EventHandler(this.bunifuPanel_dossiers_passer_Click);
             // 
@@ -359,11 +362,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(6, 15);
+            this.label10.Location = new System.Drawing.Point(8, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(285, 24);
+            this.label10.Size = new System.Drawing.Size(292, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "Les dossiers  passer  aujourd\'hui";
             // 

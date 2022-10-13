@@ -222,6 +222,7 @@ namespace gestion_cabinet_notarial
             // richTextBox_description
             // 
             this.richTextBox_description.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.richTextBox_description.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.richTextBox_description.Location = new System.Drawing.Point(189, 105);
             this.richTextBox_description.Name = "richTextBox_description";
             this.richTextBox_description.Size = new System.Drawing.Size(307, 96);
@@ -233,22 +234,22 @@ namespace gestion_cabinet_notarial
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(11, 105);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 24);
+            this.label11.Size = new System.Drawing.Size(144, 23);
             this.label11.TabIndex = 479;
             this.label11.Text = "DESCREPTION : ";
             // 
             // bunifuDropdown_client_rendez
             // 
             this.bunifuDropdown_client_rendez.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown_client_rendez.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_client_rendez.FormattingEnabled = true;
             this.bunifuDropdown_client_rendez.Location = new System.Drawing.Point(591, 105);
             this.bunifuDropdown_client_rendez.Name = "bunifuDropdown_client_rendez";
-            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 31);
+            this.bunifuDropdown_client_rendez.Size = new System.Drawing.Size(279, 33);
             this.bunifuDropdown_client_rendez.TabIndex = 480;
             // 
             // ButtonAdd_rendez_vous
@@ -258,7 +259,7 @@ namespace gestion_cabinet_notarial
             this.ButtonAdd_rendez_vous.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_rendez_vous.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_rendez_vous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_rendez_vous.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_rendez_vous.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_rendez_vous.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_rendez_vous.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_rendez_vous.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,7 +281,7 @@ namespace gestion_cabinet_notarial
             this.ButtonSerch_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSerch_client.FlatAppearance.BorderSize = 0;
             this.ButtonSerch_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSerch_client.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSerch_client.Location = new System.Drawing.Point(879, 105);

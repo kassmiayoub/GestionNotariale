@@ -242,18 +242,31 @@ namespace gestion_cabinet_notarial
                 {
                     bunifuButton_CDG.Visible = false;
                     bunifuDropdowntypeclient.Enabled = false;
-                    ListDataSource = ListDataSource.Where(r => partcontratechange.Any(c => c.idc == r.IDCIENT)).ToList();                    
+                    button1.Visible = false; 
+                    ListDataSource = ListDataSource.Where(r => partcontratechange.Any(c => c.idc == r.IDCIENT)).ToList();
+                    CONTRAT.PerformClick();
                 }
                 else
                 {
+                   
+                    button1.Visible = true;
                     bunifuButton_CDG.Visible = true;
                     bunifuDropdowntypeclient.Enabled = true;
                 }
                 bunifuDropdownclient.DisplayMember = "NOMCOMPLET";
                     bunifuDropdownclient.ValueMember = "IDCIENT";
                 bunifuDropdownclient.DataSource = ListDataSource;
-                // FICHIERJOINT_dossier.PerformClick();
-                CONTRAT.PerformClick();
+                if (add_client.idclient != 0)
+                {
+                    PARTES_OF_CONTRAT.PerformClick();
+                    bunifuDropdownclient.SelectedValue = add_client.idclient;
+                    add_client.idclient = 0;
+                }
+                else
+                {
+                    CONTRAT.PerformClick();
+                }
+                // FICHIERJOINT_dossier.PerformClick();                
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
             }
@@ -272,6 +285,13 @@ namespace gestion_cabinet_notarial
             }
             THEME.TPI = "TPI";
             THEME.navigat(typeof(CTL_CDG));
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ((Button)this.Parent.Controls["add_client"].Controls["bunifuPages1"].Controls["tabPage_CLIENT"].Controls["ButtonEdit"]).Enabled = false;
+            THEME.T = this.GetType();
+            THEME.navigat(typeof(add_client));
+            THEME.client_or_dossier = (ComboBox)this.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdownclient"];
         }
     }
     public class contart

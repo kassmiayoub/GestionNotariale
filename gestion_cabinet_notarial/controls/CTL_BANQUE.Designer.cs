@@ -191,7 +191,7 @@
             this.ButtonEdit_banque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonEdit_banque.FlatAppearance.BorderSize = 0;
             this.ButtonEdit_banque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonEdit_banque.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonEdit_banque.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonEdit_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@
             this.Button_vider_banque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_vider_banque.FlatAppearance.BorderSize = 0;
             this.Button_vider_banque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_vider_banque.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.Button_vider_banque.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.Button_vider_banque.ForeColor = System.Drawing.Color.White;
             this.Button_vider_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.Button_vider_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +234,7 @@
             this.ButtonAdd_banque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_banque.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_banque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_banque.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_banque.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,11 +253,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(76, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 424;
             this.label3.Text = "BANQUE :";
             // 

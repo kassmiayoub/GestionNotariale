@@ -56,18 +56,18 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label14.Location = new System.Drawing.Point(508, 101);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(171, 24);
+            this.label14.Size = new System.Drawing.Size(151, 23);
             this.label14.TabIndex = 474;
             this.label14.Text = "TYPE CONTRAT : ";
             // 
             // comboBox_contrat_credit
             // 
             this.comboBox_contrat_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_contrat_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_contrat_credit.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_contrat_credit.FormattingEnabled = true;
             this.comboBox_contrat_credit.Location = new System.Drawing.Point(687, 94);
             this.comboBox_contrat_credit.Name = "comboBox_contrat_credit";
@@ -78,7 +78,7 @@
             // comboBox_dossier_credit
             // 
             this.comboBox_dossier_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_dossier_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_dossier_credit.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_dossier_credit.FormattingEnabled = true;
             this.comboBox_dossier_credit.Location = new System.Drawing.Point(165, 150);
             this.comboBox_dossier_credit.Name = "comboBox_dossier_credit";
@@ -89,7 +89,7 @@
             // comboBox_client_credit
             // 
             this.comboBox_client_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_client_credit.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_client_credit.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_client_credit.FormattingEnabled = true;
             this.comboBox_client_credit.Location = new System.Drawing.Point(169, 94);
             this.comboBox_client_credit.Name = "comboBox_client_credit";
@@ -102,11 +102,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(414, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 24);
+            this.label11.Size = new System.Drawing.Size(151, 23);
             this.label11.TabIndex = 468;
             this.label11.Text = "Nouveau CREDIT";
             // 
@@ -115,11 +115,11 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(35, 157);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 24);
+            this.label8.Size = new System.Drawing.Size(115, 23);
             this.label8.TabIndex = 464;
             this.label8.Text = "N DOSSIER : ";
             // 
@@ -128,11 +128,11 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(558, 157);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 24);
+            this.label7.Size = new System.Drawing.Size(110, 23);
             this.label7.TabIndex = 463;
             this.label7.Text = "MONTANT : ";
             // 
@@ -141,11 +141,11 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(70, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 24);
+            this.label6.Size = new System.Drawing.Size(83, 23);
             this.label6.TabIndex = 462;
             this.label6.Text = "CLIENT : ";
             // 
@@ -232,7 +232,7 @@
             this.button_add_credit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add_credit.FlatAppearance.BorderSize = 0;
             this.button_add_credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add_credit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_add_credit.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.button_add_credit.ForeColor = System.Drawing.Color.White;
             this.button_add_credit.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add_credit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,7 +254,7 @@
             this.ButtonSerch_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSerch_client.FlatAppearance.BorderSize = 0;
             this.ButtonSerch_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSerch_client.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSerch_client.Location = new System.Drawing.Point(452, 96);

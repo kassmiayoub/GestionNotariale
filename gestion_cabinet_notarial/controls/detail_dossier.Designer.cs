@@ -46,6 +46,7 @@
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuTextBoxcondition = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_list_partes = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuDropdowntypeclient = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -74,7 +75,6 @@
             this.CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PARTES_OF_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton_CDG = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuTextBoxcondition = new System.Windows.Forms.RichTextBox();
             this.bunifuPages1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -154,16 +154,25 @@
             this.panel2.Size = new System.Drawing.Size(903, 507);
             this.panel2.TabIndex = 1;
             // 
+            // bunifuTextBoxcondition
+            // 
+            this.bunifuTextBoxcondition.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.bunifuTextBoxcondition.Location = new System.Drawing.Point(270, 77);
+            this.bunifuTextBoxcondition.Name = "bunifuTextBoxcondition";
+            this.bunifuTextBoxcondition.Size = new System.Drawing.Size(349, 85);
+            this.bunifuTextBoxcondition.TabIndex = 420;
+            this.bunifuTextBoxcondition.Text = "";
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(162, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 24);
+            this.label2.Size = new System.Drawing.Size(105, 23);
             this.label2.TabIndex = 419;
             this.label2.Text = "condition : ";
             // 
@@ -250,7 +259,7 @@
             this.bunifuDropdowntypeclient.FillDropDown = true;
             this.bunifuDropdowntypeclient.FillIndicator = false;
             this.bunifuDropdowntypeclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdowntypeclient.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdowntypeclient.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdowntypeclient.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdowntypeclient.FormattingEnabled = true;
             this.bunifuDropdowntypeclient.Icon = null;
@@ -295,7 +304,7 @@
             this.bunifuDropdownclient.FillDropDown = true;
             this.bunifuDropdownclient.FillIndicator = false;
             this.bunifuDropdownclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdownclient.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdownclient.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdownclient.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdownclient.FormattingEnabled = true;
             this.bunifuDropdownclient.Icon = null;
@@ -326,7 +335,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.button1.Location = new System.Drawing.Point(365, 33);
@@ -336,17 +345,18 @@
             this.button1.TabIndex = 415;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(464, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 24);
+            this.label3.Size = new System.Drawing.Size(130, 23);
             this.label3.TabIndex = 414;
             this.label3.Text = "TYPE CLIENT : ";
             // 
@@ -355,11 +365,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Location = new System.Drawing.Point(10, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 24);
+            this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 413;
             this.label4.Text = "CLIENT : ";
             // 
@@ -370,7 +380,7 @@
             this.button_add__partes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add__partes.FlatAppearance.BorderSize = 0;
             this.button_add__partes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add__partes.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_add__partes.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.button_add__partes.ForeColor = System.Drawing.Color.White;
             this.button_add__partes.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add__partes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -407,7 +417,7 @@
             this.button_add_contrat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_add_contrat.FlatAppearance.BorderSize = 0;
             this.button_add_contrat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add_contrat.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_add_contrat.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.button_add_contrat.ForeColor = System.Drawing.Color.White;
             this.button_add_contrat.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.button_add_contrat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -506,7 +516,7 @@
             this.bunifuDropdowntype_contrat.FillDropDown = true;
             this.bunifuDropdowntype_contrat.FillIndicator = false;
             this.bunifuDropdowntype_contrat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdowntype_contrat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdowntype_contrat.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdowntype_contrat.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdowntype_contrat.FormattingEnabled = true;
             this.bunifuDropdowntype_contrat.Icon = null;
@@ -535,11 +545,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(161, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 24);
+            this.label1.Size = new System.Drawing.Size(179, 23);
             this.label1.TabIndex = 416;
             this.label1.Text = "TYPE DE CONTRAT : ";
             // 
@@ -567,7 +577,7 @@
             // textBoxfile
             // 
             this.textBoxfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxfile.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxfile.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxfile.Location = new System.Drawing.Point(267, 58);
             this.textBoxfile.Multiline = true;
             this.textBoxfile.Name = "textBoxfile";
@@ -643,18 +653,18 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(55, 113);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 24);
+            this.label11.Size = new System.Drawing.Size(144, 23);
             this.label11.TabIndex = 478;
             this.label11.Text = "DESCREPTION : ";
             // 
             // textBoxdesc
             // 
             this.textBoxdesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxdesc.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxdesc.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxdesc.Location = new System.Drawing.Point(267, 107);
             this.textBoxdesc.Multiline = true;
             this.textBoxdesc.Name = "textBoxdesc";
@@ -664,7 +674,7 @@
             // textBoxtitre
             // 
             this.textBoxtitre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxtitre.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxtitre.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxtitre.Location = new System.Drawing.Point(267, 9);
             this.textBoxtitre.Multiline = true;
             this.textBoxtitre.Name = "textBoxtitre";
@@ -676,11 +686,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(137, 14);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 24);
+            this.label12.Size = new System.Drawing.Size(71, 23);
             this.label12.TabIndex = 474;
             this.label12.Text = "TITRE : ";
             // 
@@ -691,7 +701,7 @@
             this.button8SERCHE_FICHIER_DOSSIER.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8SERCHE_FICHIER_DOSSIER.FlatAppearance.BorderSize = 0;
             this.button8SERCHE_FICHIER_DOSSIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8SERCHE_FICHIER_DOSSIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button8SERCHE_FICHIER_DOSSIER.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.button8SERCHE_FICHIER_DOSSIER.ForeColor = System.Drawing.Color.White;
             this.button8SERCHE_FICHIER_DOSSIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.button8SERCHE_FICHIER_DOSSIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -714,7 +724,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button3.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -734,7 +744,7 @@
             this.ButtonAdd_FICHIER.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_FICHIER.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_FICHIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_FICHIER.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_FICHIER.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_FICHIER.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_FICHIER.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -756,7 +766,7 @@
             this.ButtonSavefile_fichier_joint_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSavefile_fichier_joint_dossier.FlatAppearance.BorderSize = 0;
             this.ButtonSavefile_fichier_joint_dossier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSavefile_fichier_joint_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSavefile_fichier_joint_dossier.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSavefile_fichier_joint_dossier.ForeColor = System.Drawing.Color.White;
             this.ButtonSavefile_fichier_joint_dossier.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.ButtonSavefile_fichier_joint_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -799,7 +809,7 @@
             this.FICHIERJOINT_dossier.DisabledFillColor = System.Drawing.Color.Empty;
             this.FICHIERJOINT_dossier.DisabledForecolor = System.Drawing.Color.Empty;
             this.FICHIERJOINT_dossier.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.FICHIERJOINT_dossier.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FICHIERJOINT_dossier.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.FICHIERJOINT_dossier.ForeColor = System.Drawing.Color.White;
             this.FICHIERJOINT_dossier.IconLeft = null;
             this.FICHIERJOINT_dossier.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -892,7 +902,7 @@
             this.CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.CONTRAT.ForeColor = System.Drawing.Color.White;
             this.CONTRAT.IconLeft = null;
             this.CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -985,7 +995,7 @@
             this.PARTES_OF_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
             this.PARTES_OF_CONTRAT.DisabledForecolor = System.Drawing.Color.Empty;
             this.PARTES_OF_CONTRAT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.PARTES_OF_CONTRAT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PARTES_OF_CONTRAT.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.PARTES_OF_CONTRAT.ForeColor = System.Drawing.Color.White;
             this.PARTES_OF_CONTRAT.IconLeft = null;
             this.PARTES_OF_CONTRAT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1078,7 +1088,7 @@
             this.bunifuButton_CDG.DisabledFillColor = System.Drawing.Color.Empty;
             this.bunifuButton_CDG.DisabledForecolor = System.Drawing.Color.Empty;
             this.bunifuButton_CDG.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton_CDG.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuButton_CDG.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.bunifuButton_CDG.ForeColor = System.Drawing.Color.White;
             this.bunifuButton_CDG.IconLeft = null;
             this.bunifuButton_CDG.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1140,14 +1150,6 @@
             this.bunifuButton_CDG.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton_CDG.UseDefaultRadiusAndThickness = true;
             this.bunifuButton_CDG.Click += new System.EventHandler(this.bunifuButton_CDG_Click);
-            // 
-            // bunifuTextBoxcondition
-            // 
-            this.bunifuTextBoxcondition.Location = new System.Drawing.Point(270, 77);
-            this.bunifuTextBoxcondition.Name = "bunifuTextBoxcondition";
-            this.bunifuTextBoxcondition.Size = new System.Drawing.Size(349, 85);
-            this.bunifuTextBoxcondition.TabIndex = 420;
-            this.bunifuTextBoxcondition.Text = "";
             // 
             // detail_dossier
             // 

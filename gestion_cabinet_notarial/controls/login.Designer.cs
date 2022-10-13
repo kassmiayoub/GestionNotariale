@@ -161,6 +161,7 @@
             this.bunifuButton_QUITTE.TextMarginLeft = 0;
             this.bunifuButton_QUITTE.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton_QUITTE.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton_QUITTE.Click += new System.EventHandler(this.bunifuButton_QUITTE_Click);
             // 
             // bunifuButton_LOGIN
             // 

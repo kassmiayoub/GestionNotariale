@@ -19,6 +19,7 @@ namespace gestion_cabinet_notarial
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         cls_bl_partes_S Signature = new cls_bl_partes_S();
         List<dossierSerche> Listdossier = new List<dossierSerche>();
+        DateTime dtm = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yy"));
         string contrat_or_dossier = "dossier";
         public Accueil()
         {
@@ -29,11 +30,12 @@ namespace gestion_cabinet_notarial
         {            
             if (this.Visible)
             {
+                DateTime dtm = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yy"));
                 //bunifuDataGridView_accueil.Columns.Clear();
-                label_alert.Text = (cLS_NOTE.GetAll().Where(ele => (ele.date_alere == DateTime.Now || ele.date_alere == null) && ele.utilisateur1.utilisateur1 == THEME.id_user).Count()).ToString();
+                label_alert.Text = (cLS_NOTE.GetAll().Where(ele => (ele.date_alere == dtm || ele.date_alere == null) && ele.utilisateur1.utilisateur1 == THEME.id_user).Count()).ToString();
                 label_dossiere_encours.Text = (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == null).Count()).ToString();
-                label_dossier_passer.Text= (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == DateTime.Now).Count()).ToString();
-                label_contart.Text = con.FindByValues(ele => ele.dateouverture == DateTime.Now).Count().ToString();
+                label_dossier_passer.Text= (cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == dtm).Count()).ToString();
+                label_contart.Text = con.FindByValues(ele => ele.dateouverture == dtm).Count().ToString();
                 var documents = Signature.GetAll().Where(condition => condition.DateSignatur == null).ToList();
                 label_contrat_pas_signature.Text = documents.GroupBy(x => x.idcontrat).Select(g => g.First()).Count().ToString();
                 Listdossier = cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == null).Select(ele => new dossierSerche()
@@ -57,7 +59,7 @@ namespace gestion_cabinet_notarial
             {
                 bunifuDataGridView_accueil.Columns.Remove("DETAIL");
             }
-            var a = cLS_NOTE.GetAll().Where(ele => (ele.date_alere == DateTime.Now || ele.date_alere == null) && ele.utilisateur1.utilisateur1==THEME.id_user).Select(s => new { s.Text, Creation = s.date , NomComlet = s.utilisateur1.Nom + " " + s.utilisateur1.Prenom }).ToList();
+            var a = cLS_NOTE.GetAll().Where(ele => (ele.date_alere == dtm || ele.date_alere == null) && ele.utilisateur1.utilisateur1==THEME.id_user).Select(s => new { s.Text, Creation = s.date , NomComlet = s.utilisateur1.Nom + " " + s.utilisateur1.Prenom }).ToList();
             bunifuDataGridView_accueil.DataSource = a;
         }
         private void bunifuPanel_dossiers_encour_Click(object sender, EventArgs e)
@@ -69,9 +71,9 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuPanel_dossiers_passer_Click(object sender, EventArgs e)
         {
-            //bunifuDataGridView_accueil.Columns.Clear();            
+            //bunifuDataGridView_accueil.Columns.Clear();
             var ListDataSource = new List<dossierSerche>();
-            ListDataSource = cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == DateTime.Now).Select(ele => new dossierSerche()
+            ListDataSource = cls_Bl_Dossier.GetAll().Where(cond => cond.Datefermeture == dtm).Select(ele => new dossierSerche()
             {
                 N_DOSSIER = ele.Numdossier,
                 DATE_F = ele.Datefermeture.ToString(),
@@ -86,8 +88,8 @@ namespace gestion_cabinet_notarial
         }
         private void bunifuPanel_contarts_j_Click(object sender, EventArgs e)
         {
-            //bunifuDataGridView_accueil.Columns.Clear();
-            bunifuDataGridView_accueil.DataSource = con.FindByValues(ele => ele.dateouverture== DateTime.Now).Select(ele => new contart()
+            DateTime dtm = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yy"));
+            bunifuDataGridView_accueil.DataSource = con.FindByValues(ele => ele.dateouverture== dtm).Select(ele => new contart()
             {
                 IDCONTART = ele.Idcontrat,
                 TYPECONTRAT = ele.typecontrat,

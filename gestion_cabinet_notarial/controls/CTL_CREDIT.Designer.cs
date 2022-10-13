@@ -61,11 +61,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label10.Location = new System.Drawing.Point(514, 45);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(188, 24);
+            this.label10.Size = new System.Drawing.Size(169, 23);
             this.label10.TabIndex = 439;
             this.label10.Text = "PAYEMENT CREDIT";
             // 
@@ -73,11 +73,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(643, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 24);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 452;
             this.label5.Text = "MONTANT :";
             // 
@@ -85,11 +85,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Location = new System.Drawing.Point(687, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 24);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 451;
             this.label4.Text = "DATE :";
             // 
@@ -97,11 +97,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(100, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 450;
             this.label3.Text = "BANQUE :";
             // 
@@ -109,11 +109,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(14, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 24);
+            this.label2.Size = new System.Drawing.Size(174, 23);
             this.label2.TabIndex = 449;
             this.label2.Text = "MODE PAYEMENT : ";
             // 
@@ -121,11 +121,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(115, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.Size = new System.Drawing.Size(83, 23);
             this.label1.TabIndex = 448;
             this.label1.Text = "CLIENT : ";
             // 
@@ -133,11 +133,11 @@
             // 
             this.RDVERMENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RDVERMENT.AutoSize = true;
-            this.RDVERMENT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RDVERMENT.ForeColor = System.Drawing.Color.Black;
-            this.RDVERMENT.Location = new System.Drawing.Point(456, 148);
+            this.RDVERMENT.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.RDVERMENT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RDVERMENT.Location = new System.Drawing.Point(431, 147);
             this.RDVERMENT.Name = "RDVERMENT";
-            this.RDVERMENT.Size = new System.Drawing.Size(105, 24);
+            this.RDVERMENT.Size = new System.Drawing.Size(113, 27);
             this.RDVERMENT.TabIndex = 445;
             this.RDVERMENT.TabStop = true;
             this.RDVERMENT.Text = "VERMENT";
@@ -147,11 +147,11 @@
             // 
             this.RDCHEQUE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RDCHEQUE.AutoSize = true;
-            this.RDCHEQUE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RDCHEQUE.ForeColor = System.Drawing.Color.Black;
-            this.RDCHEQUE.Location = new System.Drawing.Point(354, 148);
+            this.RDCHEQUE.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.RDCHEQUE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RDCHEQUE.Location = new System.Drawing.Point(329, 147);
             this.RDCHEQUE.Name = "RDCHEQUE";
-            this.RDCHEQUE.Size = new System.Drawing.Size(96, 24);
+            this.RDCHEQUE.Size = new System.Drawing.Size(101, 27);
             this.RDCHEQUE.TabIndex = 444;
             this.RDCHEQUE.TabStop = true;
             this.RDCHEQUE.Text = "CHEQUE";
@@ -161,11 +161,11 @@
             // 
             this.RD_ESPECES.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RD_ESPECES.AutoSize = true;
-            this.RD_ESPECES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RD_ESPECES.ForeColor = System.Drawing.Color.Black;
-            this.RD_ESPECES.Location = new System.Drawing.Point(240, 148);
+            this.RD_ESPECES.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.RD_ESPECES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RD_ESPECES.Location = new System.Drawing.Point(215, 147);
             this.RD_ESPECES.Name = "RD_ESPECES";
-            this.RD_ESPECES.Size = new System.Drawing.Size(103, 24);
+            this.RD_ESPECES.Size = new System.Drawing.Size(103, 27);
             this.RD_ESPECES.TabIndex = 443;
             this.RD_ESPECES.TabStop = true;
             this.RD_ESPECES.Text = "ESPECES";
@@ -175,7 +175,7 @@
             // comboBox_banque_PY
             // 
             this.comboBox_banque_PY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_banque_PY.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F);
+            this.comboBox_banque_PY.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBox_banque_PY.FormattingEnabled = true;
             this.comboBox_banque_PY.Location = new System.Drawing.Point(209, 185);
             this.comboBox_banque_PY.Name = "comboBox_banque_PY";
@@ -185,7 +185,7 @@
             // comboBoxCLIENT_PY
             // 
             this.comboBoxCLIENT_PY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxCLIENT_PY.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCLIENT_PY.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.comboBoxCLIENT_PY.FormattingEnabled = true;
             this.comboBoxCLIENT_PY.Location = new System.Drawing.Point(215, 100);
             this.comboBoxCLIENT_PY.Name = "comboBoxCLIENT_PY";
@@ -209,11 +209,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(594, 148);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 24);
+            this.label12.Size = new System.Drawing.Size(151, 23);
             this.label12.TabIndex = 457;
             this.label12.Text = "TYPE CONTRAT : ";
             // 
@@ -392,7 +392,7 @@
             this.ButtonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd.FlatAppearance.BorderSize = 0;
             this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -173,7 +173,7 @@
             // textBox_adress
             // 
             this.textBox_adress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_adress.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBox_adress.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBox_adress.Location = new System.Drawing.Point(861, 90);
             this.textBox_adress.Multiline = true;
             this.textBox_adress.Name = "textBox_adress";
@@ -184,11 +184,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(690, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
+            this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 481;
             this.label1.Text = "ADRESS : ";
             // 
@@ -196,18 +196,18 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(147, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 24);
+            this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 480;
             this.label8.Text = "IDCLIENT : ";
             // 
             // textBoxIDCLIENT
             // 
             this.textBoxIDCLIENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxIDCLIENT.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIDCLIENT.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxIDCLIENT.Location = new System.Drawing.Point(285, 43);
             this.textBoxIDCLIENT.Multiline = true;
             this.textBoxIDCLIENT.Name = "textBoxIDCLIENT";
@@ -301,7 +301,7 @@
             this.comboBoxtype_client.FillDropDown = true;
             this.comboBoxtype_client.FillIndicator = false;
             this.comboBoxtype_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxtype_client.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.comboBoxtype_client.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.comboBoxtype_client.ForeColor = System.Drawing.Color.Black;
             this.comboBoxtype_client.FormattingEnabled = true;
             this.comboBoxtype_client.Icon = null;
@@ -330,11 +330,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(646, 134);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 24);
+            this.label9.Size = new System.Drawing.Size(130, 23);
             this.label9.TabIndex = 475;
             this.label9.Text = "TYPE CLIENT : ";
             // 
@@ -343,18 +343,18 @@
             this.labelIF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelIF.AutoSize = true;
             this.labelIF.BackColor = System.Drawing.Color.Transparent;
-            this.labelIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIF.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.labelIF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.labelIF.Location = new System.Drawing.Point(743, 221);
             this.labelIF.Name = "labelIF";
-            this.labelIF.Size = new System.Drawing.Size(41, 24);
+            this.labelIF.Size = new System.Drawing.Size(38, 23);
             this.labelIF.TabIndex = 474;
             this.labelIF.Text = "IF : ";
             // 
             // textBoxIF
             // 
             this.textBoxIF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxIF.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxIF.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxIF.Location = new System.Drawing.Point(861, 222);
             this.textBoxIF.Multiline = true;
             this.textBoxIF.Name = "textBoxIF";
@@ -366,11 +366,11 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(576, -1);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 24);
+            this.label7.Size = new System.Drawing.Size(155, 23);
             this.label7.TabIndex = 470;
             this.label7.Text = "AJOUTER CLIENT";
             // 
@@ -381,7 +381,7 @@
             this.ButtonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonEdit.FlatAppearance.BorderSize = 0;
             this.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonEdit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonEdit.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonEdit.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +403,7 @@
             this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSearch.FlatAppearance.BorderSize = 0;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearch.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSearch.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,7 +426,7 @@
             this.ButtonInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonInit.FlatAppearance.BorderSize = 0;
             this.ButtonInit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonInit.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,7 +447,7 @@
             this.ButtonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd.FlatAppearance.BorderSize = 0;
             this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -465,7 +465,7 @@
             // textBoxtel
             // 
             this.textBoxtel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxtel.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxtel.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxtel.Location = new System.Drawing.Point(860, 50);
             this.textBoxtel.Multiline = true;
             this.textBoxtel.Name = "textBoxtel";
@@ -475,7 +475,7 @@
             // textBoxemail
             // 
             this.textBoxemail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxemail.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxemail.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxemail.Location = new System.Drawing.Point(285, 222);
             this.textBoxemail.Multiline = true;
             this.textBoxemail.Name = "textBoxemail";
@@ -485,7 +485,7 @@
             // textBox_prenom
             // 
             this.textBox_prenom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_prenom.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_prenom.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBox_prenom.Location = new System.Drawing.Point(285, 132);
             this.textBox_prenom.Multiline = true;
             this.textBox_prenom.Name = "textBox_prenom";
@@ -495,7 +495,7 @@
             // textBox_fax
             // 
             this.textBox_fax.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_fax.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_fax.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBox_fax.Location = new System.Drawing.Point(285, 177);
             this.textBox_fax.Multiline = true;
             this.textBox_fax.Name = "textBox_fax";
@@ -505,7 +505,7 @@
             // textBox_nom
             // 
             this.textBox_nom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_nom.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_nom.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBox_nom.Location = new System.Drawing.Point(285, 87);
             this.textBox_nom.Multiline = true;
             this.textBox_nom.Name = "textBox_nom";
@@ -516,11 +516,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(731, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 24);
+            this.label6.Size = new System.Drawing.Size(54, 23);
             this.label6.TabIndex = 460;
             this.label6.Text = "TEL : ";
             // 
@@ -528,11 +528,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(172, 231);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 24);
+            this.label5.Size = new System.Drawing.Size(73, 23);
             this.label5.TabIndex = 459;
             this.label5.Text = "EMAIL :";
             // 
@@ -540,11 +540,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Location = new System.Drawing.Point(187, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 24);
+            this.label4.Size = new System.Drawing.Size(56, 23);
             this.label4.TabIndex = 458;
             this.label4.Text = "FAX : ";
             // 
@@ -552,11 +552,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(147, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 24);
+            this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 457;
             this.label3.Text = "PRENOM : ";
             // 
@@ -564,11 +564,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(185, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 24);
+            this.label2.Size = new System.Drawing.Size(66, 23);
             this.label2.TabIndex = 456;
             this.label2.Text = "NOM : ";
             // 
@@ -577,18 +577,18 @@
             this.labelCIN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelCIN.AutoSize = true;
             this.labelCIN.BackColor = System.Drawing.Color.Transparent;
-            this.labelCIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCIN.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.labelCIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.labelCIN.Location = new System.Drawing.Point(732, 179);
             this.labelCIN.Name = "labelCIN";
-            this.labelCIN.Size = new System.Drawing.Size(55, 24);
+            this.labelCIN.Size = new System.Drawing.Size(50, 23);
             this.labelCIN.TabIndex = 455;
             this.labelCIN.Text = "CIE : ";
             // 
             // textBoxCIN
             // 
             this.textBoxCIN.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxCIN.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.textBoxCIN.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.textBoxCIN.Location = new System.Drawing.Point(860, 180);
             this.textBoxCIN.Multiline = true;
             this.textBoxCIN.Name = "textBoxCIN";
@@ -925,7 +925,7 @@
             this.AJOUTER_FICHIERS.DisabledFillColor = System.Drawing.Color.Empty;
             this.AJOUTER_FICHIERS.DisabledForecolor = System.Drawing.Color.Empty;
             this.AJOUTER_FICHIERS.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.AJOUTER_FICHIERS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AJOUTER_FICHIERS.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.AJOUTER_FICHIERS.ForeColor = System.Drawing.Color.White;
             this.AJOUTER_FICHIERS.IconLeft = null;
             this.AJOUTER_FICHIERS.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -945,7 +945,7 @@
             this.AJOUTER_FICHIERS.IdleIconLeftImage = null;
             this.AJOUTER_FICHIERS.IdleIconRightImage = null;
             this.AJOUTER_FICHIERS.IndicateFocus = false;
-            this.AJOUTER_FICHIERS.Location = new System.Drawing.Point(531, 3);
+            this.AJOUTER_FICHIERS.Location = new System.Drawing.Point(510, 3);
             this.AJOUTER_FICHIERS.Name = "AJOUTER_FICHIERS";
             this.AJOUTER_FICHIERS.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AJOUTER_FICHIERS.OnDisabledState.BorderRadius = 1;
@@ -979,7 +979,7 @@
             this.AJOUTER_FICHIERS.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.AJOUTER_FICHIERS.OnPressedState.IconLeftImage = null;
             this.AJOUTER_FICHIERS.OnPressedState.IconRightImage = null;
-            this.AJOUTER_FICHIERS.Size = new System.Drawing.Size(150, 39);
+            this.AJOUTER_FICHIERS.Size = new System.Drawing.Size(180, 39);
             this.AJOUTER_FICHIERS.TabIndex = 4;
             this.AJOUTER_FICHIERS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AJOUTER_FICHIERS.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1018,7 +1018,7 @@
             this.AJOUTER_CLIENT.DisabledFillColor = System.Drawing.Color.Empty;
             this.AJOUTER_CLIENT.DisabledForecolor = System.Drawing.Color.Empty;
             this.AJOUTER_CLIENT.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.AJOUTER_CLIENT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AJOUTER_CLIENT.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.AJOUTER_CLIENT.ForeColor = System.Drawing.Color.White;
             this.AJOUTER_CLIENT.IconLeft = null;
             this.AJOUTER_CLIENT.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1038,7 +1038,7 @@
             this.AJOUTER_CLIENT.IdleIconLeftImage = null;
             this.AJOUTER_CLIENT.IdleIconRightImage = null;
             this.AJOUTER_CLIENT.IndicateFocus = false;
-            this.AJOUTER_CLIENT.Location = new System.Drawing.Point(380, 3);
+            this.AJOUTER_CLIENT.Location = new System.Drawing.Point(334, 3);
             this.AJOUTER_CLIENT.Name = "AJOUTER_CLIENT";
             this.AJOUTER_CLIENT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AJOUTER_CLIENT.OnDisabledState.BorderRadius = 1;
@@ -1072,7 +1072,7 @@
             this.AJOUTER_CLIENT.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.AJOUTER_CLIENT.OnPressedState.IconLeftImage = null;
             this.AJOUTER_CLIENT.OnPressedState.IconRightImage = null;
-            this.AJOUTER_CLIENT.Size = new System.Drawing.Size(150, 39);
+            this.AJOUTER_CLIENT.Size = new System.Drawing.Size(174, 39);
             this.AJOUTER_CLIENT.TabIndex = 3;
             this.AJOUTER_CLIENT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AJOUTER_CLIENT.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1111,7 +1111,7 @@
             this.bunifuButton_dossier.DisabledFillColor = System.Drawing.Color.Empty;
             this.bunifuButton_dossier.DisabledForecolor = System.Drawing.Color.Empty;
             this.bunifuButton_dossier.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton_dossier.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuButton_dossier.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuButton_dossier.ForeColor = System.Drawing.Color.White;
             this.bunifuButton_dossier.IconLeft = null;
             this.bunifuButton_dossier.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1131,7 +1131,7 @@
             this.bunifuButton_dossier.IdleIconLeftImage = null;
             this.bunifuButton_dossier.IdleIconRightImage = null;
             this.bunifuButton_dossier.IndicateFocus = false;
-            this.bunifuButton_dossier.Location = new System.Drawing.Point(682, 3);
+            this.bunifuButton_dossier.Location = new System.Drawing.Point(692, 3);
             this.bunifuButton_dossier.Name = "bunifuButton_dossier";
             this.bunifuButton_dossier.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton_dossier.OnDisabledState.BorderRadius = 1;
@@ -1165,7 +1165,7 @@
             this.bunifuButton_dossier.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton_dossier.OnPressedState.IconLeftImage = null;
             this.bunifuButton_dossier.OnPressedState.IconRightImage = null;
-            this.bunifuButton_dossier.Size = new System.Drawing.Size(150, 39);
+            this.bunifuButton_dossier.Size = new System.Drawing.Size(162, 39);
             this.bunifuButton_dossier.TabIndex = 5;
             this.bunifuButton_dossier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton_dossier.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

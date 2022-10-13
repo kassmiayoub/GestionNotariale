@@ -110,10 +110,10 @@
             // 
             this.checkBox_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_filter.AutoSize = true;
-            this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.checkBox_filter.Location = new System.Drawing.Point(571, 50);
             this.checkBox_filter.Name = "checkBox_filter";
-            this.checkBox_filter.Size = new System.Drawing.Size(160, 26);
+            this.checkBox_filter.Size = new System.Drawing.Size(196, 27);
             this.checkBox_filter.TabIndex = 489;
             this.checkBox_filter.Text = "FILTRAGE PAR DATE";
             this.checkBox_filter.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             this.ButtonSearch_operation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSearch_operation.FlatAppearance.BorderSize = 0;
             this.ButtonSearch_operation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearch_operation.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSearch_operation.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSearch_operation.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch_operation.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch_operation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +156,7 @@
             this.bunifuDatePicker_F.DPHeight = 0;
             this.bunifuDatePicker_F.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_F.FillDatePicker = false;
-            this.bunifuDatePicker_F.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_F.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_F.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_F.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_F.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_F.Icon")));
@@ -183,7 +183,7 @@
             this.bunifuDatePicker_D.DPHeight = 0;
             this.bunifuDatePicker_D.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bunifuDatePicker_D.FillDatePicker = false;
-            this.bunifuDatePicker_D.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker_D.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDatePicker_D.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatePicker_D.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatePicker_D.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker_D.Icon")));
@@ -217,7 +217,7 @@
             this.bunifuDropdown_users.FillDropDown = true;
             this.bunifuDropdown_users.FillIndicator = false;
             this.bunifuDropdown_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown_users.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown_users.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_users.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdown_users.FormattingEnabled = true;
             this.bunifuDropdown_users.Icon = null;
@@ -246,6 +246,7 @@
             this.panel_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel_filter.Controls.Add(this.bunifuDatePicker_D);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_F);
+            this.panel_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.panel_filter.Location = new System.Drawing.Point(531, 84);
             this.panel_filter.Name = "panel_filter";
             this.panel_filter.Size = new System.Drawing.Size(228, 126);
@@ -258,7 +259,7 @@
             this.button_detail_dossier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_detail_dossier.FlatAppearance.BorderSize = 0;
             this.button_detail_dossier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_detail_dossier.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_detail_dossier.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
             this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_detail_dossier.Location = new System.Drawing.Point(109, 175);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -44,12 +45,19 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel_check_box = new System.Windows.Forms.Panel();
+            this.bunifuCheckBox_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.bunifuSeparator10 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.label48 = new System.Windows.Forms.Label();
+            this.bunifuCheckBox_LIST_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.bunifuCheckBox_AJOUTER_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuCheckBox_COMPTE = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuCheckBox_modifier_info_cabinet = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -148,14 +156,6 @@
             this.bunifuTextBox_USER = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox_NOM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonInit = new System.Windows.Forms.Button();
-            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label38 = new System.Windows.Forms.Label();
-            this.bunifuCheckBox_AJOUTER_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.bunifuCheckBox_LIST_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.bunifuSeparator10 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuCheckBox_CDG = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.label49 = new System.Windows.Forms.Label();
             this.panel_check_box.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,11 +163,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(72, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 4;
             this.label1.Text = "NOM : ";
             // 
@@ -175,11 +175,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(504, 86);
+            this.label2.Location = new System.Drawing.Point(488, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "PRENOM :";
             // 
@@ -187,11 +187,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(7, 158);
+            this.label3.Location = new System.Drawing.Point(3, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.Size = new System.Drawing.Size(129, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "UTILISATUER :";
             // 
@@ -199,11 +199,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(437, 158);
+            this.label4.Location = new System.Drawing.Point(421, 155);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 20);
+            this.label4.Size = new System.Drawing.Size(162, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "MODE DE PASSE : ";
             // 
@@ -310,11 +310,250 @@
             this.panel_check_box.Controls.Add(this.bunifuSeparator4);
             this.panel_check_box.Controls.Add(this.bunifuSeparator3);
             this.panel_check_box.Controls.Add(this.bunifuSeparator1);
+            this.panel_check_box.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.panel_check_box.Location = new System.Drawing.Point(5, 260);
             this.panel_check_box.Name = "panel_check_box";
             this.panel_check_box.Size = new System.Drawing.Size(858, 592);
             this.panel_check_box.TabIndex = 405;
             this.panel_check_box.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_check_box_Paint);
+            // 
+            // bunifuCheckBox_CDG
+            // 
+            this.bunifuCheckBox_CDG.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox_CDG.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox_CDG.AllowBindingControlLocation = true;
+            this.bunifuCheckBox_CDG.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox_CDG.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox_CDG.AllowOnHoverStates = true;
+            this.bunifuCheckBox_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_CDG.AutoCheck = true;
+            this.bunifuCheckBox_CDG.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_CDG.BackgroundImage")));
+            this.bunifuCheckBox_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox_CDG.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.Checked = true;
+            this.bunifuCheckBox_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox_CDG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox_CDG.CustomCheckmarkImage = null;
+            this.bunifuCheckBox_CDG.Location = new System.Drawing.Point(678, 499);
+            this.bunifuCheckBox_CDG.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox_CDG.Name = "bunifuCheckBox_CDG";
+            this.bunifuCheckBox_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_CDG.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_CDG.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_CDG.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_CDG.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_CDG.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_CDG.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox_CDG.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox_CDG.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_CDG.Size = new System.Drawing.Size(21, 21);
+            this.bunifuCheckBox_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox_CDG.TabIndex = 516;
+            this.bunifuCheckBox_CDG.Tag = "CDG";
+            this.bunifuCheckBox_CDG.ThreeState = false;
+            this.bunifuCheckBox_CDG.ToolTipText = null;
+            this.bunifuCheckBox_CDG.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBox_CDG_CheckedChanged);
+            // 
+            // label49
+            // 
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label49.Location = new System.Drawing.Point(603, 500);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(38, 19);
+            this.label49.TabIndex = 515;
+            this.label49.Text = "CDG";
+            // 
+            // bunifuSeparator10
+            // 
+            this.bunifuSeparator10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator10.BackgroundImage")));
+            this.bunifuSeparator10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator10.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator10.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.bunifuSeparator10.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator10.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator10.LineThickness = 1;
+            this.bunifuSeparator10.Location = new System.Drawing.Point(511, 517);
+            this.bunifuSeparator10.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuSeparator10.Name = "bunifuSeparator10";
+            this.bunifuSeparator10.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator10.Size = new System.Drawing.Size(344, 12);
+            this.bunifuSeparator10.TabIndex = 514;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label48.Location = new System.Drawing.Point(530, 534);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(161, 19);
+            this.label48.TabIndex = 513;
+            this.label48.Text = "AFFICHIER LA LIST CDG";
+            // 
+            // bunifuCheckBox_LIST_CDG
+            // 
+            this.bunifuCheckBox_LIST_CDG.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox_LIST_CDG.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox_LIST_CDG.AllowBindingControlLocation = true;
+            this.bunifuCheckBox_LIST_CDG.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox_LIST_CDG.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox_LIST_CDG.AllowOnHoverStates = true;
+            this.bunifuCheckBox_LIST_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_LIST_CDG.AutoCheck = true;
+            this.bunifuCheckBox_LIST_CDG.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_LIST_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_LIST_CDG.BackgroundImage")));
+            this.bunifuCheckBox_LIST_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox_LIST_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox_LIST_CDG.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.Checked = true;
+            this.bunifuCheckBox_LIST_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox_LIST_CDG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox_LIST_CDG.CustomCheckmarkImage = null;
+            this.bunifuCheckBox_LIST_CDG.Location = new System.Drawing.Point(780, 530);
+            this.bunifuCheckBox_LIST_CDG.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox_LIST_CDG.Name = "bunifuCheckBox_LIST_CDG";
+            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox_LIST_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_LIST_CDG.Size = new System.Drawing.Size(21, 21);
+            this.bunifuCheckBox_LIST_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox_LIST_CDG.TabIndex = 512;
+            this.bunifuCheckBox_LIST_CDG.Tag = "AFFICHIER LA LIST CDG";
+            this.bunifuCheckBox_LIST_CDG.ThreeState = false;
+            this.bunifuCheckBox_LIST_CDG.ToolTipText = null;
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label38.Location = new System.Drawing.Point(524, 565);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(216, 19);
+            this.label38.TabIndex = 511;
+            this.label38.Text = "AJOUTER MONTANT DANS CDG";
+            // 
+            // bunifuCheckBox_AJOUTER_CDG
+            // 
+            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlLocation = true;
+            this.bunifuCheckBox_AJOUTER_CDG.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox_AJOUTER_CDG.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox_AJOUTER_CDG.AllowOnHoverStates = true;
+            this.bunifuCheckBox_AJOUTER_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_AJOUTER_CDG.AutoCheck = true;
+            this.bunifuCheckBox_AJOUTER_CDG.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_AJOUTER_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_AJOUTER_CDG.BackgroundImage")));
+            this.bunifuCheckBox_AJOUTER_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox_AJOUTER_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox_AJOUTER_CDG.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.Checked = true;
+            this.bunifuCheckBox_AJOUTER_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox_AJOUTER_CDG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox_AJOUTER_CDG.CustomCheckmarkImage = null;
+            this.bunifuCheckBox_AJOUTER_CDG.Location = new System.Drawing.Point(780, 566);
+            this.bunifuCheckBox_AJOUTER_CDG.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox_AJOUTER_CDG.Name = "bunifuCheckBox_AJOUTER_CDG";
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox_AJOUTER_CDG.Size = new System.Drawing.Size(21, 21);
+            this.bunifuCheckBox_AJOUTER_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox_AJOUTER_CDG.TabIndex = 510;
+            this.bunifuCheckBox_AJOUTER_CDG.Tag = "AJOUTER MONTANT DANS CDG";
+            this.bunifuCheckBox_AJOUTER_CDG.ThreeState = false;
+            this.bunifuCheckBox_AJOUTER_CDG.ToolTipText = null;
+            // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
+            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator6.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(514, 483);
+            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator6.Size = new System.Drawing.Size(344, 12);
+            this.bunifuSeparator6.TabIndex = 509;
             // 
             // bunifuCheckBox_COMPTE
             // 
@@ -375,11 +614,11 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label20.Location = new System.Drawing.Point(190, 457);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(135, 17);
+            this.label20.Size = new System.Drawing.Size(135, 19);
             this.label20.TabIndex = 507;
             this.label20.Text = "MODIFIER COMPTE";
             // 
@@ -442,11 +681,11 @@
             // 
             this.label47.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label47.Location = new System.Drawing.Point(190, 563);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(268, 17);
+            this.label47.Size = new System.Drawing.Size(268, 19);
             this.label47.TabIndex = 505;
             this.label47.Text = "MODIFIER INFORMMATION DE CABINET";
             // 
@@ -509,11 +748,11 @@
             // 
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label46.Location = new System.Drawing.Point(190, 534);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(199, 17);
+            this.label46.Size = new System.Drawing.Size(199, 19);
             this.label46.TabIndex = 503;
             this.label46.Text = "INFORMMATION DE CABINET";
             // 
@@ -521,11 +760,11 @@
             // 
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label45.Location = new System.Drawing.Point(521, 461);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(186, 17);
+            this.label45.Size = new System.Drawing.Size(180, 19);
             this.label45.TabIndex = 502;
             this.label45.Text = "AFFICHIER LES PAYEMENT";
             // 
@@ -588,11 +827,11 @@
             // 
             this.label44.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label44.Location = new System.Drawing.Point(524, 370);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(171, 17);
+            this.label44.Size = new System.Drawing.Size(165, 19);
             this.label44.TabIndex = 500;
             this.label44.Text = "AFFICHIER LES CRRDITS";
             // 
@@ -655,11 +894,11 @@
             // 
             this.label43.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label43.Location = new System.Drawing.Point(521, 402);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(199, 17);
+            this.label43.Size = new System.Drawing.Size(194, 19);
             this.label43.TabIndex = 498;
             this.label43.Text = "AJOUTER NOUVEAU CREDIT";
             // 
@@ -722,11 +961,11 @@
             // 
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label42.Location = new System.Drawing.Point(521, 433);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(137, 17);
+            this.label42.Size = new System.Drawing.Size(132, 19);
             this.label42.TabIndex = 496;
             this.label42.Text = "PAYEMENT CREDIT";
             // 
@@ -845,11 +1084,11 @@
             // 
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label41.Location = new System.Drawing.Point(590, 327);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(69, 20);
+            this.label41.Size = new System.Drawing.Size(57, 19);
             this.label41.TabIndex = 493;
             this.label41.Text = "CREDIT";
             // 
@@ -930,11 +1169,11 @@
             // 
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label40.Location = new System.Drawing.Point(353, 159);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(200, 17);
+            this.label40.Size = new System.Drawing.Size(194, 19);
             this.label40.TabIndex = 490;
             this.label40.Text = "AJOUTER FICHIER CONTRAT";
             // 
@@ -997,11 +1236,11 @@
             // 
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label39.Location = new System.Drawing.Point(15, 218);
+            this.label39.Location = new System.Drawing.Point(18, 216);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(194, 17);
+            this.label39.Size = new System.Drawing.Size(188, 19);
             this.label39.TabIndex = 488;
             this.label39.Text = "AJOUTER FICHIER DOSSIER";
             // 
@@ -1009,11 +1248,11 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label23.Location = new System.Drawing.Point(37, 183);
+            this.label23.Location = new System.Drawing.Point(21, 186);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(172, 17);
+            this.label23.Size = new System.Drawing.Size(168, 19);
             this.label23.TabIndex = 487;
             this.label23.Text = "AFFICHIER LES FICHIERS";
             // 
@@ -1021,11 +1260,11 @@
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label37.Location = new System.Drawing.Point(352, 186);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(172, 17);
+            this.label37.Size = new System.Drawing.Size(168, 19);
             this.label37.TabIndex = 482;
             this.label37.Text = "AFFICHIER LES FICHIERS";
             // 
@@ -1036,7 +1275,7 @@
             this.bunifuSeparator9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator9.BackgroundImage")));
             this.bunifuSeparator9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator9.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSeparator9.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.bunifuSeparator9.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator9.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator9.LineThickness = 1;
@@ -1125,11 +1364,11 @@
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label35.Location = new System.Drawing.Point(646, 211);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(130, 17);
+            this.label35.Size = new System.Drawing.Size(124, 19);
             this.label35.TabIndex = 478;
             this.label35.Text = "DETAILS DOSSIER";
             // 
@@ -1192,11 +1431,11 @@
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label36.Location = new System.Drawing.Point(646, 183);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(178, 17);
+            this.label36.Size = new System.Drawing.Size(172, 19);
             this.label36.TabIndex = 476;
             this.label36.Text = "AJOUTER FICHIER CLENT";
             // 
@@ -1277,11 +1516,11 @@
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label34.Location = new System.Drawing.Point(15, 487);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(72, 17);
+            this.label34.Size = new System.Drawing.Size(71, 19);
             this.label34.TabIndex = 473;
             this.label34.Text = "ABCENSE";
             // 
@@ -1344,11 +1583,11 @@
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label33.Location = new System.Drawing.Point(190, 509);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(130, 17);
+            this.label33.Size = new System.Drawing.Size(125, 19);
             this.label33.TabIndex = 471;
             this.label33.Text = "BASE DE DONNEE";
             // 
@@ -1411,11 +1650,11 @@
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label32.Location = new System.Drawing.Point(190, 481);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(122, 17);
+            this.label32.Size = new System.Drawing.Size(118, 19);
             this.label32.TabIndex = 469;
             this.label32.Text = "LIST OPERATION";
             // 
@@ -1478,11 +1717,11 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label16.Location = new System.Drawing.Point(190, 429);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(166, 17);
+            this.label16.Size = new System.Drawing.Size(163, 19);
             this.label16.TabIndex = 467;
             this.label16.Text = "MODIFIER UTILISATUER";
             // 
@@ -1545,11 +1784,11 @@
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label30.Location = new System.Drawing.Point(190, 398);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(130, 17);
+            this.label30.Size = new System.Drawing.Size(124, 19);
             this.label30.TabIndex = 465;
             this.label30.Text = "LIST UTILISATUER";
             // 
@@ -1612,11 +1851,11 @@
             // 
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label31.Location = new System.Drawing.Point(190, 370);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(166, 17);
+            this.label31.Size = new System.Drawing.Size(160, 19);
             this.label31.TabIndex = 463;
             this.label31.Text = "AJOUTER UTILISATUER";
             // 
@@ -1679,11 +1918,11 @@
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label28.Location = new System.Drawing.Point(139, 290);
+            this.label28.Location = new System.Drawing.Point(21, 287);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 17);
+            this.label28.Size = new System.Drawing.Size(60, 19);
             this.label28.TabIndex = 461;
             this.label28.Text = "PARTES";
             // 
@@ -1746,11 +1985,11 @@
             // 
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label29.Location = new System.Drawing.Point(125, 259);
+            this.label29.Location = new System.Drawing.Point(21, 255);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(84, 17);
+            this.label29.Size = new System.Drawing.Size(81, 19);
             this.label29.TabIndex = 459;
             this.label29.Text = "CONTARTS";
             // 
@@ -1813,11 +2052,11 @@
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label27.Location = new System.Drawing.Point(646, 157);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(172, 17);
+            this.label27.Size = new System.Drawing.Size(166, 19);
             this.label27.TabIndex = 457;
             this.label27.Text = "AFFICHIER LES DOSSIER";
             // 
@@ -1880,11 +2119,11 @@
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label26.Location = new System.Drawing.Point(646, 130);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(172, 17);
+            this.label26.Size = new System.Drawing.Size(168, 19);
             this.label26.TabIndex = 455;
             this.label26.Text = "AFFICHIER LES FICHIERS";
             // 
@@ -2002,11 +2241,11 @@
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label24.Location = new System.Drawing.Point(352, 240);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 17);
+            this.label24.Size = new System.Drawing.Size(74, 19);
             this.label24.TabIndex = 451;
             this.label24.Text = "STATISTIC";
             // 
@@ -2069,11 +2308,11 @@
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label25.Location = new System.Drawing.Point(351, 213);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(88, 17);
+            this.label25.Size = new System.Drawing.Size(85, 19);
             this.label25.TabIndex = 449;
             this.label25.Text = "SIGNATURE";
             // 
@@ -2136,11 +2375,11 @@
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label22.Location = new System.Drawing.Point(146, 156);
+            this.label22.Location = new System.Drawing.Point(21, 159);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 17);
+            this.label22.Size = new System.Drawing.Size(55, 19);
             this.label22.TabIndex = 447;
             this.label22.Text = "DETAIL";
             // 
@@ -2258,11 +2497,11 @@
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label21.Location = new System.Drawing.Point(353, 128);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 17);
+            this.label21.Size = new System.Drawing.Size(77, 19);
             this.label21.TabIndex = 443;
             this.label21.Text = "PAIEMENT";
             // 
@@ -2325,11 +2564,11 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label19.Location = new System.Drawing.Point(646, 103);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 17);
+            this.label19.Size = new System.Drawing.Size(75, 19);
             this.label19.TabIndex = 441;
             this.label19.Text = "MODIFIER";
             // 
@@ -2392,11 +2631,11 @@
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label18.Location = new System.Drawing.Point(146, 125);
+            this.label18.Location = new System.Drawing.Point(18, 121);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 17);
+            this.label18.Size = new System.Drawing.Size(75, 19);
             this.label18.TabIndex = 439;
             this.label18.Text = "MODIFIER";
             // 
@@ -2459,11 +2698,11 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label17.Location = new System.Drawing.Point(357, 97);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 17);
+            this.label17.Size = new System.Drawing.Size(55, 19);
             this.label17.TabIndex = 437;
             this.label17.Text = "DETAIL";
             // 
@@ -2526,11 +2765,11 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label15.Location = new System.Drawing.Point(15, 456);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 17);
+            this.label15.Size = new System.Drawing.Size(78, 19);
             this.label15.TabIndex = 435;
             this.label15.Text = "SUPRIMER";
             // 
@@ -2593,11 +2832,11 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label14.Location = new System.Drawing.Point(15, 425);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 17);
+            this.label14.Size = new System.Drawing.Size(60, 19);
             this.label14.TabIndex = 433;
             this.label14.Text = "PASSER";
             // 
@@ -2660,11 +2899,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label13.Location = new System.Drawing.Point(15, 397);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 17);
+            this.label13.Size = new System.Drawing.Size(72, 19);
             this.label13.TabIndex = 431;
             this.label13.Text = "AJOUTER";
             // 
@@ -2727,11 +2966,11 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(646, 70);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 17);
+            this.label12.Size = new System.Drawing.Size(72, 19);
             this.label12.TabIndex = 429;
             this.label12.Text = "AJOUTER";
             // 
@@ -2794,11 +3033,11 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(357, 68);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 17);
+            this.label11.Size = new System.Drawing.Size(72, 19);
             this.label11.TabIndex = 427;
             this.label11.Text = "AJOUTER";
             // 
@@ -2861,11 +3100,11 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(146, 96);
+            this.label10.Location = new System.Drawing.Point(21, 93);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 17);
+            this.label10.Size = new System.Drawing.Size(72, 19);
             this.label10.TabIndex = 425;
             this.label10.Text = "AJOUTER";
             // 
@@ -3153,11 +3392,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(220, 323);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.Size = new System.Drawing.Size(91, 19);
             this.label9.TabIndex = 419;
             this.label9.Text = "PARAMETER";
             // 
@@ -3165,11 +3404,11 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(14, 327);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 20);
+            this.label8.Size = new System.Drawing.Size(103, 19);
             this.label8.TabIndex = 418;
             this.label8.Text = "RENDEZ-VOUS";
             // 
@@ -3177,11 +3416,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(686, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(55, 19);
             this.label7.TabIndex = 417;
             this.label7.Text = "CLIENT";
             // 
@@ -3189,11 +3428,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(416, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 416;
             this.label6.Text = "CONTART";
             // 
@@ -3201,11 +3440,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(122, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 415;
             this.label5.Text = "DOSSIER";
             // 
@@ -3216,7 +3455,7 @@
             this.bunifuSeparator7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator7.BackgroundImage")));
             this.bunifuSeparator7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator7.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSeparator7.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.bunifuSeparator7.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator7.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator7.LineThickness = 1;
@@ -3288,7 +3527,7 @@
             this.ButtonAdd_utilisatuer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_utilisatuer.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_utilisatuer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_utilisatuer.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_utilisatuer.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_utilisatuer.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_utilisatuer.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_utilisatuer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3484,7 +3723,7 @@
             this.bunifuTextBox_USER.IconRight = null;
             this.bunifuTextBox_USER.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_USER.Lines = new string[0];
-            this.bunifuTextBox_USER.Location = new System.Drawing.Point(135, 139);
+            this.bunifuTextBox_USER.Location = new System.Drawing.Point(148, 139);
             this.bunifuTextBox_USER.MaxLength = 32767;
             this.bunifuTextBox_USER.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_USER.Modified = false;
@@ -3560,7 +3799,7 @@
             this.bunifuTextBox_NOM.IconRight = null;
             this.bunifuTextBox_NOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_NOM.Lines = new string[0];
-            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(135, 67);
+            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(148, 67);
             this.bunifuTextBox_NOM.MaxLength = 32767;
             this.bunifuTextBox_NOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_NOM.Modified = false;
@@ -3614,7 +3853,7 @@
             this.ButtonInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonInit.FlatAppearance.BorderSize = 0;
             this.ButtonInit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonInit.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3627,244 +3866,6 @@
             this.ButtonInit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonInit.UseVisualStyleBackColor = false;
             this.ButtonInit.Click += new System.EventHandler(this.ButtonInit_Click);
-            // 
-            // bunifuSeparator6
-            // 
-            this.bunifuSeparator6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
-            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(514, 483);
-            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator6.Size = new System.Drawing.Size(344, 12);
-            this.bunifuSeparator6.TabIndex = 509;
-            // 
-            // label38
-            // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label38.Location = new System.Drawing.Point(524, 565);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(222, 17);
-            this.label38.TabIndex = 511;
-            this.label38.Text = "AJOUTER MONTANT DANS CDG";
-            // 
-            // bunifuCheckBox_AJOUTER_CDG
-            // 
-            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlAnimation = true;
-            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlColorChanges = false;
-            this.bunifuCheckBox_AJOUTER_CDG.AllowBindingControlLocation = true;
-            this.bunifuCheckBox_AJOUTER_CDG.AllowCheckBoxAnimation = false;
-            this.bunifuCheckBox_AJOUTER_CDG.AllowCheckmarkAnimation = true;
-            this.bunifuCheckBox_AJOUTER_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_AJOUTER_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuCheckBox_AJOUTER_CDG.AutoCheck = true;
-            this.bunifuCheckBox_AJOUTER_CDG.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_AJOUTER_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_AJOUTER_CDG.BackgroundImage")));
-            this.bunifuCheckBox_AJOUTER_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuCheckBox_AJOUTER_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.bunifuCheckBox_AJOUTER_CDG.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.Checked = true;
-            this.bunifuCheckBox_AJOUTER_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.bunifuCheckBox_AJOUTER_CDG.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuCheckBox_AJOUTER_CDG.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_AJOUTER_CDG.Location = new System.Drawing.Point(780, 566);
-            this.bunifuCheckBox_AJOUTER_CDG.MinimumSize = new System.Drawing.Size(17, 17);
-            this.bunifuCheckBox_AJOUTER_CDG.Name = "bunifuCheckBox_AJOUTER_CDG";
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.BorderThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_AJOUTER_CDG.OnCheck.CheckmarkThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.BorderThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_AJOUTER_CDG.OnDisable.CheckmarkThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.BorderThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverChecked.CheckmarkThickness = 2;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.BorderThickness = 1;
-            this.bunifuCheckBox_AJOUTER_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderRadius = 12;
-            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.BorderThickness = 1;
-            this.bunifuCheckBox_AJOUTER_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_AJOUTER_CDG.Size = new System.Drawing.Size(21, 21);
-            this.bunifuCheckBox_AJOUTER_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.bunifuCheckBox_AJOUTER_CDG.TabIndex = 510;
-            this.bunifuCheckBox_AJOUTER_CDG.Tag = "AJOUTER MONTANT DANS CDG";
-            this.bunifuCheckBox_AJOUTER_CDG.ThreeState = false;
-            this.bunifuCheckBox_AJOUTER_CDG.ToolTipText = null;
-            // 
-            // label48
-            // 
-            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label48.Location = new System.Drawing.Point(530, 534);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(165, 17);
-            this.label48.TabIndex = 513;
-            this.label48.Text = "AFFICHIER LA LIST CDG";
-            // 
-            // bunifuCheckBox_LIST_CDG
-            // 
-            this.bunifuCheckBox_LIST_CDG.AllowBindingControlAnimation = true;
-            this.bunifuCheckBox_LIST_CDG.AllowBindingControlColorChanges = false;
-            this.bunifuCheckBox_LIST_CDG.AllowBindingControlLocation = true;
-            this.bunifuCheckBox_LIST_CDG.AllowCheckBoxAnimation = false;
-            this.bunifuCheckBox_LIST_CDG.AllowCheckmarkAnimation = true;
-            this.bunifuCheckBox_LIST_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_LIST_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuCheckBox_LIST_CDG.AutoCheck = true;
-            this.bunifuCheckBox_LIST_CDG.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_LIST_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_LIST_CDG.BackgroundImage")));
-            this.bunifuCheckBox_LIST_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuCheckBox_LIST_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.bunifuCheckBox_LIST_CDG.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.Checked = true;
-            this.bunifuCheckBox_LIST_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.bunifuCheckBox_LIST_CDG.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuCheckBox_LIST_CDG.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_LIST_CDG.Location = new System.Drawing.Point(780, 530);
-            this.bunifuCheckBox_LIST_CDG.MinimumSize = new System.Drawing.Size(17, 17);
-            this.bunifuCheckBox_LIST_CDG.Name = "bunifuCheckBox_LIST_CDG";
-            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.OnCheck.BorderThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_LIST_CDG.OnCheck.CheckmarkThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.BorderThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_LIST_CDG.OnDisable.CheckmarkThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.BorderThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_LIST_CDG.OnHoverChecked.CheckmarkThickness = 2;
-            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.BorderThickness = 1;
-            this.bunifuCheckBox_LIST_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderRadius = 12;
-            this.bunifuCheckBox_LIST_CDG.OnUncheck.BorderThickness = 1;
-            this.bunifuCheckBox_LIST_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_LIST_CDG.Size = new System.Drawing.Size(21, 21);
-            this.bunifuCheckBox_LIST_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.bunifuCheckBox_LIST_CDG.TabIndex = 512;
-            this.bunifuCheckBox_LIST_CDG.Tag = "AFFICHIER LA LIST CDG";
-            this.bunifuCheckBox_LIST_CDG.ThreeState = false;
-            this.bunifuCheckBox_LIST_CDG.ToolTipText = null;
-            // 
-            // bunifuSeparator10
-            // 
-            this.bunifuSeparator10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator10.BackgroundImage")));
-            this.bunifuSeparator10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator10.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuSeparator10.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator10.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator10.LineThickness = 1;
-            this.bunifuSeparator10.Location = new System.Drawing.Point(511, 517);
-            this.bunifuSeparator10.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuSeparator10.Name = "bunifuSeparator10";
-            this.bunifuSeparator10.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator10.Size = new System.Drawing.Size(344, 12);
-            this.bunifuSeparator10.TabIndex = 514;
-            // 
-            // bunifuCheckBox_CDG
-            // 
-            this.bunifuCheckBox_CDG.AllowBindingControlAnimation = true;
-            this.bunifuCheckBox_CDG.AllowBindingControlColorChanges = false;
-            this.bunifuCheckBox_CDG.AllowBindingControlLocation = true;
-            this.bunifuCheckBox_CDG.AllowCheckBoxAnimation = false;
-            this.bunifuCheckBox_CDG.AllowCheckmarkAnimation = true;
-            this.bunifuCheckBox_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuCheckBox_CDG.AutoCheck = true;
-            this.bunifuCheckBox_CDG.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_CDG.BackgroundImage")));
-            this.bunifuCheckBox_CDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuCheckBox_CDG.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.bunifuCheckBox_CDG.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.Checked = true;
-            this.bunifuCheckBox_CDG.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.bunifuCheckBox_CDG.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuCheckBox_CDG.CustomCheckmarkImage = null;
-            this.bunifuCheckBox_CDG.Location = new System.Drawing.Point(678, 499);
-            this.bunifuCheckBox_CDG.MinimumSize = new System.Drawing.Size(17, 17);
-            this.bunifuCheckBox_CDG.Name = "bunifuCheckBox_CDG";
-            this.bunifuCheckBox_CDG.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_CDG.OnCheck.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.OnCheck.BorderThickness = 2;
-            this.bunifuCheckBox_CDG.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuCheckBox_CDG.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_CDG.OnCheck.CheckmarkThickness = 2;
-            this.bunifuCheckBox_CDG.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_CDG.OnDisable.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.OnDisable.BorderThickness = 2;
-            this.bunifuCheckBox_CDG.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_CDG.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.bunifuCheckBox_CDG.OnDisable.CheckmarkThickness = 2;
-            this.bunifuCheckBox_CDG.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_CDG.OnHoverChecked.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.OnHoverChecked.BorderThickness = 2;
-            this.bunifuCheckBox_CDG.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_CDG.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.bunifuCheckBox_CDG.OnHoverChecked.CheckmarkThickness = 2;
-            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.OnHoverUnchecked.BorderThickness = 1;
-            this.bunifuCheckBox_CDG.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_CDG.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.bunifuCheckBox_CDG.OnUncheck.BorderRadius = 12;
-            this.bunifuCheckBox_CDG.OnUncheck.BorderThickness = 1;
-            this.bunifuCheckBox_CDG.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.bunifuCheckBox_CDG.Size = new System.Drawing.Size(21, 21);
-            this.bunifuCheckBox_CDG.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.bunifuCheckBox_CDG.TabIndex = 516;
-            this.bunifuCheckBox_CDG.Tag = "CDG";
-            this.bunifuCheckBox_CDG.ThreeState = false;
-            this.bunifuCheckBox_CDG.ToolTipText = null;
-            this.bunifuCheckBox_CDG.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.bunifuCheckBox_CDG_CheckedChanged);
-            // 
-            // label49
-            // 
-            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label49.Location = new System.Drawing.Point(603, 500);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(45, 20);
-            this.label49.TabIndex = 515;
-            this.label49.Text = "CDG";
             // 
             // CTL_PARAMETER_AJOUTER_UTILISATUER
             // 

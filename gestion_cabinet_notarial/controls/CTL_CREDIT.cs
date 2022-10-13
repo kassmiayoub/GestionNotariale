@@ -82,6 +82,9 @@ namespace gestion_cabinet_notarial
            // MessageBox.Show("id payement : "+a.ToString());
             MessageBox.Show("payement avec succes");
             THEME.operation($" payement credit pour contrat id {comboBox_contart_paye.SelectedValue.ToString()}");
+            var payements = paye.FindByValues(ele => ele.idClient == (int)comboBoxCLIENT_PY.SelectedValue && ele.type == "credit").Select(s => new { s.idPayement, NomCoplete = s.client.Nom + " " + s.client.Prenom, s.contrat.numdossier, s.contrat.typecontrat, s.Montant, s.Date }).ToList();
+            bunifuDataGridViewlist_payemant_credit.DataSource = payements;
+            THEME.add_btn_to_datagrid(bunifuDataGridViewlist_payemant_credit, "RECU", "RECU", bunifuDataGridViewlist_payemant_credit.ColumnCount);
         }
         private void comboBoxCLIENT_PY_SelectedIndexChanged(object sender, EventArgs e)
         {

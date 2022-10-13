@@ -61,11 +61,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(96, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.Size = new System.Drawing.Size(129, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "UTILISATUER :";
             // 
@@ -73,11 +73,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(593, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "PRENOM :";
             // 
@@ -85,11 +85,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(161, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "NOM : ";
             // 
@@ -122,7 +122,7 @@
             this.bunifuTextBox_PRENOM.IconRight = null;
             this.bunifuTextBox_PRENOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PRENOM.Lines = new string[0];
-            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(685, 70);
+            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(705, 73);
             this.bunifuTextBox_PRENOM.MaxLength = 32767;
             this.bunifuTextBox_PRENOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PRENOM.Modified = false;
@@ -198,7 +198,7 @@
             this.bunifuTextBox_USER.IconRight = null;
             this.bunifuTextBox_USER.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_USER.Lines = new string[0];
-            this.bunifuTextBox_USER.Location = new System.Drawing.Point(224, 142);
+            this.bunifuTextBox_USER.Location = new System.Drawing.Point(233, 145);
             this.bunifuTextBox_USER.MaxLength = 32767;
             this.bunifuTextBox_USER.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_USER.Modified = false;
@@ -274,7 +274,7 @@
             this.bunifuTextBox_NOM.IconRight = null;
             this.bunifuTextBox_NOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_NOM.Lines = new string[0];
-            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(224, 70);
+            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(233, 73);
             this.bunifuTextBox_NOM.MaxLength = 32767;
             this.bunifuTextBox_NOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_NOM.Modified = false;
@@ -391,7 +391,7 @@
             this.ButtonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonEdit.FlatAppearance.BorderSize = 0;
             this.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonEdit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonEdit.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonEdit.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,7 +413,7 @@
             this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSearch.FlatAppearance.BorderSize = 0;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSearch.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSearch.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,7 +436,7 @@
             this.ButtonInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonInit.FlatAppearance.BorderSize = 0;
             this.ButtonInit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInit.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonInit.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

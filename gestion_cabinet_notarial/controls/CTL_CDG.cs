@@ -18,6 +18,7 @@ namespace gestion_cabinet_notarial.controls
         cls_bl_partes partee = new cls_bl_partes();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         cls_CDG cls_CDG = new cls_CDG();
+
         List<CDGS> cdgs;
         double TPI;
         public CTL_CDG()
@@ -25,7 +26,20 @@ namespace gestion_cabinet_notarial.controls
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
-
+        void refrechelist()
+        {
+            cdgs = cls_CDG.GetAll().Select(ele => new CDGS()
+            {
+                N_DOSSIER = ele.numdossier,
+                TYPE = ele.type,
+                TPI = ele.TPI.ToString(),
+                MONTANT = ele.Montant.ToString(),
+                DATE = ele.Date.ToString(),
+                COEFFICIENT = ele.COEFFICIENT.ToString(),
+                user = ele.utilisateur1.Nom + " " + ele.utilisateur1.Prenom
+            }).ToList();
+            bunifuDataGridView_cdg.DataSource = cdgs;
+        }
         private void CTL_CDG_Load(object sender, EventArgs e)
         {
             bunifuTextBox_PRIXACHAT.Enabled = false;
@@ -87,21 +101,21 @@ namespace gestion_cabinet_notarial.controls
             {
                 bunifuDropdown_DOSSIER.SelectedValue = THEME.numdossier;
             }
-            cdgs = cls_CDG.GetAll().Select(ele => new CDGS()
-            {
-                N_DOSSIER = ele.numdossier,
-                TYPE = ele.type,
-                TPI = ele.TPI.ToString(),
-                MONTANT = ele.Montant.ToString(),
-                DATE = ele.Date.ToString(),
-                COEFFICIENT = ele.COEFFICIENT.ToString(),
-                user = ele.utilisateur1.Nom+" "+ele.utilisateur1.Prenom                
-            }).ToList();
-            bunifuDataGridView_cdg.DataSource = cdgs;
+            refrechelist();
         }
         private void button_CALC_Click(object sender, EventArgs e)
         {
-            if (COEFFICIENT.Controls["textBox_porsontage"].Text == "" || COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00")
+            if (THEME.numdossier != "")
+            {
+                bunifuDropdown_DOSSIER.SelectedValue = THEME.numdossier;
+            }
+            var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
+            if (dossier.typedossier != "vente")
+            {
+                MessageBox.Show("nous pouvons pas calculer TPI par ce que cette dossier il ya pas pour vente");
+                return;
+            }
+                if (COEFFICIENT.Controls["textBox_porsontage"].Text == "" || COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00")
                 return;
             double TPI1;
             double TPI2;
@@ -136,32 +150,49 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonAdd_CDG_Click(object sender, EventArgs e)
         {
+            if (THEME.numdossier != "")
+            {
+                bunifuDropdown_DOSSIER.SelectedValue = THEME.numdossier;
+            }
             if (!THEME.acceder("AJOUTER MONTANT DANS CDG"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
-            }
+            }       
+            
             if (COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00" )
             {
                 MessageBox.Show("COEFFICIENT DOIT EST PAS VIDE");
                 return;
+            }
+            var cdgs = cls_CDG.FindByValues(ele => ele.numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
+            if( cdgs != null)
+            {
+                MessageBox.Show("cette depot existe deja");
+                return ;
             }
             var cdg = new CDG();
             cdg.COEFFICIENT = COEFFICIENT.Controls["textBox_porsontage"].Text;
             cdg.utilisateur = THEME.id_user;
             cdg.Date = bunifuDatePicker_CDG.Value;
             cdg.utilisateur = THEME.id_user;
-            if (lblTPI.Text == "TPI")
+            var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
+            if (dossier.typedossier == "vente" && lblTPI.Text == "TPI")
             {
                 MessageBox.Show("doit calculer lA TPI");
                 return ;
             }
-            cdg.TPI = TPI;
-            cdg.numdossier = THEME.numdossier;
+            if (dossier.typedossier != "vente" && dossier.typedossier != "credit")
+            {
+                MessageBox.Show("nous pouvons pas ajouter cette depot cette dossier il ya pas pour vente ou credit");
+                return;
+            }
+                cdg.TPI = TPI;
+            cdg.numdossier = bunifuDropdown_DOSSIER.SelectedValue.ToString();
             cdg.Montant = double.Parse(bunifuTextBox_PRIXVENTE.Text);
-            if (radioButton_CREDIT.Checked)
+            if (dossier.typedossier == "credit")
                 cdg.type = "credit";
-            else if (radioButton_Immobilier.Checked)
+            else if (dossier.typedossier != "vente")
                 cdg.type = "immobilier";
             else
             {
@@ -169,7 +200,9 @@ namespace gestion_cabinet_notarial.controls
                 return;
             }
             cls_CDG.Add(cdg);
+            lblTPI.Text = "TPI";
             MessageBox.Show("ajouter avec success");
+            refrechelist();
         }
         private void buttonserche_CDG_Click(object sender, EventArgs e)
         {

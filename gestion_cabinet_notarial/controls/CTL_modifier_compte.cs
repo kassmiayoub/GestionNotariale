@@ -42,6 +42,12 @@ namespace gestion_cabinet_notarial.controls
             A.Nom = bunifuTextBox_NOM.Text;
             A.Prenom = bunifuTextBox_PRENOM.Text;
             A.utilisateur1 = bunifuTextBox_USER.Text;
+            A.Password = bunifuTextBox_PASS.Text;
+            if (bunifuTextBox_USER.Text.Trim() == "" || bunifuTextBox_PASS.Text.Trim() == "" || bunifuTextBox_NOM.Text.Trim() == "" || bunifuTextBox_PRENOM.Text.Trim() == "")
+            {
+                MessageBox.Show("Remplire tout les champs");
+                return;
+            }
             user.SaveChanges();
             THEME.operation($"MODIFIER COMPTE CETTE UTILISATEUR");
 

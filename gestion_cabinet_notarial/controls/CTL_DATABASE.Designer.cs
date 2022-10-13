@@ -56,6 +56,7 @@
             this.bunifuPanel1.Controls.Add(this.label7);
             this.bunifuPanel1.Controls.Add(this.TextBoxSavePath);
             this.bunifuPanel1.Controls.Add(this.ButtonSaveSettings);
+            this.bunifuPanel1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuPanel1.Location = new System.Drawing.Point(42, 62);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
@@ -86,18 +87,18 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(220, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 24);
+            this.label7.Size = new System.Drawing.Size(140, 23);
             this.label7.TabIndex = 485;
             this.label7.Text = "SAUVEGARDER";
             // 
             // TextBoxSavePath
             // 
             this.TextBoxSavePath.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextBoxSavePath.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.TextBoxSavePath.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.TextBoxSavePath.Location = new System.Drawing.Point(51, 63);
             this.TextBoxSavePath.Multiline = true;
             this.TextBoxSavePath.Name = "TextBoxSavePath";
@@ -111,7 +112,7 @@
             this.ButtonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSaveSettings.FlatAppearance.BorderSize = 0;
             this.ButtonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSaveSettings.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,6 +139,7 @@
             this.bunifuPanel2.Controls.Add(this.label1);
             this.bunifuPanel2.Controls.Add(this.TextBoxSavePathRestore);
             this.bunifuPanel2.Controls.Add(this.button_Restore);
+            this.bunifuPanel2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuPanel2.Location = new System.Drawing.Point(42, 297);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
@@ -151,7 +153,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.button2.Location = new System.Drawing.Point(505, 70);
@@ -168,18 +170,18 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(220, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 487;
             this.label1.Text = "RESTOR";
             // 
             // TextBoxSavePathRestore
             // 
             this.TextBoxSavePathRestore.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextBoxSavePathRestore.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.TextBoxSavePathRestore.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.TextBoxSavePathRestore.Location = new System.Drawing.Point(51, 70);
             this.TextBoxSavePathRestore.Multiline = true;
             this.TextBoxSavePathRestore.Name = "TextBoxSavePathRestore";
@@ -193,7 +195,7 @@
             this.button_Restore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Restore.FlatAppearance.BorderSize = 0;
             this.button_Restore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Restore.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.button_Restore.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.button_Restore.ForeColor = System.Drawing.Color.White;
             this.button_Restore.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.button_Restore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

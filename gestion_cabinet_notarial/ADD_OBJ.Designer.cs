@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.controL_CONTROL_BOX1 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.buttonadd_add_obj = new System.Windows.Forms.Button();
             this.bunifuDataGridView_objs = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.textBox_titre_foncier = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.controL_CONTROL_BOX1 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_objs)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,15 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(620, 514);
             this.bunifuPanel1.TabIndex = 0;
             // 
+            // controL_CONTROL_BOX1
+            // 
+            this.controL_CONTROL_BOX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
+            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(549, 3);
+            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
+            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(68, 32);
+            this.controL_CONTROL_BOX1.TabIndex = 506;
+            // 
             // buttonadd_add_obj
             // 
             this.buttonadd_add_obj.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -78,7 +87,7 @@
             this.buttonadd_add_obj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonadd_add_obj.FlatAppearance.BorderSize = 0;
             this.buttonadd_add_obj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonadd_add_obj.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.buttonadd_add_obj.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.buttonadd_add_obj.ForeColor = System.Drawing.Color.White;
             this.buttonadd_add_obj.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.buttonadd_add_obj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,20 +168,20 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(66, 194);
+            this.label1.Location = new System.Drawing.Point(77, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.Size = new System.Drawing.Size(125, 23);
             this.label1.TabIndex = 503;
             this.label1.Text = "Propriétaire : ";
             // 
             // bunifuDropdown_client
             // 
             this.bunifuDropdown_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuDropdown_client.Font = new System.Drawing.Font("Ubuntu Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown_client.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_client.FormattingEnabled = true;
-            this.bunifuDropdown_client.Location = new System.Drawing.Point(184, 182);
+            this.bunifuDropdown_client.Location = new System.Drawing.Point(207, 185);
             this.bunifuDropdown_client.Name = "bunifuDropdown_client";
             this.bunifuDropdown_client.Size = new System.Drawing.Size(320, 31);
             this.bunifuDropdown_client.TabIndex = 502;
@@ -184,10 +193,10 @@
             this.ButtonSerch_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSerch_client.FlatAppearance.BorderSize = 0;
             this.ButtonSerch_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSerch_client.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonSerch_client.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.ButtonSerch_client.ForeColor = System.Drawing.Color.White;
             this.ButtonSerch_client.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
-            this.ButtonSerch_client.Location = new System.Drawing.Point(509, 182);
+            this.ButtonSerch_client.Location = new System.Drawing.Point(532, 185);
             this.ButtonSerch_client.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSerch_client.Name = "ButtonSerch_client";
             this.ButtonSerch_client.Size = new System.Drawing.Size(28, 31);
@@ -199,8 +208,8 @@
             // textBox_obj
             // 
             this.textBox_obj.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_obj.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_obj.Location = new System.Drawing.Point(185, 74);
+            this.textBox_obj.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.textBox_obj.Location = new System.Drawing.Point(208, 77);
             this.textBox_obj.Multiline = true;
             this.textBox_obj.Name = "textBox_obj";
             this.textBox_obj.Size = new System.Drawing.Size(319, 31);
@@ -209,8 +218,8 @@
             // textBox_titre_foncier
             // 
             this.textBox_titre_foncier.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox_titre_foncier.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_titre_foncier.Location = new System.Drawing.Point(185, 129);
+            this.textBox_titre_foncier.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.textBox_titre_foncier.Location = new System.Drawing.Point(208, 132);
             this.textBox_titre_foncier.Multiline = true;
             this.textBox_titre_foncier.Name = "textBox_titre_foncier";
             this.textBox_titre_foncier.Size = new System.Drawing.Size(319, 31);
@@ -220,11 +229,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(102, 85);
+            this.label7.Location = new System.Drawing.Point(127, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 19);
+            this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 498;
             this.label7.Text = "OBJET :";
             // 
@@ -232,22 +241,13 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Ubuntu Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(51, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 19);
+            this.label6.Size = new System.Drawing.Size(151, 23);
             this.label6.TabIndex = 497;
             this.label6.Text = "TITRE FONCIER : ";
-            // 
-            // controL_CONTROL_BOX1
-            // 
-            this.controL_CONTROL_BOX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controL_CONTROL_BOX1.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX1.Location = new System.Drawing.Point(549, 3);
-            this.controL_CONTROL_BOX1.Name = "controL_CONTROL_BOX1";
-            this.controL_CONTROL_BOX1.Size = new System.Drawing.Size(68, 32);
-            this.controL_CONTROL_BOX1.TabIndex = 506;
             // 
             // ADD_OBJ
             // 

@@ -55,9 +55,17 @@ namespace gestion_cabinet_notarial.controls
             credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;
             credit.montant = double.Parse(bunifuTextBox_montant_credit.Text);
             credit.utilisateur = THEME.id_user;
+            var cntrat = con.FindByValues(ele => ele.Idcontrat == credit.idcontrat).FirstOrDefault();
+            if(cntrat != null)
+            {
+                MessageBox.Show("cette credit pour cette contrat exist deja");
+                return;
+            }
             BL_credit.Add(credit);
             MessageBox.Show("ajouter credit avec succes");
             THEME.operation($" ajouter nouvaeu credit pour contrat id {comboBox_contrat_credit.SelectedValue.ToString()}");
+            int a = int.Parse(comboBox_client_credit.SelectedValue.ToString());
+            bunifuDataGridViewlist_credit.DataSource = BL_credit.FindByValues(el => el.idClient == a).Select(s => new { s.idClient, NomCoplete = s.client.Nom + " " + s.client.Prenom, s.contrat.numdossier, s.contrat.typecontrat, s.montant, s.date }).ToList();
         }
         private void nouveau_credit_Load(object sender, EventArgs e)
         {
@@ -101,6 +109,7 @@ namespace gestion_cabinet_notarial.controls
         }
         private void comboBox_client_credit_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cls_bl_credit BL_credit = new cls_bl_credit();
             var dossier = partee.GetAll().Where(r => r.idClient == int.Parse(comboBox_client_credit.SelectedValue.ToString())).Select(ele => new { Num = ele.dossier.Numdossier }).ToList();           
             comboBox_dossier_credit.DisplayMember = "Num";
             comboBox_dossier_credit.ValueMember = "Num";

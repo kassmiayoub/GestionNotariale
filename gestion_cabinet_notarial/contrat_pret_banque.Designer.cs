@@ -150,6 +150,7 @@
             // 
             // richTextBox_description
             // 
+            this.richTextBox_description.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.richTextBox_description.Location = new System.Drawing.Point(757, 255);
             this.richTextBox_description.Name = "richTextBox_description";
             this.richTextBox_description.Size = new System.Drawing.Size(302, 142);
@@ -161,11 +162,11 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label14.Location = new System.Drawing.Point(291, 229);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 24);
+            this.label14.Size = new System.Drawing.Size(59, 23);
             this.label14.TabIndex = 506;
             this.label14.Text = "DERU";
             // 
@@ -189,7 +190,7 @@
             this.bunifuDropdown_banque.FillDropDown = true;
             this.bunifuDropdown_banque.FillIndicator = false;
             this.bunifuDropdown_banque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown_banque.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown_banque.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_banque.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdown_banque.FormattingEnabled = true;
             this.bunifuDropdown_banque.Icon = null;
@@ -233,7 +234,7 @@
             this.bunifuDropdown_client.FillDropDown = true;
             this.bunifuDropdown_client.FillIndicator = false;
             this.bunifuDropdown_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown_client.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown_client.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuDropdown_client.ForeColor = System.Drawing.Color.Black;
             this.bunifuDropdown_client.FormattingEnabled = true;
             this.bunifuDropdown_client.Icon = null;
@@ -259,16 +260,18 @@
             // 
             // dateTimePickerfin
             // 
+            this.dateTimePickerfin.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerfin.Location = new System.Drawing.Point(203, 308);
             this.dateTimePickerfin.Name = "dateTimePickerfin";
-            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 20);
+            this.dateTimePickerfin.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerfin.TabIndex = 503;
             // 
             // dateTimePickerdubet
             // 
+            this.dateTimePickerdubet.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.dateTimePickerdubet.Location = new System.Drawing.Point(203, 256);
             this.dateTimePickerdubet.Name = "dateTimePickerdubet";
-            this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 20);
+            this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerdubet.TabIndex = 502;
             // 
             // label6
@@ -276,11 +279,11 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(3, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 24);
+            this.label6.Size = new System.Drawing.Size(174, 23);
             this.label6.TabIndex = 501;
             this.label6.Text = "DATE FERMETURE :";
             // 
@@ -289,11 +292,11 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label13.Location = new System.Drawing.Point(3, 255);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(199, 24);
+            this.label13.Size = new System.Drawing.Size(180, 23);
             this.label13.TabIndex = 500;
             this.label13.Text = "DATE OUVERTURE : ";
             // 
@@ -464,11 +467,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label12.Location = new System.Drawing.Point(486, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(187, 24);
+            this.label12.Size = new System.Drawing.Size(166, 23);
             this.label12.TabIndex = 466;
             this.label12.Text = "TYPE DE CONTRAT";
             // 
@@ -479,7 +482,7 @@
             this.ButtonAdd_contrat_pret_banque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAdd_contrat_pret_banque.FlatAppearance.BorderSize = 0;
             this.ButtonAdd_contrat_pret_banque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd_contrat_pret_banque.Font = new System.Drawing.Font("Ithra-Light", 12F);
+            this.ButtonAdd_contrat_pret_banque.Font = new System.Drawing.Font("Ubuntu Light", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonAdd_contrat_pret_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_contrat_pret_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_contrat_pret_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -498,6 +501,7 @@
             // 
             this.nemurecupdown_with_comma_paye_par_mois.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nemurecupdown_with_comma_paye_par_mois.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_paye_par_mois.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.nemurecupdown_with_comma_paye_par_mois.Location = new System.Drawing.Point(472, 350);
             this.nemurecupdown_with_comma_paye_par_mois.Name = "nemurecupdown_with_comma_paye_par_mois";
             this.nemurecupdown_with_comma_paye_par_mois.Size = new System.Drawing.Size(100, 32);
@@ -508,11 +512,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label11.Location = new System.Drawing.Point(297, 358);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(170, 24);
+            this.label11.Size = new System.Drawing.Size(153, 23);
             this.label11.TabIndex = 463;
             this.label11.Text = "PAYE PAR MOIS : ";
             // 
@@ -520,6 +524,7 @@
             // 
             this.nemurecupdown_with_comma_intieret.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nemurecupdown_with_comma_intieret.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_intieret.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.nemurecupdown_with_comma_intieret.Location = new System.Drawing.Point(176, 351);
             this.nemurecupdown_with_comma_intieret.Name = "nemurecupdown_with_comma_intieret";
             this.nemurecupdown_with_comma_intieret.Size = new System.Drawing.Size(100, 32);
@@ -530,11 +535,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label10.Location = new System.Drawing.Point(55, 358);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 24);
+            this.label10.Size = new System.Drawing.Size(100, 23);
             this.label10.TabIndex = 461;
             this.label10.Text = "INTIERET : ";
             // 
@@ -543,11 +548,11 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(94, 182);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 24);
+            this.label9.Size = new System.Drawing.Size(102, 23);
             this.label9.TabIndex = 460;
             this.label9.Text = "BANQUE :  ";
             // 
@@ -556,11 +561,11 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(77, 133);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 24);
+            this.label8.Size = new System.Drawing.Size(110, 23);
             this.label8.TabIndex = 459;
             this.label8.Text = "MONTANT : ";
             // 
@@ -645,11 +650,11 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(571, 252);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 24);
+            this.label7.Size = new System.Drawing.Size(144, 23);
             this.label7.TabIndex = 454;
             this.label7.Text = "DESCREPTION : ";
             // 
@@ -685,11 +690,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(637, 205);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 24);
+            this.label5.Size = new System.Drawing.Size(86, 23);
             this.label5.TabIndex = 448;
             this.label5.Text = "Timbres :";
             // 
@@ -698,11 +703,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label4.Location = new System.Drawing.Point(650, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 24);
+            this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 447;
             this.label4.Text = "Ancfcc :";
             // 
@@ -711,11 +716,11 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(108, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 24);
+            this.label3.Size = new System.Drawing.Size(83, 23);
             this.label3.TabIndex = 446;
             this.label3.Text = "CLIENT : ";
             // 
@@ -724,11 +729,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(582, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 24);
+            this.label2.Size = new System.Drawing.Size(156, 23);
             this.label2.TabIndex = 445;
             this.label2.Text = "Enregistrement : ";
             // 
@@ -737,11 +742,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(582, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 24);
+            this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 444;
             this.label1.Text = "HONORAIRES :";
             // 
