@@ -34,6 +34,7 @@ namespace gestion_cabinet_notarial.context
             this.payements = new HashSet<payement>();
             this.Rendez_vous = new HashSet<Rendez_vous>();
             this.factures = new HashSet<facture>();
+            this.creditpersonnes1 = new HashSet<creditpersonne1>();
         }
     
         public string utilisateur1 { get; set; }
@@ -75,5 +76,7 @@ namespace gestion_cabinet_notarial.context
         public virtual ICollection<Rendez_vous> Rendez_vous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<facture> factures { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<creditpersonne1> creditpersonnes1 { get; set; }
     }
 }

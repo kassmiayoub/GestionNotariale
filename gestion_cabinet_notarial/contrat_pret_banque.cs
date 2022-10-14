@@ -18,7 +18,9 @@ namespace gestion_cabinet_notarial
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_contrat con = new cls_bl_contrat();
         CSL_BL_pret_banque pret = new CSL_BL_pret_banque();
+        bl_creditpersonne creditpersonne = new bl_creditpersonne();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
+        cls_bl_partes_S parte_S = new cls_bl_partes_S();
         cls_bl_partes partee = new cls_bl_partes();
 
 
@@ -36,6 +38,20 @@ namespace gestion_cabinet_notarial
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            if(type_contrat == "pret banque")
+            {
+                bunifuPanel2.Visible = true;
+                bunifuDropdown_banque.Visible = true;
+                almodan.Visible = true;
+                almodin.Visible = true;
+            }
+            else
+            {
+                bunifuPanel2.Visible = false;
+                bunifuDropdown_banque.Visible = false;
+                almodan.Visible = false;
+                almodin.Visible = false;
+            }
             label12.Text = type_contrat;
             bunifuCheckBoxancfcc.Checked = false;
             bunifuCheckBoxenregistrement.Checked = false;
@@ -51,10 +67,6 @@ namespace gestion_cabinet_notarial
             bunifuDropdown_client.DisplayMember = "NOMCOMPLET";
             bunifuDropdown_client.ValueMember = "IDCIENT";
             bunifuDropdown_client.DataSource = ListDataSource;
-            var ListDataSource1 = new cls_bl_banque().GetAll().Where(x => x.Idbanque != 3).ToList();
-            bunifuDropdown_banque.DataSource = ListDataSource1;
-            bunifuDropdown_banque.DisplayMember = "Libbele";
-            bunifuDropdown_banque.ValueMember = "Idbanque";
             if (THEME.prix == 0)
             {
                 bunifuCheckBoxhonoraire.Enabled = false;
@@ -149,21 +161,46 @@ namespace gestion_cabinet_notarial
                 return;
             }
             con.Add(c);
-            int idcontrat = con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;
-            var pretBanque =new  Banque_pret();
-            pretBanque.idClient = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
-            pretBanque.idbanque = int.Parse(bunifuDropdown_banque.SelectedValue.ToString());
-            pretBanque.DESCRIPTION = richTextBox_description.Text;
-            pretBanque.INTIERET = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma_intieret"].Controls["textBox_porsontage"].Text));
-            pretBanque.PAYE_PAR_MOIS = (double.Parse(this.Controls["bunifuPanel1"].Controls["nemurecupdown_with_comma_paye_par_mois"].Controls["textBox_porsontage"].Text));
-            pretBanque.Montant =double.Parse(bunifuTextBox_montant.Text);
-            int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
-            pretBanque.DERU = Days;
-            pretBanque.idcontrat = idcontrat;
-            pret.Add(pretBanque);
+            int idcontrat = c.Idcontrat;//con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;
+            
+            if (type_contrat == "pret banque")
+            {
+                var pretBanque = new Banque_pret();
+                pretBanque.DESCRIPTION = richTextBox_description.Text;
+                pretBanque.INTIERET = (double.Parse(this.Controls["bunifuPanel1"].Controls["bunifuPanel2"].Controls["nemurecupdown_with_comma_intieret"].Controls["textBox_porsontage"].Text));
+                pretBanque.PAYE_PAR_MOIS = (double.Parse(this.Controls["bunifuPanel1"].Controls["bunifuPanel2"].Controls["nemurecupdown_with_comma_paye_par_mois"].Controls["textBox_porsontage"].Text));
+                pretBanque.Montant = double.Parse(bunifuTextBox_montant.Text);
+                int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
+                pretBanque.DERU = Days;
+                pretBanque.idcontrat = idcontrat;
+                pretBanque.utilisateur = THEME.id_user;
+                pret.Add(pretBanque);
+            }
+            else
+            {
+                var CP = new creditpersonne1();
+                CP.descreption = richTextBox_description.Text;
+                CP.montant = double.Parse(bunifuTextBox_montant.Text);
+                int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
+                CP.deru = Days;
+                CP.idcontrat = idcontrat;
+                CP.utilisatuer = THEME.id_user;
+                creditpersonne.Add(CP);
+           
+                List<Signature> list = new List<Signature>();
+                var partes = new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new { x.Idpartes }).ToList();
+                partes.ForEach(x => {
+                    var s = new gestion_cabinet_notarial.context.Signature();
+                    s.idpatres = x.Idpartes;
+                    s.DateSignatur = null;
+                    s.idcontrat = idcontrat;
+                    list.Add(s);
+                });
+                parte_S.AddRange(list);
+            }
             THEME.operation($"AJOUER UN CONTRAT POUR DOSSIER NUMERENT {THEME.numdossier} ET LE TYPE EST {label12.Text}");
+            MessageBox.Show("contrat ajouter avec success de type "+ label12.Text);
         }
-
         private void bunifuCheckBoxhonoraire_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (e.Checked)
@@ -260,6 +297,11 @@ namespace gestion_cabinet_notarial
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPanel2_Click(object sender, EventArgs e)
         {
 
         }

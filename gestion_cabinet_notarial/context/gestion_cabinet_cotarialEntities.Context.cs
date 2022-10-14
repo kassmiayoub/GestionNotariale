@@ -53,6 +53,7 @@ namespace gestion_cabinet_notarial.context
         public virtual DbSet<information_cabinet> information_cabinet { get; set; }
         public virtual DbSet<objet> objets { get; set; }
         public virtual DbSet<facture> factures { get; set; }
+        public virtual DbSet<creditpersonne1> creditpersonne1 { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -394,6 +394,11 @@ namespace gestion_cabinet_notarial
         {
 
         }
+
+        private void annulerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class dossierSerche
     {

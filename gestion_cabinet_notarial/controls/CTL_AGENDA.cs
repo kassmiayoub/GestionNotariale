@@ -280,6 +280,7 @@ namespace gestion_cabinet_notarial
             tm.Clear();
             rv.AddRange(redvs);
             THEME.operation($"AJOUTER UN RENDEZ-VOUS POUR CLIENT ID {bunifuDropdown_client_rendez.SelectedValue}");
+            MessageBox.Show("redez-vous ajouter avec success");
         }
 
         private void bunifuDataGridView_list_times_CellClick(object sender, DataGridViewCellEventArgs e)

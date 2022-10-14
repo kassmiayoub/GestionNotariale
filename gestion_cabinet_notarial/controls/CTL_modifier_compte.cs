@@ -50,6 +50,7 @@ namespace gestion_cabinet_notarial.controls
             }
             user.SaveChanges();
             THEME.operation($"MODIFIER COMPTE CETTE UTILISATEUR");
+            MessageBox.Show("modification le compte avec success");
 
         }
         private void ButtonInit_Click(object sender, EventArgs e)

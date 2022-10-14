@@ -26,6 +26,8 @@ namespace gestion_cabinet_notarial
         cls_bl_payement paye = new cls_bl_payement();
         CSL_BL_Client c = new CSL_BL_Client();
         CSL_BL_pret_banque pb = new CSL_BL_pret_banque();
+        bl_creditpersonne creditpersonne = new bl_creditpersonne();
+
         double Timbres;
         double Honoraires;
         double Enregistrement;
@@ -61,8 +63,21 @@ namespace gestion_cabinet_notarial
 
                 return;
             }
+            var cp = creditpersonne.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
+            if (cp != null)
+            {
+                var date_d_f = con.FindByValues(ele => ele.Idcontrat == idc).First();
+                dateTimePickerdubet.Value = Convert.ToDateTime(date_d_f.dateouverture);
+                dateTimePickerfin.Value = Convert.ToDateTime(date_d_f.Datefermeture);
+                DERU.Text = cp.deru + "jours";
+                bunifuPages1.SetPage(pretbanquedetails);
+                PARTES_OF_CONTRAT.Text = "DETAIL";
+                bunifuTextBoxMONTANT.Text = cp.montant.ToString();
+                richTextBox_description.Text = cp.descreption;
+                return;
+            }
             bunifuPages1.SetPage(partes);
-               PARTES_OF_CONTRAT.Text = "PARTES";
+            PARTES_OF_CONTRAT.Text = "PARTES";
             bunifuDataGridViewpartes_S.DataSource = Signature.FindByValues(ele => ele.idcontrat == idc).Select(ele => new partesS()
             {
                 ID_PARTE = (int)ele.idpatres,
@@ -84,8 +99,6 @@ namespace gestion_cabinet_notarial
                 }
             }
         }
-
-
         private void buttonadd_date_s_Click(object sender, EventArgs e)
         {
             if (!THEME.acceder("SIGNATURE CONTART"))
@@ -100,8 +113,8 @@ namespace gestion_cabinet_notarial
             THEME.operation($"AJOUTER UN SIGNATURE DE CONTRAT ID = {THEME.id_C}");
             bunifuDatePicker_date_s.Enabled = false;
             buttonadd_date_s.Enabled=false;
+            MessageBox.Show($"client {p.parte.client.Nom} {p.parte.client.Prenom} signie avec seccess");
         }
-
         private void PAYEMENTCLIENT_CONTRAT_Click(object sender, EventArgs e)
         {
            bunifuTextBox_MONTANT.Enabled = false;        
@@ -257,6 +270,7 @@ namespace gestion_cabinet_notarial
                 p.type_Payement = "ESPECES";
             paye.Add(p);
             THEME.operation($"AJOUTER UN PAYEMENT DE CONTRAT ID = {THEME.id_C}");
+            MessageBox.Show("payement avec success");
         }
 
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
@@ -282,6 +296,7 @@ namespace gestion_cabinet_notarial
             A.path = name_of_file;
             cont.Add(A);
             THEME.operation($"AJOUTER FICHIER DE CONTRAT ID = {THEME.id_C}");
+            MessageBox.Show("fichier ajouter  avec success");
         }
 
         private void ButtonSaveSettings_Click(object sender, EventArgs e)
@@ -369,13 +384,23 @@ namespace gestion_cabinet_notarial
                 THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
                 int idc = THEME.id_C;
                 var pret = pb.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
+                var cp = creditpersonne.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
                 if (pret != null)
                 {
+                    panelcacher.Visible = true;
                     PARTES_OF_CONTRAT.Text = "DETAIL";
+                    bunifuButtonCP.Visible = false;
+                }
+                else if(cp != null)
+                {
+                    panelcacher.Visible = false;
+                    PARTES_OF_CONTRAT.Text = "DETAIL";
+                    bunifuButtonCP.Visible = true;
                 }
                 else
                 {
                     PARTES_OF_CONTRAT.Text = "PARTES";
+                    bunifuButtonCP.Visible = false;
                 }
                 //PARTES_OF_CONTRAT.PerformClick();
                 //PAYEMENTCLIENT_CONTRAT.PerformClick();
@@ -473,21 +498,41 @@ namespace gestion_cabinet_notarial
         private void bunifuDataGridViewpartes_S_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Rows[e.RowIndex].Cells[5].Value == null)
+            if (dgv.Rows[e.RowIndex].Cells[5].Value == null) 
                 dgv.Rows[e.RowIndex].Cells[5].Value = false;
-            dgv.Rows[e.RowIndex].Cells[5].Value = !(bool)dgv.Rows[e.RowIndex].Cells[5].Value;
+            MessageBox.Show((dgv.Rows[e.RowIndex].Cells["Signatur"].Value).ToString());
+            dgv.Rows[e.RowIndex].Cells["Signatur"].Value = !(bool)dgv.Rows[e.RowIndex].Cells["Signatur"].Value;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn)
-            {
-                try
-                {
-                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString());
-                }
-                catch
-                {
-                    parte = int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString());
-                }
+            {               
+                parte = int.Parse(dgv.Rows[e.RowIndex].Cells["ID_PARTE"].Value.ToString());              
                 bunifuDatePicker_date_s.Enabled = true;
                 buttonadd_date_s.Enabled = true;
+            }
+        }
+
+        private void bunifuButtonCP_Click(object sender, EventArgs e)
+        {
+            int idc = THEME.id_C;
+            bunifuPages1.SetPage(partes);
+            bunifuDataGridViewpartes_S.DataSource = Signature.FindByValues(ele => ele.idcontrat == idc).Select(ele => new partesS()
+            {
+                ID_PARTE = (int)ele.idpatres,
+                NOM = ele.parte.client.Nom,
+                PRENOM = ele.parte.client.Prenom,
+                TYPEPARTE = ele.parte.Typeclient,
+                DATE_S = ele.DateSignatur.ToString() != "" ? ele.DateSignatur.ToString() : "NON SINIGTURE",
+            }).ToList();
+            THEME.add_checkbox_to_datagrid(bunifuDataGridViewpartes_S, "Signatur", 5);
+            foreach (DataGridViewRow r in bunifuDataGridViewpartes_S.Rows)
+            {
+                if (r.Cells["DATE_S"].Value.ToString() == "NON SINIGTURE")
+                {
+                    r.Cells["Signatur"].Value = false;
+                }
+                else
+                {
+                    r.Cells["Signatur"].Value = true;
+                }
             }
         }
     }

@@ -64,7 +64,7 @@ namespace gestion_cabinet_notarial
             this.contextMenuStrip_vente_location = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pourVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pourLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.annulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.annulerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_dossier)).BeginInit();
             this.contextMenuStrip_vente_location.SuspendLayout();
             this.SuspendLayout();
@@ -343,7 +343,7 @@ namespace gestion_cabinet_notarial
             this.bunifuDataGridView_list_dossier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -568,7 +568,7 @@ namespace gestion_cabinet_notarial
             this.contextMenuStrip_vente_location.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pourVenteToolStripMenuItem,
             this.pourLocationToolStripMenuItem,
-            this.annulerToolStripMenuItem});
+            this.annulerToolStripMenuItem1});
             this.contextMenuStrip_vente_location.Name = "contextMenuStrip1";
             this.contextMenuStrip_vente_location.Size = new System.Drawing.Size(146, 70);
             // 
@@ -586,12 +586,12 @@ namespace gestion_cabinet_notarial
             this.pourLocationToolStripMenuItem.Text = "pour location";
             this.pourLocationToolStripMenuItem.Click += new System.EventHandler(this.pourLocationToolStripMenuItem_Click);
             // 
-            // annulerToolStripMenuItem
+            // annulerToolStripMenuItem1
             // 
-            this.annulerToolStripMenuItem.Name = "annulerToolStripMenuItem";
-            this.annulerToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.annulerToolStripMenuItem.Text = "annuler";
-            this.annulerToolStripMenuItem.Click += new System.EventHandler(this.annulerToolStripMenuItem_Click);
+            this.annulerToolStripMenuItem1.Name = "annulerToolStripMenuItem1";
+            this.annulerToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.annulerToolStripMenuItem1.Text = "annuler";
+            this.annulerToolStripMenuItem1.Click += new System.EventHandler(this.annulerToolStripMenuItem1_Click);
             // 
             // ADD_DOSSIER
             // 
@@ -668,6 +668,6 @@ namespace gestion_cabinet_notarial
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_vente_location;
         private System.Windows.Forms.ToolStripMenuItem pourVenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pourLocationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem annulerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem annulerToolStripMenuItem1;
     }
 }

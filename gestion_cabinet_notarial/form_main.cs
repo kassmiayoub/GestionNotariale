@@ -37,11 +37,14 @@ namespace gestion_cabinet_notarial
             BunifuDropdown dtypeclient = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage1"].Controls["panel2"].Controls["bunifuDropdowntypeclient"];
             dtypeclient.Items.Add("VENDUERE");
             dtypeclient.Items.Add("ACHETEURE");
+            dtypeclient.Items.Add("modan");
+            dtypeclient.Items.Add("modin"); 
             BunifuDropdown typecontrat = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
             typecontrat.Items.Add("VENTE");
             typecontrat.Items.Add("PROMESE DE VENTE");
             typecontrat.Items.Add("PROMESE DE LOCATION");
             typecontrat.Items.Add("PRET BANQUE");
+            typecontrat.Items.Add("credit deux personne");
             typecontrat.Items.Add("ECHANGE");
             typecontrat.Items.Add("LOCATION");
         }
@@ -52,7 +55,6 @@ namespace gestion_cabinet_notarial
             this.Size = new Size(x, y);
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
                 if(THEME.BackControls.Count == 0 || THEME.BackControls.Count == 1)

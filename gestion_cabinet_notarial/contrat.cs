@@ -120,7 +120,7 @@ namespace gestion_cabinet_notarial
                 c.Ancfcc = double.Parse(bunifuTextBoxAncfcc.Text);
             }
             con.Add(c);
-            int idcontrat = con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;           
+            int idcontrat = c.Idcontrat;//con.FindByValues(ele => ele.typecontrat == label12.Text && ele.numdossier == THEME.numdossier).First().Idcontrat;           
             List<Signature> list = new List<Signature>();
             var partes =  new cls_bl_partes().GetAll().Where(x => x.numdossier == THEME.numdossier).Select(x => new {x.Idpartes}).ToList();
             partes.ForEach(x => {

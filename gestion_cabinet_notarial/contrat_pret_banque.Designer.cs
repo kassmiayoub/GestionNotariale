@@ -51,6 +51,11 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nemurecupdown_with_comma_intieret = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nemurecupdown_with_comma_paye_par_mois = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.controL_CONTROL_BOX2 = new gestion_cabinet_notarial.CONTROL_CONTROL_BOX();
             this.richTextBox_description = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -65,11 +70,7 @@
             this.bunifuCheckBoxhonoraire = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.ButtonAdd_contrat_pret_banque = new System.Windows.Forms.Button();
-            this.nemurecupdown_with_comma_paye_par_mois = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.label11 = new System.Windows.Forms.Label();
-            this.nemurecupdown_with_comma_intieret = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.almodan = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuTextBox_montant = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -78,7 +79,7 @@
             this.nemurecupdown_with_comma_h = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.almodin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuTextBoxhonoraire = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -87,6 +88,7 @@
             this.bunifuTextBoxtmbr = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuPanel1.SuspendLayout();
+            this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -97,6 +99,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuPanel1.BorderRadius = 0;
             this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX2);
             this.bunifuPanel1.Controls.Add(this.richTextBox_description);
             this.bunifuPanel1.Controls.Add(this.label14);
@@ -111,11 +114,7 @@
             this.bunifuPanel1.Controls.Add(this.bunifuCheckBoxhonoraire);
             this.bunifuPanel1.Controls.Add(this.label12);
             this.bunifuPanel1.Controls.Add(this.ButtonAdd_contrat_pret_banque);
-            this.bunifuPanel1.Controls.Add(this.nemurecupdown_with_comma_paye_par_mois);
-            this.bunifuPanel1.Controls.Add(this.label11);
-            this.bunifuPanel1.Controls.Add(this.nemurecupdown_with_comma_intieret);
-            this.bunifuPanel1.Controls.Add(this.label10);
-            this.bunifuPanel1.Controls.Add(this.label9);
+            this.bunifuPanel1.Controls.Add(this.almodan);
             this.bunifuPanel1.Controls.Add(this.label8);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox_montant);
             this.bunifuPanel1.Controls.Add(this.label7);
@@ -124,7 +123,7 @@
             this.bunifuPanel1.Controls.Add(this.nemurecupdown_with_comma_h);
             this.bunifuPanel1.Controls.Add(this.label5);
             this.bunifuPanel1.Controls.Add(this.label4);
-            this.bunifuPanel1.Controls.Add(this.label3);
+            this.bunifuPanel1.Controls.Add(this.almodin);
             this.bunifuPanel1.Controls.Add(this.label2);
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBoxhonoraire);
@@ -139,11 +138,78 @@
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.label10);
+            this.bunifuPanel2.Controls.Add(this.nemurecupdown_with_comma_intieret);
+            this.bunifuPanel2.Controls.Add(this.label11);
+            this.bunifuPanel2.Controls.Add(this.nemurecupdown_with_comma_paye_par_mois);
+            this.bunifuPanel2.Location = new System.Drawing.Point(42, 363);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(598, 44);
+            this.bunifuPanel2.TabIndex = 508;
+            this.bunifuPanel2.Click += new System.EventHandler(this.bunifuPanel2_Click);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label10.Location = new System.Drawing.Point(14, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.TabIndex = 461;
+            this.label10.Text = "INTIERET : ";
+            // 
+            // nemurecupdown_with_comma_intieret
+            // 
+            this.nemurecupdown_with_comma_intieret.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nemurecupdown_with_comma_intieret.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_intieret.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.nemurecupdown_with_comma_intieret.Location = new System.Drawing.Point(135, 9);
+            this.nemurecupdown_with_comma_intieret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nemurecupdown_with_comma_intieret.Name = "nemurecupdown_with_comma_intieret";
+            this.nemurecupdown_with_comma_intieret.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma_intieret.TabIndex = 462;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label11.Location = new System.Drawing.Point(256, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(153, 23);
+            this.label11.TabIndex = 463;
+            this.label11.Text = "PAYE PAR MOIS : ";
+            // 
+            // nemurecupdown_with_comma_paye_par_mois
+            // 
+            this.nemurecupdown_with_comma_paye_par_mois.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nemurecupdown_with_comma_paye_par_mois.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_paye_par_mois.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
+            this.nemurecupdown_with_comma_paye_par_mois.Location = new System.Drawing.Point(431, 8);
+            this.nemurecupdown_with_comma_paye_par_mois.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nemurecupdown_with_comma_paye_par_mois.Name = "nemurecupdown_with_comma_paye_par_mois";
+            this.nemurecupdown_with_comma_paye_par_mois.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma_paye_par_mois.TabIndex = 464;
+            // 
             // controL_CONTROL_BOX2
             // 
             this.controL_CONTROL_BOX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controL_CONTROL_BOX2.BackColor = System.Drawing.Color.Transparent;
-            this.controL_CONTROL_BOX2.Location = new System.Drawing.Point(1113, 4);
+            this.controL_CONTROL_BOX2.Location = new System.Drawing.Point(1111, 4);
             this.controL_CONTROL_BOX2.Name = "controL_CONTROL_BOX2";
             this.controL_CONTROL_BOX2.Size = new System.Drawing.Size(68, 32);
             this.controL_CONTROL_BOX2.TabIndex = 1;
@@ -164,7 +230,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label14.Location = new System.Drawing.Point(291, 229);
+            this.label14.Location = new System.Drawing.Point(290, 228);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 23);
             this.label14.TabIndex = 506;
@@ -281,7 +347,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(3, 308);
+            this.label6.Location = new System.Drawing.Point(2, 307);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 23);
             this.label6.TabIndex = 501;
@@ -294,7 +360,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label13.Location = new System.Drawing.Point(3, 255);
+            this.label13.Location = new System.Drawing.Point(2, 254);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(180, 23);
             this.label13.TabIndex = 500;
@@ -469,7 +535,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label12.Location = new System.Drawing.Point(486, 12);
+            this.label12.Location = new System.Drawing.Point(485, 11);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 23);
             this.label12.TabIndex = 466;
@@ -486,7 +552,7 @@
             this.ButtonAdd_contrat_pret_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_contrat_pret_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_contrat_pret_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_contrat_pret_banque.Location = new System.Drawing.Point(490, 427);
+            this.ButtonAdd_contrat_pret_banque.Location = new System.Drawing.Point(489, 426);
             this.ButtonAdd_contrat_pret_banque.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_contrat_pret_banque.Name = "ButtonAdd_contrat_pret_banque";
             this.ButtonAdd_contrat_pret_banque.Size = new System.Drawing.Size(171, 35);
@@ -497,64 +563,18 @@
             this.ButtonAdd_contrat_pret_banque.UseVisualStyleBackColor = false;
             this.ButtonAdd_contrat_pret_banque.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
-            // nemurecupdown_with_comma_paye_par_mois
+            // almodan
             // 
-            this.nemurecupdown_with_comma_paye_par_mois.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nemurecupdown_with_comma_paye_par_mois.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_paye_par_mois.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
-            this.nemurecupdown_with_comma_paye_par_mois.Location = new System.Drawing.Point(472, 350);
-            this.nemurecupdown_with_comma_paye_par_mois.Name = "nemurecupdown_with_comma_paye_par_mois";
-            this.nemurecupdown_with_comma_paye_par_mois.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma_paye_par_mois.TabIndex = 464;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(297, 358);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 23);
-            this.label11.TabIndex = 463;
-            this.label11.Text = "PAYE PAR MOIS : ";
-            // 
-            // nemurecupdown_with_comma_intieret
-            // 
-            this.nemurecupdown_with_comma_intieret.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nemurecupdown_with_comma_intieret.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_intieret.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
-            this.nemurecupdown_with_comma_intieret.Location = new System.Drawing.Point(176, 351);
-            this.nemurecupdown_with_comma_intieret.Name = "nemurecupdown_with_comma_intieret";
-            this.nemurecupdown_with_comma_intieret.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma_intieret.TabIndex = 462;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(55, 358);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 461;
-            this.label10.Text = "INTIERET : ";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(94, 182);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 23);
-            this.label9.TabIndex = 460;
-            this.label9.Text = "BANQUE :  ";
+            this.almodan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.almodan.AutoSize = true;
+            this.almodan.BackColor = System.Drawing.Color.Transparent;
+            this.almodan.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.almodan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.almodan.Location = new System.Drawing.Point(93, 181);
+            this.almodan.Name = "almodan";
+            this.almodan.Size = new System.Drawing.Size(102, 23);
+            this.almodan.TabIndex = 460;
+            this.almodan.Text = "BANQUE :  ";
             // 
             // label8
             // 
@@ -563,7 +583,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(77, 133);
+            this.label8.Location = new System.Drawing.Point(76, 132);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 23);
             this.label8.TabIndex = 459;
@@ -598,7 +618,7 @@
             this.bunifuTextBox_montant.IconRight = null;
             this.bunifuTextBox_montant.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_montant.Lines = new string[0];
-            this.bunifuTextBox_montant.Location = new System.Drawing.Point(203, 123);
+            this.bunifuTextBox_montant.Location = new System.Drawing.Point(202, 122);
             this.bunifuTextBox_montant.MaxLength = 32767;
             this.bunifuTextBox_montant.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_montant.Modified = false;
@@ -652,7 +672,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(571, 252);
+            this.label7.Location = new System.Drawing.Point(570, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 23);
             this.label7.TabIndex = 454;
@@ -662,7 +682,7 @@
             // 
             this.nemurecupdown_with_comma_a.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nemurecupdown_with_comma_a.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_a.Location = new System.Drawing.Point(1040, 143);
+            this.nemurecupdown_with_comma_a.Location = new System.Drawing.Point(1039, 142);
             this.nemurecupdown_with_comma_a.Name = "nemurecupdown_with_comma_a";
             this.nemurecupdown_with_comma_a.Size = new System.Drawing.Size(100, 32);
             this.nemurecupdown_with_comma_a.TabIndex = 452;
@@ -671,7 +691,7 @@
             // 
             this.nemurecupdown_with_comma_e.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nemurecupdown_with_comma_e.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_e.Location = new System.Drawing.Point(1040, 96);
+            this.nemurecupdown_with_comma_e.Location = new System.Drawing.Point(1039, 95);
             this.nemurecupdown_with_comma_e.Name = "nemurecupdown_with_comma_e";
             this.nemurecupdown_with_comma_e.Size = new System.Drawing.Size(100, 32);
             this.nemurecupdown_with_comma_e.TabIndex = 451;
@@ -680,7 +700,7 @@
             // 
             this.nemurecupdown_with_comma_h.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nemurecupdown_with_comma_h.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_h.Location = new System.Drawing.Point(1040, 49);
+            this.nemurecupdown_with_comma_h.Location = new System.Drawing.Point(1039, 48);
             this.nemurecupdown_with_comma_h.Name = "nemurecupdown_with_comma_h";
             this.nemurecupdown_with_comma_h.Size = new System.Drawing.Size(100, 32);
             this.nemurecupdown_with_comma_h.TabIndex = 450;
@@ -692,7 +712,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(637, 205);
+            this.label5.Location = new System.Drawing.Point(636, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 23);
             this.label5.TabIndex = 448;
@@ -705,24 +725,24 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(650, 158);
+            this.label4.Location = new System.Drawing.Point(649, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 447;
             this.label4.Text = "Ancfcc :";
             // 
-            // label3
+            // almodin
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(108, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 23);
-            this.label3.TabIndex = 446;
-            this.label3.Text = "CLIENT : ";
+            this.almodin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.almodin.AutoSize = true;
+            this.almodin.BackColor = System.Drawing.Color.Transparent;
+            this.almodin.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.almodin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.almodin.Location = new System.Drawing.Point(107, 72);
+            this.almodin.Name = "almodin";
+            this.almodin.Size = new System.Drawing.Size(83, 23);
+            this.almodin.TabIndex = 446;
+            this.almodin.Text = "CLIENT : ";
             // 
             // label2
             // 
@@ -731,7 +751,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(582, 112);
+            this.label2.Location = new System.Drawing.Point(581, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 23);
             this.label2.TabIndex = 445;
@@ -744,7 +764,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(582, 65);
+            this.label1.Location = new System.Drawing.Point(581, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 444;
@@ -779,7 +799,7 @@
             this.bunifuTextBoxhonoraire.IconRight = null;
             this.bunifuTextBoxhonoraire.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxhonoraire.Lines = new string[0];
-            this.bunifuTextBoxhonoraire.Location = new System.Drawing.Point(757, 49);
+            this.bunifuTextBoxhonoraire.Location = new System.Drawing.Point(756, 48);
             this.bunifuTextBoxhonoraire.MaxLength = 32767;
             this.bunifuTextBoxhonoraire.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxhonoraire.Modified = false;
@@ -856,7 +876,7 @@
             this.bunifuTextBoxenregistrement.IconRight = null;
             this.bunifuTextBoxenregistrement.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxenregistrement.Lines = new string[0];
-            this.bunifuTextBoxenregistrement.Location = new System.Drawing.Point(757, 96);
+            this.bunifuTextBoxenregistrement.Location = new System.Drawing.Point(756, 95);
             this.bunifuTextBoxenregistrement.MaxLength = 32767;
             this.bunifuTextBoxenregistrement.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxenregistrement.Modified = false;
@@ -933,7 +953,7 @@
             this.bunifuTextBoxAncfcc.IconRight = null;
             this.bunifuTextBoxAncfcc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxAncfcc.Lines = new string[0];
-            this.bunifuTextBoxAncfcc.Location = new System.Drawing.Point(757, 143);
+            this.bunifuTextBoxAncfcc.Location = new System.Drawing.Point(756, 142);
             this.bunifuTextBoxAncfcc.MaxLength = 32767;
             this.bunifuTextBoxAncfcc.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxAncfcc.Modified = false;
@@ -1010,7 +1030,7 @@
             this.bunifuTextBoxtmbr.IconRight = null;
             this.bunifuTextBoxtmbr.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxtmbr.Lines = new string[0];
-            this.bunifuTextBoxtmbr.Location = new System.Drawing.Point(757, 192);
+            this.bunifuTextBoxtmbr.Location = new System.Drawing.Point(756, 191);
             this.bunifuTextBoxtmbr.MaxLength = 32767;
             this.bunifuTextBoxtmbr.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxtmbr.Modified = false;
@@ -1080,6 +1100,8 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            this.bunifuPanel2.ResumeLayout(false);
+            this.bunifuPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1094,7 +1116,7 @@
         private System.Windows.Forms.Label label11;
         private nemurecupdown_with_comma nemurecupdown_with_comma_intieret;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label almodan;
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox_montant;
         private System.Windows.Forms.Label label7;
@@ -1103,7 +1125,7 @@
         private nemurecupdown_with_comma nemurecupdown_with_comma_h;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label almodin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxhonoraire;
@@ -1123,5 +1145,6 @@
         private System.Windows.Forms.RichTextBox richTextBox_description;
         private System.Windows.Forms.Label label14;
         private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
     }
 }

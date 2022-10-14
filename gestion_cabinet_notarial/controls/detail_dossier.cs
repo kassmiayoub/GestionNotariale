@@ -41,7 +41,7 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("la selection de type contrat est vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 return;
             }
-            if (bunifuDropdowntype_contrat.Text == "PRET BANQUE")
+            if (bunifuDropdowntype_contrat.Text == "PRET BANQUE" || bunifuDropdowntype_contrat.Text == "credit deux personne")
             {
                 using (contrat_pret_banque f1 = new contrat_pret_banque(bunifuDropdowntype_contrat.Text)) { f1.ShowDialog(); }
             }
@@ -58,6 +58,7 @@ namespace gestion_cabinet_notarial
                 var pa = partee.FindByValues(el => el.idClient == idclient && el.numdossier == THEME.numdossier).FirstOrDefault();
                 pa.Condition = bunifuTextBoxcondition.Text;
                 partee.SaveChanges();
+                MessageBox.Show("la condition ajouter avec success");
                 return;
             }
             if (THEME.numdossier == "")
@@ -76,6 +77,7 @@ namespace gestion_cabinet_notarial
             parte.numdossier = THEME.numdossier;
             partee.Add(parte);
             THEME.operation($"AJOTER UN PARTE POUR DOSSIER DE NUMERENT {THEME.numdossier}");
+            MessageBox.Show("le parte ajouter avec success");
         }
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
         {
@@ -100,6 +102,7 @@ namespace gestion_cabinet_notarial
             file.numdossier = THEME.numdossier;
             csl_Bl_Fichier_dossier.Add(file);
             THEME.operation($"AJOTER UN FICHIER POUR DOSSIER DE NUMERENT {THEME.numdossier}");
+            MessageBox.Show("le fichier ajouter avec success");
         }
         private void dataGridViewlist_contrat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {            

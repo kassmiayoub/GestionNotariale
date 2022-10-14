@@ -55,6 +55,8 @@ namespace gestion_cabinet_notarial
                  ***************************************************************************************/
 
                     File.Copy($"C:\\NotarialBackup\\{FileName}", $"{path}\\{FileName}", true);
+            System.Windows.Forms.MessageBox.Show("fichier base de donnee sauvegarder avec success");
+
         }
         static public void Restordatabase(string path)
         {            
@@ -72,7 +74,7 @@ namespace gestion_cabinet_notarial
             try
             {
                 SC.ExecuteNonQuery();
-
+                System.Windows.Forms.MessageBox.Show("fichier des donnees restor avec success");
             }
             catch (Exception)
             {

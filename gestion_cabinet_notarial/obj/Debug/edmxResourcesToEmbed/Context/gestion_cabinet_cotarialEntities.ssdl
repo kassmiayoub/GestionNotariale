@@ -91,6 +91,19 @@
     <Property Name="idClient" Type="int" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'gestion_cabinet_cotarial.dbo.creditpersonne' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="creditpersonne">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="montant" Type="float" />
+    <Property Name="idcontrat" Type="int" />
+    <Property Name="deru" Type="int" />
+    <Property Name="descreption" Type="varchar(max)" />
+    <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
+  </EntityType>
   <EntityType Name="devis">
     <Key>
       <PropertyRef Name="Iddevis" />
@@ -454,6 +467,30 @@
       </Principal>
       <Dependent Role="credit">
         <PropertyRef Name="utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__creditper__idcon__37703C52">
+    <End Role="contrat" Type="Self.contrat" Multiplicity="0..1" />
+    <End Role="creditpersonne" Type="Self.creditpersonne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="Idcontrat" />
+      </Principal>
+      <Dependent Role="creditpersonne">
+        <PropertyRef Name="idcontrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__creditper__utili__3864608B">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
+    <End Role="creditpersonne" Type="Self.creditpersonne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur" />
+      </Principal>
+      <Dependent Role="creditpersonne">
+        <PropertyRef Name="utilisatuer" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -851,6 +888,16 @@
     <EntitySet Name="Signature" EntityType="Self.Signature" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="creditpersonne" EntityType="Self.creditpersonne" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [creditpersonne].[id] AS [id], 
+    [creditpersonne].[montant] AS [montant], 
+    [creditpersonne].[idcontrat] AS [idcontrat], 
+    [creditpersonne].[deru] AS [deru], 
+    [creditpersonne].[descreption] AS [descreption], 
+    [creditpersonne].[utilisatuer] AS [utilisatuer]
+    FROM [dbo].[creditpersonne] AS [creditpersonne]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK__banque__utilisat__4D94879B" Association="Self.FK__banque__utilisat__4D94879B">
       <End Role="utilisateur" EntitySet="utilisateur" />
       <End Role="banque" EntitySet="banque" />
@@ -906,6 +953,14 @@
     <AssociationSet Name="FK__credit__utilisat__71D1E811" Association="Self.FK__credit__utilisat__71D1E811">
       <End Role="utilisateur" EntitySet="utilisateur" />
       <End Role="credit" EntitySet="credit" />
+    </AssociationSet>
+    <AssociationSet Name="FK__creditper__idcon__37703C52" Association="Self.FK__creditper__idcon__37703C52">
+      <End Role="contrat" EntitySet="contrat" />
+      <End Role="creditpersonne" EntitySet="creditpersonne" />
+    </AssociationSet>
+    <AssociationSet Name="FK__creditper__utili__3864608B" Association="Self.FK__creditper__utili__3864608B">
+      <End Role="utilisateur" EntitySet="utilisateur" />
+      <End Role="creditpersonne" EntitySet="creditpersonne" />
     </AssociationSet>
     <AssociationSet Name="FK__devis__idClient__6C190EBB" Association="Self.FK__devis__idClient__6C190EBB">
       <End Role="client" EntitySet="client" />

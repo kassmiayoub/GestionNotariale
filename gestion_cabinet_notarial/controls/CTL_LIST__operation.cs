@@ -61,7 +61,6 @@ namespace gestion_cabinet_notarial.controls
             LOG.SaveChanges();
             ButtonSearch_operation.PerformClick();
         }
-
         private void CTL_LIST__operation_Load(object sender, EventArgs e)
         {
             bunifuDatePicker_D.Value =DateTime.Now;

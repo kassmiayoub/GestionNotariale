@@ -38,6 +38,9 @@ namespace gestion_cabinet_notarial.controls
                 banque.utilisateur = THEME.id_user;
                 cls_Bl_Banque.Add(banque);
                 THEME.operation($"AJOUTR UN BANQUE");
+                MessageBox.Show("la banque ajouter avec seccess");
+                var ListDataSource1 = cls_Bl_Banque.GetAll().Where(x => x.Idbanque != 3).Select(s => new { s.Idbanque, s.Libbele }).ToList();
+                bunifuDataGridView_list_banque.DataSource = ListDataSource1;
             }
         }
         private void Button_vider_banque_Click(object sender, EventArgs e)
@@ -51,6 +54,7 @@ namespace gestion_cabinet_notarial.controls
             ban.Libbele = bunifuTextBox_banque.Text;
             cls_Bl_Banque.SaveChanges();
             bunifuTextBox_banque.Text = "";
+            MessageBox.Show("la banque modifier avec seccess");
             THEME.operation($"MODIFIER UN BANQUE");
         }
         private void bunifuDataGridView_list_banque_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -82,6 +82,7 @@ namespace gestion_cabinet_notarial.controls
               inforamation.fax=textBox_FAX.Text;
               inforamation.localisation= textBox_ADRESS.Text;              
               info.SaveChanges();
+            MessageBox.Show("modification avec success");
             get_info();
         }
     }

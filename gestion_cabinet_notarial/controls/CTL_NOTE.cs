@@ -45,7 +45,14 @@ namespace gestion_cabinet_notarial.controls
                 note.date_alere = Convert.ToDateTime(bunifuDatePicker_date_alert.Value);
             cLS_NOTE.Add(note);
             richTextBox_text.Text = "";
+            MessageBox.Show("la note ajouter avec seccess");
             THEME.operation($"AJOUTER UN NOTE");
+            bunifuDataGridView_list_note.DataSource = cLS_NOTE.FindByValues(ele => ele.utilisateur1.utilisateur1 == THEME.id_user).Select(el => new
+            {
+                el.Text,
+                el.date,
+                NomComlet = el.utilisateur1.Nom + " " + el.utilisateur1.Prenom
+            }).ToList();
         }
         private void Button_vider_note_Click(object sender, EventArgs e)
         {

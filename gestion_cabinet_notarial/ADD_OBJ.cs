@@ -106,6 +106,7 @@ namespace gestion_cabinet_notarial
                 parte.numdossier = THEME.numdossierobj;
                 obj.numdossier = THEME.numdossierobj;
                 CLS_OBJET_BL.Add(obj);
+                MessageBox.Show("l'objet ajouter avec success");
                 //int a = int.Parse(bunifuDropdown_client.SelectedValue.ToString());
                 //var clinet = CLS_OBJET_BL.FindByValues(el => el.numdossier == THEME.numdossierobj && el.idclient == a ).FirstOrDefault();
                 //if(clinet == null)
@@ -130,6 +131,7 @@ namespace gestion_cabinet_notarial
                 bunifuDataGridView_objs.Columns[2].Name = "nomcomplet";
                 string[] row = new string[] { textBox_obj.Text, textBox_titre_foncier.Text, bunifuDropdown_client.Text };
                 bunifuDataGridView_objs.Rows.Add(row);
+                MessageBox.Show("l'objet ajouter avec success");
             }
         }
         private void ButtonSerch_client_Click(object sender, EventArgs e)
