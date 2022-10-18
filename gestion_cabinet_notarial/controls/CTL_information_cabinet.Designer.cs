@@ -45,14 +45,17 @@
             this.ButtonAdd_INFORMATIONCABINET = new System.Windows.Forms.Button();
             this.ButtonSaveSettings = new System.Windows.Forms.Button();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_ADRESS
             // 
             this.textBox_ADRESS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_ADRESS.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_ADRESS.Location = new System.Drawing.Point(166, 311);
+            this.textBox_ADRESS.Location = new System.Drawing.Point(172, 363);
             this.textBox_ADRESS.Multiline = true;
             this.textBox_ADRESS.Name = "textBox_ADRESS";
             this.textBox_ADRESS.Size = new System.Drawing.Size(278, 31);
@@ -62,7 +65,7 @@
             // 
             this.textBox_TELE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_TELE.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_TELE.Location = new System.Drawing.Point(166, 263);
+            this.textBox_TELE.Location = new System.Drawing.Point(172, 315);
             this.textBox_TELE.Multiline = true;
             this.textBox_TELE.Name = "textBox_TELE";
             this.textBox_TELE.Size = new System.Drawing.Size(278, 31);
@@ -72,7 +75,7 @@
             // 
             this.textBox_NOMCABINET.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_NOMCABINET.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_NOMCABINET.Location = new System.Drawing.Point(166, 217);
+            this.textBox_NOMCABINET.Location = new System.Drawing.Point(172, 269);
             this.textBox_NOMCABINET.Multiline = true;
             this.textBox_NOMCABINET.Name = "textBox_NOMCABINET";
             this.textBox_NOMCABINET.Size = new System.Drawing.Size(278, 31);
@@ -84,7 +87,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(73, 314);
+            this.label7.Location = new System.Drawing.Point(79, 366);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 23);
             this.label7.TabIndex = 430;
@@ -96,7 +99,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(99, 271);
+            this.label6.Location = new System.Drawing.Point(105, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 23);
             this.label6.TabIndex = 429;
@@ -108,7 +111,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(-5, 217);
+            this.label4.Location = new System.Drawing.Point(1, 269);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 23);
             this.label4.TabIndex = 428;
@@ -118,7 +121,7 @@
             // 
             this.textBox_EMAIL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_EMAIL.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_EMAIL.Location = new System.Drawing.Point(167, 451);
+            this.textBox_EMAIL.Location = new System.Drawing.Point(173, 503);
             this.textBox_EMAIL.Multiline = true;
             this.textBox_EMAIL.Name = "textBox_EMAIL";
             this.textBox_EMAIL.Size = new System.Drawing.Size(278, 31);
@@ -128,7 +131,7 @@
             // 
             this.textBox_FAX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_FAX.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_FAX.Location = new System.Drawing.Point(167, 403);
+            this.textBox_FAX.Location = new System.Drawing.Point(173, 455);
             this.textBox_FAX.Multiline = true;
             this.textBox_FAX.Name = "textBox_FAX";
             this.textBox_FAX.Size = new System.Drawing.Size(278, 31);
@@ -138,7 +141,7 @@
             // 
             this.textBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_LOGO.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_LOGO.Location = new System.Drawing.Point(167, 357);
+            this.textBox_LOGO.Location = new System.Drawing.Point(173, 409);
             this.textBox_LOGO.Multiline = true;
             this.textBox_LOGO.Name = "textBox_LOGO";
             this.textBox_LOGO.Size = new System.Drawing.Size(278, 31);
@@ -150,7 +153,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(87, 454);
+            this.label1.Location = new System.Drawing.Point(93, 506);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 23);
             this.label1.TabIndex = 436;
@@ -162,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(104, 403);
+            this.label2.Location = new System.Drawing.Point(110, 455);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 435;
@@ -174,7 +177,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(93, 364);
+            this.label3.Location = new System.Drawing.Point(99, 416);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 23);
             this.label3.TabIndex = 434;
@@ -184,7 +187,7 @@
             // 
             this.textBox_SETEWEB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_SETEWEB.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.textBox_SETEWEB.Location = new System.Drawing.Point(166, 497);
+            this.textBox_SETEWEB.Location = new System.Drawing.Point(172, 549);
             this.textBox_SETEWEB.Multiline = true;
             this.textBox_SETEWEB.Name = "textBox_SETEWEB";
             this.textBox_SETEWEB.Size = new System.Drawing.Size(278, 31);
@@ -196,7 +199,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(55, 500);
+            this.label5.Location = new System.Drawing.Point(61, 552);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 23);
             this.label5.TabIndex = 440;
@@ -213,7 +216,7 @@
             this.ButtonAdd_INFORMATIONCABINET.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_INFORMATIONCABINET.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_INFORMATIONCABINET.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_INFORMATIONCABINET.Location = new System.Drawing.Point(232, 551);
+            this.ButtonAdd_INFORMATIONCABINET.Location = new System.Drawing.Point(238, 603);
             this.ButtonAdd_INFORMATIONCABINET.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_INFORMATIONCABINET.Name = "ButtonAdd_INFORMATIONCABINET";
             this.ButtonAdd_INFORMATIONCABINET.Size = new System.Drawing.Size(132, 35);
@@ -235,7 +238,7 @@
             this.ButtonSaveSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSaveSettings.Image = global::gestion_cabinet_notarial.Properties.Resources.Save;
             this.ButtonSaveSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSaveSettings.Location = new System.Drawing.Point(448, 356);
+            this.ButtonSaveSettings.Location = new System.Drawing.Point(454, 408);
             this.ButtonSaveSettings.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSaveSettings.Name = "ButtonSaveSettings";
             this.ButtonSaveSettings.Size = new System.Drawing.Size(28, 31);
@@ -247,17 +250,42 @@
             // pictureBox_logo
             // 
             this.pictureBox_logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox_logo.Location = new System.Drawing.Point(64, 18);
+            this.pictureBox_logo.Location = new System.Drawing.Point(70, 70);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(380, 161);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_logo.TabIndex = 478;
             this.pictureBox_logo.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(474, 52);
+            this.panel1.TabIndex = 479;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label8.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(38, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(404, 31);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "LES INFORMMATION DE CABINET";
+            // 
             // CTL_information_cabinet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.ButtonSaveSettings);
             this.Controls.Add(this.ButtonAdd_INFORMATIONCABINET);
@@ -279,6 +307,8 @@
             this.Size = new System.Drawing.Size(481, 713);
             this.VisibleChanged += new System.EventHandler(this.CTL_information_cabinet_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +333,7 @@
         public System.Windows.Forms.Button ButtonAdd_INFORMATIONCABINET;
         public System.Windows.Forms.Button ButtonSaveSettings;
         private System.Windows.Forms.PictureBox pictureBox_logo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label8;
     }
 }

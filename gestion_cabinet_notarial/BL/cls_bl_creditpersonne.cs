@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace gestion_cabinet_notarial.BL
 {
-    public class bl_creditpersonne : CLS_REPOSITORY<creditpersonne1>
+    public class cls_bl_creditpersonne : CLS_REPOSITORY<contratcredit>
     {
+
     }
 }

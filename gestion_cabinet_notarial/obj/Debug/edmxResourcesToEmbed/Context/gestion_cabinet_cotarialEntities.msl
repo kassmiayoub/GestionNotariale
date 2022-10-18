@@ -340,10 +340,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="creditpersonne1">
-      <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.creditpersonne1">
-        <MappingFragment StoreEntitySet="creditpersonne">
-          <ScalarProperty Name="utilisatuer" ColumnName="utilisatuer" />
+    <EntitySetMapping Name="contratcredits">
+      <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.contratcredit">
+        <MappingFragment StoreEntitySet="contratcredit">
+          <ScalarProperty Name="utilisateur" ColumnName="utilisateur" />
           <ScalarProperty Name="descreption" ColumnName="descreption" />
           <ScalarProperty Name="deru" ColumnName="deru" />
           <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />

@@ -79,7 +79,6 @@ namespace gestion_cabinet_notarial
         }
         public void ChangeMonth()
         {
-            MessageBox.Show((NavigationMonth + 1).ToString());
             Selectedmonth = NavigationMonth + 1;
             if (curent)
                 NavigationMonth = curentmonth - 1;
@@ -231,13 +230,11 @@ namespace gestion_cabinet_notarial
             Selectedyear = int.Parse(yers.Text);
             time_reserve();
         }
-
         private void button_prev_year_Click(object sender, EventArgs e)
         {
             yers.Text = (int.Parse(yers.Text) - 1).ToString();
             Selectedyear =int.Parse(yers.Text);
             time_reserve();
-
         }
         public class clien
         {
@@ -246,7 +243,6 @@ namespace gestion_cabinet_notarial
             [DisplayName("NOMCOMPLET")]
             public string nomcomplet { get; set; }
         }
-
         private void ButtonAdd_rendez_vous_Click(object sender, EventArgs e)
         {
             if (!THEME.acceder("AJOUTER RENDEZ-VOUS"))
@@ -282,7 +278,6 @@ namespace gestion_cabinet_notarial
             THEME.operation($"AJOUTER UN RENDEZ-VOUS POUR CLIENT ID {bunifuDropdown_client_rendez.SelectedValue}");
             MessageBox.Show("redez-vous ajouter avec success");
         }
-
         private void bunifuDataGridView_list_times_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewButtonCell time1;
@@ -375,13 +370,11 @@ namespace gestion_cabinet_notarial
                         contextMenuStrip_passer_supprimer.Items[0].Enabled = true;
                         contextMenuStrip_passer_supprimer.Items[1].Enabled = true;
                         contextMenuStrip_passer_supprimer.Items[3].Enabled = true;
-
                     }
                     return;
                 }               
             }
         }
-
         private void pASSERCETTERENDEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!THEME.acceder("PASSER RENDEZ-VOUS"))
@@ -407,7 +400,6 @@ namespace gestion_cabinet_notarial
             rv.SaveChanges();
             change_clor_use_menu(Color.Green);
             THEME.operation($"SUPRIMER UN RENDEZ-VOUS ID {id_r}");
-
         }
         private void aNNULERToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -415,7 +407,6 @@ namespace gestion_cabinet_notarial
             THEME.navigat(typeof(add_client));
             THEME.id_Client = 0;
         }
-
         private void aNNULERToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (!THEME.acceder("ABCENSE"))

@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DETAIL_CONTRAT));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties49 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties50 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties51 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties52 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties53 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties54 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties55 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties56 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties57 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties58 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties59 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties60 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties61 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties62 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties63 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties64 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.partes = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
@@ -104,6 +104,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_statistic = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.pretbanquedetails = new System.Windows.Forms.TabPage();
+            this.panelcacher = new System.Windows.Forms.Panel();
+            this.INTIERET = new System.Windows.Forms.Label();
+            this.PAYEPARMOINS = new System.Windows.Forms.Label();
+            this.bunifuTextBoxBANQUE = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuTextBoxCLINET = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.dateTimePickerfin = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.DERU = new System.Windows.Forms.Label();
@@ -122,15 +131,9 @@
             this.PAYEMENTCLIENT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PARTES_OF_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButtonCP = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.panelcacher = new System.Windows.Forms.Panel();
-            this.INTIERET = new System.Windows.Forms.Label();
-            this.PAYEPARMOINS = new System.Windows.Forms.Label();
-            this.bunifuTextBoxBANQUE = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuTextBoxCLINET = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BLBCONTRAT = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.bunifuPages1.SuspendLayout();
             this.partes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewpartes_S)).BeginInit();
@@ -142,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_statistic)).BeginInit();
             this.pretbanquedetails.SuspendLayout();
             this.panelcacher.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPages1
@@ -154,32 +158,32 @@
             this.bunifuPages1.Controls.Add(this.fichierjoint);
             this.bunifuPages1.Controls.Add(this.statistic);
             this.bunifuPages1.Controls.Add(this.pretbanquedetails);
-            this.bunifuPages1.Location = new System.Drawing.Point(3, 87);
+            this.bunifuPages1.Location = new System.Drawing.Point(3, 109);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.pretbanquedetails;
-            this.bunifuPages1.PageIndex = 4;
-            this.bunifuPages1.PageName = "pretbanquedetails";
+            this.bunifuPages1.Page = this.partes;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "partes";
             this.bunifuPages1.PageTitle = "tabPage1";
             this.bunifuPages1.SelectedIndex = 0;
-            this.bunifuPages1.Size = new System.Drawing.Size(900, 548);
+            this.bunifuPages1.Size = new System.Drawing.Size(900, 526);
             this.bunifuPages1.TabIndex = 0;
-            animation1.AnimateOnlyDifferences = false;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuPages1.Transition = animation1;
+            animation2.AnimateOnlyDifferences = false;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuPages1.Transition = animation2;
             this.bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // partes
@@ -191,7 +195,7 @@
             this.partes.Location = new System.Drawing.Point(4, 4);
             this.partes.Name = "partes";
             this.partes.Padding = new System.Windows.Forms.Padding(3);
-            this.partes.Size = new System.Drawing.Size(892, 522);
+            this.partes.Size = new System.Drawing.Size(892, 500);
             this.partes.TabIndex = 0;
             this.partes.Text = "tabPage1";
             this.partes.UseVisualStyleBackColor = true;
@@ -265,9 +269,9 @@
             this.bunifuDataGridViewpartes_S.AllowCustomTheming = false;
             this.bunifuDataGridViewpartes_S.AllowUserToAddRows = false;
             this.bunifuDataGridViewpartes_S.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridViewpartes_S.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridViewpartes_S.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.bunifuDataGridViewpartes_S.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -275,14 +279,14 @@
             this.bunifuDataGridViewpartes_S.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridViewpartes_S.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridViewpartes_S.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridViewpartes_S.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridViewpartes_S.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.bunifuDataGridViewpartes_S.ColumnHeadersHeight = 40;
             this.bunifuDataGridViewpartes_S.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridViewpartes_S.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -302,14 +306,14 @@
             this.bunifuDataGridViewpartes_S.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridViewpartes_S.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridViewpartes_S.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridViewpartes_S.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridViewpartes_S.DefaultCellStyle = dataGridViewCellStyle39;
             this.bunifuDataGridViewpartes_S.EnableHeadersVisualStyles = false;
             this.bunifuDataGridViewpartes_S.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridViewpartes_S.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -321,7 +325,7 @@
             this.bunifuDataGridViewpartes_S.RowHeadersVisible = false;
             this.bunifuDataGridViewpartes_S.RowTemplate.Height = 40;
             this.bunifuDataGridViewpartes_S.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridViewpartes_S.Size = new System.Drawing.Size(880, 371);
+            this.bunifuDataGridViewpartes_S.Size = new System.Drawing.Size(880, 349);
             this.bunifuDataGridViewpartes_S.TabIndex = 0;
             this.bunifuDataGridViewpartes_S.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridViewpartes_S.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridViewpartes_S_CellClick);
@@ -348,7 +352,7 @@
             this.payeclient.Location = new System.Drawing.Point(4, 4);
             this.payeclient.Name = "payeclient";
             this.payeclient.Padding = new System.Windows.Forms.Padding(3);
-            this.payeclient.Size = new System.Drawing.Size(892, 522);
+            this.payeclient.Size = new System.Drawing.Size(892, 500);
             this.payeclient.TabIndex = 1;
             this.payeclient.Text = "tabPage2";
             this.payeclient.UseVisualStyleBackColor = true;
@@ -434,9 +438,9 @@
             // bunifuDataGridView_payement
             // 
             this.bunifuDataGridView_payement.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_payement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_payement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
             this.bunifuDataGridView_payement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -444,14 +448,14 @@
             this.bunifuDataGridView_payement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_payement.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_payement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_payement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_payement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
             this.bunifuDataGridView_payement.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_payement.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_payement.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -471,14 +475,14 @@
             this.bunifuDataGridView_payement.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_payement.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_payement.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_payement.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_payement.DefaultCellStyle = dataGridViewCellStyle42;
             this.bunifuDataGridView_payement.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_payement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_payement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -617,26 +621,26 @@
             this.bunifuTextBox_MONTANT.Modified = false;
             this.bunifuTextBox_MONTANT.Multiline = false;
             this.bunifuTextBox_MONTANT.Name = "bunifuTextBox_MONTANT";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_MONTANT.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Black;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_MONTANT.OnIdleState = stateProperties4;
+            stateProperties49.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties49.FillColor = System.Drawing.Color.Empty;
+            stateProperties49.ForeColor = System.Drawing.Color.Empty;
+            stateProperties49.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnActiveState = stateProperties49;
+            stateProperties50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties50.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties50.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_MONTANT.OnDisabledState = stateProperties50;
+            stateProperties51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties51.FillColor = System.Drawing.Color.Empty;
+            stateProperties51.ForeColor = System.Drawing.Color.Empty;
+            stateProperties51.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnHoverState = stateProperties51;
+            stateProperties52.BorderColor = System.Drawing.Color.Silver;
+            stateProperties52.FillColor = System.Drawing.Color.White;
+            stateProperties52.ForeColor = System.Drawing.Color.Black;
+            stateProperties52.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_MONTANT.OnIdleState = stateProperties52;
             this.bunifuTextBox_MONTANT.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox_MONTANT.PasswordChar = '\0';
             this.bunifuTextBox_MONTANT.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -701,7 +705,7 @@
             this.fichierjoint.Location = new System.Drawing.Point(4, 4);
             this.fichierjoint.Name = "fichierjoint";
             this.fichierjoint.Padding = new System.Windows.Forms.Padding(3);
-            this.fichierjoint.Size = new System.Drawing.Size(892, 522);
+            this.fichierjoint.Size = new System.Drawing.Size(892, 500);
             this.fichierjoint.TabIndex = 3;
             this.fichierjoint.Text = "tabPage4";
             this.fichierjoint.UseVisualStyleBackColor = true;
@@ -765,9 +769,9 @@
             // bunifuDataGridView_fichier_contart
             // 
             this.bunifuDataGridView_fichier_contart.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_fichier_contart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_fichier_contart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
             this.bunifuDataGridView_fichier_contart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -775,14 +779,14 @@
             this.bunifuDataGridView_fichier_contart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_fichier_contart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_fichier_contart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_fichier_contart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_fichier_contart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.bunifuDataGridView_fichier_contart.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_fichier_contart.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_fichier_contart.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -802,14 +806,14 @@
             this.bunifuDataGridView_fichier_contart.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_fichier_contart.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_fichier_contart.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_fichier_contart.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_fichier_contart.DefaultCellStyle = dataGridViewCellStyle45;
             this.bunifuDataGridView_fichier_contart.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_fichier_contart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_fichier_contart.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -919,7 +923,7 @@
             this.statistic.Location = new System.Drawing.Point(4, 4);
             this.statistic.Name = "statistic";
             this.statistic.Padding = new System.Windows.Forms.Padding(3);
-            this.statistic.Size = new System.Drawing.Size(892, 522);
+            this.statistic.Size = new System.Drawing.Size(892, 500);
             this.statistic.TabIndex = 4;
             this.statistic.Text = "tabPage5";
             this.statistic.UseVisualStyleBackColor = true;
@@ -945,11 +949,11 @@
             this.bunifuButton_print.ColorContrastOnClick = 45;
             this.bunifuButton_print.ColorContrastOnHover = 45;
             this.bunifuButton_print.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton_print.CustomizableEdges = borderEdges1;
+            borderEdges19.BottomLeft = true;
+            borderEdges19.BottomRight = true;
+            borderEdges19.TopLeft = true;
+            borderEdges19.TopRight = true;
+            this.bunifuButton_print.CustomizableEdges = borderEdges19;
             this.bunifuButton_print.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton_print.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton_print.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1047,9 +1051,9 @@
             this.bunifuDataGridView_statistic.AllowUserToAddRows = false;
             this.bunifuDataGridView_statistic.AllowUserToDeleteRows = false;
             this.bunifuDataGridView_statistic.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
             this.bunifuDataGridView_statistic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1057,14 +1061,14 @@
             this.bunifuDataGridView_statistic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView_statistic.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView_statistic.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView_statistic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView_statistic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.bunifuDataGridView_statistic.ColumnHeadersHeight = 40;
             this.bunifuDataGridView_statistic.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -1084,14 +1088,14 @@
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView_statistic.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView_statistic.DefaultCellStyle = dataGridViewCellStyle48;
             this.bunifuDataGridView_statistic.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView_statistic.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView_statistic.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -1125,11 +1129,256 @@
             this.pretbanquedetails.Location = new System.Drawing.Point(4, 4);
             this.pretbanquedetails.Name = "pretbanquedetails";
             this.pretbanquedetails.Padding = new System.Windows.Forms.Padding(3);
-            this.pretbanquedetails.Size = new System.Drawing.Size(892, 522);
+            this.pretbanquedetails.Size = new System.Drawing.Size(892, 500);
             this.pretbanquedetails.TabIndex = 5;
             this.pretbanquedetails.Text = "tabPage1";
             this.pretbanquedetails.UseVisualStyleBackColor = true;
             this.pretbanquedetails.Click += new System.EventHandler(this.pretbanquedetails_Click);
+            // 
+            // panelcacher
+            // 
+            this.panelcacher.Controls.Add(this.INTIERET);
+            this.panelcacher.Controls.Add(this.PAYEPARMOINS);
+            this.panelcacher.Controls.Add(this.bunifuTextBoxBANQUE);
+            this.panelcacher.Controls.Add(this.bunifuTextBoxCLINET);
+            this.panelcacher.Controls.Add(this.label10);
+            this.panelcacher.Controls.Add(this.label15);
+            this.panelcacher.Controls.Add(this.label16);
+            this.panelcacher.Controls.Add(this.label21);
+            this.panelcacher.Location = new System.Drawing.Point(32, 47);
+            this.panelcacher.Name = "panelcacher";
+            this.panelcacher.Size = new System.Drawing.Size(743, 141);
+            this.panelcacher.TabIndex = 544;
+            // 
+            // INTIERET
+            // 
+            this.INTIERET.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.INTIERET.AutoSize = true;
+            this.INTIERET.BackColor = System.Drawing.Color.Transparent;
+            this.INTIERET.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.INTIERET.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.INTIERET.Location = new System.Drawing.Point(633, 99);
+            this.INTIERET.Name = "INTIERET";
+            this.INTIERET.Size = new System.Drawing.Size(79, 23);
+            this.INTIERET.TabIndex = 549;
+            this.INTIERET.Text = "JOURES";
+            // 
+            // PAYEPARMOINS
+            // 
+            this.PAYEPARMOINS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PAYEPARMOINS.AutoSize = true;
+            this.PAYEPARMOINS.BackColor = System.Drawing.Color.Transparent;
+            this.PAYEPARMOINS.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.PAYEPARMOINS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.PAYEPARMOINS.Location = new System.Drawing.Point(633, 45);
+            this.PAYEPARMOINS.Name = "PAYEPARMOINS";
+            this.PAYEPARMOINS.Size = new System.Drawing.Size(79, 23);
+            this.PAYEPARMOINS.TabIndex = 548;
+            this.PAYEPARMOINS.Text = "JOURES";
+            // 
+            // bunifuTextBoxBANQUE
+            // 
+            this.bunifuTextBoxBANQUE.AcceptsReturn = false;
+            this.bunifuTextBoxBANQUE.AcceptsTab = false;
+            this.bunifuTextBoxBANQUE.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuTextBoxBANQUE.AnimationSpeed = 200;
+            this.bunifuTextBoxBANQUE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBoxBANQUE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBoxBANQUE.AutoSizeHeight = true;
+            this.bunifuTextBoxBANQUE.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBoxBANQUE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBoxBANQUE.BackgroundImage")));
+            this.bunifuTextBoxBANQUE.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBoxBANQUE.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBoxBANQUE.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBoxBANQUE.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBoxBANQUE.BorderRadius = 1;
+            this.bunifuTextBoxBANQUE.BorderThickness = 1;
+            this.bunifuTextBoxBANQUE.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBoxBANQUE.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxBANQUE.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.bunifuTextBoxBANQUE.DefaultText = "";
+            this.bunifuTextBoxBANQUE.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBoxBANQUE.HideSelection = true;
+            this.bunifuTextBoxBANQUE.IconLeft = null;
+            this.bunifuTextBoxBANQUE.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxBANQUE.IconPadding = 10;
+            this.bunifuTextBoxBANQUE.IconRight = null;
+            this.bunifuTextBoxBANQUE.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxBANQUE.Lines = new string[0];
+            this.bunifuTextBoxBANQUE.Location = new System.Drawing.Point(139, 99);
+            this.bunifuTextBoxBANQUE.MaxLength = 32767;
+            this.bunifuTextBoxBANQUE.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBoxBANQUE.Modified = false;
+            this.bunifuTextBoxBANQUE.Multiline = false;
+            this.bunifuTextBoxBANQUE.Name = "bunifuTextBoxBANQUE";
+            stateProperties53.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties53.FillColor = System.Drawing.Color.Empty;
+            stateProperties53.ForeColor = System.Drawing.Color.Empty;
+            stateProperties53.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxBANQUE.OnActiveState = stateProperties53;
+            stateProperties54.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties54.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties54.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBoxBANQUE.OnDisabledState = stateProperties54;
+            stateProperties55.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties55.FillColor = System.Drawing.Color.Empty;
+            stateProperties55.ForeColor = System.Drawing.Color.Empty;
+            stateProperties55.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxBANQUE.OnHoverState = stateProperties55;
+            stateProperties56.BorderColor = System.Drawing.Color.Silver;
+            stateProperties56.FillColor = System.Drawing.Color.White;
+            stateProperties56.ForeColor = System.Drawing.Color.Empty;
+            stateProperties56.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxBANQUE.OnIdleState = stateProperties56;
+            this.bunifuTextBoxBANQUE.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxBANQUE.PasswordChar = '\0';
+            this.bunifuTextBoxBANQUE.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBoxBANQUE.PlaceholderText = "Enter text";
+            this.bunifuTextBoxBANQUE.ReadOnly = false;
+            this.bunifuTextBoxBANQUE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBoxBANQUE.SelectedText = "";
+            this.bunifuTextBoxBANQUE.SelectionLength = 0;
+            this.bunifuTextBoxBANQUE.SelectionStart = 0;
+            this.bunifuTextBoxBANQUE.ShortcutsEnabled = true;
+            this.bunifuTextBoxBANQUE.Size = new System.Drawing.Size(260, 39);
+            this.bunifuTextBoxBANQUE.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBoxBANQUE.TabIndex = 547;
+            this.bunifuTextBoxBANQUE.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBoxBANQUE.TextMarginBottom = 0;
+            this.bunifuTextBoxBANQUE.TextMarginLeft = 3;
+            this.bunifuTextBoxBANQUE.TextMarginTop = 1;
+            this.bunifuTextBoxBANQUE.TextPlaceholder = "Enter text";
+            this.bunifuTextBoxBANQUE.UseSystemPasswordChar = false;
+            this.bunifuTextBoxBANQUE.WordWrap = true;
+            // 
+            // bunifuTextBoxCLINET
+            // 
+            this.bunifuTextBoxCLINET.AcceptsReturn = false;
+            this.bunifuTextBoxCLINET.AcceptsTab = false;
+            this.bunifuTextBoxCLINET.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuTextBoxCLINET.AnimationSpeed = 200;
+            this.bunifuTextBoxCLINET.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBoxCLINET.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBoxCLINET.AutoSizeHeight = true;
+            this.bunifuTextBoxCLINET.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBoxCLINET.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBoxCLINET.BackgroundImage")));
+            this.bunifuTextBoxCLINET.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBoxCLINET.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBoxCLINET.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBoxCLINET.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBoxCLINET.BorderRadius = 1;
+            this.bunifuTextBoxCLINET.BorderThickness = 1;
+            this.bunifuTextBoxCLINET.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBoxCLINET.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxCLINET.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.bunifuTextBoxCLINET.DefaultText = "";
+            this.bunifuTextBoxCLINET.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBoxCLINET.HideSelection = true;
+            this.bunifuTextBoxCLINET.IconLeft = null;
+            this.bunifuTextBoxCLINET.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxCLINET.IconPadding = 10;
+            this.bunifuTextBoxCLINET.IconRight = null;
+            this.bunifuTextBoxCLINET.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxCLINET.Lines = new string[0];
+            this.bunifuTextBoxCLINET.Location = new System.Drawing.Point(139, 45);
+            this.bunifuTextBoxCLINET.MaxLength = 32767;
+            this.bunifuTextBoxCLINET.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBoxCLINET.Modified = false;
+            this.bunifuTextBoxCLINET.Multiline = false;
+            this.bunifuTextBoxCLINET.Name = "bunifuTextBoxCLINET";
+            stateProperties57.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties57.FillColor = System.Drawing.Color.Empty;
+            stateProperties57.ForeColor = System.Drawing.Color.Empty;
+            stateProperties57.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxCLINET.OnActiveState = stateProperties57;
+            stateProperties58.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties58.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties58.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBoxCLINET.OnDisabledState = stateProperties58;
+            stateProperties59.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties59.FillColor = System.Drawing.Color.Empty;
+            stateProperties59.ForeColor = System.Drawing.Color.Empty;
+            stateProperties59.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxCLINET.OnHoverState = stateProperties59;
+            stateProperties60.BorderColor = System.Drawing.Color.Silver;
+            stateProperties60.FillColor = System.Drawing.Color.White;
+            stateProperties60.ForeColor = System.Drawing.Color.Empty;
+            stateProperties60.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxCLINET.OnIdleState = stateProperties60;
+            this.bunifuTextBoxCLINET.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxCLINET.PasswordChar = '\0';
+            this.bunifuTextBoxCLINET.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBoxCLINET.PlaceholderText = "Enter text";
+            this.bunifuTextBoxCLINET.ReadOnly = false;
+            this.bunifuTextBoxCLINET.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBoxCLINET.SelectedText = "";
+            this.bunifuTextBoxCLINET.SelectionLength = 0;
+            this.bunifuTextBoxCLINET.SelectionStart = 0;
+            this.bunifuTextBoxCLINET.ShortcutsEnabled = true;
+            this.bunifuTextBoxCLINET.Size = new System.Drawing.Size(260, 39);
+            this.bunifuTextBoxCLINET.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBoxCLINET.TabIndex = 546;
+            this.bunifuTextBoxCLINET.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBoxCLINET.TextMarginBottom = 0;
+            this.bunifuTextBoxCLINET.TextMarginLeft = 3;
+            this.bunifuTextBoxCLINET.TextMarginTop = 1;
+            this.bunifuTextBoxCLINET.TextPlaceholder = "Enter text";
+            this.bunifuTextBoxCLINET.UseSystemPasswordChar = false;
+            this.bunifuTextBoxCLINET.WordWrap = true;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label10.Location = new System.Drawing.Point(452, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(153, 23);
+            this.label10.TabIndex = 545;
+            this.label10.Text = "PAYE PAR MOIS : ";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label15.Location = new System.Drawing.Point(512, 99);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 23);
+            this.label15.TabIndex = 544;
+            this.label15.Text = "INTIERET : ";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label16.Location = new System.Drawing.Point(30, 111);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(102, 23);
+            this.label16.TabIndex = 543;
+            this.label16.Text = "BANQUE :  ";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label21.Location = new System.Drawing.Point(44, 51);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(83, 23);
+            this.label21.TabIndex = 542;
+            this.label21.Text = "CLIENT : ";
             // 
             // dateTimePickerfin
             // 
@@ -1260,26 +1509,26 @@
             this.bunifuTextBoxMONTANT.Modified = false;
             this.bunifuTextBoxMONTANT.Multiline = false;
             this.bunifuTextBoxMONTANT.Name = "bunifuTextBoxMONTANT";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxMONTANT.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBoxMONTANT.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxMONTANT.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxMONTANT.OnIdleState = stateProperties16;
+            stateProperties61.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties61.FillColor = System.Drawing.Color.Empty;
+            stateProperties61.ForeColor = System.Drawing.Color.Empty;
+            stateProperties61.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxMONTANT.OnActiveState = stateProperties61;
+            stateProperties62.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties62.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties62.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBoxMONTANT.OnDisabledState = stateProperties62;
+            stateProperties63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties63.FillColor = System.Drawing.Color.Empty;
+            stateProperties63.ForeColor = System.Drawing.Color.Empty;
+            stateProperties63.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxMONTANT.OnHoverState = stateProperties63;
+            stateProperties64.BorderColor = System.Drawing.Color.Silver;
+            stateProperties64.FillColor = System.Drawing.Color.White;
+            stateProperties64.ForeColor = System.Drawing.Color.Empty;
+            stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBoxMONTANT.OnIdleState = stateProperties64;
             this.bunifuTextBoxMONTANT.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBoxMONTANT.PasswordChar = '\0';
             this.bunifuTextBoxMONTANT.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1361,11 +1610,11 @@
             this.STATISTIC_CONTRAT.ColorContrastOnClick = 45;
             this.STATISTIC_CONTRAT.ColorContrastOnHover = 45;
             this.STATISTIC_CONTRAT.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.STATISTIC_CONTRAT.CustomizableEdges = borderEdges2;
+            borderEdges20.BottomLeft = true;
+            borderEdges20.BottomRight = true;
+            borderEdges20.TopLeft = true;
+            borderEdges20.TopRight = true;
+            this.STATISTIC_CONTRAT.CustomizableEdges = borderEdges20;
             this.STATISTIC_CONTRAT.DialogResult = System.Windows.Forms.DialogResult.None;
             this.STATISTIC_CONTRAT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.STATISTIC_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1391,7 +1640,7 @@
             this.STATISTIC_CONTRAT.IdleIconLeftImage = null;
             this.STATISTIC_CONTRAT.IdleIconRightImage = null;
             this.STATISTIC_CONTRAT.IndicateFocus = false;
-            this.STATISTIC_CONTRAT.Location = new System.Drawing.Point(672, 29);
+            this.STATISTIC_CONTRAT.Location = new System.Drawing.Point(636, 64);
             this.STATISTIC_CONTRAT.Name = "STATISTIC_CONTRAT";
             this.STATISTIC_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.STATISTIC_CONTRAT.OnDisabledState.BorderRadius = 1;
@@ -1454,11 +1703,11 @@
             this.FICHIERJOINT_CONTRAT.ColorContrastOnClick = 45;
             this.FICHIERJOINT_CONTRAT.ColorContrastOnHover = 45;
             this.FICHIERJOINT_CONTRAT.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.FICHIERJOINT_CONTRAT.CustomizableEdges = borderEdges3;
+            borderEdges21.BottomLeft = true;
+            borderEdges21.BottomRight = true;
+            borderEdges21.TopLeft = true;
+            borderEdges21.TopRight = true;
+            this.FICHIERJOINT_CONTRAT.CustomizableEdges = borderEdges21;
             this.FICHIERJOINT_CONTRAT.DialogResult = System.Windows.Forms.DialogResult.None;
             this.FICHIERJOINT_CONTRAT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.FICHIERJOINT_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1484,7 +1733,7 @@
             this.FICHIERJOINT_CONTRAT.IdleIconLeftImage = null;
             this.FICHIERJOINT_CONTRAT.IdleIconRightImage = null;
             this.FICHIERJOINT_CONTRAT.IndicateFocus = false;
-            this.FICHIERJOINT_CONTRAT.Location = new System.Drawing.Point(521, 29);
+            this.FICHIERJOINT_CONTRAT.Location = new System.Drawing.Point(485, 64);
             this.FICHIERJOINT_CONTRAT.Name = "FICHIERJOINT_CONTRAT";
             this.FICHIERJOINT_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.FICHIERJOINT_CONTRAT.OnDisabledState.BorderRadius = 1;
@@ -1547,11 +1796,11 @@
             this.PAYEMENTCLIENT_CONTRAT.ColorContrastOnClick = 45;
             this.PAYEMENTCLIENT_CONTRAT.ColorContrastOnHover = 45;
             this.PAYEMENTCLIENT_CONTRAT.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.PAYEMENTCLIENT_CONTRAT.CustomizableEdges = borderEdges4;
+            borderEdges22.BottomLeft = true;
+            borderEdges22.BottomRight = true;
+            borderEdges22.TopLeft = true;
+            borderEdges22.TopRight = true;
+            this.PAYEMENTCLIENT_CONTRAT.CustomizableEdges = borderEdges22;
             this.PAYEMENTCLIENT_CONTRAT.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PAYEMENTCLIENT_CONTRAT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PAYEMENTCLIENT_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1577,7 +1826,7 @@
             this.PAYEMENTCLIENT_CONTRAT.IdleIconLeftImage = null;
             this.PAYEMENTCLIENT_CONTRAT.IdleIconRightImage = null;
             this.PAYEMENTCLIENT_CONTRAT.IndicateFocus = false;
-            this.PAYEMENTCLIENT_CONTRAT.Location = new System.Drawing.Point(351, 29);
+            this.PAYEMENTCLIENT_CONTRAT.Location = new System.Drawing.Point(315, 64);
             this.PAYEMENTCLIENT_CONTRAT.Name = "PAYEMENTCLIENT_CONTRAT";
             this.PAYEMENTCLIENT_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PAYEMENTCLIENT_CONTRAT.OnDisabledState.BorderRadius = 1;
@@ -1640,11 +1889,11 @@
             this.PARTES_OF_CONTRAT.ColorContrastOnClick = 45;
             this.PARTES_OF_CONTRAT.ColorContrastOnHover = 45;
             this.PARTES_OF_CONTRAT.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.PARTES_OF_CONTRAT.CustomizableEdges = borderEdges5;
+            borderEdges23.BottomLeft = true;
+            borderEdges23.BottomRight = true;
+            borderEdges23.TopLeft = true;
+            borderEdges23.TopRight = true;
+            this.PARTES_OF_CONTRAT.CustomizableEdges = borderEdges23;
             this.PARTES_OF_CONTRAT.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PARTES_OF_CONTRAT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PARTES_OF_CONTRAT.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1670,7 +1919,7 @@
             this.PARTES_OF_CONTRAT.IdleIconLeftImage = null;
             this.PARTES_OF_CONTRAT.IdleIconRightImage = null;
             this.PARTES_OF_CONTRAT.IndicateFocus = false;
-            this.PARTES_OF_CONTRAT.Location = new System.Drawing.Point(200, 29);
+            this.PARTES_OF_CONTRAT.Location = new System.Drawing.Point(164, 64);
             this.PARTES_OF_CONTRAT.Name = "PARTES_OF_CONTRAT";
             this.PARTES_OF_CONTRAT.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PARTES_OF_CONTRAT.OnDisabledState.BorderRadius = 1;
@@ -1733,11 +1982,11 @@
             this.bunifuButtonCP.ColorContrastOnClick = 45;
             this.bunifuButtonCP.ColorContrastOnHover = 45;
             this.bunifuButtonCP.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.bunifuButtonCP.CustomizableEdges = borderEdges6;
+            borderEdges24.BottomLeft = true;
+            borderEdges24.BottomRight = true;
+            borderEdges24.TopLeft = true;
+            borderEdges24.TopRight = true;
+            this.bunifuButtonCP.CustomizableEdges = borderEdges24;
             this.bunifuButtonCP.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButtonCP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButtonCP.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1763,7 +2012,7 @@
             this.bunifuButtonCP.IdleIconLeftImage = null;
             this.bunifuButtonCP.IdleIconRightImage = null;
             this.bunifuButtonCP.IndicateFocus = false;
-            this.bunifuButtonCP.Location = new System.Drawing.Point(49, 29);
+            this.bunifuButtonCP.Location = new System.Drawing.Point(13, 64);
             this.bunifuButtonCP.Name = "bunifuButtonCP";
             this.bunifuButtonCP.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButtonCP.OnDisabledState.BorderRadius = 1;
@@ -1806,255 +2055,47 @@
             this.bunifuButtonCP.UseDefaultRadiusAndThickness = true;
             this.bunifuButtonCP.Click += new System.EventHandler(this.bunifuButtonCP_Click);
             // 
-            // panelcacher
+            // panel1
             // 
-            this.panelcacher.Controls.Add(this.INTIERET);
-            this.panelcacher.Controls.Add(this.PAYEPARMOINS);
-            this.panelcacher.Controls.Add(this.bunifuTextBoxBANQUE);
-            this.panelcacher.Controls.Add(this.bunifuTextBoxCLINET);
-            this.panelcacher.Controls.Add(this.label10);
-            this.panelcacher.Controls.Add(this.label15);
-            this.panelcacher.Controls.Add(this.label16);
-            this.panelcacher.Controls.Add(this.label21);
-            this.panelcacher.Location = new System.Drawing.Point(32, 47);
-            this.panelcacher.Name = "panelcacher";
-            this.panelcacher.Size = new System.Drawing.Size(743, 141);
-            this.panelcacher.TabIndex = 544;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.BLBCONTRAT);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(900, 44);
+            this.panel1.TabIndex = 12;
             // 
-            // INTIERET
+            // BLBCONTRAT
             // 
-            this.INTIERET.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.INTIERET.AutoSize = true;
-            this.INTIERET.BackColor = System.Drawing.Color.Transparent;
-            this.INTIERET.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.INTIERET.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.INTIERET.Location = new System.Drawing.Point(633, 99);
-            this.INTIERET.Name = "INTIERET";
-            this.INTIERET.Size = new System.Drawing.Size(79, 23);
-            this.INTIERET.TabIndex = 549;
-            this.INTIERET.Text = "JOURES";
+            this.BLBCONTRAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BLBCONTRAT.AutoSize = true;
+            this.BLBCONTRAT.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.BLBCONTRAT.ForeColor = System.Drawing.Color.SteelBlue;
+            this.BLBCONTRAT.Location = new System.Drawing.Point(486, 6);
+            this.BLBCONTRAT.Name = "BLBCONTRAT";
+            this.BLBCONTRAT.Size = new System.Drawing.Size(126, 31);
+            this.BLBCONTRAT.TabIndex = 1;
+            this.BLBCONTRAT.Text = "CONTRAT";
             // 
-            // PAYEPARMOINS
+            // label19
             // 
-            this.PAYEPARMOINS.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PAYEPARMOINS.AutoSize = true;
-            this.PAYEPARMOINS.BackColor = System.Drawing.Color.Transparent;
-            this.PAYEPARMOINS.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.PAYEPARMOINS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.PAYEPARMOINS.Location = new System.Drawing.Point(633, 45);
-            this.PAYEPARMOINS.Name = "PAYEPARMOINS";
-            this.PAYEPARMOINS.Size = new System.Drawing.Size(79, 23);
-            this.PAYEPARMOINS.TabIndex = 548;
-            this.PAYEPARMOINS.Text = "JOURES";
-            // 
-            // bunifuTextBoxBANQUE
-            // 
-            this.bunifuTextBoxBANQUE.AcceptsReturn = false;
-            this.bunifuTextBoxBANQUE.AcceptsTab = false;
-            this.bunifuTextBoxBANQUE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuTextBoxBANQUE.AnimationSpeed = 200;
-            this.bunifuTextBoxBANQUE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBoxBANQUE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBoxBANQUE.AutoSizeHeight = true;
-            this.bunifuTextBoxBANQUE.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBoxBANQUE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBoxBANQUE.BackgroundImage")));
-            this.bunifuTextBoxBANQUE.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBoxBANQUE.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBoxBANQUE.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBoxBANQUE.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBoxBANQUE.BorderRadius = 1;
-            this.bunifuTextBoxBANQUE.BorderThickness = 1;
-            this.bunifuTextBoxBANQUE.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBoxBANQUE.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxBANQUE.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBoxBANQUE.DefaultText = "";
-            this.bunifuTextBoxBANQUE.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBoxBANQUE.HideSelection = true;
-            this.bunifuTextBoxBANQUE.IconLeft = null;
-            this.bunifuTextBoxBANQUE.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxBANQUE.IconPadding = 10;
-            this.bunifuTextBoxBANQUE.IconRight = null;
-            this.bunifuTextBoxBANQUE.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxBANQUE.Lines = new string[0];
-            this.bunifuTextBoxBANQUE.Location = new System.Drawing.Point(139, 99);
-            this.bunifuTextBoxBANQUE.MaxLength = 32767;
-            this.bunifuTextBoxBANQUE.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBoxBANQUE.Modified = false;
-            this.bunifuTextBoxBANQUE.Multiline = false;
-            this.bunifuTextBoxBANQUE.Name = "bunifuTextBoxBANQUE";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxBANQUE.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBoxBANQUE.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxBANQUE.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxBANQUE.OnIdleState = stateProperties8;
-            this.bunifuTextBoxBANQUE.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBoxBANQUE.PasswordChar = '\0';
-            this.bunifuTextBoxBANQUE.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBoxBANQUE.PlaceholderText = "Enter text";
-            this.bunifuTextBoxBANQUE.ReadOnly = false;
-            this.bunifuTextBoxBANQUE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBoxBANQUE.SelectedText = "";
-            this.bunifuTextBoxBANQUE.SelectionLength = 0;
-            this.bunifuTextBoxBANQUE.SelectionStart = 0;
-            this.bunifuTextBoxBANQUE.ShortcutsEnabled = true;
-            this.bunifuTextBoxBANQUE.Size = new System.Drawing.Size(260, 39);
-            this.bunifuTextBoxBANQUE.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBoxBANQUE.TabIndex = 547;
-            this.bunifuTextBoxBANQUE.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBoxBANQUE.TextMarginBottom = 0;
-            this.bunifuTextBoxBANQUE.TextMarginLeft = 3;
-            this.bunifuTextBoxBANQUE.TextMarginTop = 1;
-            this.bunifuTextBoxBANQUE.TextPlaceholder = "Enter text";
-            this.bunifuTextBoxBANQUE.UseSystemPasswordChar = false;
-            this.bunifuTextBoxBANQUE.WordWrap = true;
-            // 
-            // bunifuTextBoxCLINET
-            // 
-            this.bunifuTextBoxCLINET.AcceptsReturn = false;
-            this.bunifuTextBoxCLINET.AcceptsTab = false;
-            this.bunifuTextBoxCLINET.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuTextBoxCLINET.AnimationSpeed = 200;
-            this.bunifuTextBoxCLINET.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBoxCLINET.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBoxCLINET.AutoSizeHeight = true;
-            this.bunifuTextBoxCLINET.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBoxCLINET.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBoxCLINET.BackgroundImage")));
-            this.bunifuTextBoxCLINET.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBoxCLINET.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBoxCLINET.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBoxCLINET.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBoxCLINET.BorderRadius = 1;
-            this.bunifuTextBoxCLINET.BorderThickness = 1;
-            this.bunifuTextBoxCLINET.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBoxCLINET.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxCLINET.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBoxCLINET.DefaultText = "";
-            this.bunifuTextBoxCLINET.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBoxCLINET.HideSelection = true;
-            this.bunifuTextBoxCLINET.IconLeft = null;
-            this.bunifuTextBoxCLINET.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxCLINET.IconPadding = 10;
-            this.bunifuTextBoxCLINET.IconRight = null;
-            this.bunifuTextBoxCLINET.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBoxCLINET.Lines = new string[0];
-            this.bunifuTextBoxCLINET.Location = new System.Drawing.Point(139, 45);
-            this.bunifuTextBoxCLINET.MaxLength = 32767;
-            this.bunifuTextBoxCLINET.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBoxCLINET.Modified = false;
-            this.bunifuTextBoxCLINET.Multiline = false;
-            this.bunifuTextBoxCLINET.Name = "bunifuTextBoxCLINET";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxCLINET.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBoxCLINET.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxCLINET.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBoxCLINET.OnIdleState = stateProperties12;
-            this.bunifuTextBoxCLINET.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBoxCLINET.PasswordChar = '\0';
-            this.bunifuTextBoxCLINET.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBoxCLINET.PlaceholderText = "Enter text";
-            this.bunifuTextBoxCLINET.ReadOnly = false;
-            this.bunifuTextBoxCLINET.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBoxCLINET.SelectedText = "";
-            this.bunifuTextBoxCLINET.SelectionLength = 0;
-            this.bunifuTextBoxCLINET.SelectionStart = 0;
-            this.bunifuTextBoxCLINET.ShortcutsEnabled = true;
-            this.bunifuTextBoxCLINET.Size = new System.Drawing.Size(260, 39);
-            this.bunifuTextBoxCLINET.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBoxCLINET.TabIndex = 546;
-            this.bunifuTextBoxCLINET.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBoxCLINET.TextMarginBottom = 0;
-            this.bunifuTextBoxCLINET.TextMarginLeft = 3;
-            this.bunifuTextBoxCLINET.TextMarginTop = 1;
-            this.bunifuTextBoxCLINET.TextPlaceholder = "Enter text";
-            this.bunifuTextBoxCLINET.UseSystemPasswordChar = false;
-            this.bunifuTextBoxCLINET.WordWrap = true;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(452, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(153, 23);
-            this.label10.TabIndex = 545;
-            this.label10.Text = "PAYE PAR MOIS : ";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label15.Location = new System.Drawing.Point(512, 99);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 23);
-            this.label15.TabIndex = 544;
-            this.label15.Text = "INTIERET : ";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label16.Location = new System.Drawing.Point(30, 111);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(102, 23);
-            this.label16.TabIndex = 543;
-            this.label16.Text = "BANQUE :  ";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label21.Location = new System.Drawing.Point(44, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 23);
-            this.label21.TabIndex = 542;
-            this.label21.Text = "CLIENT : ";
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label19.Location = new System.Drawing.Point(354, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(126, 31);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "CONTRAT";
             // 
             // DETAIL_CONTRAT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuButtonCP);
             this.Controls.Add(this.STATISTIC_CONTRAT);
             this.Controls.Add(this.FICHIERJOINT_CONTRAT);
@@ -2062,7 +2103,7 @@
             this.Controls.Add(this.PARTES_OF_CONTRAT);
             this.Controls.Add(this.bunifuPages1);
             this.Name = "DETAIL_CONTRAT";
-            this.Size = new System.Drawing.Size(906, 638);
+            this.Size = new System.Drawing.Size(906, 642);
             this.Load += new System.EventHandler(this.STATISTIC_CONTRAT_Click);
             this.VisibleChanged += new System.EventHandler(this.DETAIL_CONTRAT_VisibleChanged);
             this.bunifuPages1.ResumeLayout(false);
@@ -2082,6 +2123,8 @@
             this.pretbanquedetails.PerformLayout();
             this.panelcacher.ResumeLayout(false);
             this.panelcacher.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2155,5 +2198,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label BLBCONTRAT;
+        private System.Windows.Forms.Label label19;
     }
 }

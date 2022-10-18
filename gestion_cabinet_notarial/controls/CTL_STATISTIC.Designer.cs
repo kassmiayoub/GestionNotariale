@@ -116,7 +116,7 @@
             this.bunifuDataGridView_statistic.RowHeadersVisible = false;
             this.bunifuDataGridView_statistic.RowTemplate.Height = 40;
             this.bunifuDataGridView_statistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_statistic.Size = new System.Drawing.Size(791, 320);
+            this.bunifuDataGridView_statistic.Size = new System.Drawing.Size(805, 313);
             this.bunifuDataGridView_statistic.TabIndex = 0;
             this.bunifuDataGridView_statistic.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -171,7 +171,7 @@
             this.bunifuDataGridView_T.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_T.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_T.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_T.Location = new System.Drawing.Point(7, 537);
+            this.bunifuDataGridView_T.Location = new System.Drawing.Point(7, 530);
             this.bunifuDataGridView_T.Name = "bunifuDataGridView_T";
             this.bunifuDataGridView_T.RowHeadersVisible = false;
             this.bunifuDataGridView_T.RowTemplate.Height = 40;
@@ -187,7 +187,7 @@
             this.panel_filter.Controls.Add(this.bunifuDatePicker_F);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_D);
             this.panel_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.panel_filter.Location = new System.Drawing.Point(566, 62);
+            this.panel_filter.Location = new System.Drawing.Point(580, 62);
             this.panel_filter.Name = "panel_filter";
             this.panel_filter.Size = new System.Drawing.Size(228, 131);
             this.panel_filter.TabIndex = 490;
@@ -268,7 +268,7 @@
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch.Location = new System.Drawing.Point(293, 151);
+            this.ButtonSearch.Location = new System.Drawing.Point(300, 151);
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -292,7 +292,7 @@
             this.bunifuPanel1.Controls.Add(this.radioButton_CREDIT);
             this.bunifuPanel1.Controls.Add(this.radioButton_H);
             this.bunifuPanel1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.bunifuPanel1.Location = new System.Drawing.Point(99, 30);
+            this.bunifuPanel1.Location = new System.Drawing.Point(106, 30);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(307, 45);
@@ -373,7 +373,7 @@
             this.bunifuDataGridView_T_credit_honoraires.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_T_credit_honoraires.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_T_credit_honoraires.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_T_credit_honoraires.Location = new System.Drawing.Point(402, 537);
+            this.bunifuDataGridView_T_credit_honoraires.Location = new System.Drawing.Point(416, 530);
             this.bunifuDataGridView_T_credit_honoraires.Name = "bunifuDataGridView_T_credit_honoraires";
             this.bunifuDataGridView_T_credit_honoraires.RowHeadersVisible = false;
             this.bunifuDataGridView_T_credit_honoraires.RowTemplate.Height = 40;
@@ -387,7 +387,7 @@
             this.radioButton_filtrage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_filtrage.AutoSize = true;
             this.radioButton_filtrage.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.radioButton_filtrage.Location = new System.Drawing.Point(598, 33);
+            this.radioButton_filtrage.Location = new System.Drawing.Point(612, 33);
             this.radioButton_filtrage.Name = "radioButton_filtrage";
             this.radioButton_filtrage.Size = new System.Drawing.Size(196, 27);
             this.radioButton_filtrage.TabIndex = 495;
@@ -418,7 +418,7 @@
             this.Controls.Add(this.bunifuDataGridView_T);
             this.Controls.Add(this.bunifuDataGridView_statistic);
             this.Name = "CTL_STATISTIC";
-            this.Size = new System.Drawing.Size(797, 712);
+            this.Size = new System.Drawing.Size(811, 705);
             this.Load += new System.EventHandler(this.CTL_STATISTIC_Load);
             this.VisibleChanged += new System.EventHandler(this.CTL_STATISTIC_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_statistic)).EndInit();

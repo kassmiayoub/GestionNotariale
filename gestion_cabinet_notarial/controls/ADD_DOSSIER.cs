@@ -399,6 +399,11 @@ namespace gestion_cabinet_notarial
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class dossierSerche
     {

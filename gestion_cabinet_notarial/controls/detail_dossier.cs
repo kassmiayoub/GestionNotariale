@@ -31,6 +31,11 @@ namespace gestion_cabinet_notarial
         }
         private void button_add_contrat_Click(object sender, EventArgs e)
         {
+            if(partee.FindByValues(ele => ele.numdossier == THEME.numdossier).ToList().Count < 2)
+            {
+                MessageBox.Show("les partes doit etre minimum deux");
+                return;
+            }
             if (!THEME.acceder("AJOUTER CONTART"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
@@ -41,7 +46,7 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("la selection de type contrat est vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 return;
             }
-            if (bunifuDropdowntype_contrat.Text == "PRET BANQUE" || bunifuDropdowntype_contrat.Text == "credit deux personne")
+            if (bunifuDropdowntype_contrat.Text == "PRET BANQUE" || bunifuDropdowntype_contrat.Text == "CREDIT DEUX PERSONNES")
             {
                 using (contrat_pret_banque f1 = new contrat_pret_banque(bunifuDropdowntype_contrat.Text)) { f1.ShowDialog(); }
             }
@@ -76,7 +81,7 @@ namespace gestion_cabinet_notarial
             //parte.utilisateur = THEME.id_user;
             parte.numdossier = THEME.numdossier;
             partee.Add(parte);
-            THEME.operation($"AJOTER UN PARTE POUR DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"AJOTER UN PARTE POUR DOSSIER DE NUMERO{THEME.numdossier}");
             MessageBox.Show("le parte ajouter avec success");
         }
         private void ButtonAdd_FICHIER_Click(object sender, EventArgs e)
@@ -101,7 +106,7 @@ namespace gestion_cabinet_notarial
             file.descreption = textBoxdesc.Text;
             file.numdossier = THEME.numdossier;
             csl_Bl_Fichier_dossier.Add(file);
-            THEME.operation($"AJOTER UN FICHIER POUR DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"AJOTER UN FICHIER POUR DOSSIER DE NUMERO {THEME.numdossier}");
             MessageBox.Show("le fichier ajouter avec success");
         }
         private void dataGridViewlist_contrat_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -118,7 +123,7 @@ namespace gestion_cabinet_notarial
                 {
                     THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
                     THEME.navigat(typeof(DETAIL_CONTRAT));
-                    THEME.operation($"CONSULTER DETAILS DE CONTRAT ID {THEME.id_C} DE DOSSIER DE NUMERENT {THEME.numdossier}");
+                    THEME.operation($"CONSULTER DETAILS DE CONTRAT ID {THEME.id_C} DE DOSSIER DE NUMERO {THEME.numdossier}");
                 }
             }
         }
@@ -143,7 +148,7 @@ namespace gestion_cabinet_notarial
                             File.Delete(path);                            
                         csl_Bl_Fichier_dossier.Remove(csl_Bl_Fichier_dossier.FindById(idfile));
                         csl_Bl_Fichier_dossier.SaveChanges();
-                        THEME.operation($"SIPRIMER FICHIER DE DOSSIER DE NUMERENT {THEME.numdossier}");
+                        THEME.operation($"SIPRIMER FICHIER DE DOSSIER DE NUMERO {THEME.numdossier}");
                     }
                 }
             }
@@ -164,7 +169,7 @@ namespace gestion_cabinet_notarial
                 CONDITION= x.Condition
             }).ToList();
             bunifuDataGridView_list_partes.DataSource=ListDataSource;
-            THEME.operation($"CONSULTER DES PARTES DE DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"CONSULTER DES PARTES DE DOSSIER DE NUMERO {THEME.numdossier}");
         }
         private void CONTRAT_Click(object sender, EventArgs e)
         {
@@ -177,7 +182,7 @@ namespace gestion_cabinet_notarial
                 dtov = (DateTime)ele.dateouverture
             }).ToList();
             THEME.add_btn_to_datagrid(dataGridViewlist_contrat, "DETAIL", "DETAIL", 4);
-            THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERO {THEME.numdossier}");
         }
         private void FICHIERJOINT_dossier_Click(object sender, EventArgs e)
         {
@@ -198,7 +203,7 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_file_dossier.DataSource = files;
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "sipprision", "supprimer", 4);
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "affichage", "affichier", 5);
-            THEME.operation($"CONSULTER DES FICHIERS DE DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"CONSULTER DES FICHIERS DE DOSSIER DE NUMERO {THEME.numdossier}");
         }
 
         private void ButtonSavefile_fichier_joint_dossier_Click(object sender, EventArgs e)
@@ -226,13 +231,14 @@ namespace gestion_cabinet_notarial
             bunifuDataGridView_list_file_dossier.DataSource = files;
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "sipprision", "supprimer", 4);
             THEME.add_btn_to_datagrid(bunifuDataGridView_list_file_dossier, "affichage", "affichier", 5);
-            THEME.operation($"CHERCHER DES FICHIERS DE DOSSIER DE NUMERENT {THEME.numdossier}");
+            THEME.operation($"CHERCHER DES FICHIERS DE DOSSIER DE NUMERO {THEME.numdossier}");
         }
 
         private void detail_dossier_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible == true)
             {
+                DOSSIER.Text = THEME.numdossier;
                 var ListDataSource = new List<clien>();
                 var partcontratechange = partee.FindByValues(ele => ele.numdossier == THEME.numdossier).Select(s => new { idc = s.idClient }).ToList();
                 ListDataSource = cls.GetAll().Select(ele => new clien()
@@ -270,13 +276,34 @@ namespace gestion_cabinet_notarial
                     CONTRAT.PerformClick();
                 }
                 // FICHIERJOINT_dossier.PerformClick();                
-                THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERENT {THEME.numdossier}");
+                THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERO {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
             }
         }
         private void detail_dossier_Load(object sender, EventArgs e)
         {
-
+            var typedossier = cls_Bl_Dossier.FindByValues(el => el.Numdossier == THEME.numdossier).First().typedossier;
+            bunifuDropdowntype_contrat.Items.Clear();
+            if(typedossier == "location")
+            {
+                bunifuDropdowntype_contrat.Items.Add("CONTRAT DE LOCATION");
+                bunifuDropdowntype_contrat.Items.Add("PROMESE DE LOCATION");
+                bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
+            }
+            else if(typedossier == "vente")
+            {
+                bunifuDropdowntype_contrat.Items.Add("CONTRAT DE VENTE");
+                bunifuDropdowntype_contrat.Items.Add("PROMESE DE VENTE");
+                bunifuDropdowntype_contrat.Items.Add("PROMESE DE LOCATION");
+            }
+            else if(typedossier == "change")
+            {
+                bunifuDropdowntype_contrat.Items.Add("ECHANGE");
+            }
+            else
+            {
+                bunifuDropdowntype_contrat.Items.Add("CREDIT DEUX PERSONNES");
+            }
         }
 
         private void bunifuButton_CDG_Click(object sender, EventArgs e)

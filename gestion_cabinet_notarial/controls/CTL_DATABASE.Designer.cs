@@ -39,8 +39,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TextBoxSavePathRestore = new System.Windows.Forms.TextBox();
             this.button_Restore = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -57,7 +60,7 @@
             this.bunifuPanel1.Controls.Add(this.TextBoxSavePath);
             this.bunifuPanel1.Controls.Add(this.ButtonSaveSettings);
             this.bunifuPanel1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.bunifuPanel1.Location = new System.Drawing.Point(42, 62);
+            this.bunifuPanel1.Location = new System.Drawing.Point(21, 195);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(587, 210);
@@ -140,7 +143,7 @@
             this.bunifuPanel2.Controls.Add(this.TextBoxSavePathRestore);
             this.bunifuPanel2.Controls.Add(this.button_Restore);
             this.bunifuPanel2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.bunifuPanel2.Location = new System.Drawing.Point(42, 297);
+            this.bunifuPanel2.Location = new System.Drawing.Point(21, 430);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(587, 210);
@@ -209,18 +212,45 @@
             this.button_Restore.UseVisualStyleBackColor = false;
             this.button_Restore.Click += new System.EventHandler(this.button_Restore_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(630, 52);
+            this.panel1.TabIndex = 426;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(196, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(224, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "BASE DE DONNEE";
+            // 
             // CTL_DATABASE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "CTL_DATABASE";
-            this.Size = new System.Drawing.Size(687, 527);
+            this.Size = new System.Drawing.Size(636, 684);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +267,7 @@
         public System.Windows.Forms.Button button_Restore;
         public System.Windows.Forms.Button ButtonSerch_client;
         public System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

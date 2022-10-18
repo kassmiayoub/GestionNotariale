@@ -22,6 +22,7 @@ namespace gestion_cabinet_notarial.controls
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
+           
         }
 
         private void CTL_STATISTIC_Load(object sender, EventArgs e)

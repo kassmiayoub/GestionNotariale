@@ -73,9 +73,9 @@
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.facture" Width="1.5" PointX="13.5" PointY="39.125" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" />
-        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.creditpersonne1" Width="1.5" PointX="13.5" PointY="31.125" />
-        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__creditper__idcon__37703C52" />
-        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__creditper__utili__3864608B" />
+        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.contratcredit" Width="1.5" PointX="10.5" PointY="30.125" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__contratcr__idcon__3B40CD36" />
+        <AssociationConnector Association="gestion_cabinet_notarialModel.FK__contratcr__utili__3C34F16F" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

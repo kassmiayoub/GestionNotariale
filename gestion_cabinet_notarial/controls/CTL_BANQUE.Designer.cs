@@ -42,7 +42,10 @@
             this.Button_vider_banque = new System.Windows.Forms.Button();
             this.ButtonAdd_banque = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_banque)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuTextBox_banque
@@ -74,7 +77,7 @@
             this.bunifuTextBox_banque.IconRight = null;
             this.bunifuTextBox_banque.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_banque.Lines = new string[0];
-            this.bunifuTextBox_banque.Location = new System.Drawing.Point(204, 28);
+            this.bunifuTextBox_banque.Location = new System.Drawing.Point(218, 79);
             this.bunifuTextBox_banque.MaxLength = 32767;
             this.bunifuTextBox_banque.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_banque.Modified = false;
@@ -174,12 +177,12 @@
             this.bunifuDataGridView_list_banque.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_banque.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_banque.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_banque.Location = new System.Drawing.Point(6, 168);
+            this.bunifuDataGridView_list_banque.Location = new System.Drawing.Point(6, 220);
             this.bunifuDataGridView_list_banque.Name = "bunifuDataGridView_list_banque";
             this.bunifuDataGridView_list_banque.RowHeadersVisible = false;
             this.bunifuDataGridView_list_banque.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_banque.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_banque.Size = new System.Drawing.Size(699, 375);
+            this.bunifuDataGridView_list_banque.Size = new System.Drawing.Size(699, 323);
             this.bunifuDataGridView_list_banque.TabIndex = 1;
             this.bunifuDataGridView_list_banque.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView_list_banque.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView_list_banque_CellClick);
@@ -195,7 +198,7 @@
             this.ButtonEdit_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonEdit_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Edit;
             this.ButtonEdit_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonEdit_banque.Location = new System.Drawing.Point(407, 109);
+            this.ButtonEdit_banque.Location = new System.Drawing.Point(421, 160);
             this.ButtonEdit_banque.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonEdit_banque.Name = "ButtonEdit_banque";
             this.ButtonEdit_banque.Size = new System.Drawing.Size(132, 35);
@@ -217,7 +220,7 @@
             this.Button_vider_banque.ForeColor = System.Drawing.Color.White;
             this.Button_vider_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.Button_vider_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_vider_banque.Location = new System.Drawing.Point(139, 109);
+            this.Button_vider_banque.Location = new System.Drawing.Point(153, 160);
             this.Button_vider_banque.Margin = new System.Windows.Forms.Padding(2);
             this.Button_vider_banque.Name = "Button_vider_banque";
             this.Button_vider_banque.Size = new System.Drawing.Size(132, 35);
@@ -238,7 +241,7 @@
             this.ButtonAdd_banque.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_banque.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_banque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_banque.Location = new System.Drawing.Point(273, 109);
+            this.ButtonAdd_banque.Location = new System.Drawing.Point(287, 160);
             this.ButtonAdd_banque.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_banque.Name = "ButtonAdd_banque";
             this.ButtonAdd_banque.Size = new System.Drawing.Size(132, 35);
@@ -255,16 +258,41 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(76, 42);
+            this.label3.Location = new System.Drawing.Point(90, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 424;
             this.label3.Text = "BANQUE :";
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(229, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(234, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "AJOUTER BANQUE";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(6, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(696, 52);
+            this.panel1.TabIndex = 425;
+            // 
             // CTL_BANQUE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ButtonEdit_banque);
             this.Controls.Add(this.Button_vider_banque);
@@ -275,6 +303,8 @@
             this.Size = new System.Drawing.Size(705, 546);
             this.VisibleChanged += new System.EventHandler(this.CTL_BANQUE_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_banque)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +318,7 @@
         public System.Windows.Forms.Button Button_vider_banque;
         public System.Windows.Forms.Button ButtonAdd_banque;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }

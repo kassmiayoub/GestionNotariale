@@ -354,12 +354,12 @@
     <Compile Include="ADD_OBJ.Designer.cs">
       <DependentUpon>ADD_OBJ.cs</DependentUpon>
     </Compile>
-    <Compile Include="BL\bl_creditpersonne.cs" />
     <Compile Include="BL\ClientNormale.cs" />
     <Compile Include="BL\ClientProfessionnel.cs" />
     <Compile Include="BL\cls_bl_banque.cs" />
     <Compile Include="BL\cls_bl_contrat.cs" />
     <Compile Include="BL\cls_bl_credit.cs" />
+    <Compile Include="BL\cls_bl_creditpersonne.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
     <Compile Include="BL\CLS_BL_LOG.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
@@ -398,10 +398,10 @@
     <Compile Include="context\contrat.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="context\credit.cs">
+    <Compile Include="context\contratcredit.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="context\creditpersonne1.cs">
+    <Compile Include="context\credit.cs">
       <DependentUpon>gestion_cabinet_cotarialEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="context\devi.cs">

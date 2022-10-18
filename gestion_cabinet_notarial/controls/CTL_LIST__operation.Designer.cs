@@ -40,8 +40,11 @@
             this.bunifuDropdown_users = new Bunifu.UI.WinForms.BunifuDropdown();
             this.panel_filter = new System.Windows.Forms.Panel();
             this.button_detail_dossier = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_operation)).BeginInit();
             this.panel_filter.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDataGridView_list_operation
@@ -97,12 +100,12 @@
             this.bunifuDataGridView_list_operation.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView_list_operation.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView_list_operation.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView_list_operation.Location = new System.Drawing.Point(2, 228);
+            this.bunifuDataGridView_list_operation.Location = new System.Drawing.Point(2, 275);
             this.bunifuDataGridView_list_operation.Name = "bunifuDataGridView_list_operation";
             this.bunifuDataGridView_list_operation.RowHeadersVisible = false;
             this.bunifuDataGridView_list_operation.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_operation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView_list_operation.Size = new System.Drawing.Size(794, 444);
+            this.bunifuDataGridView_list_operation.Size = new System.Drawing.Size(794, 397);
             this.bunifuDataGridView_list_operation.TabIndex = 0;
             this.bunifuDataGridView_list_operation.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -111,7 +114,7 @@
             this.checkBox_filter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox_filter.AutoSize = true;
             this.checkBox_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.checkBox_filter.Location = new System.Drawing.Point(571, 50);
+            this.checkBox_filter.Location = new System.Drawing.Point(557, 97);
             this.checkBox_filter.Name = "checkBox_filter";
             this.checkBox_filter.Size = new System.Drawing.Size(196, 27);
             this.checkBox_filter.TabIndex = 489;
@@ -130,7 +133,7 @@
             this.ButtonSearch_operation.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch_operation.Image = global::gestion_cabinet_notarial.Properties.Resources.Search;
             this.ButtonSearch_operation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch_operation.Location = new System.Drawing.Point(344, 175);
+            this.ButtonSearch_operation.Location = new System.Drawing.Point(330, 222);
             this.ButtonSearch_operation.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch_operation.Name = "ButtonSearch_operation";
             this.ButtonSearch_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -233,7 +236,7 @@
             this.bunifuDropdown_users.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdown_users.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdown_users.ItemTopMargin = 3;
-            this.bunifuDropdown_users.Location = new System.Drawing.Point(208, 84);
+            this.bunifuDropdown_users.Location = new System.Drawing.Point(194, 131);
             this.bunifuDropdown_users.Name = "bunifuDropdown_users";
             this.bunifuDropdown_users.Size = new System.Drawing.Size(260, 32);
             this.bunifuDropdown_users.TabIndex = 493;
@@ -247,7 +250,7 @@
             this.panel_filter.Controls.Add(this.bunifuDatePicker_D);
             this.panel_filter.Controls.Add(this.bunifuDatePicker_F);
             this.panel_filter.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.panel_filter.Location = new System.Drawing.Point(531, 84);
+            this.panel_filter.Location = new System.Drawing.Point(517, 131);
             this.panel_filter.Name = "panel_filter";
             this.panel_filter.Size = new System.Drawing.Size(228, 126);
             this.panel_filter.TabIndex = 494;
@@ -262,7 +265,7 @@
             this.button_detail_dossier.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.button_detail_dossier.ForeColor = System.Drawing.Color.White;
             this.button_detail_dossier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_detail_dossier.Location = new System.Drawing.Point(109, 175);
+            this.button_detail_dossier.Location = new System.Drawing.Point(95, 222);
             this.button_detail_dossier.Margin = new System.Windows.Forms.Padding(2);
             this.button_detail_dossier.Name = "button_detail_dossier";
             this.button_detail_dossier.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -272,10 +275,35 @@
             this.button_detail_dossier.UseVisualStyleBackColor = false;
             this.button_detail_dossier.Click += new System.EventHandler(this.button_detail_dossier_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(793, 52);
+            this.panel1.TabIndex = 496;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(188, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(414, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "LES OPERATION DES UTILISATUER";
+            // 
             // CTL_LIST__operation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_detail_dossier);
             this.Controls.Add(this.panel_filter);
             this.Controls.Add(this.bunifuDropdown_users);
@@ -288,6 +316,8 @@
             this.VisibleChanged += new System.EventHandler(this.CTL_LIST_UTILISATUER_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_operation)).EndInit();
             this.panel_filter.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +333,7 @@
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown_users;
         private System.Windows.Forms.Panel panel_filter;
         public System.Windows.Forms.Button button_detail_dossier;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

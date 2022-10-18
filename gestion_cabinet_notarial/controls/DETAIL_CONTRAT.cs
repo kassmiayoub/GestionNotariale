@@ -26,7 +26,7 @@ namespace gestion_cabinet_notarial
         cls_bl_payement paye = new cls_bl_payement();
         CSL_BL_Client c = new CSL_BL_Client();
         CSL_BL_pret_banque pb = new CSL_BL_pret_banque();
-        bl_creditpersonne creditpersonne = new bl_creditpersonne();
+        cls_bl_creditpersonne creditpersonne = new cls_bl_creditpersonne();
 
         double Timbres;
         double Honoraires;
@@ -383,6 +383,8 @@ namespace gestion_cabinet_notarial
                 PARTES_OF_CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
                 int idc = THEME.id_C;
+                var c = con.FindByValues(el => el.Idcontrat == idc).FirstOrDefault();
+                BLBCONTRAT.Text = c.typecontrat + "  DOSSIER  " + THEME.numdossier;
                 var pret = pb.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
                 var cp = creditpersonne.FindByValues(ele => ele.idcontrat == idc).FirstOrDefault();
                 if (pret != null)

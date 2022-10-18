@@ -62,7 +62,10 @@
             this.bunifuTextBox_PRIXACHAT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuCheckBox_dossier = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.COEFFICIENT = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_cdg)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuTextBox_PRIXVENTE
@@ -628,14 +631,40 @@
             this.COEFFICIENT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.COEFFICIENT.Font = new System.Drawing.Font("Ubuntu Light", 11F, System.Drawing.FontStyle.Bold);
             this.COEFFICIENT.Location = new System.Drawing.Point(679, 228);
+            this.COEFFICIENT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.COEFFICIENT.Name = "COEFFICIENT";
             this.COEFFICIENT.Size = new System.Drawing.Size(100, 33);
             this.COEFFICIENT.TabIndex = 496;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(852, 52);
+            this.panel1.TabIndex = 506;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(207, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(448, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Caisse de dépôt et de gestion ( CDG )";
             // 
             // CTL_CDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuCheckBox_dossier);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuTextBox_PRIXACHAT);
@@ -663,6 +692,8 @@
             this.Load += new System.EventHandler(this.CTL_CDG_Load);
             this.VisibleChanged += new System.EventHandler(this.CTL_CDG_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_cdg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -692,5 +723,7 @@
         private System.Windows.Forms.Label label7;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox_PRIXACHAT;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox_dossier;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -38,7 +38,7 @@ namespace gestion_cabinet_notarial
             dtypeclient.Items.Add("VENDUERE");
             dtypeclient.Items.Add("ACHETEURE");
             dtypeclient.Items.Add("modan");
-            dtypeclient.Items.Add("modin"); 
+            dtypeclient.Items.Add("modin");
             BunifuDropdown typecontrat = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
             typecontrat.Items.Add("VENTE");
             typecontrat.Items.Add("PROMESE DE VENTE");

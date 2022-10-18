@@ -18,7 +18,7 @@ namespace gestion_cabinet_notarial
         CSL_BL_Client cls = new CSL_BL_Client();
         cls_bl_contrat con = new cls_bl_contrat();
         CSL_BL_pret_banque pret = new CSL_BL_pret_banque();
-        bl_creditpersonne creditpersonne = new bl_creditpersonne();
+        cls_bl_creditpersonne creditpersonne = new cls_bl_creditpersonne();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         cls_bl_partes_S parte_S = new cls_bl_partes_S();
         cls_bl_partes partee = new cls_bl_partes();
@@ -44,6 +44,7 @@ namespace gestion_cabinet_notarial
                 bunifuDropdown_banque.Visible = true;
                 almodan.Visible = true;
                 almodin.Visible = true;
+                bunifuDropdown_client.Visible = true;
             }
             else
             {
@@ -51,6 +52,7 @@ namespace gestion_cabinet_notarial
                 bunifuDropdown_banque.Visible = false;
                 almodan.Visible = false;
                 almodin.Visible = false;
+                bunifuDropdown_client.Visible = false;
             }
             label12.Text = type_contrat;
             bunifuCheckBoxancfcc.Checked = false;
@@ -178,13 +180,13 @@ namespace gestion_cabinet_notarial
             }
             else
             {
-                var CP = new creditpersonne1();
+                var CP = new contratcredit();
                 CP.descreption = richTextBox_description.Text;
                 CP.montant = double.Parse(bunifuTextBox_montant.Text);
                 int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
                 CP.deru = Days;
                 CP.idcontrat = idcontrat;
-                CP.utilisatuer = THEME.id_user;
+                CP.utilisateur = THEME.id_user;
                 creditpersonne.Add(CP);
            
                 List<Signature> list = new List<Signature>();

@@ -109,7 +109,7 @@
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idcont__5165187F" FromRole="contrat" ToRole="payement" />
     <NavigationProperty Name="Signatures" Relationship="Self.FK__Signature__idcon__4AB81AF0" FromRole="contrat" ToRole="Signature" />
     <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="contrat" ToRole="facture" />
-    <NavigationProperty Name="creditpersonnes1" Relationship="gestion_cabinet_notarialModel.FK__creditper__idcon__37703C52" FromRole="contrat" ToRole="creditpersonne1" />
+    <NavigationProperty Name="contratcredits" Relationship="gestion_cabinet_notarialModel.FK__contratcr__idcon__3B40CD36" FromRole="contrat" ToRole="contratcredit" />
   </EntityType>
   <EntityType Name="credit">
     <Key>
@@ -337,7 +337,7 @@
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__utilis__5441852A" FromRole="utilisateur" ToRole="payement" />
     <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__utili__300424B4" FromRole="utilisateur" ToRole="Rendez_vous" />
     <NavigationProperty Name="factures" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="utilisateur" ToRole="facture" />
-    <NavigationProperty Name="creditpersonnes1" Relationship="gestion_cabinet_notarialModel.FK__creditper__utili__3864608B" FromRole="utilisateur" ToRole="creditpersonne1" />
+    <NavigationProperty Name="contratcredits" Relationship="gestion_cabinet_notarialModel.FK__contratcr__utili__3C34F16F" FromRole="utilisateur" ToRole="contratcredit" />
   </EntityType>
   <Association Name="FK__banque__utilisat__4D94879B">
     <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="0..1" />
@@ -1020,14 +1020,14 @@
       <End Role="utilisateur" EntitySet="utilisateurs" />
       <End Role="facture" EntitySet="factures" />
     </AssociationSet>
-    <EntitySet Name="creditpersonne1" EntityType="gestion_cabinet_notarialModel.creditpersonne1" />
-    <AssociationSet Name="FK__creditper__idcon__37703C52" Association="gestion_cabinet_notarialModel.FK__creditper__idcon__37703C52">
+    <EntitySet Name="contratcredits" EntityType="gestion_cabinet_notarialModel.contratcredit" />
+    <AssociationSet Name="FK__contratcr__idcon__3B40CD36" Association="gestion_cabinet_notarialModel.FK__contratcr__idcon__3B40CD36">
       <End Role="contrat" EntitySet="contrats" />
-      <End Role="creditpersonne1" EntitySet="creditpersonne1" />
+      <End Role="contratcredit" EntitySet="contratcredits" />
     </AssociationSet>
-    <AssociationSet Name="FK__creditper__utili__3864608B" Association="gestion_cabinet_notarialModel.FK__creditper__utili__3864608B">
+    <AssociationSet Name="FK__contratcr__utili__3C34F16F" Association="gestion_cabinet_notarialModel.FK__contratcr__utili__3C34F16F">
       <End Role="utilisateur" EntitySet="utilisateurs" />
-      <End Role="creditpersonne1" EntitySet="creditpersonne1" />
+      <End Role="contratcredit" EntitySet="contratcredits" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="information_cabinet">
@@ -1125,7 +1125,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="creditpersonne1">
+  <EntityType Name="contratcredit">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -1134,31 +1134,31 @@
     <Property Name="idcontrat" Type="Int32" />
     <Property Name="deru" Type="Int32" />
     <Property Name="descreption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="utilisatuer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__creditper__idcon__37703C52" FromRole="creditpersonne1" ToRole="contrat" />
-    <NavigationProperty Name="utilisateur" Relationship="gestion_cabinet_notarialModel.FK__creditper__utili__3864608B" FromRole="creditpersonne1" ToRole="utilisateur" />
+    <Property Name="utilisateur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__contratcr__idcon__3B40CD36" FromRole="contratcredit" ToRole="contrat" />
+    <NavigationProperty Name="utilisateur1" Relationship="gestion_cabinet_notarialModel.FK__contratcr__utili__3C34F16F" FromRole="contratcredit" ToRole="utilisateur" />
   </EntityType>
-  <Association Name="FK__creditper__idcon__37703C52">
+  <Association Name="FK__contratcr__idcon__3B40CD36">
     <End Type="gestion_cabinet_notarialModel.contrat" Role="contrat" Multiplicity="0..1" />
-    <End Type="gestion_cabinet_notarialModel.creditpersonne1" Role="creditpersonne1" Multiplicity="*" />
+    <End Type="gestion_cabinet_notarialModel.contratcredit" Role="contratcredit" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="contrat">
         <PropertyRef Name="Idcontrat" />
       </Principal>
-      <Dependent Role="creditpersonne1">
+      <Dependent Role="contratcredit">
         <PropertyRef Name="idcontrat" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__creditper__utili__3864608B">
+  <Association Name="FK__contratcr__utili__3C34F16F">
     <End Type="gestion_cabinet_notarialModel.utilisateur" Role="utilisateur" Multiplicity="0..1" />
-    <End Type="gestion_cabinet_notarialModel.creditpersonne1" Role="creditpersonne1" Multiplicity="*" />
+    <End Type="gestion_cabinet_notarialModel.contratcredit" Role="contratcredit" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="utilisateur">
         <PropertyRef Name="utilisateur1" />
       </Principal>
-      <Dependent Role="creditpersonne1">
-        <PropertyRef Name="utilisatuer" />
+      <Dependent Role="contratcredit">
+        <PropertyRef Name="utilisateur" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

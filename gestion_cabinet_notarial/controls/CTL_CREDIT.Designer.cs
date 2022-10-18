@@ -36,7 +36,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,21 +52,11 @@
             this.bunifuTextBox_MONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDatePicker_PAYMENT = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ButtonAdd = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_payemant_credit)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(514, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(169, 23);
-            this.label10.TabIndex = 439;
-            this.label10.Text = "PAYEMENT CREDIT";
             // 
             // label5
             // 
@@ -407,10 +396,35 @@
             this.ButtonAdd.UseVisualStyleBackColor = false;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1114, 52);
+            this.panel1.TabIndex = 461;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label6.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label6.Location = new System.Drawing.Point(438, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(234, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "PAYEMENT CREDIT";
+            // 
             // CTL_CREDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuDataGridViewlist_payemant_credit);
             this.Controls.Add(this.comboBox_contart_paye);
             this.Controls.Add(this.label12);
@@ -426,12 +440,13 @@
             this.Controls.Add(this.RD_ESPECES);
             this.Controls.Add(this.comboBox_banque_PY);
             this.Controls.Add(this.comboBoxCLIENT_PY);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.ButtonAdd);
             this.Name = "CTL_CREDIT";
             this.Size = new System.Drawing.Size(1120, 727);
             this.Load += new System.EventHandler(this.CTL_CREDIT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_payemant_credit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +454,6 @@
 
         #endregion
         public System.Windows.Forms.Button ButtonAdd;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -455,5 +469,7 @@
         private System.Windows.Forms.ComboBox comboBox_contart_paye;
         private System.Windows.Forms.Label label12;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridViewlist_payemant_credit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
     }
 }

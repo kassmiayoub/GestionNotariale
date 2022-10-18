@@ -12,16 +12,16 @@ namespace gestion_cabinet_notarial.context
     using System;
     using System.Collections.Generic;
     
-    public partial class creditpersonne1
+    public partial class contratcredit
     {
         public int id { get; set; }
         public Nullable<double> montant { get; set; }
         public Nullable<int> idcontrat { get; set; }
         public Nullable<int> deru { get; set; }
         public string descreption { get; set; }
-        public string utilisatuer { get; set; }
+        public string utilisateur { get; set; }
     
         public virtual contrat contrat { get; set; }
-        public virtual utilisateur utilisateur { get; set; }
+        public virtual utilisateur utilisateur1 { get; set; }
     }
 }

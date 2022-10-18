@@ -34,6 +34,11 @@ namespace gestion_cabinet_notarial
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
+        public void getnomcomplet(int idclient)
+        {
+            var client = cls.FindByValues(el => el.idClient == idclient).FirstOrDefault();
+            lblclient.Text = client.Nom +" "+ client.Prenom;
+        }
         public void sete_client(int idc)
         {
             THEME.id_Client = idc;
@@ -161,7 +166,8 @@ namespace gestion_cabinet_notarial
             }
         }
         private void AJOUTER_CLIENT_Click(object sender, EventArgs e)
-        {           
+        {
+            lblclient.Text = "";
             string name = ((BunifuButton)sender).Name;
             switch (name)
             {
@@ -210,8 +216,10 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
+            
             if (textBoxIDCLIENT.Text == "") { return; }
             int id = int.Parse(textBoxIDCLIENT.Text);
+            getnomcomplet(id);
             if (cls.FindById(id) == null)
                 return;
             string name = ((BunifuButton)sender).Name;
@@ -490,6 +498,7 @@ namespace gestion_cabinet_notarial
             }
             if (textBoxIDCLIENT.Text.Trim() == "")
                 return;
+            getnomcomplet(int.Parse(textBoxIDCLIENT.Text));
             var ListDataSource = new List<dossier_client>();
             ListDataSource = parte_client.GetAll().Where(id => id.idClient==int.Parse(textBoxIDCLIENT.Text)).Select(ele =>   new dossier_client()
             {
@@ -552,6 +561,11 @@ namespace gestion_cabinet_notarial
         }
 
         private void tabPage_CLIENT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
