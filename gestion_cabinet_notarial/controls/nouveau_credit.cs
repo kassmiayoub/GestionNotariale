@@ -54,6 +54,7 @@ namespace gestion_cabinet_notarial.controls
             credit.idClient = (int)comboBox_client_credit.SelectedValue;
             credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;
             credit.montant = double.Parse(bunifuTextBox_montant_credit.Text);
+            credit.date = DateTime.Now.Date;
             credit.utilisateur = THEME.id_user;
             var cntrat = con.FindByValues(ele => ele.Idcontrat == credit.idcontrat).FirstOrDefault();
             if(cntrat != null)

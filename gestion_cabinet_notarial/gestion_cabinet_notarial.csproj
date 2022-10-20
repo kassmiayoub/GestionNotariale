@@ -336,6 +336,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -497,6 +498,12 @@
     <Compile Include="controls\AJOUTER_FICHIERS.Designer.cs">
       <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\chrat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\chrat.Designer.cs">
+      <DependentUpon>chrat.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\CTL_AGENDA.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -580,6 +587,12 @@
     </Compile>
     <Compile Include="controls\nouveau_credit.Designer.cs">
       <DependentUpon>nouveau_credit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\statsitic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\statsitic.Designer.cs">
+      <DependentUpon>statsitic.cs</DependentUpon>
     </Compile>
     <Compile Include="CONTROL_CONTROL_BOX.cs">
       <SubType>UserControl</SubType>
@@ -733,6 +746,9 @@
     <EmbeddedResource Include="controls\AJOUTER_FICHIERS.resx">
       <DependentUpon>AJOUTER_FICHIERS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controls\chrat.resx">
+      <DependentUpon>chrat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_AGENDA.resx">
       <DependentUpon>CTL_AGENDA.cs</DependentUpon>
     </EmbeddedResource>
@@ -774,6 +790,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\nouveau_credit.resx">
       <DependentUpon>nouveau_credit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\statsitic.resx">
+      <DependentUpon>statsitic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTROL_MAIN_HEADER.resx">
       <DependentUpon>CONTROL_MAIN_HEADER.cs</DependentUpon>

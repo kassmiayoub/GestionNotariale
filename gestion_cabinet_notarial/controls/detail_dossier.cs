@@ -121,7 +121,12 @@ namespace gestion_cabinet_notarial
                 }
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {
-                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());
+                    THEME.id_C = int.Parse(dgv.Rows[e.RowIndex].Cells[dgv.Columns["IDCONTART"].Name].Value.ToString());                    
+                    var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == THEME.numdossier).FirstOrDefault();
+                    if (dossier.typedossier == "vente")
+                    {
+                        THEME.prix = con.FindByValues(ele => ele.Idcontrat == THEME.id_C).Select(s => s.dossier.PRIX_ACQUISITION).First().Value;
+                    }
                     THEME.navigat(typeof(DETAIL_CONTRAT));
                     THEME.operation($"CONSULTER DETAILS DE CONTRAT ID {THEME.id_C} DE DOSSIER DE NUMERO {THEME.numdossier}");
                 }
@@ -294,7 +299,7 @@ namespace gestion_cabinet_notarial
             {
                 bunifuDropdowntype_contrat.Items.Add("CONTRAT DE VENTE");
                 bunifuDropdowntype_contrat.Items.Add("PROMESE DE VENTE");
-                bunifuDropdowntype_contrat.Items.Add("PROMESE DE LOCATION");
+                bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
             }
             else if(typedossier == "change")
             {

@@ -37,19 +37,16 @@ namespace gestion_cabinet_notarial
             MaxHeight = 50 + FlowLayoutPanelSubItems.Height;
             PictureBoxArrow.Image = Expanded ? Resources.TopArrow : Resources.DownArrow;
         }
-
         private void MainMenuItem_MouseHover(object sender, System.EventArgs e)
         {
             BackColor = Color.FromArgb(244, 245, 245);
             PictureBoxArrow.Image = Expanded ? Resources.TopArrow :Resources.DownArrow;
         }
-
         private void MainMenuItem_MouseLeave(object sender, System.EventArgs e)
         {
             BackColor = Color.White;
             PictureBoxArrow.Image = Expanded ?Resources.TopArrow :Resources.DownArrow;
         }
-
         private void MainMenuItem_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -97,7 +94,6 @@ namespace gestion_cabinet_notarial
                 PictureBoxIcon.Click += EH;
             }
         }
-
         private void LabelItemName_Click(object sender, EventArgs e)
         {
 

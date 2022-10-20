@@ -1,4 +1,5 @@
-﻿using gestion_cabinet_notarial.reports;
+﻿using gestion_cabinet_notarial.BL;
+using gestion_cabinet_notarial.reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class print_facture : Form
     {
+        cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         static public string foncier;
         static public string typecontart;
         static public string paye;
@@ -45,14 +47,32 @@ namespace gestion_cabinet_notarial
             f.SetParameterValue("montant_tamber", montant_tamber);
             f.SetParameterValue("paye_tamber", paye_tamber);
             f.SetParameterValue("montant_Ancfcc", montant_Ancfcc);
-            f.SetParameterValue("paye_Ancfcc", paye_Ancfcc);
-            f.SetParameterValue("foncier", foncier);
+            f.SetParameterValue("paye_Ancfcc", paye_Ancfcc);            
             f.SetParameterValue("typecontart", typecontart);
             f.SetParameterValue("ndossier", ndossier);
             f.SetParameterValue("paye", paye);
             f.SetParameterValue("reste", reste);
             f.SetParameterValue("etatpayement", etatpayement);
-            f.SetParameterValue("PRIXVENTE",THEME.prix) ;
+            var dossier = cls_Bl_Dossier.FindByValues(el => el.Numdossier == ndossier).FirstOrDefault();
+            if(dossier.typedossier != "change")
+            {
+                f.SetParameterValue("foncier", foncier);
+            }
+            else
+            {
+                f.SetParameterValue("foncier", "");
+            }
+            if (dossier.typedossier == "vente"|| dossier.typedossier == "location")
+            {
+                f.SetParameterValue("PRIXVENTE", dossier.PRIX_ACQUISITION);
+                f.SetParameterValue("typeprix", $"PRIX DE {dossier.typedossier}");
+            }
+            else
+            {
+                f.SetParameterValue("PRIXVENTE", "");
+                f.SetParameterValue("typeprix", "");
+            }
+            
             crystalReportViewer1.ReportSource = f;
         }
     }

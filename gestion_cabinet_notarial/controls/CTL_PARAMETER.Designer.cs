@@ -156,7 +156,10 @@
             this.bunifuTextBox_USER = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox_NOM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonInit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
             this.panel_check_box.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -165,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(72, 86);
+            this.label1.Location = new System.Drawing.Point(72, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 4;
@@ -177,7 +180,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(488, 83);
+            this.label2.Location = new System.Drawing.Point(488, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 5;
@@ -189,7 +192,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(3, 155);
+            this.label3.Location = new System.Drawing.Point(3, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 23);
             this.label3.TabIndex = 6;
@@ -201,7 +204,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(421, 155);
+            this.label4.Location = new System.Drawing.Point(421, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 23);
             this.label4.TabIndex = 7;
@@ -209,7 +212,10 @@
             // 
             // panel_check_box
             // 
-            this.panel_check_box.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel_check_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_check_box.AutoScroll = true;
             this.panel_check_box.Controls.Add(this.bunifuCheckBox_CDG);
             this.panel_check_box.Controls.Add(this.label49);
             this.panel_check_box.Controls.Add(this.bunifuSeparator10);
@@ -311,7 +317,8 @@
             this.panel_check_box.Controls.Add(this.bunifuSeparator3);
             this.panel_check_box.Controls.Add(this.bunifuSeparator1);
             this.panel_check_box.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.panel_check_box.Location = new System.Drawing.Point(5, 260);
+            this.panel_check_box.Location = new System.Drawing.Point(3, 221);
+            this.panel_check_box.MinimumSize = new System.Drawing.Size(858, 592);
             this.panel_check_box.Name = "panel_check_box";
             this.panel_check_box.Size = new System.Drawing.Size(858, 592);
             this.panel_check_box.TabIndex = 405;
@@ -3531,7 +3538,7 @@
             this.ButtonAdd_utilisatuer.ForeColor = System.Drawing.Color.White;
             this.ButtonAdd_utilisatuer.Image = global::gestion_cabinet_notarial.Properties.Resources.Add;
             this.ButtonAdd_utilisatuer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAdd_utilisatuer.Location = new System.Drawing.Point(451, 207);
+            this.ButtonAdd_utilisatuer.Location = new System.Drawing.Point(454, 181);
             this.ButtonAdd_utilisatuer.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonAdd_utilisatuer.Name = "ButtonAdd_utilisatuer";
             this.ButtonAdd_utilisatuer.Size = new System.Drawing.Size(132, 35);
@@ -3571,7 +3578,7 @@
             this.bunifuTextBox_PASS.IconRight = null;
             this.bunifuTextBox_PASS.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PASS.Lines = new string[0];
-            this.bunifuTextBox_PASS.Location = new System.Drawing.Point(596, 139);
+            this.bunifuTextBox_PASS.Location = new System.Drawing.Point(596, 131);
             this.bunifuTextBox_PASS.MaxLength = 32767;
             this.bunifuTextBox_PASS.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PASS.Modified = false;
@@ -3647,7 +3654,7 @@
             this.bunifuTextBox_PRENOM.IconRight = null;
             this.bunifuTextBox_PRENOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_PRENOM.Lines = new string[0];
-            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(596, 67);
+            this.bunifuTextBox_PRENOM.Location = new System.Drawing.Point(596, 73);
             this.bunifuTextBox_PRENOM.MaxLength = 32767;
             this.bunifuTextBox_PRENOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_PRENOM.Modified = false;
@@ -3723,7 +3730,7 @@
             this.bunifuTextBox_USER.IconRight = null;
             this.bunifuTextBox_USER.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_USER.Lines = new string[0];
-            this.bunifuTextBox_USER.Location = new System.Drawing.Point(148, 139);
+            this.bunifuTextBox_USER.Location = new System.Drawing.Point(148, 131);
             this.bunifuTextBox_USER.MaxLength = 32767;
             this.bunifuTextBox_USER.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_USER.Modified = false;
@@ -3799,7 +3806,7 @@
             this.bunifuTextBox_NOM.IconRight = null;
             this.bunifuTextBox_NOM.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox_NOM.Lines = new string[0];
-            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(148, 67);
+            this.bunifuTextBox_NOM.Location = new System.Drawing.Point(148, 73);
             this.bunifuTextBox_NOM.MaxLength = 32767;
             this.bunifuTextBox_NOM.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox_NOM.Modified = false;
@@ -3857,7 +3864,7 @@
             this.ButtonInit.ForeColor = System.Drawing.Color.White;
             this.ButtonInit.Image = global::gestion_cabinet_notarial.Properties.Resources.Refresh;
             this.ButtonInit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonInit.Location = new System.Drawing.Point(296, 207);
+            this.ButtonInit.Location = new System.Drawing.Point(299, 181);
             this.ButtonInit.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonInit.Name = "ButtonInit";
             this.ButtonInit.Size = new System.Drawing.Size(132, 35);
@@ -3867,10 +3874,36 @@
             this.ButtonInit.UseVisualStyleBackColor = false;
             this.ButtonInit.Click += new System.EventHandler(this.ButtonInit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label50);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(862, 52);
+            this.panel1.TabIndex = 469;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label50.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label50.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label50.Location = new System.Drawing.Point(40, 12);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(791, 31);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "AJOUTER ET MODIFIER LES FONCTIONNELITES DES UTILISATUERS";
+            // 
             // CTL_PARAMETER_AJOUTER_UTILISATUER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonInit);
             this.Controls.Add(this.panel_check_box);
             this.Controls.Add(this.ButtonAdd_utilisatuer);
@@ -3882,11 +3915,15 @@
             this.Controls.Add(this.bunifuTextBox_PRENOM);
             this.Controls.Add(this.bunifuTextBox_USER);
             this.Controls.Add(this.bunifuTextBox_NOM);
+            this.MinimumSize = new System.Drawing.Size(868, 855);
             this.Name = "CTL_PARAMETER_AJOUTER_UTILISATUER";
             this.Size = new System.Drawing.Size(868, 855);
+            this.Load += new System.EventHandler(this.CTL_PARAMETER_AJOUTER_UTILISATUER_Load);
             this.VisibleChanged += new System.EventHandler(this.CTL_PARAMETER_AJOUTER_UTILISATUER_VisibleChanged);
             this.panel_check_box.ResumeLayout(false);
             this.panel_check_box.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4005,5 +4042,7 @@
         private System.Windows.Forms.Label label38;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox_AJOUTER_CDG;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label50;
     }
 }

@@ -40,7 +40,6 @@
             this.comboBox_contrat_credit = new System.Windows.Forms.ComboBox();
             this.comboBox_dossier_credit = new System.Windows.Forms.ComboBox();
             this.comboBox_client_credit = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +47,10 @@
             this.button_add_credit = new System.Windows.Forms.Button();
             this.ButtonSerch_client = new System.Windows.Forms.Button();
             this.bunifuDataGridViewlist_credit = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_credit)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label14
@@ -96,19 +98,6 @@
             this.comboBox_client_credit.Size = new System.Drawing.Size(279, 31);
             this.comboBox_client_credit.TabIndex = 469;
             this.comboBox_client_credit.SelectedIndexChanged += new System.EventHandler(this.comboBox_client_credit_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(414, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 23);
-            this.label11.TabIndex = 468;
-            this.label11.Text = "Nouveau CREDIT";
             // 
             // label8
             // 
@@ -328,17 +317,41 @@
             this.bunifuDataGridViewlist_credit.TabIndex = 475;
             this.bunifuDataGridViewlist_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1019, 52);
+            this.panel1.TabIndex = 476;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(390, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(227, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "NOUVEAU CREDIT";
+            // 
             // nouveau_credit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuDataGridViewlist_credit);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.comboBox_contrat_credit);
             this.Controls.Add(this.comboBox_dossier_credit);
             this.Controls.Add(this.bunifuTextBox_montant_credit);
             this.Controls.Add(this.comboBox_client_credit);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.button_add_credit);
             this.Controls.Add(this.ButtonSerch_client);
             this.Controls.Add(this.label8);
@@ -348,6 +361,8 @@
             this.Size = new System.Drawing.Size(1025, 677);
             this.Load += new System.EventHandler(this.nouveau_credit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_credit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,12 +375,13 @@
         private System.Windows.Forms.ComboBox comboBox_dossier_credit;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox_montant_credit;
         private System.Windows.Forms.ComboBox comboBox_client_credit;
-        private System.Windows.Forms.Label label11;
         public System.Windows.Forms.Button button_add_credit;
         public System.Windows.Forms.Button ButtonSerch_client;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridViewlist_credit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -155,7 +155,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gestion_cabinet_notarial.Properties.Resources.alert;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 50);
             this.pictureBox1.TabIndex = 4;
@@ -184,7 +184,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::gestion_cabinet_notarial.Properties.Resources.contrat;
-            this.pictureBox4.Location = new System.Drawing.Point(64, 52);
+            this.pictureBox4.Location = new System.Drawing.Point(70, 52);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -382,7 +382,6 @@
             this.Controls.Add(this.bunifuPanel_dossiers_passer);
             this.Name = "Accueil";
             this.Size = new System.Drawing.Size(1432, 650);
-            this.Load += new System.EventHandler(this.Accueil_Load);
             this.VisibleChanged += new System.EventHandler(this.Accueil_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_accueil)).EndInit();
             this.panel1.ResumeLayout(false);

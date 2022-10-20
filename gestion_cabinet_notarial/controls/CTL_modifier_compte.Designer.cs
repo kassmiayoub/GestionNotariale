@@ -55,6 +55,9 @@
             this.bunifuTextBox_NOM = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonInit = new System.Windows.Forms.Button();
             this.ButtonEdit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -452,10 +455,35 @@
             this.ButtonEdit.UseVisualStyleBackColor = false;
             this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(858, 52);
+            this.panel1.TabIndex = 471;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(220, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(396, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "MODIFIER COMPTE UTILISATUER";
+            // 
             // CTL_modifier_compte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonEdit);
             this.Controls.Add(this.ButtonInit);
             this.Controls.Add(this.label4);
@@ -469,6 +497,8 @@
             this.Name = "CTL_modifier_compte";
             this.Size = new System.Drawing.Size(864, 703);
             this.VisibleChanged += new System.EventHandler(this.CTL_modifier_compte_VisibleChanged);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,5 +516,7 @@
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox_NOM;
         public System.Windows.Forms.Button ButtonInit;
         public System.Windows.Forms.Button ButtonEdit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

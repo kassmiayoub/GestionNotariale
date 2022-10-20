@@ -413,7 +413,7 @@ namespace gestion_cabinet_notarial
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 42);
+            this.panel1.Size = new System.Drawing.Size(1089, 55);
             this.panel1.TabIndex = 482;
             // 
             // label5
@@ -422,7 +422,7 @@ namespace gestion_cabinet_notarial
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(430, 4);
+            this.label5.Location = new System.Drawing.Point(430, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(234, 31);
             this.label5.TabIndex = 0;

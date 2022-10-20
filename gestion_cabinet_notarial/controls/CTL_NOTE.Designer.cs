@@ -45,8 +45,11 @@
             this.bunifuDatePicker_date_alert = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox_tout_j = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_note)).BeginInit();
             this.panel_filter.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
@@ -332,10 +335,35 @@
             this.checkBox_tout_j.Text = "TOUTS JOURS ALERT";
             this.checkBox_tout_j.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 52);
+            this.panel1.TabIndex = 492;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(331, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "LES NOTES";
+            // 
             // CTL_NOTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox_tout_j);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuDatePicker_date_alert);
@@ -352,6 +380,8 @@
             this.VisibleChanged += new System.EventHandler(this.CTL_NOTE_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView_list_note)).EndInit();
             this.panel_filter.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +402,7 @@
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker_date_alert;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox_tout_j;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

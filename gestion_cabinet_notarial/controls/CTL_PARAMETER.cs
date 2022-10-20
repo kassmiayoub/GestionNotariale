@@ -293,5 +293,10 @@ namespace gestion_cabinet_notarial.controls
                 }
             }
         }
+
+        private void CTL_PARAMETER_AJOUTER_UTILISATUER_Load(object sender, EventArgs e)
+        {
+            
+        }
     } 
 }

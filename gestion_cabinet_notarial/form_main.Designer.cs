@@ -121,7 +121,6 @@
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.controL_MAIN_HEADER1);
             this.Controls.Add(this.bunifuPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

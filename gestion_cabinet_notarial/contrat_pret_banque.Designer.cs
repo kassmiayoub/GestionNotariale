@@ -87,6 +87,7 @@
             this.bunifuTextBoxAncfcc = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxtmbr = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +100,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuPanel1.BorderRadius = 0;
             this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.label3);
             this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.controL_CONTROL_BOX2);
             this.bunifuPanel1.Controls.Add(this.richTextBox_description);
@@ -535,7 +537,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label12.Location = new System.Drawing.Point(485, 11);
+            this.label12.Location = new System.Drawing.Point(559, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 23);
             this.label12.TabIndex = 466;
@@ -1085,6 +1087,19 @@
             this.bunifuDragControl1.TargetControl = this.bunifuPanel1;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(376, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 23);
+            this.label3.TabIndex = 509;
+            this.label3.Text = "TYPE DE CONTRAT : ";
+            // 
             // contrat_pret_banque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1146,5 +1161,6 @@
         private System.Windows.Forms.Label label14;
         private CONTROL_CONTROL_BOX controL_CONTROL_BOX2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private System.Windows.Forms.Label label3;
     }
 }

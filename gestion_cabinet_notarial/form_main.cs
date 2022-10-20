@@ -21,6 +21,10 @@ namespace gestion_cabinet_notarial
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            //ScrollBar vScrollBar1 = new VScrollBar();
+            //vScrollBar1.Dock = DockStyle.Right;
+            //vScrollBar1.Scroll += (sende, t) => { MAINPANEL.HorizontalScroll.Value = vScrollBar1.Value; };
+            //MAINPANEL.Controls.Add(vScrollBar1);
             ShowTaskBar();           
             mainMenu1.AddTheMenu();
             //ADD_DOSSIER dossier = new ADD_DOSSIER() { Visible = true };
@@ -39,14 +43,14 @@ namespace gestion_cabinet_notarial
             dtypeclient.Items.Add("ACHETEURE");
             dtypeclient.Items.Add("modan");
             dtypeclient.Items.Add("modin");
-            BunifuDropdown typecontrat = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
-            typecontrat.Items.Add("VENTE");
-            typecontrat.Items.Add("PROMESE DE VENTE");
-            typecontrat.Items.Add("PROMESE DE LOCATION");
-            typecontrat.Items.Add("PRET BANQUE");
-            typecontrat.Items.Add("credit deux personne");
-            typecontrat.Items.Add("ECHANGE");
-            typecontrat.Items.Add("LOCATION");
+            //BunifuDropdown typecontrat = (BunifuDropdown)THEME.detail_dossier.Controls["bunifuPages1"].Controls["tabPage2"].Controls["bunifuDropdowntype_contrat"];
+            //typecontrat.Items.Add("VENTE");
+            //typecontrat.Items.Add("PROMESE DE VENTE");
+            //typecontrat.Items.Add("PROMESE DE LOCATION");
+            //typecontrat.Items.Add("PRET BANQUE");
+            //typecontrat.Items.Add("credit deux personne");
+            //typecontrat.Items.Add("ECHANGE");
+            //typecontrat.Items.Add("LOCATION");
         }
         void ShowTaskBar()
         {
@@ -68,6 +72,11 @@ namespace gestion_cabinet_notarial
                 Type C = THEME.BackControls[THEME.BackControls.Count - 1];
                 THEME.navigate = 1;
                 THEME.navigat(C);
+        }
+
+        private void statusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -25,6 +25,7 @@ namespace gestion_cabinet_notarial
         cls_bl_dossier dossier = new cls_bl_dossier();
         cls_bl_payement paye = new cls_bl_payement();
         CSL_BL_Client c = new CSL_BL_Client();
+        cls_bl_credit BL_credit = new cls_bl_credit();
         CSL_BL_pret_banque pb = new CSL_BL_pret_banque();
         cls_bl_creditpersonne creditpersonne = new cls_bl_creditpersonne();
 
@@ -214,7 +215,7 @@ namespace gestion_cabinet_notarial
                 bunifuDataGridView_statistic.Rows[3].Cells[3].Value = (Timbres - montant_paye_Timbres).ToString();
             double montant = (Ancfcc) + (Enregistrement) + (Honoraires) + (Timbres);
             double payement = (montant_paye_Ancfcc + montant_paye_Enregistrement + montant_paye_Honoraires + montant_paye_Timbres);
-            string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant- payement).ToString() };
+            string[] r = new string[] { "TOTAL", montant.ToString(), (payement).ToString(), (montant - payement).ToString() };
             bunifuDataGridView_statistic.Rows.Add(r);
             bunifuDataGridView_statistic.Rows[4].Cells[0].Style.Font = new Font("Arial", 15, FontStyle.Bold);
             if (THEME.prix != 0)
@@ -250,6 +251,12 @@ namespace gestion_cabinet_notarial
             if (!THEME.acceder("PAIEMENT CONTART"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                return;
+            }
+            var credit = BL_credit.FindByValues(el => el.idcontrat == THEME.id_C).FirstOrDefault();
+            if(credit != null)
+            {
+                MessageBox.Show("cette contrat il est credit");
                 return;
             }
             if (montant_reste < double.Parse(bunifuTextBox_MONTANT.Text))

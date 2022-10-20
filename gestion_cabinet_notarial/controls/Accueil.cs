@@ -154,9 +154,6 @@ namespace gestion_cabinet_notarial
             THEME.add_btn_to_datagrid(bunifuDataGridView_accueil, "DETAIL", "DETAIL", 4);           
         }
 
-        private void Accueil_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
