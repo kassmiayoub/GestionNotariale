@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace gestion_cabinet_notarial.controls
 {
     public partial class CTL_STATISTIC : UserControl
     {
+        CSL_BL_Client_Professionnel clp = new CSL_BL_Client_Professionnel();
+        CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
         cls_bl_payement paye = new cls_bl_payement();
         cls_bl_credit BL_credit = new cls_bl_credit();
         cls_bl_contrat contrat = new cls_bl_contrat();
@@ -24,9 +27,32 @@ namespace gestion_cabinet_notarial.controls
             this.Dock = DockStyle.Fill;
            
         }
+        public void chart(DateTime dateD,DateTime dateF)
+        {
+            var list = paye.FindByValues(ele => ele.type == "charge" && ele.Date >= dateD && ele.Date <= dateF).GroupBy(ele =>  ele.Date ).Select(ele => new
+            {   //DEPANCES= ele.Key,              
+                Honoraires = ele.Sum(el => el.Montant),
+                date = ele.Key.Value.Date.ToString("MM/dd/yy")
+            }).ToList();
+            var contrats_chart = contrat.FindByValues(el => el.dateouverture >= dateD && el.dateouverture <= dateF).GroupBy(ele => ele.dateouverture ).Select(el => new
+            {
+                Contrats = el.Count(),
+                date = el.Key.Value.Date.ToString("MM/dd/yy")
+            });
+            chart1.DataSource = list;
+            chart1.Series["Honoraires"].YValueMembers = "Honoraires";
+            chart1.Series["Honoraires"].XValueMember = "date";
+            chart1.Series["Honoraires"].YValueType = ChartValueType.Int32;
 
+            chart_contrats.DataSource = contrats_chart;
+            chart_contrats.Series["Contrats"].YValueMembers = "Contrats";
+            chart_contrats.Series["Contrats"].XValueMember = "date";
+            chart_contrats.Series["Contrats"].YValueType = ChartValueType.Int32;
+        }
         private void CTL_STATISTIC_Load(object sender, EventArgs e)
         {
+            DateTime dt = Convert.ToDateTime(DateTime.Now.ToString("MM/01/yy"));
+            chart(dt.Date, dt.AddMonths(1).Date);
             var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.Date == dtm).GroupBy(ele => ele.idcontrat).Select(ele => new
             {   //DEPANCES= ele.Key,              
                 Honoraires = ele.Sum(el => el.Montant).ToString(),
@@ -44,14 +70,10 @@ namespace gestion_cabinet_notarial.controls
             string[] row = new string[] { "", "" };
             //bunifuDataGridView_T.Rows.Add(row);
 
-            bunifuDataGridView_T_credit_honoraires.ColumnCount = 2;
-            bunifuDataGridView_T_credit_honoraires.Columns[0].Name = "HONORAIRES";
-            bunifuDataGridView_T_credit_honoraires.Columns[1].Name = "CREDIT";
-            bunifuDataGridView_T_credit_honoraires.Rows.Clear();
-            bunifuDataGridView_T_credit_honoraires.Rows.Add(row);
         }
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
+            chart(Convert.ToDateTime(bunifuDatePicker_D.Value), Convert.ToDateTime(bunifuDatePicker_F.Value));
             //if (radioButton_CREDIT.Checked)
             //{
             //    if (radioButton_now.Checked)
@@ -151,36 +173,62 @@ namespace gestion_cabinet_notarial.controls
             //bunifuDataGridView_T.Rows[0].Cells[1].Value = t;
         }
         private void CTL_STATISTIC_VisibleChanged(object sender, EventArgs e)
-        {
+        {           
             //TYPECLIENT = clp.Any(el => el.idClient == ele.idClient) ? "profisionnel" : "normal",
             if (this.Visible == true)
             {
-                var list = paye.FindByValues(ele => ele.typecharge == "Honoraires" && ele.type == "charge").GroupBy(ele => ele.Date).Select(ele => new
-                {   //DEPANCES= ele.Key,              
-                    Honoraires = ele.Sum(el => el.Montant),
-                    date = ele.Key.Value.Date.Day.ToString()
-                }).ToList();
-                var contrats = contrat.GetAll().GroupBy(ele => ele.dateouverture).Select(el => new
-                {
-                    Contrats = el.Count(),
-                    date = el.Key.Value.Date.Day.ToString()
-                }) ;
-                chart1.DataSource = list;
-                chart1.Series["Honoraires"].YValueMembers = "Honoraires";
-                chart1.Series["Honoraires"].XValueMember = "date";
-                chart1.Series["Honoraires"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-
-                chart1.DataSource = contrats;
-                chart1.Series["Contrats"].YValueMembers = "Contrats";
-                chart1.Series["Contrats"].XValueMember = "date";
-                chart1.Series["Contrats"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-
+                int client_n = cln.GetAll().Count();
+                int client_p = clp.GetAll().Count();
+                string[] x = new string[2];
+                int[] y = new int[2];
+                x[0] = "NORMAL";
+                x[1] = "PROFESIONEL";
+                y[0] = client_n;
+                y[1] = client_p;
+                chart_client.Series[0].Points.DataBindXY(x, y);
+                chart_client.Series[0].IsValueShownAsLabel = true;               
+                //chart_client.Series[0].ChartType = 
                 double Tcredit =  BL_credit.GetAll().Sum(ele => ele.montant).Value;
                 double Pcredit = paye.FindByValues(el => el.type == "credit").Sum(ell => ell.Montant).Value;
                 double Thonoraires = contrat.GetAll().Where(r => BL_credit.Any(el => el.idcontrat != r.Idcontrat)).Sum(ele => ele.Honoraires).Value;
                 double Phonoraires = paye.FindByValues(ele => ele.typecharge == "Honoraires").Sum(el => el.Montant).Value;
-                bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[0].Value = Thonoraires - Phonoraires;
-                bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[1].Value = Tcredit - Pcredit;
+                //bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[0].Value = Thonoraires - Phonoraires;
+                //bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[1].Value = Tcredit - Pcredit;
+            }
+        }
+        public class lisi_chart
+        {
+            [DisplayName("date")]
+            public string date { get; set; }
+            [DisplayName("Honoraires")]
+            public double Honoraires { get; set; }
+            [DisplayName("Contrats")]
+            public int Contrats { get; set; }
+            
+        }  
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                chart_contrats.Visible = true;
+
+            }
+            else
+            {
+                chart_contrats.Visible = false;
+            }
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                chart_contrats.Visible = true;
+
+            }
+            else
+            {
+                chart_contrats.Visible = false;
             }
         }
     }
