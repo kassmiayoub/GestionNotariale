@@ -53,6 +53,7 @@
           <Property Name="Email" Type="varchar" MaxLength="30" />
           <Property Name="utilisateur" Type="varchar" MaxLength="30" />
           <Property Name="adress" Type="varchar(max)" />
+          <Property Name="Date" Type="date" />
         </EntityType>
         <EntityType Name="ClientNormale">
           <Key>
@@ -1141,6 +1142,7 @@
           <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
           <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="client" ToRole="Rendez_vous" />
           <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="client" ToRole="objet" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="ClientNormale">
           <Key>
@@ -2283,6 +2285,7 @@
           <EntitySetMapping Name="clients">
             <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.client">
               <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="idClient" ColumnName="idClient" />
                 <ScalarProperty Name="Nom" ColumnName="Nom" />
                 <ScalarProperty Name="Prenom" ColumnName="Prenom" />

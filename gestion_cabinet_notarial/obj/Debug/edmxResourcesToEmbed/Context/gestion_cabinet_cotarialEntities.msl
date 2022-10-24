@@ -43,6 +43,7 @@
     <EntitySetMapping Name="clients">
       <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.client">
         <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="idClient" ColumnName="idClient" />
           <ScalarProperty Name="Nom" ColumnName="Nom" />
           <ScalarProperty Name="Prenom" ColumnName="Prenom" />

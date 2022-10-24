@@ -29,51 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_STATISTIC));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.ButtonSearch = new System.Windows.Forms.Button();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label6 = new System.Windows.Forms.Label();
+            this.TOTALC = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TOTALH = new System.Windows.Forms.Label();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.bunifuGroupBox4 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.CLIENTP = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CLIENTN = new System.Windows.Forms.Label();
             this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label4 = new System.Windows.Forms.Label();
+            this.RDVA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RDVP = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.chart_contrats = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuDatePicker_F = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuDatePicker_D = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.bunifuGroupBox4 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.chart_client = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.bunifuGroupBox2.SuspendLayout();
             this.bunifuGroupBox1.SuspendLayout();
+            this.bunifuGroupBox4.SuspendLayout();
             this.bunifuGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_contrats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.bunifuGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_client)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +95,7 @@
             this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label5.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(491, 11);
+            this.label5.Location = new System.Drawing.Point(460, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 31);
             this.label5.TabIndex = 0;
@@ -115,7 +115,7 @@
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonSearch.Name = "ButtonSearch";
             this.ButtonSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ButtonSearch.Size = new System.Drawing.Size(45, 35);
+            this.ButtonSearch.Size = new System.Drawing.Size(45, 32);
             this.ButtonSearch.TabIndex = 487;
             this.ButtonSearch.Tag = "AcceptButton";
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -129,10 +129,10 @@
             this.bunifuGroupBox2.BorderRadius = 1;
             this.bunifuGroupBox2.BorderThickness = 3;
             this.bunifuGroupBox2.Controls.Add(this.bunifuSeparator2);
-            this.bunifuGroupBox2.Controls.Add(this.label6);
+            this.bunifuGroupBox2.Controls.Add(this.TOTALC);
             this.bunifuGroupBox2.Controls.Add(this.label7);
             this.bunifuGroupBox2.Controls.Add(this.label8);
-            this.bunifuGroupBox2.Controls.Add(this.label9);
+            this.bunifuGroupBox2.Controls.Add(this.TOTALH);
             this.bunifuGroupBox2.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuGroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuGroupBox2.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -161,16 +161,16 @@
             this.bunifuSeparator2.Size = new System.Drawing.Size(12, 84);
             this.bunifuSeparator2.TabIndex = 4;
             // 
-            // label6
+            // TOTALC
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Brown;
-            this.label6.Location = new System.Drawing.Point(201, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "label6";
+            this.TOTALC.AutoSize = true;
+            this.TOTALC.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TOTALC.ForeColor = System.Drawing.Color.Brown;
+            this.TOTALC.Location = new System.Drawing.Point(201, 93);
+            this.TOTALC.Name = "TOTALC";
+            this.TOTALC.Size = new System.Drawing.Size(68, 25);
+            this.TOTALC.TabIndex = 3;
+            this.TOTALC.Text = "label6";
             // 
             // label7
             // 
@@ -194,16 +194,16 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "HONORAIRES";
             // 
-            // label9
+            // TOTALH
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label9.Location = new System.Drawing.Point(39, 93);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "label9";
+            this.TOTALH.AutoSize = true;
+            this.TOTALH.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TOTALH.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.TOTALH.Location = new System.Drawing.Point(39, 93);
+            this.TOTALH.Name = "TOTALH";
+            this.TOTALH.Size = new System.Drawing.Size(68, 25);
+            this.TOTALH.TabIndex = 0;
+            this.TOTALH.Text = "label9";
             // 
             // bunifuGroupBox1
             // 
@@ -234,6 +234,89 @@
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "STATISTIQUE PAR DATE";
             // 
+            // bunifuGroupBox4
+            // 
+            this.bunifuGroupBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuGroupBox4.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuGroupBox4.BorderRadius = 1;
+            this.bunifuGroupBox4.BorderThickness = 3;
+            this.bunifuGroupBox4.Controls.Add(this.bunifuSeparator3);
+            this.bunifuGroupBox4.Controls.Add(this.CLIENTP);
+            this.bunifuGroupBox4.Controls.Add(this.label11);
+            this.bunifuGroupBox4.Controls.Add(this.label12);
+            this.bunifuGroupBox4.Controls.Add(this.CLIENTN);
+            this.bunifuGroupBox4.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuGroupBox4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuGroupBox4.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuGroupBox4.LabelIndent = 10;
+            this.bunifuGroupBox4.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.bunifuGroupBox4.Location = new System.Drawing.Point(395, 532);
+            this.bunifuGroupBox4.Name = "bunifuGroupBox4";
+            this.bunifuGroupBox4.Size = new System.Drawing.Size(309, 156);
+            this.bunifuGroupBox4.TabIndex = 511;
+            this.bunifuGroupBox4.TabStop = false;
+            this.bunifuGroupBox4.Text = "NOUVEAU CLIENT";
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
+            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator3.LineThickness = 2;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(143, 43);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator3.Size = new System.Drawing.Size(14, 84);
+            this.bunifuSeparator3.TabIndex = 4;
+            // 
+            // CLIENTP
+            // 
+            this.CLIENTP.AutoSize = true;
+            this.CLIENTP.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLIENTP.ForeColor = System.Drawing.Color.Brown;
+            this.CLIENTP.Location = new System.Drawing.Point(184, 93);
+            this.CLIENTP.Name = "CLIENTP";
+            this.CLIENTP.Size = new System.Drawing.Size(91, 25);
+            this.CLIENTP.TabIndex = 3;
+            this.CLIENTP.Text = "CLIENTP";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Brown;
+            this.label11.Location = new System.Drawing.Point(158, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 25);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "PROFESIONEL";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label12.Location = new System.Drawing.Point(33, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "NORMAL";
+            // 
+            // CLIENTN
+            // 
+            this.CLIENTN.AutoSize = true;
+            this.CLIENTN.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLIENTN.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.CLIENTN.Location = new System.Drawing.Point(41, 93);
+            this.CLIENTN.Name = "CLIENTN";
+            this.CLIENTN.Size = new System.Drawing.Size(93, 25);
+            this.CLIENTN.TabIndex = 0;
+            this.CLIENTN.Text = "CLIENTN";
+            // 
             // bunifuGroupBox3
             // 
             this.bunifuGroupBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -241,10 +324,10 @@
             this.bunifuGroupBox3.BorderRadius = 1;
             this.bunifuGroupBox3.BorderThickness = 3;
             this.bunifuGroupBox3.Controls.Add(this.bunifuSeparator1);
-            this.bunifuGroupBox3.Controls.Add(this.label4);
+            this.bunifuGroupBox3.Controls.Add(this.RDVA);
             this.bunifuGroupBox3.Controls.Add(this.label3);
             this.bunifuGroupBox3.Controls.Add(this.label2);
-            this.bunifuGroupBox3.Controls.Add(this.label1);
+            this.bunifuGroupBox3.Controls.Add(this.RDVP);
             this.bunifuGroupBox3.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuGroupBox3.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -273,16 +356,16 @@
             this.bunifuSeparator1.Size = new System.Drawing.Size(14, 84);
             this.bunifuSeparator1.TabIndex = 4;
             // 
-            // label4
+            // RDVA
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Brown;
-            this.label4.Location = new System.Drawing.Point(198, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.RDVA.AutoSize = true;
+            this.RDVA.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDVA.ForeColor = System.Drawing.Color.Brown;
+            this.RDVA.Location = new System.Drawing.Point(198, 93);
+            this.RDVA.Name = "RDVA";
+            this.RDVA.Size = new System.Drawing.Size(64, 25);
+            this.RDVA.TabIndex = 3;
+            this.RDVA.Text = "RDVA";
             // 
             // label3
             // 
@@ -306,16 +389,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PASSER";
             // 
-            // label1
+            // RDVP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(33, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.RDVP.AutoSize = true;
+            this.RDVP.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDVP.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.RDVP.Location = new System.Drawing.Point(52, 93);
+            this.RDVP.Name = "RDVP";
+            this.RDVP.Size = new System.Drawing.Size(64, 25);
+            this.RDVP.TabIndex = 0;
+            this.RDVP.Text = "RDVP";
             // 
             // radioButton2
             // 
@@ -350,21 +433,21 @@
             this.chart_contrats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart_contrats.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_contrats.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chart_contrats.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart_contrats.Legends.Add(legend4);
             this.chart_contrats.Location = new System.Drawing.Point(6, 112);
             this.chart_contrats.Name = "chart_contrats";
-            series1.BorderWidth = 5;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Bold);
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series1.Name = "Contrats";
-            this.chart_contrats.Series.Add(series1);
+            series4.BorderWidth = 5;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series4.Name = "Contrats";
+            this.chart_contrats.Series.Add(series4);
             this.chart_contrats.Size = new System.Drawing.Size(721, 414);
             this.chart_contrats.TabIndex = 507;
             this.chart_contrats.Text = "chart2";
@@ -404,26 +487,26 @@
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart1.BorderSkin.BorderWidth = 0;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(6, 112);
             this.chart1.Name = "chart1";
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.MarkerBorderWidth = 5;
-            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series2.Name = "Honoraires";
-            series2.ShadowColor = System.Drawing.Color.Transparent;
-            series2.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.MidnightBlue;
-            series2.SmartLabelStyle.CalloutLineWidth = 3;
-            series2.YValuesPerPoint = 5;
-            this.chart1.Series.Add(series2);
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.MarkerBorderWidth = 5;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series5.Name = "Honoraires";
+            series5.ShadowColor = System.Drawing.Color.Transparent;
+            series5.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.MidnightBlue;
+            series5.SmartLabelStyle.CalloutLineWidth = 3;
+            series5.YValuesPerPoint = 5;
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(721, 396);
             this.chart1.TabIndex = 506;
             this.chart1.Text = "chart1";
@@ -456,105 +539,26 @@
             this.bunifuDatePicker_D.TabIndex = 505;
             this.bunifuDatePicker_D.Value = new System.DateTime(2022, 9, 28, 0, 0, 0, 0);
             // 
-            // bunifuGroupBox4
-            // 
-            this.bunifuGroupBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuGroupBox4.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuGroupBox4.BorderRadius = 1;
-            this.bunifuGroupBox4.BorderThickness = 3;
-            this.bunifuGroupBox4.Controls.Add(this.bunifuSeparator3);
-            this.bunifuGroupBox4.Controls.Add(this.label10);
-            this.bunifuGroupBox4.Controls.Add(this.label11);
-            this.bunifuGroupBox4.Controls.Add(this.label12);
-            this.bunifuGroupBox4.Controls.Add(this.label13);
-            this.bunifuGroupBox4.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuGroupBox4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuGroupBox4.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox4.LabelIndent = 10;
-            this.bunifuGroupBox4.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox4.Location = new System.Drawing.Point(395, 532);
-            this.bunifuGroupBox4.Name = "bunifuGroupBox4";
-            this.bunifuGroupBox4.Size = new System.Drawing.Size(309, 156);
-            this.bunifuGroupBox4.TabIndex = 511;
-            this.bunifuGroupBox4.TabStop = false;
-            this.bunifuGroupBox4.Text = "RENDEZ-VOUS";
-            // 
-            // bunifuSeparator3
-            // 
-            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
-            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator3.LineThickness = 2;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(143, 43);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator3.Size = new System.Drawing.Size(14, 84);
-            this.bunifuSeparator3.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Brown;
-            this.label10.Location = new System.Drawing.Point(198, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 25);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "label10";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Brown;
-            this.label11.Location = new System.Drawing.Point(184, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 25);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "ABSENCE";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(33, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "PASSER";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(33, 93);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 25);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "label13";
-            // 
             // chart_client
             // 
             this.chart_client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chart_client.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart_client.Legends.Add(legend3);
-            this.chart_client.Location = new System.Drawing.Point(759, 358);
+            chartArea6.Name = "ChartArea1";
+            this.chart_client.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart_client.Legends.Add(legend6);
+            this.chart_client.Location = new System.Drawing.Point(759, 306);
             this.chart_client.Name = "chart_client";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsXValueIndexed = true;
-            series3.Legend = "Legend1";
-            series3.Name = "NORMAL";
-            this.chart_client.Series.Add(series3);
-            this.chart_client.Size = new System.Drawing.Size(343, 229);
+            this.chart_client.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series6.BorderWidth = 5;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Font = new System.Drawing.Font("Ubuntu Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.IsXValueIndexed = true;
+            series6.LabelFormat = "#,##%";
+            series6.Legend = "Legend1";
+            series6.Name = "NORMAL";
+            this.chart_client.Series.Add(series6);
+            this.chart_client.Size = new System.Drawing.Size(343, 281);
             this.chart_client.TabIndex = 506;
             this.chart_client.Text = "chart2";
             // 
@@ -576,12 +580,12 @@
             this.bunifuGroupBox2.PerformLayout();
             this.bunifuGroupBox1.ResumeLayout(false);
             this.bunifuGroupBox1.PerformLayout();
+            this.bunifuGroupBox4.ResumeLayout(false);
+            this.bunifuGroupBox4.PerformLayout();
             this.bunifuGroupBox3.ResumeLayout(false);
             this.bunifuGroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_contrats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.bunifuGroupBox4.ResumeLayout(false);
-            this.bunifuGroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_client)).EndInit();
             this.ResumeLayout(false);
 
@@ -593,23 +597,23 @@
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox2;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TOTALC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label TOTALH;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox4;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label CLIENTP;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label CLIENTN;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label RDVA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label RDVP;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_contrats;

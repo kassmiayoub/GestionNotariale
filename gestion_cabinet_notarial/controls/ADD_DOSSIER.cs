@@ -203,8 +203,7 @@ namespace gestion_cabinet_notarial
         }
         private void ButtonInit_Click(object sender, EventArgs e)
         {
-            THEME.vider(this);
-            
+            THEME.vider(this);          
         }
         private void button_detail_dossier_Click(object sender, EventArgs e)
         {

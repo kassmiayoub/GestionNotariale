@@ -68,6 +68,7 @@
     <NavigationProperty Name="payements" Relationship="Self.FK__payement__idClie__52593CB8" FromRole="client" ToRole="payement" />
     <NavigationProperty Name="Rendez_vous" Relationship="Self.FK__Rendez_vo__idCli__2F10007B" FromRole="client" ToRole="Rendez_vous" />
     <NavigationProperty Name="objets" Relationship="gestion_cabinet_notarialModel.fk_obj_client" FromRole="client" ToRole="objet" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="ClientNormale">
     <Key>

@@ -172,7 +172,7 @@ namespace gestion_cabinet_notarial
                 pretBanque.INTIERET = (double.Parse(this.Controls["bunifuPanel1"].Controls["bunifuPanel2"].Controls["nemurecupdown_with_comma_intieret"].Controls["textBox_porsontage"].Text));
                 pretBanque.PAYE_PAR_MOIS = (double.Parse(this.Controls["bunifuPanel1"].Controls["bunifuPanel2"].Controls["nemurecupdown_with_comma_paye_par_mois"].Controls["textBox_porsontage"].Text));
                 pretBanque.Montant = double.Parse(bunifuTextBox_montant.Text);
-                int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
+                int Days = Convert.ToDateTime(dateTimePickerfin.Text).Subtract(Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
                 pretBanque.DERU = Days;
                 pretBanque.idcontrat = idcontrat;
                 pretBanque.utilisateur = THEME.id_user;
@@ -183,7 +183,7 @@ namespace gestion_cabinet_notarial
                 var CP = new contratcredit();
                 CP.descreption = richTextBox_description.Text;
                 CP.montant = double.Parse(bunifuTextBox_montant.Text);
-                int Days = (Convert.ToDateTime(dateTimePickerfin.Text) - Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
+                int Days = Convert.ToDateTime(dateTimePickerfin.Text).Subtract(Convert.ToDateTime(dateTimePickerdubet.Text)).Days;
                 CP.deru = Days;
                 CP.idcontrat = idcontrat;
                 CP.utilisateur = THEME.id_user;

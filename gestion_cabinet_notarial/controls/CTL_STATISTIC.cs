@@ -18,6 +18,8 @@ namespace gestion_cabinet_notarial.controls
         CSL_BL_Client_normal cln = new CSL_BL_Client_normal();
         cls_bl_payement paye = new cls_bl_payement();
         cls_bl_credit BL_credit = new cls_bl_credit();
+        CSL_BL_Client cls = new CSL_BL_Client();
+        cls_bl_rendez_vous rv = new cls_bl_rendez_vous();
         cls_bl_contrat contrat = new cls_bl_contrat();
         DateTime dtm = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yy"));
 
@@ -73,7 +75,29 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            chart(Convert.ToDateTime(bunifuDatePicker_D.Value), Convert.ToDateTime(bunifuDatePicker_F.Value));
+            DateTime d = Convert.ToDateTime(bunifuDatePicker_D.Value);
+            DateTime f = Convert.ToDateTime(bunifuDatePicker_F.Value);
+            chart(d, f);
+            int rdvp = rv.FindByValues(ele => ele.Timefin == "passer" &&  ele.datee >= d && ele.datee <= f).Count();
+            int rdva = rv.FindByValues(ele => ele.Timefin == "absence" && ele.datee >= d && ele.datee <= f).Count();
+            RDVA.Text = rdva.ToString();
+            RDVP.Text = rdvp.ToString();
+            var Tclient = cls.GetAll().Where(el => el.Date >= d && el.Date <= f).ToList();
+            int clinetN = 0;
+            int clinetP = 0;
+            Tclient.ForEach(ele =>
+            {
+                if (cln.Any(el => el.idClient == ele.idClient))
+                {
+                    clinetN++;
+                }
+                else
+                {
+                    clinetP++;
+                }
+            });
+            CLIENTN.Text = clinetN.ToString();
+            CLIENTP.Text = clinetP.ToString();
             //if (radioButton_CREDIT.Checked)
             //{
             //    if (radioButton_now.Checked)
@@ -180,20 +204,41 @@ namespace gestion_cabinet_notarial.controls
                 int client_n = cln.GetAll().Count();
                 int client_p = clp.GetAll().Count();
                 string[] x = new string[2];
-                int[] y = new int[2];
-                x[0] = "NORMAL";
-                x[1] = "PROFESIONEL";
-                y[0] = client_n;
-                y[1] = client_p;
+                double[] y = new double[2];
+                x[0] = "NORMAL "+ client_n;
+                x[1] = "PROFESIONEL "+ client_p;
+                y[0] = ((client_n * 100) / (client_n + client_p)) * 0.01;
+                y[1] = ((client_p * 100) / (client_n + client_p)) * 0.01;
                 chart_client.Series[0].Points.DataBindXY(x, y);
-                chart_client.Series[0].IsValueShownAsLabel = true;               
+                chart_client.Series[0].IsValueShownAsLabel = true;
                 //chart_client.Series[0].ChartType = 
                 double Tcredit =  BL_credit.GetAll().Sum(ele => ele.montant).Value;
                 double Pcredit = paye.FindByValues(el => el.type == "credit").Sum(ell => ell.Montant).Value;
                 double Thonoraires = contrat.GetAll().Where(r => BL_credit.Any(el => el.idcontrat != r.Idcontrat)).Sum(ele => ele.Honoraires).Value;
                 double Phonoraires = paye.FindByValues(ele => ele.typecharge == "Honoraires").Sum(el => el.Montant).Value;
-                //bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[0].Value = Thonoraires - Phonoraires;
-                //bunifuDataGridView_T_credit_honoraires.Rows[0].Cells[1].Value = Tcredit - Pcredit;
+                TOTALH.Text  = (Thonoraires - Phonoraires).ToString() + " DH";
+                TOTALC.Text = (Tcredit - Pcredit).ToString() + " DH";
+                int rdvp = rv.FindByValues(ele => ele.Timefin == "passer" && ele.datee == dtm).Count();
+                int rdva = rv.FindByValues(ele => ele.Timefin == "absence" && ele.datee == dtm).Count();
+                RDVA.Text = rdva.ToString();
+                RDVP.Text = rdvp.ToString();
+                var Tclient = cls.GetAll().Where(el => el.Date == dtm).ToList();
+                int clinetN =0;
+                int clinetP =0;
+                Tclient.ForEach(ele =>
+                {
+                    if(cln.Any(el => el.idClient == ele.idClient))
+                    {
+                        clinetN++;
+                    }
+                    else
+                    {
+                        clinetP++;
+                    }
+                });
+                CLIENTN.Text = clinetN.ToString();
+                CLIENTP.Text = clinetP.ToString();
+
             }
         }
         public class lisi_chart

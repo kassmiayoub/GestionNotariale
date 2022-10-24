@@ -48,6 +48,7 @@
     <Property Name="Email" Type="varchar" MaxLength="30" />
     <Property Name="utilisateur" Type="varchar" MaxLength="30" />
     <Property Name="adress" Type="varchar(max)" />
+    <Property Name="Date" Type="date" />
   </EntityType>
   <EntityType Name="ClientNormale">
     <Key>
