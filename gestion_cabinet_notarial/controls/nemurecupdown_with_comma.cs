@@ -22,12 +22,12 @@ namespace gestion_cabinet_notarial
             if (double.Parse(textBox_porsontage.Text) == 0)
                 return;
             double x = double.Parse(textBox_porsontage.Text);
-            textBox_porsontage.Text = (x - 0.01).ToString();
+            textBox_porsontage.Text = (x - 1.00).ToString();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             double x = double.Parse(textBox_porsontage.Text);
-            textBox_porsontage.Text = (x + 0.01).ToString();
+            textBox_porsontage.Text = (x + 1.00).ToString();
         }
         private void textBox_porsontage_KeyPress(object sender, KeyPressEventArgs e)
         {

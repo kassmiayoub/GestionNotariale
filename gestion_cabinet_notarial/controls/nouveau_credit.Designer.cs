@@ -313,7 +313,7 @@
             this.bunifuDataGridViewlist_credit.RowHeadersVisible = false;
             this.bunifuDataGridViewlist_credit.RowTemplate.Height = 40;
             this.bunifuDataGridViewlist_credit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridViewlist_credit.Size = new System.Drawing.Size(1016, 411);
+            this.bunifuDataGridViewlist_credit.Size = new System.Drawing.Size(1016, 368);
             this.bunifuDataGridViewlist_credit.TabIndex = 475;
             this.bunifuDataGridViewlist_credit.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -358,7 +358,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Name = "nouveau_credit";
-            this.Size = new System.Drawing.Size(1025, 677);
+            this.Size = new System.Drawing.Size(1025, 634);
             this.Load += new System.EventHandler(this.nouveau_credit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewlist_credit)).EndInit();
             this.panel1.ResumeLayout(false);

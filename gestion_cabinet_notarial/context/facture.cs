@@ -18,6 +18,10 @@ namespace gestion_cabinet_notarial.context
         public Nullable<System.DateTime> date { get; set; }
         public Nullable<int> idcontrat { get; set; }
         public string utilisatuer { get; set; }
+        public Nullable<double> hpnoraires { get; set; }
+        public Nullable<double> tamber { get; set; }
+        public Nullable<double> enrigestrement { get; set; }
+        public Nullable<double> ancfcc { get; set; }
     
         public virtual contrat contrat { get; set; }
         public virtual utilisateur utilisateur { get; set; }

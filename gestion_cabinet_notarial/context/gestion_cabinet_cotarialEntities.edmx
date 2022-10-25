@@ -149,6 +149,10 @@
           <Property Name="date" Type="date" />
           <Property Name="idcontrat" Type="int" />
           <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
+          <Property Name="hpnoraires" Type="float" />
+          <Property Name="tamber" Type="float" />
+          <Property Name="enrigestrement" Type="float" />
+          <Property Name="ancfcc" Type="float" />
         </EntityType>
         <EntityType Name="fichiers_client">
           <Key>
@@ -2175,6 +2179,10 @@
           <Property Name="utilisatuer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="facture" ToRole="contrat" />
           <NavigationProperty Name="utilisateur" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="facture" ToRole="utilisateur" />
+          <Property Name="hpnoraires" Type="Double" />
+          <Property Name="tamber" Type="Double" />
+          <Property Name="enrigestrement" Type="Double" />
+          <Property Name="ancfcc" Type="Double" />
         </EntityType>
         <Association Name="FK__facture__idcontr__19DFD96B">
           <End Type="gestion_cabinet_notarialModel.contrat" Role="contrat" Multiplicity="0..1" />
@@ -2576,6 +2584,10 @@
           <EntitySetMapping Name="factures">
             <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.facture">
               <MappingFragment StoreEntitySet="facture">
+                <ScalarProperty Name="ancfcc" ColumnName="ancfcc" />
+                <ScalarProperty Name="enrigestrement" ColumnName="enrigestrement" />
+                <ScalarProperty Name="tamber" ColumnName="tamber" />
+                <ScalarProperty Name="hpnoraires" ColumnName="hpnoraires" />
                 <ScalarProperty Name="utilisatuer" ColumnName="utilisatuer" />
                 <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />
                 <ScalarProperty Name="date" ColumnName="date" />

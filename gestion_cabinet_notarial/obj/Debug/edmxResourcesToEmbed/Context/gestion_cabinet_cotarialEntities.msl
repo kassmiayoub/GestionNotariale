@@ -334,6 +334,10 @@
     <EntitySetMapping Name="factures">
       <EntityTypeMapping TypeName="gestion_cabinet_notarialModel.facture">
         <MappingFragment StoreEntitySet="facture">
+          <ScalarProperty Name="ancfcc" ColumnName="ancfcc" />
+          <ScalarProperty Name="enrigestrement" ColumnName="enrigestrement" />
+          <ScalarProperty Name="tamber" ColumnName="tamber" />
+          <ScalarProperty Name="hpnoraires" ColumnName="hpnoraires" />
           <ScalarProperty Name="utilisatuer" ColumnName="utilisatuer" />
           <ScalarProperty Name="idcontrat" ColumnName="idcontrat" />
           <ScalarProperty Name="date" ColumnName="date" />

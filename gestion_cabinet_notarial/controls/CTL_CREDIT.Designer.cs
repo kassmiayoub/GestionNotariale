@@ -200,7 +200,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label12.Location = new System.Drawing.Point(594, 148);
+            this.label12.Location = new System.Drawing.Point(602, 148);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(151, 23);
             this.label12.TabIndex = 457;

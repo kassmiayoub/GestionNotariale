@@ -26,7 +26,7 @@
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.recu" Width="1.5" PointX="10.5" PointY="23" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.Rendez_vous" Width="1.5" PointX="11.25" PointY="33.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.Signature" Width="1.5" PointX="10.5" PointY="41.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gestion_cabinet_notarialModel.sysdiagram" Width="1.375" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gestion_cabinet_notarialModel.utilisateur" Width="1.5" PointX="0.75" PointY="29.25" IsExpanded="true" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__banque__utilisat__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="gestion_cabinet_notarialModel.FK__Banque_pr__idban__5AEE82B9" ManuallyRouted="false" />

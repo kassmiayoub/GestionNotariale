@@ -362,6 +362,7 @@
     <Compile Include="BL\cls_bl_credit.cs" />
     <Compile Include="BL\cls_bl_creditpersonne.cs" />
     <Compile Include="BL\cls_bl_dossier.cs" />
+    <Compile Include="BL\cls_bl_facture.cs" />
     <Compile Include="BL\CLS_BL_LOG.cs" />
     <Compile Include="BL\cls_bl_partes.cs" />
     <Compile Include="BL\cls_bl_partes_S.cs" />
@@ -533,6 +534,12 @@
     </Compile>
     <Compile Include="controls\CTL_DAY_ITEM.Designer.cs">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CTL_facture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\CTL_facture.Designer.cs">
+      <DependentUpon>CTL_facture.cs</DependentUpon>
     </Compile>
     <Compile Include="controls\CTL_information_cabinet.cs">
       <SubType>UserControl</SubType>
@@ -716,10 +723,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="reports\facture.cs">
+    <Compile Include="reports\facture_report.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>facture.rpt</DependentUpon>
+      <DependentUpon>facture_report.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reports\recu_report.cs">
@@ -763,6 +770,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_DAY_ITEM.resx">
       <DependentUpon>CTL_DAY_ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CTL_facture.resx">
+      <DependentUpon>CTL_facture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\CTL_information_cabinet.resx">
       <DependentUpon>CTL_information_cabinet.cs</DependentUpon>
@@ -851,9 +861,9 @@
     <EmbeddedResource Include="controls\ADD_DOSSIER.resx">
       <DependentUpon>ADD_DOSSIER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reports\facture.rpt">
+    <EmbeddedResource Include="reports\facture_report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>facture.cs</LastGenOutput>
+      <LastGenOutput>facture_report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\recu_report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

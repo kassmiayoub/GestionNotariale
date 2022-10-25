@@ -1101,6 +1101,10 @@
     <Property Name="utilisatuer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="contrat" Relationship="gestion_cabinet_notarialModel.FK__facture__idcontr__19DFD96B" FromRole="facture" ToRole="contrat" />
     <NavigationProperty Name="utilisateur" Relationship="gestion_cabinet_notarialModel.FK__facture__utilisa__1AD3FDA4" FromRole="facture" ToRole="utilisateur" />
+    <Property Name="hpnoraires" Type="Double" />
+    <Property Name="tamber" Type="Double" />
+    <Property Name="enrigestrement" Type="Double" />
+    <Property Name="ancfcc" Type="Double" />
   </EntityType>
   <Association Name="FK__facture__idcontr__19DFD96B">
     <End Type="gestion_cabinet_notarialModel.contrat" Role="contrat" Multiplicity="0..1" />

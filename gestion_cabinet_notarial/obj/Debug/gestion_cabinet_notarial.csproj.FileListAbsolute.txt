@@ -117,3 +117,4 @@ C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestio
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.ADD_OBJ.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.statsitic.resources
 C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.chrat.resources
+C:\Users\Kassmi\Desktop\gestion_cabinet_notarial\gestion_cabinet_notarial\gestion_cabinet_notarial\obj\Debug\gestion_cabinet_notarial.controls.CTL_facture.resources

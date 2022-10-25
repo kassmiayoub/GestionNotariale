@@ -1,4 +1,5 @@
 ﻿using gestion_cabinet_notarial.BL;
+using gestion_cabinet_notarial.context;
 using gestion_cabinet_notarial.reports;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class print_facture : Form
     {
+        cls_bl_facture cls_Bl_Facture = new cls_bl_facture();
         cls_bl_dossier cls_Bl_Dossier = new cls_bl_dossier();
         static public string foncier;
         static public string typecontart;
@@ -35,9 +37,9 @@ namespace gestion_cabinet_notarial
         }
         private void print_facture_Load(object sender, EventArgs e)
         {
-            facture f = new facture();
-            DataSet1 ds = new DataSet1();
-
+            facture_report f = new facture_report();
+            facture facture = new facture();
+            DataSet1 ds = new DataSet1();            
             DATABASE.getinfocabinet().Fill(ds.DataTable1);
             f.SetDataSource(ds);
             f.SetParameterValue("montant_enregitrement", montant_enregitrement);
@@ -71,9 +73,16 @@ namespace gestion_cabinet_notarial
             {
                 f.SetParameterValue("PRIXVENTE", "");
                 f.SetParameterValue("typeprix", "");
-            }
-            
+            }           
             crystalReportViewer1.ReportSource = f;
+            facture.utilisatuer = THEME.id_user;
+            facture.idcontrat = THEME.id_C;
+            facture.date = DateTime.Now;
+            facture.ancfcc = paye_Ancfcc;
+            facture.enrigestrement = paye_enregitrement;
+            facture.tamber = paye_tamber;
+            facture.hpnoraires = paye_honorair;
+            cls_Bl_Facture.Add(facture);
         }
     }
    

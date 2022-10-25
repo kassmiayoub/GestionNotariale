@@ -144,6 +144,10 @@
     <Property Name="date" Type="date" />
     <Property Name="idcontrat" Type="int" />
     <Property Name="utilisatuer" Type="varchar" MaxLength="30" />
+    <Property Name="hpnoraires" Type="float" />
+    <Property Name="tamber" Type="float" />
+    <Property Name="enrigestrement" Type="float" />
+    <Property Name="ancfcc" Type="float" />
   </EntityType>
   <EntityType Name="fichiers_client">
     <Key>
