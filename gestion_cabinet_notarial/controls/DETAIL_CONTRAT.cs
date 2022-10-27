@@ -17,7 +17,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class DETAIL_CONTRAT : UserControl
     {
-        int parte;
+        int parte = 0;
         double montant_reste;
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_partes_S Signature = new cls_bl_partes_S();
@@ -107,13 +107,18 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
+            if(parte == 0)
+            {
+                MessageBox.Show("VOUS N'AVEZ PAS cocher un parte");
+                return;
+            }
             var p = new Signature();
             p = Signature.FindByValues(ele => ele.idpatres == parte && ele.idcontrat == THEME.id_C).First();
             p.DateSignatur = Convert.ToDateTime(bunifuDatePicker_date_s.Text);
             Signature.SaveChanges();
             THEME.operation($"AJOUTER UN SIGNATURE DE CONTRAT ID = {THEME.id_C}");
             bunifuDatePicker_date_s.Enabled = false;
-            buttonadd_date_s.Enabled=false;
+            parte = 0;
             MessageBox.Show($"client {p.parte.client.Nom} {p.parte.client.Prenom} signie avec seccess");
         }
         private void PAYEMENTCLIENT_CONTRAT_Click(object sender, EventArgs e)
@@ -259,7 +264,7 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("cette contrat il est credit");
                 return;
             }
-            if (montant_reste < double.Parse(bunifuTextBox_MONTANT.Text))
+            if (montant_reste < double.Parse(bunifuTextBox_MONTANT.Text) || montant_reste == 0 || double.Parse(bunifuTextBox_MONTANT.Text) == 0 || bunifuTextBox_MONTANT.Text=="")
                 return;
             var p = new  payement();
             p.idClient = int.Parse(comboBoxCLIENT_PY.SelectedValue.ToString());
@@ -338,7 +343,7 @@ namespace gestion_cabinet_notarial
             if (e.RowIndex == -1)
                 return;
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >= 0 && dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 string path = THEME.contratDirectoryPath + "/"+THEME.id_C.ToString()+"/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
@@ -427,7 +432,7 @@ namespace gestion_cabinet_notarial
         private void bunifuDataGridView_payement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >= 0 && dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 print.client = dgv.Rows[e.RowIndex].Cells["CLIENT"].Value.ToString();
                 print.typepaye = dgv.Rows[e.RowIndex].Cells["TYPEPAYEMENT"].Value.ToString();
@@ -473,7 +478,7 @@ namespace gestion_cabinet_notarial
             }
             else
             {
-                print_facture.paye = "La facture a été payée, ";
+                print_facture.etatpayement = "La facture a été payée, ";
             }
             string paye = bunifuDataGridView_statistic.Rows[4].Cells[2].Value.ToString();
             string[] n = paye.Split('.');
@@ -515,7 +520,6 @@ namespace gestion_cabinet_notarial
             {               
                 parte = int.Parse(dgv.Rows[e.RowIndex].Cells["ID_PARTE"].Value.ToString());              
                 bunifuDatePicker_date_s.Enabled = true;
-                buttonadd_date_s.Enabled = true;
             }
         }
 

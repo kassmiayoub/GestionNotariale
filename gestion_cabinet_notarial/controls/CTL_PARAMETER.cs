@@ -44,6 +44,11 @@ namespace gestion_cabinet_notarial.controls
         {
             if (ButtonAdd_utilisatuer.Text == "AJOUTER")
             {
+                if (user.FindByValues(ele => ele.utilisateur1 == bunifuTextBox_USER.Text).First() != null)
+                {
+                    MessageBox.Show("CETTE URILISATUER EXIST DEJA");
+                    return;
+                }
                 var A = new utilisateur();
                 A.utilisateur1 = bunifuTextBox_USER.Text;
                 A.Password = bunifuTextBox_PASS.Text;
@@ -300,18 +305,7 @@ namespace gestion_cabinet_notarial.controls
         }
 
         private void bunifuCheckBox_STATISTIQUE_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-            if (THEME.id_user_modifier == "")
-            {
-                if (bunifuCheckBox_STATISTIQUE.Checked)
-                {
-                    bunifuCheckBox_STATISTIQUE.Checked = true;
-                }
-                else
-                {
-                    bunifuCheckBox_STATISTIQUE.Checked = false;
-                }
-            }            
+        {                        
         }
     } 
 }

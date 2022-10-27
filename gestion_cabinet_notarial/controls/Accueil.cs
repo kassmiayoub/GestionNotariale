@@ -102,7 +102,7 @@ namespace gestion_cabinet_notarial
         private void bunifuDataGridView_accueil_CellClick(object sender, DataGridViewCellEventArgs e)
         {
              DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >= 0 && dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 if (dgv.Columns[e.ColumnIndex].Name == "DETAIL")
                 {

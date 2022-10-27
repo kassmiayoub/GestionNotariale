@@ -14,6 +14,7 @@ namespace gestion_cabinet_notarial
 {
     public partial class CTL_CREDIT : UserControl
     {
+        double montant = 0;
         cls_bl_payement paye = new cls_bl_payement();
         cls_bl_credit BL_credit = new cls_bl_credit();
         cls_bl_contrat contrat = new cls_bl_contrat();
@@ -63,7 +64,7 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
-            if (bunifuTextBox_MONTANT.Text == "")
+            if (bunifuTextBox_MONTANT.Text == "" || montant < double.Parse(bunifuTextBox_MONTANT.Text) || montant == 0 || bunifuTextBox_MONTANT.Text == "0")
                 return;
             var p = new payement();
             p.idClient = int.Parse(comboBoxCLIENT_PY.SelectedValue.ToString());
@@ -106,6 +107,7 @@ namespace gestion_cabinet_notarial
             var montant_credit = BL_credit.FindByValues(v => v.idcontrat == a).First();
             double montant_credit_paye = paye.GetAll().Where(ele => ele.contrat.Idcontrat == a && ele.type== "credit").Sum(ele => ele.Montant).Value;
             bunifuTextBox_MONTANT.Text = (montant_credit.montant-montant_credit_paye).ToString();
+            montant = (double)(montant_credit.montant - montant_credit_paye);
         }
         private void RD_ESPECES_CheckedChanged(object sender, EventArgs e)
         {

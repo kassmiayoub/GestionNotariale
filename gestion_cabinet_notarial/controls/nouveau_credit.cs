@@ -50,6 +50,10 @@ namespace gestion_cabinet_notarial.controls
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
+            if(comboBox_client_credit.SelectedValue == null)
+            {
+                return;
+            }
             var credit = new credit();
             credit.idClient = (int)comboBox_client_credit.SelectedValue;
             credit.idcontrat = (int)comboBox_contrat_credit.SelectedValue;

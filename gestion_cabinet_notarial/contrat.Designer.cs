@@ -144,7 +144,7 @@
             this.bunifuCheckBoxancfcc.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBoxancfcc.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBoxancfcc.CustomCheckmarkImage = null;
-            this.bunifuCheckBoxancfcc.Location = new System.Drawing.Point(1063, 179);
+            this.bunifuCheckBoxancfcc.Location = new System.Drawing.Point(1063, 192);
             this.bunifuCheckBoxancfcc.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBoxancfcc.Name = "bunifuCheckBoxancfcc";
             this.bunifuCheckBoxancfcc.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -198,7 +198,7 @@
             this.bunifuCheckBoxenregistrement.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBoxenregistrement.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBoxenregistrement.CustomCheckmarkImage = null;
-            this.bunifuCheckBoxenregistrement.Location = new System.Drawing.Point(1063, 132);
+            this.bunifuCheckBoxenregistrement.Location = new System.Drawing.Point(1063, 138);
             this.bunifuCheckBoxenregistrement.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBoxenregistrement.Name = "bunifuCheckBoxenregistrement";
             this.bunifuCheckBoxenregistrement.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -252,7 +252,7 @@
             this.bunifuCheckBoxhonoraire.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBoxhonoraire.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBoxhonoraire.CustomCheckmarkImage = null;
-            this.bunifuCheckBoxhonoraire.Location = new System.Drawing.Point(1063, 84);
+            this.bunifuCheckBoxhonoraire.Location = new System.Drawing.Point(1063, 86);
             this.bunifuCheckBoxhonoraire.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBoxhonoraire.Name = "bunifuCheckBoxhonoraire";
             this.bunifuCheckBoxhonoraire.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -304,7 +304,7 @@
             // dateTimePickerfin
             // 
             this.dateTimePickerfin.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.dateTimePickerfin.Location = new System.Drawing.Point(241, 138);
+            this.dateTimePickerfin.Location = new System.Drawing.Point(220, 136);
             this.dateTimePickerfin.Name = "dateTimePickerfin";
             this.dateTimePickerfin.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerfin.TabIndex = 492;
@@ -312,7 +312,7 @@
             // dateTimePickerdubet
             // 
             this.dateTimePickerdubet.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.dateTimePickerdubet.Location = new System.Drawing.Point(241, 86);
+            this.dateTimePickerdubet.Location = new System.Drawing.Point(220, 84);
             this.dateTimePickerdubet.Name = "dateTimePickerdubet";
             this.dateTimePickerdubet.Size = new System.Drawing.Size(261, 27);
             this.dateTimePickerdubet.TabIndex = 491;
@@ -324,7 +324,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(33, 137);
+            this.label6.Location = new System.Drawing.Point(12, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 23);
             this.label6.TabIndex = 490;
@@ -337,7 +337,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(33, 84);
+            this.label3.Location = new System.Drawing.Point(12, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 23);
             this.label3.TabIndex = 489;
@@ -381,25 +381,28 @@
             // nemurecupdown_with_comma3
             // 
             this.nemurecupdown_with_comma3.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
-            this.nemurecupdown_with_comma3.Location = new System.Drawing.Point(964, 176);
+            this.nemurecupdown_with_comma3.Location = new System.Drawing.Point(922, 189);
+            this.nemurecupdown_with_comma3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nemurecupdown_with_comma3.Name = "nemurecupdown_with_comma3";
-            this.nemurecupdown_with_comma3.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma3.Size = new System.Drawing.Size(134, 36);
             this.nemurecupdown_with_comma3.TabIndex = 483;
             // 
             // nemurecupdown_with_comma2
             // 
             this.nemurecupdown_with_comma2.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
-            this.nemurecupdown_with_comma2.Location = new System.Drawing.Point(964, 129);
+            this.nemurecupdown_with_comma2.Location = new System.Drawing.Point(922, 135);
+            this.nemurecupdown_with_comma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nemurecupdown_with_comma2.Name = "nemurecupdown_with_comma2";
-            this.nemurecupdown_with_comma2.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma2.Size = new System.Drawing.Size(134, 39);
             this.nemurecupdown_with_comma2.TabIndex = 482;
             // 
             // nemurecupdown_with_comma1
             // 
             this.nemurecupdown_with_comma1.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
-            this.nemurecupdown_with_comma1.Location = new System.Drawing.Point(964, 82);
+            this.nemurecupdown_with_comma1.Location = new System.Drawing.Point(922, 81);
+            this.nemurecupdown_with_comma1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nemurecupdown_with_comma1.Name = "nemurecupdown_with_comma1";
-            this.nemurecupdown_with_comma1.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma1.Size = new System.Drawing.Size(134, 39);
             this.nemurecupdown_with_comma1.TabIndex = 481;
             // 
             // label5
@@ -409,7 +412,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(136, 203);
+            this.label5.Location = new System.Drawing.Point(115, 201);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 23);
             this.label5.TabIndex = 480;
@@ -422,7 +425,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(598, 187);
+            this.label4.Location = new System.Drawing.Point(559, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 24);
             this.label4.TabIndex = 479;
@@ -435,7 +438,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(530, 141);
+            this.label2.Location = new System.Drawing.Point(491, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 23);
             this.label2.TabIndex = 478;
@@ -448,7 +451,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(541, 91);
+            this.label1.Location = new System.Drawing.Point(502, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 477;
@@ -482,7 +485,7 @@
             this.bunifuTextBoxhonoraire.IconRight = null;
             this.bunifuTextBoxhonoraire.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxhonoraire.Lines = new string[0];
-            this.bunifuTextBoxhonoraire.Location = new System.Drawing.Point(694, 79);
+            this.bunifuTextBoxhonoraire.Location = new System.Drawing.Point(655, 78);
             this.bunifuTextBoxhonoraire.MaxLength = 32767;
             this.bunifuTextBoxhonoraire.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxhonoraire.Modified = false;
@@ -558,7 +561,7 @@
             this.bunifuTextBoxenregistrement.IconRight = null;
             this.bunifuTextBoxenregistrement.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxenregistrement.Lines = new string[0];
-            this.bunifuTextBoxenregistrement.Location = new System.Drawing.Point(694, 126);
+            this.bunifuTextBoxenregistrement.Location = new System.Drawing.Point(655, 132);
             this.bunifuTextBoxenregistrement.MaxLength = 32767;
             this.bunifuTextBoxenregistrement.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxenregistrement.Modified = false;
@@ -634,7 +637,7 @@
             this.bunifuTextBoxAncfcc.IconRight = null;
             this.bunifuTextBoxAncfcc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxAncfcc.Lines = new string[0];
-            this.bunifuTextBoxAncfcc.Location = new System.Drawing.Point(694, 173);
+            this.bunifuTextBoxAncfcc.Location = new System.Drawing.Point(655, 186);
             this.bunifuTextBoxAncfcc.MaxLength = 32767;
             this.bunifuTextBoxAncfcc.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxAncfcc.Modified = false;
@@ -710,7 +713,7 @@
             this.bunifuTextBoxtmbr.IconRight = null;
             this.bunifuTextBoxtmbr.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxtmbr.Lines = new string[0];
-            this.bunifuTextBoxtmbr.Location = new System.Drawing.Point(241, 188);
+            this.bunifuTextBoxtmbr.Location = new System.Drawing.Point(220, 186);
             this.bunifuTextBoxtmbr.MaxLength = 32767;
             this.bunifuTextBoxtmbr.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxtmbr.Modified = false;

@@ -33,6 +33,8 @@ namespace gestion_cabinet_notarial
                 //new MainMenuItemSubItem("Ajouter Dossier", (se, ev) => THEME.navigat(typeof(ADD_DOSSIER))/*), "AddColleague"*/) { Tag = "Adddossier" }
                 //new MainMenuItemSubItem("list dossier"/*, (se, ev) => Theme.Navigate(typeof(CTL_COLLEAGUES_LIST)), "ColleaguesList"*/) { Tag = "ColleaguesList" }
             ));
+            PanelItems.Controls.Add(new MainMenuItem(Resources.facture_notaire, "FACTURE", false, (se, ev) => THEME.navigat(typeof(CTL_facture))
+            ));
             //PanelItems.Controls.Add(new MainMenuItem(Resources.Calendar, "Rendez-vous", true, null,
             //    new MainMenuItemSubItem("ajouter Rendez-vous"/*, (se, ev) => Theme.Navigate(typeof(CTL_ADD_CLIENT)), "AddClient"*/) { Tag = "AddClient" },
             //    new MainMenuItemSubItem("list Rendez-vous"/*, (se, ev) => Theme.Navigate(typeof(CTL_CLIENTS_LIST)), "ClientsList"*/) { Tag = "ClientsList" }

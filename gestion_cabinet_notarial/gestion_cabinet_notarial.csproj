@@ -1144,6 +1144,7 @@
       <DependentUpon>gestion_cabinet_cotarialEntities.edmx</DependentUpon>
       <LastGenOutput>gestion_cabinet_cotarialEntities.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\facture_notaire.png" />
     <None Include="Resources\toback.png" />
     <None Include="Resources\STATISTIQUE.png" />
     <None Include="Resources\contrat.png" />

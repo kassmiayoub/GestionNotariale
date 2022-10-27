@@ -112,7 +112,7 @@ namespace gestion_cabinet_notarial
         private void dataGridViewlist_contrat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {            
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >=0 && dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 if (!THEME.acceder("CONTARTS DOSSIER"))
                 {

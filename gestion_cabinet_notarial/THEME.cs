@@ -46,6 +46,7 @@ namespace gestion_cabinet_notarial
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
         public static Accueil Accueil { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
+        public static CTL_facture CTL_facture { get; set; }
         public static CTL_PARAMETER_AJOUTER_UTILISATUER AJOUTER_UTILISATUER { get; set; }
         public static DETAIL_CONTRAT DETAIL_CONTRAT { get; set; }
         public static detail_dossier detail_dossier { get; set; }
@@ -80,6 +81,7 @@ namespace gestion_cabinet_notarial
         {
             ControlsList.Clear();
             ControlsList.Add(CTL_AGENDA);
+            ControlsList.Add(CTL_facture);
             ControlsList.Add(CTL_STATISTIC);
             ControlsList.Add(CTL_CDG);
             ControlsList.Add(CTL_information_cabinet);
@@ -102,6 +104,7 @@ namespace gestion_cabinet_notarial
             private static void create_obj_ctl()
         {
             ADD_DOSSIER = new ADD_DOSSIER() { Visible = false };
+            CTL_facture = new CTL_facture() { Visible = false };
             CTL_STATISTIC = new CTL_STATISTIC() { Visible = false };
             CTL_CDG = new CTL_CDG() { Visible = false };
             CTL_information_cabinet = new CTL_information_cabinet() { Visible = false };
