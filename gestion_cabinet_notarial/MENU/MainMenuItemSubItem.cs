@@ -18,8 +18,6 @@ namespace gestion_cabinet_notarial
         }
         public MainMenuItemSubItem(string SubItemName, EventHandler EH, string Function = "") : this()
         {
-           
-         
             this.SubItemName = SubItemName;
             LabelSubItemName.Text = this.SubItemName;
             this.EH = EH;

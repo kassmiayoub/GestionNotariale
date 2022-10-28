@@ -117,7 +117,6 @@ namespace gestion_cabinet_notarial
             p.DateSignatur = Convert.ToDateTime(bunifuDatePicker_date_s.Text);
             Signature.SaveChanges();
             THEME.operation($"AJOUTER UN SIGNATURE DE CONTRAT ID = {THEME.id_C}");
-            bunifuDatePicker_date_s.Enabled = false;
             parte = 0;
             MessageBox.Show($"client {p.parte.client.Nom} {p.parte.client.Prenom} signie avec seccess");
         }
@@ -392,6 +391,8 @@ namespace gestion_cabinet_notarial
         {
             if (this.Visible == true)
             {
+                buttonadd_date_s.Enabled = true;
+                bunifuDatePicker_date_s.Enabled = true;
                 PARTES_OF_CONTRAT.PerformClick();
                 THEME.operation($"CONSULTER STATISTIQUE DE CONTRAT ID = {THEME.id_C}");
                 int idc = THEME.id_C;
@@ -512,14 +513,12 @@ namespace gestion_cabinet_notarial
         private void bunifuDataGridViewpartes_S_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Rows[e.RowIndex].Cells[5].Value == null) 
+            if (dgv.Rows[e.RowIndex].Cells[5].Value == null)
                 dgv.Rows[e.RowIndex].Cells[5].Value = false;
-            MessageBox.Show((dgv.Rows[e.RowIndex].Cells["Signatur"].Value).ToString());
             dgv.Rows[e.RowIndex].Cells["Signatur"].Value = !(bool)dgv.Rows[e.RowIndex].Cells["Signatur"].Value;
             if (dgv.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn)
             {               
-                parte = int.Parse(dgv.Rows[e.RowIndex].Cells["ID_PARTE"].Value.ToString());              
-                bunifuDatePicker_date_s.Enabled = true;
+                parte = int.Parse(dgv.Rows[e.RowIndex].Cells["ID_PARTE"].Value.ToString());
             }
         }
 

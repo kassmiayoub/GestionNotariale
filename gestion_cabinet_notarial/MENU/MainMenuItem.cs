@@ -80,7 +80,23 @@ namespace gestion_cabinet_notarial
             {
                 if (!THEME.acceder("AFFICHIER LA LIST CDG"))
                 {
-                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION 222");
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                    return;
+                }
+            }
+            else if (LabelItemName.Text == "STATISTIQUE")
+            {
+                if (!THEME.acceder("statistique"))
+                {
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
+                    return;
+                }
+            }
+            else if(LabelItemName.Text == "FACTURE")
+            {
+                if (!THEME.acceder("facture"))
+                {
+                    MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                     return;
                 }
             }

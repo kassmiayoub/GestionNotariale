@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTL_PARAMETER_AJOUTER_UTILISATUER));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties41 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -161,6 +161,8 @@
             this.ButtonInit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label50 = new System.Windows.Forms.Label();
+            this.bunifuCheckBox2 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.panel_check_box.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -219,6 +221,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_check_box.AutoScroll = true;
+            this.panel_check_box.Controls.Add(this.bunifuCheckBox2);
+            this.panel_check_box.Controls.Add(this.label52);
             this.panel_check_box.Controls.Add(this.bunifuCheckBox_STATISTIQUE);
             this.panel_check_box.Controls.Add(this.label51);
             this.panel_check_box.Controls.Add(this.bunifuSeparator11);
@@ -324,7 +328,6 @@
             this.panel_check_box.Controls.Add(this.bunifuSeparator1);
             this.panel_check_box.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.panel_check_box.Location = new System.Drawing.Point(3, 221);
-            this.panel_check_box.MinimumSize = new System.Drawing.Size(858, 592);
             this.panel_check_box.Name = "panel_check_box";
             this.panel_check_box.Size = new System.Drawing.Size(858, 592);
             this.panel_check_box.TabIndex = 405;
@@ -338,7 +341,7 @@
             this.bunifuCheckBox_STATISTIQUE.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_STATISTIQUE.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_STATISTIQUE.AllowOnHoverStates = true;
-            this.bunifuCheckBox_STATISTIQUE.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_STATISTIQUE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_STATISTIQUE.AutoCheck = true;
             this.bunifuCheckBox_STATISTIQUE.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_STATISTIQUE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_STATISTIQUE.BackgroundImage")));
@@ -388,7 +391,7 @@
             // 
             // label51
             // 
-            this.label51.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label51.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Ubuntu Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -400,7 +403,7 @@
             // 
             // bunifuSeparator11
             // 
-            this.bunifuSeparator11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator11.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator11.BackgroundImage")));
             this.bunifuSeparator11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -424,7 +427,7 @@
             this.bunifuCheckBox_CDG.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_CDG.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_CDG.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_CDG.AutoCheck = true;
             this.bunifuCheckBox_CDG.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_CDG.BackgroundImage")));
@@ -474,7 +477,7 @@
             // 
             // label49
             // 
-            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -486,7 +489,7 @@
             // 
             // bunifuSeparator10
             // 
-            this.bunifuSeparator10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator10.BackgroundImage")));
             this.bunifuSeparator10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -504,7 +507,7 @@
             // 
             // label48
             // 
-            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -522,7 +525,7 @@
             this.bunifuCheckBox_LIST_CDG.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_LIST_CDG.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_LIST_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_LIST_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_LIST_CDG.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_LIST_CDG.AutoCheck = true;
             this.bunifuCheckBox_LIST_CDG.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_LIST_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_LIST_CDG.BackgroundImage")));
@@ -571,7 +574,7 @@
             // 
             // label38
             // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -589,7 +592,7 @@
             this.bunifuCheckBox_AJOUTER_CDG.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_AJOUTER_CDG.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_AJOUTER_CDG.AllowOnHoverStates = true;
-            this.bunifuCheckBox_AJOUTER_CDG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_AJOUTER_CDG.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_AJOUTER_CDG.AutoCheck = true;
             this.bunifuCheckBox_AJOUTER_CDG.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_AJOUTER_CDG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_AJOUTER_CDG.BackgroundImage")));
@@ -638,7 +641,7 @@
             // 
             // bunifuSeparator6
             // 
-            this.bunifuSeparator6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
             this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -662,7 +665,7 @@
             this.bunifuCheckBox_COMPTE.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_COMPTE.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_COMPTE.AllowOnHoverStates = true;
-            this.bunifuCheckBox_COMPTE.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_COMPTE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_COMPTE.AutoCheck = true;
             this.bunifuCheckBox_COMPTE.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_COMPTE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_COMPTE.BackgroundImage")));
@@ -711,7 +714,7 @@
             // 
             // label20
             // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -729,7 +732,7 @@
             this.bunifuCheckBox_modifier_info_cabinet.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_modifier_info_cabinet.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_modifier_info_cabinet.AllowOnHoverStates = true;
-            this.bunifuCheckBox_modifier_info_cabinet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_modifier_info_cabinet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_modifier_info_cabinet.AutoCheck = true;
             this.bunifuCheckBox_modifier_info_cabinet.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_modifier_info_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_modifier_info_cabinet.BackgroundImage")));
@@ -778,7 +781,7 @@
             // 
             // label47
             // 
-            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -796,7 +799,7 @@
             this.bunifuCheckBox_info_cabinet.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_info_cabinet.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_info_cabinet.AllowOnHoverStates = true;
-            this.bunifuCheckBox_info_cabinet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_info_cabinet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_info_cabinet.AutoCheck = true;
             this.bunifuCheckBox_info_cabinet.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_info_cabinet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_info_cabinet.BackgroundImage")));
@@ -845,7 +848,7 @@
             // 
             // label46
             // 
-            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -857,7 +860,7 @@
             // 
             // label45
             // 
-            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -875,7 +878,7 @@
             this.bunifuCheckBox_affichier_paye.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_affichier_paye.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_affichier_paye.AllowOnHoverStates = true;
-            this.bunifuCheckBox_affichier_paye.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_affichier_paye.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_affichier_paye.AutoCheck = true;
             this.bunifuCheckBox_affichier_paye.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_affichier_paye.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_affichier_paye.BackgroundImage")));
@@ -924,15 +927,15 @@
             // 
             // label44
             // 
-            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label44.Location = new System.Drawing.Point(524, 370);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(165, 19);
+            this.label44.Size = new System.Drawing.Size(156, 19);
             this.label44.TabIndex = 500;
-            this.label44.Text = "AFFICHIER LES CRRDITS";
+            this.label44.Text = "AFFICHIER LES CRDITS";
             // 
             // bunifuCheckBox_affichier_credits
             // 
@@ -942,7 +945,7 @@
             this.bunifuCheckBox_affichier_credits.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_affichier_credits.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_affichier_credits.AllowOnHoverStates = true;
-            this.bunifuCheckBox_affichier_credits.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_affichier_credits.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_affichier_credits.AutoCheck = true;
             this.bunifuCheckBox_affichier_credits.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_affichier_credits.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_affichier_credits.BackgroundImage")));
@@ -985,13 +988,13 @@
             this.bunifuCheckBox_affichier_credits.Size = new System.Drawing.Size(21, 21);
             this.bunifuCheckBox_affichier_credits.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.bunifuCheckBox_affichier_credits.TabIndex = 499;
-            this.bunifuCheckBox_affichier_credits.Tag = "AFFICHIER LES CRRDITS";
+            this.bunifuCheckBox_affichier_credits.Tag = "AFFICHIER LES CRDITS";
             this.bunifuCheckBox_affichier_credits.ThreeState = false;
             this.bunifuCheckBox_affichier_credits.ToolTipText = null;
             // 
             // label43
             // 
-            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1009,7 +1012,7 @@
             this.bunifuCheckBox_ajouter_credit.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_ajouter_credit.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_ajouter_credit.AllowOnHoverStates = true;
-            this.bunifuCheckBox_ajouter_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_ajouter_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_ajouter_credit.AutoCheck = true;
             this.bunifuCheckBox_ajouter_credit.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_ajouter_credit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_ajouter_credit.BackgroundImage")));
@@ -1058,7 +1061,7 @@
             // 
             // label42
             // 
-            this.label42.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1076,7 +1079,7 @@
             this.bunifuCheckBox_paye_credit.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_paye_credit.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_paye_credit.AllowOnHoverStates = true;
-            this.bunifuCheckBox_paye_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_paye_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_paye_credit.AutoCheck = true;
             this.bunifuCheckBox_paye_credit.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_paye_credit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_paye_credit.BackgroundImage")));
@@ -1131,7 +1134,7 @@
             this.bunifuCheckBox_credit.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_credit.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_credit.AllowOnHoverStates = true;
-            this.bunifuCheckBox_credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_credit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_credit.AutoCheck = true;
             this.bunifuCheckBox_credit.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_credit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_credit.BackgroundImage")));
@@ -1181,7 +1184,7 @@
             // 
             // label41
             // 
-            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1193,7 +1196,7 @@
             // 
             // bunifuSeparator5
             // 
-            this.bunifuSeparator5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator5.BackgroundImage")));
             this.bunifuSeparator5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1217,7 +1220,7 @@
             this.bunifuCheckBox_ajouter_fichier_contrat.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_ajouter_fichier_contrat.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_ajouter_fichier_contrat.AllowOnHoverStates = true;
-            this.bunifuCheckBox_ajouter_fichier_contrat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_ajouter_fichier_contrat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_ajouter_fichier_contrat.AutoCheck = true;
             this.bunifuCheckBox_ajouter_fichier_contrat.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_ajouter_fichier_contrat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_ajouter_fichier_contrat.BackgroundImage")));
@@ -1266,7 +1269,7 @@
             // 
             // label40
             // 
-            this.label40.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1284,7 +1287,7 @@
             this.bunifuCheckBox_ajouter_fichier_dossier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_ajouter_fichier_dossier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_ajouter_fichier_dossier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_ajouter_fichier_dossier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_ajouter_fichier_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_ajouter_fichier_dossier.AutoCheck = true;
             this.bunifuCheckBox_ajouter_fichier_dossier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_ajouter_fichier_dossier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_ajouter_fichier_dossier.BackgroundImage")));
@@ -1333,7 +1336,7 @@
             // 
             // label39
             // 
-            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1345,7 +1348,7 @@
             // 
             // label23
             // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1357,7 +1360,7 @@
             // 
             // label37
             // 
-            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1369,7 +1372,7 @@
             // 
             // bunifuSeparator9
             // 
-            this.bunifuSeparator9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator9.BackgroundImage")));
             this.bunifuSeparator9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1388,7 +1391,7 @@
             // 
             // bunifuSeparator8
             // 
-            this.bunifuSeparator8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator8.BackgroundImage")));
             this.bunifuSeparator8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1412,7 +1415,7 @@
             this.bunifuCheckBox_ditails_dossier_client.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_ditails_dossier_client.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_ditails_dossier_client.AllowOnHoverStates = true;
-            this.bunifuCheckBox_ditails_dossier_client.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_ditails_dossier_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_ditails_dossier_client.AutoCheck = true;
             this.bunifuCheckBox_ditails_dossier_client.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_ditails_dossier_client.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_ditails_dossier_client.BackgroundImage")));
@@ -1461,7 +1464,7 @@
             // 
             // label35
             // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1479,7 +1482,7 @@
             this.bunifuCheckBox_affichier_fichier_client.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_affichier_fichier_client.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_affichier_fichier_client.AllowOnHoverStates = true;
-            this.bunifuCheckBox_affichier_fichier_client.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_affichier_fichier_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_affichier_fichier_client.AutoCheck = true;
             this.bunifuCheckBox_affichier_fichier_client.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_affichier_fichier_client.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_affichier_fichier_client.BackgroundImage")));
@@ -1528,7 +1531,7 @@
             // 
             // label36
             // 
-            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1540,7 +1543,7 @@
             // 
             // bunifuSeparator2
             // 
-            this.bunifuSeparator2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
             this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1564,7 +1567,7 @@
             this.bunifuCheckBox1.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox1.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox1.AllowOnHoverStates = true;
-            this.bunifuCheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox1.AutoCheck = true;
             this.bunifuCheckBox1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox1.BackgroundImage")));
@@ -1613,7 +1616,7 @@
             // 
             // label34
             // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1631,7 +1634,7 @@
             this.bunifuCheckBox_basedonnee.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_basedonnee.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_basedonnee.AllowOnHoverStates = true;
-            this.bunifuCheckBox_basedonnee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_basedonnee.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_basedonnee.AutoCheck = true;
             this.bunifuCheckBox_basedonnee.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_basedonnee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_basedonnee.BackgroundImage")));
@@ -1680,7 +1683,7 @@
             // 
             // label33
             // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1698,7 +1701,7 @@
             this.bunifuCheckBox_list_operation.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_list_operation.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_list_operation.AllowOnHoverStates = true;
-            this.bunifuCheckBox_list_operation.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_list_operation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_list_operation.AutoCheck = true;
             this.bunifuCheckBox_list_operation.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_list_operation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_list_operation.BackgroundImage")));
@@ -1747,7 +1750,7 @@
             // 
             // label32
             // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1765,7 +1768,7 @@
             this.bunifuCheckBox_suprimer_utilisatuer.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_suprimer_utilisatuer.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_suprimer_utilisatuer.AllowOnHoverStates = true;
-            this.bunifuCheckBox_suprimer_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_suprimer_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_suprimer_utilisatuer.AutoCheck = true;
             this.bunifuCheckBox_suprimer_utilisatuer.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_suprimer_utilisatuer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_suprimer_utilisatuer.BackgroundImage")));
@@ -1814,7 +1817,7 @@
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1832,7 +1835,7 @@
             this.bunifuCheckBox_list_utilisatuer.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_list_utilisatuer.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_list_utilisatuer.AllowOnHoverStates = true;
-            this.bunifuCheckBox_list_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_list_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_list_utilisatuer.AutoCheck = true;
             this.bunifuCheckBox_list_utilisatuer.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_list_utilisatuer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_list_utilisatuer.BackgroundImage")));
@@ -1881,7 +1884,7 @@
             // 
             // label30
             // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1899,7 +1902,7 @@
             this.bunifuCheckBox_ajputer_utilisatuer.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_ajputer_utilisatuer.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_ajputer_utilisatuer.AllowOnHoverStates = true;
-            this.bunifuCheckBox_ajputer_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_ajputer_utilisatuer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_ajputer_utilisatuer.AutoCheck = true;
             this.bunifuCheckBox_ajputer_utilisatuer.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_ajputer_utilisatuer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_ajputer_utilisatuer.BackgroundImage")));
@@ -1948,7 +1951,7 @@
             // 
             // label31
             // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1966,7 +1969,7 @@
             this.bunifuCheckBox_dossier_parte.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_dossier_parte.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_dossier_parte.AllowOnHoverStates = true;
-            this.bunifuCheckBox_dossier_parte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_dossier_parte.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_dossier_parte.AutoCheck = true;
             this.bunifuCheckBox_dossier_parte.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_dossier_parte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_dossier_parte.BackgroundImage")));
@@ -2015,7 +2018,7 @@
             // 
             // label28
             // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2033,7 +2036,7 @@
             this.bunifuCheckBox_dossier_contart.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_dossier_contart.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_dossier_contart.AllowOnHoverStates = true;
-            this.bunifuCheckBox_dossier_contart.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_dossier_contart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_dossier_contart.AutoCheck = true;
             this.bunifuCheckBox_dossier_contart.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_dossier_contart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_dossier_contart.BackgroundImage")));
@@ -2082,7 +2085,7 @@
             // 
             // label29
             // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2100,7 +2103,7 @@
             this.bunifuCheckBox_client_dossier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_client_dossier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_client_dossier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_client_dossier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_client_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_client_dossier.AutoCheck = true;
             this.bunifuCheckBox_client_dossier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_client_dossier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_client_dossier.BackgroundImage")));
@@ -2149,7 +2152,7 @@
             // 
             // label27
             // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2167,7 +2170,7 @@
             this.bunifuCheckBox_client_fichier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_client_fichier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_client_fichier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_client_fichier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_client_fichier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_client_fichier.AutoCheck = true;
             this.bunifuCheckBox_client_fichier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_client_fichier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_client_fichier.BackgroundImage")));
@@ -2216,7 +2219,7 @@
             // 
             // label26
             // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2234,7 +2237,7 @@
             this.bunifuCheckBox__dossier_fichier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox__dossier_fichier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox__dossier_fichier.AllowOnHoverStates = true;
-            this.bunifuCheckBox__dossier_fichier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox__dossier_fichier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox__dossier_fichier.AutoCheck = true;
             this.bunifuCheckBox__dossier_fichier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox__dossier_fichier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox__dossier_fichier.BackgroundImage")));
@@ -2289,7 +2292,7 @@
             this.bunifuCheckBox_contart_statistic.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_statistic.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_statistic.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_statistic.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_statistic.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_statistic.AutoCheck = true;
             this.bunifuCheckBox_contart_statistic.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_statistic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_statistic.BackgroundImage")));
@@ -2338,7 +2341,7 @@
             // 
             // label24
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2356,7 +2359,7 @@
             this.bunifuCheckBox_contart_signature.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_signature.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_signature.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_signature.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_signature.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_signature.AutoCheck = true;
             this.bunifuCheckBox_contart_signature.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_signature.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_signature.BackgroundImage")));
@@ -2405,7 +2408,7 @@
             // 
             // label25
             // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2423,7 +2426,7 @@
             this.bunifuCheckBox__dossier_detail.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox__dossier_detail.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox__dossier_detail.AllowOnHoverStates = true;
-            this.bunifuCheckBox__dossier_detail.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox__dossier_detail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox__dossier_detail.AutoCheck = true;
             this.bunifuCheckBox__dossier_detail.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox__dossier_detail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox__dossier_detail.BackgroundImage")));
@@ -2472,7 +2475,7 @@
             // 
             // label22
             // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2490,7 +2493,7 @@
             this.bunifuCheckBox_contart_fichier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_fichier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_fichier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_fichier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_fichier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_fichier.AutoCheck = true;
             this.bunifuCheckBox_contart_fichier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_fichier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_fichier.BackgroundImage")));
@@ -2545,7 +2548,7 @@
             this.bunifuCheckBox_contart_paiement.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_paiement.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_paiement.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_paiement.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_paiement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_paiement.AutoCheck = true;
             this.bunifuCheckBox_contart_paiement.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_paiement.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_paiement.BackgroundImage")));
@@ -2594,7 +2597,7 @@
             // 
             // label21
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2612,7 +2615,7 @@
             this.bunifuCheckBox_client_modifier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_client_modifier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_client_modifier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_client_modifier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_client_modifier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_client_modifier.AutoCheck = true;
             this.bunifuCheckBox_client_modifier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_client_modifier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_client_modifier.BackgroundImage")));
@@ -2661,7 +2664,7 @@
             // 
             // label19
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2679,7 +2682,7 @@
             this.bunifuCheckBox_dossier_modifier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_dossier_modifier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_dossier_modifier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_dossier_modifier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_dossier_modifier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_dossier_modifier.AutoCheck = true;
             this.bunifuCheckBox_dossier_modifier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_dossier_modifier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_dossier_modifier.BackgroundImage")));
@@ -2728,7 +2731,7 @@
             // 
             // label18
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2746,7 +2749,7 @@
             this.bunifuCheckBox_contart_detail.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_detail.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_detail.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_detail.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_detail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_detail.AutoCheck = true;
             this.bunifuCheckBox_contart_detail.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_detail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_detail.BackgroundImage")));
@@ -2795,7 +2798,7 @@
             // 
             // label17
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2813,7 +2816,7 @@
             this.bunifuCheckBox_rdv_suprimer.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_rdv_suprimer.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_rdv_suprimer.AllowOnHoverStates = true;
-            this.bunifuCheckBox_rdv_suprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_rdv_suprimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_rdv_suprimer.AutoCheck = true;
             this.bunifuCheckBox_rdv_suprimer.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_rdv_suprimer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_rdv_suprimer.BackgroundImage")));
@@ -2862,7 +2865,7 @@
             // 
             // label15
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2880,7 +2883,7 @@
             this.bunifuCheckBox_rdv_passer.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_rdv_passer.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_rdv_passer.AllowOnHoverStates = true;
-            this.bunifuCheckBox_rdv_passer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_rdv_passer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_rdv_passer.AutoCheck = true;
             this.bunifuCheckBox_rdv_passer.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_rdv_passer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_rdv_passer.BackgroundImage")));
@@ -2929,7 +2932,7 @@
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -2947,7 +2950,7 @@
             this.bunifuCheckBox_rdv_ajouter.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_rdv_ajouter.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_rdv_ajouter.AllowOnHoverStates = true;
-            this.bunifuCheckBox_rdv_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_rdv_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_rdv_ajouter.AutoCheck = true;
             this.bunifuCheckBox_rdv_ajouter.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_rdv_ajouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_rdv_ajouter.BackgroundImage")));
@@ -2996,7 +2999,7 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3014,7 +3017,7 @@
             this.bunifuCheckBox_client_ajouter.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_client_ajouter.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_client_ajouter.AllowOnHoverStates = true;
-            this.bunifuCheckBox_client_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_client_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_client_ajouter.AutoCheck = true;
             this.bunifuCheckBox_client_ajouter.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_client_ajouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_client_ajouter.BackgroundImage")));
@@ -3063,7 +3066,7 @@
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3081,7 +3084,7 @@
             this.bunifuCheckBox_contart_ajouter.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart_ajouter.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart_ajouter.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart_ajouter.AutoCheck = true;
             this.bunifuCheckBox_contart_ajouter.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart_ajouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart_ajouter.BackgroundImage")));
@@ -3130,7 +3133,7 @@
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3148,7 +3151,7 @@
             this.bunifuCheckBox_dossier_ajouter.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_dossier_ajouter.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_dossier_ajouter.AllowOnHoverStates = true;
-            this.bunifuCheckBox_dossier_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_dossier_ajouter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_dossier_ajouter.AutoCheck = true;
             this.bunifuCheckBox_dossier_ajouter.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_dossier_ajouter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_dossier_ajouter.BackgroundImage")));
@@ -3197,7 +3200,7 @@
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3215,7 +3218,7 @@
             this.bunifuCheckBox_parameter.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_parameter.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_parameter.AllowOnHoverStates = true;
-            this.bunifuCheckBox_parameter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_parameter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_parameter.AutoCheck = true;
             this.bunifuCheckBox_parameter.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_parameter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_parameter.BackgroundImage")));
@@ -3271,7 +3274,7 @@
             this.bunifuCheckBox_rdv.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_rdv.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_rdv.AllowOnHoverStates = true;
-            this.bunifuCheckBox_rdv.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_rdv.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_rdv.AutoCheck = true;
             this.bunifuCheckBox_rdv.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_rdv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_rdv.BackgroundImage")));
@@ -3327,7 +3330,7 @@
             this.bunifuCheckBox_client.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_client.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_client.AllowOnHoverStates = true;
-            this.bunifuCheckBox_client.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_client.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_client.AutoCheck = true;
             this.bunifuCheckBox_client.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_client.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_client.BackgroundImage")));
@@ -3383,7 +3386,7 @@
             this.bunifuCheckBox_contart.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_contart.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_contart.AllowOnHoverStates = true;
-            this.bunifuCheckBox_contart.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_contart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_contart.AutoCheck = true;
             this.bunifuCheckBox_contart.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_contart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_contart.BackgroundImage")));
@@ -3439,7 +3442,7 @@
             this.bunifuCheckBox_dossier.AllowCheckBoxAnimation = false;
             this.bunifuCheckBox_dossier.AllowCheckmarkAnimation = true;
             this.bunifuCheckBox_dossier.AllowOnHoverStates = true;
-            this.bunifuCheckBox_dossier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCheckBox_dossier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCheckBox_dossier.AutoCheck = true;
             this.bunifuCheckBox_dossier.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCheckBox_dossier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox_dossier.BackgroundImage")));
@@ -3489,7 +3492,7 @@
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3501,7 +3504,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3513,7 +3516,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3525,7 +3528,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3537,7 +3540,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Ubuntu Light", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -3549,7 +3552,7 @@
             // 
             // bunifuSeparator7
             // 
-            this.bunifuSeparator7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator7.BackgroundImage")));
             this.bunifuSeparator7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -3567,7 +3570,7 @@
             // 
             // bunifuSeparator4
             // 
-            this.bunifuSeparator4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator4.BackgroundImage")));
             this.bunifuSeparator4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -3585,7 +3588,7 @@
             // 
             // bunifuSeparator3
             // 
-            this.bunifuSeparator3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuSeparator3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
             this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -3676,26 +3679,26 @@
             this.bunifuTextBox_PASS.Modified = false;
             this.bunifuTextBox_PASS.Multiline = false;
             this.bunifuTextBox_PASS.Name = "bunifuTextBox_PASS";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PASS.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_PASS.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PASS.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PASS.OnIdleState = stateProperties4;
+            stateProperties33.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PASS.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_PASS.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PASS.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.Silver;
+            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.ForeColor = System.Drawing.Color.Empty;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PASS.OnIdleState = stateProperties36;
             this.bunifuTextBox_PASS.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox_PASS.PasswordChar = '\0';
             this.bunifuTextBox_PASS.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -3752,26 +3755,26 @@
             this.bunifuTextBox_PRENOM.Modified = false;
             this.bunifuTextBox_PRENOM.Multiline = false;
             this.bunifuTextBox_PRENOM.Name = "bunifuTextBox_PRENOM";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PRENOM.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_PRENOM.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PRENOM.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_PRENOM.OnIdleState = stateProperties8;
+            stateProperties37.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties37.FillColor = System.Drawing.Color.Empty;
+            stateProperties37.ForeColor = System.Drawing.Color.Empty;
+            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PRENOM.OnActiveState = stateProperties37;
+            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_PRENOM.OnDisabledState = stateProperties38;
+            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties39.FillColor = System.Drawing.Color.Empty;
+            stateProperties39.ForeColor = System.Drawing.Color.Empty;
+            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PRENOM.OnHoverState = stateProperties39;
+            stateProperties40.BorderColor = System.Drawing.Color.Silver;
+            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.ForeColor = System.Drawing.Color.Empty;
+            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_PRENOM.OnIdleState = stateProperties40;
             this.bunifuTextBox_PRENOM.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox_PRENOM.PasswordChar = '\0';
             this.bunifuTextBox_PRENOM.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -3828,26 +3831,26 @@
             this.bunifuTextBox_USER.Modified = false;
             this.bunifuTextBox_USER.Multiline = false;
             this.bunifuTextBox_USER.Name = "bunifuTextBox_USER";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_USER.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_USER.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_USER.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_USER.OnIdleState = stateProperties12;
+            stateProperties41.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties41.FillColor = System.Drawing.Color.Empty;
+            stateProperties41.ForeColor = System.Drawing.Color.Empty;
+            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_USER.OnActiveState = stateProperties41;
+            stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_USER.OnDisabledState = stateProperties42;
+            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties43.FillColor = System.Drawing.Color.Empty;
+            stateProperties43.ForeColor = System.Drawing.Color.Empty;
+            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_USER.OnHoverState = stateProperties43;
+            stateProperties44.BorderColor = System.Drawing.Color.Silver;
+            stateProperties44.FillColor = System.Drawing.Color.White;
+            stateProperties44.ForeColor = System.Drawing.Color.Empty;
+            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_USER.OnIdleState = stateProperties44;
             this.bunifuTextBox_USER.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox_USER.PasswordChar = '\0';
             this.bunifuTextBox_USER.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -3904,26 +3907,26 @@
             this.bunifuTextBox_NOM.Modified = false;
             this.bunifuTextBox_NOM.Multiline = false;
             this.bunifuTextBox_NOM.Name = "bunifuTextBox_NOM";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_NOM.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox_NOM.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_NOM.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox_NOM.OnIdleState = stateProperties16;
+            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_NOM.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox_NOM.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_NOM.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox_NOM.OnIdleState = stateProperties48;
             this.bunifuTextBox_NOM.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox_NOM.PasswordChar = '\0';
             this.bunifuTextBox_NOM.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -3990,11 +3993,77 @@
             this.label50.TabIndex = 0;
             this.label50.Text = "AJOUTER ET MODIFIER LES FONCTIONNELITES DES UTILISATUERS";
             // 
+            // bunifuCheckBox2
+            // 
+            this.bunifuCheckBox2.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox2.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox2.AllowBindingControlLocation = true;
+            this.bunifuCheckBox2.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox2.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox2.AllowOnHoverStates = true;
+            this.bunifuCheckBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuCheckBox2.AutoCheck = true;
+            this.bunifuCheckBox2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox2.BackgroundImage")));
+            this.bunifuCheckBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox2.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox2.BorderRadius = 12;
+            this.bunifuCheckBox2.Checked = true;
+            this.bunifuCheckBox2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox2.CustomCheckmarkImage = null;
+            this.bunifuCheckBox2.Location = new System.Drawing.Point(761, 281);
+            this.bunifuCheckBox2.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox2.Name = "bunifuCheckBox2";
+            this.bunifuCheckBox2.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox2.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox2.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox2.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox2.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox2.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox2.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox2.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox2.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox2.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox2.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox2.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox2.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox2.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox2.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox2.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox2.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox2.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox2.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox2.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox2.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox2.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox2.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox2.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox2.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox2.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox2.Size = new System.Drawing.Size(21, 21);
+            this.bunifuCheckBox2.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox2.TabIndex = 521;
+            this.bunifuCheckBox2.Tag = "facture";
+            this.bunifuCheckBox2.ThreeState = false;
+            this.bunifuCheckBox2.ToolTipText = null;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Ubuntu Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label52.Location = new System.Drawing.Point(648, 280);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(78, 22);
+            this.label52.TabIndex = 520;
+            this.label52.Text = "FACTURE";
+            // 
             // CTL_PARAMETER_AJOUTER_UTILISATUER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonInit);
             this.Controls.Add(this.panel_check_box);
@@ -4007,7 +4076,6 @@
             this.Controls.Add(this.bunifuTextBox_PRENOM);
             this.Controls.Add(this.bunifuTextBox_USER);
             this.Controls.Add(this.bunifuTextBox_NOM);
-            this.MinimumSize = new System.Drawing.Size(868, 855);
             this.Name = "CTL_PARAMETER_AJOUTER_UTILISATUER";
             this.Size = new System.Drawing.Size(868, 855);
             this.Load += new System.EventHandler(this.CTL_PARAMETER_AJOUTER_UTILISATUER_Load);
@@ -4139,5 +4207,7 @@
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox_STATISTIQUE;
         private System.Windows.Forms.Label label51;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator11;
+        private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox2;
+        private System.Windows.Forms.Label label52;
     }
 }

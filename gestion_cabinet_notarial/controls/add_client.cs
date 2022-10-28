@@ -117,20 +117,19 @@ namespace gestion_cabinet_notarial
             else if (comboBoxtype_client.Text == "profisionnel")
             {
                 op = "PROFISIONNEL ICE EST " + textBoxCIN.Text;
-                a.ClientProfessionnel = new ClientProfessionnel() { ICE = textBoxCIN.Text };
                 if (textBoxCIN.Text == "")
                 {
                     MessageBox.Show("le champs ICE ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     return;
                 }
-                a.ClientProfessionnel = new ClientProfessionnel() { IdentifiantFiscale = textBoxIF.Text };
                 if (textBoxIF.Text == "")
                 {
                     MessageBox.Show("le champs IF ne doit pas etre vide", "Error : Validations", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     return;
                 }
-            }            
-             cls.Add(a);
+                a.ClientProfessionnel = new ClientProfessionnel() { ICE = textBoxCIN.Text, IdentifiantFiscale = textBoxIF.Text };
+            }
+            cls.Add(a);
              THEME.operation($"AJOUTER UN CLIENT {op}");
             MessageBox.Show("client ajouter avec succes");
 
@@ -402,6 +401,7 @@ namespace gestion_cabinet_notarial
             }
             cls.SaveChanges();
             THEME.operation($"MODIFIER UN CLIENT ID {int.Parse(textBoxIDCLIENT.Text)}");
+            MessageBox.Show("LA MODIFICATION AVEC SECCESS");
         }
         private void bunifuDataGridViewlist_client_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -28,7 +28,7 @@ namespace gestion_cabinet_notarial.controls
             bunifuTextBox_PASS.Text = A.Password;
             bunifuTextBox_NOM.Text = A.Nom;
             bunifuTextBox_PRENOM.Text = A.Prenom;
-            bunifuTextBox_PASS.Enabled = false;
+            bunifuTextBox_USER.Enabled = false;
             return A;
         }
         private void CTL_modifier_compte_VisibleChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace gestion_cabinet_notarial.controls
             A = user.FindByValues(ele => ele.utilisateur1 == THEME.id_user).SingleOrDefault();
             A.Nom = bunifuTextBox_NOM.Text;
             A.Prenom = bunifuTextBox_PRENOM.Text;
-            A.utilisateur1 = bunifuTextBox_USER.Text;
+           // A.utilisateur1 = bunifuTextBox_USER.Text;
             A.Password = bunifuTextBox_PASS.Text;
             if (bunifuTextBox_USER.Text.Trim() == "" || bunifuTextBox_PASS.Text.Trim() == "" || bunifuTextBox_NOM.Text.Trim() == "" || bunifuTextBox_PRENOM.Text.Trim() == "")
             {

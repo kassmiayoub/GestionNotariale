@@ -135,7 +135,7 @@ namespace gestion_cabinet_notarial
         private void bunifuDataGridView_list_file_dossier_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >= 0 && dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 string path = THEME.dossierDirectoryPath + "/"+THEME.numdossier+"/" + dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString();
                 if (dgv.Columns[e.ColumnIndex].Name == "affichage")
@@ -283,32 +283,33 @@ namespace gestion_cabinet_notarial
                 // FICHIERJOINT_dossier.PerformClick();                
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERO {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
+                var typedossier = cls_Bl_Dossier.FindByValues(el => el.Numdossier == THEME.numdossier).First().typedossier;
+                bunifuDropdowntype_contrat.Items.Clear();
+                if (typedossier == "location")
+                {
+                    bunifuDropdowntype_contrat.Items.Add("CONTRAT DE LOCATION");
+                    bunifuDropdowntype_contrat.Items.Add("PROMESE DE LOCATION");
+                    bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
+                }
+                else if (typedossier == "vente")
+                {
+                    bunifuDropdowntype_contrat.Items.Add("CONTRAT DE VENTE");
+                    bunifuDropdowntype_contrat.Items.Add("PROMESE DE VENTE");
+                    bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
+                }
+                else if (typedossier == "change")
+                {
+                    bunifuDropdowntype_contrat.Items.Add("ECHANGE");
+                }
+                else
+                {
+                    bunifuDropdowntype_contrat.Items.Add("CREDIT DEUX PERSONNES");
+                }
             }
         }
         private void detail_dossier_Load(object sender, EventArgs e)
         {
-            var typedossier = cls_Bl_Dossier.FindByValues(el => el.Numdossier == THEME.numdossier).First().typedossier;
-            bunifuDropdowntype_contrat.Items.Clear();
-            if(typedossier == "location")
-            {
-                bunifuDropdowntype_contrat.Items.Add("CONTRAT DE LOCATION");
-                bunifuDropdowntype_contrat.Items.Add("PROMESE DE LOCATION");
-                bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
-            }
-            else if(typedossier == "vente")
-            {
-                bunifuDropdowntype_contrat.Items.Add("CONTRAT DE VENTE");
-                bunifuDropdowntype_contrat.Items.Add("PROMESE DE VENTE");
-                bunifuDropdowntype_contrat.Items.Add("PRET BANQUE");
-            }
-            else if(typedossier == "change")
-            {
-                bunifuDropdowntype_contrat.Items.Add("ECHANGE");
-            }
-            else
-            {
-                bunifuDropdowntype_contrat.Items.Add("CREDIT DEUX PERSONNES");
-            }
+            
         }
 
         private void bunifuButton_CDG_Click(object sender, EventArgs e)

@@ -47,7 +47,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuTextBoxcondition = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuDataGridView_list_partes = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuDropdowntypeclient = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuDropdownclient = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -78,6 +77,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DOSSIER = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.bunifuPages1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,10 +102,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 129);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage3;
+            this.bunifuPages1.PageIndex = 2;
+            this.bunifuPages1.PageName = "tabPage3";
+            this.bunifuPages1.PageTitle = "tabPage3";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(923, 483);
             this.bunifuPages1.TabIndex = 0;
@@ -144,8 +144,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.bunifuTextBoxcondition);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.bunifuDataGridView_list_partes);
             this.panel2.Controls.Add(this.bunifuDropdowntypeclient);
             this.panel2.Controls.Add(this.bunifuDropdownclient);
@@ -160,25 +160,13 @@
             // 
             // bunifuTextBoxcondition
             // 
+            this.bunifuTextBoxcondition.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBoxcondition.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuTextBoxcondition.Location = new System.Drawing.Point(270, 77);
             this.bunifuTextBoxcondition.Name = "bunifuTextBoxcondition";
             this.bunifuTextBoxcondition.Size = new System.Drawing.Size(349, 85);
             this.bunifuTextBoxcondition.TabIndex = 420;
             this.bunifuTextBoxcondition.Text = "";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(162, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 23);
-            this.label2.TabIndex = 419;
-            this.label2.Text = "condition : ";
             // 
             // bunifuDataGridView_list_partes
             // 
@@ -592,6 +580,7 @@
             // 
             this.bunifuDataGridView_list_file_dossier.AllowCustomTheming = false;
             this.bunifuDataGridView_list_file_dossier.AllowUserToAddRows = false;
+            this.bunifuDataGridView_list_file_dossier.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView_list_file_dossier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
@@ -644,6 +633,7 @@
             this.bunifuDataGridView_list_file_dossier.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView_list_file_dossier.Location = new System.Drawing.Point(6, 246);
             this.bunifuDataGridView_list_file_dossier.Name = "bunifuDataGridView_list_file_dossier";
+            this.bunifuDataGridView_list_file_dossier.ReadOnly = true;
             this.bunifuDataGridView_list_file_dossier.RowHeadersVisible = false;
             this.bunifuDataGridView_list_file_dossier.RowTemplate.Height = 40;
             this.bunifuDataGridView_list_file_dossier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1191,6 +1181,19 @@
             this.DOSSIER.TabIndex = 1;
             this.DOSSIER.Text = "DOSSIER";
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Ubuntu Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label6.Location = new System.Drawing.Point(155, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 23);
+            this.label6.TabIndex = 421;
+            this.label6.Text = "condition : ";
+            // 
             // detail_dossier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,11 +1256,11 @@
         public System.Windows.Forms.Button ButtonSavefile_fichier_joint_dossier;
         private System.Windows.Forms.TextBox textBoxtitre;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton_CDG;
         private System.Windows.Forms.RichTextBox bunifuTextBoxcondition;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label DOSSIER;
+        private System.Windows.Forms.Label label6;
     }
 }
