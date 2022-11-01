@@ -60,14 +60,14 @@ namespace gestion_cabinet_notarial.controls
             //bunifuDropdown_CLIENT.AutoCompleteCustomSource = autoCompleteCollection;
             if (THEME.TPI == "")
             {
-                var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
+                var dossier = cls_Bl_Dossier.GetAll().Where(ele => ele.typedossier == "vente" || ele.typedossier == "location").Select(ele => new { Num = ele.Numdossier }).ToList();
                 bunifuDropdown_DOSSIER.DisplayMember = "Num";
                 bunifuDropdown_DOSSIER.ValueMember = "Num";
                 bunifuDropdown_DOSSIER.DataSource = dossier;
             }              
             else
             {
-                var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
+                var dossier = cls_Bl_Dossier.GetAll().Where(ele => ele.typedossier == "vente" || ele.typedossier == "location").Select(ele => new { Num = ele.Numdossier }).ToList();
                 bunifuDropdown_DOSSIER.DisplayMember = "Num";
                 bunifuDropdown_DOSSIER.ValueMember = "Num";
                 bunifuDropdown_DOSSIER.DataSource = dossier;
@@ -82,7 +82,7 @@ namespace gestion_cabinet_notarial.controls
             {        
                 return;
             }               
-            var dossier = cls_Bl_Dossier.GetAll().Select(ele => new { Num = ele.Numdossier }).ToList();
+            var dossier = cls_Bl_Dossier.GetAll().Where(ele => ele.typedossier == "vente" || ele.typedossier == "location").Select(ele => new { Num = ele.Numdossier }).ToList();
             bunifuDropdown_DOSSIER.DisplayMember = "Num";
             bunifuDropdown_DOSSIER.ValueMember = "Num";
             bunifuDropdown_DOSSIER.DataSource = dossier;

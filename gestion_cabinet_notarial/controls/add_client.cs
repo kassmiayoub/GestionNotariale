@@ -473,11 +473,14 @@ namespace gestion_cabinet_notarial
                 {
                     DialogResult dr = MessageBox.Show("Are you sure you want to DELETE this FILE ?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes) {
+                        if (File.Exists(path))
+                        {
+                            File.Delete(path);
+                        }
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());                      
                         fichiers_client a = cSL_BL_FICHIER_CLIENT.FindById(idfile);
                         cSL_BL_FICHIER_CLIENT.Remove(a);
                         cSL_BL_FICHIER_CLIENT.SaveChanges();
-                        File.Delete(path); 
                     THEME.operation($"SUPRIMER FICHIER DE CLIENT LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
                     }
                 } 

@@ -21,7 +21,7 @@ namespace gestion_cabinet_notarial
         double montant_reste;
         cls_bl_contrat con = new cls_bl_contrat();
         cls_bl_partes_S Signature = new cls_bl_partes_S();
-        csl_bl_fichier_contart cont = new csl_bl_fichier_contart();
+        csl_bl_fichier_contart fichier_con = new csl_bl_fichier_contart();
         cls_bl_dossier dossier = new cls_bl_dossier();
         cls_bl_payement paye = new cls_bl_payement();
         CSL_BL_Client c = new CSL_BL_Client();
@@ -143,7 +143,7 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
             }
-            var files = cont.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
+            var files = fichier_con.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
             {
                 IDFILE = (int)ele.idfile,
                 TITRE = ele.titre,
@@ -305,7 +305,7 @@ namespace gestion_cabinet_notarial
                 return;
             }
             A.path = name_of_file;
-            cont.Add(A);
+            fichier_con.Add(A);
             THEME.operation($"AJOUTER FICHIER DE CONTRAT ID = {THEME.id_C}");
             MessageBox.Show("fichier ajouter  avec success");
         }
@@ -322,7 +322,7 @@ namespace gestion_cabinet_notarial
         }
         private void buttonserche_file_Click(object sender, EventArgs e)
         {
-            var files = cont.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
+            var files = fichier_con.FindByValues(ele => ele.idcontrat == THEME.id_C).Select(ele => new filee()
             {
                 IDFILE = (int)ele.idfile,
                 TITRE = ele.titre,
@@ -357,10 +357,10 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        if(Directory.Exists(path))
+                        if(File.Exists(path))
                             File.Delete(path);
-                        cont.Remove(cont.FindById(idfile));
-                        cont.SaveChanges();
+                        fichier_con.Remove(fichier_con.FindById(idfile));
+                        fichier_con.SaveChanges();
                         THEME.operation($"SUPRIMMER FICHIER DE CONTRAT ID = {THEME.id_C} ET LE NOM DE FICHIER EST {dgv.Rows[e.RowIndex].Cells["FILE"].Value.ToString()}");
                     }
                 }

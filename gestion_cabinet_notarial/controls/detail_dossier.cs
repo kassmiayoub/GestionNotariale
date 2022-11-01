@@ -149,7 +149,7 @@ namespace gestion_cabinet_notarial
                     if (dr == DialogResult.Yes)
                     {
                         int idfile = int.Parse(dgv.Rows[e.RowIndex].Cells["IDFILE"].Value.ToString());
-                        if(Directory.Exists(path))                            
+                        if(File.Exists(path))
                             File.Delete(path);                            
                         csl_Bl_Fichier_dossier.Remove(csl_Bl_Fichier_dossier.FindById(idfile));
                         csl_Bl_Fichier_dossier.SaveChanges();
@@ -254,17 +254,14 @@ namespace gestion_cabinet_notarial
                 var obj = CLS_OBJET_BL.FindByValues(ele => ele.numdossier == THEME.numdossier).FirstOrDefault();
                 if(obj != null)
                 {
-                    bunifuButton_CDG.Visible = false;
                     bunifuDropdowntypeclient.Enabled = false;
                     button1.Visible = false; 
                     ListDataSource = ListDataSource.Where(r => partcontratechange.Any(c => c.idc == r.IDCIENT)).ToList();
                     CONTRAT.PerformClick();
                 }
                 else
-                {
-                   
+                {                   
                     button1.Visible = true;
-                    bunifuButton_CDG.Visible = true;
                     bunifuDropdowntypeclient.Enabled = true;
                 }
                 bunifuDropdownclient.DisplayMember = "NOMCOMPLET";
@@ -280,11 +277,21 @@ namespace gestion_cabinet_notarial
                 {
                     CONTRAT.PerformClick();
                 }
-                // FICHIERJOINT_dossier.PerformClick();                
+                // FICHIERJOINT_dossier.PerformClick();
                 THEME.operation($"CONSULTER DES CONTARTS DE DOSSIER DE NUMERO {THEME.numdossier}");
                 //PARTES_OF_CONTRAT.PerformClick();
                 var typedossier = cls_Bl_Dossier.FindByValues(el => el.Numdossier == THEME.numdossier).First().typedossier;
                 bunifuDropdowntype_contrat.Items.Clear();
+                if(typedossier == "location" || typedossier == "vente")
+                {
+                    bunifuButton_CDG.Visible = true;
+
+                }
+                else
+                {
+                    bunifuButton_CDG.Visible = false;
+
+                }
                 if (typedossier == "location")
                 {
                     bunifuDropdowntype_contrat.Items.Add("CONTRAT DE LOCATION");

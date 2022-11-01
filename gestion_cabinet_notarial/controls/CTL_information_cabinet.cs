@@ -59,6 +59,8 @@ namespace gestion_cabinet_notarial.controls
         }
         private void ButtonAdd_INFORMATIONCABINET_Click(object sender, EventArgs e)
         {
+
+            
             if (!THEME.acceder("MODIFIER INFORMMATION DE CABINET"))
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
@@ -72,18 +74,23 @@ namespace gestion_cabinet_notarial.controls
                 string name_of_file = THEME.CopyFile(textBox_LOGO.Text, "logo", "1");
             if (name_of_file == "")
             {
-                MessageBox.Show("Cette fichier existe deja");               
+                MessageBox.Show("Cette fichier existe deja ");               
             }
-              inforamation.logo =textBox_LOGO.Text;
+              var inf = info.FindByValues(ele => ele.idcabinet == "111").First();
+            string path = inf.logo;
+            MessageBox.Show(path);
+            inforamation.logo = textBox_LOGO.Text;
               inforamation.nomcabinet= textBox_NOMCABINET.Text;
               inforamation.email= textBox_EMAIL.Text;
               inforamation.setweb= textBox_SETEWEB.Text;
               inforamation.tele= textBox_TELE.Text;
               inforamation.fax=textBox_FAX.Text;
-              inforamation.localisation= textBox_ADRESS.Text;              
-              info.SaveChanges();
+            inforamation.localisation = textBox_ADRESS.Text;
+             info.SaveChanges();
             MessageBox.Show("modification avec success");
             get_info();
+            //if (File.Exists(THEME.logoDirectoryPath + "/" + Path.GetFileName(path)))
+            //    File.Delete(THEME.logoDirectoryPath + "/" + Path.GetFileName(path));
         }
     }
 }

@@ -44,7 +44,7 @@ namespace gestion_cabinet_notarial
                 a.Objet = textBox_obj.Text;
 
             }
-            else if (typeprix == "vente" || typeprix == "location")
+             if (typeprix == "vente" || typeprix == "location")
             {
                 if (textBox_prix.Text == "")
                 {
@@ -59,12 +59,12 @@ namespace gestion_cabinet_notarial
                         return;
                     }
                     a.anne_achat = int.Parse(textBox_anne_achat.Text);
-                    a.anne_vente = int.Parse(textBox_anne_vente.Text);
                     a.prixachat = double.Parse(textBoxPRIX_ACHAT.Text);
+                    a.anne_vente = int.Parse(textBox_anne_vente.Text);
                 }
                 else
                 {
-                    if(textBox_anne_achat.Text == "")
+                    if(textBox_anne_achat.Text != "")
                         a.anne_achat = int.Parse(textBox_anne_achat.Text);
                 }
                 a.typedossier = typeprix;

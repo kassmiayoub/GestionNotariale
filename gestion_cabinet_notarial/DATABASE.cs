@@ -28,7 +28,6 @@ namespace gestion_cabinet_notarial
             if (!Directory.Exists("C:\\NotarialBackup"))
             {
                 Directory.CreateDirectory("C:\\NotarialBackup");
-
             }
         }
         public static void BackUpDataBase(string path)

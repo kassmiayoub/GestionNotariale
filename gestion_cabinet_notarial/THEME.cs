@@ -316,7 +316,7 @@ namespace gestion_cabinet_notarial
         {
             return Path.GetDirectoryName(getExecutableFile());
         }
-        public static string CopyFile(string FilePath, string type ,string id )
+        public static string CopyFile(string FilePath, string type ,string id)
         {
             string exeFilesPath = $@"{getExecutableDirectory()}\files";
             string exe_client = $@"{exeFilesPath}\client";
