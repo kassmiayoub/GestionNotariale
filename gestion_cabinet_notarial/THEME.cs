@@ -44,6 +44,8 @@ namespace gestion_cabinet_notarial
         public static string id_user_modifier = "";
         public static double prix = 0;
         public static ADD_DOSSIER ADD_DOSSIER { get; set; }
+        public static List<fonction> func_admin = new List<fonction>();
+
         public static Accueil Accueil { get; set; }
         public static CTL_CREDIT CTL_CREDIT { get; set; }
         public static CTL_facture CTL_facture { get; set; }

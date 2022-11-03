@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,17 @@ namespace gestion_cabinet_notarial.controls
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
-
         private void ButtonSaveSettings_Click(object sender, EventArgs e)
         {
-            DATABASE.BackUpDataBase(TextBoxSavePath.Text);
+            try
+            {
+                DATABASE.BackUpDataBase(TextBoxSavePath.Text);
+            }
+            catch
+            {
+                MessageBox.Show("doit entre corecte schema");
+            }
         }
-
         private void ButtonSerch_client_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog FBD = new FolderBrowserDialog();
@@ -30,7 +36,6 @@ namespace gestion_cabinet_notarial.controls
             if (FBD.ShowDialog() == DialogResult.OK)
                 TextBoxSavePath.Text = FBD.SelectedPath;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog OFD = new OpenFileDialog();
@@ -40,9 +45,14 @@ namespace gestion_cabinet_notarial.controls
             if (OFD.ShowDialog() == DialogResult.OK)
                 TextBoxSavePathRestore.Text = OFD.FileName;
         }
-
         private void button_Restore_Click(object sender, EventArgs e)
         {
+            if (!File.Exists(TextBoxSavePathRestore.Text))
+            {
+                MessageBox.Show("cette fichier ne pas exest");
+                return;
+            }
+
             DATABASE.Restordatabase(TextBoxSavePathRestore.Text);
         }
     }

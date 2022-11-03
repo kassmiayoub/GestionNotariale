@@ -1,4 +1,5 @@
 ﻿using gestion_cabinet_notarial.BL;
+using gestion_cabinet_notarial.context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,13 +26,25 @@ namespace gestion_cabinet_notarial.controls
         }
         private void bunifuButton_LOGIN_Click(object sender, EventArgs e)
         {
+            var user_admin = user.FindByValues(ele => ele.utilisateur1 == "admin" && ele.Password == "admin").FirstOrDefault();
+            if(user_admin == null)
+            {
+                var user_default = new utilisateur();
+                user_default.utilisateur1 = "admin";
+                user_default.Password ="admin";
+                user_default.Nom = "admin";
+                user_default.Prenom = "admin";
+                user.Add(user_default);
+                CTL_PARAMETER_AJOUTER_UTILISATUER AJOUTER_UTILISATUER = new CTL_PARAMETER_AJOUTER_UTILISATUER("admin") { Visible = false };
+                FUNC.AddRange(THEME.func_admin);
+            }                       
             THEME.fonctionnalete.Clear();
             var func = FUNC.FindByValues(ele => ele.utilisateur == bunifuTextBox_user.Text).ToList();
             func.ForEach(f =>
             {
                 THEME.fonctionnalete.Add(f.fonction1);
             });
-            THEME.id_user = bunifuTextBox_user.Text;           
+            THEME.id_user = bunifuTextBox_user.Text;
             var user_connecte = user.FindByValues(ele => ele.utilisateur1 == bunifuTextBox_user.Text && ele.Password==bunifuTextBox_passe.Text).FirstOrDefault();
             if (user_connecte == null)
                 return;

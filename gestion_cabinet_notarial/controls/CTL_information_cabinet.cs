@@ -74,7 +74,7 @@ namespace gestion_cabinet_notarial.controls
                 string name_of_file = THEME.CopyFile(textBox_LOGO.Text, "logo", "1");
             if (name_of_file == "")
             {
-                MessageBox.Show("Cette fichier existe deja ");               
+                MessageBox.Show("Cette fichier existe deja (change le nom de logo)");
             }
               var inf = info.FindByValues(ele => ele.idcabinet == "111").First();
             string path = inf.logo;

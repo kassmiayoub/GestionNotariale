@@ -54,16 +54,15 @@ namespace gestion_cabinet_notarial.controls
                 IDCIENT = ele.idClient,
                 nomcomplet = ele.Nom + " " + ele.Prenom
             }).ToList();
-            //AutoCompleteStringCollection autoCompleteCollection = new AutoCompleteStringCollection();
-            //ListDataSource.ForEach(x => autoCompleteCollection.Add(x.nomcomplet));
-            //bunifuDropdown_client.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //bunifuDropdown_client.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //bunifuDropdown_client.AutoCompleteCustomSource = autoCompleteCollection;
+            AutoCompleteStringCollection autoCompleteCollection_client = new AutoCompleteStringCollection();
+            ListDataSource.ForEach(x => autoCompleteCollection_client.Add(x.nomcomplet));
+            bunifuDropdown_client.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            bunifuDropdown_client.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            bunifuDropdown_client.AutoCompleteCustomSource = autoCompleteCollection_client;
             bunifuDropdown_client.DisplayMember = "NOMCOMPLET";
             bunifuDropdown_client.ValueMember = "IDCIENT";
             bunifuDropdown_client.DataSource = ListDataSource;
         }
-
         private void buttonserche_facture_Click(object sender, EventArgs e)
         {
             var factures = cls_Bl_Facture.GetAll().Select(ele => new {

@@ -290,7 +290,6 @@ namespace gestion_cabinet_notarial
                 else
                 {
                     bunifuButton_CDG.Visible = false;
-
                 }
                 if (typedossier == "location")
                 {
@@ -311,6 +310,7 @@ namespace gestion_cabinet_notarial
                 else
                 {
                     bunifuDropdowntype_contrat.Items.Add("CREDIT DEUX PERSONNES");
+                    bunifuDropdowntype_contrat.Items.Add("contrat de don");
                 }
             }
         }

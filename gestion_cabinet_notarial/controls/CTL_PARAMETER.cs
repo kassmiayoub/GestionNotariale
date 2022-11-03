@@ -19,15 +19,22 @@ namespace gestion_cabinet_notarial.controls
         CSL_BL_FUNCTION FUNC = new CSL_BL_FUNCTION();
         List<fonction> func_modifier = new List<fonction>();
         string id_user_mod = "";
-        public CTL_PARAMETER_AJOUTER_UTILISATUER()
+
+        public CTL_PARAMETER_AJOUTER_UTILISATUER(string admin = "")
         {
             InitializeComponent();
+            foreach (Control c in panel_check_box.Controls.Cast<Control>().Where(c=> c is CheckBox))
+            {
+                    var a = new fonction(); 
+                    a.utilisateur = admin;
+                    a.fonction1 = Convert.ToString(c.Tag);
+                    THEME.func_admin.Add(a);               
+            }
             this.Dock = DockStyle.Fill;
         }
         public void seting()
         {
             List<fonction> list_func = new List<fonction>();
-
             foreach (Control c in panel_check_box.Controls)
             {
                 var a = new fonction();
