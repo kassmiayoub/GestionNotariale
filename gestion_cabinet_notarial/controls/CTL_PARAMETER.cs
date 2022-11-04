@@ -155,7 +155,6 @@ namespace gestion_cabinet_notarial.controls
                 }
             }
         }
-
         private void bunifuCheckBox_contart_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (THEME.id_user_modifier == "")
@@ -183,7 +182,6 @@ namespace gestion_cabinet_notarial.controls
                 }
             }
         }
-
         private void bunifuCheckBox_dossier_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (THEME.id_user_modifier == "")
@@ -251,7 +249,6 @@ namespace gestion_cabinet_notarial.controls
                 bunifuTextBox_PASS.Enabled = true;
             }
         }
-
         private void ButtonInit_Click(object sender, EventArgs e)
         {
             THEME.vider(this);
@@ -261,7 +258,6 @@ namespace gestion_cabinet_notarial.controls
         {
 
         }
-
         private void bunifuCheckBox_credit_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (THEME.id_user_modifier == "")
@@ -283,12 +279,10 @@ namespace gestion_cabinet_notarial.controls
                 }
             }
         }
-
         private void bunifuSeparator9_Click(object sender, EventArgs e)
         {
 
         }
-
         private void bunifuCheckBox_CDG_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (THEME.id_user_modifier == "")

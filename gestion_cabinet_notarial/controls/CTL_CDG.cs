@@ -89,6 +89,8 @@ namespace gestion_cabinet_notarial.controls
         }
         private void bunifuDropdown_DOSSIER_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (bunifuDropdown_DOSSIER.SelectedValue == null)
+                return;
             dossier d = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
             ANNE.Text = d.anne_achat.ToString();
             bunifuTextBox_PRIXVENTE.Text = d.PRIX_ACQUISITION.ToString();
@@ -108,6 +110,11 @@ namespace gestion_cabinet_notarial.controls
             if (THEME.numdossier != "")
             {
                 bunifuDropdown_DOSSIER.SelectedValue = THEME.numdossier;
+            }
+            if (COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00")
+            {
+                MessageBox.Show("COEFFICIENT DOIT EST PAS VIDE");
+                return;
             }
             var dossier = cls_Bl_Dossier.FindByValues(ele => ele.Numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
             if (dossier.typedossier != "vente")
@@ -158,13 +165,7 @@ namespace gestion_cabinet_notarial.controls
             {
                 MessageBox.Show("VOUS N'AVEZ PAS LA PERMISSION");
                 return;
-            }       
-            
-            if (COEFFICIENT.Controls["textBox_porsontage"].Text == "0.00" )
-            {
-                MessageBox.Show("COEFFICIENT DOIT EST PAS VIDE");
-                return;
-            }
+            }                              
             var cdgs = cls_CDG.FindByValues(ele => ele.numdossier == bunifuDropdown_DOSSIER.SelectedValue.ToString()).FirstOrDefault();
             if( cdgs != null)
             {

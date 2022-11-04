@@ -153,12 +153,12 @@ namespace gestion_cabinet_notarial
                 labelCIN.Visible = true;
                 textBoxIF.Visible = false;
                 labelIF.Visible = false;
-                labelCIN.Text = "CIN";
+                labelCIN.Text = "CIN :";
             }
             else
             {
                 labelCIN.Visible = true;
-                labelCIN.Text = "CIE";
+                labelCIN.Text = "CIE :";
                 labelIF.Visible = true;
                 textBoxCIN.Visible = true;
                 textBoxIF.Visible = true;

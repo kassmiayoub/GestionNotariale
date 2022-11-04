@@ -78,7 +78,6 @@ namespace gestion_cabinet_notarial.controls
             }
               var inf = info.FindByValues(ele => ele.idcabinet == "111").First();
             string path = inf.logo;
-            MessageBox.Show(path);
             inforamation.logo = textBox_LOGO.Text;
               inforamation.nomcabinet= textBox_NOMCABINET.Text;
               inforamation.email= textBox_EMAIL.Text;

@@ -123,6 +123,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuTextBoxMONTANT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.nemurecupdown_with_comma_a = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.nemurecupdown_with_comma_e = new gestion_cabinet_notarial.nemurecupdown_with_comma();
+            this.nemurecupdown_with_comma_h = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.STATISTIC_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.FICHIERJOINT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PAYEMENTCLIENT_CONTRAT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -131,9 +134,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BLBCONTRAT = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.nemurecupdown_with_comma_a = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.nemurecupdown_with_comma_e = new gestion_cabinet_notarial.nemurecupdown_with_comma();
-            this.nemurecupdown_with_comma_h = new gestion_cabinet_notarial.nemurecupdown_with_comma();
             this.bunifuPages1.SuspendLayout();
             this.partes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridViewpartes_S)).BeginInit();
@@ -161,10 +161,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(3, 109);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.partes;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "partes";
-            this.bunifuPages1.PageTitle = "tabPage1";
+            this.bunifuPages1.Page = this.statistic;
+            this.bunifuPages1.PageIndex = 3;
+            this.bunifuPages1.PageName = "statistic";
+            this.bunifuPages1.PageTitle = "tabPage5";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(900, 526);
             this.bunifuPages1.TabIndex = 0;
@@ -1103,6 +1103,7 @@
             this.bunifuDataGridView_statistic.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView_statistic.Location = new System.Drawing.Point(6, 51);
             this.bunifuDataGridView_statistic.Name = "bunifuDataGridView_statistic";
+            this.bunifuDataGridView_statistic.ReadOnly = true;
             this.bunifuDataGridView_statistic.RowHeadersVisible = false;
             this.bunifuDataGridView_statistic.RowTemplate.Height = 40;
             this.bunifuDataGridView_statistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1562,6 +1563,33 @@
             this.label18.Size = new System.Drawing.Size(144, 23);
             this.label18.TabIndex = 520;
             this.label18.Text = "DESCREPTION : ";
+            // 
+            // nemurecupdown_with_comma_a
+            // 
+            this.nemurecupdown_with_comma_a.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nemurecupdown_with_comma_a.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_a.Location = new System.Drawing.Point(915, 181);
+            this.nemurecupdown_with_comma_a.Name = "nemurecupdown_with_comma_a";
+            this.nemurecupdown_with_comma_a.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma_a.TabIndex = 519;
+            // 
+            // nemurecupdown_with_comma_e
+            // 
+            this.nemurecupdown_with_comma_e.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nemurecupdown_with_comma_e.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_e.Location = new System.Drawing.Point(915, 134);
+            this.nemurecupdown_with_comma_e.Name = "nemurecupdown_with_comma_e";
+            this.nemurecupdown_with_comma_e.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma_e.TabIndex = 518;
+            // 
+            // nemurecupdown_with_comma_h
+            // 
+            this.nemurecupdown_with_comma_h.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nemurecupdown_with_comma_h.BackColor = System.Drawing.Color.White;
+            this.nemurecupdown_with_comma_h.Location = new System.Drawing.Point(915, 87);
+            this.nemurecupdown_with_comma_h.Name = "nemurecupdown_with_comma_h";
+            this.nemurecupdown_with_comma_h.Size = new System.Drawing.Size(100, 32);
+            this.nemurecupdown_with_comma_h.TabIndex = 517;
             // 
             // STATISTIC_CONTRAT
             // 
@@ -2063,33 +2091,6 @@
             this.label19.Size = new System.Drawing.Size(126, 31);
             this.label19.TabIndex = 0;
             this.label19.Text = "CONTRAT";
-            // 
-            // nemurecupdown_with_comma_a
-            // 
-            this.nemurecupdown_with_comma_a.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nemurecupdown_with_comma_a.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_a.Location = new System.Drawing.Point(915, 181);
-            this.nemurecupdown_with_comma_a.Name = "nemurecupdown_with_comma_a";
-            this.nemurecupdown_with_comma_a.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma_a.TabIndex = 519;
-            // 
-            // nemurecupdown_with_comma_e
-            // 
-            this.nemurecupdown_with_comma_e.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nemurecupdown_with_comma_e.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_e.Location = new System.Drawing.Point(915, 134);
-            this.nemurecupdown_with_comma_e.Name = "nemurecupdown_with_comma_e";
-            this.nemurecupdown_with_comma_e.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma_e.TabIndex = 518;
-            // 
-            // nemurecupdown_with_comma_h
-            // 
-            this.nemurecupdown_with_comma_h.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nemurecupdown_with_comma_h.BackColor = System.Drawing.Color.White;
-            this.nemurecupdown_with_comma_h.Location = new System.Drawing.Point(915, 87);
-            this.nemurecupdown_with_comma_h.Name = "nemurecupdown_with_comma_h";
-            this.nemurecupdown_with_comma_h.Size = new System.Drawing.Size(100, 32);
-            this.nemurecupdown_with_comma_h.TabIndex = 517;
             // 
             // DETAIL_CONTRAT
             // 

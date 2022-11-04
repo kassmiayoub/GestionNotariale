@@ -77,7 +77,7 @@ namespace gestion_cabinet_notarial.controls
                 el.Text,
                 el.date,
                 NomComlet = el.utilisateur1.Nom + " " + el.utilisateur1.Prenom
-            });
+            }).ToList();
         }
     }
 }

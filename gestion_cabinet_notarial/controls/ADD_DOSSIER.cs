@@ -42,7 +42,6 @@ namespace gestion_cabinet_notarial
             {
                 a.Titrefoncier = textBox_titre_foncier.Text;
                 a.Objet = textBox_obj.Text;
-
             }
              if (typeprix == "vente" || typeprix == "location")
             {
@@ -258,8 +257,12 @@ namespace gestion_cabinet_notarial
                 MessageBox.Show("ENTRE NUMERENT DE DOSSIER");
                 return;
             }                
-            dossier d= (dossier)cls_Bl_Dossier.FindByValues(v => v.Numdossier == textBox_N_dossier.Text);
-            if(bunifuCheckBox_status.Checked)
+            var d= cls_Bl_Dossier.FindByValues(v => v.Numdossier == textBox_N_dossier.Text).FirstOrDefault();
+            if(d == null)
+            {
+                MessageBox.Show("il n'ya pas trouver cette dossier");
+            }
+            if (bunifuCheckBox_status.Checked)
                 d.Datefermeture = Convert.ToDateTime(bunifuDatePicker_fin.Value);
             else
                 return;
@@ -375,7 +378,7 @@ namespace gestion_cabinet_notarial
         private void pourVenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             typeprix = "vente";
-            label_vent_location.Text = "ANNE DE VENTE :";
+            label_vent_location.Text = "ANNE D'ACHAT :";
         }
         private void pourLocationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -386,7 +389,7 @@ namespace gestion_cabinet_notarial
         private void annulerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             typeprix = "";
-            label_vent_location.Text = "ANNE DE VENTE :";
+            label_vent_location.Text = "ANNE D'ACHAT :";
         }
 
         private void textBox_anne_achat_TextChanged(object sender, EventArgs e)
